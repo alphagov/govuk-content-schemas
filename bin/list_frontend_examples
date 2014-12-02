@@ -1,0 +1,11 @@
+#!/bin/bash
+
+realpath() {
+    [[ $1 = /* ]] && echo "$1" || echo "$PWD/${1#./}"
+}
+
+MY_PATH="`realpath "$0"`"
+BIN_DIR=`dirname "${MY_PATH}"`
+ROOT_DIR=`dirname "${BIN_DIR}"`
+
+ls -1 ${ROOT_DIR}/formats/*/frontend/examples/*.json
