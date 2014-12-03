@@ -6,7 +6,8 @@
     "base_path",
     "format",
     "publishing_app",
-    "update_type"
+    "update_type",
+    "locale"
   ],
   "properties": {
     "base_path": {
@@ -37,6 +38,9 @@
     },
     "update_type": {
       "enum": [ "major", "minor", "republish" ]
+    },
+    "locale": {
+      "type": "String"
     },
     "need_ids": {
       "type": "array",
@@ -136,6 +140,18 @@
               }
             }
           }
+        },
+        "archive_notice": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "explanation": {
+              "type": "string"
+            },
+            "archived_at": {
+              "format": "date-time"
+            }
+          }
         }
       }
     },
@@ -150,6 +166,12 @@
           "$ref": "#/definitions/guid_list"
         },
         "supporting_organisations": {
+          "$ref": "#/definitions/guid_list"
+        },
+        "world_locations": {
+          "$ref": "#/definitions/guid_list"
+        },
+        "worldwide_organisations": {
           "$ref": "#/definitions/guid_list"
         }
       }
