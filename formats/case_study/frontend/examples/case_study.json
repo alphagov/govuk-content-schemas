@@ -18,7 +18,52 @@
         "format_display_type":"case_study"
     },
     "format": "case_study",
-    "links": {},
+    "links": {
+      "lead_organisations": [
+        {
+          "title": "Department for International Development",
+          "base_path": "/government/organisations/department-for-international-development",
+          "api_url": "http://content-store/organisations/department-for-international-development",
+          "web_url": "https://www.gov.uk/government/organisations/department-for-international-development",
+          "locale": "en"
+        }
+      ],
+      "supporting_organisations": [],
+      "world_locations": [
+        {
+          "title": "Pakistan",
+          "base_path": "/government/world/pakistan",
+          "api_url": "http://content-store/content/government/world/pakistan",
+          "web_url": "https://www.gov.uk/government/world/pakistan",
+          "locale": "en"
+        }
+      ],
+      "worldwide_organisations": [
+        {
+          "title": "DFID Pakistan",
+          "base_path": "/government/world/organisations/dfid-pakistan",
+          "api_url": "http://content-store/content/government/world/organisations/dfid-pakistan",
+          "web_url": "https://www.gov.uk/government/world/organisations/dfid-pakistan",
+          "locale": "en"
+        }
+      ],
+      "available_translations": [
+        {
+          "title": "Pakistan: In school for the first time",
+          "base_path":  "/government/case-studies/pakistan-in-school-for-the-first-time",
+          "api_url":  "http://content-store/content/government/case-studies/pakistan-in-school-for-the-first-time",
+          "web_url":  "https://www.gov.uk/government/case-studies/pakistan-in-school-for-the-first-time",
+          "locale": "en"
+        },
+        {
+          "title": "پاکستان: اسکول میں پہلی بارداخلہ",
+          "base_path":  "/government/case-studies/pakistan-in-school-for-the-first-time.ur",
+          "api_url":  "http://content-store/content/government/case-studies/pakistan-in-school-for-the-first-time.ur",
+          "web_url":  "https://www.gov.uk/government/case-studies/pakistan-in-school-for-the-first-time.ur",
+          "locale": "ur"
+        }
+      ]
+    },
     "need_ids": [],
     "public_updated_at": "2012-12-17T15:45:44.000+00:00",
     "publishing_app": "whitehall",
