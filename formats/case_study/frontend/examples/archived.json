@@ -1,9 +1,8 @@
 {
     "base_path": "/government/case-studies/get-britain-building-carlisle-park",
-    "content_id": null,
     "description": "Nearly 400 homes are set to be built on the site of a former tar distillery thanks to Gleeson Homes and HCA investment.",
     "details": {
-      "archived": {
+      "archive_notice": {
         "explanation": "This document is no longer current government policy",
         "archived_at": "2012-12-17T15:45:44+00:00"
       },
@@ -70,18 +69,9 @@
         }
       ]
     },
+    "locale": "en",
     "need_ids": [],
     "public_updated_at": "2012-12-17T15:45:44.000+00:00",
-    "publishing_app": "whitehall",
-    "redirects": [],
-    "rendering_app": "whitehall-frontend",
-    "routes": [
-        {
-            "path": "/government/case-studies/get-britain-building-carlisle-park",
-            "type": "exact"
-        }
-    ],
     "title": "Get Britain Building: Carlisle Park",
-    "update_type": "major",
     "updated_at": "2014-11-17T14:19:42.460Z"
 }
