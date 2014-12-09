@@ -1,3 +1,5 @@
+require 'json-schema'
+
 module SchemaBuilderHelpers
   def build_schema(name, properties, definitions = nil)
     schema = {

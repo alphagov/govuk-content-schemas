@@ -1,0 +1,33 @@
+#!/usr/bin/env ruby
+
+$LOAD_PATH << File.dirname(__FILE__) + "/../lib"
+require 'govuk_content_schemas/schema_combiner'
+require 'json-schema'
+require 'json'
+
+def usage
+  $stderr.puts "USAGE: #{File.basename(__FILE__)} <path/to/publisher/schemas/>"
+end
+
+if ARGV.count != 1
+  usage
+  exit(1)
+end
+
+publisher_schema_path = Pathname.new(ARGV.first)
+reader = JSON::Schema::Reader.new(accept_file: true, accept_uri: false)
+
+schemas = %w{metadata details links}.map do |name|
+  path = publisher_schema_path + "#{name}.json"
+  reader.read(path) if path.exist?
+end
+
+combiner = GovukContentSchemas::SchemaCombiner.new(
+  schemas[0],
+  details_schema: schemas[1],
+  links_schema: schemas[2]
+)
+
+File.open(publisher_schema_path + 'schema.json', 'w') do |file|
+  file.write JSON.pretty_generate(combiner.combined.schema)
+end
