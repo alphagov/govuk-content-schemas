@@ -1,11 +1,11 @@
 require 'govuk_content_schemas/schema_combiner'
 
 RSpec.describe GovukContentSchemas::SchemaCombiner do
-  let(:metadata_schema) { build_schema('metadata.json', string_properties('body')) }
+  let(:metadata_schema) { build_schema('metadata.json', build_string_properties('body')) }
   subject(:combined) { described_class.new(metadata_schema, details_schema: details_schema).combined }
 
   context "combining a simple metadata and details schema" do
-    let(:details_schema) { build_schema('details.json', string_properties('detail')) }
+    let(:details_schema) { build_schema('details.json', build_string_properties('detail')) }
 
     it 'adds a details property to the combined schema' do
       expect(combined.schema['properties']['details']).to be_a(Hash)
@@ -28,15 +28,15 @@ RSpec.describe GovukContentSchemas::SchemaCombiner do
   context "combining schemas with definitions" do
     let(:metadata_schema) {
       build_schema('metadata.json',
-        string_properties('body'),
-        definitions('def1')
+        build_string_properties('body'),
+        build_definitions('def1')
       )
     }
 
     let(:details_schema) {
       build_schema('details.json',
-        string_properties('detail'),
-        definitions('def2')
+        build_string_properties('detail'),
+        build_definitions('def2')
       )
     }
 
@@ -53,8 +53,8 @@ RSpec.describe GovukContentSchemas::SchemaCombiner do
   context "combining a metadata schema and a links schema" do
     let(:links_schema) {
       build_schema('links.json',
-        string_properties('lead_organisations'),
-        definitions('guid_list')
+        build_string_properties('lead_organisations'),
+        build_definitions('guid_list')
       )
     }
     subject(:combined) { described_class.new(metadata_schema, links_schema: links_schema).combined }
@@ -75,29 +75,6 @@ RSpec.describe GovukContentSchemas::SchemaCombiner do
     it 'merges the definitions from the links schema into the combined schemas definitions' do
       expect(combined.schema['definitions']).to include('guid_list')
       expect(combined.schema['definitions']['guid_list']).to eq(links_schema.schema['definitions']['guid_list'])
-    end
-  end
-
-  def build_schema(name, properties, definitions = nil)
-    schema = {
-      "$schema" => "http://json-schema.org/draft-04/schema#",
-      "type" => "object",
-      "properties" => properties
-    }
-    schema['definitions'] = definitions if definitions
-    JSON::Schema.new(schema, URI.parse(name))
-  end
-
-private
-  def definitions(*definitions)
-    definitions.inject({}) do |memo, definition_name|
-      memo.merge(definition_name => {"type" => "string"})
-    end
-  end
-
-  def string_properties(*properties)
-    properties.inject({}) do |memo, property_name|
-      memo.merge(property_name => {"type" => "string"})
     end
   end
 end

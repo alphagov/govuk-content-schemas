@@ -1,9 +1,7 @@
 $LOAD_PATH << File.expand_path('../lib', File.dirname(__FILE__))
 
-module FixtureHelper
-  def fixture_path(name)
-    Pathname.new('fixtures').expand_path(File.dirname(__FILE__)).join(name)
-  end
+Dir[File.dirname(__FILE__) + '/support/*.rb'].each do |helper|
+  require helper
 end
 
 RSpec.configure do |config|
@@ -26,5 +24,6 @@ RSpec.configure do |config|
   config.order = :random
   Kernel.srand config.seed
 
-  config.include FixtureHelper
+  config.include FixtureHelpers
+  config.include SchemaBuilderHelpers
 end
