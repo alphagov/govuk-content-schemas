@@ -6,6 +6,7 @@
     "base_path",
     "format",
     "publishing_app",
+    "rendering_app",
     "update_type",
     "locale"
   ],
@@ -24,7 +25,8 @@
       "type": "string"
     },
     "format": {
-      "type": "string"
+      "type": "string",
+      "enum": [ "case_study" ]
     },
     "public_updated_at": {
       "type": "string",
@@ -91,7 +93,8 @@
           }
         },
         "format_display_type": {
-          "type": "string"
+          "type": "string",
+          "enum": [ "case_study" ]
         },
         "first_public_at": {
           "type": "string",
