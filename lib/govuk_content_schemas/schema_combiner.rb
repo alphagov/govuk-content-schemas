@@ -20,8 +20,10 @@ class GovukContentSchemas::SchemaCombiner
 
 private
   def embed(embeddable)
-    cloned = clone_hash(embeddable.schema)
-    cloned.reject { |k, v| %w{$schema definitions}.include?(k) }
+    excluded_top_level_keys = %w{$schema definitions}
+    clone_hash(embeddable.schema).reject { |k, _|
+      excluded_top_level_keys.include?(k)
+    }
   end
 
   def combine_definitions
