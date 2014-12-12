@@ -29,14 +29,14 @@ RSpec.describe GovukContentSchemas::SchemaCombiner do
     let(:metadata_schema) {
       build_schema('metadata.json',
         build_string_properties('body'),
-        build_definitions('def1')
+        build_string_properties('def1')
       )
     }
 
     let(:details_schema) {
       build_schema('details.json',
         build_string_properties('detail'),
-        build_definitions('def2')
+        build_string_properties('def2')
       )
     }
 
@@ -54,7 +54,7 @@ RSpec.describe GovukContentSchemas::SchemaCombiner do
     let(:links_schema) {
       build_schema('links.json',
         build_string_properties('lead_organisations'),
-        build_definitions('guid_list')
+        build_string_properties('guid_list')
       )
     }
     subject(:combined) { described_class.new(metadata_schema, links_schema: links_schema).combined }

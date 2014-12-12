@@ -11,12 +11,6 @@ module SchemaBuilderHelpers
     JSON::Schema.new(schema, URI.parse(name))
   end
 
-  def build_definitions(*definitions)
-    definitions.inject({}) do |memo, definition_name|
-      memo.merge(definition_name => {"type" => "string"})
-    end
-  end
-
   def build_string_properties(*properties)
     properties.inject({}) do |memo, property_name|
       memo.merge(property_name => {"type" => "string"})
