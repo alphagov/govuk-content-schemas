@@ -1,11 +1,11 @@
 require 'govuk_content_schemas/schema_combiner'
 
 RSpec.describe GovukContentSchemas::SchemaCombiner do
-  let(:metadata_schema) { build_schema('metadata.json', build_string_properties('body')) }
+  let(:metadata_schema) { build_schema('metadata.json', properties: build_string_properties('body')) }
   subject(:combined) { described_class.new(metadata_schema, details_schema: details_schema).combined }
 
   context "combining a simple metadata and details schema" do
-    let(:details_schema) { build_schema('details.json', build_string_properties('detail')) }
+    let(:details_schema) { build_schema('details.json', properties: build_string_properties('detail')) }
 
     it 'adds a details property to the combined schema' do
       expect(combined.schema['properties']['details']).to be_a(Hash)
@@ -28,15 +28,15 @@ RSpec.describe GovukContentSchemas::SchemaCombiner do
   context "combining schemas with definitions" do
     let(:metadata_schema) {
       build_schema('metadata.json',
-        build_string_properties('body'),
-        build_string_properties('def1')
+        properties: build_string_properties('body'),
+        definitions: build_string_properties('def1')
       )
     }
 
     let(:details_schema) {
       build_schema('details.json',
-        build_string_properties('detail'),
-        build_string_properties('def2')
+        properties: build_string_properties('detail'),
+        definitions: build_string_properties('def2')
       )
     }
 
@@ -53,8 +53,8 @@ RSpec.describe GovukContentSchemas::SchemaCombiner do
   context "combining a metadata schema and a links schema" do
     let(:links_schema) {
       build_schema('links.json',
-        build_string_properties('lead_organisations'),
-        build_string_properties('guid_list')
+        properties: build_string_properties('lead_organisations'),
+        definitions: build_string_properties('guid_list')
       )
     }
     subject(:combined) { described_class.new(metadata_schema, links_schema: links_schema).combined }

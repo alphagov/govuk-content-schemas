@@ -1,12 +1,12 @@
 require 'json-schema'
 
 module SchemaBuilderHelpers
-  def build_schema(name, properties, definitions = nil)
+  def build_schema(name, properties: nil, definitions: nil)
     schema = {
       "$schema" => "http://json-schema.org/draft-04/schema#",
-      "type" => "object",
-      "properties" => properties
+      "type" => "object"
     }
+    schema['properties'] = properties if properties
     schema['definitions'] = definitions if definitions
     JSON::Schema.new(schema, URI.parse(name))
   end

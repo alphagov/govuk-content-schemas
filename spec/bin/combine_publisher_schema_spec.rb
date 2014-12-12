@@ -16,9 +16,9 @@ RSpec.describe 'combine_publisher_schema' do
 
   let(:schemas) {
     {
-      metadata: build_schema('metadata.json', build_string_properties('body')),
-      details: build_schema('details.json', build_string_properties('detail')),
-      links: build_schema('links.json', build_string_properties('links'))
+      metadata: build_schema('metadata.json', properties: build_string_properties('body')),
+      details: build_schema('details.json', properties: build_string_properties('detail')),
+      links: build_schema('links.json', properties: build_string_properties('links'))
     }
   }
 
