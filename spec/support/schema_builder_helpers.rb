@@ -45,7 +45,7 @@ module SchemaBuilderHelpers
     {
       "type" => "object",
       "additionalProperties" => false,
-      "properties" => build_ref_properties(link_names, "frontend_link")
+      "properties" => build_ref_properties(link_names, "frontend_links")
     }
   end
 end

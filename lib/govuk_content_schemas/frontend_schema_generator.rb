@@ -29,7 +29,7 @@ class GovukContentSchemas::FrontendSchemaGenerator
     remove_disallowed_properties!(frontend_schema)
     remove_disallowed_required_properties!(frontend_schema)
     add_updated_at!(frontend_schema)
-    ensure_frontend_link_definition!(frontend_schema)
+    ensure_frontend_links_definition!(frontend_schema)
     ensure_links_schema!(frontend_schema)
     transform_links_specification!(frontend_schema)
     add_available_translations_link!(frontend_schema)
@@ -53,9 +53,9 @@ private
     }
   end
 
-  def ensure_frontend_link_definition!(schema)
+  def ensure_frontend_links_definition!(schema)
     schema.schema['definitions'] ||= {}
-    schema.schema['definitions']['frontend_link'] = frontend_link_definition
+    schema.schema['definitions']['frontend_links'] = frontend_links_definition
   end
 
   def ensure_links_schema!(schema)
@@ -68,24 +68,27 @@ private
 
   def transform_links_specification!(schema)
     schema.schema['properties']['links']['properties'].keys.each do |link_name|
-      schema.schema['properties']['links']['properties'][link_name] = {"$ref" => "#/definitions/frontend_link"}
+      schema.schema['properties']['links']['properties'][link_name] = {"$ref" => "#/definitions/frontend_links"}
     end
   end
 
   def add_available_translations_link!(schema)
-    schema.schema['properties']['links']['properties']['available_translations'] = {"$ref" => "#/definitions/frontend_link"}
+    schema.schema['properties']['links']['properties']['available_translations'] = {"$ref" => "#/definitions/frontend_links"}
   end
 
-  def frontend_link_definition
+  def frontend_links_definition
     {
-      "type" => "object",
-      "additionalProperties" => false,
-      "properties" =>  {
-        "title" => { "type" => "string" },
-        "base_path" => { "type" => "string" },
-        "api_url" => { "type" => "string", "format" => "uri" },
-        "web_url" => { "type" => "string", "format" => "uri" },
-        "locale" => { "type" => "string" },
+      "type" => "array",
+      "items" => {
+        "type" => "object",
+        "additionalProperties" => false,
+        "properties" =>  {
+          "title" => { "type" => "string" },
+          "base_path" => { "type" => "string" },
+          "api_url" => { "type" => "string", "format" => "uri" },
+          "web_url" => { "type" => "string", "format" => "uri" },
+          "locale" => { "type" => "string" },
+        }
       }
     }
   end
