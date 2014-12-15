@@ -5,8 +5,6 @@
   "required": [
     "base_path",
     "format",
-    "publishing_app",
-    "update_type",
     "locale"
   ],
   "properties": {
@@ -27,7 +25,7 @@
       "format": "date-time"
     },
     "locale": {
-      "type": "String"
+      "type": "string"
     },
     "need_ids": {
       "type": "array",
@@ -63,7 +61,7 @@
                   "type": "string"
                 },
                 {
-                  "type": null
+                  "type": "null"
                 }
               ]
             }
@@ -82,7 +80,7 @@
               "type": "string"
             },
             {
-              "type": null
+              "type": "null"
             }
           ]
         },
