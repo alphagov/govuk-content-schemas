@@ -40,7 +40,7 @@
       "enum": [ "major", "minor", "republish" ]
     },
     "locale": {
-      "type": "String"
+      "type": "string"
     },
     "need_ids": {
       "type": "array",

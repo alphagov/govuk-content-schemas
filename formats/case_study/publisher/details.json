@@ -24,7 +24,7 @@
         "caption": {
           "anyOf": [
             { "type": "string" },
-            { "type": null }
+            { "type": "null" }
           ]
         }
       }
@@ -39,7 +39,7 @@
     "change_note": {
       "anyOf": [
         { "type": "string" },
-        { "type": null }
+        { "type": "null" }
       ]
     },
     "change_history": {

@@ -46,7 +46,7 @@
       ]
     },
     "locale": {
-      "type": "String"
+      "type": "string"
     },
     "need_ids": {
       "type": "array",
@@ -94,7 +94,7 @@
                   "type": "string"
                 },
                 {
-                  "type": null
+                  "type": "null"
                 }
               ]
             }
@@ -114,7 +114,7 @@
               "type": "string"
             },
             {
-              "type": null
+              "type": "null"
             }
           ]
         },
