@@ -36,6 +36,7 @@ module SchemaBuilderHelpers
   def build_publisher_links_schema(*link_names)
     {
       "type" => "object",
+      "additionalProperties" => false,
       "properties" => build_ref_properties(link_names, "guid_list")
     }
   end
@@ -43,6 +44,7 @@ module SchemaBuilderHelpers
   def build_frontend_links_schema(*link_names)
     {
       "type" => "object",
+      "additionalProperties" => false,
       "properties" => build_ref_properties(link_names, "frontend_link")
     }
   end
