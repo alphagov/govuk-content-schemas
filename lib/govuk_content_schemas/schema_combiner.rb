@@ -1,7 +1,10 @@
 require 'govuk_content_schemas'
+require 'govuk_content_schemas/utils'
 require 'json-schema'
 
 class GovukContentSchemas::SchemaCombiner
+  include ::GovukContentSchemas::Utils
+
   attr_reader :metadata_schema, :details_schema, :links_schema
 
   def initialize(metadata_schema, details_schema: nil, links_schema: nil)
@@ -31,17 +34,5 @@ private
     [details_schema, links_schema].compact.inject(combined) do |memo, embedded_schema|
       memo.merge(embedded_schema.schema.fetch('definitions', {}))
     end
-  end
-
-  def clone_hash(hash)
-    Marshal.load(Marshal.dump(hash))
-  end
-
-  def clone_schema(schema)
-    parse_schema(schema.to_s, schema.uri)
-  end
-
-  def parse_schema(body, uri)
-    JSON::Schema.new(JSON::Validator.parse(body), uri)
   end
 end
