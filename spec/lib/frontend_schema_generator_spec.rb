@@ -82,6 +82,11 @@ RSpec.describe GovukContentSchemas::FrontendSchemaGenerator do
     )
   end
 
+  it "injects a frontend_links definition" do
+    expect(generated.schema['definitions']).to include('frontend_links')
+    expect(generated.schema['definitions']['frontend_links']['type']).to eq('array')
+  end
+
   it "transforms the links specification to allow expanded links and available_tranlsations" do
     expect(generated.schema['properties']['links']).to eq(build_frontend_links_schema(*link_names, 'available_translations'))
   end
