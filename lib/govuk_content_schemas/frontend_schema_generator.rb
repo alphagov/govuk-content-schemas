@@ -27,6 +27,7 @@ class GovukContentSchemas::FrontendSchemaGenerator
   def generate
     frontend_schema = clone_schema(publisher_schema)
     remove_disallowed_properties!(frontend_schema)
+    remove_disallowed_required_properties!(frontend_schema)
     add_updated_at!(frontend_schema)
     transform_links_specification!(frontend_schema)
     frontend_schema
@@ -35,6 +36,11 @@ class GovukContentSchemas::FrontendSchemaGenerator
 private
   def remove_disallowed_properties!(schema)
     schema.schema['properties'].select! { |k, v| allowed?(k) }
+  end
+
+  def remove_disallowed_required_properties!(schema)
+    return unless schema.schema.has_key?('required')
+    schema.schema['required'].select! { |property_name| allowed?(property_name) }
   end
 
   def add_updated_at!(schema)

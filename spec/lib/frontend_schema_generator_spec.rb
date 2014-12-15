@@ -43,8 +43,18 @@ RSpec.describe GovukContentSchemas::FrontendSchemaGenerator do
 
   let(:link_names) { ["lead_organisations"] }
 
+  let(:required_properties) {
+    %w{
+      base_path
+      format
+      locale
+      publishing_app
+      update_type
+    }
+  }
+
   let(:publisher_schema) {
-    build_publisher_schema(publisher_properties, link_names)
+    build_publisher_schema(publisher_properties, link_names, required_properties)
   }
 
   subject(:generated) {
@@ -54,6 +64,12 @@ RSpec.describe GovukContentSchemas::FrontendSchemaGenerator do
   it "removes disallowed properties from the top level properties list" do
     disallowed_properties.each do |disallowed_property|
       expect(generated.schema['properties'].keys).to_not include(disallowed_property)
+    end
+  end
+
+  it "removes disallowed properties top level list of required properties" do
+    disallowed_properties.each do |disallowed_property|
+      expect(generated.schema['required']).to_not include(disallowed_property)
     end
   end
 
