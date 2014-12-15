@@ -144,22 +144,25 @@
       ],
       "properties": {
         "lead_organisations": {
-          "$ref": "#/definitions/frontend_link"
+          "$ref": "#/definitions/frontend_links"
         },
         "related_policies": {
-          "$ref": "#/definitions/frontend_link"
+          "$ref": "#/definitions/frontend_links"
         },
         "supporting_organisations": {
-          "$ref": "#/definitions/frontend_link"
+          "$ref": "#/definitions/frontend_links"
         },
         "world_locations": {
-          "$ref": "#/definitions/frontend_link"
+          "$ref": "#/definitions/frontend_links"
         },
         "worldwide_organisations": {
-          "$ref": "#/definitions/frontend_link"
+          "$ref": "#/definitions/frontend_links"
         },
         "worldwide_priorities": {
-          "$ref": "#/definitions/frontend_link"
+          "$ref": "#/definitions/frontend_links"
+        },
+        "available_translations": {
+          "$ref": "#/definitions/frontend_links"
         }
       }
     },
@@ -194,26 +197,29 @@
         "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-[1-5][a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$"
       }
     },
-    "frontend_link": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "title": {
-          "type": "string"
-        },
-        "base_path": {
-          "type": "string"
-        },
-        "api_url": {
-          "type": "string",
-          "format": "uri"
-        },
-        "web_url": {
-          "type": "string",
-          "format": "uri"
-        },
-        "locale": {
-          "type": "string"
+    "frontend_links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "base_path": {
+            "type": "string"
+          },
+          "api_url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "web_url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "locale": {
+            "type": "string"
+          }
         }
       }
     }
