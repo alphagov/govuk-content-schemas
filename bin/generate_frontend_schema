@@ -1,0 +1,29 @@
+#!/usr/bin/env ruby
+
+$LOAD_PATH << File.dirname(__FILE__) + "/../lib"
+require 'govuk_content_schemas/frontend_schema_generator'
+require 'json-schema'
+require 'json'
+
+def usage
+  $stderr.puts "USAGE: #{File.basename(__FILE__)} <path/to/publisher/schema.json> <path/to/frontend/output_schema.json>"
+end
+
+if ARGV.count != 2
+  usage
+  exit(1)
+end
+
+publisher_schema_path = Pathname.new(ARGV[0])
+frontend_schema_path = Pathname.new(ARGV[1])
+
+reader = JSON::Schema::Reader.new(accept_file: true, accept_uri: false)
+publisher_schema = reader.read(publisher_schema_path)
+
+generator = GovukContentSchemas::FrontendSchemaGenerator.new(
+  publisher_schema
+)
+
+File.open(frontend_schema_path, 'w') do |file|
+  file.write JSON.pretty_generate(generator.generate.schema)
+end
