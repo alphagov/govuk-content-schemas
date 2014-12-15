@@ -26,9 +26,9 @@ module SchemaBuilderHelpers
     end
   end
 
-  def build_publisher_schema(properties, link_names, required_properties = nil)
+  def build_publisher_schema(properties, link_names = nil, required_properties = nil)
     properties = build_string_properties(*properties)
-    properties['links'] = build_publisher_links_schema(*link_names)
+    properties['links'] = build_publisher_links_schema(*link_names) if link_names
     definitions = build_string_properties('guid_list')
     build_schema('schema.json', properties, definitions, required_properties)
   end

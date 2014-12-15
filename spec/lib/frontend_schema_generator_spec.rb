@@ -54,7 +54,7 @@ RSpec.describe GovukContentSchemas::FrontendSchemaGenerator do
   }
 
   let(:publisher_schema) {
-    build_publisher_schema(publisher_properties, link_names, required_properties)
+    build_publisher_schema(publisher_properties - ['links'], link_names, required_properties)
   }
 
   subject(:generated) {
@@ -82,9 +82,15 @@ RSpec.describe GovukContentSchemas::FrontendSchemaGenerator do
     )
   end
 
-  it "transforms the links specification to allow expanded links" do
-    expect(generated.schema['properties']['links']).to eq(
-      build_frontend_links_schema(*link_names)
-    )
+  it "transforms the links specification to allow expanded links and available_tranlsations" do
+    expect(generated.schema['properties']['links']).to eq(build_frontend_links_schema(*link_names, 'available_translations'))
+  end
+
+  context "no links in publisher schema" do
+    let(:link_names) { nil }
+
+    it "transforms the links specification to allow available_tranlsations" do
+      expect(generated.schema['properties']['links']).to eq(build_frontend_links_schema('available_translations'))
+    end
   end
 end

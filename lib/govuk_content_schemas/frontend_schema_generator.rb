@@ -29,7 +29,10 @@ class GovukContentSchemas::FrontendSchemaGenerator
     remove_disallowed_properties!(frontend_schema)
     remove_disallowed_required_properties!(frontend_schema)
     add_updated_at!(frontend_schema)
+    ensure_frontend_link_definition!(frontend_schema)
+    ensure_links_schema!(frontend_schema)
     transform_links_specification!(frontend_schema)
+    add_available_translations_link!(frontend_schema)
     frontend_schema
   end
 
@@ -50,16 +53,30 @@ private
     }
   end
 
-  def transform_links_specification!(schema)
+  def ensure_frontend_link_definition!(schema)
     schema.schema['definitions'] ||= {}
-    schema.schema['definitions']['frontend_link'] = links_definition
-    schema.schema['properties']['links'] ||= {}
+    schema.schema['definitions']['frontend_link'] = frontend_link_definition
+  end
+
+  def ensure_links_schema!(schema)
+    schema.schema['properties']['links'] ||= {
+      "type" => "object",
+      "additionalProperties" => false,
+      "properties" => {}
+    }
+  end
+
+  def transform_links_specification!(schema)
     schema.schema['properties']['links']['properties'].keys.each do |link_name|
       schema.schema['properties']['links']['properties'][link_name] = {"$ref" => "#/definitions/frontend_link"}
     end
   end
 
-  def links_definition
+  def add_available_translations_link!(schema)
+    schema.schema['properties']['links']['properties']['available_translations'] = {"$ref" => "#/definitions/frontend_link"}
+  end
+
+  def frontend_link_definition
     {
       "type" => "object",
       "additionalProperties" => false,
