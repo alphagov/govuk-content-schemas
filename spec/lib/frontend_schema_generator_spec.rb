@@ -41,21 +41,10 @@ RSpec.describe GovukContentSchemas::FrontendSchemaGenerator do
     publisher_properties - allowed_properties
   }
 
-  let(:links_schema) {
-    {
-      "type" => "object",
-      "properties" => {
-        "lead_organisations" => {
-          "$ref" => "#/definitions/guid_list"
-        }
-      }
-    }
-  }
+  let(:link_names) { ["lead_organisations"] }
 
   let(:publisher_schema) {
-    properties = build_string_properties(*publisher_properties).merge("links" => links_schema)
-    definitions = build_string_properties('guid_list')
-    build_schema('schema.json', properties, definitions)
+    build_publisher_schema(publisher_properties, link_names)
   }
 
   subject(:generated) {
@@ -78,13 +67,8 @@ RSpec.describe GovukContentSchemas::FrontendSchemaGenerator do
   end
 
   it "transforms the links specification to allow expanded links" do
-    expect(generated.schema['properties']['links']).to eq({
-      "type" => "object",
-      "properties" => {
-        "lead_organisations" => {
-          "$ref" => "#/definitions/frontend_link"
-        }
-      }
-    })
+    expect(generated.schema['properties']['links']).to eq(
+      build_frontend_links_schema(*link_names)
+    )
   end
 end

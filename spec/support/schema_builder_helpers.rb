@@ -16,4 +16,33 @@ module SchemaBuilderHelpers
       memo.merge(property_name => {"type" => "string"})
     end
   end
+
+  def build_ref_properties(property_names, refname)
+    property_names.inject({}) do |memo, property_name|
+      memo.merge(property_name => {
+        "$ref" => "#/definitions/#{refname}"
+      })
+    end
+  end
+
+  def build_publisher_schema(properties, link_names)
+    properties = build_string_properties(*properties)
+    properties['links'] = build_publisher_links_schema(*link_names)
+    definitions = build_string_properties('guid_list')
+    build_schema('schema.json', properties, definitions)
+  end
+
+  def build_publisher_links_schema(*link_names)
+    {
+      "type" => "object",
+      "properties" => build_ref_properties(link_names, "guid_list")
+    }
+  end
+
+  def build_frontend_links_schema(*link_names)
+    {
+      "type" => "object",
+      "properties" => build_ref_properties(link_names, "frontend_link")
+    }
+  end
 end
