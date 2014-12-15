@@ -1,0 +1,31 @@
+#!/usr/bin/env ruby
+
+$LOAD_PATH << File.dirname(__FILE__) + "/../lib"
+require 'json-schema'
+require 'json'
+require 'pp'
+
+def usage
+  $stderr.puts "USAGE: #{File.basename(__FILE__)} <path/to/frontend/schema.json> <path/to/frontend/examples/example.json> ..."
+end
+
+if ARGV.count < 2
+  usage
+  exit(1)
+end
+
+all_errors = []
+ARGV[1..-1].each do |example|
+  errors = JSON::Validator.fully_validate(ARGV[0], example, validate_schema: true)
+  if errors.any?
+    all_errors += errors
+    $stderr.puts "#{example}: had #{errors.count} error(s):"
+    errors.each do |error|
+      $stderr.puts "  #{error}"
+    end
+  else
+    $stderr.puts "#{example}: OK"
+  end
+end
+
+exit(all_errors.any? ? 1 : 0)
