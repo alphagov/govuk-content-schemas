@@ -3,20 +3,33 @@
 $LOAD_PATH << File.dirname(__FILE__) + "/../lib"
 require 'json-schema'
 require 'json'
-require 'pp'
+require 'optparse'
 
 def usage
-  $stderr.puts "USAGE: #{File.basename(__FILE__)} <path/to/frontend/schema.json> <path/to/frontend/examples/example.json> ..."
+  $stderr.puts "USAGE: #{File.basename(__FILE__)} [--schema <path/to/frontend/schema.json>] <path/to/frontend/examples/example.json> ..."
 end
 
-if ARGV.count < 2
+def default_schema_path(example)
+  File.dirname(File.dirname(example)) + "/schema.json"
+end
+
+if ARGV.count < 1
   usage
   exit(1)
 end
 
+options = {}
+
+OptionParser.new do |opts|
+  opts.on("-s", "--schema [PATH]", "Specify schema path") do |schema_path|
+    options[:schema_path] = schema_path
+  end
+end.parse!
+
 all_errors = []
-ARGV[1..-1].each do |example|
-  errors = JSON::Validator.fully_validate(ARGV[0], example, validate_schema: true)
+ARGV.each do |example|
+  schema_path = options[:schema_path] || default_schema_path(example)
+  errors = JSON::Validator.fully_validate(schema_path, example, validate_schema: true)
   if errors.any?
     all_errors += errors
     $stderr.puts "#{example}: had #{errors.count} error(s):"
