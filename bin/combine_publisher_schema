@@ -26,13 +26,18 @@ reader = JSON::Schema::Reader.new(accept_file: true, accept_uri: false)
 
 schemas = %w{../../metadata details links}.map do |name|
   path = publisher_schema_path + "#{name}.json"
-  schema = reader.read(path) if path.exist?
-  errors =  JSON::Validator.fully_validate_schema(schema.schema, parse_data: false)
-  if errors.any?
-    report_errors(path, errors)
-    exit(1)
+  if path.exist?
+    schema = reader.read(path)
+    errors =  JSON::Validator.fully_validate_schema(schema.schema, parse_data: false)
+    if errors.any?
+      report_errors(path, errors)
+      exit(1)
+    end
+    schema
+  else
+    $stderr.puts "Warning: #{path} not found"
+    nil
   end
-  schema
 end
 
 combiner = GovukContentSchemas::SchemaCombiner.new(
