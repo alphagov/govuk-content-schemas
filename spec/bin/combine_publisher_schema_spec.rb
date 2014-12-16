@@ -13,8 +13,10 @@ RSpec.describe 'combine_publisher_schema' do
     Pathname.new('../../bin/combine_publisher_schema').expand_path(File.dirname(__FILE__))
   }
 
+  let(:format_name) { "my_format" }
   let(:tmpdir) { Pathname.new(Dir.mktmpdir) }
-  let(:publisher_schema_dir) { tmpdir + "my_format/publisher" }
+  let(:publisher_schema_dir) { tmpdir + format_name + "publisher" }
+  let(:output_filename) { publisher_schema_dir + "schema.json" }
 
   let(:schemas) {
     {
@@ -39,18 +41,28 @@ RSpec.describe 'combine_publisher_schema' do
   end
 
   it "produces a schema.json file" do
-    expect(publisher_schema_dir + "schema.json").to exist
+    expect(output_filename).to exist
+  end
+
+  def read_generated_schema
+    reader = JSON::Schema::Reader.new(accept_file: true, accept_uri: false)
+    reader.read(output_filename)
+  end
+
+  it "derives the format name from the filesystem path" do
+    expect(read_generated_schema.schema['properties']['format']).to eq(
+      {"type" => "string", "enum" => [format_name]}
+    )
   end
 
   specify "the schema.json file contains the combined schemas" do
-    reader = JSON::Schema::Reader.new(accept_file: true, accept_uri: false)
-    actual = reader.read(publisher_schema_dir + "schema.json")
     expected = GovukContentSchemas::SchemaCombiner.new(
       schemas[:metadata],
+      format_name,
       details_schema: schemas[:details],
       links_schema: schemas[:links]
     ).combined
 
-    expect(actual.schema).to eq(expected.schema)
+    expect(read_generated_schema.schema).to eq(expected.schema)
   end
 end
