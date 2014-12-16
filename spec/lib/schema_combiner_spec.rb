@@ -25,7 +25,7 @@ RSpec.describe GovukContentSchemas::SchemaCombiner do
     end
   end
 
-  context "combining schemas with definitions" do
+  context "combining schemas which have definitions" do
     let(:metadata_schema) {
       build_schema('metadata.json',
         properties: build_string_properties('body'),
