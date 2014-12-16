@@ -15,7 +15,7 @@ clean:
 	rm -f $(frontend_schemas)
 	rm -f $(publisher_schemas)
 
-%/publisher/schema.json: %/../metadata.json %/publisher/details.json %/publisher/links.json
+%/publisher/schema.json: %/../metadata.json %/publisher/details.json $(wildcard %/publisher/links.json)
 	$(combiner_bin) ${@:schema.json=}
 
 %/frontend/schema.json: %/publisher/schema.json
