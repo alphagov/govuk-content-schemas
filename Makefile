@@ -10,6 +10,10 @@ frontend_generator_bin := bundle exec ./bin/generate_frontend_schema
 validation_bin := bundle exec ./bin/validate
 
 default: $(publisher_schemas) $(frontend_schemas) $(validation_records)
+clean:
+	rm -f $(validation_records)
+	rm -f $(frontend_schemas)
+	rm -f $(publisher_schemas)
 
 %/publisher/schema.json: %/publisher/metadata.json %/publisher/details.json %/publisher/links.json
 	$(combiner_bin) ${@:schema.json=}
