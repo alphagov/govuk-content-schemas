@@ -1,8 +1,8 @@
-metadata_schemas := $(wildcard formats/*/publisher/metadata.json)
+details_schemas := $(wildcard formats/*/publisher/details.json)
 examples := $(wildcard formats/*/frontend/examples/*.json)
 
-publisher_schemas := $(metadata_schemas:metadata.json=schema.json)
-frontend_schemas := $(metadata_schemas:publisher/metadata.json=frontend/schema.json)
+publisher_schemas := $(details_schemas:details.json=schema.json)
+frontend_schemas := $(details_schemas:publisher/details.json=frontend/schema.json)
 validation_records := $(examples:.json=.json.valid)
 
 combiner_bin := bundle exec ./bin/combine_publisher_schema
@@ -15,7 +15,7 @@ clean:
 	rm -f $(frontend_schemas)
 	rm -f $(publisher_schemas)
 
-%/publisher/schema.json: %/publisher/metadata.json %/publisher/details.json %/publisher/links.json
+%/publisher/schema.json: %/../metadata.json %/publisher/details.json %/publisher/links.json
 	$(combiner_bin) ${@:schema.json=}
 
 %/frontend/schema.json: %/publisher/schema.json

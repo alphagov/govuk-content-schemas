@@ -24,7 +24,7 @@ end
 publisher_schema_path = Pathname.new(ARGV.first)
 reader = JSON::Schema::Reader.new(accept_file: true, accept_uri: false)
 
-schemas = %w{metadata details links}.map do |name|
+schemas = %w{../../metadata details links}.map do |name|
   path = publisher_schema_path + "#{name}.json"
   schema = reader.read(path) if path.exist?
   errors =  JSON::Validator.fully_validate_schema(schema.schema, parse_data: false)
