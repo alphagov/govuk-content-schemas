@@ -30,7 +30,7 @@ module SchemaBuilderHelpers
     properties = build_string_properties(*properties)
     properties['links'] = build_publisher_links_schema(*link_names) if link_names
     definitions = build_string_properties('guid_list')
-    build_schema('schema.json', properties, definitions, required_properties)
+    build_schema('schema.json', properties: properties, definitions: definitions, required: required_properties)
   end
 
   def build_publisher_links_schema(*link_names)
