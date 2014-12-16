@@ -30,7 +30,8 @@
       }
     },
     "format_display_type": {
-      "type": "string"
+      "type": "string",
+      "enum": [ "case_study" ]
     },
     "first_public_at": {
       "type": "string",
