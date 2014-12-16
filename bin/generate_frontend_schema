@@ -6,16 +6,18 @@ require 'json-schema'
 require 'json'
 
 def usage
-  $stderr.puts "USAGE: #{File.basename(__FILE__)} <path/to/publisher/schema.json> <path/to/frontend/output_schema.json>"
+  $stderr.puts "USAGE: #{File.basename(__FILE__)} <path/to/publisher/schema.json>"
+
+  $stderr.puts
+  $stderr.puts "Writes the generated frontend schema to STDOUT"
 end
 
-if ARGV.count != 2
+if ARGV.count != 1
   usage
   exit(1)
 end
 
 publisher_schema_path = Pathname.new(ARGV[0])
-frontend_schema_path = Pathname.new(ARGV[1])
 
 reader = JSON::Schema::Reader.new(accept_file: true, accept_uri: false)
 publisher_schema = reader.read(publisher_schema_path)
@@ -24,6 +26,4 @@ generator = GovukContentSchemas::FrontendSchemaGenerator.new(
   publisher_schema
 )
 
-File.open(frontend_schema_path, 'w') do |file|
-  file.write JSON.pretty_generate(generator.generate.schema)
-end
+puts JSON.pretty_generate(generator.generate.schema)

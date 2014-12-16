@@ -32,7 +32,7 @@ RSpec.describe 'generate_frontend_schema' do
   after(:each) { FileUtils.remove_entry_secure(tmpdir) }
 
   before(:each) do
-    output = `#{executable_path} "#{publisher_schema_filename}" "#{frontend_schema_filename}" 2>&1`
+    output = `#{executable_path} "#{publisher_schema_filename}" > "#{frontend_schema_filename}"`
     fail(output) unless $?.success?
     output
   end

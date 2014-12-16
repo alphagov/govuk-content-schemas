@@ -19,7 +19,7 @@ clean:
 	$(combiner_bin) ${@:schema.json=}
 
 %/frontend/schema.json: %/publisher/schema.json
-	$(frontend_generator_bin) ${@:frontend/schema.json=publisher/schema.json} ${@}
+	$(frontend_generator_bin) ${@:frontend/schema.json=publisher/schema.json} > ${@}
 
 %.valid: $(frontend_schemas) %
 	$(validation_bin) ${@:.valid=} && touch ${@}
