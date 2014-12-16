@@ -1,22 +1,6 @@
 require 'govuk_content_schemas/frontend_schema_generator'
 
 RSpec.describe GovukContentSchemas::FrontendSchemaGenerator do
-
-  let(:allowed_properties) {
-    %w{
-      base_path
-      description
-      details
-      format
-      links
-      locale
-      need_ids
-      public_updated_at
-      title
-      updated_at
-    }
-  }
-
   let(:publisher_properties) {
     %w{
       base_path
@@ -24,7 +8,6 @@ RSpec.describe GovukContentSchemas::FrontendSchemaGenerator do
       description
       details
       format
-      links
       locale
       need_ids
       public_updated_at
@@ -35,10 +18,6 @@ RSpec.describe GovukContentSchemas::FrontendSchemaGenerator do
       title
       update_type
     }
-  }
-
-  let(:disallowed_properties) {
-    publisher_properties - allowed_properties
   }
 
   let(:link_names) { ["lead_organisations"] }
@@ -54,22 +33,26 @@ RSpec.describe GovukContentSchemas::FrontendSchemaGenerator do
   }
 
   let(:publisher_schema) {
-    build_publisher_schema(publisher_properties - ['links'], link_names, required_properties)
+    build_publisher_schema(publisher_properties, link_names, required_properties)
   }
 
   subject(:generated) {
     described_class.new(publisher_schema).generate
   }
 
-  it "removes disallowed properties from the top level properties list" do
-    disallowed_properties.each do |disallowed_property|
-      expect(generated.schema['properties'].keys).to_not include(disallowed_property)
+  let(:internal_properties) {
+    %w{content_id publishing_app redirects rendering_app routes update_type}
+  }
+
+  it "removes internal properties from the top level properties list" do
+    internal_properties.each do |internal_property|
+      expect(generated.schema['properties'].keys).to_not include(internal_property)
     end
   end
 
-  it "removes disallowed properties top level list of required properties" do
-    disallowed_properties.each do |disallowed_property|
-      expect(generated.schema['required']).to_not include(disallowed_property)
+  it "removes internal properties from the top level list of required properties" do
+    internal_properties.each do |internal_property|
+      expect(generated.schema['required']).to_not include(internal_property)
     end
   end
 
