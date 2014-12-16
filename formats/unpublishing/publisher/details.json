@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "explanation",
+    "unpublished_at",
+    "alternative_url"
+  ],
+  "properties": {
+    "explanation": {
+      "type": "string"
+    },
+    "unpublished_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "alternative_url": {
+      "type": "string",
+      "format": "uri"
+    }
+  }
+}
