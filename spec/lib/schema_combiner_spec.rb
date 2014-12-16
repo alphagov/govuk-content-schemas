@@ -2,13 +2,23 @@ require 'govuk_content_schemas/schema_combiner'
 
 RSpec.describe GovukContentSchemas::SchemaCombiner do
   let(:metadata_schema) { build_schema('metadata.json', properties: build_string_properties('body')) }
-  subject(:combined) { described_class.new(metadata_schema, details_schema: details_schema).combined }
+  let(:format_name) { 'my_format' }
+  subject(:combined) { described_class.new(metadata_schema, format_name, details_schema: details_schema).combined }
 
   context "combining a simple metadata and details schema" do
     let(:details_schema) { build_schema('details.json', properties: build_string_properties('detail')) }
 
     it 'adds a details property to the combined schema' do
       expect(combined.schema['properties']['details']).to be_a(Hash)
+    end
+
+    it 'explicitly defines the format name in the format property' do
+      expect(combined.schema['properties']['format']).to eq(
+        {
+          "type" => "string",
+          "enum" => [format_name]
+        }
+      )
     end
 
     it 'strips the $schema key from the embedded details property' do
@@ -57,7 +67,7 @@ RSpec.describe GovukContentSchemas::SchemaCombiner do
         definitions: build_string_properties('guid_list')
       )
     }
-    subject(:combined) { described_class.new(metadata_schema, links_schema: links_schema).combined }
+    subject(:combined) { described_class.new(metadata_schema, format_name, links_schema: links_schema).combined }
 
     it 'adds a links property to the combined schema' do
       expect(combined.schema['properties']['links']).to be_a(Hash)
