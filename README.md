@@ -87,7 +87,7 @@ $ bundle exec ./bin/generate_frontend_schema formats/case_study/publisher/schema
 
 ### Validation of frontend examples
 
-To actually validate a frontend example, use the `vaidate` script:
+To actually validate a frontend example, use the `validate` script:
 
 ```sh
 $ bundle exec ./bin/validate formats/case_study/frontend/examples/archived.json
