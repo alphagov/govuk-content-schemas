@@ -44,6 +44,14 @@ RSpec.describe GovukContentSchemas::FrontendSchemaGenerator do
     %w{content_id publishing_app redirects rendering_app routes update_type}
   }
 
+  it "does not modify its input" do
+    original = Marshal.load(Marshal.dump(publisher_schema))
+
+    generated
+
+    expect(publisher_schema.schema).to eq(original.schema)
+  end
+
   it "removes internal properties from the top level properties list" do
     internal_properties.each do |internal_property|
       expect(generated.schema['properties'].keys).to_not include(internal_property)

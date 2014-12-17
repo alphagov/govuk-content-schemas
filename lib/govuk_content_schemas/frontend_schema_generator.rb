@@ -42,31 +42,34 @@ private
   end
 
   def frontend_properties
-    (@publisher_schema.schema['properties'].reject { |property_name| internal?(property_name) }).tap do |properties|
-      properties['links'] = frontend_links
-      properties['updated_at'] = updated_at
-    end
+    excluding_internal = @publisher_schema.schema['properties'].reject { |property_name| internal?(property_name) }
+    excluding_internal.merge(
+      'links' => frontend_links,
+      'updated_at' => updated_at
+    )
   end
 
-  def publisher_links
-    @publisher_schema.schema['properties']['links'].try(:clone) || {
-      "type" => "object",
-      "additionalProperties" => false,
-      "properties" => {}
-    }
+  def frontend_link_names
+    links = @publisher_schema.schema['properties'].fetch('links', {'properties' => {}})
+    links.fetch('properties', {}).keys + ['available_translations']
+  end
+
+  def frontend_link_properties
+    frontend_link_names.inject({}) do |hash, link_name|
+      hash.merge(link_name => frontend_links_ref)
+    end
   end
 
   def frontend_links
-    publisher_links.tap do |links|
-      links['properties'].keys.each do |link_name|
-        links['properties'][link_name] = frontend_links_ref
-      end
-      links['properties']['available_translations'] = frontend_links_ref
-    end
+    {
+      "type" => "object",
+      "additionalProperties" => false,
+      "properties" => frontend_link_properties
+    }
   end
 
   def publisher_definitions
-    @publisher_schema.schema['definitions'].try(:clone) || {}
+    clone_hash(@publisher_schema.schema['definitions']) || {}
   end
 
   def frontend_definitions
@@ -81,7 +84,6 @@ private
       'format' => 'date-time'
     }
   end
-
 
   def frontend_links_ref
     {"$ref" => "#/definitions/frontend_links"}
@@ -103,5 +105,4 @@ private
       }
     }
   end
-
 end
