@@ -61,11 +61,11 @@ private
   end
 
   def frontend_links
-    {
-      "type" => "object",
+    clone_hash(@publisher_schema.schema['properties']['links'] || {}).merge(
       "additionalProperties" => false,
+      "type" => "object",
       "properties" => frontend_link_properties
-    }
+    )
   end
 
   def publisher_definitions

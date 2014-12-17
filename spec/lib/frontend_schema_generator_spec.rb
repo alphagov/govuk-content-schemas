@@ -1,6 +1,8 @@
 require 'govuk_content_schemas/frontend_schema_generator'
 
 RSpec.describe GovukContentSchemas::FrontendSchemaGenerator do
+  include GovukContentSchemas::Utils
+
   let(:publisher_properties) {
     %w{
       base_path
@@ -80,6 +82,22 @@ RSpec.describe GovukContentSchemas::FrontendSchemaGenerator do
 
   it "transforms the links specification to allow expanded links and available_tranlsations" do
     expect(generated.schema['properties']['links']).to eq(build_frontend_links_schema(*link_names, 'available_translations'))
+  end
+
+  context "publisher schema specifies a required link" do
+    let(:publisher_schema_with_required_link) {
+      clone_schema(publisher_schema).tap do |cloned|
+        cloned.schema['properties']['links']['required'] = link_names
+      end
+    }
+
+    subject(:generated) {
+      described_class.new(publisher_schema_with_required_link).generate
+    }
+
+    it "preserves list of required items" do
+      expect(generated.schema['properties']['links']['required']).to eq(link_names)
+    end
   end
 
   context "no links in publisher schema" do
