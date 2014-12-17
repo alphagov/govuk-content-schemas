@@ -18,8 +18,8 @@ clean:
 %/publisher/schema.json: %/../metadata.json %/publisher/details.json $(wildcard %/publisher/links.json)
 	$(combiner_bin) ${@:schema.json=}
 
-%/frontend/schema.json: %/publisher/schema.json
-	$(frontend_generator_bin) ${@:frontend/schema.json=publisher/schema.json} > ${@}
+%/frontend/schema.json: %/publisher/schema.json %/../frontend_links_definition.json
+	$(frontend_generator_bin) -f ${@:frontend/schema.json=../frontend_links_definition.json} ${@:frontend/schema.json=publisher/schema.json} > ${@}
 
 %.valid: $(frontend_schemas) %
 	$(validation_bin) ${@:.valid=} && touch ${@}

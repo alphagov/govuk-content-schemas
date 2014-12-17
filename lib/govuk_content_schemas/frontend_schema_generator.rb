@@ -5,7 +5,7 @@ require 'json-schema'
 class GovukContentSchemas::FrontendSchemaGenerator
   include ::GovukContentSchemas::Utils
 
-  attr_reader :publisher_schema
+  attr_reader :publisher_schema, :frontend_links_definition
 
   INTERNAL_PROPERTIES = %w{
     content_id
@@ -16,8 +16,9 @@ class GovukContentSchemas::FrontendSchemaGenerator
     update_type
   }.freeze
 
-  def initialize(publisher_schema)
+  def initialize(publisher_schema, frontend_links_definition)
     @publisher_schema = publisher_schema
+    @frontend_links_definition = frontend_links_definition
   end
 
   def generate
@@ -74,7 +75,7 @@ private
 
   def frontend_definitions
     {
-      'frontend_links' => frontend_links_definition
+      'frontend_links' => frontend_links_definition.schema.reject { |k| k == '$schema' }
     }
   end
 
@@ -87,22 +88,5 @@ private
 
   def frontend_links_ref
     {"$ref" => "#/definitions/frontend_links"}
-  end
-
-  def frontend_links_definition
-    {
-      "type" => "array",
-      "items" => {
-        "type" => "object",
-        "additionalProperties" => false,
-        "properties" =>  {
-          "title" => { "type" => "string" },
-          "base_path" => { "type" => "string" },
-          "api_url" => { "type" => "string", "format" => "uri" },
-          "web_url" => { "type" => "string", "format" => "uri" },
-          "locale" => { "type" => "string" }
-        }
-      }
-    }
   end
 end

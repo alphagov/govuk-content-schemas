@@ -62,18 +62,18 @@
         }
       }
     },
-    "updated_at": {
-      "type": "string",
-      "format": "date-time"
-    },
     "links": {
-      "type": "object",
       "additionalProperties": false,
+      "type": "object",
       "properties": {
         "available_translations": {
           "$ref": "#/definitions/frontend_links"
         }
       }
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
     }
   },
   "definitions": {

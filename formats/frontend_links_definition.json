@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "title": {
+        "type": "string"
+      },
+      "base_path": {
+        "type": "string"
+      },
+      "api_url": {
+        "type": "string",
+        "format": "uri"
+      },
+      "web_url": {
+        "type": "string",
+        "format": "uri"
+      },
+      "locale": {
+        "type": "string"
+      }
+    }
+  }
+}

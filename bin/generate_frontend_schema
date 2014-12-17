@@ -4,16 +4,29 @@ $LOAD_PATH << File.dirname(__FILE__) + "/../lib"
 require 'govuk_content_schemas/frontend_schema_generator'
 require 'json-schema'
 require 'json'
+require 'optparse'
 
-def usage
-  $stderr.puts "USAGE: #{File.basename(__FILE__)} <path/to/publisher/schema.json>"
+options = {}
 
-  $stderr.puts
-  $stderr.puts "Writes the generated frontend schema to STDOUT"
+optparser = OptionParser.new do |opts|
+  opts.banner = "USAGE: #{File.basename(__FILE__)} [options] <path/to/publisher/schema.json>"
+  opts.separator <<-INSTRUCTIONS
+
+Writes the generated frontend schema to STDOUT.
+
+The frontend links definition is REQUIRED.
+
+INSTRUCTIONS
+
+  opts.on("-f PATH", "--frontend-links-definition PATH", "Specify path to a schema defining frontend links") do |path|
+    options[:frontend_links_definition] = path
+  end
 end
 
-if ARGV.count != 1
-  usage
+optparser.parse!
+
+if ARGV.count != 1 || options[:frontend_links_definition].nil?
+  $stderr.puts optparser
   exit(1)
 end
 
@@ -21,9 +34,11 @@ publisher_schema_path = Pathname.new(ARGV[0])
 
 reader = JSON::Schema::Reader.new(accept_file: true, accept_uri: false)
 publisher_schema = reader.read(publisher_schema_path)
+frontend_links_definition = reader.read(options[:frontend_links_definition])
 
 generator = GovukContentSchemas::FrontendSchemaGenerator.new(
-  publisher_schema
+  publisher_schema,
+  frontend_links_definition
 )
 
 puts JSON.pretty_generate(generator.generate.schema)

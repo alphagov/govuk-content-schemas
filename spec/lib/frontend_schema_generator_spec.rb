@@ -38,8 +38,12 @@ RSpec.describe GovukContentSchemas::FrontendSchemaGenerator do
     build_publisher_schema(publisher_properties, link_names, required_properties)
   }
 
+  let(:frontend_links_definition) {
+    build_schema('frontend_links.json', properties: build_string_properties('test'))
+  }
+
   subject(:generated) {
-    described_class.new(publisher_schema).generate
+    described_class.new(publisher_schema, frontend_links_definition).generate
   }
 
   let(:internal_properties) {
@@ -47,7 +51,7 @@ RSpec.describe GovukContentSchemas::FrontendSchemaGenerator do
   }
 
   it "does not modify its input" do
-    original = Marshal.load(Marshal.dump(publisher_schema))
+    original = clone_schema(publisher_schema)
 
     generated
 
@@ -77,7 +81,8 @@ RSpec.describe GovukContentSchemas::FrontendSchemaGenerator do
 
   it "injects a frontend_links definition" do
     expect(generated.schema['definitions']).to include('frontend_links')
-    expect(generated.schema['definitions']['frontend_links']['type']).to eq('array')
+    expected_embed = frontend_links_definition.schema.reject { |k| k == '$schema' }
+    expect(generated.schema['definitions']['frontend_links']).to eq(expected_embed)
   end
 
   it "transforms the links specification to allow expanded links and available_tranlsations" do
@@ -92,7 +97,7 @@ RSpec.describe GovukContentSchemas::FrontendSchemaGenerator do
     }
 
     subject(:generated) {
-      described_class.new(publisher_schema_with_required_link).generate
+      described_class.new(publisher_schema_with_required_link, frontend_links_definition).generate
     }
 
     it "preserves list of required items" do
