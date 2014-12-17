@@ -151,3 +151,8 @@ See [suggested-workflows.md](docs/suggested-workflows.md)
 ## Why do contract testing?
 
 See [why-contract-testing.md](docs/why-contract-testing.md)
+
+## Running your frontend against the examples (content-store not needed)
+
+See [dummy_content_store/README.md](dummy_content_store/README.md)
+
