@@ -21,15 +21,14 @@ class GovukContentSchemas::FrontendSchemaGenerator
   end
 
   def generate
-    @frontend_schema = clone_schema(publisher_schema)
-    remove_internal_properties!
-    remove_internal_properties_from_required_properties!
-    add_updated_at!
-    ensure_frontend_links_definition!
-    ensure_links_schema!
-    transform_links_specification!
-    add_available_translations_link!
-    @frontend_schema
+    JSON::Schema.new({
+      "$schema" => "http://json-schema.org/draft-04/schema#",
+      "type" => "object",
+      "additionalProperties" => false,
+      "required" => required_properties,
+      "properties" => frontend_properties,
+      "definitions" => publisher_definitions.merge(frontend_definitions)
+    }, @publisher_schema.uri)
   end
 
 private
@@ -37,43 +36,55 @@ private
     INTERNAL_PROPERTIES.include?(property_name)
   end
 
-  def remove_internal_properties!
-    @frontend_schema.schema['properties'].reject! { |k, v| internal?(k) }
+  def required_properties
+    return [] unless @publisher_schema.schema.has_key?('required')
+    @publisher_schema.schema['required'].reject { |property_name| internal?(property_name) }
   end
 
-  def remove_internal_properties_from_required_properties!
-    return unless @frontend_schema.schema.has_key?('required')
-    @frontend_schema.schema['required'].reject! { |property_name| internal?(property_name) }
+  def frontend_properties
+    (@publisher_schema.schema['properties'].reject { |property_name| internal?(property_name) }).tap do |properties|
+      properties['links'] = frontend_links
+      properties['updated_at'] = updated_at
+    end
   end
 
-  def add_updated_at!
-    @frontend_schema.schema['properties']['updated_at'] = {
-      'type' => 'string',
-      'format' => 'date-time'
-    }
-  end
-
-  def ensure_frontend_links_definition!
-    @frontend_schema.schema['definitions'] ||= {}
-    @frontend_schema.schema['definitions']['frontend_links'] = frontend_links_definition
-  end
-
-  def ensure_links_schema!
-    @frontend_schema.schema['properties']['links'] ||= {
+  def publisher_links
+    @publisher_schema.schema['properties']['links'].try(:clone) || {
       "type" => "object",
       "additionalProperties" => false,
       "properties" => {}
     }
   end
 
-  def transform_links_specification!
-    @frontend_schema.schema['properties']['links']['properties'].keys.each do |link_name|
-      @frontend_schema.schema['properties']['links']['properties'][link_name] = {"$ref" => "#/definitions/frontend_links"}
+  def frontend_links
+    publisher_links.tap do |links|
+      links['properties'].keys.each do |link_name|
+        links['properties'][link_name] = frontend_links_ref
+      end
+      links['properties']['available_translations'] = frontend_links_ref
     end
   end
 
-  def add_available_translations_link!
-    @frontend_schema.schema['properties']['links']['properties']['available_translations'] = {"$ref" => "#/definitions/frontend_links"}
+  def publisher_definitions
+    @publisher_schema.schema['definitions'].try(:clone) || {}
+  end
+
+  def frontend_definitions
+    {
+      'frontend_links' => frontend_links_definition
+    }
+  end
+
+  def updated_at
+    {
+      'type' => 'string',
+      'format' => 'date-time'
+    }
+  end
+
+
+  def frontend_links_ref
+    {"$ref" => "#/definitions/frontend_links"}
   end
 
   def frontend_links_definition
