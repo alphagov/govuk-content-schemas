@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "publish_time"
+  ],
+  "properties": {
+    "publish_time": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}
