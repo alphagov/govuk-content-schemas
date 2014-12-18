@@ -9,6 +9,17 @@ def usage
   $stderr.puts "USAGE: #{File.basename(__FILE__)} <path/to/publisher/schemas/>"
 end
 
+def report_errors(path, errors)
+  $stderr.puts "There were errors when reading '#{path}:"
+  errors.each do |error|
+    $stderr.puts error
+  end
+end
+
+def format_name(publisher_schema_path)
+  publisher_schema_path.dirname.basename
+end
+
 if ARGV.count != 1
   usage
   exit(1)
@@ -17,13 +28,25 @@ end
 publisher_schema_path = Pathname.new(ARGV.first)
 reader = JSON::Schema::Reader.new(accept_file: true, accept_uri: false)
 
-schemas = %w{metadata details links}.map do |name|
+schemas = %w{../../metadata details links}.map do |name|
   path = publisher_schema_path + "#{name}.json"
-  reader.read(path) if path.exist?
+  if path.exist?
+    schema = reader.read(path)
+    errors =  JSON::Validator.fully_validate_schema(schema.schema, parse_data: false)
+    if errors.any?
+      report_errors(path, errors)
+      exit(1)
+    end
+    schema
+  else
+    $stderr.puts "Warning: #{path} not found"
+    nil
+  end
 end
 
 combiner = GovukContentSchemas::SchemaCombiner.new(
   schemas[0],
+  format_name(publisher_schema_path),
   details_schema: schemas[1],
   links_schema: schemas[2]
 )

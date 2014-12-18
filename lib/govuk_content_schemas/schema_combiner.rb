@@ -1,11 +1,15 @@
 require 'govuk_content_schemas'
+require 'govuk_content_schemas/utils'
 require 'json-schema'
 
 class GovukContentSchemas::SchemaCombiner
-  attr_reader :metadata_schema, :details_schema, :links_schema
+  include ::GovukContentSchemas::Utils
 
-  def initialize(metadata_schema, details_schema: nil, links_schema: nil)
+  attr_reader :metadata_schema, :format_name, :details_schema, :links_schema
+
+  def initialize(metadata_schema, format_name, details_schema: nil, links_schema: nil)
     @metadata_schema = metadata_schema
+    @format_name = format_name
     @details_schema = details_schema
     @links_schema = links_schema
   end
@@ -14,6 +18,10 @@ class GovukContentSchemas::SchemaCombiner
     combined = clone_schema(metadata_schema)
     combined.schema['properties']['details'] = embed(details_schema) if details_schema
     combined.schema['properties']['links'] = embed(links_schema) if links_schema
+    combined.schema['properties']['format'] = {
+      "type" => "string",
+      "enum" => [format_name]
+    }
     combined.schema['definitions'] = combine_definitions if combine_definitions.any?
     combined
   end
@@ -31,17 +39,5 @@ private
     [details_schema, links_schema].compact.inject(combined) do |memo, embedded_schema|
       memo.merge(embedded_schema.schema.fetch('definitions', {}))
     end
-  end
-
-  def clone_hash(hash)
-    Marshal.load(Marshal.dump(hash))
-  end
-
-  def clone_schema(schema)
-    parse_schema(schema.to_s, schema.uri)
-  end
-
-  def parse_schema(body, uri)
-    JSON::Schema.new(JSON::Validator.parse(body), uri)
   end
 end

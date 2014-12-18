@@ -5,18 +5,11 @@
   "required": [
     "base_path",
     "format",
-    "publishing_app",
-    "rendering_app",
-    "update_type",
     "locale"
   ],
   "properties": {
     "base_path": {
       "type": "string"
-    },
-    "content_id": {
-      "type": "string",
-      "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-[1-5][a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$"
     },
     "title": {
       "type": "string"
@@ -34,19 +27,6 @@
       "type": "string",
       "format": "date-time"
     },
-    "publishing_app": {
-      "type": "string"
-    },
-    "rendering_app": {
-      "type": "string"
-    },
-    "update_type": {
-      "enum": [
-        "major",
-        "minor",
-        "republish"
-      ]
-    },
     "locale": {
       "type": "string"
     },
@@ -54,18 +34,6 @@
       "type": "array",
       "items": {
         "type": "string"
-      }
-    },
-    "routes": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/route"
-      }
-    },
-    "redirects": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/route"
       }
     },
     "details": {
@@ -93,6 +61,19 @@
           "format": "uri"
         }
       }
+    },
+    "links": {
+      "additionalProperties": false,
+      "type": "object",
+      "properties": {
+        "available_translations": {
+          "$ref": "#/definitions/frontend_links"
+        }
+      }
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
     }
   },
   "definitions": {
@@ -112,6 +93,32 @@
             "prefix",
             "exact"
           ]
+        }
+      }
+    },
+    "frontend_links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "base_path": {
+            "type": "string"
+          },
+          "api_url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "web_url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "locale": {
+            "type": "string"
+          }
         }
       }
     }

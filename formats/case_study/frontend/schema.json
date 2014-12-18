@@ -1,0 +1,233 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "base_path",
+    "format",
+    "locale"
+  ],
+  "properties": {
+    "base_path": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "format": {
+      "type": "string",
+      "enum": [
+        "case_study"
+      ]
+    },
+    "public_updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "locale": {
+      "type": "string"
+    },
+    "need_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "details": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "body",
+        "first_public_at"
+      ],
+      "properties": {
+        "body": {
+          "type": "string"
+        },
+        "image": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "url": {
+              "type": "string",
+              "format": "uri"
+            },
+            "alt_text": {
+              "type": "string"
+            },
+            "caption": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        "format_display_type": {
+          "type": "string",
+          "enum": [
+            "case_study"
+          ]
+        },
+        "first_public_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "change_note": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "change_history": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "public_timestamp": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "note": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "public_timestamp",
+              "note"
+            ]
+          }
+        },
+        "tags": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "browse_pages": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "topics": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "archive_notice": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "explanation": {
+              "type": "string"
+            },
+            "archived_at": {
+              "format": "date-time"
+            }
+          }
+        }
+      }
+    },
+    "links": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "lead_organisations"
+      ],
+      "properties": {
+        "lead_organisations": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "related_policies": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "supporting_organisations": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "world_locations": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "worldwide_organisations": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "worldwide_priorities": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "available_translations": {
+          "$ref": "#/definitions/frontend_links"
+        }
+      }
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "definitions": {
+    "route": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "type"
+      ],
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "type": {
+          "enum": [
+            "prefix",
+            "exact"
+          ]
+        }
+      }
+    },
+    "guid_list": {
+      "type": "array",
+      "items": {
+        "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-[1-5][a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$"
+      }
+    },
+    "frontend_links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "base_path": {
+            "type": "string"
+          },
+          "api_url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "web_url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "locale": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

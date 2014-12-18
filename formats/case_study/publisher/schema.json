@@ -26,7 +26,9 @@
     },
     "format": {
       "type": "string",
-      "enum": [ "case_study" ]
+      "enum": [
+        "case_study"
+      ]
     },
     "public_updated_at": {
       "type": "string",
@@ -46,7 +48,7 @@
       ]
     },
     "locale": {
-      "type": "String"
+      "type": "string"
     },
     "need_ids": {
       "type": "array",
@@ -94,7 +96,7 @@
                   "type": "string"
                 },
                 {
-                  "type": null
+                  "type": "null"
                 }
               ]
             }
@@ -102,7 +104,9 @@
         },
         "format_display_type": {
           "type": "string",
-          "enum": [ "case_study" ]
+          "enum": [
+            "case_study"
+          ]
         },
         "first_public_at": {
           "type": "string",
@@ -114,7 +118,7 @@
               "type": "string"
             },
             {
-              "type": null
+              "type": "null"
             }
           ]
         },

@@ -24,13 +24,14 @@
         "caption": {
           "anyOf": [
             { "type": "string" },
-            { "type": null }
+            { "type": "null" }
           ]
         }
       }
     },
     "format_display_type": {
-      "type": "string"
+      "type": "string",
+      "enum": [ "case_study" ]
     },
     "first_public_at": {
       "type": "string",
@@ -39,7 +40,7 @@
     "change_note": {
       "anyOf": [
         { "type": "string" },
-        { "type": null }
+        { "type": "null" }
       ]
     },
     "change_history": {
