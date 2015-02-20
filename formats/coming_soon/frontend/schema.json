@@ -3,14 +3,11 @@
   "type": "object",
   "additionalProperties": false,
   "required": [
-    "base_path",
     "format",
-    "locale"
+    "locale",
+    "base_path"
   ],
   "properties": {
-    "base_path": {
-      "type": "string"
-    },
     "title": {
       "type": "string"
     },
@@ -61,6 +58,9 @@
     "updated_at": {
       "type": "string",
       "format": "date-time"
+    },
+    "base_path": {
+      "type": "string"
     }
   },
   "definitions": {
