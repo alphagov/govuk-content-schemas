@@ -3,7 +3,6 @@
   "type": "object",
   "additionalProperties": false,
   "required": [
-    "base_path",
     "format",
     "publishing_app",
     "rendering_app",
