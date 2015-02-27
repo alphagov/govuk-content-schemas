@@ -38,6 +38,13 @@
                 "locale": "es",
                 "title": "\u00bfQu\u00e9 puede hacer UKTI por t\u00ed?",
                 "web_url": "https://www.preview.alphagov.co.uk/government/case-studies/doing-business-in-spain.es"
+            },
+            {
+                "api_url": "http://localhost:3068/content/government/case-studies/doing-business-in-spain.ar",
+                "base_path": "/government/case-studies/doing-business-in-spain.ar",
+                "locale": "ar",
+                "title": "البحرين - تحديث دراسة حالة دولة",
+                "web_url": "https://www.preview.alphagov.co.uk/government/case-studies/doing-business-in-spain.ar"
             }
         ],
         "lead_organisations": [
