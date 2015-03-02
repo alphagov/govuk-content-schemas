@@ -1,0 +1,184 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "base_path",
+    "format",
+    "locale"
+  ],
+  "properties": {
+    "base_path": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "format": {
+      "type": "string",
+      "enum": [
+        "finder"
+      ]
+    },
+    "public_updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "locale": {
+      "type": "string"
+    },
+    "need_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "details": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "document_noun",
+        "filter",
+        "facets"
+      ],
+      "properties": {
+        "document_noun": {
+          "type": "string",
+          "additionalProperties": false
+        },
+        "filter": {
+          "type": "object",
+          "additionalProperties": true
+        },
+        "facets": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": true,
+            "required": [
+              "key",
+              "filterable",
+              "display_as_result_metadata",
+              "name",
+              "type"
+            ],
+            "properties": {
+              "key": {
+                "type": "string"
+              },
+              "filterable": {
+                "type": "boolean"
+              },
+              "display_as_result_metadata": {
+                "type": "boolean"
+              },
+              "name": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
+              },
+              "allowed_values": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "label",
+                    "value"
+                  ],
+                  "properties": {
+                    "label": {
+                      "type": "string"
+                    },
+                    "value": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "links": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "organisations": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "related": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "email_alert_signup": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "available_translations": {
+          "$ref": "#/definitions/frontend_links"
+        }
+      }
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "definitions": {
+    "route": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "type"
+      ],
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "type": {
+          "enum": [
+            "prefix",
+            "exact"
+          ]
+        }
+      }
+    },
+    "guid_list": {
+      "type": "array",
+      "items": {
+        "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-[1-5][a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$"
+      }
+    },
+    "frontend_links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "base_path": {
+            "type": "string"
+          },
+          "api_url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "web_url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "locale": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
