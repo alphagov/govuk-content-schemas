@@ -3,16 +3,12 @@
   "type": "object",
   "additionalProperties": false,
   "required": [
-    "base_path",
     "format",
     "publishing_app",
     "update_type",
     "redirects"
   ],
   "properties": {
-    "base_path": {
-      "type": "string"
-    },
     "format": {
       "enum": [ "redirect" ]
     },
