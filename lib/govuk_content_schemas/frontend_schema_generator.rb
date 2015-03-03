@@ -39,14 +39,15 @@ private
 
   def required_properties
     return [] unless @publisher_schema.schema.has_key?('required')
-    @publisher_schema.schema['required'].reject { |property_name| internal?(property_name) }
+    ['base_path'] + (@publisher_schema.schema['required'] - INTERNAL_PROPERTIES)
   end
 
   def frontend_properties
     excluding_internal = @publisher_schema.schema['properties'].reject { |property_name| internal?(property_name) }
     excluding_internal.merge(
       'links' => frontend_links,
-      'updated_at' => updated_at
+      'updated_at' => updated_at,
+      'base_path' => { 'type' => 'string' }
     )
   end
 

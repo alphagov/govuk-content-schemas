@@ -5,7 +5,6 @@ RSpec.describe GovukContentSchemas::FrontendSchemaGenerator do
 
   let(:publisher_properties) {
     %w{
-      base_path
       content_id
       description
       details
@@ -26,7 +25,6 @@ RSpec.describe GovukContentSchemas::FrontendSchemaGenerator do
 
   let(:required_properties) {
     %w{
-      base_path
       format
       locale
       publishing_app
@@ -76,6 +74,17 @@ RSpec.describe GovukContentSchemas::FrontendSchemaGenerator do
         "type" => "string",
         "format" => "date-time"
       }
+    )
+  end
+
+  it "adds base_path as a required string property" do
+    expect(generated.schema['properties']).to include(
+      "base_path" => {
+        "type" => "string"
+      }
+    )
+    expect(generated.schema["required"]).to include(
+      "base_path"
     )
   end
 
