@@ -9,9 +9,6 @@
     "related": {
       "$ref": "#/definitions/guid_list"
     },
-    "related": {
-      "$ref": "#/definitions/guid_list"
-    },
     "email_alert_signup": {
       "$ref": "#/definitions/guid_list"
     },
