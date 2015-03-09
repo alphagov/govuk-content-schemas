@@ -142,6 +142,8 @@ rm -f formats/case_study/publisher/schema.json
 
 ## How integration testing works (tbd)
 
+see [contract-testing-howto.md](docs/contract-testing-howto.md)
+
 ## Suggested workflows (tbd)
 
   - when adding a new field to a content format
