@@ -23,9 +23,13 @@ Publishing involves three systems:
 
 ```
 
-Note that the *frontend representation* differs slightly from the *publishing representation*. 
- 
-The *contract* between the publishing application and the frontend application is defined by govuk-content-schemas. 
+Note that the *frontend representation* differs slightly from the *publishing
+representation*. The main difference is that the `links` hash is expanded so
+that it contains full details about links, wheras the publisher representation
+only contains content ids (for full info see [frontend_schema_generator_spec.rb](spec/lib/frontend_schema_generator_spec.rb)).
+
+The *contract* between the publishing application and the frontend application
+is defined by govuk-content-schemas.
 
 This comprises three things:
 
