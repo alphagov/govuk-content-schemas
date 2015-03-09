@@ -87,6 +87,12 @@
           "properties": {
             "document_type": {
               "type": "string"
+            },
+            "organisations": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             }
           }
         },

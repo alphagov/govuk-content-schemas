@@ -1,0 +1,53 @@
+{
+  "base_path": "/government/organisations/hm-cheese-biscuits/contact",
+  "format": "finder",
+  "title": "HM Cheese & Biscuits Contacts",
+  "description": "",
+  "public_updated_at": "2015-03-05T16:48:34.000Z",
+  "details": {
+    "document_noun": "contact",
+    "filter": {
+      "document_type": "contact",
+      "organisations": [
+        "hm-cheese-biscuits"
+      ]
+    },
+    "facets": [
+      {
+        "key": "contact_group",
+        "name": "Topic",
+        "filterable": true,
+        "type": "text",
+        "display_as_result_metadata": true,
+        "preposition": "in topic",
+        "allowed_values": [
+          {
+            "label": "Stinking Bishop",
+            "value": "stinking-bishop"
+          },
+          {
+            "label": "Digestives",
+            "value": "digestives"
+          },
+          {
+            "label": "Quince",
+            "value": "quince"
+          }
+        ]
+      }
+    ]
+  },
+  "links": {
+    "organisations": [
+      {
+        "title": "HM Cheese & Biscuits",
+        "base_path": "/government/organisations/hm-cheese-biscuits",
+        "api_url": "http://content-store.dev.gov.uk/content/government/organisations/government/organisations/hm-cheese-biscuits",
+        "web_url": "http://www.dev.gov.uk/government/organisations/government/organisations/hm-cheese-biscuits",
+        "locale": "en"
+      }
+    ],
+    "related": []
+  },
+  "locale": "en"
+}
