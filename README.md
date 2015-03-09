@@ -144,8 +144,7 @@ rm -f formats/case_study/publisher/schema.json
 
 see [contract-testing-howto.md](docs/contract-testing-howto.md)
 
-## Suggested workflows (tbd)
 
-  - when adding a new field to a content format
-  - when removing a field from a content format
-  - when modifying the metadata of formats
+## Suggested workflows
+
+See [suggested-workflows.md](docs/suggested-workflows.md)
