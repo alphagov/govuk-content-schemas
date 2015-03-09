@@ -37,7 +37,7 @@ This comprises three things:
 2. a curated set of frontend examples of that format, which are validated against the schemas
 3. [a mechanism to convert from the 'publisher' schemas to the 'frontend' schemas](https://github.com/alphagov/govuk-content-schemas/blob/master/lib/govuk_content_schemas/frontend_schema_generator.rb), simulating the behaviour of the content store
 
-With those three parts we are able to verify that the examples against the schemas.
+With those three parts we are able to verify the examples against the schemas.
 
 This means that if the frontend works ok with the curated examples, and if the publishing tool produces output which matches the schema, then we can be quite confident that the frontends will work with the data produced by the publishing tool.
 
@@ -48,7 +48,7 @@ TODO
 ## Setting up contract testing
 
 We have now set up contract testing between `whitehall` and `government-frontend`, so you can follow that as an example.
- 
+
 The pieces required are:
 
 * [`jenkins-schema.sh` in government-frontend](https://github.com/alphagov/government-frontend/blob/master/jenkins-schema.sh) - runs the government frontend tests using the schema examples specified in the the `$SCHEMA_GIT_COMMIT` environment variable.
