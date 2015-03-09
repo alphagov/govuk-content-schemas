@@ -10,6 +10,8 @@ The idea of contract testing is to gain more confidence that the whole system wo
 
 The definition of the contracts are provided by `govuk-content-schemas`.
 
+For more information and background please read the [README.md](../README.md)
+
 ## Overview of publishing
 
 Publishing involves three systems:
