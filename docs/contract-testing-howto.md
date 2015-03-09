@@ -59,7 +59,17 @@ content-schemas` we also run these two jobs.
 
 This is done using jenkins triggers on both the [master build](https://ci-new.alphagov.co.uk/job/govuk_content_schemas/) and the [branches build](https://ci-new.alphagov.co.uk/job/govuk_content_schemas_branches/) of `govuk-content-schemas`.
 
-If you want to add contract testing for a new format follow these steps:
+Normally there should be a set of contract tests for each integration point,
+ie. for your application writing to content store, and for your frontend
+reading from content store.
+
+If you're adding a new format, you may be lucky in that your publishing app or
+frontend already has contract tests set up. In that case you just need to add
+the new examples and schemas to this repo and then check that the contract
+tests use those schemas and examples.
+
+If your publishing app or frontend has never had contract testing set up,
+you'll need to do the following:
 
 1. add a schema for your format and curated examples to `govuk-content-schemas`.
 2. add `jenkins-schema.sh` to your publishing tool. This should run tests which check that your publishing tool produces output which conforms to the relevant schemas in govuk-content-schemas. We intend to add a [gem to help with this testing ](https://trello.com/c/U3IFYey5/75-ruby-gem-for-schema-validation)
