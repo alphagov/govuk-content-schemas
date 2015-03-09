@@ -54,8 +54,8 @@ The pieces required are:
 * [`jenkins-schema.sh` in government-frontend](https://github.com/alphagov/government-frontend/blob/master/jenkins-schema.sh) - runs the government frontend tests using the schema examples specified in the the `$SCHEMA_GIT_COMMIT` environment variable.
 * [`jenkins-schema.sh` in whitehall](https://github.com/alphagov/whitehall/blob/master/jenkins-schema.sh) - runs the whitehall publishing api presenter tests which take an edition model object and generate the JSON message which would be sent to the publishing API. This json is validated against the schemas.
 
-We then need to make sure that whenever a change is made to `govuk-
-content-schemas` we also run these two jobs.
+We then need to make sure that whenever a change is made to `govuk-content-schemas`
+we also run these two jobs.
 
 This is done using jenkins triggers on both the [master build](https://ci-new.alphagov.co.uk/job/govuk_content_schemas/) and the [branches build](https://ci-new.alphagov.co.uk/job/govuk_content_schemas_branches/) of `govuk-content-schemas`.
 
