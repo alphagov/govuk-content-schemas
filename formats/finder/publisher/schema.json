@@ -80,6 +80,9 @@
           "type": "string",
           "additionalProperties": false
         },
+        "email_signup_enabled": {
+          "type": "boolean"
+        },
         "filter": {
           "description": "This is the fixed filter that scopes the finder",
           "type": "object",
@@ -174,6 +177,9 @@
           "$ref": "#/definitions/guid_list"
         },
         "available_translations": {
+          "$ref": "#/definitions/guid_list"
+        },
+        "topics": {
           "$ref": "#/definitions/guid_list"
         }
       }

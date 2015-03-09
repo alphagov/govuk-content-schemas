@@ -49,6 +49,9 @@
           "type": "string",
           "additionalProperties": false
         },
+        "email_signup_enabled": {
+          "type": "boolean"
+        },
         "filter": {
           "description": "This is the fixed filter that scopes the finder",
           "type": "object",
@@ -143,6 +146,9 @@
           "$ref": "#/definitions/frontend_links"
         },
         "available_translations": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "topics": {
           "$ref": "#/definitions/frontend_links"
         }
       }
