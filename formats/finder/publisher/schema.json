@@ -81,8 +81,14 @@
           "additionalProperties": false
         },
         "filter": {
+          "description": "This is the fixed filter that scopes the finder",
           "type": "object",
-          "additionalProperties": false
+          "additionalProperties": false,
+          "properties": {
+            "document_type": {
+              "type": "string"
+            }
+          }
         },
         "facets": {
           "type": "array",
@@ -109,6 +115,12 @@
               "name": {
                 "type": "string"
               },
+              "preposition": {
+                "type": "string"
+              },
+              "short_name": {
+                "type": "string"
+              },
               "type": {
                 "type": "string"
               },
@@ -133,6 +145,12 @@
               }
             }
           }
+        },
+        "show_summaries": {
+          "type": "boolean"
+        },
+        "summary": {
+          "type": "string"
         }
       }
     },
