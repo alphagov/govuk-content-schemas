@@ -1,0 +1,47 @@
+{
+   "base_path": "/government/policies/benefits-reform",
+   "title": "Benefits Reform",
+   "description": "",
+   "format": "policy",
+   "need_ids": [],
+   "locale": "en",
+   "updated_at": "2015-03-10T11:55:11.570Z",
+   "public_updated_at": "2015-03-10T11:55:11.066+00:00",
+   "details": {
+      "document_noun": "document",
+      "email_signup_enabled": false,
+      "filter": {
+         "policies": [
+            "benefits-reform"
+         ]
+      },
+      "human_readable_finder_format": "Policy",
+      "signup_link": "",
+      "summary": "The government believes that the current benefits system is too complex, and there are insufficient incentives to encourage people on benefits to start paid work or increase their hours.",
+      "show_summaries": false,
+      "facets":[]
+   },
+   "links": {
+      "organisations":[
+        {
+          "title": "Department for Work and Pensions",
+          "base_path": "/government/organisations/department-for-work-and-pensions",
+          "api_url": "http://content-store/organisations/department-for-work-and-pensions",
+          "web_url": "https://www.gov.uk/government/organisations/department-for-work-and-pensions",
+          "locale": "en"
+        }
+      ],
+      "related":[
+
+      ],
+      "available_translations":[
+         {
+            "title": "Benefits Reform",
+            "base_path": "/government/policies/benefits-reform",
+            "api_url": "http://content-store.dev.gov.uk/content/government/policies/benefits-reform",
+            "web_url": "http://www.dev.gov.uk/government/policies/benefits-reform",
+            "locale": "en"
+         }
+      ]
+   }
+}

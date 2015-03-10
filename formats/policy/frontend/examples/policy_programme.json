@@ -1,0 +1,47 @@
+{
+   "base_path": "/government/policies/universal-credit",
+   "title": "Universal Credit",
+   "description": "",
+   "format": "policy",
+   "need_ids": [],
+   "locale": "en",
+   "updated_at": "2015-03-10T11:55:11.570Z",
+   "public_updated_at": "2015-03-10T11:55:11.066+00:00",
+   "details": {
+      "document_noun": "document",
+      "email_signup_enabled": false,
+      "filter": {
+         "policies": [
+            "universal-credit"
+         ]
+      },
+      "human_readable_finder_format": "Policy",
+      "signup_link": "",
+      "summary": "Universal Credit brings together 6 benefits for people who are out of work or on a low income into a single payment. It's being introduced in stages, starting in October 2013. By the end of 2017 it's expected to be available across England and Wales.",
+      "show_summaries": false,
+      "facets":[]
+   },
+   "links": {
+      "organisations":[
+        {
+          "title": "Department for Work and Pensions",
+          "base_path": "/government/organisations/department-for-work-and-pensions",
+          "api_url": "http://content-store/organisations/department-for-work-and-pensions",
+          "web_url": "https://www.gov.uk/government/organisations/department-for-work-and-pensions",
+          "locale": "en"
+        }
+      ],
+      "related":[
+
+      ],
+      "available_translations":[
+         {
+            "title": "Unveirsal Credit",
+            "base_path": "/government/policies/universal-credit",
+            "api_url": "http://content-store.dev.gov.uk/content/government/policies/universal-credit",
+            "web_url": "http://www.dev.gov.uk/government/policies/universal-credit",
+            "locale": "en"
+         }
+      ]
+   }
+}
