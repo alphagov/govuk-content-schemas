@@ -1,0 +1,84 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "document_noun",
+    "filter",
+    "facets"
+  ],
+  "properties": {
+    "document_noun": {
+      "type": "string"
+    },
+    "email_signup_enabled": {
+      "type": "boolean"
+    },
+    "filter": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "facets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "required": [
+          "key",
+          "filterable",
+          "display_as_result_metadata",
+          "name",
+          "type"
+        ],
+        "properties": {
+          "key": {
+            "type": "string"
+          },
+          "filterable": {
+            "type": "boolean"
+          },
+          "display_as_result_metadata": {
+            "type": "boolean"
+          },
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "allowed_values": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "label",
+                "value"
+              ],
+              "properties": {
+                "label": {
+                  "type": "string"
+                },
+                "value": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "human_readable_finder_format": {
+      "type": "string"
+    },
+    "show_summaries": {
+      "type": "boolean"
+    },
+    "signup_link": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "string"
+    }
+  }
+}
