@@ -136,9 +136,9 @@ rm -f formats/case_study/frontend/schema.json
 rm -f formats/case_study/publisher/schema.json
 ```
 
-## How to define a content format (tbd)
-  - what files are needed
-  - what each file is for
+## How to add a new content format
+
+see [adding-a-new-format.md](docs/adding-a-new-format.md)
 
 ## How integration testing works (tbd)
 
