@@ -20,7 +20,7 @@ schema:
 The schema will be generated from the `details.json` and `links.json` files.
 Complete these files with the necessary fields for your new format. Once you
 have completed these files, you can generate the corresponding frontend and
-publisher `schema.json` with the [`make` task](../README.md##makefile).
+publisher `schema.json` with the [`make` task](../README.md#makefile).
 
 ## Examples
 
