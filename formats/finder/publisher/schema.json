@@ -69,7 +69,7 @@
     },
     "details": {
       "type": "object",
-      "additionalProperties": true,
+      "additionalProperties": false,
       "required": [
         "document_noun",
         "filter",
@@ -80,15 +80,30 @@
           "type": "string",
           "additionalProperties": false
         },
+        "email_signup_enabled": {
+          "type": "boolean"
+        },
         "filter": {
+          "description": "This is the fixed filter that scopes the finder",
           "type": "object",
-          "additionalProperties": true
+          "additionalProperties": false,
+          "properties": {
+            "document_type": {
+              "type": "string"
+            },
+            "organisations": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
         },
         "facets": {
           "type": "array",
           "items": {
             "type": "object",
-            "additionalProperties": true,
+            "additionalProperties": false,
             "required": [
               "key",
               "filterable",
@@ -107,6 +122,12 @@
                 "type": "boolean"
               },
               "name": {
+                "type": "string"
+              },
+              "preposition": {
+                "type": "string"
+              },
+              "short_name": {
                 "type": "string"
               },
               "type": {
@@ -133,12 +154,18 @@
               }
             }
           }
+        },
+        "show_summaries": {
+          "type": "boolean"
+        },
+        "summary": {
+          "type": "string"
         }
       }
     },
     "links": {
       "type": "object",
-      "additionalProperties": true,
+      "additionalProperties": false,
       "properties": {
         "organisations": {
           "$ref": "#/definitions/guid_list"
@@ -150,6 +177,9 @@
           "$ref": "#/definitions/guid_list"
         },
         "available_translations": {
+          "$ref": "#/definitions/guid_list"
+        },
+        "topics": {
           "$ref": "#/definitions/guid_list"
         }
       }
