@@ -99,7 +99,7 @@ with no arguments for full usage instructions.
 
 ### Makefile
 
-A `Makefile` exists which combines ties together all of these scripts. It
+A `Makefile` exists which combines these scripts. It
 automatically re-generates the intermediate schema files and validates all the
 examples.
 
