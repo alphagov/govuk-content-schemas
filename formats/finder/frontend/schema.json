@@ -147,9 +147,6 @@
         },
         "available_translations": {
           "$ref": "#/definitions/frontend_links"
-        },
-        "topics": {
-          "$ref": "#/definitions/frontend_links"
         }
       }
     },
