@@ -1,0 +1,144 @@
+{
+  "base_path": "/cma-cases",
+  "title": "Competition and Markets Authority cases",
+  "description": "",
+  "format": "finder",
+  "need_ids": [],
+  "locale": "en",
+  "updated_at": "2015-03-13T10:43:49.764Z",
+  "public_updated_at": "2015-02-12T15:43:13.000+00:00",
+  "details": {
+    "beta": false,
+    "beta_message": null,
+    "document_noun": "case",
+    "email_signup_enabled": true,
+    "filter": {
+      "document_type": "cma_case"
+    },
+    "format_name": "Competition and Markets Authority case",
+    "signup_link": null,
+    "show_summaries": false,
+    "summary": null,
+    "facets": [
+      {
+        "key": "case_type",
+        "name": "Case type",
+        "type": "text",
+        "preposition": "of type",
+        "display_as_result_metadata": true,
+        "filterable": true,
+        "allowed_values": [
+          {
+            "label": "CA98 and civil cartels",
+            "value": "ca98-and-civil-cartels"
+          },
+          {
+            "label": "Criminal cartels",
+            "value": "criminal-cartels"
+          }
+        ]
+      },
+      {
+        "key": "case_state",
+        "name": "Case state",
+        "type": "text",
+        "preposition": "which are",
+        "display_as_result_metadata": true,
+        "filterable": true,
+        "allowed_values": [
+          {
+            "label": "Open",
+            "value": "open"
+          },
+          {
+            "label": "Closed",
+            "value": "closed"
+          }
+        ]
+      },
+      {
+        "key": "market_sector",
+        "name": "Market sector",
+        "type": "text",
+        "preposition": "about",
+        "display_as_result_metadata": true,
+        "filterable": true,
+        "allowed_values": [
+          {
+            "label": "Aerospace",
+            "value": "aerospace"
+          },
+          {
+            "label": "Agriculture, environment and natural resources",
+            "value": "agriculture-environment-and-natural-resources"
+          }
+        ]
+      },
+      {
+        "key": "outcome_type",
+        "name": "Outcome",
+        "type": "text",
+        "preposition": "with outcome",
+        "display_as_result_metadata": true,
+        "filterable": true,
+        "allowed_values": [
+          {
+            "label": "CA98 - no grounds for action",
+            "value": "ca98-no-grounds-for-action-non-infringement"
+          },
+          {
+            "label": "CA98 - infringement Chapter I",
+            "value": "ca98-infringement-chapter-i"
+          }
+        ]
+      },
+      {
+        "key": "opened_date",
+        "name": "Opened",
+        "short_name": "Opened",
+        "type": "date",
+        "preposition": "opened",
+        "display_as_result_metadata": true,
+        "filterable": true
+      },
+      {
+        "key": "closed_date",
+        "name": "Closed",
+        "short_name": "Closed",
+        "type": "date",
+        "display_as_result_metadata": true,
+        "filterable": false
+      }
+    ]
+  },
+  "links": {
+    "organisations": [
+      {
+        "title": "Competition and Markets Authority",
+        "base_path": "/government/organisations/competition-and-markets-authority",
+        "api_url": "http://content-store/content/government/organisations/competition-and-markets-authority",
+        "web_url": "https://www.gov.uk/government/organisations/competition-and-markets-authority",
+        "locale": "en"
+      }
+    ],
+    "related": [],
+    "email_alert_signup": [
+      {
+        "title": "Competition and Markets Authority cases",
+        "base_path": "/cma-cases/email-signup",
+        "api_url": "http://content-store/content/cma-cases/email-signup",
+        "web_url": "https://www.gov.uk/cma-cases/email-signup",
+        "locale": "en"
+      }
+    ],
+    "available_translations": [
+      {
+        "title": "Competition and Markets Authority cases",
+        "base_path": "/cma-cases",
+        "api_url": "http://content-store/content/cma-cases",
+        "web_url": "https://www.gov.uk/cma-cases",
+        "locale": "en"
+      }
+    ]
+  }
+}
