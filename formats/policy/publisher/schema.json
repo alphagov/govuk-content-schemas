@@ -161,6 +161,9 @@
         "organisations": {
           "$ref": "#/definitions/guid_list"
         },
+        "people": {
+          "$ref": "#/definitions/guid_list"
+        },
         "related": {
           "$ref": "#/definitions/guid_list"
         },

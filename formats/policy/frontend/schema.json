@@ -130,6 +130,9 @@
         "organisations": {
           "$ref": "#/definitions/frontend_links"
         },
+        "people": {
+          "$ref": "#/definitions/frontend_links"
+        },
         "related": {
           "$ref": "#/definitions/frontend_links"
         },
