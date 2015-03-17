@@ -45,6 +45,26 @@
         "facets"
       ],
       "properties": {
+        "beta": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "beta_message": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
         "document_noun": {
           "type": "string",
           "additionalProperties": false
@@ -124,11 +144,31 @@
             }
           }
         },
+        "format_name": {
+          "type": "string"
+        },
         "show_summaries": {
           "type": "boolean"
         },
+        "signup_link": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
         "summary": {
-          "type": "string"
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
         }
       }
     },
