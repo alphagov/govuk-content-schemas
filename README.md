@@ -138,13 +138,16 @@ rm -f formats/case_study/publisher/schema.json
 
 ## How to add a new content format
 
-see [adding-a-new-format.md](docs/adding-a-new-format.md)
+See [adding-a-new-format.md](docs/adding-a-new-format.md)
 
-## How integration testing works (tbd)
+## Adding contract tests to your app
 
-see [contract-testing-howto.md](docs/contract-testing-howto.md)
-
+See [contract-testing-howto.md](docs/contract-testing-howto.md)
 
 ## Suggested workflows
 
 See [suggested-workflows.md](docs/suggested-workflows.md)
+
+## Why do contract testing?
+
+See [why-contract-testing.md](docs/why-contract-testing.md)
