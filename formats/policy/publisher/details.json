@@ -79,6 +79,40 @@
     },
     "summary": {
       "type": "string"
+    },
+    "nation_applicability": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "applies_to",
+        "alternative_policies"
+      ],
+      "properties": {
+        "applies_to": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "alternative_policies": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "nation",
+              "alt_policy_url"
+            ],
+            "properties": {
+              "nation": {
+                "type": "string"
+              },
+              "alt_policy_url": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
