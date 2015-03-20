@@ -23,6 +23,9 @@
     },
     "worldwide_priorities": {
       "$ref": "#/definitions/guid_list"
+    },
+    "document_collections": {
+      "$ref": "#/definitions/guid_list"
     }
   },
   "definitions": {
