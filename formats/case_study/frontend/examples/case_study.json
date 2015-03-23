@@ -63,6 +63,15 @@
           "web_url":  "https://www.gov.uk/government/case-studies/pakistan-in-school-for-the-first-time.ur",
           "locale": "ur"
         }
+      ],
+      "document_collections": [
+        {
+          "title": "Work Programme real life stories",
+          "base_path": "/government/collections/work-programme-real-life-stories",
+          "api_url": "http://content-store/content/government/collections/work-programme-real-life-stories",
+          "web_url": "https://www.gov.uk/government/collections/work-programme-real-life-stories",
+          "locale": "en"
+        }
       ]
     },
     "locale": "en",
