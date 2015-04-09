@@ -19,16 +19,7 @@
       "signup_link": "",
       "summary": "The government believes that the current benefits system is too complex, and there are insufficient incentives to encourage people on benefits to start paid work or increase their hours.",
       "show_summaries": false,
-      "facets":[],
-      "nation_applicability": {
-        "applies_to": [
-          "england",
-          "northern_ireland",
-          "scotland",
-          "wales"
-        ],
-        "alternative_policies": []
-      }
+      "facets":[]
    },
    "links": {
       "organisations":[
