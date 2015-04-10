@@ -19,7 +19,18 @@
       "signup_link": "",
       "summary": "Universal Credit brings together 6 benefits for people who are out of work or on a low income into a single payment. It's being introduced in stages, starting in October 2013. By the end of 2017 it's expected to be available across England and Wales.",
       "show_summaries": false,
-      "facets":[]
+      "facets": [
+        {
+          "key": "is_historic",
+          "display_as_result_metadata": true,
+          "filterable": false
+        },
+        {
+          "key": "government_name",
+          "display_as_result_metadata": true,
+          "filterable": false
+        }
+      ]
    },
    "links": {
       "organisations":[
