@@ -127,9 +127,7 @@
             "required": [
               "key",
               "filterable",
-              "display_as_result_metadata",
-              "name",
-              "type"
+              "display_as_result_metadata"
             ],
             "properties": {
               "key": {
