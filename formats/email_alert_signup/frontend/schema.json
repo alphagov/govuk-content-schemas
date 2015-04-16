@@ -1,0 +1,138 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "base_path",
+    "format",
+    "locale"
+  ],
+  "properties": {
+    "base_path": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "format": {
+      "type": "string",
+      "enum": [
+        "email_alert_signup"
+      ]
+    },
+    "public_updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "locale": {
+      "type": "string"
+    },
+    "need_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "details": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "tags"
+      ],
+      "properties": {
+        "tags": {
+          "type": "object"
+        },
+        "breadcrumbs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "link",
+              "title"
+            ],
+            "properties": {
+              "link": {
+                "type": "string",
+                "format": "uri"
+              },
+              "title": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "links": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "available_translations": {
+          "$ref": "#/definitions/frontend_links"
+        }
+      }
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "definitions": {
+    "route": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "type"
+      ],
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "type": {
+          "enum": [
+            "prefix",
+            "exact"
+          ]
+        }
+      }
+    },
+    "guid_list": {
+      "type": "array",
+      "items": {
+        "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-[1-5][a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$"
+      }
+    },
+    "frontend_links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "base_path": {
+            "type": "string"
+          },
+          "api_url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "web_url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "locale": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

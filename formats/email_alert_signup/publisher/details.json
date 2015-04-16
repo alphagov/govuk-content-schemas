@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "tags"
+  ],
+  "properties": {
+     "tags": {
+       "type": "object"
+    },
+    "breadcrumbs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "link",
+          "title"
+        ],
+        "properties": {
+          "link": {
+            "type": "string",
+            "format": "uri"
+          },
+          "title": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
