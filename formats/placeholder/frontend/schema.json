@@ -19,9 +19,8 @@
     },
     "format": {
       "type": "string",
-      "enum": [
-        "placeholder"
-      ]
+      "pattern": "^(placeholder|placeholder_.+)$",
+      "description": "Should be of the form 'placeholder_my_format_name'. 'placeholder' is allowed for backwards compatibility."
     },
     "public_updated_at": {
       "type": "string",

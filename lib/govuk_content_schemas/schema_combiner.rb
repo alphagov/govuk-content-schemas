@@ -18,10 +18,18 @@ class GovukContentSchemas::SchemaCombiner
     combined = clone_schema(metadata_schema)
     combined.schema['properties']['details'] = embed(details_schema) if details_schema
     combined.schema['properties']['links'] = embed(links_schema) if links_schema
-    combined.schema['properties']['format'] = {
-      "type" => "string",
-      "enum" => [format_name]
-    }
+    if format_name == "placeholder"
+      combined.schema['properties']['format'] = {
+        "type" => "string",
+        "pattern" => "^(placeholder|placeholder_.+)$",
+        "description" => "Should be of the form 'placeholder_my_format_name'. 'placeholder' is allowed for backwards compatibility.",
+      }
+    else
+      combined.schema['properties']['format'] = {
+        "type" => "string",
+        "enum" => [format_name]
+      }
+    end
     combined.schema['definitions'] = combine_definitions if combine_definitions.any?
     combined
   end
