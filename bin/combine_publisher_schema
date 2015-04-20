@@ -17,7 +17,7 @@ def report_errors(path, errors)
 end
 
 def format_name(publisher_schema_path)
-  publisher_schema_path.dirname.basename
+  publisher_schema_path.dirname.basename.to_s
 end
 
 if ARGV.count != 1
