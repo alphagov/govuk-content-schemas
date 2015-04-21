@@ -1,0 +1,24 @@
+{
+  "base_path": "/government/policies/employment/email-signup",
+  "title": "Employment",
+  "description": "\n      You'll get an email each time any information on\n      this policy is published or updated.\n    ",
+  "format": "email_alert_signup",
+  "need_ids": [],
+  "locale": "en",
+  "updated_at": "2015-04-14T13:11:45.809Z",
+  "public_updated_at": "2015-04-14T10:56:00.000+00:00",
+  "details": {
+    "breadcrumbs": [
+      {
+        "title": "Employment",
+        "link": "https://www.gov.uk/government/policies/employment"
+      }
+    ],
+    "tags": {
+      "policy": [
+        "employment"
+      ]
+    }
+  },
+  "links": {}
+}
