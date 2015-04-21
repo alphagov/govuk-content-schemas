@@ -16,6 +16,9 @@
     "related": {
       "$ref": "#/definitions/guid_list"
     },
+    "email_alert_signup": {
+      "$ref": "#/definitions/guid_list"
+    },
     "available_translations": {
       "$ref": "#/definitions/guid_list"
     }

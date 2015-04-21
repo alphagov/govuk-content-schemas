@@ -168,6 +168,9 @@
         "related": {
           "$ref": "#/definitions/frontend_links"
         },
+        "email_alert_signup": {
+          "$ref": "#/definitions/frontend_links"
+        },
         "available_translations": {
           "$ref": "#/definitions/frontend_links"
         }

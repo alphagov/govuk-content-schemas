@@ -43,8 +43,15 @@
         }
       ],
       "people": [],
-      "related":[
-
+      "related":[],
+      "email_alert_signup":[
+        {
+          "title": "Benefits Reform",
+          "base_path": "/government/policies/benefits-reform/email-signup",
+          "api_url": "http://content-store.dev.gov.uk/content/government/policies/benefits-reform/email-signup",
+          "web_url": "http://www.dev.gov.uk/government/policies/benefits-reform/email-signup",
+          "locale": "en"
+        }
       ],
       "available_translations":[
          {

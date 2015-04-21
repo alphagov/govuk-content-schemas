@@ -19,6 +19,15 @@
    "links": {
       "organisations":[],
       "people": [],
-      "related":[]
+      "related":[],
+      "email_alert_signup":[
+        {
+          "title": "Minimal Benefits Reform",
+          "base_path": "/government/policies/minimal-benefits-reform/email-signup",
+          "api_url": "http://content-store.dev.gov.uk/content/government/policies/minimal-benefits-reform/email-signup",
+          "web_url": "http://www.dev.gov.uk/government/policies/minimal-benefits-reform/email-signup",
+          "locale": "en"
+        }
+      ]
    }
 }

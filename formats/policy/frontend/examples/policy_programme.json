@@ -51,8 +51,15 @@
           "locale": "en"
         }
       ],
-      "related":[
-
+      "related":[],
+      "email_alert_signup":[
+        {
+          "title": "Universal Credit",
+          "base_path": "/government/policies/universal-credit/email-signup",
+          "api_url": "http://content-store.dev.gov.uk/content/government/policies/universal-credit/email-signup",
+          "web_url": "http://www.dev.gov.uk/government/policies/universal-credit/email-signup",
+          "locale": "en"
+        }
       ],
       "available_translations":[
          {
