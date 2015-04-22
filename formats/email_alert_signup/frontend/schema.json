@@ -40,9 +40,13 @@
       "type": "object",
       "additionalProperties": false,
       "required": [
+        "summary",
         "tags"
       ],
       "properties": {
+        "summary": {
+          "type": "string"
+        },
         "tags": {
           "type": "object"
         },

@@ -1,7 +1,7 @@
 {
   "base_path": "/government/policies/employment/email-signup",
   "title": "Employment",
-  "description": "\n      You'll get an email each time any information on\n      this policy is published or updated.\n    ",
+  "description": "",
   "format": "email_alert_signup",
   "need_ids": [],
   "locale": "en",
@@ -14,6 +14,7 @@
         "link": "https://www.gov.uk/government/policies/employment"
       }
     ],
+    "summary": "You'll get an email each time any information on this policy is published or updated.",
     "tags": {
       "policy": [
         "employment"
