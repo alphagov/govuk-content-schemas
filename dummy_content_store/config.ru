@@ -7,3 +7,6 @@ examples_path = ENV['EXAMPLES_PATH'] || File.dirname(__FILE__) + "/../formats"
 map '/content' do
   run DummyContentStore::App.new(examples_path)
 end
+map '/api/content' do
+  run DummyContentStore::App.new(examples_path)
+end
