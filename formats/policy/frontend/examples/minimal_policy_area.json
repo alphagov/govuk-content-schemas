@@ -24,8 +24,8 @@
         {
           "title": "Minimal Benefits Reform",
           "base_path": "/government/policies/minimal-benefits-reform/email-signup",
-          "api_url": "http://content-store.dev.gov.uk/content/government/policies/minimal-benefits-reform/email-signup",
-          "web_url": "http://www.dev.gov.uk/government/policies/minimal-benefits-reform/email-signup",
+          "api_url": "https://www.gov.uk/api/content/government/policies/minimal-benefits-reform/email-signup",
+          "web_url": "https://www.gov.uk/government/policies/minimal-benefits-reform/email-signup",
           "locale": "en"
         }
       ]

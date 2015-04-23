@@ -37,7 +37,7 @@
         {
           "title": "Department for Work and Pensions",
           "base_path": "/government/organisations/department-for-work-and-pensions",
-          "api_url": "http://content-store/organisations/department-for-work-and-pensions",
+          "api_url": "https://www.gov.uk/api/organisations/department-for-work-and-pensions",
           "web_url": "https://www.gov.uk/government/organisations/department-for-work-and-pensions",
           "locale": "en"
         }
@@ -48,8 +48,8 @@
         {
           "title": "Benefits Reform",
           "base_path": "/government/policies/benefits-reform/email-signup",
-          "api_url": "http://content-store.dev.gov.uk/content/government/policies/benefits-reform/email-signup",
-          "web_url": "http://www.dev.gov.uk/government/policies/benefits-reform/email-signup",
+          "api_url": "https://www.gov.uk/api/content/government/policies/benefits-reform/email-signup",
+          "web_url": "https://www.gov.uk/government/policies/benefits-reform/email-signup",
           "locale": "en"
         }
       ],
@@ -57,8 +57,8 @@
          {
             "title": "Benefits Reform",
             "base_path": "/government/policies/benefits-reform",
-            "api_url": "http://content-store.dev.gov.uk/content/government/policies/benefits-reform",
-            "web_url": "http://www.dev.gov.uk/government/policies/benefits-reform",
+            "api_url": "https://www.gov.uk/api/content/government/policies/benefits-reform",
+            "web_url": "https://www.gov.uk/government/policies/benefits-reform",
             "locale": "en"
          }
       ]

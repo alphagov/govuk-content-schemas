@@ -26,52 +26,52 @@
     "links": {
         "available_translations": [
             {
-                "api_url": "http://localhost:3068/content/government/case-studies/doing-business-in-spain",
+                "api_url": "https://www.gov.uk/api/content/government/case-studies/doing-business-in-spain",
                 "base_path": "/government/case-studies/doing-business-in-spain",
                 "locale": "en",
                 "title": "Doing business in Spain",
-                "web_url": "https://www.preview.alphagov.co.uk/government/case-studies/doing-business-in-spain"
+                "web_url": "https://www.gov.uk/government/case-studies/doing-business-in-spain"
             },
             {
-                "api_url": "http://localhost:3068/content/government/case-studies/doing-business-in-spain.es",
+                "api_url": "https://www.gov.uk/api/content/government/case-studies/doing-business-in-spain.es",
                 "base_path": "/government/case-studies/doing-business-in-spain.es",
                 "locale": "es",
                 "title": "\u00bfQu\u00e9 puede hacer UKTI por t\u00ed?",
-                "web_url": "https://www.preview.alphagov.co.uk/government/case-studies/doing-business-in-spain.es"
+                "web_url": "https://www.gov.uk/government/case-studies/doing-business-in-spain.es"
             },
             {
-                "api_url": "http://localhost:3068/content/government/case-studies/doing-business-in-spain.ar",
+                "api_url": "https://www.gov.uk/api/content/government/case-studies/doing-business-in-spain.ar",
                 "base_path": "/government/case-studies/doing-business-in-spain.ar",
                 "locale": "ar",
                 "title": "البحرين - تحديث دراسة حالة دولة",
-                "web_url": "https://www.preview.alphagov.co.uk/government/case-studies/doing-business-in-spain.ar"
+                "web_url": "https://www.gov.uk/government/case-studies/doing-business-in-spain.ar"
             }
         ],
         "lead_organisations": [
             {
-                "api_url": "http://localhost:3068/content/government/organisations/uk-trade-investment",
+                "api_url": "https://www.gov.uk/api/content/government/organisations/uk-trade-investment",
                 "base_path": "/government/organisations/uk-trade-investment",
                 "locale": "en",
                 "title": "UK Trade & Investment",
-                "web_url": "https://www.preview.alphagov.co.uk/government/organisations/uk-trade-investment"
+                "web_url": "https://www.gov.uk/government/organisations/uk-trade-investment"
             }
         ],
         "supporting_organisations": [
             {
-                "api_url": "http://localhost:3068/content/government/organisations/foreign-commonwealth-office",
+                "api_url": "https://www.gov.uk/api/content/government/organisations/foreign-commonwealth-office",
                 "base_path": "/government/organisations/foreign-commonwealth-office",
                 "locale": "en",
                 "title": "Foreign & Commonwealth Office",
-                "web_url": "https://www.preview.alphagov.co.uk/government/organisations/foreign-commonwealth-office"
+                "web_url": "https://www.gov.uk/government/organisations/foreign-commonwealth-office"
             }
         ],
         "world_locations": [
             {
-                "api_url": "http://localhost:3068/content/government/world/spain.es",
+                "api_url": "https://www.gov.uk/api/content/government/world/spain.es",
                 "base_path": "/government/world/spain.es",
                 "locale": "es",
                 "title": "Espa\u00f1a",
-                "web_url": "https://www.preview.alphagov.co.uk/government/world/spain.es"
+                "web_url": "https://www.gov.uk/government/world/spain.es"
             }
         ],
         "worldwide_organisations": []

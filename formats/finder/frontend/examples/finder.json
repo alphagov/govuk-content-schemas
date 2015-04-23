@@ -86,8 +86,8 @@
       {
         "title": "Ministry of Silly Walks",
         "base_path": "/government/organisations/ministry-of-silly-walks",
-        "api_url": "http://content-store.dev.gov.uk/content/government/organisations//government/organisations/ministry-of-silly-walks",
-        "web_url": "http://www.dev.gov.uk/government/organisations//government/organisations/ministry-of-silly-walks",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/government/organisations/ministry-of-silly-walks",
+        "web_url": "https://www.gov.uk/government/organisations/government/organisations/ministry-of-silly-walks",
         "locale": "en"
       }
     ],
@@ -96,8 +96,8 @@
       {
         "title": "Ministry of Silly Walks reports",
         "base_path": "/mosw-reports/email-signup",
-        "api_url": "http://content-store.dev.gov.uk/content/mosw-reports/email-signup",
-        "web_url": "http://www.dev.gov.uk/mosw-reports/email-signup",
+        "api_url": "https://www.gov.uk/api/content/mosw-reports/email-signup",
+        "web_url": "https://www.gov.uk/mosw-reports/email-signup",
         "locale": "en"
       }
     ],
@@ -105,8 +105,8 @@
       {
         "title": "Ministry of Silly Walks reports",
         "base_path": "/mosw-reports",
-        "api_url": "http://content-store.dev.gov.uk/content/mosw-reports",
-        "web_url": "http://www.dev.gov.uk/mosw-reports",
+        "api_url": "https://www.gov.uk/api/content/mosw-reports",
+        "web_url": "https://www.gov.uk/mosw-reports",
         "locale": "en"
       }
     ]
