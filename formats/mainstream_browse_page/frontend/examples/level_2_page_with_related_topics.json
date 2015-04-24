@@ -8,7 +8,7 @@
         {
           "title": "Universal credit",
           "base_path": "/benefits/universal-credit",
-          "api_url": "http://content-store/content/benefits/universal-credit",
+          "api_url": "https://www.gov.uk/api/content/benefits/universal-credit",
           "web_url": "https://www.gov.uk/benefits/universal-credit",
           "locale": "en"
         }

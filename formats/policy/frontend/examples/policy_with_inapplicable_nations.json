@@ -53,7 +53,7 @@
         {
           "title": "Northern Ireland Office",
           "base_path": "/government/organisations/northern-ireland-office",
-          "api_url": "http://content-store/organisations/northern-ireland-office",
+          "api_url": "https://www.gov.uk/api/organisations/northern-ireland-office",
           "web_url": "https://www.gov.uk/government/organisations/northern-ireland-office",
           "locale": "en"
         }
@@ -62,7 +62,7 @@
         {
           "title": "George Dough",
           "base_path": "/government/people/george-dough",
-          "api_url": "http://content-store/people/george-dough",
+          "api_url": "https://www.gov.uk/api/people/george-dough",
           "web_url": "https://www.gov.uk/people/george-dough",
           "locale": "en"
         }
@@ -72,8 +72,8 @@
          {
             "title": "Keeping Northern Ireland safe",
             "base_path": "/government/policies/keeping-northern-ireland-safe",
-            "api_url": "http://content-store.dev.gov.uk/content/government/policies/keeping-northern-ireland-safe",
-            "web_url": "http://www.dev.gov.uk/government/policies/keeping-northern-ireland-safe",
+            "api_url": "https://www.gov.uk/api/content/government/policies/keeping-northern-ireland-safe",
+            "web_url": "https://www.gov.uk/government/policies/keeping-northern-ireland-safe",
             "locale": "en"
          }
       ]

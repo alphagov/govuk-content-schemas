@@ -116,7 +116,7 @@
       {
         "title": "Competition and Markets Authority",
         "base_path": "/government/organisations/competition-and-markets-authority",
-        "api_url": "http://content-store/content/government/organisations/competition-and-markets-authority",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/competition-and-markets-authority",
         "web_url": "https://www.gov.uk/government/organisations/competition-and-markets-authority",
         "locale": "en"
       }
@@ -126,7 +126,7 @@
       {
         "title": "Competition and Markets Authority cases",
         "base_path": "/cma-cases/email-signup",
-        "api_url": "http://content-store/content/cma-cases/email-signup",
+        "api_url": "https://www.gov.uk/api/content/cma-cases/email-signup",
         "web_url": "https://www.gov.uk/cma-cases/email-signup",
         "locale": "en"
       }
@@ -135,7 +135,7 @@
       {
         "title": "Competition and Markets Authority cases",
         "base_path": "/cma-cases",
-        "api_url": "http://content-store/content/cma-cases",
+        "api_url": "https://www.gov.uk/api/content/cma-cases",
         "web_url": "https://www.gov.uk/cma-cases",
         "locale": "en"
       }
