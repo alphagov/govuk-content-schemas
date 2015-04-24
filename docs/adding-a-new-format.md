@@ -28,3 +28,15 @@ Any new format should also ship with a set of curated examples. These examples
 will be validated against the schema and can also be used by the corresponding
 frontend applications to verify that it can render examples of the format. These
 examples should be added to the `formats/FORMAT_NAME/frontend/examples` folder.
+
+## Validating the contents of content-store
+
+You can test your new (frontend) schema against the contents of content-store
+using the rake task in content-store:
+
+```
+  bundle exec rake check_content_items_against_schema[my_format_name]
+```
+
+If there are examples which are invalid, you may want to change your publisher
+and republish the documents.
