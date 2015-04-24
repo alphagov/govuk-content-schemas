@@ -11,7 +11,6 @@
     "beta": false,
     "beta_message": null,
     "document_noun": "case",
-    "email_signup_enabled": true,
     "filter": {
       "document_type": "cma_case"
     },
