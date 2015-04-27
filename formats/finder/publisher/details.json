@@ -93,6 +93,9 @@
                 }
               }
             }
+          },
+          "result_metadata_name_key": {
+            "type": "string"
           }
         }
       }

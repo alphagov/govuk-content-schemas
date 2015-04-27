@@ -29,6 +29,28 @@
           "key": "government_name",
           "display_as_result_metadata": true,
           "filterable": false
+        },
+        {
+          "key": "public_timestamp",
+          "short_name": "Updated",
+          "type": "date",
+          "display_as_result_metadata": true,
+          "filterable": false
+        },
+        {
+          "key": "organisations",
+          "short_name": "From",
+          "type": "text",
+          "display_as_result_metadata": true,
+          "result_metadata_name_key": "title",
+          "filterable": false
+        },
+        {
+          "key": "display_type",
+          "short_name": "Type",
+          "type": "text",
+          "display_as_result_metadata": true,
+          "filterable": false
         }
       ]
    },
