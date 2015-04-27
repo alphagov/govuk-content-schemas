@@ -78,6 +78,12 @@
           "items": {
             "type": "string"
           }
+        },
+        "policies": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         }
       }
     },
