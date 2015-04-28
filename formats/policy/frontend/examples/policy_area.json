@@ -32,10 +32,11 @@
         },
         {
           "key": "public_timestamp",
+          "name": "Published",
           "short_name": "Updated",
           "type": "date",
           "display_as_result_metadata": true,
-          "filterable": false
+          "filterable": true
         },
         {
           "key": "organisations",
