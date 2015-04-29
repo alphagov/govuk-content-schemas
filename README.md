@@ -154,5 +154,5 @@ See [why-contract-testing.md](docs/why-contract-testing.md)
 
 ## Running your frontend against the examples (content-store not needed)
 
-See [dummy_content_store/README.md](dummy_content_store/README.md)
+You can use the [`govuk-dummy_content_store` gem](https://github.com/alphagov/govuk-dummy_content_store).
 
