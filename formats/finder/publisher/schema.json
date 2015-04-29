@@ -101,9 +101,6 @@
           "type": "string",
           "additionalProperties": false
         },
-        "email_signup_enabled": {
-          "type": "boolean"
-        },
         "filter": {
           "description": "This is the fixed filter that scopes the finder",
           "type": "object",
