@@ -5,7 +5,8 @@
   "required": [
     "base_path",
     "format",
-    "locale"
+    "locale",
+    "public_updated_at"
   ],
   "properties": {
     "base_path": {
