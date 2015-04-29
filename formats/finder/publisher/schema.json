@@ -101,6 +101,9 @@
           "type": "string",
           "additionalProperties": false
         },
+        "logo_path": {
+          "type": "string"
+        },
         "filter": {
           "description": "This is the fixed filter that scopes the finder",
           "type": "object",
