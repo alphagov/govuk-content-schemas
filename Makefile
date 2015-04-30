@@ -5,10 +5,10 @@ details_schemas := $(wildcard formats/*/publisher/details.json)
 examples := $(wildcard formats/*/frontend/examples/*.json)
 
 # Derive the publisher schema files from the details schemas by substitution
-publisher_schemas := $(details_schemas:details.json=schema.json)
+publisher_schemas := $(details_schemas:formats/%/details.json=dist/formats/%/schema.json)
 
-# Derive the frontend schemas from the details schemas by substitution
-frontend_schemas := $(details_schemas:publisher/details.json=frontend/schema.json)
+# Derive the frontend schemas from the publisher schemas by substitution
+frontend_schemas := $(publisher_schemas:publisher/schema.json=frontend/schema.json)
 
 # The validation records are temporary files which are created to indicate that a given
 # example has been validated.
@@ -33,12 +33,13 @@ validate_unique_base_path: $(frontend_schemas)
 	$(ensure_example_base_paths_unique_bin) $(examples)
 
 # Recipe for building publisher schemas from the metadata, details and links schemas
-%/publisher/schema.json: %/../metadata.json %/publisher/details.json $(wildcard %/publisher/links.json)
-	$(combiner_bin) ${@:schema.json=} ${@}
+dist/%/publisher/schema.json: %/../metadata.json %/publisher/details.json $(wildcard %/publisher/links.json)
+	$(combiner_bin) ${@:dist/%/schema.json=%} ${@}
 
 # Recipe for building the frontend schema from the publisher schema and frontend links definition
-%/frontend/schema.json: %/publisher/schema.json %/../frontend_links_definition.json
-	$(frontend_generator_bin) -f ${@:frontend/schema.json=../frontend_links_definition.json} ${@:frontend/schema.json=publisher/schema.json} > ${@}
+dist/%/frontend/schema.json: dist/%/publisher/schema.json %/../frontend_links_definition.json
+	mkdir -p `dirname ${@}`
+	$(frontend_generator_bin) -f ${@:dist/%/frontend/schema.json=%/../frontend_links_definition.json} ${@:frontend/schema.json=publisher/schema.json} > ${@}
 
 # Recipe for validating frontend examples (the build target is the `.valid` file)
 %.valid: $(frontend_schemas) %
