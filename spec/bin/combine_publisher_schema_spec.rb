@@ -44,6 +44,14 @@ RSpec.describe 'combine_publisher_schema' do
     expect(output_filename).to exist
   end
 
+  context "parent directory of output file does not exist" do
+    let(:output_filename) { publisher_schema_dir + "some" + "subfolder" + "my-generated-schema.json" }
+    
+    it "creates the required directories" do
+      expect(output_filename).to exist
+    end
+  end
+
   def read_generated_schema
     reader = JSON::Schema::Reader.new(accept_file: true, accept_uri: false)
     reader.read(output_filename)

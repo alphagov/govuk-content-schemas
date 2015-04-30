@@ -52,6 +52,7 @@ combiner = GovukContentSchemas::SchemaCombiner.new(
   links_schema: schemas[2]
 )
 
+FileUtils.mkdir_p(output_path.dirname)
 File.open(output_path, 'w') do |file|
   file.write JSON.pretty_generate(combiner.combined.schema)
 end
