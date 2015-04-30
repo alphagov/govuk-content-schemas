@@ -12,7 +12,7 @@ frontend_schemas := $(publisher_schemas:publisher/schema.json=frontend/schema.js
 
 # The validation records are temporary files which are created to indicate that a given
 # example has been validated.
-validation_records := $(examples:.json=.json.valid)
+validation_records := $(examples:formats/%.json=dist/formats/%.json.valid)
 
 # The various scripts used in the build process
 combiner_bin := bundle exec ./bin/combine_publisher_schema
@@ -42,5 +42,6 @@ dist/%/frontend/schema.json: dist/%/publisher/schema.json %/../frontend_links_de
 	$(frontend_generator_bin) -f ${@:dist/%/frontend/schema.json=%/../frontend_links_definition.json} ${@:frontend/schema.json=publisher/schema.json} > ${@}
 
 # Recipe for validating frontend examples (the build target is the `.valid` file)
-%.valid: $(frontend_schemas) %
-	$(validation_bin) ${@:.valid=} && touch ${@}
+dist/%.valid: $(frontend_schemas) %
+	mkdir -p `dirname ${@}`
+	$(validation_bin) ${@:dist/%.valid=%} && touch ${@}
