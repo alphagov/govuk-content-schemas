@@ -11,7 +11,7 @@
     "beta": true,
     "beta_message": null,
     "document_noun": "call",
-    "logo_path": "European Structural and Investment Funds",
+    "logo_path": "https://assets.digital.cabinet-office.gov.uk/media/5540ab8aed915d15d8000030/esi_funds_eu_logo.gif",
     "filter": {
       "document_type": "european_structural_investment_fund"
     },
