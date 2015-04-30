@@ -34,7 +34,7 @@ validate_unique_base_path: $(frontend_schemas)
 
 # Recipe for building publisher schemas from the metadata, details and links schemas
 %/publisher/schema.json: %/../metadata.json %/publisher/details.json $(wildcard %/publisher/links.json)
-	$(combiner_bin) ${@:schema.json=}
+	$(combiner_bin) ${@:schema.json=} ${@}
 
 # Recipe for building the frontend schema from the publisher schema and frontend links definition
 %/frontend/schema.json: %/publisher/schema.json %/../frontend_links_definition.json

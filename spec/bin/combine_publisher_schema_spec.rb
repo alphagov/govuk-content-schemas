@@ -16,7 +16,7 @@ RSpec.describe 'combine_publisher_schema' do
   let(:format_name) { "my_format" }
   let(:tmpdir) { Pathname.new(Dir.mktmpdir) }
   let(:publisher_schema_dir) { tmpdir + format_name + "publisher" }
-  let(:output_filename) { publisher_schema_dir + "schema.json" }
+  let(:output_filename) { publisher_schema_dir + "my-generated-schema.json" }
 
   let(:schemas) {
     {
@@ -35,12 +35,12 @@ RSpec.describe 'combine_publisher_schema' do
   after(:each) { FileUtils.remove_entry_secure(tmpdir) }
 
   before(:each) do
-    output = `#{executable_path} "#{publisher_schema_dir}" 2>&1`
+    output = `#{executable_path} "#{publisher_schema_dir}" "#{output_filename}" 2>&1`
     fail(output) unless $?.success?
     output
   end
 
-  it "produces a schema.json file" do
+  it "produces a combined schema file at the specified output path" do
     expect(output_filename).to exist
   end
 

@@ -6,7 +6,7 @@ require 'json-schema'
 require 'json'
 
 def usage
-  $stderr.puts "USAGE: #{File.basename(__FILE__)} <path/to/publisher/schemas/>"
+  $stderr.puts "USAGE: #{File.basename(__FILE__)} <path/to/publisher/schemas/> <path/to/combined-output-schema.json>"
 end
 
 def report_errors(path, errors)
@@ -16,20 +16,21 @@ def report_errors(path, errors)
   end
 end
 
-def format_name(publisher_schema_path)
-  publisher_schema_path.dirname.basename.to_s
+def format_name(source_path)
+  source_path.dirname.basename.to_s
 end
 
-if ARGV.count != 1
+if ARGV.count != 2
   usage
   exit(1)
 end
 
-publisher_schema_path = Pathname.new(ARGV.first)
+source_path = Pathname.new(ARGV[0])
+output_path = Pathname.new(ARGV[1])
 reader = JSON::Schema::Reader.new(accept_file: true, accept_uri: false)
 
 schemas = %w{../../metadata details links}.map do |name|
-  path = publisher_schema_path + "#{name}.json"
+  path = source_path + "#{name}.json"
   if path.exist?
     schema = reader.read(path)
     errors =  JSON::Validator.fully_validate_schema(schema.schema, parse_data: false)
@@ -46,11 +47,11 @@ end
 
 combiner = GovukContentSchemas::SchemaCombiner.new(
   schemas[0],
-  format_name(publisher_schema_path),
+  format_name(source_path),
   details_schema: schemas[1],
   links_schema: schemas[2]
 )
 
-File.open(publisher_schema_path + 'schema.json', 'w') do |file|
+File.open(output_path, 'w') do |file|
   file.write JSON.pretty_generate(combiner.combined.schema)
 end
