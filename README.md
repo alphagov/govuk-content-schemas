@@ -17,49 +17,75 @@ For each format there are three possible representations:
 * the 'frontend' representation, which is produced by the content store when a
   frontend application requests data
 
-We're still evolving how this all works, so please bear with us!
+## How to change a content format
 
-## Publisher schema defined using component parts
+Imagine that you need to add a new optional field to the details hash of the
+`case_study` format.
 
-We think that it will be useful to define the 'publisher' schema in terms of
-three separate parts:
+The steps would be:
 
-  - **metadata**: the top level set of fields which are the same for every content
-    format
-  - **details**: the content of the details hash which is allowed to be different
-    for each content format, and is essentially under the control of the
+1. edit the case_study [`details.json`](formats/case_study/publisher/details.json) to
+   add the new optional field
+2. run `make`. This will:
+   1. regenerate the publisher [`schema.json`](dist/formats/case_study/publisher/schema.json) to incorporate the changes you made to the `details.json`
+   2. regenerate the frontend [schema.json](dist/formats/case_study/frontend/schema.json) to incorporate the same changes
+   3. revalidate all example files to check if they are still valid after this change. This will pass, because the new field is optional
+3. [Optional step] you could add an additional example to illustrate how your new field should be used. You can add a new file in [formats/case_study/frontend/examples](formats/case_study/frontend/examples)
+4. create a new branch and commit and push your changes
+   - this will run a branch build of govuk-content-schemas. This includes running the contract tests for each application which relies on the schemas. You'll get immediate feedback about whether publishing applications generate content items compatible with the new schema.
+5. once the tests pass, someone will merge your pull request and the new schemas will be available to use
+
+For more step-by step guides see [howtos](#howtos).
+
+## Background
+
+### Publisher schema defined using component parts
+
+The 'publisher' [`schema.json`](dist/formats/case_study/publisher/schema.json) is built from three parts:
+
+  - [`metadata.json`](formats/metadata.json): the top level set of fields. These are the **same for every content
+    format**.
+
+  - [`details.json`](formats/case_study/publisher/details.json): the content of the details hash
+    which is **different for each content format**. It is under the control of the
     publishing application.
-  - **links**: the list of 'related links'. This is also allowed to be different
-    for each content format
 
-This will allow ownership of each of those files to reside in the appropriate
-place, namely:
+  - [`links.json`](formats/case_study/publisher/links.json): the list of 'related links'. This is also **different
+    for each content format**.
 
-  - **metadata**: owned by content-store
-  - **details** and **links**: owned by the corresponding publishing applications
+These files are stored in the `govuk-content-schemas` repository in the
+[`formats`](/formats) subdirectory. A build process (implemented using a
+[`Makefile`](/Makefile)) combines the three component files into the final
+`schema.json` file.
 
-These files will be stored in govuk-content-schemas as a central repository of
-the files. We will also store a derived `schema.json` as a convenient
-reference, but the `metadata.json`, `details.json` and `links.json` should be
-considered the master definitions.
+The generated files are all stored in the [`dist`](/dist/) subdirectory.
 
-The folder structure is:
+**DO NOT EDIT FILES in the `dist` directory directly**, instead, edit the source files in the `formats` directory.
+
+In summary the folder structure is:
 
 ```
+dist
+└── formats
+    └── case_study
+        ├── frontend
+        │   └── schema.json
+        └── publisher
+            └── schema.json
 formats
 ├── case_study
 │   ├── frontend
-│   │   ├── examples
-│   │   │   ├── archived.json
-│   │   │   ├── case_study.json
-│   │   │   ├── translated.json
-│   │   └── schema.json
+│   │   └── examples
+│   │       ├── archived.json
+│   │       ├── case_study.json
+│   │       └── translated.json
 │   └── publisher
 │       ├── details.json
-│       ├── links.json
-│       └── schema.json
+│       └── links.json
 └── metadata.json
 ```
+
+### Combining files to make publisher schema
 
 The `combine_publisher_schema` script is provided to generate the combined
 `schema.json` from the source files:
@@ -67,6 +93,8 @@ The `combine_publisher_schema` script is provided to generate the combined
 ```
 $ bundle exec ./bin/combine_publisher_schema formats/case_study/publisher
 ```
+
+It will write its output to the `dist` directory (generating any folders if needed).
 
 ### Generation of frontend schemas
 
@@ -136,23 +164,25 @@ rm -f formats/case_study/frontend/schema.json
 rm -f formats/case_study/publisher/schema.json
 ```
 
-## How to add a new content format
+## Howtos
+
+### How to add a new content format
 
 See [adding-a-new-format.md](docs/adding-a-new-format.md)
 
-## Adding contract tests to your app
+### Adding contract tests to your app
 
 See [contract-testing-howto.md](docs/contract-testing-howto.md)
 
-## Suggested workflows
+### Suggested workflows
 
 See [suggested-workflows.md](docs/suggested-workflows.md)
 
-## Why do contract testing?
+### Why do contract testing?
 
 See [why-contract-testing.md](docs/why-contract-testing.md)
 
-## Running your frontend against the examples (content-store not needed)
+### Running your frontend against the examples (content-store not needed)
 
 You can use the [`govuk-dummy_content_store` gem](https://github.com/alphagov/govuk-dummy_content_store).
 
