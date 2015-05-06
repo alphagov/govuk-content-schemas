@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "body",
+    "manual",
+    "organisations"
+  ],
+  "properties": {
+    "body": {
+      "type": "string"
+    },
+    "manual": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "base_path"
+      ],
+      "properties": {
+        "base_path": {
+          "type": "string"
+        }
+      }
+    },
+    "organisations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "title",
+          "abbreviation",
+          "web_url"
+        ],
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "abbreviation": {
+            "type": "string"
+          },
+          "web_url": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
