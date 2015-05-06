@@ -152,6 +152,9 @@
               "type": {
                 "type": "string"
               },
+              "result_metadata_name_key": {
+                "type": "string"
+              },
               "allowed_values": {
                 "type": "array",
                 "items": {
