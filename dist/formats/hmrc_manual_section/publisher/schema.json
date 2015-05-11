@@ -1,0 +1,206 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "format",
+    "publishing_app",
+    "rendering_app",
+    "update_type",
+    "locale",
+    "public_updated_at"
+  ],
+  "properties": {
+    "base_path": {
+      "type": "string"
+    },
+    "content_id": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-[1-5][a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "format": {
+      "type": "string",
+      "enum": [
+        "hmrc_manual_section"
+      ]
+    },
+    "public_updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "publishing_app": {
+      "type": "string"
+    },
+    "rendering_app": {
+      "type": "string"
+    },
+    "update_type": {
+      "enum": [
+        "major",
+        "minor",
+        "republish"
+      ]
+    },
+    "locale": {
+      "type": "string"
+    },
+    "need_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "routes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/route"
+      }
+    },
+    "redirects": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/route"
+      }
+    },
+    "details": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "section_id",
+        "manual",
+        "organisations"
+      ],
+      "properties": {
+        "section_id": {
+          "type": "string"
+        },
+        "breadcrumbs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "base_path",
+              "section_id"
+            ],
+            "properties": {
+              "base_path": {
+                "type": "string"
+              },
+              "section_id": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "body": {
+          "type": "string"
+        },
+        "manual": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "base_path"
+          ],
+          "properties": {
+            "base_path": {
+              "type": "string"
+            }
+          }
+        },
+        "organisations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "title",
+              "abbreviation",
+              "web_url"
+            ],
+            "properties": {
+              "title": {
+                "type": "string"
+              },
+              "abbreviation": {
+                "type": "string"
+              },
+              "web_url": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "child_section_groups": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "child_sections"
+            ],
+            "properties": {
+              "title": {
+                "type": "string"
+              },
+              "child_sections": {
+                "type": "array",
+                "items": {
+                  "required": [
+                    "section_id",
+                    "title",
+                    "description",
+                    "base_path"
+                  ],
+                  "additionalProperties": false,
+                  "type": "object",
+                  "properties": {
+                    "section_id": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "base_path": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "route": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "type"
+      ],
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "type": {
+          "enum": [
+            "prefix",
+            "exact"
+          ]
+        }
+      }
+    }
+  }
+}
