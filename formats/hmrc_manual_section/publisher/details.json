@@ -1,0 +1,114 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "section_id",
+    "manual",
+    "organisations"
+  ],
+  "properties": {
+    "section_id": {
+      "type": "string"
+    },
+    "breadcrumbs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "base_path",
+          "section_id"
+        ],
+        "properties": {
+          "base_path": {
+            "type": "string"
+          },
+          "section_id": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "body": {
+      "type": "string"
+    },
+    "manual": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "base_path"
+      ],
+      "properties": {
+        "base_path": {
+          "type": "string"
+        }
+      }
+    },
+    "organisations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "title",
+          "abbreviation",
+          "web_url"
+        ],
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "abbreviation": {
+            "type": "string"
+          },
+          "web_url": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "child_section_groups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "child_sections"
+        ],
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "child_sections": {
+            "type": "array",
+            "items": {
+              "required": [
+                "section_id",
+                "title",
+                "description",
+                "base_path"
+              ],
+              "additionalProperties": false,
+              "type": "object",
+              "properties": {
+                "section_id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "base_path": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
