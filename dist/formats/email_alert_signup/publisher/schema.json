@@ -101,6 +101,9 @@
               }
             }
           }
+        },
+        "govdelivery_title": {
+          "type": "string"
         }
       }
     },
