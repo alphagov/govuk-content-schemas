@@ -19,7 +19,8 @@
       "policy": [
         "employment"
       ]
-    }
+    },
+    "format_type": "policy"
   },
   "links": {}
 }
