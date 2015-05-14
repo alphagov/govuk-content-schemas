@@ -73,7 +73,8 @@
       "additionalProperties": false,
       "required": [
         "summary",
-        "tags"
+        "tags",
+        "format_type"
       ],
       "properties": {
         "summary": {
@@ -101,6 +102,9 @@
               }
             }
           }
+        },
+        "format_type": {
+          "type": "string"
         }
       }
     },
