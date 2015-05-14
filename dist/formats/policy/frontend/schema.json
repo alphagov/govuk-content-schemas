@@ -52,6 +52,9 @@
         "email_signup_enabled": {
           "type": "boolean"
         },
+        "default_order": {
+          "type": "string"
+        },
         "filter": {
           "type": "object",
           "additionalProperties": true
