@@ -27,6 +27,9 @@
     "logo_path": {
       "type": "string"
     },
+    "default_order": {
+      "type": "string"
+    },
     "filter": {
       "description": "This is the fixed filter that scopes the finder",
       "type": "object",
