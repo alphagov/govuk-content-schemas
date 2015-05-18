@@ -194,6 +194,9 @@
           "title": {
             "type": "string"
           },
+          "description": {
+            "type": "string"
+          },
           "base_path": {
             "type": "string"
           },
