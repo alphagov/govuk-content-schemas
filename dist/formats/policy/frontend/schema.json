@@ -177,6 +177,9 @@
         },
         "available_translations": {
           "$ref": "#/definitions/frontend_links"
+        },
+        "policy_areas": {
+          "$ref": "#/definitions/frontend_links"
         }
       }
     },
