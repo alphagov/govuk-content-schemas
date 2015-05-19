@@ -33,13 +33,13 @@ validate_unique_base_path: $(frontend_schemas)
 	$(ensure_example_base_paths_unique_bin) $(examples)
 
 # Recipe for building publisher schemas from the metadata, details and links schemas
-dist/%/publisher/schema.json: %/../metadata.json %/publisher/details.json $(wildcard %/publisher/links.json)
+dist/%/publisher/schema.json: formats/metadata.json %/publisher/*.json
 	$(combiner_bin) ${@:dist/%/schema.json=%} ${@}
 
 # Recipe for building the frontend schema from the publisher schema and frontend links definition
-dist/%/frontend/schema.json: dist/%/publisher/schema.json %/../frontend_links_definition.json
+dist/%/frontend/schema.json: dist/%/publisher/schema.json formats/frontend_links_definition.json
 	mkdir -p `dirname ${@}`
-	$(frontend_generator_bin) -f ${@:dist/%/frontend/schema.json=%/../frontend_links_definition.json} ${@:frontend/schema.json=publisher/schema.json} > ${@}
+	$(frontend_generator_bin) -f formats/frontend_links_definition.json ${@:frontend/schema.json=publisher/schema.json} > ${@}
 
 # Recipe for validating frontend examples (the build target is the `.valid` file)
 dist/%.valid: $(frontend_schemas) %
