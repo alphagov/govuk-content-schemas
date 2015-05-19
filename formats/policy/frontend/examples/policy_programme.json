@@ -83,6 +83,15 @@
           "locale": "en"
         }
       ],
+      "policy_areas":[
+        {
+          "title": "Benefits Reform",
+          "base_path": "/government/policies/benefits-reform",
+          "api_url": "https://www.gov.uk/api/content/government/policies/benefits-reform",
+          "web_url": "https://www.gov.uk/government/policies/benefits-reform",
+          "locale": "en"
+        }
+      ],
       "available_translations":[
          {
             "title": "Unveirsal Credit",
