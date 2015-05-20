@@ -169,6 +169,9 @@
         "people": {
           "$ref": "#/definitions/frontend_links"
         },
+        "working_groups": {
+          "$ref": "#/definitions/frontend_links"
+        },
         "related": {
           "$ref": "#/definitions/frontend_links"
         },

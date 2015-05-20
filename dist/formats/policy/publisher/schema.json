@@ -200,6 +200,9 @@
         "people": {
           "$ref": "#/definitions/guid_list"
         },
+        "working_groups": {
+          "$ref": "#/definitions/guid_list"
+        },
         "related": {
           "$ref": "#/definitions/guid_list"
         },

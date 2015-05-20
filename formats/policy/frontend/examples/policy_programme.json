@@ -73,6 +73,15 @@
           "locale": "en"
         }
       ],
+      "working_groups": [
+        {
+          "title": "Medical Advisory Group",
+          "base_path": "/government/groups/medical-advisory-group",
+          "api_url": "https://www.gov.uk/api/content/government/groups/medical-advisory-group",
+          "web_url": "https://www.gov.uk/government/groups/medical-advisory-group",
+          "locale": "en"
+        }
+      ],
       "related":[],
       "email_alert_signup":[
         {
