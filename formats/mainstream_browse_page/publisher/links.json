@@ -3,6 +3,18 @@
   "type": "object",
   "additionalProperties": false,
   "properties": {
+    "top_level_browse_pages": {
+      "description": "All top-level browse pages",
+      "$ref": "#/definitions/guid_list"
+    },
+    "top_level_browse_page": {
+      "description": "The top-level browse page (for second-level browse pages only).",
+      "$ref": "#/definitions/guid_list"
+    },
+    "second_level_browse_pages": {
+      "description": "All 2nd level browse pages for the top_level_browse_page (or self if this is a top-level browse page)",
+      "$ref": "#/definitions/guid_list"
+    },
     "related_topics": {
       "$ref": "#/definitions/guid_list"
     }

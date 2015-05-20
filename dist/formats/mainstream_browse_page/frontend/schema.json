@@ -47,6 +47,15 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "top_level_browse_pages": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "top_level_browse_page": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "second_level_browse_pages": {
+          "$ref": "#/definitions/frontend_links"
+        },
         "related_topics": {
           "$ref": "#/definitions/frontend_links"
         },
