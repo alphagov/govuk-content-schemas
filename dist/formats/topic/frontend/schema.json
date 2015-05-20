@@ -110,8 +110,16 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
+        "required": [
+          "title",
+          "base_path",
+          "locale"
+        ],
         "properties": {
           "title": {
+            "type": "string"
+          },
+          "description": {
             "type": "string"
           },
           "base_path": {
