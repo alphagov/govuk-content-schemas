@@ -10,6 +10,7 @@
   "details": {
     "document_noun": "policy",
     "default_order": "title",
+    "feed_disabled": true,
     "filter": {
       "document_type": "policy"
     },
