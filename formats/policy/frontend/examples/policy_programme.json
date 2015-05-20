@@ -59,7 +59,7 @@
         {
           "title": "Department for Work and Pensions",
           "base_path": "/government/organisations/department-for-work-and-pensions",
-          "api_url": "https://www.gov.uk/api/organisations/department-for-work-and-pensions",
+          "api_url": "https://www.gov.uk/api/content/government/organisations/department-for-work-and-pensions",
           "web_url": "https://www.gov.uk/government/organisations/department-for-work-and-pensions",
           "locale": "en"
         }
@@ -68,7 +68,7 @@
         {
           "title": "George Dough",
           "base_path": "/government/people/george-dough",
-          "api_url": "https://www.gov.uk/api/people/george-dough",
+          "api_url": "https://www.gov.uk/api/content/government/people/george-dough",
           "web_url": "https://www.gov.uk/people/george-dough",
           "locale": "en"
         }
