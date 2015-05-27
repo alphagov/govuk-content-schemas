@@ -41,6 +41,28 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "groups": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "name",
+              "contents"
+            ],
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "contents": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
       }
     },
     "links": {
