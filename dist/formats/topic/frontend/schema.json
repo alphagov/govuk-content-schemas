@@ -41,6 +41,16 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "beta": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
         "groups": {
           "type": "array",
           "items": {
