@@ -28,9 +28,9 @@
       "alt_text": "Terence",
       "caption": null
     },
-    "archive_notice": {
-      "explanation": "<div class=\"govspeak\"><p>We’ve archived this case study and published newer <a href=\"https://www.gov.uk/government/collections/work-programme-real-life-stories\">Work Programme real life stories</a>.</p></div>",
-      "archived_at": "2014-08-22T10:29:02+01:00"
+    "withdrawn_notice": {
+      "explanation": "<div class=\"govspeak\"><p>We’ve withdrawn this case study and published newer <a href=\"https://www.gov.uk/government/collections/work-programme-real-life-stories\">Work Programme real life stories</a>.</p></div>",
+      "withdrawn_at": "2014-08-22T10:29:02+01:00"
     }
   },
   "links": {
