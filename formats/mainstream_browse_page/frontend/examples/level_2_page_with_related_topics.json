@@ -13,7 +13,7 @@
           "locale": "en"
         }
       ],
-      "top_level_browse_page": [
+      "active_top_level_browse_page": [
         {
           "title": "Benefits",
           "base_path": "/browse/benefits",
