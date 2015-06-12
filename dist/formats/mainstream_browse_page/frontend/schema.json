@@ -72,7 +72,7 @@
         "top_level_browse_pages": {
           "$ref": "#/definitions/frontend_links"
         },
-        "top_level_browse_page": {
+        "active_top_level_browse_page": {
           "$ref": "#/definitions/frontend_links"
         },
         "second_level_browse_pages": {

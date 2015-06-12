@@ -12,6 +12,68 @@
           "web_url": "https://www.gov.uk/benefits/universal-credit",
           "locale": "en"
         }
+      ],
+      "active_top_level_browse_page": [
+        {
+          "title": "Benefits",
+          "base_path": "/browse/benefits",
+          "description": "Includes tax credits, eligibility and appeals",
+          "api_url": "https://www.gov.uk/api/content/browse/benefits",
+          "web_url": "https://www.gov.uk/browse/benefits",
+          "locale": "en"
+        }
+      ],
+      "top_level_browse_pages": [
+        {
+          "title": "Benefits",
+          "base_path": "/browse/benefits",
+          "description": "Includes tax credits, eligibility and appeals",
+          "api_url": "https://www.gov.uk/api/content/browse/benefits",
+          "web_url": "https://www.gov.uk/browse/benefits",
+          "locale": "en"
+        },
+        {
+          "title": "Births, deaths, marriages and care",
+          "base_path": "/browse/births-deaths-marriages",
+          "description": "Parenting, civil partnerships, divorce and lasting power of attorney",
+          "api_url": "https://www.gov.uk/api/content/browse/births-deaths-marriages",
+          "web_url": "https://www.gov.uk/browse/births-deaths-marriages",
+          "locale": "en"
+        },
+        {
+          "title": "Business and self-employed",
+          "base_path": "/browse/business",
+          "description": "Information about starting up and running a business in the UK, including help if you're self employed or a sole trader.",
+          "api_url": "https://www.gov.uk/api/content/browse/business",
+          "web_url": "https://www.gov.uk/browse/business",
+          "locale": "en"
+        }
+      ],
+      "second_level_browse_pages": [
+        {
+          "title": "Benefits entitlement",
+          "base_path": "/browse/benefits/entitlement",
+          "description": "When and how benefit payments are made, benefits adviser and benefit fraud",
+          "api_url": "https://www.gov.uk/api/content/browse/benefits/entitlement",
+          "web_url": "https://www.gov.uk/browse/benefits/entitlement",
+          "locale": "en"
+        },
+        {
+          "title": "Benefits for families",
+          "base_path": "/browse/benefits/families",
+          "description": "Includes Child Trust Funds, childcare and the Sure Start Maternity Grant",
+          "api_url": "https://www.gov.uk/api/content/browse/benefits/families",
+          "web_url": "https://www.gov.uk/browse/benefits/families",
+          "locale": "en"
+        },
+        {
+          "title": "Carers and disability benefits",
+          "base_path": "/browse/benefits/disability",
+          "description": "Includes Disability Living Allowance, Carer's Allowance and Employment and Support Allowance",
+          "api_url": "https://www.gov.uk/api/content/browse/benefits/disability",
+          "web_url": "https://www.gov.uk/browse/benefits/disability",
+          "locale": "en"
+        }
       ]
     },
     "locale": "en",

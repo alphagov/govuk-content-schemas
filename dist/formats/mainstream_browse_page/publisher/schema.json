@@ -104,7 +104,7 @@
           "description": "All top-level browse pages",
           "$ref": "#/definitions/guid_list"
         },
-        "top_level_browse_page": {
+        "active_top_level_browse_page": {
           "description": "The top-level browse page (for second-level browse pages only).",
           "$ref": "#/definitions/guid_list"
         },
