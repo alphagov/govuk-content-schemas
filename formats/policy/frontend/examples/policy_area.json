@@ -40,18 +40,20 @@
         },
         {
           "key": "organisations",
+          "name": "Organisations",
           "short_name": "From",
           "type": "text",
           "display_as_result_metadata": true,
-          "filterable": false
+          "filterable": true
         },
         {
-          "key": "display_type",
+          "key": "detailed_format",
+          "name": "Type",
           "short_name": "Type",
           "type": "text",
           "display_as_result_metadata": true,
-          "filterable": false
-        }
+          "filterable": true
+      }
       ]
    },
    "links": {
