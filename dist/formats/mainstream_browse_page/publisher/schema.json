@@ -105,11 +105,11 @@
           "$ref": "#/definitions/guid_list"
         },
         "active_top_level_browse_page": {
-          "description": "The top-level browse page (for second-level browse pages only).",
+          "description": "The top-level browse page which is active",
           "$ref": "#/definitions/guid_list"
         },
         "second_level_browse_pages": {
-          "description": "All 2nd level browse pages for the top_level_browse_page (or self if this is a top-level browse page)",
+          "description": "All 2nd level browse pages under active_top_level_browse_page",
           "$ref": "#/definitions/guid_list"
         },
         "related_topics": {
