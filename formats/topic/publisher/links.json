@@ -3,6 +3,10 @@
   "type": "object",
   "additionalProperties": false,
   "properties": {
+    "parent": {
+      "description": "The parent topic",
+      "$ref": "#/definitions/guid_list"
+    }
   },
   "definitions": {
     "guid_list": {

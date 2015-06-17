@@ -79,6 +79,9 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "parent": {
+          "$ref": "#/definitions/frontend_links"
+        },
         "available_translations": {
           "$ref": "#/definitions/frontend_links"
         }
