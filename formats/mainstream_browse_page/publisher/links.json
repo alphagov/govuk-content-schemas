@@ -9,7 +9,8 @@
     },
     "active_top_level_browse_page": {
       "description": "The top-level browse page which is active",
-      "$ref": "#/definitions/guid_list"
+      "$ref": "#/definitions/guid_list",
+      "maxItems": 1
     },
     "second_level_browse_pages": {
       "description": "All 2nd level browse pages under active_top_level_browse_page",

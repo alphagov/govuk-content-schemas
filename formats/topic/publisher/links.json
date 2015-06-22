@@ -5,7 +5,8 @@
   "properties": {
     "parent": {
       "description": "The parent topic",
-      "$ref": "#/definitions/guid_list"
+      "$ref": "#/definitions/guid_list",
+      "maxItems": 1
     }
   },
   "definitions": {
