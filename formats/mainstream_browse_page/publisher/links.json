@@ -9,7 +9,7 @@
     },
     "active_top_level_browse_page": {
       "description": "The top-level browse page which is active",
-      "$ref": "#/definitions/guid_list"
+      "$ref": "#/definitions/at_most_one_guid_list"
     },
     "second_level_browse_pages": {
       "description": "All 2nd level browse pages under active_top_level_browse_page",
@@ -25,6 +25,13 @@
       "items": {
         "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-[1-5][a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$"
       }
+    },
+    "at_most_one_guid_list": {
+      "type": "array",
+      "items": {
+        "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-[1-5][a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$"
+      },
+      "maxItems": 1
     }
   }
 }
