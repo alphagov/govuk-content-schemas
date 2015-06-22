@@ -15,7 +15,7 @@
 
 ## Adding a new field
 
-Follow the General worklow described above. You are now free to add support for the field to apps. If you are adding a mandatory field you will need to additionally:
+Follow the General workflow described above. You are now free to add support for the field to apps. If you are adding a mandatory field you will need to additionally:
 
 * deploy the publishing app with changes to always populate the field
 * populate the field in any records inside content-store
