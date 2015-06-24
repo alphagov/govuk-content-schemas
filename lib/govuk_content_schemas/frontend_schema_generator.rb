@@ -8,6 +8,7 @@ class GovukContentSchemas::FrontendSchemaGenerator
   attr_reader :publisher_schema, :frontend_links_definition
 
   INTERNAL_PROPERTIES = %w{
+    access_limited
     content_id
     publishing_app
     redirects
