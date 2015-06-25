@@ -36,21 +36,6 @@
         "type": "string"
       }
     },
-    "access_limited": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "users"
-      ],
-      "properties": {
-        "users": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        }
-      }
-    },
     "details": {
       "type": "object",
       "additionalProperties": false,
