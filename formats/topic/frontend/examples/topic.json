@@ -1,22 +1,22 @@
 {
-    "base_path": "/oil-and-gas",
+    "base_path": "/topic/oil-and-gas",
     "description": "",
     "details": {},
     "format": "topic",
     "links": {
       "children": [
         {
-          "base_path": "/oil-and-gas/fields-and-wells",
+          "base_path": "/topic/oil-and-gas/fields-and-wells",
           "title": "Fields and wells",
-          "api_url": "https://www.gov.uk/api/content/oil-and-gas/fields-and-wells",
-          "web_url": "https://www.gov.uk/oil-and-gas/fields-and-wells",
+          "api_url": "https://www.gov.uk/api/content/topic/oil-and-gas/fields-and-wells",
+          "web_url": "https://www.gov.uk/topic/oil-and-gas/fields-and-wells",
           "locale": "en"
         },
         {
-          "base_path": "/oil-and-gas/licensing",
+          "base_path": "/topic/oil-and-gas/licensing",
           "title": "Licensing",
-          "api_url": "https://www.gov.uk/api/content/oil-and-gas/licensing",
-          "web_url": "https://www.gov.uk/oil-and-gas/licensing",
+          "api_url": "https://www.gov.uk/api/content/topic/oil-and-gas/licensing",
+          "web_url": "https://www.gov.uk/topic/oil-and-gas/licensing",
           "locale": "en"
         }
       ]
