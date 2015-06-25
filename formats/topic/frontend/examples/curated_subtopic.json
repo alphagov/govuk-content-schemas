@@ -1,5 +1,5 @@
 {
-    "base_path": "/oil-and-gas/offshore",
+    "base_path": "/topic/oil-and-gas/offshore",
     "description": "A page about offshore oil and gas",
     "details": {
       "groups": [
@@ -22,10 +22,10 @@
     "links": {
       "parent": [
         {
-          "base_path": "/oil-and-gas",
+          "base_path": "/topic/oil-and-gas",
           "title": "Oil and gas",
-          "api_url": "https://www.gov.uk/api/content/oil-and-gas",
-          "web_url": "https://www.gov.uk/oil-and-gas",
+          "api_url": "https://www.gov.uk/api/content/topic/oil-and-gas",
+          "web_url": "https://www.gov.uk/topic/oil-and-gas",
           "locale": "en"
         }
       ]
