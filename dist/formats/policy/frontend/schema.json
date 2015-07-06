@@ -49,6 +49,9 @@
         "document_noun": {
           "type": "string"
         },
+        "default_documents_per_page": {
+          "type": "integer"
+        },
         "email_signup_enabled": {
           "type": "boolean"
         },

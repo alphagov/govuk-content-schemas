@@ -9,6 +9,7 @@
    "public_updated_at": "2015-03-10T11:55:11.066+00:00",
    "details": {
       "document_noun": "document",
+      "default_documents_per_page": 10,
       "email_signup_enabled": false,
       "filter": {
          "policies": [

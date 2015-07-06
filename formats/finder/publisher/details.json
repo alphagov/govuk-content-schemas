@@ -24,6 +24,9 @@
       "type": "string",
       "additionalProperties": false
     },
+    "default_documents_per_page": {
+      "type": "integer"
+    },
     "logo_path": {
       "type": "string"
     },
