@@ -1,0 +1,67 @@
+{
+    "base_path": "/browse/visas-immigration",
+    "description": "Visas, settlement, asylum and sponsorship",
+    "details": {
+      "2nd_level_ordering": "curated"
+    },
+    "format": "mainstream_browse_page",
+    "links": {
+      "top_level_browse_pages": [
+        {
+          "title": "Money and tax",
+          "base_path": "/browse/tax",
+          "description": "Includes VAT, debt and inheritance tax",
+          "api_url": "https://www.gov.uk/api/content/browse/tax",
+          "web_url": "https://www.gov.uk/browse/tax",
+          "locale": "en"
+        },
+        {
+          "title": "Passports, travel and living abroad",
+          "base_path": "/browse/abroad",
+          "description": "Includes renewing passports and travel advice by country",
+          "api_url": "https://www.gov.uk/api/content/browse/abroad",
+          "web_url": "https://www.gov.uk/browse/abroad",
+          "locale": "en"
+        },
+        {
+          "title": "Visas and immigration",
+          "base_path": "/browse/visas-immigration",
+          "description": "Visas, settlement, asylum and sponsorship",
+          "api_url": "https://www.gov.uk/api/content/browse/visas-immigration",
+          "web_url": "https://www.gov.uk/browse/visas-immigration",
+          "locale": "en"
+        }
+      ],
+      "second_level_browse_pages": [
+        {
+          "title": "Work visas",
+          "base_path": "/browse/visas-immigration/work-visas",
+          "description": "Paid and voluntary work visas (eg Tier 1, Tier 2, Tier 5)",
+          "api_url": "https://www.gov.uk/api/content/browse/visas-immigration/work-visas",
+          "web_url": "https://www.gov.uk/browse/visas-immigration/work-visas",
+          "locale": "en"
+        },
+        {
+          "title": "Asylum",
+          "base_path": "/browse/visas-immigration/asylum",
+          "description": "Claiming asylum as a refugee, the asylum process and support",
+          "api_url": "https://www.gov.uk/api/content/browse/visas-immigration/asylum",
+          "web_url": "https://www.gov.uk/browse/visas-immigration/asylum",
+          "locale": "en"
+        },
+        {
+          "title": "Transit visas",
+          "base_path": "/browse/visas-immigration/transit-visas",
+          "description": "In transit through the UK: airside, landside or the common travel area",
+          "api_url": "https://www.gov.uk/api/content/browse/visas-immigration/transit-visas",
+          "web_url": "https://www.gov.uk/browse/visas-immigration/transit-visas",
+          "locale": "en"
+        }
+      ]
+    },
+    "locale": "en",
+    "need_ids": [],
+    "public_updated_at": "2015-04-20T15:46:10.000+00:00",
+    "title": "Benefits",
+    "updated_at": "2015-04-20T15:50:11.000+00:00"
+}
