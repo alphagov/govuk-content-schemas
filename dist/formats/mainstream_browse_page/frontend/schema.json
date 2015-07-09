@@ -41,6 +41,12 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "2nd_level_ordering": {
+          "enum": [
+            "alphabetical",
+            "curated"
+          ]
+        },
         "groups": {
           "type": "array",
           "items": {
