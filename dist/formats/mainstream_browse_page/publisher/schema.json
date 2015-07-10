@@ -87,7 +87,7 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "2nd_level_ordering": {
+        "second_level_ordering": {
           "enum": [
             "alphabetical",
             "curated"
