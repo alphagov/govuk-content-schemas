@@ -2,7 +2,7 @@
     "base_path": "/browse/benefits",
     "description": "Includes tax credits, eligibility and appeals",
     "details": {
-      "2nd_level_ordering": "alphabetical"
+      "second_level_ordering": "alphabetical"
     },
     "format": "mainstream_browse_page",
     "links": {
