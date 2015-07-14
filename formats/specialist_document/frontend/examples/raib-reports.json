@@ -1,0 +1,29 @@
+{
+	"base_path" : "raib-reports/train-driver-receiving-a-severe-electric-shock-at-sutton-weaver",
+	"title" : "Train driver receiving a severe electric shock at Sutton Weaver",
+	"summary" : "At 19:04 hrs on Tuesday 23 September 2014, a train driver received a severe electric shock at Sutton Weaver, Cheshire. ",
+	"body" : "<p>The train driver had stopped his train having seen damaged overhead power supply wires ahead of it. Following a call to the signaller, he left his train and came close to, or made contact with, an electrically live wire which had broken and was low hanging. The train driver suffered serious injuries.</p>\n\n<p>This accident occurred because one of the overhead wires had broken, was hanging down and was electrically live. Two previous trains had come into contact with this hanging wire and consequently tripped the power supply circuit breakers. Each time the circuit breakers had been reset by the Electrical Control Operators in accordance with procedures to make the overhead wires electrically live again. The driver had left the train to obtain information as to his location to assist in restoring train services as he was trained to do, but did not see the broken wire.</p>\n\n<p>The investigation found that the wire broke as some of its strands had fractured due to fatigue, likely initiated and progressed from a high stress area related to an attachment supporting the overhead wire.</p>\n\n<p>The RAIB has made two recommendations. One is for Network Rail to extend the scope of its detailed overhead line examinations to inspect for signs of wire damage at these attachment positions.</p>\n\n<p>The other recommendation is for RSSB, who are the custodian of the railway Rule Book, to review whether clarification is needed relating to the actions that train crew should take if they are required to leave a train where the OLE is known to be damaged and still live.</p>\n\n<p>Following a review of the actions of those involved in attending to the injured driver, one learning point has been made reminding train operators of the importance of contacting the signaller by the quickest means in emergency situations.</p>\n\n<p><a rel=\"external\" href=\"https://assets.digital.cabinet-office.gov.uk/media/558803de40f0b615b600001a/R072015_150624_Sutton_Weaver.pdf\">R072015_150624_Sutton_Weaver</a></p>\n",
+	"published_at" : "2015-06-24T08:59:35+00:00",
+	"details" : {
+		"railway_type" : [
+			"heavy-rail"
+		],
+		"report_type" : "investigation-report",
+		"date_of_occurrence" : "2014-09-24",
+		"headers" : [ ],
+		"change_note" : "First published.",
+		"document_type" : "raib_report",
+		"updated_at" : "2015-06-24T08:59:35+00:00",
+		"version_number" : 1,
+		"public_updated_at" : "2015-06-24T08:59:35+00:00",
+		"bulk_published" : false,
+		"change_history" : [
+			{
+				"note" : "First published.",
+				"public_timestamp" : "2015-06-24T08:59:35+00:00"
+			}
+		]
+	},
+	"updated_at" : "2015-06-24T08:59:35+00:00",
+	"created_at" : "2015-06-24T08:59:35+00:00"
+}
