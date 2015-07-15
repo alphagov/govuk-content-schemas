@@ -1,29 +1,40 @@
 require 'govuk_content_schemas'
 
 class GovukContentSchemas::FinderSchemaConverter
-  attr_reader :document_type_mapper
+  attr_reader :document_type_mapper, :select_field_multiplicity_identifier
 
-  def initialize(document_type_mapper: default_document_type_mapper)
+  def initialize(document_type_mapper: default_document_type_mapper, select_field_multiplicity_identifier: default_select_field_multiplicity_identifier)
     @document_type_mapper = document_type_mapper
+    @select_field_multiplicity_identifier = select_field_multiplicity_identifier
   end
 
   def default_document_type_mapper
     ->(filename) { File.basename(filename, '.json') }
   end
 
+  def default_select_field_multiplicity_identifier
+    ->(document_type, facet_name) { false }
+  end
+
   def call(*files)
-    definitions = files.map { |file| FinderSchema.new(file, document_type_mapper: document_type_mapper) }.map(&:definition)
+    definitions = files.map do |file|
+      FinderSchema.new(file,
+        document_type_mapper: document_type_mapper,
+        select_field_multiplicity_identifier: select_field_multiplicity_identifier
+      )
+    end
     {
-      "definitions" => definitions.inject(&:merge)
+      "definitions" => definitions.map(&:definition).inject(&:merge)
     }
   end
 
   class FinderSchema
-    attr_reader :file, :document_type_mapper
+    attr_reader :file, :document_type_mapper, :select_field_multiplicity_identifier
 
-    def initialize(file, document_type_mapper: )
+    def initialize(file, document_type_mapper: , select_field_multiplicity_identifier: )
       @file = file
       @document_type_mapper = document_type_mapper
+      @select_field_multiplicity_identifier = ->(facet_name) { select_field_multiplicity_identifier.call(document_type, facet_name) }
     end
 
     def definition
@@ -49,7 +60,7 @@ class GovukContentSchemas::FinderSchemaConverter
     end
 
     def facets
-      data['facets'].map { |facet_json| FinderFacet.facet_for(facet_json) }
+      data['facets'].map { |facet_json| FinderFacet.type_of(select_field_multiplicity_identifier, facet_json).new(facet_json) }
     end
 
     def document_type_definition
@@ -69,16 +80,20 @@ class GovukContentSchemas::FinderSchemaConverter
   class FinderFacet
     attr_reader :json
 
-    def self.facet_for(json)
-      type_of(json).new(json)
-    end
-
-    def self.type_of(json)
-      facet_classes.find { |klass| klass.of_type?(json) }
-    end
-
-    def self.facet_classes
-      ObjectSpace.each_object(::Class).select {|klass| klass < self }
+    def self.type_of(select_field_multiplicity_identifier, json)
+      if json['type'] == 'text' && json.has_key?('allowed_values')
+        if select_field_multiplicity_identifier.call(json['key'])
+          FinderArrayFacet
+        else
+          FinderSingleSelectFacet
+        end
+      elsif json['type'] == 'text'
+        FinderStringFacet
+      elsif json['type'] == 'date'
+        FinderDateFacet
+      else
+        raise "Unknown finder facet type #{json['type']}"
+      end
     end
 
     def initialize(json)
@@ -92,10 +107,6 @@ class GovukContentSchemas::FinderSchemaConverter
   end
 
   class FinderArrayFacet < FinderFacet
-    def self.of_type?(json)
-      json['type'] == 'text' && json.has_key?('allowed_values')
-    end
-
     def as_json_schema
       {
         facet_name => {
@@ -113,11 +124,22 @@ class GovukContentSchemas::FinderSchemaConverter
     end
   end
 
-  class FinderDateFacet < FinderFacet
-    def self.of_type?(json)
-      json['type'] == 'date'
+  class FinderSingleSelectFacet < FinderFacet
+    def as_json_schema
+      {
+        facet_name => {
+          "type" => "string",
+          "enum" => allowed_values
+        }
+      }
     end
 
+    def allowed_values
+      json['allowed_values'].map { |record| record['value'] }
+    end
+  end
+
+  class FinderDateFacet < FinderFacet
     def as_json_schema
       {
         facet_name => {
@@ -129,10 +151,6 @@ class GovukContentSchemas::FinderSchemaConverter
   end
 
   class FinderStringFacet < FinderFacet
-    def self.of_type?(json)
-      json['type'] == 'text' && !json.has_key?('allowed_values')
-    end
-
     def as_json_schema
       {
         facet_name => {

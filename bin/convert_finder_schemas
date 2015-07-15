@@ -13,6 +13,10 @@ if ARGV.empty?
   exit(1)
 end
 
+# Unfortunately there are a few edge-cases with document type naming, so we can't
+# just munge the filename of the finder schema files. The document type names are defined
+# in the 'metadata' files, but it would be a hassle to load and parse them, so just
+# hard code them here
 class DocumentTypeMapper
   MAPPING = {
     "aaib-reports.json" => "aaib_report",
@@ -32,6 +36,58 @@ class DocumentTypeMapper
   end
 end
 
-converted = GovukContentSchemas::FinderSchemaConverter.new(document_type_mapper: DocumentTypeMapper.new).call(*ARGV)
+# There is also no way to identify whether a finder facet allows single or
+# multiple values in the document. The only place that this information is
+# encoded is in the form templates of the specialist publisher admin
+# interface. Again, rather than trying to do anything clever, we'll just hard
+# code it here
+class SelectFieldMultiplicityIdentifier
+  MULTI_SELECTS_BY_DOCUMENT_TYPE = {
+    "aaib_report" => [
+      "aircraft_category"
+    ],
+    "cma_case" => [
+      "market_sector"
+    ],
+    "countryside_stewardship_grant" => [
+      "land_use",
+      "tiers_or_standalone_items",
+      "funding_amount"
+    ],
+    "drug_safety_update" => [
+      "therapeutic_area"
+    ],
+    "esi_fund" => [
+      "fund_type",
+      "location",
+      "funding_source"
+    ],
+    "international_development_fund" => [
+      "location",
+      "development_sector",
+      "eligible_entities",
+      "value_of_funding"
+    ],
+    "maib_report" => [
+      "vessel_type"
+    ],
+    "medical_safety_alert" => [
+      "medical_specialism"
+    ],
+    "raib_report" => [
+      "railway_type"
+    ]
+  }
+
+  def call(document_type, facet_name)
+    MULTI_SELECTS_BY_DOCUMENT_TYPE.fetch(document_type, []).include?(facet_name)
+  end
+end
+
+converter = GovukContentSchemas::FinderSchemaConverter.new(
+  document_type_mapper: DocumentTypeMapper.new,
+  select_field_multiplicity_identifier: SelectFieldMultiplicityIdentifier.new
+)
+converted = converter.call(*ARGV)
 
 puts JSON.pretty_generate(converted)

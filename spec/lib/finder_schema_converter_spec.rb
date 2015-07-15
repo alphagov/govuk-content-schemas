@@ -51,34 +51,49 @@ RSpec.describe GovukContentSchemas::FinderSchemaConverter do
         }
       }
 
-      it "generates a suitable enum schema" do
-        expect(converted).to eq(
-          "definitions" => {
-            "schema_metadata" => {
-              "type" => "object",
-              "additionalProperties" => false,
-              "properties" => {
-                "document_type" => {
-                  "type" => "string",
-                  "enum" => ["schema"]
-                },
-                "aircraft_category" => {
-                  "type" => "array",
-                  "items" => {
-                    "type" => "string",
-                    "enum" => [
-                      "commercial-fixed-wing",
-                      "commercial-rotorcraft",
-                      "general-aviation-fixed-wing",
-                      "general-aviation-rotorcraft",
-                      "sport-aviation-and-balloons"
-                    ]
-                  }
-                }
+      subject(:aircraft_category) { converted["definitions"]["schema_metadata"]["properties"]["aircraft_category"] }
+      let(:multiplicity_identifier) { double(:multiplicity_identifier) }
+      let(:converter) { GovukContentSchemas::FinderSchemaConverter.new(select_field_multiplicity_identifier: multiplicity_identifier) }
+
+      context "select_field_multiplicity_identifier identifies the field as a single select" do
+        let(:multiplicity_identifier) { ->(document_type, facet_name) { false } }
+
+        it "generates a field which matches a string constrained by the allowed_values" do
+          expect(aircraft_category).to eq(
+            {
+              "type" => "string",
+              "enum" => [
+                "commercial-fixed-wing",
+                "commercial-rotorcraft",
+                "general-aviation-fixed-wing",
+                "general-aviation-rotorcraft",
+                "sport-aviation-and-balloons"
+              ]
+            }
+          )
+        end
+      end
+
+      context "select_field_multiplicity_identifier identifies the field as a single select" do
+        let(:multiplicity_identifier) { ->(document_type, facet_name) { true } }
+
+        it "generates a field which matches a array whose elements are constrained by the allowed_values" do
+          expect(aircraft_category).to eq(
+            {
+              "type" => "array",
+              "items" => {
+                "type" => "string",
+                "enum" => [
+                  "commercial-fixed-wing",
+                  "commercial-rotorcraft",
+                  "general-aviation-fixed-wing",
+                  "general-aviation-rotorcraft",
+                  "sport-aviation-and-balloons"
+                ]
               }
             }
-          }
-        )
+          )
+        end
       end
     end
 
