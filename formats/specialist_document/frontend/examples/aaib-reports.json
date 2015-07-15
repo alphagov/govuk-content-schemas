@@ -1,15 +1,20 @@
 {
-	"body" : "<h2 id=\"summary\">Summary:</h2>\n<p>The gyroplane began to move forward against the brakes before sufficient rotor rpm had been achieved for takeoff.  The pilot responded by re-positioning the control stick fully aft and the rotors struck the tailplane.  The pilot lost directional control and the right landing gear subsequently failed, causing the gyroplane to tip onto its right side.  The pilot was uninjured.</p>\n\n<h3 id=\"download-report\">Download report:</h3>\n<p><a rel=\"external\" href=\"https://assets.digital.cabinet-office.gov.uk/media/559e25de40f0b61564000039/Rotorsport_UK_Calidus_G-PCPC_07-15.pdf\">Rotorsport UK Calidus G-PCPC 07-15</a> </p>\n\n<h3 id=\"download-glossary-of-abbreviations\">Download glossary of abbreviations:</h3>\n<p><a href=\"https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/433812/Glossary_of_abbreviations.pdf\">Glossary of abbreviations</a></p>\n\n",
-	"created_at" : "2015-07-09T08:17:10+00:00",
+	"public_updated_at" : "2015-07-09T08:17:10+00:00",
+	"format": "specialist_document",
+	"locale": "en",
 	"details" : {
-		"aircraft_category" : [
-			"sport-aviation-and-balloons"
-		],
-		"report_type" : "correspondence-investigation",
-		"date_of_occurrence" : "2015-08-08",
-		"aircraft_type" : "Rotorsport UK Calidus",
-		"location" : "Damyns Hall Aerodrome, Essex",
-		"registration" : "G-PCPC",
+		"body" : "<h2 id=\"summary\">Summary:</h2>\n<p>The gyroplane began to move forward against the brakes before sufficient rotor rpm had been achieved for takeoff.  The pilot responded by re-positioning the control stick fully aft and the rotors struck the tailplane.  The pilot lost directional control and the right landing gear subsequently failed, causing the gyroplane to tip onto its right side.  The pilot was uninjured.</p>\n\n<h3 id=\"download-report\">Download report:</h3>\n<p><a rel=\"external\" href=\"https://assets.digital.cabinet-office.gov.uk/media/559e25de40f0b61564000039/Rotorsport_UK_Calidus_G-PCPC_07-15.pdf\">Rotorsport UK Calidus G-PCPC 07-15</a> </p>\n\n<h3 id=\"download-glossary-of-abbreviations\">Download glossary of abbreviations:</h3>\n<p><a href=\"https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/433812/Glossary_of_abbreviations.pdf\">Glossary of abbreviations</a></p>\n\n",
+		"metadata": {
+			"aircraft_category" : [
+				"sport-aviation-and-balloons"
+			],
+			"report_type" : "correspondence-investigation",
+			"date_of_occurrence" : "2015-08-08",
+			"aircraft_type" : "Rotorsport UK Calidus",
+			"location" : "Damyns Hall Aerodrome, Essex",
+			"registration" : "G-PCPC",
+			"document_type" : "aaib_report"
+		},
 		"headers" : [
 			{
 				"text" : "Summary:",
@@ -32,12 +37,6 @@
 			}
 		],
 		"change_note" : "",
-		"document_type" : "aaib_report",
-		"minor_update" : true,
-		"public_updated_at" : "2015-07-09T08:17:10+00:00",
-		"updated_at" : "2015-07-09T08:54:30+00:00",
-		"version_number" : 2,
-		"bulk_published" : false,
 		"change_history" : [
 			{
 				"note" : "First published.",
@@ -45,9 +44,8 @@
 			}
 		]
 	},
-	"published_at" : "2015-07-09T08:17:10+00:00",
 	"base_path" : "aaib-reports/aaib-investigation-to-rotorsport-uk-calidus-g-pcpc",
-	"summary" : "Overturned after rotor struck tailplane during preparation for takeoff, Damyns Hall Aerodrome, Essex, 8 April 2015.",
+	"description" : "Overturned after rotor struck tailplane during preparation for takeoff, Damyns Hall Aerodrome, Essex, 8 April 2015.",
 	"title" : "AAIB investigation to Rotorsport UK Calidus, G-PCPC\t",
 	"updated_at" : "2015-07-09T08:54:30+00:00"
 }
