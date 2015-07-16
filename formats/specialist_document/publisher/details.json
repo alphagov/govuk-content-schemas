@@ -16,6 +16,9 @@
       "$ref": "#/definitions/any_metadata"
     },
 
+    "headers" : {
+      "$ref": "#/definitions/nested_headers"
+    },
     "change_note" : {
       "type" : "string"
     },
@@ -56,6 +59,27 @@
         { "$ref": "#/definitions/raib_report_metadata" },
         { "$ref": "#/definitions/vehicle_recalls_and_faults_alert_metadata" }
       ]
+    },
+    "nested_headers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "text": {
+            "type": "string"
+          },
+          "level": {
+            "type": "integer"
+          },
+          "id": {
+            "type": "string"
+          },
+          "headers": {
+            "$ref": "#/definitions/nested_headers"
+          }
+        }
+      }
     },
     "aaib_report_metadata": {
       "type": "object",
