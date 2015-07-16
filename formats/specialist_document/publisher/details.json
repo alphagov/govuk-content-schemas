@@ -13,19 +13,7 @@
       "type": "string"
     },
     "metadata": {
-      "type": "object",
-      "oneOf": [
-        { "$ref": "#/definitions/aaib_report_metadata" },
-        { "$ref": "#/definitions/cma_case_metadata" },
-        { "$ref": "#/definitions/countryside_stewardship_grant_metadata" },
-        { "$ref": "#/definitions/drug_safety_update_metadata" },
-        { "$ref": "#/definitions/european_structural_investment_fund_metadata" },
-        { "$ref": "#/definitions/international_development_fund_metadata" },
-        { "$ref": "#/definitions/maib_report_metadata" },
-        { "$ref": "#/definitions/medical_safety_alert_metadata" },
-        { "$ref": "#/definitions/raib_report_metadata" },
-        { "$ref": "#/definitions/vehicle_recalls_and_faults_alert_metadata" }
-      ]
+      "$ref": "#/definitions/any_metadata"
     },
 
     "change_note" : {
@@ -54,6 +42,21 @@
     }
   },
   "definitions": {
+    "any_metadata": {
+      "type": "object",
+      "oneOf": [
+        { "$ref": "#/definitions/aaib_report_metadata" },
+        { "$ref": "#/definitions/cma_case_metadata" },
+        { "$ref": "#/definitions/countryside_stewardship_grant_metadata" },
+        { "$ref": "#/definitions/drug_safety_update_metadata" },
+        { "$ref": "#/definitions/european_structural_investment_fund_metadata" },
+        { "$ref": "#/definitions/international_development_fund_metadata" },
+        { "$ref": "#/definitions/maib_report_metadata" },
+        { "$ref": "#/definitions/medical_safety_alert_metadata" },
+        { "$ref": "#/definitions/raib_report_metadata" },
+        { "$ref": "#/definitions/vehicle_recalls_and_faults_alert_metadata" }
+      ]
+    },
     "aaib_report_metadata": {
       "type": "object",
       "additionalProperties": false,
