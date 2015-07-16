@@ -69,19 +69,16 @@
           }
         },
         "report_type": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "enum": [
-              "annual-safety-report",
-              "correspondence-investigation",
-              "field-investigation",
-              "pre-1997-monthly-report",
-              "foreign-report",
-              "formal-report",
-              "special-bulletin"
-            ]
-          }
+          "type": "string",
+          "enum": [
+            "annual-safety-report",
+            "correspondence-investigation",
+            "field-investigation",
+            "pre-1997-monthly-report",
+            "foreign-report",
+            "formal-report",
+            "special-bulletin"
+          ]
         },
         "date_of_occurrence": {
           "type": "string",
@@ -109,29 +106,23 @@
           ]
         },
         "case_type": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "enum": [
-              "ca98-and-civil-cartels",
-              "criminal-cartels",
-              "markets",
-              "mergers",
-              "consumer-enforcement",
-              "regulatory-references-and-appeals",
-              "review-of-orders-and-undertakings"
-            ]
-          }
+          "type": "string",
+          "enum": [
+            "ca98-and-civil-cartels",
+            "criminal-cartels",
+            "markets",
+            "mergers",
+            "consumer-enforcement",
+            "regulatory-references-and-appeals",
+            "review-of-orders-and-undertakings"
+          ]
         },
         "case_state": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "enum": [
-              "open",
-              "closed"
-            ]
-          }
+          "type": "string",
+          "enum": [
+            "open",
+            "closed"
+          ]
         },
         "market_sector": {
           "type": "array",
@@ -171,38 +162,35 @@
           }
         },
         "outcome_type": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "enum": [
-              "ca98-no-grounds-for-action-non-infringement",
-              "ca98-infringement-chapter-i",
-              "ca98-infringement-chapter-ii",
-              "ca98-administrative-priorities",
-              "ca98-commitment",
-              "criminal-cartels-verdict",
-              "markets-phase-1-no-enforcement-action",
-              "markets-phase-1-undertakings-in-lieu-of-reference",
-              "markets-phase-1-referral",
-              "mergers-phase-1-clearance",
-              "mergers-phase-1-clearance-with-undertakings-in-lieu",
-              "mergers-phase-1-referral",
-              "mergers-phase-1-found-not-to-qualify",
-              "mergers-phase-1-public-interest-interventions",
-              "markets-phase-2-clearance-no-adverse-effect-on-competition",
-              "markets-phase-2-adverse-effect-on-competition-leading-to-remedies",
-              "markets-phase-2-decision-to-dispense-with-procedural-obligations",
-              "mergers-phase-2-clearance",
-              "mergers-phase-2-clearance-with-remedies",
-              "mergers-phase-2-prohibition",
-              "mergers-phase-2-cancellation",
-              "consumer-enforcement-no-action",
-              "consumer-enforcement-court-order",
-              "consumer-enforcement-undertakings",
-              "consumer-enforcement-changes-to-business-practices-agreed",
-              "regulatory-references-and-appeals-final-determination"
-            ]
-          }
+          "type": "string",
+          "enum": [
+            "ca98-no-grounds-for-action-non-infringement",
+            "ca98-infringement-chapter-i",
+            "ca98-infringement-chapter-ii",
+            "ca98-administrative-priorities",
+            "ca98-commitment",
+            "criminal-cartels-verdict",
+            "markets-phase-1-no-enforcement-action",
+            "markets-phase-1-undertakings-in-lieu-of-reference",
+            "markets-phase-1-referral",
+            "mergers-phase-1-clearance",
+            "mergers-phase-1-clearance-with-undertakings-in-lieu",
+            "mergers-phase-1-referral",
+            "mergers-phase-1-found-not-to-qualify",
+            "mergers-phase-1-public-interest-interventions",
+            "markets-phase-2-clearance-no-adverse-effect-on-competition",
+            "markets-phase-2-adverse-effect-on-competition-leading-to-remedies",
+            "markets-phase-2-decision-to-dispense-with-procedural-obligations",
+            "mergers-phase-2-clearance",
+            "mergers-phase-2-clearance-with-remedies",
+            "mergers-phase-2-prohibition",
+            "mergers-phase-2-cancellation",
+            "consumer-enforcement-no-action",
+            "consumer-enforcement-court-order",
+            "consumer-enforcement-undertakings",
+            "consumer-enforcement-changes-to-business-practices-agreed",
+            "regulatory-references-and-appeals-final-determination"
+          ]
         },
         "opened_date": {
           "type": "string",
@@ -225,15 +213,12 @@
           ]
         },
         "grant_type": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "enum": [
-              "option",
-              "capital-item",
-              "supplement"
-            ]
-          }
+          "type": "string",
+          "enum": [
+            "option",
+            "capital-item",
+            "supplement"
+          ]
         },
         "land_use": {
           "type": "array",
@@ -346,63 +331,51 @@
           ]
         },
         "fund_state": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "enum": [
-              "open",
-              "closed"
-            ]
-          }
+          "type": "string",
+          "enum": [
+            "open",
+            "closed"
+          ]
         },
         "fund_type": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "enum": [
-              "access-to-work",
-              "business-support",
-              "climate-change",
-              "environment",
-              "it-and-broadband",
-              "learning-and-skills",
-              "low-carbon",
-              "renewable-energy",
-              "research-and-innovation",
-              "social-inclusion",
-              "transport",
-              "techincal-assistance",
-              "tourism"
-            ]
-          }
+          "type": "string",
+          "enum": [
+            "access-to-work",
+            "business-support",
+            "climate-change",
+            "environment",
+            "it-and-broadband",
+            "learning-and-skills",
+            "low-carbon",
+            "renewable-energy",
+            "research-and-innovation",
+            "social-inclusion",
+            "transport",
+            "techincal-assistance",
+            "tourism"
+          ]
         },
         "location": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "enum": [
-              "north-east",
-              "north-west",
-              "yorkshire-and-humber",
-              "east-midlands",
-              "west-midlands",
-              "east-of-england",
-              "south-east",
-              "south-west",
-              "london"
-            ]
-          }
+          "type": "string",
+          "enum": [
+            "north-east",
+            "north-west",
+            "yorkshire-and-humber",
+            "east-midlands",
+            "west-midlands",
+            "east-of-england",
+            "south-east",
+            "south-west",
+            "london"
+          ]
         },
         "funding_source": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "enum": [
-              "european-social-fund",
-              "european-regional-development-fund",
-              "european-agricoltural-fund-for-rural"
-            ]
-          }
+          "type": "string",
+          "enum": [
+            "european-social-fund",
+            "european-regional-development-fund",
+            "european-agricoltural-fund-for-rural"
+          ]
         },
         "closing_date": {
           "type": "string",
@@ -421,14 +394,11 @@
           ]
         },
         "fund_state": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "enum": [
-              "open",
-              "closed"
-            ]
-          }
+          "type": "string",
+          "enum": [
+            "open",
+            "closed"
+          ]
         },
         "location": {
           "type": "array",
@@ -543,17 +513,14 @@
           }
         },
         "report_type": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "enum": [
-              "investigation-report",
-              "safety-bulletin",
-              "completed-preliminary-examination",
-              "overseas-report",
-              "discontinued-investigation"
-            ]
-          }
+          "type": "string",
+          "enum": [
+            "investigation-report",
+            "safety-bulletin",
+            "completed-preliminary-examination",
+            "overseas-report",
+            "discontinued-investigation"
+          ]
         },
         "date_of_occurrence": {
           "type": "string",
@@ -572,14 +539,11 @@
           ]
         },
         "alert_type": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "enum": [
-              "drugs",
-              "devices"
-            ]
-          }
+          "type": "string",
+          "enum": [
+            "drugs",
+            "devices"
+          ]
         },
         "medical_specialism": {
           "type": "array",
@@ -640,16 +604,13 @@
           }
         },
         "report_type": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "enum": [
-              "investigation-report",
-              "bulletin",
-              "interim-report",
-              "discontinuation-report"
-            ]
-          }
+          "type": "string",
+          "enum": [
+            "investigation-report",
+            "bulletin",
+            "interim-report",
+            "discontinuation-report"
+          ]
         },
         "date_of_occurrence": {
           "type": "string",
@@ -668,50 +629,41 @@
           ]
         },
         "fault_type": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "enum": [
-              "recall",
-              "non_urgent_fault"
-            ]
-          }
+          "type": "string",
+          "enum": [
+            "recall",
+            "non_urgent_fault"
+          ]
         },
         "faulty_item_type": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "enum": [
-              "vehicle",
-              "baby-seat",
-              "tyres",
-              "parts",
-              "agricultural-equipment",
-              "other-accessories"
-            ]
-          }
+          "type": "string",
+          "enum": [
+            "vehicle",
+            "baby-seat",
+            "tyres",
+            "parts",
+            "agricultural-equipment",
+            "other-accessories"
+          ]
         },
         "manufacturer": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "enum": [
-              "alfa-romeo",
-              "audi",
-              "balco",
-              "bmw",
-              "bridgestone",
-              "britax",
-              "citroen",
-              "ferrari",
-              "mccormick-tractors-ltd",
-              "michelin",
-              "mitas-tyres-ltd",
-              "mothercare",
-              "nim-engineering-ltd",
-              "other-manufacturer"
-            ]
-          }
+          "type": "string",
+          "enum": [
+            "alfa-romeo",
+            "audi",
+            "balco",
+            "bmw",
+            "bridgestone",
+            "britax",
+            "citroen",
+            "ferrari",
+            "mccormick-tractors-ltd",
+            "michelin",
+            "mitas-tyres-ltd",
+            "mothercare",
+            "nim-engineering-ltd",
+            "other-manufacturer"
+          ]
         },
         "faulty_item_model": {
           "type": "string"
