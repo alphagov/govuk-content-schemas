@@ -374,44 +374,53 @@
           ]
         },
         "fund_type": {
-          "type": "string",
-          "enum": [
-            "access-to-work",
-            "business-support",
-            "climate-change",
-            "environment",
-            "it-and-broadband",
-            "learning-and-skills",
-            "low-carbon",
-            "renewable-energy",
-            "research-and-innovation",
-            "social-inclusion",
-            "transport",
-            "techincal-assistance",
-            "tourism"
-          ]
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "access-to-work",
+              "business-support",
+              "climate-change",
+              "environment",
+              "it-and-broadband",
+              "learning-and-skills",
+              "low-carbon",
+              "renewable-energy",
+              "research-and-innovation",
+              "social-inclusion",
+              "transport",
+              "techincal-assistance",
+              "tourism"
+            ]
+          }
         },
         "location": {
-          "type": "string",
-          "enum": [
-            "north-east",
-            "north-west",
-            "yorkshire-and-humber",
-            "east-midlands",
-            "west-midlands",
-            "east-of-england",
-            "south-east",
-            "south-west",
-            "london"
-          ]
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "north-east",
+              "north-west",
+              "yorkshire-and-humber",
+              "east-midlands",
+              "west-midlands",
+              "east-of-england",
+              "south-east",
+              "south-west",
+              "london"
+            ]
+          }
         },
         "funding_source": {
-          "type": "string",
-          "enum": [
-            "european-social-fund",
-            "european-regional-development-fund",
-            "european-agricoltural-fund-for-rural"
-          ]
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "european-social-fund",
+              "european-regional-development-fund",
+              "european-agricoltural-fund-for-rural"
+            ]
+          }
         },
         "closing_date": {
           "type": "string",

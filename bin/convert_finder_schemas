@@ -57,7 +57,7 @@ class SelectFieldMultiplicityIdentifier
     "drug_safety_update" => [
       "therapeutic_area"
     ],
-    "esi_fund" => [
+    "european_structural_investment_fund" => [
       "fund_type",
       "location",
       "funding_source"
