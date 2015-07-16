@@ -1,8 +1,17 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
-  "additionalProperties": true,
+  "additionalProperties": false,
+  "required": [
+    "body",
+    "metadata",
+    "change_history",
+    "change_note"
+  ],
   "properties": {
+    "body": {
+      "type": "string"
+    },
     "metadata": {
       "type": "object",
       "oneOf": [

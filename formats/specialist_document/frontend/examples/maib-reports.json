@@ -1,7 +1,6 @@
 {
 	"format": "specialist_document",
 	"locale": "en",
-	"created_at" : "2015-07-09T07:48:50+00:00",
 	"details" : {
 		"body" : "<h2 id=\"accident-investigation-report-162015\">Accident Investigation Report 16/2015</h2>\n\n<p>Investigation report into marine accident including what happened, safety lessons and recommendations made:</p>\n\n<p><a rel=\"external\" href=\"https://assets.digital.cabinet-office.gov.uk/media/559d3c62ed915d1592000032/MAIBInvReport-16_2015.pdf\">MAIB investigation report 16-2015: Orakai and Margriet</a></p>\n\n<p><img src=\"https://assets.digital.cabinet-office.gov.uk/media/559e273840f0b6156400003b/Margriet.jpg\" alt=\"Photograph of Margriet\" /></p>\n\n<h3 id=\"summary\">Summary</h3>\n\n<p>At 0533 on 21 December 2014, the chemical tanker Orakai and the beam trawler Margriet collided in the North Sea, 45nm west of Ijmuiden. Margriet was seriously damaged both above and below the waterline. Approximately 8 tons of diesel oil escaped from a damaged fuel tank. Orakai sustained minor damage. There were no injuries.</p>\n\n<p>The investigation identified that Margriet’s wheelhouse watchkeeper was not keeping an effective lookout. He had not seen the tanker, which was only 1 nautical mile away when he altered course towards it. The investigation also identified that Orakai’s officer of the watch had left an inexperienced ordinary seaman alone on the bridge. </p>\n\n<h3 id=\"recommendations\">Recommendations</h3>\n\n<p>MAIB has made recommendation 2015/140\tto Margriet’s owner, Kafish B.V. aimed at improving the standards of watchkeeping on its vessels, with particular regard to the additional risks associated with fishing in or near traffic separation schemes and other areas of potential high traffic density.</p>\n\n<p>Recommendation 2015/141 has been made to Orakai’s manager, South End Tanker Management B.V., to reiterate to its fleet that an officer of the watch should not leave the bridge unless relieved by another qualified officer.</p>\n",
 		"vessel_type" : [
@@ -48,5 +47,5 @@
 	"base_path" : "maib-reports/collision-between-chemical-tanker-orakai-and-beam-trawler-margriet",
 	"description" : "Location: North Hinder Junction, North Sea, UK",
 	"title" : "Collision between chemical tanker Orakai and beam trawler Margriet",
-	"updated_at" : "2015-07-09T09:13:18+00:00"
+	"public_updated_at" : "2015-07-09T09:13:18+00:00"
 }
