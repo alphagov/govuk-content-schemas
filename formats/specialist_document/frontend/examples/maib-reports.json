@@ -39,7 +39,7 @@
 			}
 		]
 	},
-	"base_path" : "maib-reports/collision-between-chemical-tanker-orakai-and-beam-trawler-margriet",
+	"base_path" : "/maib-reports/collision-between-chemical-tanker-orakai-and-beam-trawler-margriet",
 	"description" : "Location: North Hinder Junction, North Sea, UK",
 	"title" : "Collision between chemical tanker Orakai and beam trawler Margriet",
 	"public_updated_at" : "2015-07-09T09:13:18+00:00"
