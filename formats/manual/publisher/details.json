@@ -40,7 +40,7 @@
                   "type": "string"
                 },
                 "base_path": {
-                  "type": "string"
+                  "$ref": "#/definitions/absolute_path"
                 }
               }
             }
@@ -61,7 +61,7 @@
         ],
         "properties": {
           "base_path": {
-            "type": "string"
+            "$ref": "#/definitions/absolute_path"
           },
           "title": {
             "type": "string"

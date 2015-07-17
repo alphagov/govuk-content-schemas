@@ -22,7 +22,7 @@
         ],
         "properties": {
           "base_path": {
-            "type": "string"
+            "$ref": "#/definitions/absolute_path"
           },
           "section_id": {
             "type": "string"
@@ -41,7 +41,7 @@
       ],
       "properties": {
         "base_path": {
-          "type": "string"
+          "$ref": "#/definitions/absolute_path"
         }
       }
     },
@@ -102,7 +102,7 @@
                   "type": "string"
                 },
                 "base_path": {
-                  "type": "string"
+                  "$ref": "#/definitions/absolute_path"
                 }
               }
             }
