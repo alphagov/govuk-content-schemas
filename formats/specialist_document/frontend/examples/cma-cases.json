@@ -1,7 +1,7 @@
 {
 	"format": "specialist_document",
 	"locale": "en",
-	"base_path" : "cma-cases/richemont-yoox-net-a-porter-merger-inquiry",
+	"base_path" : "/cma-cases/richemont-yoox-net-a-porter-merger-inquiry",
 	"title" : "Richemont / Yoox / Net-A-Porter merger inquiry",
 	"description" : "The CMA is investigating the anticipated acquisition relating to Compagnie Financière Richemont S.A., Yoox S.p.A and The Net-A-Porter Group Limited. ",
 	"details" : {

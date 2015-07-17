@@ -34,7 +34,7 @@
 			}
 		]
 	},
-	"base_path" : "drug-safety-update/sglt2-inhibitors-canagliflozin-dapagliflozin-empagliflozin-risk-of-diabetic-ketoacidosis",
+	"base_path" : "/drug-safety-update/sglt2-inhibitors-canagliflozin-dapagliflozin-empagliflozin-risk-of-diabetic-ketoacidosis",
 	"description" : "Test for raised ketones in patients with acidosis symptoms, even if plasma glucose levels are near-normal.",
 	"title" : "SGLT2 inhibitors (canagliflozin, dapagliflozin, empagliflozin): risk of diabetic ketoacidosis",
 	"public_updated_at" : "2015-07-08T14:08:17+00:00"

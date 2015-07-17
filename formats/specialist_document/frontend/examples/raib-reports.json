@@ -1,7 +1,7 @@
 {
 	"format": "specialist_document",
 	"locale": "en",
-	"base_path" : "raib-reports/train-driver-receiving-a-severe-electric-shock-at-sutton-weaver",
+	"base_path" : "/raib-reports/train-driver-receiving-a-severe-electric-shock-at-sutton-weaver",
 	"title" : "Train driver receiving a severe electric shock at Sutton Weaver",
 	"description" : "At 19:04 hrs on Tuesday 23 September 2014, a train driver received a severe electric shock at Sutton Weaver, Cheshire. ",
 	"details" : {

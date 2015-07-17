@@ -1,7 +1,7 @@
 {
 	"format": "specialist_document",
 	"locale": "en",
-	"base_path" : "drug-device-alerts/transwarmer-infant-transport-mattress-novaplus-transwarmer-infant-heat-therapy-mattress-with-warmgel-infant-heel-warmer-risk-of-serious-burn",
+	"base_path" : "/drug-device-alerts/transwarmer-infant-transport-mattress-novaplus-transwarmer-infant-heat-therapy-mattress-with-warmgel-infant-heel-warmer-risk-of-serious-burn",
 	"title" : "TransWarmer infant transport mattress,  NovaPlus TransWarmer infant heat therapy mattress with WarmGel, infant heel warmer  - risk of serious burn",
 	"description" : "(CooperSurgical under different brand names) Risk of serious burn if device is used past its expiry date (MDA/2015/025)",
 	"details" : {
