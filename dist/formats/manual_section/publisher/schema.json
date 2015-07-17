@@ -103,7 +103,7 @@
           ],
           "properties": {
             "base_path": {
-              "type": "string"
+              "$ref": "#/definitions/absolute_path"
             }
           }
         },
