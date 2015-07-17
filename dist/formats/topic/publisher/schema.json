@@ -12,7 +12,7 @@
   ],
   "properties": {
     "base_path": {
-      "type": "string"
+      "$ref": "#/definitions/absolute_path"
     },
     "content_id": {
       "type": "string",
@@ -138,6 +138,10 @@
     }
   },
   "definitions": {
+    "absolute_path": {
+      "type": "string",
+      "pattern": "^/(([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})+(/([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)*)?$"
+    },
     "route": {
       "type": "object",
       "additionalProperties": false,

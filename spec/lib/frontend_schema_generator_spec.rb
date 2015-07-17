@@ -80,7 +80,7 @@ RSpec.describe GovukContentSchemas::FrontendSchemaGenerator do
   it "adds base_path as a required string property" do
     expect(generated.schema['properties']).to include(
       "base_path" => {
-        "type" => "string"
+        "$ref" => "#/definitions/absolute_path"
       }
     )
     expect(generated.schema["required"]).to include(
