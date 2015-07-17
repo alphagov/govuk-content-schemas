@@ -139,7 +139,7 @@
             "type": "string"
           },
           "base_path": {
-            "type": "string"
+            "$ref": "#/definitions/absolute_path"
           },
           "api_url": {
             "type": "string",
