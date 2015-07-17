@@ -29,50 +29,42 @@
 			{
 				"text" : "Overview",
 				"level" : 2,
-				"id" : "overview",
-				"headers" : [ ]
+				"id" : "overview"
 			},
 			{
 				"text" : "What the fund will achieve",
 				"level" : 2,
-				"id" : "what-the-fund-will-achieve",
-				"headers" : [ ]
+				"id" : "what-the-fund-will-achieve"
 			},
 			{
 				"text" : "How to apply",
 				"level" : 2,
-				"id" : "how-to-apply",
-				"headers" : [ ]
+				"id" : "how-to-apply"
 			},
 			{
 				"text" : "Countries",
 				"level" : 2,
-				"id" : "countries",
-				"headers" : [ ]
+				"id" : "countries"
 			},
 			{
 				"text" : "Background information on the fund",
 				"level" : 2,
-				"id" : "background-information-on-the-fund",
-				"headers" : [ ]
+				"id" : "background-information-on-the-fund"
 			},
 			{
 				"text" : "Contacts",
 				"level" : 2,
-				"id" : "contacts",
-				"headers" : [ ]
+				"id" : "contacts"
 			},
 			{
 				"text" : "Project documents",
 				"level" : 2,
-				"id" : "project-documents",
-				"headers" : [ ]
+				"id" : "project-documents"
 			},
 			{
 				"text" : "Other links",
 				"level" : 2,
-				"id" : "other-links",
-				"headers" : [ ]
+				"id" : "other-links"
 			}
 		],
 		"change_note" : "",

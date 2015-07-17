@@ -22,26 +22,22 @@
 			{
 				"text" : "Action",
 				"level" : 2,
-				"id" : "action",
-				"headers" : [ ]
+				"id" : "action"
 			},
 			{
 				"text" : "Device details",
 				"level" : 2,
-				"id" : "device-details",
-				"headers" : [ ]
+				"id" : "device-details"
 			},
 			{
 				"text" : "Manufacturer contacts",
 				"level" : 2,
-				"id" : "manufacturer-contacts",
-				"headers" : [ ]
+				"id" : "manufacturer-contacts"
 			},
 			{
 				"text" : "Distribution",
 				"level" : 2,
-				"id" : "distribution",
-				"headers" : [ ]
+				"id" : "distribution"
 			},
 			{
 				"text" : "Enquiries",
@@ -56,20 +52,17 @@
 							{
 								"text" : "Technical aspects",
 								"level" : 4,
-								"id" : "technical-aspects",
-								"headers" : [ ]
+								"id" : "technical-aspects"
 							},
 							{
 								"text" : "Clinical aspects",
 								"level" : 4,
-								"id" : "clinical-aspects",
-								"headers" : [ ]
+								"id" : "clinical-aspects"
 							},
 							{
 								"text" : "Reporting adverse incidents in England",
 								"level" : 4,
-								"id" : "reporting-adverse-incidents-in-england",
-								"headers" : [ ]
+								"id" : "reporting-adverse-incidents-in-england"
 							}
 						]
 					},
@@ -81,8 +74,7 @@
 							{
 								"text" : "Reporting adverse incidents in Northern Ireland",
 								"level" : 4,
-								"id" : "reporting-adverse-incidents-in-northern-ireland",
-								"headers" : [ ]
+								"id" : "reporting-adverse-incidents-in-northern-ireland"
 							}
 						]
 					},
@@ -94,24 +86,21 @@
 							{
 								"text" : "Reporting adverse incidents in Scotland",
 								"level" : 4,
-								"id" : "reporting-adverse-incidents-in-scotland",
-								"headers" : [ ]
+								"id" : "reporting-adverse-incidents-in-scotland"
 							}
 						]
 					},
 					{
 						"text" : "Wales",
 						"level" : 3,
-						"id" : "wales",
-						"headers" : [ ]
+						"id" : "wales"
 					}
 				]
 			},
 			{
 				"text" : "Download documents",
 				"level" : 2,
-				"id" : "download-documents",
-				"headers" : [ ]
+				"id" : "download-documents"
 			}
 		],
 		"change_note" : "First published.",

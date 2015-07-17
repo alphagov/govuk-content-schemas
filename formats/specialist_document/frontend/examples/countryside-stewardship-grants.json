@@ -25,8 +25,7 @@
 			{
 				"text" : "How much will be paid",
 				"level" : 2,
-				"id" : "how-much-will-be-paid",
-				"headers" : [ ]
+				"id" : "how-much-will-be-paid"
 			},
 			{
 				"text" : "Where the option is available",
@@ -36,22 +35,19 @@
 					{
 						"text" : "When this option can’t be used",
 						"level" : 3,
-						"id" : "when-this-option-cant-be-used",
-						"headers" : [ ]
+						"id" : "when-this-option-cant-be-used"
 					}
 				]
 			},
 			{
 				"text" : "How to apply",
 				"level" : 2,
-				"id" : "how-to-apply",
-				"headers" : [ ]
+				"id" : "how-to-apply"
 			},
 			{
 				"text" : "How this option will benefit the environment",
 				"level" : 2,
-				"id" : "how-this-option-will-benefit-the-environment",
-				"headers" : [ ]
+				"id" : "how-this-option-will-benefit-the-environment"
 			},
 			{
 				"text" : "Requirements",
@@ -61,28 +57,24 @@
 					{
 						"text" : "Higher Tier agreements",
 						"level" : 3,
-						"id" : "higher-tier-agreements",
-						"headers" : [ ]
+						"id" : "higher-tier-agreements"
 					},
 					{
 						"text" : "On the land",
 						"level" : 3,
-						"id" : "on-the-land",
-						"headers" : [ ]
+						"id" : "on-the-land"
 					},
 					{
 						"text" : "Keeping records",
 						"level" : 3,
-						"id" : "keeping-records",
-						"headers" : [ ]
+						"id" : "keeping-records"
 					}
 				]
 			},
 			{
 				"text" : "What must not be done",
 				"level" : 2,
-				"id" : "what-must-not-be-done",
-				"headers" : [ ]
+				"id" : "what-must-not-be-done"
 			},
 			{
 				"text" : "How to carry out this option",
@@ -92,46 +84,39 @@
 					{
 						"text" : "Pick the right location",
 						"level" : 3,
-						"id" : "pick-the-right-location",
-						"headers" : [ ]
+						"id" : "pick-the-right-location"
 					},
 					{
 						"text" : "Block and plot sizes",
 						"level" : 3,
-						"id" : "block-and-plot-sizes",
-						"headers" : [ ]
+						"id" : "block-and-plot-sizes"
 					},
 					{
 						"text" : "What to sow",
 						"level" : 3,
-						"id" : "what-to-sow",
-						"headers" : [ ]
+						"id" : "what-to-sow"
 					},
 					{
 						"text" : "When to sow",
 						"level" : 3,
-						"id" : "when-to-sow",
-						"headers" : [ ]
+						"id" : "when-to-sow"
 					},
 					{
 						"text" : "How to sow",
 						"level" : 3,
-						"id" : "how-to-sow",
-						"headers" : [ ]
+						"id" : "how-to-sow"
 					},
 					{
 						"text" : "Management",
 						"level" : 3,
-						"id" : "management",
-						"headers" : [ ]
+						"id" : "management"
 					}
 				]
 			},
 			{
 				"text" : "Further information",
 				"level" : 2,
-				"id" : "further-information",
-				"headers" : [ ]
+				"id" : "further-information"
 			}
 		],
 		"change_note" : "First published.",

@@ -18,8 +18,7 @@
 			{
 				"text" : "Statutory timetable",
 				"level" : 2,
-				"id" : "statutory-timetable",
-				"headers" : [ ]
+				"id" : "statutory-timetable"
 			},
 			{
 				"text" : "Phase 1",
@@ -29,20 +28,17 @@
 					{
 						"text" : "Invitation to comment: closes 24 July 2015",
 						"level" : 3,
-						"id" : "invitation-to-comment-closes-24-july-2015",
-						"headers" : [ ]
+						"id" : "invitation-to-comment-closes-24-july-2015"
 					},
 					{
 						"text" : "Launch of CMA merger inquiry",
 						"level" : 3,
-						"id" : "launch-of-cma-merger-inquiry",
-						"headers" : [ ]
+						"id" : "launch-of-cma-merger-inquiry"
 					},
 					{
 						"text" : "Contact",
 						"level" : 3,
-						"id" : "contact",
-						"headers" : [ ]
+						"id" : "contact"
 					}
 				]
 			}

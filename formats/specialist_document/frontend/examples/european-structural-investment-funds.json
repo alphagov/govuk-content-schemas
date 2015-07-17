@@ -21,38 +21,32 @@
 			{
 				"text" : "Important Notice for this Call",
 				"level" : 2,
-				"id" : "important-notice-for-this-call",
-				"headers" : [ ]
+				"id" : "important-notice-for-this-call"
 			},
 			{
 				"text" : "Details",
 				"level" : 2,
-				"id" : "details",
-				"headers" : [ ]
+				"id" : "details"
 			},
 			{
 				"text" : "Location",
 				"level" : 2,
-				"id" : "location",
-				"headers" : [ ]
+				"id" : "location"
 			},
 			{
 				"text" : "Value",
 				"level" : 2,
-				"id" : "value",
-				"headers" : [ ]
+				"id" : "value"
 			},
 			{
 				"text" : "Deadlines",
 				"level" : 2,
-				"id" : "deadlines",
-				"headers" : [ ]
+				"id" : "deadlines"
 			},
 			{
 				"text" : "Completion date",
 				"level" : 2,
-				"id" : "completion-date",
-				"headers" : [ ]
+				"id" : "completion-date"
 			},
 			{
 				"text" : "How to apply",
@@ -62,28 +56,24 @@
 					{
 						"text" : "Step one: register",
 						"level" : 3,
-						"id" : "step-one-register",
-						"headers" : [ ]
+						"id" : "step-one-register"
 					},
 					{
 						"text" : "Step two: make an outline application",
 						"level" : 3,
-						"id" : "step-two-make-an-outline-application",
-						"headers" : [ ]
+						"id" : "step-two-make-an-outline-application"
 					}
 				]
 			},
 			{
 				"text" : "What happens next",
 				"level" : 2,
-				"id" : "what-happens-next",
-				"headers" : [ ]
+				"id" : "what-happens-next"
 			},
 			{
 				"text" : "Contact details",
 				"level" : 2,
-				"id" : "contact-details",
-				"headers" : [ ]
+				"id" : "contact-details"
 			}
 		],
 		"change_note" : "Call closed for Tees Valley",

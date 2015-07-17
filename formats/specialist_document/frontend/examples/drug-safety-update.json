@@ -13,20 +13,17 @@
 			{
 				"text" : "Reports of diabetic acidosis",
 				"level" : 2,
-				"id" : "reports-of-diabetic-acidosis",
-				"headers" : [ ]
+				"id" : "reports-of-diabetic-acidosis"
 			},
 			{
 				"text" : "SGLT2 inhibitors – medicines in this class",
 				"level" : 2,
-				"id" : "sglt2-inhibitors--medicines-in-this-class",
-				"headers" : [ ]
+				"id" : "sglt2-inhibitors--medicines-in-this-class"
 			},
 			{
 				"text" : "Further information",
 				"level" : 2,
-				"id" : "further-information",
-				"headers" : [ ]
+				"id" : "further-information"
 			}
 		],
 		"change_note" : "",

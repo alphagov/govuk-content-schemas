@@ -21,14 +21,12 @@
 					{
 						"text" : "Summary",
 						"level" : 3,
-						"id" : "summary",
-						"headers" : [ ]
+						"id" : "summary"
 					},
 					{
 						"text" : "Recommendations",
 						"level" : 3,
-						"id" : "recommendations",
-						"headers" : [ ]
+						"id" : "recommendations"
 					}
 				]
 			}

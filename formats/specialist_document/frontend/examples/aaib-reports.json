@@ -24,14 +24,12 @@
 					{
 						"text" : "Download report:",
 						"level" : 3,
-						"id" : "download-report",
-						"headers" : [ ]
+						"id" : "download-report"
 					},
 					{
 						"text" : "Download glossary of abbreviations:",
 						"level" : 3,
-						"id" : "download-glossary-of-abbreviations",
-						"headers" : [ ]
+						"id" : "download-glossary-of-abbreviations"
 					}
 				]
 			}
