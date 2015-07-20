@@ -167,6 +167,7 @@ rm -f formats/case_study/publisher/schema.json
 ## Howtos
 
 * [How to add a new content format](docs/adding-a-new-format.md)
+* [How to convert finder schemas](docs/converting-finder-schemas.md) (needed when adding/changing specialist document formats)
 * [Adding contract tests to your app](docs/contract-testing-howto.md)
 * [Suggested workflows](docs/suggested-workflows.md)
 * [Why do contract testing?](docs/why-contract-testing.md)
