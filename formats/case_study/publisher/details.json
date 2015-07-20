@@ -37,12 +37,6 @@
       "type": "string",
       "format": "date-time"
     },
-    "change_note": {
-      "anyOf": [
-        { "type": "string" },
-        { "type": "null" }
-      ]
-    },
     "change_history": {
       "type": "array",
       "items": {
