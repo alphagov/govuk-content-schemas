@@ -3,6 +3,10 @@
   "type": "object",
   "additionalProperties": false,
   "properties": {
+    "analytics_identifier": {
+      "type": "string",
+      "description": "A short identifier we send to Google Analytics for multi-valued fields. This means we avoid the truncated values we would get if we sent the path or slug of eg organisations."
+    },
     "change_note": {
       "type": ["string", "null"]
     },
