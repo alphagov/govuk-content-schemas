@@ -55,6 +55,19 @@
         }
       }
     },
+    "reject": {
+      "description": "A fixed filter that rejects documents which match the conditions",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "policies": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
     "facets": {
       "type": "array",
       "items": {
