@@ -89,8 +89,7 @@
       "required": [
         "body",
         "metadata",
-        "change_history",
-        "change_note"
+        "change_history"
       ],
       "properties": {
         "body": {
@@ -101,9 +100,6 @@
         },
         "headers": {
           "$ref": "#/definitions/nested_headers"
-        },
-        "change_note": {
-          "type": "string"
         },
         "change_history": {
           "type": "array",
