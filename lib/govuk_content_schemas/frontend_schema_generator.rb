@@ -48,7 +48,7 @@ private
     excluding_internal.merge(
       'links' => frontend_links,
       'updated_at' => updated_at,
-      'base_path' => { 'type' => 'string' }
+      'base_path' => { '$ref' => '#/definitions/absolute_path' }
     )
   end
 
