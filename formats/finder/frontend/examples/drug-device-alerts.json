@@ -1,0 +1,188 @@
+{
+  "base_path": "/drug-device-alerts",
+  "title": "Alerts and recalls for drugs and medical devices",
+  "description": "",
+  "format": "finder",
+  "need_ids": [],
+  "locale": "en",
+  "updated_at": "2015-07-21T12:45:22.124Z",
+  "public_updated_at": "2015-04-30T10:41:26.000+00:00",
+  "details": {
+    "beta": false,
+    "document_noun": "alert",
+    "facets": [
+      {
+        "allowed_values": [
+          {
+            "label": "Drug alert",
+            "value": "drugs"
+          },
+          {
+            "label": "Medical device alert",
+            "value": "devices"
+          }
+        ],
+        "display_as_result_metadata": true,
+        "filterable": true,
+        "key": "alert_type",
+        "name": "Alert type",
+        "preposition": "for",
+        "type": "text"
+      },
+      {
+        "allowed_values": [
+          {
+            "label": "Anaesthetics",
+            "value": "anaesthetics"
+          },
+          {
+            "label": "Cardiology",
+            "value": "cardiology"
+          },
+          {
+            "label": "Care home staff",
+            "value": "care-home-staff"
+          },
+          {
+            "label": "Cosmetic surgery",
+            "value": "cosmetic-surgery"
+          },
+          {
+            "label": "Critical care",
+            "value": "critical-care"
+          },
+          {
+            "label": "Dentistry",
+            "value": "dentistry"
+          },
+          {
+            "label": "General practice",
+            "value": "general-practice"
+          },
+          {
+            "label": "General surgery",
+            "value": "general-surgery"
+          },
+          {
+            "label": "Haematology and oncology",
+            "value": "haematology-oncology"
+          },
+          {
+            "label": "Infection prevention",
+            "value": "infection-prevention"
+          },
+          {
+            "label": "Obstetrics and gynaecology",
+            "value": "obstetrics-gynaecology"
+          },
+          {
+            "label": "Ophthalmology",
+            "value": "ophthalmology"
+          },
+          {
+            "label": "Orthopaedics",
+            "value": "orthopaedics"
+          },
+          {
+            "label": "Paediatrics",
+            "value": "paediatrics"
+          },
+          {
+            "label": "Pathology",
+            "value": "pathology"
+          },
+          {
+            "label": "Pharmacy",
+            "value": "pharmacy"
+          },
+          {
+            "label": "Physiotherapy and occupational therapy",
+            "value": "physiotherapy-occupational-therapy"
+          },
+          {
+            "label": "Radiology",
+            "value": "radiology"
+          },
+          {
+            "label": "Renal medicine",
+            "value": "renal-medicine"
+          },
+          {
+            "label": "Theatre practitioners",
+            "value": "theatre-practitioners"
+          },
+          {
+            "label": "Urology",
+            "value": "urology"
+          },
+          {
+            "label": "Vascular and cardiac surgery",
+            "value": "vascular-cardiac-surgery"
+          }
+        ],
+        "display_as_result_metadata": true,
+        "filterable": true,
+        "key": "medical_specialism",
+        "name": "Medical specialism",
+        "preposition": "about",
+        "type": "text"
+      },
+      {
+        "display_as_result_metadata": true,
+        "filterable": true,
+        "key": "issued_date",
+        "name": "Issued",
+        "preposition": "issued",
+        "short_name": "Issued",
+        "type": "date"
+      }
+    ],
+    "filter": {
+      "document_type": "medical_safety_alert"
+    },
+    "format_name": "Medical safety alert",
+    "show_summaries": true,
+    "signup_link": "/government/organisations/medicines-and-healthcare-products-regulatory-agency/email-signup"
+  },
+  "links": {
+    "email_alert_signup": [
+      {
+        "title": "Drug alerts and medical device alerts",
+        "base_path": "/drug-device-alerts/email-signup",
+        "description": "You'll get an email each time an alert is updated or a new alert is published.",
+        "api_url": "https://www.gov.uk/api/content/drug-device-alerts/email-signup",
+        "web_url": "https://www.gov.uk/drug-device-alerts/email-signup",
+        "locale": "en"
+      }
+    ],
+    "organisations": [
+      {
+        "title": "Medicines and Healthcare products Regulatory Agency",
+        "base_path": "/government/organisations/medicines-and-healthcare-products-regulatory-agency",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/medicines-and-healthcare-products-regulatory-agency",
+        "web_url": "https://www.gov.uk/government/organisations/medicines-and-healthcare-products-regulatory-agency",
+        "locale": "en"
+      }
+    ],
+    "related": [
+      {
+        "title": "Drug Safety Update",
+        "base_path": "/drug-safety-update",
+        "description": "",
+        "api_url": "https://www.gov.uk/api/content/drug-safety-update",
+        "web_url": "https://www.gov.uk/drug-safety-update",
+        "locale": "en"
+      }
+    ],
+    "available_translations": [
+      {
+        "title": "Alerts and recalls for drugs and medical devices",
+        "base_path": "/drug-device-alerts",
+        "description": "",
+        "api_url": "https://www.gov.uk/api/content/drug-device-alerts",
+        "web_url": "https://www.gov.uk/drug-device-alerts",
+        "locale": "en"
+      }
+    ]
+  }
+}

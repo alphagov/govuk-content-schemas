@@ -1,0 +1,182 @@
+{
+  "base_path": "/drug-safety-update",
+  "title": "Drug Safety Update",
+  "description": "",
+  "format": "finder",
+  "need_ids": [],
+  "locale": "en",
+  "updated_at": "2015-07-21T12:45:19.565Z",
+  "public_updated_at": "2015-04-30T10:41:26.000+00:00",
+  "details": {
+    "beta": false,
+    "document_noun": "update",
+    "facets": [
+      {
+        "allowed_values": [
+          {
+            "label": "Anaesthesia and intensive care",
+            "value": "anaesthesia-intensive-care"
+          },
+          {
+            "label": "Cancer",
+            "value": "cancer"
+          },
+          {
+            "label": "Cardiovascular disease and lipidology",
+            "value": "cardiovascular-disease-lipidology"
+          },
+          {
+            "label": "Dentistry",
+            "value": "dentistry"
+          },
+          {
+            "label": "Dermatology",
+            "value": "dermatology"
+          },
+          {
+            "label": "Ear, nose and throat",
+            "value": "ear-nose-throat"
+          },
+          {
+            "label": "Endocrinology, diabetology and metabolism",
+            "value": "endocrinology-diabetology-metabolism"
+          },
+          {
+            "label": "GI, hepatology and pancreatic disorders",
+            "value": "gi-hepatology-pancreatic-disorders"
+          },
+          {
+            "label": "Haematology",
+            "value": "haematology"
+          },
+          {
+            "label": "Immunology and vaccination",
+            "value": "immunology-vaccination"
+          },
+          {
+            "label": "Immunosuppression and transplantation",
+            "value": "immunosuppression-transplantation"
+          },
+          {
+            "label": "Infectious disease",
+            "value": "infectious-disease"
+          },
+          {
+            "label": "Neurology",
+            "value": "neurology"
+          },
+          {
+            "label": "Nutrition and dietetics",
+            "value": "nutrition-dietetics"
+          },
+          {
+            "label": "Obstetrics, gynaecology and fertility",
+            "value": "obstetrics-gynaecology-fertility"
+          },
+          {
+            "label": "Ophthalmology",
+            "value": "ophthalmology"
+          },
+          {
+            "label": "Paediatrics and neonatology",
+            "value": "paediatrics-neonatology"
+          },
+          {
+            "label": "Pain management and palliation",
+            "value": "pain-management-palliation"
+          },
+          {
+            "label": "Psychiatry",
+            "value": "psychiatry"
+          },
+          {
+            "label": "Radiology and imaging",
+            "value": "radiology-imaging"
+          },
+          {
+            "label": "Respiratory disease and allergy",
+            "value": "respiratory-disease-allergy"
+          },
+          {
+            "label": "Rheumatology",
+            "value": "rheumatology"
+          },
+          {
+            "label": "Urology and nephrology",
+            "value": "urology-nephrology"
+          }
+        ],
+        "display_as_result_metadata": true,
+        "filterable": true,
+        "key": "therapeutic_area",
+        "name": "Therapeutic area",
+        "preposition": "about",
+        "type": "text"
+      },
+      {
+        "display_as_result_metadata": true,
+        "filterable": true,
+        "key": "first_published_at",
+        "name": "Published",
+        "preposition": "published",
+        "short_name": "Published",
+        "type": "date"
+      }
+    ],
+    "filter": {
+      "document_type": "drug_safety_update"
+    },
+    "format_name": "Drug Safety Update",
+    "show_summaries": true,
+    "signup_link": "/government/organisations/medicines-and-healthcare-products-regulatory-agency/email-signup"
+  },
+  "links": {
+    "email_alert_signup": [
+      {
+        "title": "Drug Safety Update",
+        "base_path": "/drug-safety-update/email-signup",
+        "description": "The drug safety update is a monthly newsletter for healthcare professionals, bringing you information and clinical advice on the safe use of medicines.",
+        "api_url": "https://www.gov.uk/api/content/drug-safety-update/email-signup",
+        "web_url": "https://www.gov.uk/drug-safety-update/email-signup",
+        "locale": "en"
+      }
+    ],
+    "organisations": [
+      {
+        "title": "Medicines and Healthcare products Regulatory Agency",
+        "base_path": "/government/organisations/medicines-and-healthcare-products-regulatory-agency",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/medicines-and-healthcare-products-regulatory-agency",
+        "web_url": "https://www.gov.uk/government/organisations/medicines-and-healthcare-products-regulatory-agency",
+        "locale": "en"
+      }
+    ],
+    "related": [
+      {
+        "title": "Alerts and recalls for drugs and medical devices",
+        "base_path": "/drug-device-alerts",
+        "description": "",
+        "api_url": "https://www.gov.uk/api/content/drug-device-alerts",
+        "web_url": "https://www.gov.uk/drug-device-alerts",
+        "locale": "en"
+      },
+      {
+        "title": "Drug Safety Update: monthly PDF newsletter",
+        "base_path": "/government/publications/drug-safety-update-monthly-newsletter",
+        "description": "Monthly PDF editions of the Drug Safety Update newsletter from MHRA and its independent advisor the Commission on Human Medicines. ",
+        "api_url": "https://www.gov.uk/api/content/government/publications/drug-safety-update-monthly-newsletter",
+        "web_url": "https://www.gov.uk/government/publications/drug-safety-update-monthly-newsletter",
+        "locale": "en"
+      }
+    ],
+    "available_translations": [
+      {
+        "title": "Drug Safety Update",
+        "base_path": "/drug-safety-update",
+        "description": "",
+        "api_url": "https://www.gov.uk/api/content/drug-safety-update",
+        "web_url": "https://www.gov.uk/drug-safety-update",
+        "locale": "en"
+      }
+    ]
+  }
+}
