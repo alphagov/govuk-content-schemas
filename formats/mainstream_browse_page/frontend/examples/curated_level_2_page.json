@@ -8,16 +8,16 @@
         {
           "name": "Fraud",
           "contents": [
-            "https://www.gov.uk/benefit-fraud",
-            "https://www.gov.uk/national-benefit-fraud-hotline",
-            "https://www.gov.uk/benefit-integrity-centres"
+            "/benefit-fraud",
+            "/national-benefit-fraud-hotline",
+            "/benefit-integrity-centres"
           ]
         },
         {
           "name": "Complaints",
           "contents": [
-            "https://www.gov.uk/complain-debt-management",
-            "https://www.gov.uk/complain-independent-case-examiner"
+            "/complain-debt-management",
+            "/complain-independent-case-examiner"
           ]
         }
       ]

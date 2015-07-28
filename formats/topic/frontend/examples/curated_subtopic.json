@@ -6,14 +6,14 @@
         {
           "name": "Oil rigs",
           "contents": [
-            "https://www.gov.uk/oil-rig-safety-requirements",
-            "https://www.gov.uk/oil-rig-staffing"
+            "/oil-rig-safety-requirements",
+            "/oil-rig-staffing"
           ]
         },
         {
           "name": "Piping",
           "contents": [
-            "https://www.gov.uk/undersea-piping-restrictions"
+            "/undersea-piping-restrictions"
           ]
         }
       ]
