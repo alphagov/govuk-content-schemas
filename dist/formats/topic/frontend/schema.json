@@ -67,7 +67,7 @@
               "contents": {
                 "type": "array",
                 "items": {
-                  "type": "string"
+                  "$ref": "#/definitions/absolute_path"
                 }
               }
             }
