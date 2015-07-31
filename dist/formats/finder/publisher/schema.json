@@ -92,6 +92,26 @@
         "facets"
       ],
       "properties": {
+        "alpha": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "alpha_message": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
         "beta": {
           "anyOf": [
             {
