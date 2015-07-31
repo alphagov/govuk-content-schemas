@@ -6,6 +6,8 @@ require 'json'
 
 def usage
   $stderr.puts "USAGE: #{File.basename(__FILE__)} <finder_schema_1.json ... finder_schema_n.json>"
+  $stderr.puts ""
+  $stderr.puts "for further documentation please see docs/converting-finder-schemas.md"
 end
 
 if ARGV.empty?

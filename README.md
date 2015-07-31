@@ -166,23 +166,10 @@ rm -f formats/case_study/publisher/schema.json
 
 ## Howtos
 
-### How to add a new content format
-
-See [adding-a-new-format.md](docs/adding-a-new-format.md)
-
-### Adding contract tests to your app
-
-See [contract-testing-howto.md](docs/contract-testing-howto.md)
-
-### Suggested workflows
-
-See [suggested-workflows.md](docs/suggested-workflows.md)
-
-### Why do contract testing?
-
-See [why-contract-testing.md](docs/why-contract-testing.md)
-
-### Running your frontend against the examples (content-store not needed)
-
-You can use the [`govuk-dummy_content_store` gem](https://github.com/alphagov/govuk-dummy_content_store).
+* [How to add a new content format](docs/adding-a-new-format.md)
+* [How to convert finder schemas](docs/converting-finder-schemas.md) (needed when adding/changing specialist document formats)
+* [Adding contract tests to your app](docs/contract-testing-howto.md)
+* [Suggested workflows](docs/suggested-workflows.md)
+* [Why do contract testing?](docs/why-contract-testing.md)
+* [Running your frontend against the examples (content-store not needed)](https://github.com/alphagov/govuk-dummy_content_store).
 
