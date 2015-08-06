@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "format",
+    "publishing_app",
+    "update_type",
+    "routes"
+  ],
+  "properties": {
+    "base_path": {
+      "$ref": "#/definitions/absolute_path"
+    },
+    "format": {
+      "enum": [ "special_case" ]
+    },
+    "publishing_app": {
+      "type": "string"
+    },
+    "update_type": {
+      "enum": [ "major", "minor", "republish" ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "routes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/route"
+      }
+    }
+  }
+}
