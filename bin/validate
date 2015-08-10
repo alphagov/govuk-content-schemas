@@ -10,7 +10,10 @@ def usage
 end
 
 def default_schema_path(example)
-  (File.dirname(File.dirname(example)) + "/schema.json").gsub(%r{formats/}, "dist/formats/")
+  candidates = []
+  candidates << (File.dirname(File.dirname(example)) + "/schema.json").gsub(%r{formats/}, "dist/formats/")
+  candidates << (File.dirname(File.dirname(example)) + "/schema.json").gsub(%r{formats/}, "formats/")
+  candidates.find { |path| File.exist?(path) }
 end
 
 if ARGV.count < 1
