@@ -15,10 +15,9 @@ if ARGV.empty?
   exit(1)
 end
 
-# Unfortunately there are a few edge-cases with document type naming, so we can't
-# just munge the filename of the finder schema files. The document type names are defined
-# in the 'metadata' files, but it would be a hassle to load and parse them, so just
-# hard code them here
+# When there is an edge-case with document type naming, add it to the MAPPING hash.
+# Otherwise implicit mapping will occur from the
+# finder schema file [some-name]s.json to a document type [some_name].
 class DocumentTypeMapper
   MAPPING = {
     "aaib-reports.json" => "aaib_report",
@@ -34,7 +33,16 @@ class DocumentTypeMapper
   }
 
   def call(filename)
-    MAPPING.fetch(File.basename(filename))
+    file_name = File.basename(filename)
+    begin
+      MAPPING.fetch(file_name)
+    rescue Exception => e
+      document_type = file_name.chomp('s.json').gsub('-','_')
+      STDERR.puts "Implicitly mapping #{file_name} to '#{document_type}' document type."
+      STDERR.puts "To override #{file_name} mapping, edit DocumentTypeMapper::MAPPING."
+      MAPPING[file_name] = document_type
+      document_type
+    end
   end
 end
 
