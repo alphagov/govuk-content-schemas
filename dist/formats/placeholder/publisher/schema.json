@@ -82,6 +82,9 @@
         }
       }
     },
+    "analytics_identifier": {
+      "type": "string"
+    },
     "details": {
       "type": "object",
       "additionalProperties": false,

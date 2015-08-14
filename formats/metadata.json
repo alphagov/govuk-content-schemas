@@ -73,6 +73,9 @@
           }
         }
       }
+    },
+    "analytics_identifier": {
+      "type": "string"
     }
   },
   "definitions": {
