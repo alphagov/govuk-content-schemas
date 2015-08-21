@@ -15,26 +15,24 @@ if ARGV.empty?
   exit(1)
 end
 
-# Unfortunately there are a few edge-cases with document type naming, so we can't
-# just munge the filename of the finder schema files. The document type names are defined
-# in the 'metadata' files, but it would be a hassle to load and parse them, so just
-# hard code them here
+# When there is an edge-case with document type naming, add it to the MAPPING hash.
+# Otherwise implicit mapping will occur from the
+# finder schema file [some-name]s.json to a document type [some_name].
 class DocumentTypeMapper
   MAPPING = {
-    "aaib-reports.json" => "aaib_report",
-    "cma-cases.json" => "cma_case",
-    "countryside-stewardship-grants.json" => "countryside_stewardship_grant",
-    "drug-safety-updates.json" => "drug_safety_update",
     "esi-funds.json" => "european_structural_investment_fund",
-    "international-development-funds.json" => "international_development_fund",
-    "maib-reports.json" => "maib_report",
-    "medical-safety-alerts.json" => "medical_safety_alert",
-    "raib-reports.json" => "raib_report",
     "vehicle-recalls-and-faults-alert.json" => "vehicle_recalls_and_faults_alert"
   }
 
-  def call(filename)
-    MAPPING.fetch(File.basename(filename))
+  def call(filepath)
+    file_name = File.basename(filepath)
+    MAPPING.fetch(file_name) do |file_name|
+      document_type = file_name.chomp('s.json').gsub('-','_')
+      STDERR.puts "Implicitly mapping #{file_name} to '#{document_type}' document type."
+      STDERR.puts "To override #{file_name} mapping, edit DocumentTypeMapper::MAPPING."
+      MAPPING[file_name] = document_type
+      document_type
+    end
   end
 end
 
