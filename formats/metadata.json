@@ -76,6 +76,10 @@
     },
     "analytics_identifier": {
       "type": "string"
+    },
+    "phase": {
+      "type": "string",
+      "enum": [ "alpha", "beta" ]
     }
   },
   "definitions": {
