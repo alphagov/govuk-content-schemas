@@ -40,10 +40,12 @@
       "type": "string"
     },
     "phase": {
+      "description": "The service design phase of this content item - https://www.gov.uk/service-manual/phases",
       "type": "string",
       "enum": [
         "alpha",
-        "beta"
+        "beta",
+        "live"
       ]
     },
     "details": {
