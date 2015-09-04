@@ -45,6 +45,7 @@
       "type": "object",
       "oneOf": [
         { "$ref": "#/definitions/aaib_report_metadata" },
+        { "$ref": "#/definitions/asylum_support_decision_metadata" },
         { "$ref": "#/definitions/cma_case_metadata" },
         { "$ref": "#/definitions/countryside_stewardship_grant_metadata" },
         { "$ref": "#/definitions/drug_safety_update_metadata" },
@@ -127,6 +128,62 @@
           "type": "string"
         },
         "registration": {
+          "type": "string"
+        }
+      }
+    },
+    "asylum_support_decision_metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "document_type": {
+          "type": "string",
+          "enum": [
+            "asylum_support_decision"
+          ]
+        },
+        "tribunal_decision_judges": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "tribunal_decision_judges_name": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "tribunal_decision_category": {
+          "type": "string"
+        },
+        "tribunal_decision_category_name": {
+          "type": "string"
+        },
+        "tribunal_decision_sub_category": {
+          "type": "string"
+        },
+        "tribunal_decision_sub_category_name": {
+          "type": "string"
+        },
+        "tribunal_decision_landmark": {
+          "type": "string",
+          "enum": [
+            "not-landmark",
+            "landmark"
+          ]
+        },
+        "tribunal_decision_landmark_name": {
+          "type": "string"
+        },
+        "tribunal_decision_reference_number": {
+          "type": "string"
+        },
+        "tribunal_decision_decision_date": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-([012][0-9]|3[0-1])$"
+        },
+        "hidden_indexable_content": {
           "type": "string"
         }
       }
