@@ -1,0 +1,12 @@
+{
+  "format": "gone",
+  "publishing_app": "collections-publisher",
+  "content_id": "4c5eed70-2fbb-4d39-94f2-de83bc2879a5",
+  "update_type": "major",
+  "routes": [
+    {
+      "path": "/some-gone-route",
+      "type": "exact"
+    }
+  ]
+}
