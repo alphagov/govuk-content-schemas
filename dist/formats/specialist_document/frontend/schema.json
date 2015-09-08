@@ -84,6 +84,9 @@
               "note"
             ]
           }
+        },
+        "bulk_published": {
+          "type": "boolean"
         }
       }
     },
