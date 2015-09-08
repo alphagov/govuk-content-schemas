@@ -7,7 +7,7 @@
     {
       "path": "/406beacon",
       "type": "exact",
-      "destination": "/maritime-safety-weather-and-navigation/register-406-mhz-beacons"
+      "destination": "/maritime-safety-weather-and-navigation/register-406-mhz-beacons?query=answer#fragment"
     }
   ]
 }
