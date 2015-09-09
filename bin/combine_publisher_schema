@@ -29,8 +29,15 @@ source_path = Pathname.new(ARGV[0])
 output_path = Pathname.new(ARGV[1])
 reader = JSON::Schema::Reader.new(accept_file: true, accept_uri: false)
 
-schemas = %w{../../metadata details links}.map do |name|
-  path = source_path + "#{name}.json"
+schema_files = {
+  metadata: '../../metadata',
+  details: 'details',
+  links: 'links',
+}
+
+schemas = schema_files.reduce(Hash.new) do |schema_files, (name, filename)|
+  path = source_path + "#{filename}.json"
+
   if path.exist?
     schema = reader.read(path)
     errors =  JSON::Validator.fully_validate_schema(schema.schema, parse_data: false)
@@ -38,18 +45,18 @@ schemas = %w{../../metadata details links}.map do |name|
       report_errors(path, errors)
       exit(1)
     end
-    schema
+
+    schema_files[name] = schema
   else
     $stderr.puts "Warning: #{path} not found"
-    nil
   end
+
+  schema_files
 end
 
 combiner = GovukContentSchemas::SchemaCombiner.new(
-  schemas[0],
-  format_name(source_path),
-  details_schema: schemas[1],
-  links_schema: schemas[2]
+  schemas,
+  format_name(source_path)
 )
 
 FileUtils.mkdir_p(output_path.dirname)

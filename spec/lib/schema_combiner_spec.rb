@@ -3,7 +3,7 @@ require 'govuk_content_schemas/schema_combiner'
 RSpec.describe GovukContentSchemas::SchemaCombiner do
   let(:metadata_schema) { build_schema('metadata.json', properties: build_string_properties('body')) }
   let(:format_name) { 'my_format' }
-  subject(:combined) { described_class.new(metadata_schema, format_name, details_schema: details_schema).combined }
+  subject(:combined) { described_class.new({ metadata: metadata_schema, details: details_schema }, format_name).combined }
 
   context "combining a simple metadata and details schema" do
     let(:details_schema) { build_schema('details.json', properties: build_string_properties('detail')) }
@@ -67,7 +67,7 @@ RSpec.describe GovukContentSchemas::SchemaCombiner do
         definitions: build_string_properties('guid_list')
       )
     }
-    subject(:combined) { described_class.new(metadata_schema, format_name, links_schema: links_schema).combined }
+    subject(:combined) { described_class.new({ metadata: metadata_schema, links: links_schema }, format_name).combined }
 
     it 'adds a links property to the combined schema' do
       expect(combined.schema['properties']['links']).to be_a(Hash)
