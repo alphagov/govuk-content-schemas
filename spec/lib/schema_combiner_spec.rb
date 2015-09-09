@@ -2,8 +2,9 @@ require 'govuk_content_schemas/schema_combiner'
 
 RSpec.describe GovukContentSchemas::SchemaCombiner do
   let(:metadata_schema) { build_schema('metadata.json', properties: build_string_properties('body')) }
+  let(:base_links) { build_schema('base_links.json', properties: build_ref_properties(["mainstream_browse_pages"], 'guid_list')) }
   let(:format_name) { 'my_format' }
-  subject(:combined) { described_class.new({ metadata: metadata_schema, details: details_schema }, format_name).combined }
+  subject(:combined) { described_class.new({ base_links: base_links, metadata: metadata_schema, details: details_schema }, format_name).combined }
 
   context "combining a simple metadata and details schema" do
     let(:details_schema) { build_schema('details.json', properties: build_string_properties('detail')) }
@@ -67,7 +68,7 @@ RSpec.describe GovukContentSchemas::SchemaCombiner do
         definitions: build_string_properties('guid_list')
       )
     }
-    subject(:combined) { described_class.new({ metadata: metadata_schema, links: links_schema }, format_name).combined }
+    subject(:combined) { described_class.new({ base_links: base_links, metadata: metadata_schema, links: links_schema }, format_name).combined }
 
     it 'adds a links property to the combined schema' do
       expect(combined.schema['properties']['links']).to be_a(Hash)
@@ -79,7 +80,7 @@ RSpec.describe GovukContentSchemas::SchemaCombiner do
 
     it 'embeds the remaining content of the links schema as the links property definition' do
       remaining_content_of_links_schema = links_schema.schema.reject { |k, v| %w{$schema definitions}.include?(k) }
-      expect(combined.schema['properties']['links']).to eq(remaining_content_of_links_schema)
+      expect(combined.schema['properties']['links']['properties'].keys).to eq(['lead_organisations', 'mainstream_browse_pages'])
     end
 
     it 'merges the definitions from the links schema into the combined schemas definitions' do

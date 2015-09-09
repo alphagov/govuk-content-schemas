@@ -31,8 +31,18 @@ private
   end
 
   def add_links(schema)
-    return unless schemas[:links]
-    schema['properties']['links'] = embeddable_schema(schemas[:links])
+    if schemas[:links]
+      schema['properties']['links'] = merge_schemas(schemas[:links], schemas.fetch(:base_links))
+    else
+      schema['properties']['links'] = embeddable_schema(schemas.fetch(:base_links))
+    end
+  end
+
+  def merge_schemas(base_schema, other)
+    merged_schema = embeddable_schema(base_schema)
+    other = embeddable_schema(other)
+    merged_schema['properties'] = merged_schema['properties'].merge(other['properties'])
+    merged_schema
   end
 
   def add_format_field(schema)
