@@ -86,6 +86,9 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "bulk_published": {
+          "type": "boolean"
+        },
         "document_type": {
           "type": "string",
           "enum": [
@@ -136,6 +139,9 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "bulk_published": {
+          "type": "boolean"
+        },
         "document_type": {
           "type": "string",
           "enum": [
@@ -192,6 +198,9 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "bulk_published": {
+          "type": "boolean"
+        },
         "document_type": {
           "type": "string",
           "enum": [
@@ -299,6 +308,9 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "bulk_published": {
+          "type": "boolean"
+        },
         "document_type": {
           "type": "string",
           "enum": [
@@ -370,6 +382,9 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "bulk_published": {
+          "type": "boolean"
+        },
         "document_type": {
           "type": "string",
           "enum": [
@@ -417,6 +432,9 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "bulk_published": {
+          "type": "boolean"
+        },
         "document_type": {
           "type": "string",
           "enum": [
@@ -489,6 +507,9 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "bulk_published": {
+          "type": "boolean"
+        },
         "document_type": {
           "type": "string",
           "enum": [
@@ -595,6 +616,9 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "bulk_published": {
+          "type": "boolean"
+        },
         "document_type": {
           "type": "string",
           "enum": [
@@ -634,6 +658,9 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "bulk_published": {
+          "type": "boolean"
+        },
         "document_type": {
           "type": "string",
           "enum": [
@@ -687,6 +714,9 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "bulk_published": {
+          "type": "boolean"
+        },
         "document_type": {
           "type": "string",
           "enum": [
@@ -724,6 +754,9 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "bulk_published": {
+          "type": "boolean"
+        },
         "document_type": {
           "type": "string",
           "enum": [

@@ -10,6 +10,7 @@
 			],
 			"report_type" : "correspondence-investigation",
 			"date_of_occurrence" : "2015-08-08",
+			"bulk_published" : false,
 			"aircraft_type" : "Rotorsport UK Calidus",
 			"location" : "Damyns Hall Aerodrome, Essex",
 			"registration" : "G-PCPC",
