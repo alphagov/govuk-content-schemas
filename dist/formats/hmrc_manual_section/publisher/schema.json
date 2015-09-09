@@ -205,6 +205,21 @@
           }
         }
       }
+    },
+    "links": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "mainstream_browse_pages": {
+          "$ref": "#/definitions/guid_list"
+        },
+        "topics": {
+          "$ref": "#/definitions/guid_list"
+        },
+        "policy_areas": {
+          "$ref": "#/definitions/guid_list"
+        }
+      }
     }
   },
   "definitions": {

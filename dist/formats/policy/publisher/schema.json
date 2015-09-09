@@ -240,6 +240,12 @@
         "available_translations": {
           "$ref": "#/definitions/guid_list"
         },
+        "mainstream_browse_pages": {
+          "$ref": "#/definitions/guid_list"
+        },
+        "topics": {
+          "$ref": "#/definitions/guid_list"
+        },
         "policy_areas": {
           "$ref": "#/definitions/guid_list"
         }
