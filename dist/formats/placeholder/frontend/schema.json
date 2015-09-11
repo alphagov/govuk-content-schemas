@@ -95,6 +95,18 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "mainstream_browse_pages": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "topics": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "policies": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "policy_areas": {
+          "$ref": "#/definitions/frontend_links"
+        },
         "available_translations": {
           "$ref": "#/definitions/frontend_links"
         }

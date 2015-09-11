@@ -22,12 +22,14 @@ RSpec.describe 'combine_publisher_schema' do
     {
       metadata: build_schema('metadata.json', properties: build_string_properties('body')),
       details: build_schema('details.json', properties: build_string_properties('detail')),
-      links: build_schema('links.json', properties: build_string_properties('links'))
+      links: build_schema('links.json', properties: build_string_properties('links')),
+      base_links: build_schema('base_links.json', properties: build_ref_properties(["mainstream_browse_pages"], 'guid_list'))
     }
   }
 
   before(:each) {
     File.write(tmpdir + "metadata.json", schemas[:metadata].to_s)
+    File.write(tmpdir + "base_links.json", schemas[:base_links].to_s)
     FileUtils.mkdir_p(publisher_schema_dir)
     File.write(publisher_schema_dir + "details.json", schemas[:details].to_s)
     File.write(publisher_schema_dir + "links.json", schemas[:links].to_s)
@@ -46,7 +48,7 @@ RSpec.describe 'combine_publisher_schema' do
 
   context "parent directory of output file does not exist" do
     let(:output_filename) { publisher_schema_dir + "some" + "subfolder" + "my-generated-schema.json" }
-    
+
     it "creates the required directories" do
       expect(output_filename).to exist
     end
@@ -65,10 +67,8 @@ RSpec.describe 'combine_publisher_schema' do
 
   specify "the schema.json file contains the combined schemas" do
     expected = GovukContentSchemas::SchemaCombiner.new(
-      schemas[:metadata],
-      format_name,
-      details_schema: schemas[:details],
-      links_schema: schemas[:links]
+      schemas,
+      format_name
     ).combined
 
     expect(read_generated_schema.schema).to eq(expected.schema)
