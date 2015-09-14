@@ -1,4 +1,5 @@
 {
+  "content_id": "bec582be-a95c-41f2-8a56-53dc19f45b76",
   "base_path": "/raib-reports",
   "title": "Rail Accident Investigation Branch reports",
   "description": "",
@@ -82,6 +83,7 @@
   "links": {
     "email_alert_signup": [
       {
+        "content_id": "81e62338-4644-4520-bbfc-6378855e9e43",
         "title": "Rail Accident Investigation Branch reports",
         "base_path": "/raib-reports/email-signup",
         "description": "You'll get an email each time a report is updated or a new report is published.",
@@ -92,6 +94,7 @@
     ],
     "organisations": [
       {
+        "content_id": "7c87edb4-1b32-4da2-bce8-f67fd9bb50db",
         "title": "Rail Accident Investigation Branch",
         "base_path": "/government/organisations/rail-accident-investigation-branch",
         "api_url": "https://www.gov.uk/api/content/government/organisations/rail-accident-investigation-branch",
@@ -102,6 +105,7 @@
     "related": [],
     "available_translations": [
       {
+        "content_id": "bec582be-a95c-41f2-8a56-53dc19f45b76",
         "title": "Rail Accident Investigation Branch reports",
         "base_path": "/raib-reports",
         "description": "",

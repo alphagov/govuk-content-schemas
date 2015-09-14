@@ -1,4 +1,5 @@
 {
+    "content_id": "cc717565-1290-4a22-b8d4-4b25facb3c8f",
     "base_path": "/government/case-studies/get-britain-building-carlisle-park",
     "description": "Nearly 400 homes are set to be built on the site of a former tar distillery thanks to Gleeson Homes and HCA investment.",
     "details": {
@@ -21,6 +22,7 @@
     "links": {
       "lead_organisations": [
         {
+          "content_id": "8b19c238-54e3-4e27-b0d7-60f8e2a677c9",
           "title": "Department for International Development",
           "base_path": "/government/organisations/department-for-international-development",
           "api_url": "https://www.gov.uk/api/organisations/department-for-international-development",
@@ -32,6 +34,7 @@
       "supporting_organisations": [],
       "world_locations": [
         {
+          "content_id": "456af51f-5fd3-4855-8a33-52cb32ff9985",
           "title": "Pakistan",
           "base_path": "/government/world/pakistan",
           "api_url": "https://www.gov.uk/api/content/government/world/pakistan",
@@ -41,6 +44,7 @@
       ],
       "worldwide_organisations": [
         {
+          "content_id": "f1ec569a-3471-4de0-947c-a4f3bcccb983",
           "title": "DFID Pakistan",
           "base_path": "/government/world/organisations/dfid-pakistan",
           "api_url": "https://www.gov.uk/api/content/government/world/organisations/dfid-pakistan",
@@ -51,6 +55,7 @@
       "worldwide_priorities": [],
       "available_translations": [
         {
+          "content_id": "cc717565-1290-4a22-b8d4-4b25facb3c8f",
           "title": "Pakistan: In school for the first time",
           "base_path": "/government/case-studies/pakistan-in-school-for-the-first-time",
           "api_url": "https://www.gov.uk/api/content/government/case-studies/pakistan-in-school-for-the-first-time",
@@ -58,6 +63,7 @@
           "locale": "en"
         },
         {
+          "content_id": "cc717565-1290-4a22-b8d4-4b25facb3c8f",
           "title": "پاکستان: اسکول میں پہلی بارداخلہ",
           "base_path": "/government/case-studies/pakistan-in-school-for-the-first-time.ur",
           "api_url": "https://www.gov.uk/api/content/government/case-studies/pakistan-in-school-for-the-first-time.ur",
@@ -67,6 +73,7 @@
       ],
       "document_collections": [
         {
+          "content_id": "def40c5f-52d0-4dca-80ea-b0da5caeebcd",
           "title": "Work Programme real life stories",
           "base_path": "/government/collections/work-programme-real-life-stories",
           "api_url": "https://www.gov.uk/api/content/government/collections/work-programme-real-life-stories",

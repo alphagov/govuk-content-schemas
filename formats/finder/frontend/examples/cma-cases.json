@@ -1,4 +1,5 @@
 {
+  "content_id": "3631309f-b9c0-4942-afe6-3ae3819fc6a1",
   "base_path": "/cma-cases",
   "title": "Competition and Markets Authority cases",
   "description": "",
@@ -334,6 +335,7 @@
   "links": {
     "email_alert_signup": [
       {
+        "content_id": "b269c38b-6e5a-4258-9735-66389749e341",
         "title": "Competition and Markets Authority cases",
         "base_path": "/cma-cases/email-signup",
         "description": "You'll get an email each time a case is updated or a new case is published.",
@@ -344,6 +346,7 @@
     ],
     "organisations": [
       {
+        "content_id": "271e858a-6b44-4c9c-9282-6f599d268895",
         "title": "Competition and Markets Authority",
         "base_path": "/government/organisations/competition-and-markets-authority",
         "api_url": "https://www.gov.uk/api/content/government/organisations/competition-and-markets-authority",
@@ -354,6 +357,7 @@
     "related": [],
     "available_translations": [
       {
+        "content_id": "3631309f-b9c0-4942-afe6-3ae3819fc6a1",
         "title": "Competition and Markets Authority cases",
         "base_path": "/cma-cases",
         "description": "",

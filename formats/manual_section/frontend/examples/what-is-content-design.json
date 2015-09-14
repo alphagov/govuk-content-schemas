@@ -1,4 +1,5 @@
 {
+  "content_id": "66d565ea-1544-4410-85ff-2e411cdf78e6",
   "base_path": "/guidance/content-design/what-is-content-design",
   "title": "What is content design?",
   "description": "Introduction to content design.",
@@ -23,6 +24,7 @@
   "links": {
     "available_translations": [
       {
+        "content_id": "66d565ea-1544-4410-85ff-2e411cdf78e6",
         "title": "What is content design?",
         "base_path": "/guidance/content-design/what-is-content-design",
         "api_url": "https://content-store.preview.alphagov.co.uk/content/guidance/content-design/what-is-content-design",

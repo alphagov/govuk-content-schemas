@@ -1,4 +1,5 @@
 {
+  "content_id": "9b2e22e1-a222-4cda-9799-de7ce56088b0",
   "base_path": "/guidance/content-design",
   "title": "Content design: planning, writing and managing content",
   "description": "Planning and managing digital content to meet the needs the public has of government.",
@@ -68,6 +69,7 @@
   "links": {
     "available_translations": [
       {
+        "content_id": "9b2e22e1-a222-4cda-9799-de7ce56088b0",
         "title": "Content design: planning, writing and managing content",
         "base_path": "/guidance/content-design",
         "api_url": "https://content-store.preview.alphagov.co.uk/content/guidance/content-design",

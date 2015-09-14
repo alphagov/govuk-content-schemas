@@ -1,4 +1,5 @@
 {
+  "content_id": "2189bae1-a94e-4f90-917b-ffe25ec9ac4d",
   "base_path": "/hmrc-internal-manuals/vat-government-and-public-bodies/vatgpb1000",
   "title": "Introduction: contents",
   "description": "",
@@ -67,6 +68,7 @@
   "links": {
     "available_translations": [
       {
+        "content_id": "2189bae1-a94e-4f90-917b-ffe25ec9ac4d",
         "title": "Introduction: contents",
         "base_path": "/hmrc-internal-manuals/vat-government-and-public-bodies/vatgpb1000",
         "api_url": "https://content-store.preview.alphagov.co.uk/content/hmrc-internal-manuals/vat-government-and-public-bodies/vatgpb1000",

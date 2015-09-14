@@ -1,4 +1,5 @@
 {
+    "content_id": "d086e95b-0e5e-46a3-97bc-d0672b111b7c",
     "base_path": "/browse/benefits/entitlement",
     "description": "When and how benefit payments are made, benefits adviser and benefit fraud",
     "details": {},
@@ -6,6 +7,7 @@
     "links": {
       "active_top_level_browse_page": [
         {
+          "content_id": "fde24a9c-f304-4b8b-af67-39faabb3c821",
           "title": "Benefits",
           "base_path": "/browse/benefits",
           "description": "Includes tax credits, eligibility and appeals",
@@ -16,6 +18,7 @@
       ],
       "top_level_browse_pages": [
         {
+          "content_id": "fde24a9c-f304-4b8b-af67-39faabb3c821",
           "title": "Benefits",
           "base_path": "/browse/benefits",
           "description": "Includes tax credits, eligibility and appeals",
@@ -24,6 +27,7 @@
           "locale": "en"
         },
         {
+          "content_id": "2695b93d-aa9f-418a-847d-eaf63a474d75",
           "title": "Births, deaths, marriages and care",
           "base_path": "/browse/births-deaths-marriages",
           "description": "Parenting, civil partnerships, divorce and lasting power of attorney",
@@ -32,6 +36,7 @@
           "locale": "en"
         },
         {
+          "content_id": "14a1e0fd-2ee3-4816-b700-e3640f9c4533",
           "title": "Business and self-employed",
           "base_path": "/browse/business",
           "description": "Information about starting up and running a business in the UK, including help if you're self employed or a sole trader.",
@@ -42,6 +47,7 @@
       ],
       "second_level_browse_pages": [
         {
+          "content_id": "d086e95b-0e5e-46a3-97bc-d0672b111b7c",
           "title": "Benefits entitlement",
           "base_path": "/browse/benefits/entitlement",
           "description": "When and how benefit payments are made, benefits adviser and benefit fraud",
@@ -50,6 +56,7 @@
           "locale": "en"
         },
         {
+          "content_id": "c48318ab-26cf-4049-9c0f-3bc693cf41b7",
           "title": "Benefits for families",
           "base_path": "/browse/benefits/families",
           "description": "Includes Child Trust Funds, childcare and the Sure Start Maternity Grant",
@@ -58,6 +65,7 @@
           "locale": "en"
         },
         {
+          "content_id": "b8ecf6a5-ea0e-43d1-aa25-fb68bbe62554",
           "title": "Carers and disability benefits",
           "base_path": "/browse/benefits/disability",
           "description": "Includes Disability Living Allowance, Carer's Allowance and Employment and Support Allowance",

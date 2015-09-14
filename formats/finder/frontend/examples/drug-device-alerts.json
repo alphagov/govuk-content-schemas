@@ -1,4 +1,5 @@
 {
+  "content_id": "429bd6e5-fbdf-4e3d-b6ed-1ef6471bf749",
   "base_path": "/drug-device-alerts",
   "title": "Alerts and recalls for drugs and medical devices",
   "description": "",
@@ -147,6 +148,7 @@
   "links": {
     "email_alert_signup": [
       {
+        "content_id": "ea3bee2c-dbc6-4b55-a1bc-866e5e110f99",
         "title": "Drug alerts and medical device alerts",
         "base_path": "/drug-device-alerts/email-signup",
         "description": "You'll get an email each time an alert is updated or a new alert is published.",
@@ -157,6 +159,7 @@
     ],
     "organisations": [
       {
+        "content_id": "399503ac-569f-40c3-8b0b-8aa5fb52da20",
         "title": "Medicines and Healthcare products Regulatory Agency",
         "base_path": "/government/organisations/medicines-and-healthcare-products-regulatory-agency",
         "api_url": "https://www.gov.uk/api/content/government/organisations/medicines-and-healthcare-products-regulatory-agency",
@@ -166,6 +169,7 @@
     ],
     "related": [
       {
+        "content_id": "97397fb6-d189-4878-9091-0e4610c3202f",
         "title": "Drug Safety Update",
         "base_path": "/drug-safety-update",
         "description": "",
@@ -176,6 +180,7 @@
     ],
     "available_translations": [
       {
+        "content_id": "429bd6e5-fbdf-4e3d-b6ed-1ef6471bf749",
         "title": "Alerts and recalls for drugs and medical devices",
         "base_path": "/drug-device-alerts",
         "description": "",

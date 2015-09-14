@@ -1,5 +1,6 @@
 {
   "base_path": "/government/case-studies/terence-age-33-stoke-on-trent",
+  "content_id": "3933c3df-9fdd-4a56-99cd-9a9351cbbf99",
   "title": "Terence, age 33, Stoke-on-Trent",
   "description": "'My experience with Shaw Trust was very positive and I received all the support I needed to get back into work.'",
   "format": "case_study",
@@ -36,6 +37,7 @@
   "links": {
     "lead_organisations": [
       {
+        "content_id": "dbeaa22b-fb0c-49b0-b44e-0ca6cb52b381",
         "title": "Department for Work and Pensions",
         "base_path": "/government/organisations/department-for-work-pensions",
         "api_url": "https://www.gov.uk/api/content/government/organisations/department-for-work-pensions",
@@ -45,6 +47,7 @@
     ],
     "related_policies": [
       {
+        "content_id": "155c22d4-c1f9-40fc-bbe4-4a19df82b164",
         "title": "Helping people to find and stay in work",
         "base_path": "/government/policies/helping-people-to-find-and-stay-in-work",
         "api_url": "https://www.gov.uk/api/content/government/policies/helping-people-to-find-and-stay-in-work",
@@ -58,6 +61,7 @@
     "worldwide_priorities": [],
     "available_translations": [
       {
+        "content_id": "3933c3df-9fdd-4a56-99cd-9a9351cbbf99",
         "title": "Terence, age 33, Stoke-on-Trent",
         "base_path": "/government/case-studies/terence-age-33-stoke-on-trent",
         "api_url": "https://www.gov.uk/api/content/government/case-studies/terence-age-33-stoke-on-trent",
@@ -67,6 +71,7 @@
     ],
     "document_collections": [
       {
+        "content_id": "19ed8498-37ed-4c8e-b0bf-accbb2cf5477",
         "title": "Work Programme real life stories",
         "base_path": "/government/collections/work-programme-real-life-stories",
         "api_url": "https://www.gov.uk/api/content/government/collections/work-programme-real-life-stories",
