@@ -1,4 +1,5 @@
 {
+  "content_id": "3f68ef63-252c-4982-8569-a01a911e7397",
   "base_path": "/government/policies/all",
   "title": "All policy content",
   "description": "",
@@ -25,6 +26,7 @@
     "related": [],
     "available_translations": [
       {
+        "content_id": "3f68ef63-252c-4982-8569-a01a911e7397",
         "title": "All policy content",
         "base_path": "/government/policies/all",
         "description": "",

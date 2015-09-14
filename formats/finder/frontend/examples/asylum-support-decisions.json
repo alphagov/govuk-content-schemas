@@ -1,4 +1,5 @@
 {
+  "content_id": "6a0da4c9-1969-4c2f-972c-88b5497c2b65",
   "base_path": "/asylum-support-decisions",
   "title": "First-tier Tribunal (Asylum Support) decisions",
   "description": "Find decisions by the First-tier Tribunal (Asylum Support)",
@@ -139,6 +140,7 @@
     "email_alert_signup": [],
     "available_translations": [
       {
+        "content_id": "6a0da4c9-1969-4c2f-972c-88b5497c2b65",
         "title": "First-tier Tribunal (Asylum Support) decisions",
         "base_path": "/asylum-support-decisions",
         "description": "Find decisions by the First-tier Tribunal (Asylum Support)",

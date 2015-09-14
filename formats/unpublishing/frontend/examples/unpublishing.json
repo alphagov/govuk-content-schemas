@@ -1,4 +1,5 @@
 {
+  "content_id": "19ed8498-37ed-4c8e-b0bf-accbb2cf5477",
   "base_path":"/government/case-studies/bubble-trouble",
   "title":"Bubble and trouble",
   "description":"A case study about bubble and trouble.",
@@ -17,6 +18,7 @@
   "links":{
     "available_translations":[
       {
+        "content_id": "19ed8498-37ed-4c8e-b0bf-accbb2cf5477",
         "title":"Bubble and trouble",
         "base_path":"/government/case-studies/bubble-trouble",
         "api_url": "https://www.gov.uk/api/content/government/case-studies/bubble-trouble",

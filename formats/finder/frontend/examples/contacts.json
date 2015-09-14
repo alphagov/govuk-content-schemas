@@ -1,4 +1,5 @@
 {
+  "content_id": "07ab2c1d-1a89-46a8-b96a-4a0f8065bec1",
   "base_path": "/government/organisations/hm-cheese-biscuits/contact",
   "format": "finder",
   "title": "HM Cheese & Biscuits Contacts",
@@ -40,6 +41,7 @@
   "links": {
     "organisations": [
       {
+        "content_id": "378d0b6a-36e5-4a74-8495-215187ab8316",
         "title": "HM Cheese & Biscuits",
         "base_path": "/government/organisations/hm-cheese-biscuits",
         "api_url": "https://www.gov.uk/api/content/government/organisations/government/organisations/hm-cheese-biscuits",

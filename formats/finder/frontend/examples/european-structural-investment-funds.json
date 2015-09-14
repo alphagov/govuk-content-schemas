@@ -1,4 +1,5 @@
 {
+  "content_id": "5057413b-82ea-4172-af10-18c307f98012",
   "base_path": "/european-structural-investment-funds",
   "title": "European Structural and Investment Funds (ESIF)",
   "description": "",
@@ -178,6 +179,7 @@
   "links": {
     "email_alert_signup": [
       {
+        "content_id": "af366ed4-2ff5-45e2-b694-cc13c5a4e887",
         "title": "European Structural and Investment Funds (ESIF)",
         "base_path": "/european-structural-investment-funds/email-signup",
         "description": "You'll get an email each time a fund is updated or a new fund is published.",
@@ -188,6 +190,7 @@
     ],
     "organisations": [
       {
+        "content_id": "b1e4e105-c157-43ae-899c-4bccca45b336",
         "title": "Department for Communities and Local Government",
         "base_path": "/government/organisations/department-for-communities-and-local-government",
         "api_url": "https://www.gov.uk/api/content/government/organisations/department-for-communities-and-local-government",
@@ -195,6 +198,7 @@
         "locale": "en"
       },
       {
+        "content_id": "b2f980f7-eca3-4bc8-aaa3-a40788a72e52",
         "title": "Department for Environment, Food & Rural Affairs",
         "base_path": "/government/organisations/department-for-environment-food-rural-affairs",
         "api_url": "https://www.gov.uk/api/content/government/organisations/department-for-environment-food-rural-affairs",
@@ -202,6 +206,7 @@
         "locale": "en"
       },
       {
+        "content_id": "3d7941fc-e5d6-4309-b5f9-eeee0e9f1109",
         "title": "Department for Business, Innovation & Skills",
         "base_path": "/government/organisations/department-for-business-innovation-skills",
         "api_url": "https://www.gov.uk/api/content/government/organisations/department-for-business-innovation-skills",
@@ -212,6 +217,7 @@
     "related": [],
     "available_translations": [
       {
+        "content_id": "5057413b-82ea-4172-af10-18c307f98012",
         "title": "European Structural and Investment Funds (ESIF)",
         "base_path": "/european-structural-investment-funds",
         "description": "",

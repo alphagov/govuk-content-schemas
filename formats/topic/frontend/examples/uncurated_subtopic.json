@@ -1,4 +1,5 @@
 {
+    "content_id": "ee990f3e-5aee-4a09-a247-70177ea23690",
     "base_path": "/topic/oil-and-gas/licensing",
     "description": "A page about oil and gas licensing",
     "details": {
@@ -7,6 +8,7 @@
     "links": {
       "parent": [
         {
+          "content_id": "a6510b11-75c8-4df3-be2d-17d0e2c081be",
           "base_path": "/topic/oil-and-gas",
           "title": "Oil and gas",
           "api_url": "https://www.gov.uk/api/content/topic/oil-and-gas",

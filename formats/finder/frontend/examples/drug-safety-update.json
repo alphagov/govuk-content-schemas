@@ -1,4 +1,5 @@
 {
+  "content_id": "34a376eb-5a60-4a05-8d37-450660b67410",
   "base_path": "/drug-safety-update",
   "title": "Drug Safety Update",
   "description": "",
@@ -133,6 +134,7 @@
   "links": {
     "email_alert_signup": [
       {
+        "content_id": "c7371680-8205-4f18-a533-fa987d4225cf",
         "title": "Drug Safety Update",
         "base_path": "/drug-safety-update/email-signup",
         "description": "The drug safety update is a monthly newsletter for healthcare professionals, bringing you information and clinical advice on the safe use of medicines.",
@@ -143,6 +145,7 @@
     ],
     "organisations": [
       {
+        "content_id": "e68b064d-dfb6-46e6-91db-48df629f0162",
         "title": "Medicines and Healthcare products Regulatory Agency",
         "base_path": "/government/organisations/medicines-and-healthcare-products-regulatory-agency",
         "api_url": "https://www.gov.uk/api/content/government/organisations/medicines-and-healthcare-products-regulatory-agency",
@@ -152,6 +155,7 @@
     ],
     "related": [
       {
+        "content_id": "79f4668f-8672-4769-9323-ee00ae0dadda",
         "title": "Alerts and recalls for drugs and medical devices",
         "base_path": "/drug-device-alerts",
         "description": "",
@@ -160,6 +164,7 @@
         "locale": "en"
       },
       {
+        "content_id": "20c598af-8d10-4a18-8c3a-9cc52e8b7bfd",
         "title": "Drug Safety Update: monthly PDF newsletter",
         "base_path": "/government/publications/drug-safety-update-monthly-newsletter",
         "description": "Monthly PDF editions of the Drug Safety Update newsletter from MHRA and its independent advisor the Commission on Human Medicines. ",
@@ -170,6 +175,7 @@
     ],
     "available_translations": [
       {
+        "content_id": "34a376eb-5a60-4a05-8d37-450660b67410",
         "title": "Drug Safety Update",
         "base_path": "/drug-safety-update",
         "description": "",

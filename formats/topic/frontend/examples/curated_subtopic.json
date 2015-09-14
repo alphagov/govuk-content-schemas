@@ -1,4 +1,5 @@
 {
+    "content_id": "e8238ae7-39a7-47c4-bc3a-501da0b55afe",
     "base_path": "/topic/oil-and-gas/offshore",
     "description": "A page about offshore oil and gas",
     "details": {
@@ -22,6 +23,7 @@
     "links": {
       "parent": [
         {
+          "content_id": "9d7a445f-7451-4ef8-815e-ae66676a240b",
           "base_path": "/topic/oil-and-gas",
           "title": "Oil and gas",
           "api_url": "https://www.gov.uk/api/content/topic/oil-and-gas",

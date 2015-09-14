@@ -1,4 +1,5 @@
 {
+    "content_id": "19ed8498-37ed-4c8e-b0bf-accbb2cf5477",
     "base_path": "/browse",
     "description": "Almost everything on GOV.UK.",
     "details": {},
@@ -6,6 +7,7 @@
     "links": {
       "top_level_browse_pages": [
         {
+          "content_id": "3c0557d1-518e-4a9b-8920-78524944a28c",
           "title": "Benefits",
           "base_path": "/browse/benefits",
           "description": "Includes tax credits, eligibility and appeals",
@@ -14,6 +16,7 @@
           "locale": "en"
         },
         {
+          "content_id": "94ecd143-c60f-4981-a914-242d0c3b0bd1",
           "title": "Births, deaths, marriages and care",
           "base_path": "/browse/births-deaths-marriages",
           "description": "Parenting, civil partnerships, divorce and lasting power of attorney",
@@ -22,6 +25,7 @@
           "locale": "en"
         },
         {
+          "content_id": "88c8dabd-ff05-4530-99ff-ecf3294a9949",
           "title": "Business and self-employed",
           "base_path": "/browse/business",
           "description": "Information about starting up and running a business in the UK, including help if you're self employed or a sole trader.",

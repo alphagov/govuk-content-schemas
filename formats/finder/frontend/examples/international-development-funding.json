@@ -1,4 +1,5 @@
 {
+  "content_id": "1e0784fb-0a81-442e-82a0-efa678d76b4d",
   "base_path": "/international-development-funding",
   "title": "International development funding",
   "description": "",
@@ -299,6 +300,7 @@
   "links": {
     "email_alert_signup": [
       {
+        "content_id": "420b6a4a-7399-4763-b82d-2e54f6583ef9",
         "title": "International development funding",
         "base_path": "/international-development-funding/email-signup",
         "description": "You'll get an email each time a fund is updated or a new fund is published.",
@@ -309,6 +311,7 @@
     ],
     "organisations": [
       {
+        "content_id": "ee825e42-e3a4-4168-919c-56c8fbc313c9",
         "title": "Department for International Development",
         "base_path": "/government/organisations/department-for-international-development",
         "api_url": "https://www.gov.uk/api/content/government/organisations/department-for-international-development",
@@ -319,6 +322,7 @@
     "related": [],
     "available_translations": [
       {
+        "content_id": "1e0784fb-0a81-442e-82a0-efa678d76b4d",
         "title": "International development funding",
         "base_path": "/international-development-funding",
         "description": "",

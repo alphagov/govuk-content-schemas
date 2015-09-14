@@ -1,4 +1,5 @@
 {
+    "content_id": "394f8be4-175b-4fb8-8470-35049451b1c7",
     "base_path": "/government/case-studies/doing-business-in-spain.es",
     "description": "Los negocios y las inversiones de las empresas espa\u00f1olas en el exterior tienen \u00e9xito y, al mismo tiempo, empresas extranjeras siguen identificando atractivas oportunidades de negocio que ofrece Espa\u00f1a.",
     "details": {
@@ -27,6 +28,7 @@
     "links": {
         "available_translations": [
             {
+                "content_id": "394f8be4-175b-4fb8-8470-35049451b1c7",
                 "api_url": "https://www.gov.uk/api/content/government/case-studies/doing-business-in-spain",
                 "base_path": "/government/case-studies/doing-business-in-spain",
                 "locale": "en",
@@ -34,6 +36,7 @@
                 "web_url": "https://www.gov.uk/government/case-studies/doing-business-in-spain"
             },
             {
+                "content_id": "394f8be4-175b-4fb8-8470-35049451b1c7",
                 "api_url": "https://www.gov.uk/api/content/government/case-studies/doing-business-in-spain.es",
                 "base_path": "/government/case-studies/doing-business-in-spain.es",
                 "locale": "es",
@@ -41,6 +44,7 @@
                 "web_url": "https://www.gov.uk/government/case-studies/doing-business-in-spain.es"
             },
             {
+                "content_id": "394f8be4-175b-4fb8-8470-35049451b1c7",
                 "api_url": "https://www.gov.uk/api/content/government/case-studies/doing-business-in-spain.ar",
                 "base_path": "/government/case-studies/doing-business-in-spain.ar",
                 "locale": "ar",
@@ -50,6 +54,7 @@
         ],
         "lead_organisations": [
             {
+                "content_id": "8449fbe1-bffe-46cf-a141-07df52c530b7",
                 "api_url": "https://www.gov.uk/api/content/government/organisations/uk-trade-investment",
                 "base_path": "/government/organisations/uk-trade-investment",
                 "locale": "en",
@@ -59,6 +64,7 @@
         ],
         "supporting_organisations": [
             {
+                "content_id": "4e5d0f10-65cb-4036-8a18-123240e3698a",
                 "api_url": "https://www.gov.uk/api/content/government/organisations/foreign-commonwealth-office",
                 "base_path": "/government/organisations/foreign-commonwealth-office",
                 "locale": "en",
@@ -68,6 +74,7 @@
         ],
         "world_locations": [
             {
+                "content_id": "1a47d8eb-36e8-4a9e-8a05-ca33184c2f86",
                 "api_url": "https://www.gov.uk/api/content/government/world/spain.es",
                 "base_path": "/government/world/spain.es",
                 "locale": "es",

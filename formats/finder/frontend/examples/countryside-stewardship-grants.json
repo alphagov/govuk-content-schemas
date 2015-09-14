@@ -1,4 +1,5 @@
 {
+  "content_id": "49e05ad1-8c76-49a1-b017-6b113a6bb7d5",
   "base_path": "/countryside-stewardship-grants",
   "title": "Countryside Stewardship grants",
   "description": "",
@@ -182,6 +183,7 @@
     "email_alert_signup": [],
     "organisations": [
       {
+        "content_id": "fc483d53-551a-4bc0-952b-6bc0d900b31b",
         "title": "Natural England",
         "base_path": "/government/organisations/natural-england",
         "api_url": "https://www.gov.uk/api/content/government/organisations/natural-england",
@@ -189,6 +191,7 @@
         "locale": "en"
       },
       {
+        "content_id": "cb135a46-9a2b-4cf4-8c60-7448ae7de751",
         "title": "Department for Environment, Food & Rural Affairs",
         "base_path": "/government/organisations/department-for-environment-food-rural-affairs",
         "api_url": "https://www.gov.uk/api/content/government/organisations/department-for-environment-food-rural-affairs",
@@ -196,6 +199,7 @@
         "locale": "en"
       },
       {
+        "content_id": "a20c4a89-8133-4cb9-a93f-049115865524",
         "title": "Forestry Commission",
         "base_path": "/government/organisations/forestry-commission",
         "api_url": "https://www.gov.uk/api/content/government/organisations/forestry-commission",
@@ -205,6 +209,7 @@
     ],
     "related": [
       {
+        "content_id": "e3bd0d0b-5c06-4678-91d6-a0d18f16ae2c",
         "title": "Countryside Stewardship manual",
         "base_path": "/guidance/countryside-stewardship-manual",
         "description": "This manual provides the information needed to apply for the new Countryside Stewardship scheme.",
@@ -213,6 +218,7 @@
         "locale": "en"
       },
       {
+        "content_id": "2d704772-e145-4d21-a165-d5d102732411",
         "title": "Countryside Stewardship manual and grants: print versions",
         "base_path": "/government/publications/countryside-stewardship-manual-print-version",
         "description": "Find out about the Countryside Stewardship options and capital items requirements, and how to apply.",
@@ -223,6 +229,7 @@
     ],
     "available_translations": [
       {
+        "content_id": "49e05ad1-8c76-49a1-b017-6b113a6bb7d5",
         "title": "Countryside Stewardship grants",
         "base_path": "/countryside-stewardship-grants",
         "description": "",

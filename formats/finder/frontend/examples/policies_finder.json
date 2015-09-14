@@ -1,4 +1,5 @@
 {
+  "content_id": "854c7a4a-e8bf-44df-a08a-edbb2a56a58e",
   "base_path": "/government/policies",
   "title": "Policies",
   "description": "",
@@ -31,6 +32,7 @@
     "related": [],
     "available_translations": [
       {
+        "content_id": "854c7a4a-e8bf-44df-a08a-edbb2a56a58e",
         "title": "Policies",
         "base_path": "/government/policies",
         "api_url": "http://content-store.dev.gov.uk/content/government/policies",
