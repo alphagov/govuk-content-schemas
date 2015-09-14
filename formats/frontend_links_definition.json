@@ -5,11 +5,15 @@
     "type": "object",
     "additionalProperties": false,
     "required": [
+      "content_id",
       "title",
       "base_path",
       "locale"
     ],
     "properties": {
+      "content_id": {
+        "$ref": "#/definitions/guid"
+      },
       "title": {
         "type": "string"
       },

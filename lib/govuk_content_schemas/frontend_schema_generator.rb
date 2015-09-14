@@ -9,7 +9,6 @@ class GovukContentSchemas::FrontendSchemaGenerator
 
   INTERNAL_PROPERTIES = %w{
     access_limited
-    content_id
     publishing_app
     redirects
     rendering_app
