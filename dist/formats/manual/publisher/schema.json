@@ -15,8 +15,7 @@
       "$ref": "#/definitions/absolute_path"
     },
     "content_id": {
-      "type": "string",
-      "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-[1-5][a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$"
+      "$ref": "#/definitions/guid"
     },
     "title": {
       "type": "string"
@@ -224,10 +223,14 @@
       "pattern": "^/(([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})+(/([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)*)?$",
       "description": "A path only. Query string and/or fragment are not allowed."
     },
+    "guid": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-[1-5][a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$"
+    },
     "guid_list": {
       "type": "array",
       "items": {
-        "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-[1-5][a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$"
+        "$ref": "#/definitions/guid"
       }
     },
     "route": {
