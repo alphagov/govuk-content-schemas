@@ -8,6 +8,7 @@
     "rendering_app",
     "update_type",
     "locale",
+    "routes",
     "public_updated_at"
   ],
   "properties": {
@@ -50,6 +51,7 @@
     },
     "routes": {
       "type": "array",
+      "minItems": 1,
       "items": {
         "$ref": "#/definitions/route"
       }
