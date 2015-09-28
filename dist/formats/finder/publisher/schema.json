@@ -101,7 +101,6 @@
       "additionalProperties": false,
       "required": [
         "document_noun",
-        "filter",
         "facets"
       ],
       "properties": {
