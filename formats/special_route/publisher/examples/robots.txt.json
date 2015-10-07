@@ -4,7 +4,7 @@
   "title": "Instructions for crawler robots",
   "description": "robots.txt provides rules for which parts of GOV.UK are permitted to be crawled by different bots.",
   "format": "special_route",
-  "public_updated_at": "2015-07-30T13:58:11+00:00",
+  "public_updated_at": "2015-07-30T13:58:11.000Z",
   "publishing_app": "static",
   "rendering_app": "static",
   "routes": [
