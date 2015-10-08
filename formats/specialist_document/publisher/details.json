@@ -54,6 +54,7 @@
         { "$ref": "#/definitions/maib_report_metadata" },
         { "$ref": "#/definitions/medical_safety_alert_metadata" },
         { "$ref": "#/definitions/raib_report_metadata" },
+        { "$ref": "#/definitions/tax_tribunal_decision_metadata" },
         { "$ref": "#/definitions/vehicle_recalls_and_faults_alert_metadata" }
       ]
     },
@@ -747,6 +748,39 @@
         "date_of_occurrence": {
           "type": "string",
           "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-([012][0-9]|3[0-1])$"
+        }
+      }
+    },
+    "tax_tribunal_decision_metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "document_type": {
+          "type": "string",
+          "enum": [
+            "tax_tribunal_decision"
+          ]
+        },
+        "tribunal_decision_category": {
+          "type": "string",
+          "enum": [
+            "banking",
+            "charity",
+            "financial-services",
+            "land-registration",
+            "pensions",
+            "tax"
+          ]
+        },
+        "tribunal_decision_category_name": {
+          "type": "string"
+        },
+        "tribunal_decision_decision_date": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-([012][0-9]|3[0-1])$"
+        },
+        "hidden_indexable_content": {
+          "type": "string"
         }
       }
     },
