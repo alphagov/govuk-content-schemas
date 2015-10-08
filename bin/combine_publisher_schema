@@ -48,8 +48,6 @@ schemas = schema_files.reduce(Hash.new) do |schema_files, (name, filename)|
     end
 
     schema_files[name] = schema
-  else
-    $stderr.puts "Warning: #{path} not found"
   end
 
   schema_files
