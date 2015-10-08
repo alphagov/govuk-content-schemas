@@ -171,5 +171,5 @@ rm -f formats/case_study/publisher/schema.json
 * [Adding contract tests to your app](docs/contract-testing-howto.md)
 * [Suggested workflows](docs/suggested-workflows.md)
 * [Why do contract testing?](docs/why-contract-testing.md)
-* [Running your frontend against the examples (content-store not needed)](https://github.com/alphagov/govuk-dummy_content_store).
+* [Running your frontend against the examples (content-store not needed)](docs/running-frontend-against-examples.md)
 

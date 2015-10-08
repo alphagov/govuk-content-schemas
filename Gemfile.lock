@@ -3,8 +3,16 @@ GEM
   specs:
     addressable (2.3.6)
     diff-lcs (1.2.5)
+    git-version-bump (0.15.1)
+    govuk-dummy_content_store (0.0.3)
+      rack
+      rack-contrib
     json-schema (2.5.0)
       addressable (~> 2.3)
+    rack (1.6.4)
+    rack-contrib (1.4.0)
+      git-version-bump (~> 0.15)
+      rack (~> 1.4)
     rake (10.4.2)
     rspec (3.1.0)
       rspec-core (~> 3.1.0)
@@ -23,6 +31,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  govuk-dummy_content_store (= 0.0.3)
   json-schema
   rake
   rspec
