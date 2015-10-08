@@ -1,0 +1,40 @@
+{
+  "content_id": "5ea90783-1a5b-4c0b-9c48-ce7ba478ee7b",
+  "base_path": "/tax-and-chancery-tribunal-decisions/why-pay-more-for-cars-limited-v-the-commissioners-for-her-majesty-s-revenue-and-customs",
+  "title": "Why Pay More For Cars Limited v The Commissioners For Her Majesty's Revenue And Customs",
+  "description": "VALUE ADDED TAX - Edwards v Bairstow - jurisdiction of Upper Tribunal - appeal against refusal of claim for repayment of overpaid VAT",
+  "format": "specialist_document",
+  "need_ids": [],
+  "locale": "en",
+  "updated_at": "2015-10-08T09:48:30.337Z",
+  "public_updated_at": "2015-10-07T10:56:47.000+00:00",
+  "details": {
+    "metadata": {
+      "bulk_published": false,
+      "document_type": "tax_tribunal_decision",
+      "tribunal_decision_category": "tax",
+      "tribunal_decision_decision_date": "2015-09-08",
+      "hidden_indexable_content": "whether FTT entitled not to find or infer that car dealer had accounted for VAT on bonuses paid by manufacturers to dealer on purchase of demonstrator and courtesy cars in claim periods - appeal dismissed"
+    },
+    "change_history": [
+      {
+        "public_timestamp": "2015-10-07T10:54:48+00:00",
+        "note": "Add attachment."
+      }
+    ],
+    "body": "<p>Download decision as a PDF document: <a rel=\"external\" href=\"http://assets-origin.dev.gov.uk/media/5614f9f7759b74281e000001/Why-Pay-More-for-Cars-v-HMRC.pdf\">Why Pay More For Cars Limited v The Commissioners For Her Majesty&rsquo;s Revenue And Customs</a></p>\n"
+  },
+  "links": {
+    "available_translations": [
+      {
+        "content_id": "5ea90783-1a5b-4c0b-9c48-ce7ba478ee7b",
+        "title": "Why Pay More For Cars Limited v The Commissioners For Her Majesty's Revenue And Customs",
+        "base_path": "/tax-and-chancery-tribunal-decisions/why-pay-more-for-cars-limited-v-the-commissioners-for-her-majesty-s-revenue-and-customs",
+        "description": "VALUE ADDED TAX - Edwards v Bairstow - jurisdiction of Upper Tribunal - appeal against refusal of claim for repayment of overpaid VAT",
+        "api_url": "http://content-store.dev.gov.uk/content/tax-and-chancery-tribunal-decisions/why-pay-more-for-cars-limited-v-the-commissioners-for-her-majesty-s-revenue-and-customs",
+        "web_url": "http://www.dev.gov.uk/tax-and-chancery-tribunal-decisions/why-pay-more-for-cars-limited-v-the-commissioners-for-her-majesty-s-revenue-and-customs",
+        "locale": "en"
+      }
+    ]
+  }
+}
