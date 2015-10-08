@@ -5,7 +5,7 @@ rescue LoadError
 end
 
 task :make do
-  sh "make"
+  sh "make clean && make"
 end
 
 desc "creates the folders and files for adding a new format"
