@@ -934,6 +934,9 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "bulk_published": {
+          "type": "boolean"
+        },
         "document_type": {
           "type": "string",
           "enum": [
