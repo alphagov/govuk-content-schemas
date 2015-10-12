@@ -221,7 +221,7 @@ RSpec.describe GovukContentSchemas::FinderSchemaConverter do
 
   context "converting multiple files" do
     let(:input_files) {
-      Dir[File.dirname(__FILE__) + "/../fixtures/finder_schemas/*.json"]
+      Dir[File.dirname(__FILE__) + "/../fixtures/finder_schemas/*.json"].sort
     }
 
     it "combines all of the facets from each file" do
