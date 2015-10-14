@@ -810,7 +810,9 @@
           "type": "string",
           "enum": [
             "drugs",
-            "devices"
+            "devices",
+            "field-safety",
+            "company-led-drug"
           ]
         },
         "medical_specialism": {
