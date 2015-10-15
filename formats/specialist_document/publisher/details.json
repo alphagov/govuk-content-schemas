@@ -673,8 +673,8 @@
           "enum": [
             "drugs",
             "devices",
-            "field-safety",
-            "company-led-drug"
+            "field-safety-notices",
+            "company-led-drugs"
           ]
         },
         "medical_specialism": {
