@@ -130,6 +130,24 @@
               "format": "uri"
             }
           }
+        },
+        "header_links": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string"
+              },
+              "href": {
+                "$ref": "#/definitions/anchor_href"
+              }
+            },
+            "required": [
+              "title",
+              "href"
+            ]
+          }
         }
       }
     },
@@ -169,7 +187,7 @@
     "guid_list": {
       "type": "array",
       "items": {
-        "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-[1-5][a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$"
+        "$ref": "#/definitions/guid"
       }
     },
     "route": {
@@ -190,6 +208,11 @@
           ]
         }
       }
+    },
+    "anchor_href": {
+      "type": "string",
+      "pattern": "^#.+$",
+      "description": "Anchor links for navigation within the same page. Format: '#anchor-link-id'"
     }
   }
 }

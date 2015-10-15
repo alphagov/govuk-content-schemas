@@ -33,6 +33,31 @@
           "format": "uri"
         }
       }
+    },
+    "header_links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "href": {
+            "$ref": "#/definitions/anchor_href"
+          }
+        },
+        "required": [
+          "title",
+          "href"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "anchor_href": {
+      "type": "string",
+      "pattern": "^#.+$",
+      "description": "Anchor links for navigation within the same page. Format: '#anchor-link-id'"
     }
   }
 }
