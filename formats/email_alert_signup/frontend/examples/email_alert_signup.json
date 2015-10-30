@@ -23,5 +23,14 @@
     },
     "govdelivery_title": "Employment policy"
   },
-  "links": {}
+  "links": {
+    "parent": [
+      {
+        "content_id": "f8c3682c-3a88-4f35-afba-3607384e39e6",
+        "title": "Benefits Reform",
+        "base_path": "/government/policies/benefits-reform",
+        "locale": "en"
+      }
+    ]
+  }
 }
