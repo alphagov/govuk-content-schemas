@@ -1,0 +1,115 @@
+{
+  "content_id": "08d48cdd-6b50-43ff-a53b-beab47f4aab0",
+  "base_path": "/foreign-travel-advice",
+  "title": "Foreign travel advice",
+  "description": "Latest travel advice by country including safety and security, entry requirements, travel warnings and health",
+  "details": {
+    "countries": [
+      {
+        "name": "Afghanistan",
+        "base_path": "/foreign-travel-advice/afghanistan",
+        "public_updated_at": "2015-10-26T13:00:37+00:00",
+        "change_description": "Latest update: Summary - on 26 October 2015 a serious earthquake struck causing casualties around the country and affecting communications networks; if someone you know is likely to have been involved and you're unable to contact them, contact the British Embassy in Kabul",
+        "synonyms": [ ]
+      },
+      {
+        "name": "Austria",
+        "base_path": "/foreign-travel-advice/austria",
+        "public_updated_at": "2015-09-14T12:47:51+01:00",
+        "change_description": "Latest update: Summary – there’s ongoing disruption to rail and road transport; you should monitor local media and check with your transport provider or the Austrian Railways (OBB) website",
+        "synonyms": [ ]
+      },
+      {
+        "name": "Finland",
+        "base_path": "/foreign-travel-advice/finland",
+        "public_updated_at": "2015-10-12T15:33:20+01:00",
+        "change_description": "Latest update: Summary – removal of advice on Northern Ireland football match",
+        "synonyms": [ "arctic" ]
+      },
+      {
+        "name": "India",
+        "base_path": "/foreign-travel-advice/india",
+        "public_updated_at": "2015-10-27T10:06:30+00:00",
+        "change_description": "Latest update: Summary – removal of advice on Assam floods and the curfew in Srinagar ",
+        "synonyms": [ ]
+      },
+      {
+        "name": "Malaysia",
+        "base_path": "/foreign-travel-advice/malaysia",
+        "public_updated_at": "2015-10-23T11:19:28+01:00",
+        "change_description": "Latest update: Summary - haze can cause disruption to local, regional air travel and to government and private schools",
+        "synonyms": [ "Borneo" ]
+      },
+      {
+        "name": "Spain",
+        "base_path": "/foreign-travel-advice/spain",
+        "public_updated_at": "2015-10-28T16:56:30+00:00",
+        "change_description": "Latest update: Summary – information and advice for Manchester City fans travelling to Seville ",
+        "synonyms": [ "Ibiza", "Majorca", "Mallorca", "Lanzarote", "Barcelona", "Benidorm", "Tenerife", "Canary Islands", "Canaries", "Gran Canaria" ]
+      }
+    ]
+  },
+  "format": "travel_advice_index",
+  "links": {
+    "mainstream_browse_pages": [
+      {
+        "content_id": "b9849cd6-61a7-42dc-8124-362d2c7d48b0",
+        "title": "Travel abroad",
+        "base_path": "/browse/abroad/travel-abroad",
+        "api_url": "https://www.gov.uk/api/content/browse/abroad/travel-abroad",
+        "web_url": "https://www.gov.uk/browse/abroad/travel-abroad",
+        "locale": "en"
+      },
+      {
+        "content_id": "bbb8985a-5451-4e9d-a601-8c55853a096c",
+        "title": "Living abroad",
+        "base_path": "/browse/abroad/living-abroad",
+        "api_url": "https://www.gov.uk/api/content/browse/abroad/living-abroad",
+        "web_url": "https://www.gov.uk/browse/abroad/living-abroad",
+        "locale": "en"
+      }
+    ],
+    "organisations": [
+      {
+        "content_id": "8b19c238-54e3-4e27-b0d7-60f8e2a677c9",
+        "title": "Foreign & Commonwealth Office",
+        "base_path": "/government/organisations/foreign-commonwealth-office",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/foreign-commonwealth-office",
+        "web_url": "https://www.gov.uk/government/government/organisations/foreign-commonwealth-office",
+        "locale": "en"
+      }
+    ],
+    "related": [
+      {
+        "content_id": "95f9c380-30bc-44c7-86b4-e9c9ef0fc272",
+        "title": "Hand luggage restrictions at UK airports",
+        "base_path": "/hand-luggage-restrictions",
+        "api_url": "https://www.gov.uk/api/content/hand-luggage-restrictions",
+        "web_url": "https://www.gov.uk/hand-luggage-restrictions",
+        "locale": "en"
+      },
+      {
+        "content_id": "e4d06cb9-9e2e-4e82-b802-0aad013ae16c",
+        "title": "Driving abroad",
+        "base_path": "/driving-abroad",
+        "api_url": "https://www.gov.uk/api/content/driving-abroad",
+        "web_url": "https://www.gov.uk/driving-abroad",
+        "locale": "en"
+      }
+    ],
+    "available_translations": [
+      {
+        "content_id": "08d48cdd-6b50-43ff-a53b-beab47f4aab0",
+        "title": "Foreign travel advice",
+        "base_path": "/foreign-travel-advice",
+        "api_url": "https://www.gov.uk/api/content/foreign-travel-advice",
+        "web_url": "https://www.gov.uk/foreign-travel-advice",
+        "locale": "en"
+      }
+    ]
+  },
+  "locale": "en",
+  "need_ids": ["101191"],
+  "public_updated_at": "2015-04-28T17:11:23+01:00",
+  "updated_at": "2015-08-28T17:16:43+01:00"
+}
