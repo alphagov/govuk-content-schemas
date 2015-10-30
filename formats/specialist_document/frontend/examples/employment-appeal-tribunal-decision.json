@@ -1,0 +1,47 @@
+{
+  "content_id": "3917cb0e-0928-45b7-bf63-20f9bc113a7a",
+  "base_path": "/employment-appeal-tribunal-decisions/ukeat-0144-15-la",
+  "title": "UKEAT/0144/15/LA",
+  "description": "Discrimination on grounds of race - Subjecting an employee to a detriment",
+  "format": "specialist_document",
+  "need_ids": [],
+  "locale": "en",
+  "updated_at": "2015-10-29T15:50:37.477Z",
+  "public_updated_at": "2015-10-29T15:50:37.000+00:00",
+  "details": {
+    "metadata": {
+      "bulk_published": false,
+      "document_type": "employment_appeal_tribunal_decision",
+      "hidden_indexable_content": "Appeal No. UKEAT/0144/15/LA\\n\tAt the Tribunal\n\tOn 7 October 2015\n\tJudgment handed down on 27 October 2015",
+      "tribunal_decision_categories": [
+        "race-discrimination"
+      ],
+      "tribunal_decision_decision_date": "2015-10-27",
+      "tribunal_decision_landmark": "not-landmark",
+      "tribunal_decision_sub_categories": [
+        "race-discrimination-detriment",
+        "race-discrimination-direct"
+      ]
+    },
+    "change_history": [
+      {
+        "public_timestamp": "2015-10-29T15:50:37+00:00",
+        "note": "First published."
+      }
+    ],
+    "body": "<p>Download PDF: <a rel=\"external\" href=\"http://assets-origin.dev.gov.uk/media/56324037759b742c00000001/15_0144rjfhMDLA.doc\">UKEAT/0144/15/LA</a></p>\n"
+  },
+  "links": {
+    "available_translations": [
+      {
+        "content_id": "3917cb0e-0928-45b7-bf63-20f9bc113a7a",
+        "title": "UKEAT/0144/15/LA",
+        "base_path": "/employment-appeal-tribunal-decisions/ukeat-0144-15-la",
+        "description": "Discrimination on grounds of race - Subjecting an employee to a detriment",
+        "api_url": "http://content-store.dev.gov.uk/content/employment-appeal-tribunal-decisions/ukeat-0144-15-la",
+        "web_url": "http://www.dev.gov.uk/employment-appeal-tribunal-decisions/ukeat-0144-15-la",
+        "locale": "en"
+      }
+    ]
+  }
+}
