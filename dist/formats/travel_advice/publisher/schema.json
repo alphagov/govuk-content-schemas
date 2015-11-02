@@ -105,6 +105,7 @@
         "reviewed_at",
         "change_description",
         "alert_status",
+        "email_signup_link",
         "parts"
       ],
       "properties": {
@@ -139,6 +140,10 @@
           "items": {
             "type": "string"
           }
+        },
+        "email_signup_link": {
+          "type": "string",
+          "format": "uri"
         },
         "image": {
           "$ref": "#/definitions/asset_link"

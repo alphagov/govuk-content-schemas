@@ -4,6 +4,7 @@
   "title": "Foreign travel advice",
   "description": "Latest travel advice by country including safety and security, entry requirements, travel warnings and health",
   "details": {
+    "email_signup_link": "https://public.govdelivery.com/accounts/UKGOVUK/subscriber/topics?qsp=TRAVEL",
     "countries": [
       {
         "name": "Afghanistan",
