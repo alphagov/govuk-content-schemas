@@ -100,9 +100,14 @@
       "type": "object",
       "additionalProperties": false,
       "required": [
+        "email_signup_link",
         "countries"
       ],
       "properties": {
+        "email_signup_link": {
+          "type": "string",
+          "format": "uri"
+        },
         "countries": {
           "type": "array",
           "items": {
