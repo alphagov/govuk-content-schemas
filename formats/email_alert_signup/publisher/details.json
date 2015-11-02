@@ -10,7 +10,7 @@
     "summary": {
       "type": "string"
     },
-     "tags": {
+    "tags": {
        "type": "object"
     },
     "breadcrumbs": {

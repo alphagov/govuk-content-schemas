@@ -2,5 +2,11 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "additionalProperties": false,
-  "properties": {}
+  "properties": {
+    "parent": {
+      "description": "The parent content item",
+      "$ref": "#/definitions/guid_list",
+      "maxItems": 1
+    }
+  }
 }
