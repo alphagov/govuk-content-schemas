@@ -11,6 +11,7 @@
     "reviewed_at": "2015-08-28T17:11:23+01:00",
     "change_description": "Latest update: Info about the cold.",
     "alert_status": [],
+    "email_signup_link": "https://public.govdelivery.com/accounts/UKGOVUK/subscriber/topics?qsp=TRAVEL",
     "parts": []
   },
   "format": "travel_advice",
