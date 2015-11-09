@@ -3,6 +3,7 @@
   "type": "object",
   "additionalProperties": false,
   "required": [
+    "content_id",
     "format",
     "publishing_app",
     "rendering_app",
