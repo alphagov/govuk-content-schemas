@@ -1,11 +1,23 @@
 {
-    "content_id": "3e0467ef-640b-4a9f-8f9c-2b174d9274e6",
-    "base_path": "/government/case-studies/a-random-title-for-a-random-document",
-    "details": {
-        "publish_time": "2014-12-17T09:30:00+00:00"
-    },
-    "format": "coming_soon",
-    "locale": "en",
-    "title": "Coming soon",
-    "public_updated_at": "2014-12-15T12:31:00+00:00"
+  "content_id": "3e0467ef-640b-4a9f-8f9c-2b174d9274e6",
+  "base_path": "/government/case-studies/a-random-title-for-a-random-document",
+  "details": {
+      "publish_time": "2014-12-17T09:30:00+00:00"
+  },
+  "format": "coming_soon",
+  "locale": "en",
+  "title": "Coming soon",
+  "public_updated_at": "2014-12-15T12:31:00+00:00",
+  "links": {
+    "can_be_replaced_by": [
+      {
+        "content_id": "45fee9e4-8f0b-4791-82c4-14389877886e",
+        "title": "A random title for a random document",
+        "base_path": "/government/case-studies/a-random-title-for-a-random-document",
+        "api_url": "https://www.gov.uk/api/content/government/case-studies/a-random-title-for-a-random-document",
+        "web_url": "https://www.gov.uk/government/case-studies/a-random-title-for-a-random-document",
+        "locale": "en"
+      }
+    ]
+  }
 }
