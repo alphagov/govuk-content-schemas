@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "can_be_replaced_by"
+  ],
+  "properties": {
+    "can_be_replaced_by": {
+      "$ref": "#/definitions/guid_list"
+    }
+  }
+}

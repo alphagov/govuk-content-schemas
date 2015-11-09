@@ -69,7 +69,13 @@
     "links": {
       "type": "object",
       "additionalProperties": false,
+      "required": [
+        "can_be_replaced_by"
+      ],
       "properties": {
+        "can_be_replaced_by": {
+          "$ref": "#/definitions/frontend_links"
+        },
         "mainstream_browse_pages": {
           "$ref": "#/definitions/frontend_links"
         },
