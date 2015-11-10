@@ -9,6 +9,7 @@
   "updated_at": "2015-04-14T13:11:45.809Z",
   "public_updated_at": "2015-04-14T10:56:00.000+00:00",
   "details": {
+    "email_alert_type": "policies",
     "breadcrumbs": [
       {
         "title": "Employment",

@@ -7,6 +7,10 @@
     "tags"
   ],
   "properties": {
+    "email_alert_type": {
+      "type": "string",
+      "enum": ["topics", "policies"]
+    },
     "summary": {
       "type": "string"
     },
