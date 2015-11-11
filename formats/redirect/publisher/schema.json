@@ -6,7 +6,8 @@
     "format",
     "publishing_app",
     "redirects",
-    "base_path"
+    "base_path",
+    "content_id"
   ],
   "properties": {
     "base_path": {
