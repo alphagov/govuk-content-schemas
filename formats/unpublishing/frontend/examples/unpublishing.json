@@ -25,6 +25,16 @@
         "web_url":"https://www.gov.uk/government/case-studies/bubble-trouble",
         "locale":"en"
       }
+    ],
+    "can_be_replaced_by": [
+      {
+        "content_id": "780026aa-a564-434f-9b37-8d83c0ba3d3b",
+        "title": "Bubble and trouble",
+        "base_path": "/government/case-studies/bubble-trouble",
+        "api_url": "https://www.gov.uk/api/content/government/case-studies/bubble-trouble",
+        "web_url": "https://www.gov.uk/government/case-studies/bubble-trouble",
+        "locale": "en"
+      }
     ]
   }
 }
