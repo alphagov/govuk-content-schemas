@@ -51,7 +51,7 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "replaced_content_item": {
+        "can_be_replaced_by": {
           "description": "The optional content_item that this redirect has replaced.",
           "$ref": "#/definitions/guid_list",
           "maxItems": 1
