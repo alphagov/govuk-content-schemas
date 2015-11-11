@@ -5,7 +5,6 @@
   "required": [
     "format",
     "publishing_app",
-    "update_type",
     "redirects",
     "base_path"
   ],
@@ -21,9 +20,6 @@
     },
     "publishing_app": {
       "type": "string"
-    },
-    "update_type": {
-      "enum": [ "major", "minor", "republish" ]
     },
     "redirects": {
       "type": "array",
