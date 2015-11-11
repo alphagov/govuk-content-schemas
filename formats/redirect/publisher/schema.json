@@ -5,7 +5,6 @@
   "required": [
     "format",
     "publishing_app",
-    "update_type",
     "redirects",
     "base_path"
   ],
