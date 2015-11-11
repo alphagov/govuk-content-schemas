@@ -11,6 +11,6 @@
     }
   ],
   "links": {
-    "replaced_content_item": ["2054b5e5-8d58-456b-8832-66c0d2b72565"]
+    "can_be_replaced_by": ["2054b5e5-8d58-456b-8832-66c0d2b72565"]
   }
 }
