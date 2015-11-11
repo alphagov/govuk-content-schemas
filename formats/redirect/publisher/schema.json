@@ -52,7 +52,7 @@
       "additionalProperties": false,
       "properties": {
         "can_be_replaced_by": {
-          "description": "The optional content_item that this redirect has replaced.",
+          "description": "Optional.  The content_item that this redirect has replaced.",
           "$ref": "#/definitions/guid_list",
           "maxItems": 1
         }
