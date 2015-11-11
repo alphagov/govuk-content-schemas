@@ -5,8 +5,8 @@
   "locale": "en",
   "details" : {
     "body" : "<h2 id=\"what\">What it is, why it works and how to do it</h2>\n<p>Agile methodologies will help you and your team to build world-class, user-centred services quickly and affordably.</p>\n",
-    "publisher" : {
-      "name" : "Agile community",
+    "content_owner" : {
+      "title" : "Agile community",
       "href" : "http://sm-11.herokuapp.com/communities/design-community/"
     },
     "related_discussion" : {
