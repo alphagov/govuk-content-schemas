@@ -58,16 +58,16 @@
       "additionalProperties": false,
       "required": [
         "body",
-        "publisher"
+        "content_owner"
       ],
       "properties": {
         "body": {
           "type": "string"
         },
-        "publisher": {
+        "content_owner": {
           "type": "object",
           "properties": {
-            "name": {
+            "title": {
               "type": "string"
             },
             "href": {
