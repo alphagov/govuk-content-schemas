@@ -21,5 +21,5 @@ We need to make sure that when a change is made to `govuk-content-schemas` that 
 1. Add `jenkins-schema.sh` to your publishing tool. This should run tests which check that your publishing tool produces output which conforms to the relevant schemas in govuk-content-schemas. See [contacts-admin for an example](https://github.com/alphagov/contacts-admin/blob/master/jenkins-schema.sh).
 2. Create a jenkins job to run the schema tests in your app. Call it something like `govuk_my_app_schema_tests`, copying it from one of the existing builds.
 3. Add the new job to be triggered when each of the govuk_content_schemas jobs complete: under "Build" -> "Trigger/call builds on other projects"
-  1. The [master build](https://ci-new.alphagov.co.uk/job/govuk_content_schemas/configure)
-  2. The [branch build](https://ci-new.alphagov.co.uk/job/govuk_content_schemas_branches/configure)
+  1. The [master build](https://ci.dev.publishing.service.gov.uk/job/govuk_content_schemas/configure)
+  2. The [branch build](https://ci.dev.publishing.service.gov.uk/job/govuk_content_schemas_branches/configure)
