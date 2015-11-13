@@ -7,9 +7,6 @@
     "related"
   ],
   "properties": {
-    "organisations": {
-      "$ref": "#/definitions/guid_list"
-    },
     "people": {
       "$ref": "#/definitions/guid_list"
     },
