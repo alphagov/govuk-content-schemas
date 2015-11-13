@@ -176,6 +176,9 @@
         "topics": {
           "$ref": "#/definitions/frontend_links"
         },
+        "organisations": {
+          "$ref": "#/definitions/frontend_links"
+        },
         "policies": {
           "$ref": "#/definitions/frontend_links"
         },

@@ -3,9 +3,6 @@
   "type": "object",
   "additionalProperties": false,
   "properties": {
-    "organisations": {
-      "$ref": "#/definitions/guid_list"
-    },
     "related": {
       "$ref": "#/definitions/guid_list"
     },

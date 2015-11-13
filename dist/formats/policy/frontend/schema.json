@@ -181,9 +181,6 @@
         "related"
       ],
       "properties": {
-        "organisations": {
-          "$ref": "#/definitions/frontend_links"
-        },
         "people": {
           "$ref": "#/definitions/frontend_links"
         },
@@ -203,6 +200,9 @@
           "$ref": "#/definitions/frontend_links"
         },
         "topics": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "organisations": {
           "$ref": "#/definitions/frontend_links"
         },
         "policies": {

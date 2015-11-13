@@ -215,9 +215,6 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "organisations": {
-          "$ref": "#/definitions/frontend_links"
-        },
         "related": {
           "$ref": "#/definitions/frontend_links"
         },
@@ -231,6 +228,9 @@
           "$ref": "#/definitions/frontend_links"
         },
         "topics": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "organisations": {
           "$ref": "#/definitions/frontend_links"
         },
         "policies": {
