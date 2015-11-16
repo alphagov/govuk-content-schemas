@@ -57,8 +57,7 @@
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "summary",
-        "tags"
+        "summary"
       ],
       "properties": {
         "email_alert_type": {
@@ -68,11 +67,24 @@
             "policies"
           ]
         },
-        "summary": {
-          "type": "string"
+        "signup_tags": {
+          "type": "object",
+          "description": "The content item for which this is handling email signups",
+          "additionalProperties": false,
+          "properties": {
+            "policies": {
+              "type": "array"
+            },
+            "topics": {
+              "type": "array"
+            }
+          }
         },
         "tags": {
           "type": "object"
+        },
+        "summary": {
+          "type": "string"
         },
         "breadcrumbs": {
           "type": "array",
