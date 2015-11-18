@@ -95,9 +95,6 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "parent": {
-          "$ref": "#/definitions/frontend_links"
-        },
         "children": {
           "$ref": "#/definitions/frontend_links"
         },
@@ -108,6 +105,9 @@
           "$ref": "#/definitions/frontend_links"
         },
         "organisations": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "parent": {
           "$ref": "#/definitions/frontend_links"
         },
         "policies": {

@@ -3,11 +3,6 @@
   "type": "object",
   "additionalProperties": false,
   "properties": {
-    "parent": {
-      "description": "The parent topic",
-      "$ref": "#/definitions/guid_list",
-      "maxItems": 1
-    },
     "children": {
       "description": "Any child topics",
       "$ref": "#/definitions/guid_list"
