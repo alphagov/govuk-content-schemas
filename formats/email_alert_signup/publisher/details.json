@@ -3,6 +3,7 @@
   "type": "object",
   "additionalProperties": false,
   "required": [
+    "signup_tags",
     "summary"
   ],
   "properties": {
@@ -18,9 +19,6 @@
         "policies": { "type": "array" },
         "topics": { "type": "array" }
       }
-    },
-    "tags": {
-      "type": "object"
     },
     "summary": {
       "type": "string"
