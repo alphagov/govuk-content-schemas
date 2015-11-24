@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties": false,
+   "required": [
+     "email_signup_link",
+     "countries"
+   ],
+  "properties": {
+    "email_signup_link": {
+      "type": "string",
+      "format": "uri"
+    },
+    "countries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "name",
+          "base_path",
+          "public_updated_at",
+          "change_description",
+          "synonyms"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "base_path": {
+            "$ref" : "#/definitions/absolute_path"
+          },
+          "public_updated_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "change_description": {
+            "type": "string"
+          },
+          "synonyms": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}
