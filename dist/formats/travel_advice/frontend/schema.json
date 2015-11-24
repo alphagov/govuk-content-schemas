@@ -4,6 +4,7 @@
   "additionalProperties": false,
   "required": [
     "base_path",
+    "content_id",
     "format",
     "locale",
     "public_updated_at"
@@ -136,9 +137,6 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "organisations": {
-          "$ref": "#/definitions/frontend_links"
-        },
         "related": {
           "$ref": "#/definitions/frontend_links"
         },
@@ -146,6 +144,12 @@
           "$ref": "#/definitions/frontend_links"
         },
         "topics": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "organisations": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "parent": {
           "$ref": "#/definitions/frontend_links"
         },
         "policies": {
