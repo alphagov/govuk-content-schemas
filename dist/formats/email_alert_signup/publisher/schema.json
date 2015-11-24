@@ -101,6 +101,7 @@
       "type": "object",
       "additionalProperties": false,
       "required": [
+        "signup_tags",
         "summary"
       ],
       "properties": {
@@ -123,9 +124,6 @@
               "type": "array"
             }
           }
-        },
-        "tags": {
-          "type": "object"
         },
         "summary": {
           "type": "string"
