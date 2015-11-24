@@ -279,6 +279,11 @@
         "organisations": {
           "$ref": "#/definitions/guid_list"
         },
+        "parent": {
+          "description": "The parent content item.",
+          "$ref": "#/definitions/guid_list",
+          "maxItems": 1
+        },
         "policies": {
           "description": "These are for collecting content related to a particular government policy.",
           "$ref": "#/definitions/guid_list"
