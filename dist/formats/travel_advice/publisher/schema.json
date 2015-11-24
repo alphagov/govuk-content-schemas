@@ -3,6 +3,7 @@
   "type": "object",
   "additionalProperties": false,
   "required": [
+    "content_id",
     "format",
     "publishing_app",
     "rendering_app",
@@ -180,9 +181,6 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "organisations": {
-          "$ref": "#/definitions/guid_list"
-        },
         "related": {
           "$ref": "#/definitions/guid_list"
         },
@@ -192,6 +190,9 @@
         },
         "topics": {
           "description": "Powers the /topic section of the site. These are known as specialist sectors in some legacy apps.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "organisations": {
           "$ref": "#/definitions/guid_list"
         },
         "policies": {
