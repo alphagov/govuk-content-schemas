@@ -242,6 +242,29 @@
         }
       }
     },
+    "redirect_route": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "type",
+        "destination"
+      ],
+      "properties": {
+        "path": {
+          "$ref": "#/definitions/absolute_path"
+        },
+        "type": {
+          "enum": [
+            "prefix",
+            "exact"
+          ]
+        },
+        "destination": {
+          "$ref": "#/definitions/absolute_fullpath"
+        }
+      }
+    },
     "frontend_links": {
       "type": "array",
       "items": {
