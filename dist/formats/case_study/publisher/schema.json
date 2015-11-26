@@ -67,7 +67,7 @@
     "redirects": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/route"
+        "$ref": "#/definitions/redirect_route"
       }
     },
     "access_limited": {
@@ -308,6 +308,29 @@
             "prefix",
             "exact"
           ]
+        }
+      }
+    },
+    "redirect_route": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "type",
+        "destination"
+      ],
+      "properties": {
+        "path": {
+          "$ref": "#/definitions/absolute_path"
+        },
+        "type": {
+          "enum": [
+            "prefix",
+            "exact"
+          ]
+        },
+        "destination": {
+          "$ref": "#/definitions/absolute_fullpath"
         }
       }
     }
