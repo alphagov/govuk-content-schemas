@@ -1,0 +1,93 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+     "summary",
+     "country",
+     "reviewed_at",
+     "change_description",
+     "alert_status",
+     "email_signup_link",
+     "parts"
+  ],
+  "properties": {
+    "summary": {
+      "type": "string"
+    },
+    "country": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["slug", "name"],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "slug": {
+          "type": "string"
+        }
+      }
+    },
+    "reviewed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "change_description": {
+      "type": "string"
+    },
+    "alert_status": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "email_signup_link": {
+      "type": "string",
+      "format": "uri"
+    },
+    "image": {
+      "$ref" : "#/definitions/asset_link"
+    },
+    "document": {
+      "$ref" : "#/definitions/asset_link"
+    },
+    "parts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["slug", "title", "body"],
+        "properties": {
+          "slug": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "body": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "asset_link": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "url",
+        "content_type"
+      ],
+      "properties": {
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "content_type": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
