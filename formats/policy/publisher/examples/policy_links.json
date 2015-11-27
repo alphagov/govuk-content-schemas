@@ -1,0 +1,27 @@
+{
+  "content_id": "f8c3682c-3a88-4f35-afba-3607384e39e6",
+  "base_path": "/government/policies/benefits-reform",
+  "format": "policy",
+  "locale": "en",
+  "public_updated_at": "2015-03-10T11:55:11.066+00:00",
+  "publishing_app": "whitehall",
+  "rendering_app": "government-frontend",
+  "update_type": "minor",
+  "links": {
+    "organisations":[
+      "a4759607-4fd8-4cf0-9d56-af9d14a71162"
+    ],
+    "people": [],
+    "working_groups": [],
+    "related":[],
+    "email_alert_signup":[
+      "69938c64-4bb3-4b4f-814b-e73cb71831ef"
+    ]
+  },
+  "routes": [
+    {
+      "path": "/government/policies/benefits-reform",
+      "type": "exact"
+    }
+  ]
+}

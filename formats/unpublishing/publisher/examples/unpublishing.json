@@ -1,0 +1,24 @@
+{
+  "content_id": "19ed8498-37ed-4c8e-b0bf-accbb2cf5477",
+  "base_path":"/government/case-studies/bubble-trouble",
+  "title":"Bubble and trouble",
+  "description":"A case study about bubble and trouble.",
+  "format":"unpublishing",
+  "need_ids":[],
+  "locale":"en",
+  "public_updated_at":"2014-04-30T23:01:51.000+00:00",
+  "publishing_app": "whitehall",
+  "rendering_app": "government-frontend",
+  "update_type": "major",
+  "details":{
+    "explanation": "This is now redundant",
+    "unpublished_at":"2014-05-01T14:59:17+01:00",
+    "alternative_url": null
+  },
+  "routes": [
+    {
+      "path": "/government/case-studies/bubble-trouble",
+      "type": "exact"
+    }
+  ]
+}

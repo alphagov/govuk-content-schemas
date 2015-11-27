@@ -1,0 +1,34 @@
+{
+  "content_id": "4a656f42-35ad-4034-8c7a-08870db7fffe",
+  "base_path": "/cma-cases/example-cma-case",
+  "title": "Example CMA Case",
+  "description": "This is the summary of an example CMA case",
+  "format": "specialist_document",
+  "public_updated_at": "2015-02-11T13:45:00.000+00:00",
+  "publishing_app": "specialist-publisher",
+  "rendering_app": "specialist-frontend",
+  "locale": "en",
+  "phase": "live",
+  "details": {
+    "body": "## Header\r\n\r\nThis is the long body of an example CMA case\r\n\r\nThis is the long body of an example CMA case\r\n\r\nThis is the long body of an example CMA case\r\n\r\nThis is the long body of an example CMA case\r\n\r\nThis is the long body of an example CMA case\r\n\r\nThis is the long body of an example CMA case\r\n\r\nThis is the long body of an example CMA case\r\n\r\nThis is the long body of an example CMA case\r\n\r\nThis is the long body of an example CMA case\r\n\r\nThis is the long body of an example CMA case",
+    "change_history": [],
+    "metadata": {
+      "bulk_published": false,
+      "opened_date": "2014-01-01",
+      "closed_date": "2015-02-02",
+      "case_type": "ca98-and-civil-cartels",
+      "case_state": "open",
+      "market_sector": ["energy"],
+      "outcome_type": "ca98-commitment",
+      "document_type": "cma_case"
+    }
+  },
+ "routes": [
+    {
+      "path": "/cma-cases/example-cma-case",
+      "type": "exact"
+    }
+  ],
+  "redirects": [],
+  "update_type": "major"
+}
