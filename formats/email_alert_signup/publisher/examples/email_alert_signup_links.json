@@ -1,0 +1,21 @@
+{
+  "content_id": "2ac1ff8b-2869-445d-9268-d90c96f3f67c",
+  "base_path": "/government/policies/employment/email-signup",
+  "format": "email_alert_signup",
+  "locale": "en",
+  "public_updated_at": "2015-04-14T10:56:00.000+00:00",
+  "publishing_app": "whitehall",
+  "rendering_app": "government-frontend",
+  "update_type": "major",
+  "links": {
+    "parent": [
+      "f8c3682c-3a88-4f35-afba-3607384e39e6"
+    ]
+  },
+  "routes": [
+    {
+      "path": "/government/policies/employment/email-signup",
+      "type": "exact"
+    }
+  ]
+}
