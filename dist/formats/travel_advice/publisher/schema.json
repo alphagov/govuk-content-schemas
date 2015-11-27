@@ -271,6 +271,13 @@
         },
         "destination": {
           "$ref": "#/definitions/absolute_fullpath"
+        },
+        "segments_mode": {
+          "enum": [
+            "preserve",
+            "ignore"
+          ],
+          "description": "For prefix redirects, preserve or ignore the rest of the fullpath. For exact, preserve or ignore the querystring."
         }
       }
     },
