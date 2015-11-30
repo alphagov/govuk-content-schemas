@@ -23,6 +23,23 @@ class GovukContentSchemas::SchemaCombiner
     combined_schema
   end
 
+  def combined_v2
+    combined_schema = clone_schema(schemas.fetch(:metadata))
+
+    add_details(combined_schema.schema)
+    add_format_field(combined_schema.schema)
+    add_combined_definitions(combined_schema.schema)
+
+    combined_schema
+  end
+
+  def combined_v2_links
+    combined_links = clone_schema(schemas.fetch(:links))
+
+    add_combined_definitions(combined_links.schema)
+    combined_links
+  end
+
 private
 
   def add_details(schema)

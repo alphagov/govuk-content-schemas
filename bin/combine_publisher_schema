@@ -6,7 +6,7 @@ require 'json-schema'
 require 'json'
 
 def usage
-  $stderr.puts "USAGE: #{File.basename(__FILE__)} <path/to/publisher/schemas/> <path/to/combined-output-schema.json>"
+  $stderr.puts "USAGE: #{File.basename(__FILE__)} <path/to/publisher/schemas/> <path/to/combined-output-schema.json> <path/to/combined-output-v2-schema.json>"
 end
 
 def report_errors(path, errors)
@@ -61,4 +61,19 @@ combiner = GovukContentSchemas::SchemaCombiner.new(
 FileUtils.mkdir_p(output_path.dirname)
 File.open(output_path, 'w') do |file|
   file.write JSON.pretty_generate(combiner.combined.schema)
+end
+
+v2_output_path = output_path.sub("publisher", "publisher_v2")
+FileUtils.mkdir_p(v2_output_path.dirname)
+File.open(v2_output_path, 'w') do |file|
+  file.write JSON.pretty_generate(combiner.combined_v2.schema)
+end
+
+links_file_name = "links.json"
+source_links_path = source_path + links_file_name
+v2_links_output_path = v2_output_path.dirname + links_file_name
+if File.exists?(source_links_path)
+  File.open(v2_links_output_path, 'w') do |file|
+    file.write JSON.pretty_generate(combiner.combined_v2_links.schema)
+  end
 end
