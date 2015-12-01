@@ -6,7 +6,7 @@ require 'json-schema'
 require 'json'
 
 def usage
-  $stderr.puts "USAGE: #{File.basename(__FILE__)} <path/to/publisher/schemas/> <path/to/combined-output-schema.json> <path/to/combined-output-v2-schema.json>"
+  $stderr.puts "USAGE: #{File.basename(__FILE__)} <path/to/publisher/schemas/> <path/to/combined-output-schema.json>"
 end
 
 def report_errors(path, errors)
@@ -18,6 +18,18 @@ end
 
 def format_name(source_path)
   source_path.dirname.basename.to_s
+end
+
+# Work out which type of schema to combine here.
+# There are 3 different types
+def schema_for_path(combiner, path)
+  if path.fnmatch("**/publisher_v2/links.json")
+    combiner.combined_v2_links.schema
+  elsif path.dirname.fnmatch("**/publisher_v2")
+    combiner.combined_v2.schema
+  else
+    combiner.combined.schema
+  end
 end
 
 if ARGV.count != 2
@@ -36,7 +48,12 @@ schema_files = {
   links: 'links',
 }
 
+# sources for publisher_v2 schemas live in formats/%/publisher/
+# so adjust source_path accordingly
+source_path = source_path.sub("publisher_v2", "publisher")
+
 schemas = schema_files.reduce(Hash.new) do |schema_files, (name, filename)|
+
   path = source_path + "#{filename}.json"
 
   if path.exist?
@@ -59,21 +76,9 @@ combiner = GovukContentSchemas::SchemaCombiner.new(
 )
 
 FileUtils.mkdir_p(output_path.dirname)
+
+schema = schema_for_path(combiner, output_path)
+
 File.open(output_path, 'w') do |file|
-  file.write JSON.pretty_generate(combiner.combined.schema)
-end
-
-v2_output_path = output_path.sub("publisher", "publisher_v2")
-FileUtils.mkdir_p(v2_output_path.dirname)
-File.open(v2_output_path, 'w') do |file|
-  file.write JSON.pretty_generate(combiner.combined_v2.schema)
-end
-
-links_file_name = "links.json"
-source_links_path = source_path + links_file_name
-v2_links_output_path = v2_output_path.dirname + links_file_name
-if File.exists?(source_links_path)
-  File.open(v2_links_output_path, 'w') do |file|
-    file.write JSON.pretty_generate(combiner.combined_v2_links.schema)
-  end
+  file.write JSON.pretty_generate(schema)
 end

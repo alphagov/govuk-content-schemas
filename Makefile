@@ -15,7 +15,7 @@ combined_publisher_schemas := $(details_schemas:formats/%/details.json=dist/form
 combined_publisher_v2_schemas := $(details_schemas:formats/%/publisher/details.json=dist/formats/%/publisher_v2/schema.json) $(links_schemas:formats/%/publisher/links.json=dist/formats/%/publisher_v2/links.json)
 hand_made_publisher_schemas := $(wildcard formats/*/publisher/schema.json)
 dist_hand_made_publisher_schemas := $(hand_made_publisher_schemas:%=dist/%)
-dist_publisher_schemas := $(combined_publisher_schemas) $(dist_hand_made_publisher_schemas)
+dist_publisher_schemas := $(combined_publisher_schemas) $(dist_hand_made_publisher_schemas) $(combined_publisher_v2_schemas)
 
 # Derive the frontend schemas from the publisher schemas by substitution
 frontend_schemas := $(combined_publisher_schemas:publisher/schema.json=frontend/schema.json)
@@ -45,7 +45,6 @@ clean:
 	rm -f $(publisher_v2_links_validation_records)
 	rm -f $(frontend_schemas)
 	rm -f $(dist_publisher_schemas)
-	rm -f $(combined_publisher_v2_schemas)
 
 validate_unique_base_path: $(frontend_schemas)
 	$(ensure_example_base_paths_unique_bin) $(frontend_examples)
@@ -56,6 +55,12 @@ $(dist_hand_made_publisher_schemas): $(hand_made_publisher_schemas)
 
 dist/%/publisher/schema.json: formats/metadata.json %/publisher/*.json
 	$(combiner_bin) ${@:dist/%/schema.json=%} ${@}
+
+dist/%/publisher_v2/schema.json: formats/metadata.json %/publisher/details.json
+	$(combiner_bin) ${@:dist/%/schema.json=%} ${@}
+
+dist/%/publisher_v2/links.json: %/publisher/links.json
+	$(combiner_bin) ${@:dist/%/links.json=%} ${@}
 
 # Recipe for building the frontend schema from the publisher schema and frontend links definition
 dist/%/frontend/schema.json: dist/%/publisher/schema.json formats/frontend_links_definition.json
