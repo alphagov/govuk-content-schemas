@@ -35,6 +35,8 @@ class GovukContentSchemas::SchemaCombiner
 
   def combined_v2_links
     combined_links = clone_schema(schemas.fetch(:links))
+    embeddable_base_links = embeddable_schema(schemas.fetch(:base_links))
+    combined_links.schema['properties'].merge!(embeddable_base_links['properties'])
 
     add_combined_definitions(combined_links.schema)
     combined_links
