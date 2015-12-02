@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties": false,
+   "required": [
+     "title",
+     "sub_title",
+     "content",
+     "published_date"
+   ],
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "sub_title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    },
+    "published_date": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}
