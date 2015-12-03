@@ -4,7 +4,7 @@
   "additionalProperties": false,
    "required": [
      "title",
-     "sub_title",
+     "summary",
      "content",
      "published_date"
    ],
@@ -12,7 +12,7 @@
     "title": {
       "type": "string"
     },
-    "sub_title": {
+    "summary": {
       "type": "string"
     },
     "content": {
