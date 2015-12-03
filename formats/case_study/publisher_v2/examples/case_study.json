@@ -1,5 +1,4 @@
 {
-  "content_id": "5d05fce5-7631-11e4-a3cb-005056011aef",
   "locale": "en",
   "base_path": "/government/case-studies/get-britain-building-carlisle-park",
   "title": "Get Britain Building: Carlisle Park",
@@ -32,6 +31,5 @@
   "publishing_app": "whitehall",
   "rendering_app": "government-frontend",
   "need_ids": [],
-  "update_type": "major",
   "phase": "live"
 }

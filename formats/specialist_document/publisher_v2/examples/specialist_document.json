@@ -1,5 +1,4 @@
 {
-  "content_id": "4a656f42-35ad-4034-8c7a-08870db7fffe",
   "base_path": "/cma-cases/example-cma-case",
   "title": "Example CMA Case",
   "description": "This is the summary of an example CMA case",
@@ -29,6 +28,5 @@
       "type": "exact"
     }
   ],
-  "redirects": [],
-  "update_type": "major"
+  "redirects": []
 }

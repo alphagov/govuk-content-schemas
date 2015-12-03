@@ -1,5 +1,4 @@
 {
-  "content_id": "3e0467ef-640b-4a9f-8f9c-2b174d9274e6",
   "base_path": "/government/case-studies/a-random-title-for-a-random-document",
   "details": {
     "publish_time": "2014-12-17T09:30:00+00:00"
@@ -9,7 +8,6 @@
   "title": "Coming soon",
   "publishing_app": "whitehall",
   "rendering_app": "government-frontend",
-  "update_type": "major",
    "routes": [
     {
       "path": "/government/case-studies/a-random-title-for-a-random-document",

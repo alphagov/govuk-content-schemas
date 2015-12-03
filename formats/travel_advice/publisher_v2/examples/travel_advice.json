@@ -1,5 +1,4 @@
 {
-  "content_id": "2a3938e1-d588-45fc-8c8f-0f51814d5409",
   "base_path": "/foreign-travel-advice/albania",
   "title": "Albania travel advice",
   "description": "Latest travel advice for Albania including safety and security, entry requirements, travel warnings and health",
@@ -70,7 +69,6 @@
   "public_updated_at": "2015-10-15T11:00:20+01:00",
   "publishing_app": "travel-advice-publisher",
   "rendering_app": "frontend",
-  "update_type": "major",
   "routes": [
     {
       "path": "/foreign-travel-advice/albania",

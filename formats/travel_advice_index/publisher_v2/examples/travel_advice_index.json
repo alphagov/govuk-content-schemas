@@ -1,5 +1,4 @@
 {
-  "content_id": "08d48cdd-6b50-43ff-a53b-beab47f4aab0",
   "base_path": "/foreign-travel-advice",
   "title": "Foreign travel advice",
   "description": "Latest travel advice by country including safety and security, entry requirements, travel warnings and health",
@@ -56,7 +55,6 @@
   "need_ids": ["101191"],
   "publishing_app": "travel-advice-publisher",
   "rendering_app": "frontend",
-  "update_type": "major",
   "routes": [
     {
       "path": "/foreign-travel-advice/albania",
