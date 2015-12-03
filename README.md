@@ -110,7 +110,7 @@ a frontend schema from the backend schema.
 A script and make task is provided to do this:
 
 ```sh
-$ bundle exec ./bin/generate_frontend_schema formats/case_study/publisher/schema.json > formats/case_study/frontend/schema.json
+$ bundle exec ./bin/generate_frontend_schema dist/formats/case_study/publisher/schema.json > dist/formats/case_study/frontend/schema.json
 ```
 
 ### Validation of frontend examples
