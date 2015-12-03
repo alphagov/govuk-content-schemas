@@ -21,6 +21,7 @@ RSpec.describe 'combine_publisher_schema' do
   let(:schemas) {
     {
       metadata: build_schema('metadata.json', properties: build_string_properties('body')),
+      definitions: build_schema('definitions.json', definitions: build_string_properties('body')),
       details: build_schema('details.json', properties: build_string_properties('detail')),
       links: build_schema('links.json', properties: build_string_properties('links')),
       base_links: build_schema('base_links.json', properties: build_ref_properties(["mainstream_browse_pages"], 'guid_list'))
@@ -29,6 +30,7 @@ RSpec.describe 'combine_publisher_schema' do
 
   before(:each) {
     File.write(tmpdir + "metadata.json", schemas[:metadata].to_s)
+    File.write(tmpdir + "definitions.json", schemas[:definitions].to_s)
     File.write(tmpdir + "base_links.json", schemas[:base_links].to_s)
     FileUtils.mkdir_p(publisher_schema_dir)
     File.write(publisher_schema_dir + "details.json", schemas[:details].to_s)
@@ -37,7 +39,7 @@ RSpec.describe 'combine_publisher_schema' do
   after(:each) { FileUtils.remove_entry_secure(tmpdir) }
 
   before(:each) do
-    output = `#{executable_path} "#{publisher_schema_dir}" "#{output_filename}" 2>&1`
+    output = `#{executable_path} "#{output_filename}" "#{tmpdir}/base_links.json" "#{publisher_schema_dir}/links.json" "#{publisher_schema_dir}/details.json" "#{tmpdir}/definitions.json" "#{tmpdir}/metadata.json" 2>&1`
     fail(output) unless $?.success?
     output
   end

@@ -6,7 +6,7 @@ require 'json-schema'
 require 'json'
 
 def usage
-  $stderr.puts "USAGE: #{File.basename(__FILE__)} <path/to/publisher/schemas/> <path/to/combined-output-schema.json>"
+  $stderr.puts "USAGE: #{File.basename(__FILE__)} <path/to/combined-output-schema.json> *<path/to/schema>"
 end
 
 def report_errors(path, errors)
@@ -16,45 +16,23 @@ def report_errors(path, errors)
   end
 end
 
-def format_name(source_path)
-  source_path.dirname.basename.to_s
+def format_name(path)
+  path.dirname.dirname.basename.to_s
 end
 
-# Work out which type of schema to combine here.
-# There are 3 different types
-def schema_for_path(combiner, path)
-  if path.fnmatch("**/publisher_v2/links.json")
-    combiner.combined_v2_links.schema
-  elsif path.dirname.fnmatch("**/publisher_v2")
-    combiner.combined_v2.schema
-  else
-    combiner.combined.schema
-  end
-end
-
-if ARGV.count != 2
+if ARGV.count < 2
   usage
   exit(1)
 end
 
-source_path = Pathname.new(ARGV[0])
-output_path = Pathname.new(ARGV[1])
+output_path = Pathname.new(ARGV[0])
+
 reader = JSON::Schema::Reader.new(accept_file: true, accept_uri: false)
-
-schema_files = {
-  metadata: '../../metadata',
-  base_links: '../../base_links',
-  details: 'details',
-  links: 'links',
-}
-
-# sources for publisher_v2 schemas live in formats/%/publisher/
-# so adjust source_path accordingly
-source_path = source_path.sub("publisher_v2", "publisher")
-
-schemas = schema_files.reduce(Hash.new) do |schema_files, (name, filename)|
-
-  path = source_path + "#{filename}.json"
+schemas = {}
+schema_filenames = ARGV[1, ARGV.size - 1]
+schema_filenames.each do |f|
+  path = Pathname.new(f)
+  name = path.basename(".json").to_s
 
   if path.exist?
     schema = reader.read(path)
@@ -64,21 +42,17 @@ schemas = schema_files.reduce(Hash.new) do |schema_files, (name, filename)|
       exit(1)
     end
 
-    schema_files[name] = schema
+    schemas[name.to_sym] = schema
   end
-
-  schema_files
 end
 
 combiner = GovukContentSchemas::SchemaCombiner.new(
   schemas,
-  format_name(source_path)
+  format_name(output_path)
 )
 
 FileUtils.mkdir_p(output_path.dirname)
 
-schema = schema_for_path(combiner, output_path)
-
 File.open(output_path, 'w') do |file|
-  file.write JSON.pretty_generate(schema)
+  file.write JSON.pretty_generate(combiner.combined.schema)
 end

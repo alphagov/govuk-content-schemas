@@ -13,33 +13,21 @@ class GovukContentSchemas::SchemaCombiner
   end
 
   def combined
-    combined_schema = clone_schema(schemas.fetch(:metadata))
+    if schemas.key?(:metadata)
+      combined_schema = clone_schema(schemas.fetch(:metadata))
+      add_format_field(combined_schema.schema)
+    else
+      combined_schema = clone_schema(schemas.fetch(:base_links))
+    end
 
     add_details(combined_schema.schema)
     add_links(combined_schema.schema)
-    add_format_field(combined_schema.schema)
+
+
     add_combined_definitions(combined_schema.schema)
+    update_required_properties(combined_schema.schema)
 
     combined_schema
-  end
-
-  def combined_v2
-    combined_schema = clone_schema(schemas.fetch(:metadata))
-
-    add_details(combined_schema.schema)
-    add_format_field(combined_schema.schema)
-    add_combined_definitions(combined_schema.schema)
-
-    combined_schema
-  end
-
-  def combined_v2_links
-    combined_links = clone_schema(schemas.fetch(:links))
-    embeddable_base_links = embeddable_schema(schemas.fetch(:base_links))
-    combined_links.schema['properties'].merge!(embeddable_base_links['properties'])
-
-    add_combined_definitions(combined_links.schema)
-    combined_links
   end
 
 private
@@ -50,10 +38,17 @@ private
   end
 
   def add_links(schema)
-    if schemas[:links]
-      schema['properties']['links'] = merge_schemas(schemas[:links], schemas.fetch(:base_links))
+    return unless schemas.key?(:links) || schemas.key?(:base_links)
+
+    if schemas.key?(:metadata)
+      if schemas.key?(:links)
+        schema['properties']['links'] = merge_schemas(schemas[:links], schemas.fetch(:base_links))
+      else
+        schema['properties']['links'] = embeddable_schema(schemas.fetch(:base_links))
+      end
     else
-      schema['properties']['links'] = embeddable_schema(schemas.fetch(:base_links))
+      links_properties = embeddable_schema(schemas.fetch(:links))['properties']
+      schema['properties'].merge!(links_properties)
     end
   end
 
@@ -79,6 +74,19 @@ private
     end
   end
 
+  # v2 schemas do not require these properties.
+  def update_required_properties(schema)
+    return if schemas.key?(:metadata) && schemas.key?(:base_links) # v1 schema
+
+    if schema['required']
+      schema['required'].delete('content_id')
+      schema['required'].delete('update_type')
+    end
+
+    schema['properties'].delete('content_id')
+    schema['properties'].delete('update_type')
+  end
+
   def add_combined_definitions(schema)
     return unless definitions_from_all_schemas.any?
     schema['definitions'] = definitions_from_all_schemas
@@ -92,7 +100,7 @@ private
   end
 
   def definitions_from_all_schemas
-    combined = clone_hash(schemas.fetch(:metadata).schema.fetch('definitions', {}))
+    combined = clone_hash(schemas.fetch(:definitions).schema.fetch('definitions', {}))
 
     [schemas[:details], schemas[:links]].compact.inject(combined) do |memo, embedded_schema|
       memo.merge(embedded_schema.schema.fetch('definitions', {}))
