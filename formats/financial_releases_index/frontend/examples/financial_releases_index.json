@@ -1,0 +1,30 @@
+{
+  "content_id": "bdd8152b-78b6-479b-a1f8-7bdab36ea68b",
+  "base_path": "/lloyds-share-offer-press-releases",
+  "title": "Financial releases index",
+  "description": "Index page for listing financial press releases",
+  "locale": "en",
+  "public_updated_at": "2015-12-02T17:11:23+01:00",
+  "format": "financial_releases_index",
+  "details": {
+    "title": "Lloyds share offer",
+    "image": {
+      "url": "pressrelease.jpg",
+      "alt_text": "lloyds-logo"
+    },
+    "press_releases":[
+      {
+        "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lobortis, orci eget vulputate vulputate.",
+        "base_path": "/lloyds-share-offer-further-details",
+        "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lobortis, orci eget vulputate vulputate, sem urna mollis eros, sit amet elementum nibh eros eget est. Pellentesque viverra egestas diam ut volutpat.</p><p>Aenean et dolor sapien. Pellentesque sollicitudin dignissim sapien nec finibus. Nulla facilisi. Praesent non vulputate nulla. Praesent feugiat ipsum quis lacus tristique, in bibendum nunc semper. Cras tristique eros et finibus tempus.</p><p>Quisque velit ligula, tristique vitae dolor ut, rhoncus laoreet felis. Maecenas luctus massa feugiat mauris ultrices malesuada quis vitae nulla. Praesent ut quam in sapien imperdiet consectetur sit amet non purus.</p><p>Curabitur viverra massa non euismod dictum. Curabitur et volutpat lorem. Mauris auctor ac magna at sollicitudin. Suspendisse velit lorem, fermentum at aliquam sed, laoreet in ante. Suspendisse pellentesque dui eu dui egestas, eget pharetra ex hendrerit.</p><p>Praesent blandit aliquet odio et mattis. Cras volutpat viverra velit, ut fringilla quam tempus fringilla. Vestibulum quis nisl mi. Fusce congue dui et lobortis condimentum. In eget posuere magna, eu interdum ipsum.</p><p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut convallis, nunc id malesuada porttitor, ligula metus ultricies diam, eget porttitor turpis nulla vel quam. Praesent id orci purus.</p>",
+        "published_date": "2015-11-18T00:00:00.000Z"
+      },
+      {
+        "title": "Bakery annouces new type of bread",
+        "base_path": "/lloyds-share-offer",
+        "content": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p><p>Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>",
+        "published_date": "2015-10-05T00:00:00.000Z"
+      }
+    ]
+  }
+}
