@@ -165,6 +165,10 @@ RSpec.describe GovukContentSchemas::SchemaCombiner do
       expect(combined.schema['properties']).not_to have_key('content_id')
       expect(combined.schema['properties']).not_to have_key('update_type')
     end
+
+    it "prepends base_path to the required properties" do
+      expect(combined.schema['required'].first).to eq('base_path')
+    end
   end
 
   context "combining links and definitions for a v2 schema" do

@@ -81,6 +81,7 @@ private
     if schema['required']
       schema['required'].delete('content_id')
       schema['required'].delete('update_type')
+      schema['required'].unshift('base_path')
     end
 
     schema['properties'].delete('content_id')
