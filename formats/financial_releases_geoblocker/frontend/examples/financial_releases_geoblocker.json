@@ -1,0 +1,14 @@
+{
+  "base_path": "/financial-releases-geoblocker",
+  "content_id": "b636c3f1-3bdc-49eb-8edc-c9c053a3691d",
+  "title": "Financial Releases geoblocker",
+  "format": "financial_releases_geoblocker",
+  "locale": "en",
+  "public_updated_at": "2015-12-01T00:00:00.000Z",
+  "details": {
+    "title": "Lloyds Banking Group share offer",
+    "summary": "The government will be making shares in Lloyds Banking Group available for sale to the general public.",
+    "content": "<h2 class='heading-medium'>Choose your country of residence</h2><p>The information in this advertisement is intended to be available only to persons located in the United Kingdom.</p><p>Select the country where you are located from the drop-down menu below. By clicking on the ‘Submit’ button you confirm that: (1) you are a person located only in the country you have selected from the drop-down menu and (2) you are not located in the United States of America.</p>",
+    "footer_legal_disclaimer": "This notice and its content are not and should not be deemed to be an offer or invitation to engage in any investment activity. The securities have not been and will not be registered under the U.S. Securities Act of 1933 and may not be offered or sold in the U.S. absent registration or an exemption therefrom."
+  }
+}
