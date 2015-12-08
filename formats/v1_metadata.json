@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "content_id",
+    "update_type"
+  ],
+  "properties": {
+    "content_id": {
+      "$ref": "#/definitions/guid"
+    },
+    "update_type": {
+      "enum": [ "major", "minor", "republish" ]
+    }
+  }
+}

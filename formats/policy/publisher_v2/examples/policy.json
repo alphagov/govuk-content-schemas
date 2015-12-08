@@ -1,0 +1,65 @@
+{
+  "base_path": "/government/policies/benefits-reform",
+  "title": "Benefits Reform",
+  "description": "",
+  "format": "policy",
+  "need_ids": [],
+  "locale": "en",
+  "public_updated_at": "2015-03-10T11:55:11.066+00:00",
+  "publishing_app": "whitehall",
+  "rendering_app": "government-frontend",
+  "details": {
+    "document_noun": "document",
+    "default_documents_per_page": 10,
+    "email_signup_enabled": false,
+    "filter": {
+      "policies": [
+        "benefits-reform"
+      ]
+    },
+    "human_readable_finder_format": "Policy",
+    "signup_link": "",
+    "summary": "The government believes that the current benefits system is too complex, and there are insufficient incentives to encourage people on benefits to start paid work or increase their hours.",
+    "show_summaries": false,
+    "facets": [
+      {
+        "key": "is_historic",
+        "display_as_result_metadata": true,
+        "filterable": false
+      },
+      {
+        "key": "government_name",
+        "display_as_result_metadata": true,
+        "filterable": false
+      },
+      {
+        "key": "public_timestamp",
+        "name": "Published",
+        "short_name": "Updated",
+        "type": "date",
+        "display_as_result_metadata": true,
+        "filterable": true
+      },
+      {
+        "key": "organisations",
+        "short_name": "From",
+        "type": "text",
+        "display_as_result_metadata": true,
+        "filterable": false
+      },
+      {
+        "key": "display_type",
+        "short_name": "Type",
+        "type": "text",
+        "display_as_result_metadata": true,
+        "filterable": false
+      }
+   ]
+ },
+ "routes": [
+   {
+     "path": "/government/policies/benefits-reform",
+     "type": "exact"
+   }
+ ]
+}

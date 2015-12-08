@@ -2,9 +2,17 @@ require 'govuk_content_schemas/schema_combiner'
 
 RSpec.describe GovukContentSchemas::SchemaCombiner do
   let(:metadata_schema) { build_schema('metadata.json', properties: build_string_properties('body')) }
+  let(:definitions) { build_schema('definitions.json', definitions: build_string_properties('def1')) }
   let(:base_links) { build_schema('base_links.json', properties: build_ref_properties(["mainstream_browse_pages"], 'guid_list')) }
   let(:format_name) { 'my_format' }
-  subject(:combined) { described_class.new({ base_links: base_links, metadata: metadata_schema, details: details_schema }, format_name).combined }
+
+  subject(:combined) do
+    described_class.new({
+      definitions: definitions,
+      metadata: metadata_schema,
+      details: details_schema
+    }, format_name).combined
+  end
 
   context "combining a simple metadata and details schema" do
     let(:details_schema) { build_schema('details.json', properties: build_string_properties('detail')) }
@@ -36,11 +44,36 @@ RSpec.describe GovukContentSchemas::SchemaCombiner do
     end
   end
 
-  context "combining schemas which have definitions" do
+  context "combining v1 metadata with common metadata and details" do
+    let(:v1_metadata) {
+      build_schema('v1_metadata.json', properties: build_string_properties('bar'), required: ['bar'])
+    }
+
+    let(:details) { build_schema('details.json', properties: build_string_properties('detail')) }
+
+    subject(:combined) do
+      described_class.new({
+        definitions: definitions,
+        metadata: metadata_schema,
+        v1_metadata: v1_metadata,
+        details: details
+      }, format_name).combined
+    end
+
+    it "combines the v1 metadata with simple metadata and details and adds the format" do
+      expect(combined.schema['properties'].keys).to match_array(['bar', 'body', 'details', 'format'])
+    end
+  end
+
+  context "combining schemas and definitions" do
+    let(:definitions) {
+      build_schema('definitions.json',
+        definitions: build_string_properties('def1')
+      )
+    }
     let(:metadata_schema) {
       build_schema('metadata.json',
-        properties: build_string_properties('body'),
-        definitions: build_string_properties('def1')
+        properties: build_string_properties('body')
       )
     }
 
@@ -50,6 +83,14 @@ RSpec.describe GovukContentSchemas::SchemaCombiner do
         definitions: build_string_properties('def2')
       )
     }
+
+    subject(:combined) do
+      described_class.new({
+        metadata: metadata_schema,
+        details: details_schema,
+        definitions: definitions
+      }, format_name).combined
+    end
 
     it 'removes the definitions from the embedded details property' do
       expect(combined.schema['properties']['details']).not_to have_key('definitions')
@@ -68,7 +109,14 @@ RSpec.describe GovukContentSchemas::SchemaCombiner do
         definitions: build_string_properties('guid_list')
       )
     }
-    subject(:combined) { described_class.new({ base_links: base_links, metadata: metadata_schema, links: links_schema }, format_name).combined }
+    subject(:combined) do
+      described_class.new({
+        definitions: definitions,
+        base_links: base_links,
+        metadata: metadata_schema,
+        links: links_schema
+      }, format_name).combined
+    end
 
     it 'adds a links property to the combined schema' do
       expect(combined.schema['properties']['links']).to be_a(Hash)
@@ -86,6 +134,111 @@ RSpec.describe GovukContentSchemas::SchemaCombiner do
     it 'merges the definitions from the links schema into the combined schemas definitions' do
       expect(combined.schema['definitions']).to include('guid_list')
       expect(combined.schema['definitions']['guid_list']).to eq(links_schema.schema['definitions']['guid_list'])
+    end
+  end
+
+  context "combining metadata and details for a v2 schema" do
+    let(:metadata_schema) {
+      build_schema('metadata.json',
+                   properties: build_string_properties('body'),
+                   required: ['content_id', 'body', 'update_type'])
+    }
+
+    let(:v2_metadata) {
+      build_schema('v2_metadata.json', properties: build_string_properties('foo'), required: ['foo'])
+    }
+
+    let(:details_schema) {
+      build_schema('details.json', properties: build_string_properties('detail'))
+    }
+
+    let(:links_schema) {
+      build_schema('links.json', properties: build_string_properties('lead_organisations'))
+    }
+
+    let(:definitions) {
+      build_schema('definitions.json', definitions: build_string_properties('def1', 'def2'))
+    }
+
+    subject(:combined) do
+      described_class.new({
+        definitions: definitions,
+        metadata: metadata_schema,
+        v2_metadata: v2_metadata,
+        details: details_schema
+      }, format_name).combined
+    end
+
+    it 'removes the definitions from the embedded details property' do
+      expect(combined.schema['properties']['details']).not_to have_key('definitions')
+    end
+
+    it 'merges the definitions into the combined schema' do
+      expect(combined.schema['definitions']).to include('def1', 'def2')
+    end
+
+    it "doesn't merge the links schema" do
+      expect(combined.schema).not_to have_key('links')
+    end
+
+    it "merges in v2 required properties" do
+      expect(combined.schema['required']).to include('foo')
+    end
+
+    it "merges in v2 properties" do
+      expect(combined.schema['properties']).to have_key('foo')
+    end
+  end
+
+  context "combining links and definitions for a v2 schema" do
+    let(:links_metadata) {
+      build_schema('links_metadata.json',
+                   properties: build_string_properties('base_path'),
+                   required: ['base_path'])
+    }
+
+    let(:base_links) {
+      build_schema('base_links.json', properties: build_ref_properties(['organisations', 'parent'], 'guid_list'))
+    }
+
+    let(:links_schema) {
+      build_schema('links.json', properties: build_string_properties('lead_organisations', 'mainstream_browse_pages'))
+    }
+
+    let(:definitions) {
+      build_schema('definitions.json', definitions: build_string_properties('guid_list'))
+    }
+
+    subject(:combined) do
+      described_class.new({
+        links_metadata: links_metadata,
+        definitions: definitions,
+        base_links: base_links,
+        links: links_schema
+      }, format_name).combined
+    end
+
+    it 'preserves $schema key' do
+      expect(combined.schema).to have_key('$schema')
+    end
+
+    it 'defines metadata properties' do
+      expect(combined.schema['properties']).to have_key('base_path')
+    end
+
+    it 'defines required properties' do
+      expect(combined.schema['required']).to include('base_path')
+    end
+
+    it 'embeds the merged links schemas as the links property' do
+      remaining_content_of_links_schema = links_schema.schema.reject { |k, v| %w{$schema definitions}.include?(k) }
+      expect(combined.schema['properties']['links']['properties'].keys).to match_array(
+        ['lead_organisations', 'mainstream_browse_pages', 'organisations', 'parent'])
+    end
+
+    it 'merges the definitions from the definitions schema into the combined schemas definitions' do
+      expect(combined.schema['definitions']).to include('guid_list')
+      expect(combined.schema['definitions']['guid_list']).to eq(definitions.schema['definitions']['guid_list'])
     end
   end
 end

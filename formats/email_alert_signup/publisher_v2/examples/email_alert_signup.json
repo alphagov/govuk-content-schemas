@@ -1,0 +1,33 @@
+{
+  "base_path": "/government/policies/employment/email-signup",
+  "title": "Employment",
+  "description": "",
+  "format": "email_alert_signup",
+  "need_ids": [],
+  "locale": "en",
+  "public_updated_at": "2015-04-14T10:56:00.000+00:00",
+  "publishing_app": "whitehall",
+  "rendering_app": "government-frontend",
+  "details": {
+    "email_alert_type": "policies",
+    "signup_tags": {
+      "policies": [
+        "employment"
+      ]
+    },
+    "breadcrumbs": [
+      {
+        "title": "Employment",
+        "link": "https://www.gov.uk/government/policies/employment"
+      }
+    ],
+    "summary": "You'll get an email each time any information on this policy is published or updated.",
+    "govdelivery_title": "Employment policy"
+  },
+  "routes": [
+    {
+      "path": "/government/policies/employment/email-signup",
+      "type": "exact"
+    }
+  ]
+}

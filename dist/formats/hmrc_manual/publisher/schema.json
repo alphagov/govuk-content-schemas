@@ -3,21 +3,18 @@
   "type": "object",
   "additionalProperties": false,
   "required": [
-    "content_id",
     "format",
     "publishing_app",
     "rendering_app",
-    "update_type",
     "locale",
     "routes",
-    "public_updated_at"
+    "public_updated_at",
+    "content_id",
+    "update_type"
   ],
   "properties": {
     "base_path": {
       "$ref": "#/definitions/absolute_path"
-    },
-    "content_id": {
-      "$ref": "#/definitions/guid"
     },
     "title": {
       "type": "string"
@@ -40,13 +37,6 @@
     },
     "rendering_app": {
       "type": "string"
-    },
-    "update_type": {
-      "enum": [
-        "major",
-        "minor",
-        "republish"
-      ]
     },
     "locale": {
       "type": "string"
@@ -95,6 +85,16 @@
         "alpha",
         "beta",
         "live"
+      ]
+    },
+    "content_id": {
+      "$ref": "#/definitions/guid"
+    },
+    "update_type": {
+      "enum": [
+        "major",
+        "minor",
+        "republish"
       ]
     },
     "details": {

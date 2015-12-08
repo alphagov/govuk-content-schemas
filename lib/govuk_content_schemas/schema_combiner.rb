@@ -13,11 +13,17 @@ class GovukContentSchemas::SchemaCombiner
   end
 
   def combined
-    combined_schema = clone_schema(schemas.fetch(:metadata))
+    if schemas.key?(:metadata)
+      combined_schema = clone_schema(schemas.fetch(:metadata))
+      add_format_field(combined_schema.schema)
+    else
+      combined_schema = clone_schema(schemas.fetch(:links_metadata))
+    end
 
+    add_version_properties(combined_schema.schema)
     add_details(combined_schema.schema)
     add_links(combined_schema.schema)
-    add_format_field(combined_schema.schema)
+
     add_combined_definitions(combined_schema.schema)
 
     combined_schema
@@ -25,13 +31,29 @@ class GovukContentSchemas::SchemaCombiner
 
 private
 
+  def add_version_properties(schema)
+    version_schema = schemas[:v1_metadata] || schemas[:v2_metadata]
+
+    if version_schema
+      version_schema = embeddable_schema(version_schema)
+
+      if schema['required']
+        schema['required'] = schema['required'] + version_schema['required']
+      end
+
+      schema['properties'] = schema['properties'].merge(version_schema['properties'])
+    end
+  end
+
   def add_details(schema)
     return unless schemas[:details]
     schema['properties']['details'] = embeddable_schema(schemas[:details])
   end
 
   def add_links(schema)
-    if schemas[:links]
+    return unless schemas.key?(:base_links)
+
+    if schemas.key?(:links)
       schema['properties']['links'] = merge_schemas(schemas[:links], schemas.fetch(:base_links))
     else
       schema['properties']['links'] = embeddable_schema(schemas.fetch(:base_links))
@@ -73,7 +95,7 @@ private
   end
 
   def definitions_from_all_schemas
-    combined = clone_hash(schemas.fetch(:metadata).schema.fetch('definitions', {}))
+    combined = clone_hash(schemas.fetch(:definitions).schema.fetch('definitions', {}))
 
     [schemas[:details], schemas[:links]].compact.inject(combined) do |memo, embedded_schema|
       memo.merge(embedded_schema.schema.fetch('definitions', {}))

@@ -1,6 +1,5 @@
 {
   "base_path": "/robots.txt",
-  "content_id": "a5d86183-7252-4426-aad2-3f732f7f2581",
   "title": "Instructions for crawler robots",
   "description": "robots.txt provides rules for which parts of GOV.UK are permitted to be crawled by different bots.",
   "format": "special_route",
@@ -12,6 +11,5 @@
       "path": "/robots.txt",
       "type": "exact"
     }
-  ],
-  "update_type": "major"
+  ]
 }
