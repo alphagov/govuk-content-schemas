@@ -59,7 +59,7 @@ dist/%/publisher/schema.json: formats/definitions.json formats/metadata.json for
 dist/%/publisher_v2/schema.json: formats/definitions.json formats/metadata.json formats/v2_metadata.json %/publisher/details.json
 	$(combiner_bin) ${@} $^
 
-dist/%/publisher_v2/links.json: formats/definitions.json formats/links_metadata.json formats/v2_metadata.json formats/base_links.json %/publisher/links.json
+dist/%/publisher_v2/links.json: formats/definitions.json formats/links_metadata.json formats/base_links.json %/publisher/links.json
 	$(combiner_bin) ${@} $^
 
 # Recipe for building the frontend schema from the publisher schema and frontend links definition
