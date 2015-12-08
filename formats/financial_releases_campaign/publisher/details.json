@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties": false,
+   "required": [
+     "image",
+     "title",
+     "content"
+   ],
+  "properties": {
+     "image": {
+       "type": "object",
+       "additionalProperties": false,
+       "properties": {
+         "url": {
+           "type": "string",
+           "format": "uri"
+         },
+         "alt_text": {
+           "type": "string"
+         }
+       }
+     },
+    "header_legal_disclaimer": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    },
+    "email_caption": {
+      "type": "string"
+    },
+    "footer_legal_disclaimer": {
+      "type": "string"
+    }
+  }
+}

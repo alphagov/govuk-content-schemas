@@ -1,0 +1,36 @@
+{
+  "content_id": "bdd8152b-78b6-479b-a1f8-7bdab36ea68b",
+  "base_path": "/lloyds-share-offer-press-releases",
+  "title": "Financial releases index",
+  "description": "Index page for listing financial press releases",
+  "locale": "en",
+  "public_updated_at": "2015-12-02T17:11:23+01:00",
+  "format": "financial_releases_index",
+  "details": {
+    "title": "Lloyds share offer",
+    "image": {
+      "url": "pressrelease.jpg",
+      "alt_text": "lloyds-logo"
+    }
+  },
+  "links": {
+    "press_releases": [
+      {
+        "content_id": "57add221-0376-4f3e-a025-849954df97ac",
+        "title": "Press Release 1",
+        "base_path": "/lloyds-share-offer",
+        "api_url": "",
+        "web_url": "/lloyds-share-offer",
+        "locale": "en"
+      },
+      {
+        "content_id": "b6c5373e-4b5d-4cd2-a0f2-97aa527545cb",
+        "title": "Press Release 2",
+        "base_path": "/lloyds-share-offer-further-details",
+        "api_url": "",
+        "web_url": "/lloyds-share-offer-further-details",
+        "locale": "en"
+      }
+    ]
+  }
+}

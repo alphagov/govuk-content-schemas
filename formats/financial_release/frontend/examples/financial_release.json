@@ -1,0 +1,27 @@
+{
+  "base_path": "/lloyds-share-offer",
+  "content_id": "74314796-eee4-4a66-bc1e-3a2039f680e6",
+  "title": "Financial Release",
+  "format": "financial_release",
+  "locale": "en",
+  "public_updated_at": "2015-12-01T00:00:00.000Z",
+  "details": {
+    "title": "Government announces",
+    "summary": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation",
+    "published_date": "2015-10-05T00:00:00.000Z",
+    "content": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p><p>Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>This can be found at <a href='/lloydsshares'>lloydsshares</a>.</p>"
+  },
+  "links": {
+    "campaign_page":[
+      {
+        "content_id": "d168da45-dad7-4659-8670-278a9d6d94eb",
+        "title": "Campaign page Title",
+        "base_path": "/lloydsshares",
+        "api_url": "",
+        "web_url": "/lloydsshares",
+        "locale": "en"
+      }
+    ]
+  }
+}
+
