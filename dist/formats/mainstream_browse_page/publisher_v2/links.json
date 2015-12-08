@@ -3,45 +3,57 @@
   "type": "object",
   "additionalProperties": false,
   "properties": {
-    "mainstream_browse_pages": {
-      "description": "Powers the /browse section of the site. These are known as sections in some legacy apps.",
-      "$ref": "#/definitions/guid_list"
+    "previous_version": {
+      "type": "string"
     },
-    "topics": {
-      "description": "Powers the /topic section of the site. These are known as specialist sectors in some legacy apps.",
-      "$ref": "#/definitions/guid_list"
+    "base_path": {
+      "$ref": "#/definitions/absolute_path"
     },
-    "organisations": {
-      "$ref": "#/definitions/guid_list"
-    },
-    "parent": {
-      "description": "The parent content item.",
-      "$ref": "#/definitions/guid_list",
-      "maxItems": 1
-    },
-    "policies": {
-      "description": "These are for collecting content related to a particular government policy.",
-      "$ref": "#/definitions/guid_list"
-    },
-    "policy_areas": {
-      "description": "A largely deprecated tag currently only used to power email alerts.",
-      "$ref": "#/definitions/guid_list"
-    },
-    "top_level_browse_pages": {
-      "description": "All top-level browse pages",
-      "$ref": "#/definitions/guid_list"
-    },
-    "active_top_level_browse_page": {
-      "description": "The top-level browse page which is active",
-      "$ref": "#/definitions/guid_list",
-      "maxItems": 1
-    },
-    "second_level_browse_pages": {
-      "description": "All 2nd level browse pages under active_top_level_browse_page",
-      "$ref": "#/definitions/guid_list"
-    },
-    "related_topics": {
-      "$ref": "#/definitions/guid_list"
+    "links": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "top_level_browse_pages": {
+          "description": "All top-level browse pages",
+          "$ref": "#/definitions/guid_list"
+        },
+        "active_top_level_browse_page": {
+          "description": "The top-level browse page which is active",
+          "$ref": "#/definitions/guid_list",
+          "maxItems": 1
+        },
+        "second_level_browse_pages": {
+          "description": "All 2nd level browse pages under active_top_level_browse_page",
+          "$ref": "#/definitions/guid_list"
+        },
+        "related_topics": {
+          "$ref": "#/definitions/guid_list"
+        },
+        "mainstream_browse_pages": {
+          "description": "Powers the /browse section of the site. These are known as sections in some legacy apps.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "topics": {
+          "description": "Powers the /topic section of the site. These are known as specialist sectors in some legacy apps.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "organisations": {
+          "$ref": "#/definitions/guid_list"
+        },
+        "parent": {
+          "description": "The parent content item.",
+          "$ref": "#/definitions/guid_list",
+          "maxItems": 1
+        },
+        "policies": {
+          "description": "These are for collecting content related to a particular government policy.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "policy_areas": {
+          "description": "A largely deprecated tag currently only used to power email alerts.",
+          "$ref": "#/definitions/guid_list"
+        }
+      }
     }
   },
   "definitions": {

@@ -3,32 +3,44 @@
   "type": "object",
   "additionalProperties": false,
   "properties": {
-    "mainstream_browse_pages": {
-      "description": "Powers the /browse section of the site. These are known as sections in some legacy apps.",
-      "$ref": "#/definitions/guid_list"
+    "previous_version": {
+      "type": "string"
     },
-    "topics": {
-      "description": "Powers the /topic section of the site. These are known as specialist sectors in some legacy apps.",
-      "$ref": "#/definitions/guid_list"
+    "base_path": {
+      "$ref": "#/definitions/absolute_path"
     },
-    "organisations": {
-      "$ref": "#/definitions/guid_list"
-    },
-    "parent": {
-      "description": "The parent content item.",
-      "$ref": "#/definitions/guid_list",
-      "maxItems": 1
-    },
-    "policies": {
-      "description": "These are for collecting content related to a particular government policy.",
-      "$ref": "#/definitions/guid_list"
-    },
-    "policy_areas": {
-      "description": "A largely deprecated tag currently only used to power email alerts.",
-      "$ref": "#/definitions/guid_list"
-    },
-    "related": {
-      "$ref": "#/definitions/guid_list"
+    "links": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "related": {
+          "$ref": "#/definitions/guid_list"
+        },
+        "mainstream_browse_pages": {
+          "description": "Powers the /browse section of the site. These are known as sections in some legacy apps.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "topics": {
+          "description": "Powers the /topic section of the site. These are known as specialist sectors in some legacy apps.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "organisations": {
+          "$ref": "#/definitions/guid_list"
+        },
+        "parent": {
+          "description": "The parent content item.",
+          "$ref": "#/definitions/guid_list",
+          "maxItems": 1
+        },
+        "policies": {
+          "description": "These are for collecting content related to a particular government policy.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "policy_areas": {
+          "description": "A largely deprecated tag currently only used to power email alerts.",
+          "$ref": "#/definitions/guid_list"
+        }
+      }
     }
   },
   "definitions": {
