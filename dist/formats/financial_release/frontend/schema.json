@@ -81,7 +81,13 @@
     "links": {
       "type": "object",
       "additionalProperties": false,
+      "required": [
+        "campaign_page"
+      ],
       "properties": {
+        "campaign_page": {
+          "$ref": "#/definitions/frontend_links"
+        },
         "mainstream_browse_pages": {
           "$ref": "#/definitions/frontend_links"
         },

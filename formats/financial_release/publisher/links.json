@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "campaign_page"
+  ],
+  "properties": {
+    "campaign_page": {
+      "$ref": "#/definitions/guid_list"
+    }
+  }
+}

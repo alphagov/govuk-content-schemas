@@ -125,7 +125,13 @@
     "links": {
       "type": "object",
       "additionalProperties": false,
+      "required": [
+        "campaign_page"
+      ],
       "properties": {
+        "campaign_page": {
+          "$ref": "#/definitions/guid_list"
+        },
         "mainstream_browse_pages": {
           "description": "Powers the /browse section of the site. These are known as sections in some legacy apps.",
           "$ref": "#/definitions/guid_list"
