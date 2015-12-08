@@ -4,17 +4,14 @@
   "additionalProperties": false,
   "required": [
     "base_path",
-    "content_id",
     "format",
     "locale",
-    "public_updated_at"
+    "public_updated_at",
+    "content_id"
   ],
   "properties": {
     "base_path": {
       "$ref": "#/definitions/absolute_path"
-    },
-    "content_id": {
-      "$ref": "#/definitions/guid"
     },
     "title": {
       "type": "string"
@@ -53,13 +50,15 @@
         "live"
       ]
     },
+    "content_id": {
+      "$ref": "#/definitions/guid"
+    },
     "details": {
       "type": "object",
       "additionalProperties": false,
       "required": [
         "title",
-        "image",
-        "press_releases"
+        "image"
       ],
       "properties": {
         "title": {
@@ -77,41 +76,19 @@
               "type": "string"
             }
           }
-        },
-        "press_releases": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "additionalProperties": false,
-            "required": [
-              "title",
-              "base_path",
-              "content",
-              "published_date"
-            ],
-            "properties": {
-              "title": {
-                "type": "string"
-              },
-              "base_path": {
-                "$ref": "#/definitions/absolute_path"
-              },
-              "content": {
-                "type": "string"
-              },
-              "published_date": {
-                "type": "string",
-                "format": "date-time"
-              }
-            }
-          }
         }
       }
     },
     "links": {
       "type": "object",
       "additionalProperties": false,
+      "required": [
+        "press_releases"
+      ],
       "properties": {
+        "press_releases": {
+          "$ref": "#/definitions/frontend_links"
+        },
         "mainstream_browse_pages": {
           "$ref": "#/definitions/frontend_links"
         },

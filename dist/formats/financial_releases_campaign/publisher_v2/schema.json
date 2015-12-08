@@ -9,8 +9,7 @@
     "locale",
     "routes",
     "public_updated_at",
-    "content_id",
-    "update_type"
+    "base_path"
   ],
   "properties": {
     "base_path": {
@@ -25,7 +24,7 @@
     "format": {
       "type": "string",
       "enum": [
-        "financial_releases_index"
+        "financial_releases_campaign"
       ]
     },
     "public_updated_at": {
@@ -87,27 +86,18 @@
         "live"
       ]
     },
-    "content_id": {
-      "$ref": "#/definitions/guid"
-    },
-    "update_type": {
-      "enum": [
-        "major",
-        "minor",
-        "republish"
-      ]
+    "previous_version": {
+      "type": "string"
     },
     "details": {
       "type": "object",
       "additionalProperties": false,
       "required": [
+        "image",
         "title",
-        "image"
+        "content"
       ],
       "properties": {
-        "title": {
-          "type": "string"
-        },
         "image": {
           "type": "object",
           "additionalProperties": false,
@@ -120,42 +110,24 @@
               "type": "string"
             }
           }
-        }
-      }
-    },
-    "links": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "press_releases"
-      ],
-      "properties": {
-        "press_releases": {
-          "$ref": "#/definitions/guid_list"
         },
-        "mainstream_browse_pages": {
-          "description": "Powers the /browse section of the site. These are known as sections in some legacy apps.",
-          "$ref": "#/definitions/guid_list"
+        "header_legal_disclaimer": {
+          "description": "an html snippet with legal disclaimer for financial release to go above content.",
+          "type": "string"
         },
-        "topics": {
-          "description": "Powers the /topic section of the site. These are known as specialist sectors in some legacy apps.",
-          "$ref": "#/definitions/guid_list"
+        "title": {
+          "type": "string"
         },
-        "organisations": {
-          "$ref": "#/definitions/guid_list"
+        "content": {
+          "type": "string"
         },
-        "parent": {
-          "description": "The parent content item.",
-          "$ref": "#/definitions/guid_list",
-          "maxItems": 1
+        "email_caption": {
+          "description": "small disclaimer/description text to go under email registration form.",
+          "type": "string"
         },
-        "policies": {
-          "description": "These are for collecting content related to a particular government policy.",
-          "$ref": "#/definitions/guid_list"
-        },
-        "policy_areas": {
-          "description": "A largely deprecated tag currently only used to power email alerts.",
-          "$ref": "#/definitions/guid_list"
+        "footer_legal_disclaimer": {
+          "description": "an html snippet with legal disclaimer for financial release to go below content, may be different from header disclaimer.",
+          "type": "string"
         }
       }
     }
