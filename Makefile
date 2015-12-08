@@ -28,7 +28,7 @@ publisher_v2_validation_records := $(publisher_v2_examples:formats/%.json=dist/f
 publisher_v2_links_validation_records := $(publisher_v2_links_examples:formats/%.json=dist/formats/%.json.publisher_v2_links.valid)
 
 # The various scripts used in the build process
-combiner_bin := bundle exec ./bin/combine_publisher_schema
+combiner_bin := bundle exec rake combined_publisher_schemas
 frontend_generator_bin := bundle exec ./bin/generate_frontend_schema
 validation_bin := bundle exec ./bin/validate
 ensure_example_base_paths_unique_bin := bundle exec ./bin/ensure_example_base_paths_unique
@@ -55,13 +55,13 @@ $(dist_hand_made_publisher_schemas): $(hand_made_publisher_schemas)
 	cp ${@:dist/formats/%/publisher/schema.json=formats/%/publisher/schema.json} ${@:dist/formats/%/publisher/schema.json=dist/formats/%/publisher_v2/schema.json}
 
 dist/%/publisher/schema.json: formats/definitions.json formats/metadata.json formats/v1_metadata.json formats/base_links.json %/publisher/*.json
-	$(combiner_bin) ${@} $^
+	$(combiner_bin)
 
 dist/%/publisher_v2/schema.json: formats/definitions.json formats/metadata.json formats/v2_metadata.json %/publisher/details.json
-	$(combiner_bin) ${@} $^
+	$(combiner_bin)
 
 dist/%/publisher_v2/links.json: formats/definitions.json formats/links_metadata.json formats/base_links.json %/publisher/links.json
-	$(combiner_bin) ${@} $^
+	$(combiner_bin)
 
 # Recipe for building the frontend schema from the publisher schema and frontend links definition
 dist/%/frontend/schema.json: dist/%/publisher/schema.json formats/frontend_links_definition.json

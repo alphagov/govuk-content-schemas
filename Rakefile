@@ -1,3 +1,5 @@
+$LOAD_PATH << File.expand_path("../lib", __FILE__)
+
 begin
   require 'rspec/core/rake_task'
   RSpec::Core::RakeTask.new(:spec)
@@ -29,3 +31,5 @@ task :new_format, [:format_name] do |_task, args|
 end
 
 task :default => [:spec, :make]
+
+Dir.glob('lib/tasks/*.rake').each { |r| import r }
