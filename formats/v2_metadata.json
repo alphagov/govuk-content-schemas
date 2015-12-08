@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "base_path"
+  ],
+  "properties": {
+    "base_path": {
+      "$ref" : "#/definitions/absolute_path"
+    },
+    "previous_version": {
+      "type": "string"
+    }
+  }
+}

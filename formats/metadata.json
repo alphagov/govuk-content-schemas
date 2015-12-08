@@ -3,11 +3,9 @@
   "type": "object",
   "additionalProperties": false,
   "required": [
-    "content_id",
     "format",
     "publishing_app",
     "rendering_app",
-    "update_type",
     "locale",
     "routes",
     "public_updated_at"
@@ -15,9 +13,6 @@
   "properties": {
     "base_path": {
       "$ref" : "#/definitions/absolute_path"
-    },
-    "content_id": {
-      "$ref": "#/definitions/guid"
     },
     "title": {
       "type": "string"
@@ -37,9 +32,6 @@
     },
     "rendering_app": {
       "type": "string"
-    },
-    "update_type": {
-      "enum": [ "major", "minor", "republish" ]
     },
     "locale": {
       "type": "string"

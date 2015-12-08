@@ -17,20 +17,33 @@ class GovukContentSchemas::SchemaCombiner
       combined_schema = clone_schema(schemas.fetch(:metadata))
       add_format_field(combined_schema.schema)
     else
-      combined_schema = clone_schema(schemas.fetch(:base_links))
+      combined_schema = clone_schema(schemas.fetch(:links_metadata))
     end
 
+    add_version_properties(combined_schema.schema)
     add_details(combined_schema.schema)
     add_links(combined_schema.schema)
 
-
     add_combined_definitions(combined_schema.schema)
-    update_required_properties(combined_schema.schema)
 
     combined_schema
   end
 
 private
+
+  def add_version_properties(schema)
+    version_schema = schemas[:v1_metadata] || schemas[:v2_metadata]
+
+    if version_schema
+      version_schema = embeddable_schema(version_schema)
+
+      if schema['required']
+        schema['required'] = schema['required'] + version_schema['required']
+      end
+
+      schema['properties'] = schema['properties'].merge(version_schema['properties'])
+    end
+  end
 
   def add_details(schema)
     return unless schemas[:details]
@@ -38,17 +51,12 @@ private
   end
 
   def add_links(schema)
-    return unless schemas.key?(:links) || schemas.key?(:base_links)
+    return unless schemas.key?(:base_links)
 
-    if schemas.key?(:metadata)
-      if schemas.key?(:links)
-        schema['properties']['links'] = merge_schemas(schemas[:links], schemas.fetch(:base_links))
-      else
-        schema['properties']['links'] = embeddable_schema(schemas.fetch(:base_links))
-      end
+    if schemas.key?(:links)
+      schema['properties']['links'] = merge_schemas(schemas[:links], schemas.fetch(:base_links))
     else
-      links_properties = embeddable_schema(schemas.fetch(:links))['properties']
-      schema['properties'].merge!(links_properties)
+      schema['properties']['links'] = embeddable_schema(schemas.fetch(:base_links))
     end
   end
 
@@ -72,20 +80,6 @@ private
         "enum" => [format_name]
       }
     end
-  end
-
-  # v2 schemas do not require these properties.
-  def update_required_properties(schema)
-    return if schemas.key?(:metadata) && schemas.key?(:base_links) # v1 schema
-
-    if schema['required']
-      schema['required'].delete('content_id')
-      schema['required'].delete('update_type')
-      schema['required'].unshift('base_path')
-    end
-
-    schema['properties'].delete('content_id')
-    schema['properties'].delete('update_type')
   end
 
   def add_combined_definitions(schema)
