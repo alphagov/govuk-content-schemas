@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "internal_name": {
+      "type": "string",
+      "description": "An internal name for admin interfaces. Includes parent."
+    }
+  }
+}
