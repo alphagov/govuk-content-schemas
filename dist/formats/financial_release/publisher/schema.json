@@ -101,19 +101,11 @@
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "title",
-        "summary",
-        "content",
+        "body",
         "first_published_at"
       ],
       "properties": {
-        "title": {
-          "type": "string"
-        },
-        "summary": {
-          "type": "string"
-        },
-        "content": {
+        "body": {
           "type": "string"
         },
         "first_published_at": {

@@ -102,8 +102,7 @@
       "additionalProperties": false,
       "required": [
         "image",
-        "title",
-        "content"
+        "body"
       ],
       "properties": {
         "image": {
@@ -123,10 +122,7 @@
           "description": "an html snippet with legal disclaimer for financial release to go above content.",
           "type": "string"
         },
-        "title": {
-          "type": "string"
-        },
-        "content": {
+        "body": {
           "type": "string"
         },
         "email_caption": {

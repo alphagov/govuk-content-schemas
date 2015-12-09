@@ -57,17 +57,10 @@
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "title",
-        "content"
+        "body"
       ],
       "properties": {
-        "title": {
-          "type": "string"
-        },
-        "summary": {
-          "type": "string"
-        },
-        "content": {
+        "body": {
           "type": "string"
         },
         "footer_legal_disclaimer": {

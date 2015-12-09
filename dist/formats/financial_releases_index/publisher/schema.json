@@ -101,13 +101,9 @@
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "title",
         "image"
       ],
       "properties": {
-        "title": {
-          "type": "string"
-        },
         "image": {
           "type": "object",
           "additionalProperties": false,
