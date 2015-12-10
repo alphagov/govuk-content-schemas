@@ -1,0 +1,516 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "base_path",
+    "format",
+    "locale",
+    "public_updated_at",
+    "content_id"
+  ],
+  "properties": {
+    "base_path": {
+      "$ref": "#/definitions/absolute_path"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "format": {
+      "type": "string",
+      "enum": [
+        "contact"
+      ]
+    },
+    "public_updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "locale": {
+      "type": "string"
+    },
+    "need_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "analytics_identifier": {
+      "type": "string"
+    },
+    "phase": {
+      "description": "The service design phase of this content item - https://www.gov.uk/service-manual/phases",
+      "type": "string",
+      "enum": [
+        "alpha",
+        "beta",
+        "live"
+      ]
+    },
+    "content_id": {
+      "$ref": "#/definitions/guid"
+    },
+    "details": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "title",
+        "description"
+      ],
+      "properties": {
+        "slug": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "organisation": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "contact_index_content_id"
+          ],
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "format": {
+              "type": "string"
+            },
+            "slug": {
+              "type": "string"
+            },
+            "abbreviation": {
+              "type": "string"
+            },
+            "govuk_status": {
+              "type": "string"
+            },
+            "created_at": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "updated_at": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "ancestry": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "contact_index_content_id": {
+              "type": "string"
+            }
+          }
+        },
+        "quick_links": {
+          "type": "array",
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "title",
+              "url"
+            ],
+            "properties": {
+              "title": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "query_response_time": {
+          "type": [
+            "string",
+            "boolean"
+          ]
+        },
+        "contact_groups": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "title": {
+                "type": "string"
+              },
+              "organisation": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "contact_index_content_id"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "title": {
+                    "type": "string"
+                  },
+                  "format": {
+                    "type": "string"
+                  },
+                  "slug": {
+                    "type": "string"
+                  },
+                  "abbreviation": {
+                    "type": "string"
+                  },
+                  "govuk_status": {
+                    "type": "string"
+                  },
+                  "created_at": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "updated_at": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "ancestry": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "contact_index_content_id": {
+                    "type": "string"
+                  }
+                }
+              },
+              "description": {
+                "type": "string"
+              },
+              "contacts": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "description": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "contact_form_links": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "title": {
+                "type": "string"
+              },
+              "link": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "more_info_contact_form": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "email_addresses": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "title",
+              "email"
+            ],
+            "properties": {
+              "title": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "more_info_email_address": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "phone_numbers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "title",
+              "number"
+            ],
+            "properties": {
+              "title": {
+                "type": "string"
+              },
+              "number": {
+                "type": "string"
+              },
+              "textphone": {
+                "type": "string"
+              },
+              "international_phone": {
+                "type": "string"
+              },
+              "fax": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "open_hours": {
+                "type": "string"
+              },
+              "best_time_to_call": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "more_info_phone_number": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "post_addresses": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "title",
+              "street_address",
+              "postal_code",
+              "world_location"
+            ],
+            "properties": {
+              "title": {
+                "type": "string"
+              },
+              "street_address": {
+                "type": "string"
+              },
+              "postal_code": {
+                "type": "string"
+              },
+              "world_location": {
+                "type": "string"
+              },
+              "locality": {
+                "type": "string"
+              },
+              "region": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "more_info_post_address": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "language": {
+          "type": "string"
+        }
+      }
+    },
+    "links": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "related": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "mainstream_browse_pages": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "topics": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "organisations": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "parent": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "policies": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "policy_areas": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "available_translations": {
+          "$ref": "#/definitions/frontend_links"
+        }
+      }
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "definitions": {
+    "absolute_path": {
+      "type": "string",
+      "pattern": "^/(([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})+(/([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)*)?$",
+      "description": "A path only. Query string and/or fragment are not allowed."
+    },
+    "absolute_fullpath": {
+      "type": "string",
+      "pattern": "^/(([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})+(/([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)*)?(\\?([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)?(#([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)?$",
+      "description": "A path with optional query string and/or fragment."
+    },
+    "guid": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-[1-5][a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$"
+    },
+    "guid_list": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/guid"
+      }
+    },
+    "route": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "type"
+      ],
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "type": {
+          "enum": [
+            "prefix",
+            "exact"
+          ]
+        }
+      }
+    },
+    "redirect_route": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "type",
+        "destination"
+      ],
+      "properties": {
+        "path": {
+          "$ref": "#/definitions/absolute_path"
+        },
+        "type": {
+          "enum": [
+            "prefix",
+            "exact"
+          ]
+        },
+        "destination": {
+          "$ref": "#/definitions/absolute_fullpath"
+        },
+        "segments_mode": {
+          "enum": [
+            "preserve",
+            "ignore"
+          ],
+          "description": "For prefix redirects, preserve or ignore the rest of the fullpath. For exact, preserve or ignore the querystring."
+        }
+      }
+    },
+    "frontend_links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "content_id",
+          "title",
+          "base_path",
+          "locale"
+        ],
+        "properties": {
+          "content_id": {
+            "$ref": "#/definitions/guid"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "base_path": {
+            "$ref": "#/definitions/absolute_path"
+          },
+          "api_url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "web_url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "locale": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
