@@ -40,7 +40,7 @@ The 'publisher' [`schema.json`](dist/formats/case_study/publisher/schema.json) i
     format**.
 
   - [version metadata eg. `v2_metadata.json`](formats/v2_metadata.json): Fields specific to the publisher version.
-    Either [`v1_metadata.json`](formats/v1_metadat.json) or [`v2_metadata.json`](formats/v2_metadata.json)
+    Either [`v1_metadata.json`](formats/v1_metadata.json) or [`v2_metadata.json`](formats/v2_metadata.json)
 
   - [`details.json`](formats/case_study/publisher/details.json): the content of the details hash
     which is **different for each content format**. It is under the control of the
