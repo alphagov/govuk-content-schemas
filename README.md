@@ -42,11 +42,15 @@ The 'publisher' [`schema.json`](dist/formats/case_study/publisher/schema.json) i
   - [version metadata eg. `v2_metadata.json`](formats/v2_metadata.json): Fields specific to the publisher version.
     Either [`v1_metadata.json`](formats/v1_metadata.json) or [`v2_metadata.json`](formats/v2_metadata.json)
 
+  - [`definitions.json`](formats/definitions.json) Common definitions used across schemas.
+
   - [`details.json`](formats/case_study/publisher/details.json): the content of the details hash
     which is **different for each content format**. It is under the control of the
     publishing application.
 
   - [`links_metadata.json`](formats/links_metadata.json) The top level fields for v2 publisher links.
+
+  - [`base_links.json`](formats/base_links.json) Common link properties definitions for v1 and v2 publisher schemas.
 
   - [`links.json`](formats/case_study/publisher/links.json): the list of 'related links'. This is also **different
     for each content format**.
