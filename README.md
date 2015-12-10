@@ -39,9 +39,14 @@ The 'publisher' [`schema.json`](dist/formats/case_study/publisher/schema.json) i
   - [`metadata.json`](formats/metadata.json): the top level set of fields. These are the **same for every content
     format**.
 
+  - [version metadata eg. `v2_metadata.json`](formats/v2_metadata.json): Fields specific to the publisher version.
+    Either [`v1_metadata.json`](formats/v1_metadat.json) or [`v2_metadata.json`](formats/v2_metadata.json)
+
   - [`details.json`](formats/case_study/publisher/details.json): the content of the details hash
     which is **different for each content format**. It is under the control of the
     publishing application.
+
+  - [`links_metadata.json`](formats/links_metadata.json) The top level fields for v2 publisher links.
 
   - [`links.json`](formats/case_study/publisher/links.json): the list of 'related links'. This is also **different
     for each content format**.
@@ -80,8 +85,7 @@ formats
 
 ### Combining files to make publisher schema
 
-The build process generates the combined `schema.json` from the source files.
-It will write its output to the `dist` directory (generating any folders if needed).
+The build process generates the combined `schema.json` from the source files. It will write its output to the `dist` directory (generating any folders if needed).
 
 ### Generation of frontend schemas
 
