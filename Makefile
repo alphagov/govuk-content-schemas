@@ -52,6 +52,7 @@ validate_unique_base_path: $(frontend_schemas)
 # Recipe for building publisher schemas from the metadata, details and links schemas
 $(dist_hand_made_publisher_schemas): $(hand_made_publisher_schemas)
 	cp ${@:dist/%=%} ${@}
+	cp ${@:dist/formats/%/publisher/schema.json=formats/%/publisher/schema.json} ${@:dist/formats/%/publisher/schema.json=dist/formats/%/publisher_v2/schema.json}
 
 dist/%/publisher/schema.json: formats/definitions.json formats/metadata.json formats/v1_metadata.json formats/base_links.json %/publisher/*.json
 	$(combiner_bin) ${@} $^
