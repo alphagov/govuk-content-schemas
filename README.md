@@ -20,6 +20,16 @@ In the future, there may be a third:
 * the 'notification' representation, which is used when broadcasting messages about content
   items on the message queue
 
+## Howtos
+
+* [How to change a format](docs/changing-a-format.md)
+* [How to add a new content format](docs/adding-a-new-format.md)
+* [How to convert finder schemas](docs/converting-finder-schemas.md) (needed when adding/changing specialist document formats)
+* [Adding contract tests to your app](docs/contract-testing-howto.md)
+* [Suggested workflows](docs/suggested-workflows.md)
+* [Why do contract testing?](docs/why-contract-testing.md)
+* [Running your frontend against the examples (content-store not needed)](docs/running-frontend-against-examples.md)
+
 ## Background
 
 ### Publisher schema defined using component parts
@@ -146,13 +156,3 @@ rm -f formats/case_study/frontend/examples/archived.json.valid formats/case_stud
 rm -f formats/case_study/frontend/schema.json
 rm -f formats/case_study/publisher/schema.json
 ```
-
-## Howtos
-
-* [How to change a format](docs/changing-a-format.md)
-* [How to add a new content format](docs/adding-a-new-format.md)
-* [How to convert finder schemas](docs/converting-finder-schemas.md) (needed when adding/changing specialist document formats)
-* [Adding contract tests to your app](docs/contract-testing-howto.md)
-* [Suggested workflows](docs/suggested-workflows.md)
-* [Why do contract testing?](docs/why-contract-testing.md)
-* [Running your frontend against the examples (content-store not needed)](docs/running-frontend-against-examples.md)
