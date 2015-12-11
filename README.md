@@ -8,14 +8,17 @@ processable formats.
 
 We use [JSON Schema](http://json-schema.org/) to define the formats.
 
-For each format there are three possible representations:
+For each format there are two possible representations:
 
 * the 'publisher' representation, which is used when a publishing application
   transmits data to the content store.
-* the 'notification' representation, which is used when broadcasting messages about content
-  items on the message queue
 * the 'frontend' representation, which is produced by the content store when a
   frontend application requests data
+
+In the future, there may be a third:
+
+* the 'notification' representation, which is used when broadcasting messages about content
+  items on the message queue
 
 ## How to change a content format
 
@@ -172,4 +175,3 @@ rm -f formats/case_study/publisher/schema.json
 * [Suggested workflows](docs/suggested-workflows.md)
 * [Why do contract testing?](docs/why-contract-testing.md)
 * [Running your frontend against the examples (content-store not needed)](docs/running-frontend-against-examples.md)
-
