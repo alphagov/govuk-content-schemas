@@ -1,0 +1,89 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "format",
+    "publishing_app",
+    "redirects",
+    "base_path",
+    "content_id"
+  ],
+  "properties": {
+    "base_path": {
+      "$ref": "#/definitions/absolute_path"
+    },
+    "content_id": {
+      "$ref": "#/definitions/guid"
+    },
+    "format": {
+      "enum": [ "redirect" ]
+    },
+    "publishing_app": {
+      "type": "string"
+    },
+    "update_type": {
+      "enum": [ "major", "minor", "republish" ]
+    },
+    "redirects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "path",
+          "type",
+          "destination"
+        ],
+        "properties": {
+          "path": {
+            "$ref": "#/definitions/absolute_path"
+          },
+          "type": {
+            "enum": [ "prefix", "exact" ]
+          },
+          "destination": {
+            "$ref": "#/definitions/absolute_fullpath"
+          },
+          "segments_mode": {
+            "enum": [ "preserve", "ignore" ],
+            "description": "For prefix redirects, preserve or ignore the rest of the fullpath. For exact, preserve or ignore the querystring."
+          }
+        }
+      }
+    },
+    "links": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "can_be_replaced_by": {
+          "description": "Optional.  The content_item that this redirect has replaced.",
+          "$ref": "#/definitions/guid_list",
+          "maxItems": 1
+        }
+      }
+    }
+  },
+  "definitions": {
+    "absolute_path": {
+      "type": "string",
+      "pattern": "^/(([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})+(/([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)*)?$",
+      "description": "A path only. Query string and/or fragment are not allowed."
+    },
+    "absolute_fullpath": {
+      "type": "string",
+      "pattern": "^/(([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})+(/([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)*)?(\\?([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)?(#([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)?$",
+      "description": "A path with optional query string and/or fragment."
+    },
+    "guid": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-[1-5][a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$"
+    },
+    "guid_list": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/guid"
+      }
+    }
+  }
+}
