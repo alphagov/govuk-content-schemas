@@ -8,34 +8,27 @@ processable formats.
 
 We use [JSON Schema](http://json-schema.org/) to define the formats.
 
-For each format there are three possible representations:
+For each format there are two possible representations:
 
 * the 'publisher' representation, which is used when a publishing application
   transmits data to the content store.
-* the 'notification' representation, which is used when broadcasting messages about content
-  items on the message queue
 * the 'frontend' representation, which is produced by the content store when a
   frontend application requests data
 
-## How to change a content format
+In the future, there may be a third:
 
-Imagine that you need to add a new optional field to the details hash of the
-`case_study` format.
+* the 'notification' representation, which is used when broadcasting messages about content
+  items on the message queue
 
-The steps would be:
+## Howtos
 
-1. edit the case_study [`details.json`](formats/case_study/publisher/details.json) to
-   add the new optional field
-2. run `make`. This will:
-   1. regenerate the publisher [`schema.json`](dist/formats/case_study/publisher/schema.json) to incorporate the changes you made to the `details.json`
-   2. regenerate the frontend [schema.json](dist/formats/case_study/frontend/schema.json) to incorporate the same changes
-   3. revalidate all example files to check if they are still valid after this change. This will pass, because the new field is optional
-3. [Optional step] you could add an additional example to illustrate how your new field should be used. You can add a new file in [formats/case_study/frontend/examples](formats/case_study/frontend/examples)
-4. create a new branch and commit and push your changes
-   - this will run a branch build of govuk-content-schemas. This includes running the contract tests for each application which relies on the schemas. You'll get immediate feedback about whether publishing applications generate content items compatible with the new schema.
-5. once the tests pass, someone will merge your pull request and the new schemas will be available to use
-
-For more step-by step guides see [howtos](#howtos).
+* [How to change a format](docs/changing-a-format.md)
+* [How to add a new content format](docs/adding-a-new-format.md)
+* [How to convert finder schemas](docs/converting-finder-schemas.md) (needed when adding/changing specialist document formats)
+* [Adding contract tests to your app](docs/contract-testing-howto.md)
+* [Suggested workflows](docs/suggested-workflows.md)
+* [Why do contract testing?](docs/why-contract-testing.md)
+* [Running your frontend against the examples (content-store not needed)](docs/running-frontend-against-examples.md)
 
 ## Background
 
@@ -163,13 +156,3 @@ rm -f formats/case_study/frontend/examples/archived.json.valid formats/case_stud
 rm -f formats/case_study/frontend/schema.json
 rm -f formats/case_study/publisher/schema.json
 ```
-
-## Howtos
-
-* [How to add a new content format](docs/adding-a-new-format.md)
-* [How to convert finder schemas](docs/converting-finder-schemas.md) (needed when adding/changing specialist document formats)
-* [Adding contract tests to your app](docs/contract-testing-howto.md)
-* [Suggested workflows](docs/suggested-workflows.md)
-* [Why do contract testing?](docs/why-contract-testing.md)
-* [Running your frontend against the examples (content-store not needed)](docs/running-frontend-against-examples.md)
-
