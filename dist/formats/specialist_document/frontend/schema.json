@@ -217,6 +217,9 @@
           "$ref": "#/definitions/employment_appeal_tribunal_decision_metadata"
         },
         {
+          "$ref": "#/definitions/employment_tribunal_decision_metadata"
+        },
+        {
           "$ref": "#/definitions/european_structural_investment_fund_metadata"
         },
         {
@@ -665,6 +668,50 @@
         "tribunal_decision_decision_date": {
           "type": "string",
           "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-([012][0-9]|3[0-1])$"
+        }
+      }
+    },
+    "employment_tribunal_decision_metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "bulk_published": {
+          "type": "boolean"
+        },
+        "document_type": {
+          "type": "string",
+          "enum": [
+            "employment_tribunal_decision"
+          ]
+        },
+        "tribunal_decision_country": {
+          "type": "string",
+          "enum": [
+            "england-and-wales",
+            "scotland"
+          ]
+        },
+        "tribunal_decision_country_name": {
+          "type": "string"
+        },
+        "tribunal_decision_categories": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "tribunal_decision_categories_name": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "tribunal_decision_decision_date": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-([012][0-9]|3[0-1])$"
+        },
+        "hidden_indexable_content": {
+          "type": "string"
         }
       }
     },
