@@ -15,6 +15,14 @@ combine_schemas = ->(task) do
   end
 end
 
+hand_made_publisher_schemas = FileList.new("formats/*/publisher/schema.json")
+
+rule %r{^dist/formats/.*/publisher/schema.json} => ->(f) { f.sub(%r{^dist/}, '') } do |t|
+  FileUtils.cp t.source, t.name
+end
+
+task hand_made_publisher_schemas: hand_made_publisher_schemas.pathmap("dist/%p")
+
 def sources_for_v1_schema(filename)
   Rake::FileList.new(
     "formats/{definitions,metadata,v1_metadata,base_links}.json",
@@ -40,8 +48,7 @@ rule %r{^dist/formats/.*/publisher/schema.json} => ->(f) { sources_for_v1_schema
 rule %r{^dist/formats/.*/publisher_v2/schema.json} => ->(f) { sources_for_v2_details(f) }, &combine_schemas
 rule %r{^dist/formats/.*/publisher_v2/links.json} => ->(f) { sources_for_v2_links(f) }, &combine_schemas
 
-hand_made_publisher_schemas = FileList.new("formats/*/publisher/schema.json").pathmap("%d")
-generated_formats = FileList.new("formats/*/publisher").exclude(*hand_made_publisher_schemas)
+generated_formats = FileList.new("formats/*/publisher").exclude(*hand_made_publisher_schemas.pathmap("%d"))
 
 task combined_publisher_v1_schemas: generated_formats.pathmap("dist/%p/schema.json")
 task combined_publisher_v2_schemas: generated_formats.pathmap("dist/%p_v2/schema.json")
@@ -51,6 +58,7 @@ task combined_publisher_v2_links: generated_formats.exclude { |f| !File.exist?("
   .pathmap("dist/%p_v2/links.json")
 
 task combined_publisher_schemas: %i{
+  hand_made_publisher_schemas
   combined_publisher_v1_schemas
   combined_publisher_v2_schemas
   combined_publisher_v2_links
