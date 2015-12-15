@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "body"
+  ],
+  "properties": {
+    "body": {
+      "type": "string"
+    },
+    "footer_legal_disclaimer": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties": false,
+   "required": [
+     "body",
+     "first_published_at"
+   ],
+  "properties": {
+    "body": {
+      "type": "string"
+    },
+    "first_published_at": {
+      "type": "string",
+      "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-([012][0-9]|3[0-1])$"
+    }
+  }
+}
