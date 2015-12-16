@@ -3,6 +3,10 @@
   "type": "object",
   "additionalProperties": false,
   "properties": {
+    "alpha_taxons": {
+      "description": "Prototype-stage taxonomy label for this content item",
+      "$ref": "#/definitions/guid_list"
+    },
     "mainstream_browse_pages": {
       "description": "Powers the /browse section of the site. These are known as sections in some legacy apps.",
       "$ref": "#/definitions/guid_list"
