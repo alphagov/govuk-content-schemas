@@ -28,7 +28,7 @@ publisher_v2_validation_records := $(publisher_v2_examples:formats/%.json=dist/f
 publisher_v2_links_validation_records := $(publisher_v2_links_examples:formats/%.json=dist/formats/%.json.publisher_v2_links.valid)
 
 # The various scripts used in the build process
-combiner_bin := bundle exec rake combined_publisher_schemas
+combiner_bin := bundle exec rake combine_publisher_schemas
 frontend_generator_bin := bundle exec ./bin/generate_frontend_schema
 validation_bin := bundle exec ./bin/validate
 ensure_example_base_paths_unique_bin := bundle exec ./bin/ensure_example_base_paths_unique
