@@ -1,6 +1,11 @@
+require 'pathname'
 require 'json-schema'
 
 module SchemaBuilderHelpers
+  def project_root
+    Pathname.new(File.expand_path("../../", __dir__))
+  end
+
   def build_schema(name, properties: nil, definitions: nil, required: nil)
     schema = {
       "$schema" => "http://json-schema.org/draft-04/schema#",
@@ -47,5 +52,9 @@ module SchemaBuilderHelpers
       "additionalProperties" => false,
       "properties" => build_ref_properties(link_names, "frontend_links")
     }
+  end
+
+  def slice_hash(hash, *keys)
+    keys.each_with_object({}) { |k, h| h[k] = hash[k] if hash.has_key?(k) }
   end
 end

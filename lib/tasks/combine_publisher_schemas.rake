@@ -2,7 +2,7 @@ require 'govuk_content_schemas/schema_combiner'
 require 'json-schema'
 require 'json'
 
-READER = JSON::Schema::Reader.new(accept_file: true, accept_uri: false)
+schema_reader = JSON::Schema::Reader.new(accept_file: true, accept_uri: false)
 
 hand_made_publisher_schemas = FileList.new("formats/*/publisher/schema.json")
 
@@ -34,7 +34,8 @@ def sources_for_v2_links(filename)
 end
 
 combine_schemas = ->(task) do
-  source_schemas = Hash[task.sources.map { |s| [s.pathmap("%n").to_sym, READER.read(s)] }]
+  source_schemas = Hash[task.sources.map { |s| [s.pathmap("%n").to_sym, schema_reader.read(s)] }]
+  FileUtils.mkdir_p task.name.pathmap("%d")
   format_name = task.name.pathmap("%{dist/formats/,}d").pathmap("%d")
 
   combiner = GovukContentSchemas::SchemaCombiner.new(source_schemas, format_name)
