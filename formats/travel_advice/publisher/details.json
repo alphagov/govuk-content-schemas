@@ -9,7 +9,8 @@
      "change_description",
      "alert_status",
      "email_signup_link",
-     "parts"
+     "parts",
+     "actions"
   ],
   "properties": {
     "summary": {
@@ -65,6 +66,25 @@
             "type": "string"
           },
           "body": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "actions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["request_type"],
+        "properties": {
+          "request_type": {
+            "type": "string"
+          },
+          "requester": {
+            "type": "string"
+          },
+          "comment": {
             "type": "string"
           }
         }
