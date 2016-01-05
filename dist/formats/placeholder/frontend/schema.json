@@ -54,7 +54,7 @@
     },
     "details": {
       "type": "object",
-      "additionalProperties": false,
+      "additionalProperties": true,
       "properties": {
         "analytics_identifier": {
           "type": "string",
