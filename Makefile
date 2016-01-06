@@ -1,5 +1,3 @@
-frontend_examples := $(wildcard formats/*/frontend/examples/*.json)
-
 # All of the publisher details schemas used as input
 details_schemas := $(wildcard formats/*/publisher/details.json)
 links_schemas := $(wildcard formats/*/publisher/links.json)
@@ -17,7 +15,6 @@ frontend_schemas := $(combined_publisher_schemas:publisher/schema.json=frontend/
 # The various scripts used in the build process
 combiner_bin := bundle exec rake combine_publisher_schemas
 frontend_generator_bin := bundle exec ./bin/generate_frontend_schema
-ensure_example_base_paths_unique_bin := bundle exec ./bin/ensure_example_base_paths_unique
 
 # The tasks run as part of the default make process
 default: $(dist_publisher_schemas) $(frontend_schemas) validate_unique_base_path validate_examples
@@ -27,7 +24,7 @@ clean:
 	rm -rf dist/formats
 
 validate_unique_base_path: $(frontend_schemas)
-	$(ensure_example_base_paths_unique_bin) $(frontend_examples)
+	bundle exec rake validate_uniqueness_of_frontend_example_base_paths
 
 validate_examples:
 	bundle exec rake validate_examples

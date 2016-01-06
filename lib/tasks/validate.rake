@@ -15,8 +15,29 @@ def valid?(example)
   errors.none?
 end
 
+def base_path(example_file)
+  JSON.parse(File.read(example_file))['base_path']
+end
+
 task :validate_examples do
   examples = Rake::FileList.new("formats/**/examples/*.json")
   failed_examples = examples.reject { |example| valid?(example) }
   abort "The following examples don't validate against their schemas:\n" + failed_examples.join("\n") if failed_examples.any?
+end
+
+task :validate_uniqueness_of_frontend_example_base_paths, :files do |t, args|
+  frontend_examples = args[:files] || Rake::FileList.new("formats/*/frontend/examples/*.json")
+  grouped = frontend_examples.group_by {|file| base_path(file) }
+  duplicates = grouped.select {|base_path, group| group.count > 1 }
+
+  if duplicates.any?
+    $stderr.puts "#{duplicates.count} duplicate(s) found:"
+
+    duplicates.each do |base_path, group|
+      group.each do |filename|
+        $stderr.puts "  #{filename}"
+      end
+    end
+    abort
+  end
 end
