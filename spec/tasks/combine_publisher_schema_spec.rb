@@ -40,8 +40,8 @@ RSpec.describe 'combine_publisher_schemas' do
   end
 
   after(:each) do
-    FileUtils.rmdir(project_root.join("formats", format_name))
-    FileUtils.rmdir(project_root.join("dist/formats", format_name))
+    FileUtils.rm_r(project_root.join("formats", format_name))
+    FileUtils.rm_r(project_root.join("dist/formats", format_name))
   end
 
   describe "publisher/schema.json" do
