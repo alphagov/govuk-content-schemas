@@ -13,8 +13,7 @@ dist_publisher_schemas := $(combined_publisher_schemas) $(dist_hand_made_publish
 frontend_schemas := $(combined_publisher_schemas:publisher/schema.json=frontend/schema.json)
 
 # The various scripts used in the build process
-combiner_bin := bundle exec rake combine_publisher_schemas
-frontend_generator_bin := bundle exec ./bin/generate_frontend_schema
+combiner_bin := bundle exec rake combine_schemas
 
 # The tasks run as part of the default make process
 default: $(dist_publisher_schemas) $(frontend_schemas) validate_unique_base_path validate_examples
@@ -44,5 +43,4 @@ dist/%/publisher_v2/links.json: formats/definitions.json formats/links_metadata.
 
 # Recipe for building the frontend schema from the publisher schema and frontend links definition
 dist/%/frontend/schema.json: dist/%/publisher/schema.json formats/frontend_links_definition.json
-	mkdir -p `dirname ${@}`
-	$(frontend_generator_bin) -f formats/frontend_links_definition.json ${@:frontend/schema.json=publisher/schema.json} > ${@}
+	$(combiner_bin)

@@ -1,4 +1,5 @@
 require 'govuk_content_schemas/schema_combiner'
+require 'govuk_content_schemas/frontend_schema_generator'
 require 'json-schema'
 require 'json'
 
@@ -35,7 +36,11 @@ def sources_for_v2_links(filename)
   )
 end
 
-combine_schemas = ->(task) do
+def sources_for_frontend_schema(filename)
+  Rake::FileList.new(filename.pathmap("%{frontend,publisher}p"))
+end
+
+combine_publisher_schemas = ->(task) do
   source_schemas = Hash[task.sources.map { |s| [s.pathmap("%n").to_sym, schema_reader.read(s)] }]
   FileUtils.mkdir_p task.name.pathmap("%d")
   format_name = task.name.pathmap("%{dist/formats/,}d").pathmap("%d")
@@ -47,18 +52,34 @@ combine_schemas = ->(task) do
   end
 end
 
-rule %r{^dist/formats/.*/publisher/schema.json} => ->(f) { sources_for_v1_schema(f) }, &combine_schemas
-rule %r{^dist/formats/.*/publisher_v2/schema.json} => ->(f) { sources_for_v2_details(f) }, &combine_schemas
-rule %r{^dist/formats/.*/publisher_v2/links.json} => ->(f) { sources_for_v2_links(f) }, &combine_schemas
+combine_frontend_schemas = ->(task) do
+  publisher_schema = schema_reader.read(task.sources.first)
+  frontend_links_definition = schema_reader.read("formats/frontend_links_definition.json")
 
-generated_formats = FileList.new("formats/*/publisher").exclude(*hand_made_publisher_schemas.pathmap("%d"))
+  FileUtils.mkdir_p task.name.pathmap("%d")
+  generator = GovukContentSchemas::FrontendSchemaGenerator.new(publisher_schema, frontend_links_definition)
 
-task combine_publisher_v1_schemas: generated_formats.pathmap("dist/%p/schema.json")
-task combine_publisher_v2_schemas: generated_formats.pathmap("dist/%p_v2/schema.json")
+  File.open(task.name, 'w') do |file|
+    file.puts JSON.pretty_generate(generator.generate.schema)
+  end
+end
+
+rule %r{^dist/formats/.*/publisher/schema.json} => ->(f) { sources_for_v1_schema(f) }, &combine_publisher_schemas
+rule %r{^dist/formats/.*/publisher_v2/schema.json} => ->(f) { sources_for_v2_details(f) }, &combine_publisher_schemas
+rule %r{^dist/formats/.*/publisher_v2/links.json} => ->(f) { sources_for_v2_links(f) }, &combine_publisher_schemas
+
+rule %r{^dist/formats/.*/frontend/schema.json} => ->(f) { sources_for_frontend_schema(f) }, &combine_frontend_schemas
+
+generated_publisher_formats = FileList.new("formats/*/publisher").exclude(*hand_made_publisher_schemas.pathmap("%d"))
+generated_frontend_formats = FileList.new("formats/*/frontend")
+
+task combine_publisher_v1_schemas: generated_publisher_formats.pathmap("dist/%p/schema.json")
+task combine_publisher_v2_schemas: generated_publisher_formats.pathmap("dist/%p_v2/schema.json")
 # Some formats don't have source v2 links.json files. Exclude them so we don't generate generic
 # links.json files in dist
-task combine_publisher_v2_links: generated_formats.exclude { |f| !File.exist?("#{f}/links.json") }
+task combine_publisher_v2_links: generated_publisher_formats.exclude { |f| !File.exist?("#{f}/links.json") }
   .pathmap("dist/%p_v2/links.json")
+task combine_frontend_schemas: generated_frontend_formats.pathmap("dist/%p/schema.json")
 
 task combine_publisher_schemas: %i{
   hand_made_publisher_schemas
@@ -66,3 +87,5 @@ task combine_publisher_schemas: %i{
   combine_publisher_v2_schemas
   combine_publisher_v2_links
 }
+
+task combine_schemas: %i{combine_publisher_schemas combine_frontend_schemas}
