@@ -1,7 +1,10 @@
+require 'rake/clean'
 require 'govuk_content_schemas/schema_combiner'
 require 'govuk_content_schemas/frontend_schema_generator'
 require 'json-schema'
 require 'json'
+
+CLEAN << "dist/formats"
 
 schema_reader = JSON::Schema::Reader.new(accept_file: true, accept_uri: false)
 
