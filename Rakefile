@@ -28,6 +28,6 @@ task :new_format, [:format_name] do |_task, args|
   end
 end
 
-task :default => [:spec, :build]
+task :default => [:build]
 
 Dir.glob('lib/tasks/*.rake').each { |r| import r }
