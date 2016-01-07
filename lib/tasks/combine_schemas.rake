@@ -51,7 +51,7 @@ combine_publisher_schemas = ->(task) do
   combiner = GovukContentSchemas::SchemaCombiner.new(source_schemas, format_name)
 
   File.open(task.name, 'w') do |file|
-    file.write JSON.pretty_generate(combiner.combined.schema)
+    file.puts JSON.pretty_generate(combiner.combined.schema)
   end
 end
 
