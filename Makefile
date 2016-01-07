@@ -24,8 +24,7 @@ default: $(dist_publisher_schemas) $(frontend_schemas) validate_unique_base_path
 
 # A task to remove all intermediary files and force a complete rebuild
 clean:
-	rm -f $(frontend_schemas)
-	rm -f $(dist_publisher_schemas)
+	rm -rf dist/formats
 
 validate_unique_base_path: $(frontend_schemas)
 	$(ensure_example_base_paths_unique_bin) $(frontend_examples)
