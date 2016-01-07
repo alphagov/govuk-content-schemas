@@ -35,16 +35,14 @@ github_status "$REPO_NAME" pending "is running on Jenkins"
 # is master.
 git merge --no-commit origin/master || git merge --abort
 
-# Clear out generated files so that they are regenerated during 'bundle exec rake'
-make clean
-
 bundle install --path "${HOME}/bundles/${JOB_NAME}" --deployment --without development
-RAILS_ENV=test bundle exec rake
+bundle exec rake spec
+bundle exec rake clean build
 
 export EXIT_STATUS=$?
 
 if ! git diff --exit-code; then
-  echo "Changes to checked-in files detected after running 'make clean' and 'make'. If these are generated files, you might need to 'make clean && make' to ensure they are regenerated and push the changes"
+  echo "Changes to checked-in files detected after running 'rake clean' and 'rake build'. If these are generated files, you might need to 'rake clean build' to ensure they are regenerated and push the changes"
   export EXIT_STATUS=1
 fi
 

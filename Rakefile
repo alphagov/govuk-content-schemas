@@ -6,9 +6,7 @@ begin
 rescue LoadError
 end
 
-task :make do
-  sh "make clean && make"
-end
+task build: [:clean, :combine_schemas, :validate_uniqueness_of_frontend_example_base_paths, :validate_examples]
 
 desc "creates the folders and files for adding a new format"
 task :new_format, [:format_name] do |_task, args|
@@ -30,6 +28,6 @@ task :new_format, [:format_name] do |_task, args|
   end
 end
 
-task :default => [:spec, :make]
+task :default => [:build]
 
 Dir.glob('lib/tasks/*.rake').each { |r| import r }

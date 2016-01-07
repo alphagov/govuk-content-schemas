@@ -7,7 +7,7 @@ The steps would be:
 
 1. edit the case_study [`details.json`](/formats/case_study/publisher/details.json) to
    add the new optional field
-2. run `make`. This will:
+2. run `rake`. This will:
    1. regenerate the publisher [`schema.json`](/dist/formats/case_study/publisher/schema.json) to incorporate the changes you made to the `details.json`
    2. regenerate the frontend [schema.json](/dist/formats/case_study/frontend/schema.json) to incorporate the same changes
    3. revalidate all example files to check if they are still valid after this change. This will pass, because the new field is optional

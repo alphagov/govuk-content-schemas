@@ -48,7 +48,7 @@ The 'publisher' [`schema.json`](dist/formats/case_study/publisher/schema.json) i
 
 These files are stored in the `govuk-content-schemas` repository in the
 [`formats`](/formats) subdirectory. A build process (implemented using a
-[`Makefile`](/Makefile)) combines the three component files into the final
+[`Rakefile`](/Rakefile)) combines the three component files into the final
 `schema.json` file.
 
 The generated files are all stored in the [`dist`](/dist/) subdirectory.
@@ -80,13 +80,7 @@ formats
 
 ### Combining files to make publisher schema
 
-The `combine_publisher_schema` script is provided to generate the combined
-`schema.json` from the source files:
-
-```
-$ bundle exec ./bin/combine_publisher_schema formats/case_study/publisher
-```
-
+The build process generates the combined `schema.json` from the source files.
 It will write its output to the `dist` directory (generating any folders if needed).
 
 ### Generation of frontend schemas
@@ -94,65 +88,27 @@ It will write its output to the `dist` directory (generating any folders if need
 The output from publishing apps will be verified using the `publisher` schema,
 so we know that they will generate output which complies with that schema.
 
-However, the frontend json is slightly different from the `publisher`
-json and so it needs a different schema.
+However, the frontend JSON is slightly different from the `publisher`
+JSON and so it needs a different schema.
 
 In order to be sure that the frontend examples match up, we need to derive
-a frontend schema from the backend schema.
-
-A script and make task is provided to do this:
-
-```sh
-$ bundle exec ./bin/generate_frontend_schema dist/formats/case_study/publisher/schema.json > dist/formats/case_study/frontend/schema.json
-```
+a frontend schema from the backend schema. This is also done as part of the standard build process.
 
 ### Validation of frontend examples
 
-To actually validate a frontend example, use the `validate` script:
+To actually validate a frontend example, use the `validate_examples` Rake task:
 
 ```sh
-$ bundle exec ./bin/validate formats/case_study/frontend/examples/archived.json
-formats/case_study/frontend/examples/archived.json: OK
+$ bundle exec rake validate_examples
 ```
 
-This will exit with a non-zero status if validation fails. Invoke `validate`
-with no arguments for full usage instructions.
+This will print the errors out to the console if validation fails.
 
-### Makefile
+### Rakefile
 
-A `Makefile` exists which combines these scripts. It
+A `Rakefile` exists which combines these scripts. It
 automatically re-generates the intermediate schema files and validates all the
 examples.
 
-To invoke the default task just invoke `make` on its own. Make prints out each
-command as it is invoked:
-
-```
-$ make
-bundle exec ./bin/combine_publisher_schema formats/case_study/publisher/
-bundle exec ./bin/generate_frontend_schema formats/case_study/publisher/schema.json > formats/case_study/frontend/schema.json
-bundle exec ./bin/validate formats/case_study/frontend/examples/archived.json && touch formats/case_study/frontend/examples/archived.json.valid
-formats/case_study/frontend/examples/archived.json: OK
-bundle exec ./bin/validate formats/case_study/frontend/examples/case_study.json && touch formats/case_study/frontend/examples/case_study.json.valid
-formats/case_study/frontend/examples/case_study.json: OK
-bundle exec ./bin/validate formats/case_study/frontend/examples/translated.json && touch formats/case_study/frontend/examples/translated.json.valid
-formats/case_study/frontend/examples/translated.json: OK
-```
-
-If no files are changed, then make will not do anything:
-
-```
-$ make
-make: Nothing to be done for `default'.
-```
-
-Make relies on the file timestamps to determine when things need updating.
-
-Finally you can delete all of the derived files and force a re-run by using `make clean`:
-
-```
-$ make clean
-rm -f formats/case_study/frontend/examples/archived.json.valid formats/case_study/frontend/examples/case_study.json.valid formats/case_study/frontend/examples/translated.json.valid
-rm -f formats/case_study/frontend/schema.json
-rm -f formats/case_study/publisher/schema.json
-```
+To invoke the default task just invoke `rake` on its own. You can delete all of
+the derived files and force a re-run by using `rake clean build`:
