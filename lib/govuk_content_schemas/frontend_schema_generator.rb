@@ -43,12 +43,17 @@ private
   end
 
   def frontend_properties
-    excluding_internal = @publisher_schema.schema['properties'].reject { |property_name| internal?(property_name) }
-    excluding_internal.merge(
+    properties = @publisher_schema.schema['properties']
+    properties = properties.reject { |property_name| internal?(property_name) }
+    properties = resolve_multiple_content_types(properties)
+
+    properties = properties.merge(
       'links' => frontend_links,
       'updated_at' => updated_at,
       'base_path' => { '$ref' => '#/definitions/absolute_path' }
     )
+
+    properties
   end
 
   def frontend_link_names
@@ -89,5 +94,23 @@ private
 
   def frontend_links_ref
     {"$ref" => "#/definitions/frontend_links"}
+  end
+
+  def multiple_content_types_ref
+    { "$ref" => "#/definitions/multiple_content_types" }
+  end
+
+  def resolve_multiple_content_types(object)
+    if object == multiple_content_types_ref
+      { "type" => "string" }
+    elsif object.is_a?(Hash)
+      object.each.with_object({}) do |(key, value), hash|
+        hash.merge!(key => resolve_multiple_content_types(value))
+      end
+    elsif object.is_a?(Array)
+      object.map { |element| resolve_multiple_content_types(element) }
+    else
+      object
+    end
   end
 end
