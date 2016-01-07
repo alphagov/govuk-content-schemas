@@ -6,11 +6,12 @@ schema_reader = JSON::Schema::Reader.new(accept_file: true, accept_uri: false)
 
 hand_made_publisher_schemas = FileList.new("formats/*/publisher/schema.json")
 
-rule %r{^dist/formats/.*/publisher/schema.json} => ->(f) { f.sub(%r{^dist/}, '') } do |t|
+rule %r{^dist/formats/.*/publisher(_v2)?/schema.json} => ->(f) { f.sub(%r{^dist/}, '').sub(%r{_v2}, "") } do |t|
   FileUtils.cp t.source, t.name
 end
 
-task hand_made_publisher_schemas: hand_made_publisher_schemas.pathmap("dist/%p")
+task hand_made_publisher_schemas: hand_made_publisher_schemas.pathmap("dist/%p").add(
+  hand_made_publisher_schemas.pathmap("dist/%p").pathmap("%{publisher,publisher_v2}p"))
 
 def sources_for_v1_schema(filename)
   Rake::FileList.new(
