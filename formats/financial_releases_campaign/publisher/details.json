@@ -7,19 +7,9 @@
      "body"
    ],
   "properties": {
-     "image": {
-       "type": "object",
-       "additionalProperties": false,
-       "properties": {
-         "url": {
-           "type": "string",
-           "format": "uri"
-         },
-         "alt_text": {
-           "type": "string"
-         }
-       }
-     },
+    "image": {
+      "$ref": "#/definitions/image"
+    },
     "header_legal_disclaimer": {
       "description": "an html snippet with legal disclaimer for financial release to go above content.",
       "type": "string"

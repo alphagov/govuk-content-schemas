@@ -61,17 +61,7 @@
       ],
       "properties": {
         "image": {
-          "type": "object",
-          "additionalProperties": false,
-          "properties": {
-            "url": {
-              "type": "string",
-              "format": "uri"
-            },
-            "alt_text": {
-              "type": "string"
-            }
-          }
+          "$ref": "#/definitions/image"
         }
       }
     },
@@ -135,6 +125,32 @@
       "type": "array",
       "items": {
         "$ref": "#/definitions/guid"
+      }
+    },
+    "image": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "url"
+      ],
+      "properties": {
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "alt_text": {
+          "type": "string"
+        },
+        "caption": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
       }
     },
     "route": {

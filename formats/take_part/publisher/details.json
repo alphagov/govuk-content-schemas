@@ -11,17 +11,7 @@
       "type": "string"
     },
     "image": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "url": {
-          "type": "string",
-          "format": "uri"
-        },
-        "alt_text": {
-          "type": "string"
-        }
-      }
+      "$ref": "#/definitions/image"
     }
   }
 }
