@@ -17,7 +17,14 @@
       "type": "string"
     },
     "description": {
-      "type": "string"
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "format": {
       "type": "string",
