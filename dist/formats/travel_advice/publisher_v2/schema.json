@@ -95,6 +95,7 @@
       "required": [
         "summary",
         "country",
+        "updated_at",
         "reviewed_at",
         "change_description",
         "alert_status",
@@ -120,6 +121,10 @@
               "type": "string"
             }
           }
+        },
+        "updated_at": {
+          "type": "string",
+          "format": "date-time"
         },
         "reviewed_at": {
           "type": "string",
