@@ -39,7 +39,7 @@
       }
     },
     "analytics_identifier": {
-      "type": "string"
+      "$ref": "#/definitions/analytics_identifier"
     },
     "phase": {
       "description": "The service design phase of this content item - https://www.gov.uk/service-manual/phases",
@@ -221,6 +221,17 @@
       "pattern": "^/(([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})+(/([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)*)?(\\?([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)?(#([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)?$",
       "description": "A path with optional query string and/or fragment."
     },
+    "analytics_identifier": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "A short identifier we send to Google Analytics for multi-valued fields. This means we avoid the truncated values we would get if we sent the path or slug of eg organisations."
+    },
     "guid": {
       "type": "string",
       "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-[1-5][a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$"
@@ -344,7 +355,14 @@
             "type": "string"
           },
           "description": {
-            "type": "string"
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
           },
           "base_path": {
             "$ref": "#/definitions/absolute_path"
@@ -359,6 +377,9 @@
           },
           "locale": {
             "type": "string"
+          },
+          "analytics_identifier": {
+            "$ref": "#/definitions/analytics_identifier"
           }
         }
       }

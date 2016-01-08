@@ -69,7 +69,7 @@
       }
     },
     "analytics_identifier": {
-      "type": "string"
+      "$ref": "#/definitions/analytics_identifier"
     },
     "phase": {
       "description": "The service design phase of this content item - https://www.gov.uk/service-manual/phases",

@@ -18,7 +18,14 @@
         "type": "string"
       },
       "description": {
-        "type": "string"
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ]
       },
       "base_path": {
         "$ref" : "#/definitions/absolute_path"
@@ -33,6 +40,9 @@
       },
       "locale": {
         "type": "string"
+      },
+      "analytics_identifier": {
+        "$ref": "#/definitions/analytics_identifier"
       }
     }
   }
