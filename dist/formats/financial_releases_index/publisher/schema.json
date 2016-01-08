@@ -245,6 +245,25 @@
           "description": "For prefix redirects, preserve or ignore the rest of the fullpath. For exact, preserve or ignore the querystring."
         }
       }
+    },
+    "multiple_content_types": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "content_type",
+          "content"
+        ],
+        "properties": {
+          "content_type": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          }
+        }
+      }
     }
   }
 }

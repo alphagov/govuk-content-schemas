@@ -121,4 +121,71 @@ RSpec.describe GovukContentSchemas::FrontendSchemaGenerator do
       expect(generated.schema['properties']['links']).to eq(build_frontend_links_schema('available_translations'))
     end
   end
+
+  context "when the 'multiple_content_types' definition is used" do
+    let(:nested_object) do
+      {
+        "type" => "object",
+        "properties" => {
+          "body" => {
+            "$ref" => "#/definitions/multiple_content_types",
+          }
+        }
+      }
+    end
+
+    let(:nested_array) do
+      {
+        "type" => "array",
+        "items" => {
+          "$ref" => "#/definitions/multiple_content_types",
+        }
+      }
+    end
+
+    let(:deeply_nested) do
+      {
+        "type" => "array",
+        "items" => {
+          "type" => "object",
+          "properties" => {
+            "body" => {
+              "$ref" => "#/definitions/multiple_content_types",
+            }
+          }
+        }
+      }
+    end
+
+    let(:properties) do
+      {
+        "body" => {
+          "$ref" => "#/definitions/multiple_content_types",
+        },
+        "nested_object" => nested_object,
+        "nested_array" => nested_array,
+        "deeply_nested" => deeply_nested,
+      }
+    end
+
+    let(:generated) do
+      schema = build_schema("schema.json", properties: properties)
+      described_class.new(schema, frontend_links_definition).generate
+    end
+
+    it "replaces the field's 'ref' with a 'type' of 'string'" do
+      properties = generated.schema["properties"]
+      expect(properties["body"]).to eq("type" => "string")
+
+      nested_object_properties = properties["nested_object"]["properties"]
+      expect(nested_object_properties["body"]).to eq("type" => "string")
+
+      nested_array = properties["nested_array"]
+      expect(nested_array["items"]).to eq("type" => "string")
+
+      deeply_nested = properties["deeply_nested"]
+      nested_object_properties = deeply_nested["items"]["properties"]
+      expect(nested_object_properties["body"]).to eq("type" => "string")
+    end
+  end
 end
