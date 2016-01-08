@@ -51,17 +51,6 @@
           }
         }
       }
-    },
-    "links": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "can_be_replaced_by": {
-          "description": "Optional.  The content_item that this redirect has replaced.",
-          "$ref": "#/definitions/guid_list",
-          "maxItems": 1
-        }
-      }
     }
   },
   "definitions": {

@@ -82,13 +82,7 @@
     "links": {
       "type": "object",
       "additionalProperties": false,
-      "required": [
-        "can_be_replaced_by"
-      ],
       "properties": {
-        "can_be_replaced_by": {
-          "$ref": "#/definitions/frontend_links"
-        },
         "alpha_taxons": {
           "$ref": "#/definitions/frontend_links"
         },
