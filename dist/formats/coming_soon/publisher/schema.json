@@ -113,13 +113,7 @@
     "links": {
       "type": "object",
       "additionalProperties": false,
-      "required": [
-        "can_be_replaced_by"
-      ],
       "properties": {
-        "can_be_replaced_by": {
-          "$ref": "#/definitions/guid_list"
-        },
         "alpha_taxons": {
           "description": "Prototype-stage taxonomy label for this content item",
           "$ref": "#/definitions/guid_list"

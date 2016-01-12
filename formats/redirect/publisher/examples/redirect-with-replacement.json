@@ -10,8 +10,5 @@
       "type": "exact",
       "destination": "/maritime-safety-weather-and-navigation/register-406-mhz-beacons?query=answer#fragment"
     }
-  ],
-  "links": {
-    "can_be_replaced_by": ["2054b5e5-8d58-456b-8832-66c0d2b72565"]
-  }
+  ]
 }
