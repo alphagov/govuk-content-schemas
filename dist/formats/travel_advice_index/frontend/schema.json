@@ -80,6 +80,7 @@
             "required": [
               "name",
               "base_path",
+              "updated_at",
               "public_updated_at",
               "change_description",
               "synonyms"
@@ -90,6 +91,10 @@
               },
               "base_path": {
                 "$ref": "#/definitions/absolute_path"
+              },
+              "updated_at": {
+                "type": "string",
+                "format": "date-time"
               },
               "public_updated_at": {
                 "type": "string",

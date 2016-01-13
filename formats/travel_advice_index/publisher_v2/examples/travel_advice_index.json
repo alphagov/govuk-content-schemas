@@ -9,6 +9,7 @@
       {
         "name": "Afghanistan",
         "base_path": "/foreign-travel-advice/afghanistan",
+        "updated_at": "2016-01-01T00:00:00+00:00",
         "public_updated_at": "2015-10-26T13:00:37+00:00",
         "change_description": "Latest update: Summary - on 26 October 2015 a serious earthquake struck causing casualties around the country and affecting communications networks; if someone you know is likely to have been involved and you're unable to contact them, contact the British Embassy in Kabul",
         "synonyms": [ ]
@@ -16,6 +17,7 @@
       {
         "name": "Austria",
         "base_path": "/foreign-travel-advice/austria",
+        "updated_at": "2016-01-02T00:00:00+00:00",
         "public_updated_at": "2015-09-14T12:47:51+01:00",
         "change_description": "Latest update: Summary – there’s ongoing disruption to rail and road transport; you should monitor local media and check with your transport provider or the Austrian Railways (OBB) website",
         "synonyms": [ ]
@@ -23,6 +25,7 @@
       {
         "name": "Finland",
         "base_path": "/foreign-travel-advice/finland",
+        "updated_at": "2016-01-03T00:00:00+00:00",
         "public_updated_at": "2015-10-12T15:33:20+01:00",
         "change_description": "Latest update: Summary – removal of advice on Northern Ireland football match",
         "synonyms": [ "arctic" ]
@@ -30,6 +33,7 @@
       {
         "name": "India",
         "base_path": "/foreign-travel-advice/india",
+        "updated_at": "2016-01-04T00:00:00+00:00",
         "public_updated_at": "2015-10-27T10:06:30+00:00",
         "change_description": "Latest update: Summary – removal of advice on Assam floods and the curfew in Srinagar ",
         "synonyms": [ ]
@@ -37,6 +41,7 @@
       {
         "name": "Malaysia",
         "base_path": "/foreign-travel-advice/malaysia",
+        "updated_at": "2016-01-05T00:00:00+00:00",
         "public_updated_at": "2015-10-23T11:19:28+01:00",
         "change_description": "Latest update: Summary - haze can cause disruption to local, regional air travel and to government and private schools",
         "synonyms": [ "Borneo" ]
@@ -44,6 +49,7 @@
       {
         "name": "Spain",
         "base_path": "/foreign-travel-advice/spain",
+        "updated_at": "2016-06-06T00:00:00+00:00",
         "public_updated_at": "2015-10-28T16:56:30+00:00",
         "change_description": "Latest update: Summary – information and advice for Manchester City fans travelling to Seville ",
         "synonyms": [ "Ibiza", "Majorca", "Mallorca", "Lanzarote", "Barcelona", "Benidorm", "Tenerife", "Canary Islands", "Canaries", "Gran Canaria" ]
