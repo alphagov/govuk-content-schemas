@@ -72,22 +72,43 @@
           "$ref": "#/definitions/image"
         },
         "header_legal_disclaimer": {
-          "description": "an html snippet with legal disclaimer for financial release to go above content.",
+          "description": "html snippet with legal disclaimer for financial release to go above content.",
           "type": "string"
         },
         "body": {
+          "description": "html snippet containing financial_release information",
           "type": "string"
         },
         "legend": {
           "description": "html legend snippet to register interest in campaign",
           "type": "string"
         },
+        "video_src": {
+          "description": "financial_release page video src",
+          "type": "string"
+        },
+        "video_transcript_title": {
+          "description": "html snippet containing video transcript title",
+          "type": "string"
+        },
+        "video_transcript_content": {
+          "description": " html snippet containing video transcript content",
+          "type": "string"
+        },
+        "video_transcript_legal_disclaimer": {
+          "description": "html snippet containing video transcript legal disclaimer",
+          "type": "string"
+        },
+        "body_extension": {
+          "type": "string",
+          "description": "html snippet containing further body content"
+        },
         "email_caption": {
           "description": "small disclaimer/description text to go under email registration form.",
           "type": "string"
         },
         "footer_legal_disclaimer": {
-          "description": "an html snippet with legal disclaimer for financial release to go below content, may be different from header disclaimer.",
+          "description": "html snippet with legal disclaimer for financial release to go below content, may be different from header disclaimer.",
           "type": "string"
         }
       }
