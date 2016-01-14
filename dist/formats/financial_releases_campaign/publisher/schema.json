@@ -122,6 +122,10 @@
         "body": {
           "type": "string"
         },
+        "legend": {
+          "description": "html legend snippet to register interest in campaign",
+          "type": "string"
+        },
         "email_caption": {
           "description": "small disclaimer/description text to go under email registration form.",
           "type": "string"
