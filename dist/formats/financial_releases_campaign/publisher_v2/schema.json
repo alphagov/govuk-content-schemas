@@ -112,7 +112,28 @@
           "type": "string"
         },
         "body": {
+          "description": "html snippet containing campaign information",
           "type": "string"
+        },
+        "video_src": {
+          "description": "campaign video src",
+          "type": "string"
+        },
+        "video_transcript_title": {
+          "description": "video transcript title",
+          "type": "string"
+        },
+        "video_transcript_content": {
+          "description": "video transcript content",
+          "type": "string"
+        },
+        "video_transcript_legal_disclaimer": {
+          "description": "video transcript legal disclaimer",
+          "type": "string"
+        },
+        "body_extension": {
+          "type": "string",
+          "description": "html snippet containing further campaign information"
         },
         "email_caption": {
           "description": "small disclaimer/description text to go under email registration form.",
