@@ -27,7 +27,8 @@
           "base_path": "/government/organisations/department-for-international-development",
           "api_url": "https://www.gov.uk/api/organisations/department-for-international-development",
           "web_url": "https://www.gov.uk/government/organisations/department-for-international-development",
-          "locale": "en"
+          "locale": "en",
+          "analytics_identifier": "L2"
         }
       ],
       "related_policies": [],
@@ -39,7 +40,8 @@
           "base_path": "/government/world/pakistan",
           "api_url": "https://www.gov.uk/api/content/government/world/pakistan",
           "web_url": "https://www.gov.uk/government/world/pakistan",
-          "locale": "en"
+          "locale": "en",
+          "analytics_identifier": "WL3"
         }
       ],
       "worldwide_organisations": [
@@ -49,7 +51,8 @@
           "base_path": "/government/world/organisations/dfid-pakistan",
           "api_url": "https://www.gov.uk/api/content/government/world/organisations/dfid-pakistan",
           "web_url": "https://www.gov.uk/government/world/organisations/dfid-pakistan",
-          "locale": "en"
+          "locale": "en",
+          "analytics_identifier": "W4"
         }
       ],
       "worldwide_priorities": [],
@@ -83,7 +86,7 @@
       ]
     },
     "locale": "en",
-    "need_ids": [],
+    "need_ids": ["100001", "100002"],
     "public_updated_at": "2012-12-17T15:45:44.000+00:00",
     "title": "Get Britain Building: Carlisle Park",
     "updated_at": "2014-11-17T14:19:42.460Z"
