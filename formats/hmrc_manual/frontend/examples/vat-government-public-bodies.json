@@ -128,6 +128,16 @@
         "web_url": "https://www.preview.alphagov.co.uk/hmrc-internal-manuals/vat-government-and-public-bodies",
         "locale": "en"
       }
+    ],
+    "organisations": [
+      {
+        "content_id": "6667cce2-e809-4e21-ae09-cb0bdc1ddda3",
+        "title": "HM Revenue & Customs",
+        "base_path": "/government/organisations/hm-revenue-customs",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/hm-revenue-customs",
+        "web_url": "https://www.gov.uk/government/organisations/hm-revenue-customs",
+        "locale": "en"
+      }
     ]
   }
 }
