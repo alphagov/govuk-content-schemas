@@ -1,0 +1,10 @@
+{
+  "format": "gone",
+  "publishing_app": "collections-publisher",
+  "routes": [
+    {
+      "path": "/some-gone-route",
+      "type": "exact"
+    }
+  ]
+}

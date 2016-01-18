@@ -10,7 +10,7 @@ schema_reader = JSON::Schema::Reader.new(accept_file: true, accept_uri: false)
 
 hand_made_publisher_schemas = FileList.new("formats/*/publisher/schema.json")
 
-rule %r{^dist/formats/.*/publisher(_v2)?/schema.json} => ->(f) { f.sub(%r{^dist/}, '').sub(%r{_v2}, "") } do |t|
+rule %r{^dist/formats/.*/publisher(_v2)?/schema.json} => ->(f) { f.sub(%r{^dist/}, '') } do |t|
   FileUtils.mkdir_p t.name.pathmap("%d")
   FileUtils.cp t.source, t.name
 end
