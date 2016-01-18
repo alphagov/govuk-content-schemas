@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "organisations",
+    "policy_areas"
+  ],
+  "properties": {
+    "organisations": {
+      "$ref": "#/definitions/guid_list"
+    },
+    "policy_areas": {
+      "$ref": "#/definitions/guid_list"
+    }
+  }
+}
