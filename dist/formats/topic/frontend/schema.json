@@ -115,10 +115,10 @@
         "children": {
           "$ref": "#/definitions/frontend_links"
         },
-        "alpha_taxons": {
+        "linked_items": {
           "$ref": "#/definitions/frontend_links"
         },
-        "linked_items": {
+        "alpha_taxons": {
           "$ref": "#/definitions/frontend_links"
         },
         "mainstream_browse_pages": {

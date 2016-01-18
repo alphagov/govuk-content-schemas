@@ -127,11 +127,17 @@
               "name": {
                 "type": "string"
               },
+              "description": {
+                "type": "string"
+              },
               "contents": {
                 "type": "array",
                 "items": {
                   "$ref": "#/definitions/absolute_path"
                 }
+              },
+              "content_ids": {
+                "$ref": "#/definitions/guid_list"
               }
             }
           }
