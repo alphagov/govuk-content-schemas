@@ -91,11 +91,17 @@
               "name": {
                 "type": "string"
               },
+              "description": {
+                "type": "string"
+              },
               "contents": {
                 "type": "array",
                 "items": {
                   "$ref": "#/definitions/absolute_path"
                 }
+              },
+              "content_ids": {
+                "$ref": "#/definitions/guid_list"
               }
             }
           }
@@ -107,6 +113,9 @@
       "additionalProperties": false,
       "properties": {
         "children": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "linked_items": {
           "$ref": "#/definitions/frontend_links"
         },
         "alpha_taxons": {
