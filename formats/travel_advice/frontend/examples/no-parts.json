@@ -13,7 +13,16 @@
     "change_description": "Latest update: Info about the cold.",
     "alert_status": [],
     "email_signup_link": "https://public.govdelivery.com/accounts/UKGOVUK/subscriber/topics?qsp=TRAVEL",
-    "parts": []
+    "parts": [],
+    "primary_parent": {
+      "web_url": "https://www.gov.uk/browse/abroad/travel-abroad",
+      "title": "Travel abroad",
+      "parent": {
+        "web_url": "https://www.gov.uk/browse/abroad",
+        "title": "Passports, travel and living abroad",
+        "parent": null
+      }
+    }
   },
   "format": "travel_advice",
   "links": {
