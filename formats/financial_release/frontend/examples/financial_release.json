@@ -7,8 +7,10 @@
   "locale": "en",
   "public_updated_at": "2015-12-01T00:00:00.000Z",
   "details": {
+    "header_legal_disclaimer": "<p>Dummy content for header legal disclaimer<p>",
     "first_published_at": "2015-10-05",
-    "body": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p><p>Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>This can be found at <a href='/lloydsshares'>lloydsshares</a>.</p>"
+    "body": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p><p>Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>This can be found at <a href='/lloydsshares'>lloydsshares</a>.</p>",
+    "footer_legal_disclaimer": "<p>Dummy content for footer legal disclaimer<p>"
   }
 }
 
