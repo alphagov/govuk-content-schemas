@@ -4,7 +4,8 @@
   "additionalProperties": false,
    "required": [
      "email_signup_link",
-     "countries"
+     "countries",
+     "primary_parent"
    ],
   "properties": {
     "email_signup_link": {
@@ -48,6 +49,23 @@
               "type": "string"
             }
           }
+        }
+      }
+    },
+    "primary_parent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "web_url", "parent"],
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "web_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "parent": {
+          "$ref": "#/definitions/parent"
         }
       }
     }

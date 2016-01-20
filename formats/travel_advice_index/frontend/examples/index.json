@@ -54,7 +54,16 @@
         "change_description": "Latest update: Summary – information and advice for Manchester City fans travelling to Seville ",
         "synonyms": [ "Ibiza", "Majorca", "Mallorca", "Lanzarote", "Barcelona", "Benidorm", "Tenerife", "Canary Islands", "Canaries", "Gran Canaria" ]
       }
-    ]
+    ],
+    "primary_parent": {
+      "web_url": "https://www.gov.uk/browse/abroad/travel-abroad",
+      "title": "Travel abroad",
+      "parent": {
+        "web_url": "https://www.gov.uk/browse/abroad",
+        "title": "Passports, travel and living abroad",
+        "parent": null
+      }
+    }
   },
   "format": "travel_advice_index",
   "links": {
