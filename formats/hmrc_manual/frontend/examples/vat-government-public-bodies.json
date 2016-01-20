@@ -109,13 +109,6 @@
         "published_at": "2015-03-05T15:11:32+00:00",
         "base_path": "/hmrc-internal-manuals/vat-government-and-public-bodies/vatgpb5350"
       }
-    ],
-    "organisations": [
-      {
-        "title": "HM Revenue & Customs",
-        "abbreviation": "HMRC",
-        "web_url": "https://www.gov.uk/government/organisations/hm-revenue-customs"
-      }
     ]
   },
   "links": {
