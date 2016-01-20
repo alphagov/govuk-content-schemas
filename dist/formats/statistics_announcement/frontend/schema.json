@@ -66,7 +66,7 @@
       "required": [
         "display_date",
         "state",
-        "sub_type"
+        "format_sub_type"
       ],
       "properties": {
         "cancellation_reason": {
@@ -93,7 +93,7 @@
             "provisional"
           ]
         },
-        "sub_type": {
+        "format_sub_type": {
           "type": "string",
           "enum": [
             "national",

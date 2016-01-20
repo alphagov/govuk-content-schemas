@@ -5,7 +5,7 @@
   "details": {
     "display_date": "20 January 2016 9:30am",
     "state": "cancelled",
-    "sub_type": "official",
+    "format_sub_type": "official",
     "cancelled_at": "2016-01-17T14:19:42.460Z",
     "cancellation_reason": "Official Statistics"
   },

@@ -5,7 +5,7 @@
   "details": {
     "display_date": "20 January 2016 9:30am",
     "state": "confirmed",
-    "sub_type": "official",
+    "format_sub_type": "official",
     "previous_display_date": "19 January 2016 9:30am",
     "latest_change_note": "Amended after inputting an error."
   },
