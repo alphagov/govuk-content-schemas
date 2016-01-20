@@ -109,8 +109,7 @@
       "additionalProperties": false,
       "required": [
         "section_id",
-        "manual",
-        "organisations"
+        "manual"
       ],
       "properties": {
         "section_id": {
@@ -147,29 +146,6 @@
           "properties": {
             "base_path": {
               "$ref": "#/definitions/absolute_path"
-            }
-          }
-        },
-        "organisations": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "additionalProperties": false,
-            "required": [
-              "title",
-              "abbreviation",
-              "web_url"
-            ],
-            "properties": {
-              "title": {
-                "type": "string"
-              },
-              "abbreviation": {
-                "type": "string"
-              },
-              "web_url": {
-                "type": "string"
-              }
             }
           }
         },

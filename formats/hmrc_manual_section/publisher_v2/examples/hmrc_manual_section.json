@@ -57,14 +57,7 @@
     ],
     "manual": {
       "base_path": "/hmrc-internal-manuals/vat-government-and-public-bodies"
-    },
-    "organisations": [
-      {
-        "title": "HM Revenue & Customs",
-        "abbreviation": "HMRC",
-        "web_url": "https://www.gov.uk/government/organisations/hm-revenue-customs"
-      }
-    ]
+    }
   },
  "routes": [
     {
