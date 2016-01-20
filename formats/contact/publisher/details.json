@@ -16,47 +16,6 @@
     "description": {
       "type": "string"
     },
-    "organisation": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "contact_index_content_id"
-      ],
-      "properties": {
-        "id": {
-          "type": "integer"
-        },
-        "title": {
-          "type": "string"
-        },
-        "format": {
-          "type": "string"
-        },
-        "slug": {
-          "type": "string"
-        },
-        "abbreviation": {
-          "type": "string"
-        },
-        "govuk_status": {
-          "type": "string"
-        },
-        "created_at": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "updated_at": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "ancestry": {
-          "type": ["string", "null"]
-        },
-        "contact_index_content_id": {
-          "type": "string"
-        }
-      }
-    },
     "quick_links": {
       "type": "array",
       "maxItems": 3,

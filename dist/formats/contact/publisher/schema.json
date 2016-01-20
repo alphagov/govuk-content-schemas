@@ -121,50 +121,6 @@
         "description": {
           "type": "string"
         },
-        "organisation": {
-          "type": "object",
-          "additionalProperties": false,
-          "required": [
-            "contact_index_content_id"
-          ],
-          "properties": {
-            "id": {
-              "type": "integer"
-            },
-            "title": {
-              "type": "string"
-            },
-            "format": {
-              "type": "string"
-            },
-            "slug": {
-              "type": "string"
-            },
-            "abbreviation": {
-              "type": "string"
-            },
-            "govuk_status": {
-              "type": "string"
-            },
-            "created_at": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "updated_at": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "ancestry": {
-              "type": [
-                "string",
-                "null"
-              ]
-            },
-            "contact_index_content_id": {
-              "type": "string"
-            }
-          }
-        },
         "quick_links": {
           "type": "array",
           "maxItems": 3,
@@ -427,6 +383,9 @@
         "related": {
           "$ref": "#/definitions/guid_list"
         },
+        "organisations": {
+          "$ref": "#/definitions/guid_list"
+        },
         "alpha_taxons": {
           "description": "Prototype-stage taxonomy label for this content item",
           "$ref": "#/definitions/guid_list"
@@ -437,9 +396,6 @@
         },
         "topics": {
           "description": "Powers the /topic section of the site. These are known as specialist sectors in some legacy apps.",
-          "$ref": "#/definitions/guid_list"
-        },
-        "organisations": {
           "$ref": "#/definitions/guid_list"
         },
         "parent": {
