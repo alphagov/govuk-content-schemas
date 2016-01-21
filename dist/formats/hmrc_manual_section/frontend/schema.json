@@ -65,8 +65,7 @@
       "additionalProperties": false,
       "required": [
         "section_id",
-        "manual",
-        "organisations"
+        "manual"
       ],
       "properties": {
         "section_id": {
