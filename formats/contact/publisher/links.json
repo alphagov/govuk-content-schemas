@@ -5,9 +5,6 @@
   "properties": {
     "related": {
       "$ref": "#/definitions/guid_list"
-    },
-    "organisations": {
-      "$ref": "#/definitions/guid_list"
     }
   }
 }
