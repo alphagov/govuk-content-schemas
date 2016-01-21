@@ -1,0 +1,13 @@
+{
+  "content_id": "8148c65d-1b96-4362-b12e-45bc9f205235",
+  "base_path": "/financial-releases-geoblocker/register-interest-success",
+  "locale": "en",
+  "public_updated_at": "2015-12-07T11:22:21.000Z",
+  "title": "dummy title content for success page",
+  "format": "financial_releases_success",
+  "details": {
+    "header_legal_disclaimer": "<p><small>Header legal disclaimer Vel ut iudico dolore. Vix ne diam iuvaret referrentur, eam nisl accusamus temporibus ne. Nec quot deserunt dissentiet ut, ad  be available from <a href='/lloydsshares'>www.gov.uk/lloydsshares</a>.</small></p>",
+    "body": "<p>Thank you for registering interest: /p>",
+    "footer_legal_disclaimer": "<p><small>Legal disclaimer: Vel ut iudico dolore. Vix ne diam iuvaret referrentur, eam nisl accusamus temporibus ne. Nec quot deserunt dissentiet ut, ad Vel ut iudico dolore. Vix ne diam iuvaret referrentur, eam nisl accusamus temporibus ne. Nec quot deserunt dissentiet ut, ad Vel ut iudico dolore. Vix ne diam iuvaret referrentur, eam nisl accusamus temporibus ne. Nec quot deserunt dissentiet ut, ad </small></p>"
+  }
+}
