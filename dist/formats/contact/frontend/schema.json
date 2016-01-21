@@ -268,9 +268,6 @@
         "related": {
           "$ref": "#/definitions/frontend_links"
         },
-        "organisations": {
-          "$ref": "#/definitions/frontend_links"
-        },
         "alpha_taxons": {
           "$ref": "#/definitions/frontend_links"
         },
@@ -278,6 +275,9 @@
           "$ref": "#/definitions/frontend_links"
         },
         "topics": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "organisations": {
           "$ref": "#/definitions/frontend_links"
         },
         "parent": {
