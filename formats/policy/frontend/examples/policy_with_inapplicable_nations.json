@@ -60,6 +60,16 @@
           "locale": "en"
         }
       ],
+      "lead_organisations":[
+        {
+          "content_id": "8927158f-e4b2-4361-b55d-02de7599b220",
+          "title": "Northern Ireland Office",
+          "base_path": "/government/organisations/northern-ireland-office",
+          "api_url": "https://www.gov.uk/api/organisations/northern-ireland-office",
+          "web_url": "https://www.gov.uk/government/organisations/northern-ireland-office",
+          "locale": "en"
+        }
+      ],
       "people": [
         {
           "content_id": "70dc1901-2d36-4c3d-98ee-e1d5587a5ba9",
