@@ -64,8 +64,7 @@
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "body",
-        "content_owner"
+        "body"
       ],
       "properties": {
         "body": {
@@ -119,6 +118,9 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "content_owners": {
+          "$ref": "#/definitions/frontend_links"
+        },
         "alpha_taxons": {
           "$ref": "#/definitions/frontend_links"
         },
