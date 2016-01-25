@@ -179,7 +179,14 @@
         },
         "parent": {
           "description": "The parent content item.",
-          "$ref": "#/definitions/guid_list",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/guid_list"
+            },
+            {
+              "$ref": "#/definitions/parent"
+            }
+          ],
           "maxItems": 1
         },
         "policies": {
@@ -246,6 +253,34 @@
             },
             {
               "type": "null"
+            }
+          ]
+        }
+      }
+    },
+    "parent": {
+      "type": "object",
+      "additionalPropeties": false,
+      "required": [
+        "title",
+        "web_url",
+        "parent"
+      ],
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "web_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "parent": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/definitions/parent"
             }
           ]
         }
