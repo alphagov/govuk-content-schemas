@@ -122,7 +122,20 @@
         "web_url": "https://www.gov.uk/foreign-travel-advice/albania",
         "locale": "en"
       }
-    ]
+    ],
+    "parent": {
+      "web_url": "https://www.gov.uk/foreign-travel-advice",
+      "title": "Foreign travel advice",
+      "parent": {
+        "web_url": "https://www.gov.uk/browse/abroad/travel-abroad",
+        "title": "Travel abroad",
+        "parent": {
+          "web_url": "https://www.gov.uk/browse/abroad",
+          "title": "Passports, travel and living abroad",
+          "parent": null
+        }
+      }
+    }
   },
   "locale": "en",
   "need_ids": ["101191"],
