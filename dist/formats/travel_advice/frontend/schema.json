@@ -71,7 +71,8 @@
         "change_description",
         "alert_status",
         "email_signup_link",
-        "parts"
+        "parts",
+        "primary_parent"
       ],
       "properties": {
         "summary": {
@@ -140,6 +141,27 @@
               "body": {
                 "type": "string"
               }
+            }
+          }
+        },
+        "primary_parent": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "title",
+            "web_url",
+            "parent"
+          ],
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "web_url": {
+              "type": "string",
+              "format": "uri"
+            },
+            "parent": {
+              "$ref": "#/definitions/parent"
             }
           }
         }
@@ -236,6 +258,34 @@
             },
             {
               "type": "null"
+            }
+          ]
+        }
+      }
+    },
+    "parent": {
+      "type": "object",
+      "additionalPropeties": false,
+      "required": [
+        "title",
+        "web_url",
+        "parent"
+      ],
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "web_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "parent": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/definitions/parent"
             }
           ]
         }

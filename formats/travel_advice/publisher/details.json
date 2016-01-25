@@ -10,7 +10,8 @@
      "change_description",
      "alert_status",
      "email_signup_link",
-     "parts"
+     "parts",
+     "primary_parent"
   ],
   "properties": {
     "summary": {
@@ -72,6 +73,23 @@
           "body": {
             "$ref" : "#/definitions/multiple_content_types"
           }
+        }
+      }
+    },
+    "primary_parent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "web_url", "parent"],
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "web_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "parent": {
+          "$ref": "#/definitions/parent"
         }
       }
     }

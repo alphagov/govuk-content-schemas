@@ -320,6 +320,34 @@
         }
       }
     },
+    "parent": {
+      "type": "object",
+      "additionalPropeties": false,
+      "required": [
+        "title",
+        "web_url",
+        "parent"
+      ],
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "web_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "parent": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/definitions/parent"
+            }
+          ]
+        }
+      }
+    },
     "route": {
       "type": "object",
       "additionalProperties": false,
