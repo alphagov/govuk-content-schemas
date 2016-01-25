@@ -4,13 +4,13 @@
   "additionalProperties": false,
   "required": [
     "organisations",
-    "topics"
+    "policy_areas"
   ],
   "properties": {
     "organisations": {
       "$ref": "#/definitions/guid_list"
     },
-    "topics": {
+    "policy_areas": {
       "$ref": "#/definitions/guid_list"
     }
   }

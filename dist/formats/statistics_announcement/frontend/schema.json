@@ -107,13 +107,13 @@
       "additionalProperties": false,
       "required": [
         "organisations",
-        "topics"
+        "policy_areas"
       ],
       "properties": {
         "organisations": {
           "$ref": "#/definitions/frontend_links"
         },
-        "topics": {
+        "policy_areas": {
           "$ref": "#/definitions/frontend_links"
         },
         "alpha_taxons": {
@@ -122,13 +122,13 @@
         "mainstream_browse_pages": {
           "$ref": "#/definitions/frontend_links"
         },
+        "topics": {
+          "$ref": "#/definitions/frontend_links"
+        },
         "parent": {
           "$ref": "#/definitions/frontend_links"
         },
         "policies": {
-          "$ref": "#/definitions/frontend_links"
-        },
-        "policy_areas": {
           "$ref": "#/definitions/frontend_links"
         },
         "available_translations": {
