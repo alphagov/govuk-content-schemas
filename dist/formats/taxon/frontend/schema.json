@@ -163,6 +163,34 @@
         }
       }
     },
+    "parent": {
+      "type": "object",
+      "additionalPropeties": false,
+      "required": [
+        "title",
+        "web_url",
+        "parent"
+      ],
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "web_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "parent": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/definitions/parent"
+            }
+          ]
+        }
+      }
+    },
     "route": {
       "type": "object",
       "additionalProperties": false,
@@ -232,52 +260,59 @@
       }
     },
     "frontend_links": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "additionalProperties": false,
-        "required": [
-          "content_id",
-          "title",
-          "base_path",
-          "locale"
-        ],
-        "properties": {
-          "content_id": {
-            "$ref": "#/definitions/guid"
-          },
-          "title": {
-            "type": "string"
-          },
-          "description": {
-            "anyOf": [
-              {
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "content_id",
+              "title",
+              "base_path",
+              "locale"
+            ],
+            "properties": {
+              "content_id": {
+                "$ref": "#/definitions/guid"
+              },
+              "title": {
                 "type": "string"
               },
-              {
-                "type": "null"
+              "description": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "base_path": {
+                "$ref": "#/definitions/absolute_path"
+              },
+              "api_url": {
+                "type": "string",
+                "format": "uri"
+              },
+              "web_url": {
+                "type": "string",
+                "format": "uri"
+              },
+              "locale": {
+                "type": "string"
+              },
+              "analytics_identifier": {
+                "$ref": "#/definitions/analytics_identifier"
               }
-            ]
-          },
-          "base_path": {
-            "$ref": "#/definitions/absolute_path"
-          },
-          "api_url": {
-            "type": "string",
-            "format": "uri"
-          },
-          "web_url": {
-            "type": "string",
-            "format": "uri"
-          },
-          "locale": {
-            "type": "string"
-          },
-          "analytics_identifier": {
-            "$ref": "#/definitions/analytics_identifier"
+            }
           }
+        },
+        {
+          "$ref": "#/definitions/parent"
         }
-      }
+      ]
     }
   }
 }

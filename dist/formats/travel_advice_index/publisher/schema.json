@@ -165,6 +165,18 @@
         "related": {
           "$ref": "#/definitions/guid_list"
         },
+        "parent": {
+          "description": "The parent content item.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/guid_list"
+            },
+            {
+              "$ref": "#/definitions/parent"
+            }
+          ],
+          "maxItems": 1
+        },
         "alpha_taxons": {
           "description": "Prototype-stage taxonomy label for this content item",
           "$ref": "#/definitions/guid_list"
@@ -179,11 +191,6 @@
         },
         "organisations": {
           "$ref": "#/definitions/guid_list"
-        },
-        "parent": {
-          "description": "The parent content item.",
-          "$ref": "#/definitions/guid_list",
-          "maxItems": 1
         },
         "policies": {
           "description": "These are for collecting content related to a particular government policy.",
@@ -249,6 +256,34 @@
             },
             {
               "type": "null"
+            }
+          ]
+        }
+      }
+    },
+    "parent": {
+      "type": "object",
+      "additionalPropeties": false,
+      "required": [
+        "title",
+        "web_url",
+        "parent"
+      ],
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "web_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "parent": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/definitions/parent"
             }
           ]
         }

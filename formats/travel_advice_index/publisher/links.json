@@ -3,8 +3,11 @@
   "type": "object",
   "additionalProperties": false,
   "properties": {
-     "related": {
-       "$ref": "#/definitions/guid_list"
-     }
+    "related": {
+     "$ref": "#/definitions/guid_list"
+    },
+    "parent": {
+      "$ref": "#/definitions/parent"
+    }
   }
 }

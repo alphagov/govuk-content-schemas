@@ -10,7 +10,20 @@
     "related": [
       "95f9c380-30bc-44c7-86b4-e9c9ef0fc272",
       "e4d06cb9-9e2e-4e82-b802-0aad013ae16c"
-    ]
+    ],
+    "parent": {
+      "web_url": "https://www.gov.uk/foreign-travel-advice",
+      "title": "Foreign travel advice",
+      "parent": {
+        "web_url": "https://www.gov.uk/browse/abroad/travel-abroad",
+        "title": "Travel abroad",
+        "parent": {
+          "web_url": "https://www.gov.uk/browse/abroad",
+          "title": "Passports, travel and living abroad",
+          "parent": null
+        }
+      }
+    }
   },
   "previous_version": "2"
 }
