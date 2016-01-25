@@ -20,7 +20,10 @@
     },
     "parent": {
       "description": "The parent content item.",
-      "$ref": "#/definitions/guid_list",
+      "oneOf": [
+        { "$ref": "#/definitions/guid_list" },
+        { "$ref": "#/definitions/parent" }
+      ],
       "maxItems": 1
     },
     "policies": {
