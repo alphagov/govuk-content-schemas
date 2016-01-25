@@ -128,18 +128,6 @@
             }
           }
         },
-        "related_discussion": {
-          "type": "object",
-          "properties": {
-            "title": {
-              "type": "string"
-            },
-            "href": {
-              "type": "string",
-              "format": "uri"
-            }
-          }
-        },
         "header_links": {
           "type": "array",
           "items": {
