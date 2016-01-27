@@ -1,6 +1,6 @@
 {
   "content_id": "054e8890-8cba-47fd-ab3b-32fc7a3ca2b3",
-  "base_path": "/financial-releases-geoblocker/not-permitted",
+  "base_path": "/location/not-permitted",
   "title": "Financial releases not permitted dummy title",
   "description": "Financial release dummy description",
   "format": "financial_releases_geoblocker",
