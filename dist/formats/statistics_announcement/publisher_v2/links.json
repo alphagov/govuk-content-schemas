@@ -15,6 +15,7 @@
       ],
       "properties": {
         "organisations": {
+          "description": "All organisations linked to this content item. This should include lead organisations.",
           "$ref": "#/definitions/guid_list"
         },
         "policy_areas": {
@@ -31,6 +32,10 @@
         },
         "topics": {
           "description": "Powers the /topic section of the site. These are known as specialist sectors in some legacy apps.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "lead_organisations": {
+          "description": "A subset of organisations that should be emphasised in relation to this content item. All organisations specified here should also be part of the organisations array.",
           "$ref": "#/definitions/guid_list"
         },
         "parent": {
