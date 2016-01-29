@@ -4,6 +4,7 @@
   "additionalProperties": false,
   "required": [
     "base_path",
+    "title",
     "format",
     "locale",
     "public_updated_at",
