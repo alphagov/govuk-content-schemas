@@ -184,8 +184,7 @@
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "organisations",
-        "related"
+        "organisations"
       ],
       "properties": {
         "people": {
