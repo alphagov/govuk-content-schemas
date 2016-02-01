@@ -19,6 +19,27 @@ def base_path(example_file)
   JSON.parse(File.read(example_file))['base_path']
 end
 
+def validate_schemas(schema_file_list)
+  validation_errors = []
+  schema_file_list.each do |schema|
+    begin
+      JSON::Validator.fully_validate(schema, {}, validate_schema: true)
+    rescue JSON::Schema::ValidationError => e
+      validation_errors << "Schema: #{schema}: #{e.message}"
+    end
+  end
+  abort "The following schemas aren't valid:\n" + validation_errors.join("\n") if validation_errors.any?
+end
+
+task :validate_source_schemas do
+  schemas = Rake::FileList.new("formats/**/*.json")
+  validate_schemas(schemas)
+end
+
+task :validate_dist_schemas do
+  validate_schemas(Rake::FileList.new("dist/formats/**/*.json"))
+end
+
 task :validate_examples do
   examples = Rake::FileList.new("formats/**/examples/*.json")
   failed_examples = examples.reject { |example| valid?(example) }
