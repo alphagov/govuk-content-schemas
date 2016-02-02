@@ -16,7 +16,7 @@
         "title": "Renew or replace your adult passport",
         "base_path": "/renew-adult-passport",
         "description": null,
-        "api_url": "https://www.gov.uk/content/renew-adult-passport",
+        "api_url": "https://www.gov.uk/api/content/renew-adult-passport",
         "web_url": "https://www.gov.uk/renew-adult-passport",
         "locale": "en",
         "links": {
@@ -30,7 +30,7 @@
         "title": "Passports, travel and living abroad",
         "base_path": "/browse/abroad",
         "description": null,
-        "api_url": "https://www.gov.uk/content/browse/abroad",
+        "api_url": "https://www.gov.uk/api/content/browse/abroad",
         "web_url": "https://www.gov.uk/browse/abroad",
         "locale": "en",
         "links": {}
@@ -40,7 +40,7 @@
         "title": "Driving abroad",
         "base_path": "/driving-abroad",
         "description": null,
-        "api_url": "https://www.gov.uk/content/driving-abroad",
+        "api_url": "https://www.gov.uk/api/content/driving-abroad",
         "web_url": "https://www.gov.uk/driving-abroad",
         "locale": "en",
         "links": {
@@ -54,7 +54,7 @@
         "title": "Hand luggage restrictions at UK airports",
         "base_path": "/hand-luggage-restrictions",
         "description": null,
-        "api_url": "https://www.gov.uk/content/hand-luggage-restrictions",
+        "api_url": "https://www.gov.uk/api/content/hand-luggage-restrictions",
         "web_url": "https://www.gov.uk/hand-luggage-restrictions",
         "locale": "en",
         "links": {
@@ -68,7 +68,7 @@
         "title": "Travel abroad",
         "base_path": "/browse/abroad/travel-abroad",
         "description": null,
-        "api_url": "https://www.gov.uk/content/browse/abroad/travel-abroad",
+        "api_url": "https://www.gov.uk/api/content/browse/abroad/travel-abroad",
         "web_url": "https://www.gov.uk/browse/abroad/travel-abroad",
         "locale": "en",
         "links": {}
@@ -80,7 +80,7 @@
         "title": "Passports, travel and living abroad",
         "base_path": "/browse/abroad",
         "description": null,
-        "api_url": "https://www.gov.uk/content/browse/abroad",
+        "api_url": "https://www.gov.uk/api/content/browse/abroad",
         "web_url": "https://www.gov.uk/browse/abroad",
         "locale": "en",
         "links": {}
@@ -90,7 +90,7 @@
         "title": "Travel abroad",
         "base_path": "/browse/abroad/travel-abroad",
         "description": null,
-        "api_url": "https://www.gov.uk/content/browse/abroad/travel-abroad",
+        "api_url": "https://www.gov.uk/api/content/browse/abroad/travel-abroad",
         "web_url": "https://www.gov.uk/browse/abroad/travel-abroad",
         "locale": "en",
         "links": {
@@ -104,7 +104,7 @@
         "title": "Foreign travel advice",
         "base_path": "/foreign-travel-advice",
         "description": null,
-        "api_url": "https://www.gov.uk/content/foreign-travel-advice",
+        "api_url": "https://www.gov.uk/api/content/foreign-travel-advice",
         "web_url": "https://www.gov.uk/foreign-travel-advice",
         "locale": "en",
         "links": {
@@ -120,7 +120,7 @@
         "title": "Turkey travel advice",
         "base_path": "/foreign-travel-advice/turkey",
         "description": "Latest travel advice for Turkey including safety and security, entry requirements, travel warnings and health",
-        "api_url": "https://www.gov.uk/content/foreign-travel-advice/turkey",
+        "api_url": "https://www.gov.uk/api/content/foreign-travel-advice/turkey",
         "web_url": "https://www.gov.uk/foreign-travel-advice/turkey",
         "locale": "en"
       }
