@@ -211,6 +211,16 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "organisations": {
+          "description": "All organisations linked to this content item. This should include lead organisations.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "sections": {
+          "$ref": "#/definitions/guid_list"
+        },
+        "available_translations": {
+          "$ref": "#/definitions/guid_list"
+        },
         "alpha_taxons": {
           "description": "Prototype-stage taxonomy label for this content item",
           "$ref": "#/definitions/guid_list"
@@ -221,10 +231,6 @@
         },
         "topics": {
           "description": "Powers the /topic section of the site. These are known as specialist sectors in some legacy apps.",
-          "$ref": "#/definitions/guid_list"
-        },
-        "organisations": {
-          "description": "All organisations linked to this content item. This should include lead organisations.",
           "$ref": "#/definitions/guid_list"
         },
         "lead_organisations": {

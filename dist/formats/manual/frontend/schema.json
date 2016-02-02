@@ -167,6 +167,15 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "organisations": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "sections": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "available_translations": {
+          "$ref": "#/definitions/frontend_links"
+        },
         "alpha_taxons": {
           "$ref": "#/definitions/frontend_links"
         },
@@ -174,9 +183,6 @@
           "$ref": "#/definitions/frontend_links"
         },
         "topics": {
-          "$ref": "#/definitions/frontend_links"
-        },
-        "organisations": {
           "$ref": "#/definitions/frontend_links"
         },
         "lead_organisations": {
@@ -189,9 +195,6 @@
           "$ref": "#/definitions/frontend_links"
         },
         "policy_areas": {
-          "$ref": "#/definitions/frontend_links"
-        },
-        "available_translations": {
           "$ref": "#/definitions/frontend_links"
         }
       }
