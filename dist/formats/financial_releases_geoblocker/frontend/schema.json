@@ -284,6 +284,15 @@
           },
           "analytics_identifier": {
             "$ref": "#/definitions/analytics_identifier"
+          },
+          "links": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "parent": {
+                "$ref": "#/definitions/guid_list"
+              }
+            }
           }
         }
       }
