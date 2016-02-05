@@ -16,7 +16,8 @@
         "base_path": "/government/topical-events/battle-of-the-somme-centenary-commemorations",
         "api_url": "https://www.gov.uk/api/content/government/topical-events/battle-of-the-somme-centenary-commemorations",
         "web_url": "https://www.gov.uk/government/topical-events/battle-of-the-somme-centenary-commemorations",
-        "locale": "en"
+        "locale": "en",
+        "details": {}
       }
     ]
   },
