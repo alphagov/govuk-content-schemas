@@ -16,7 +16,11 @@
         "base_path": "/government/topical-events/ebola-virus-government-response",
         "api_url": "https://www.gov.uk/api/content/government/topical-events/ebola-virus-government-response",
         "web_url": "https://www.gov.uk/government/topical-events/ebola-virus-government-response",
-        "locale": "en"
+        "locale": "en",
+        "details": {
+          "start_date": "2015-03-11T00:00:00.000+00:00",
+          "end_date": "2016-03-11T00:00:00.000+00:00"
+        }
       }
     ]
   },
