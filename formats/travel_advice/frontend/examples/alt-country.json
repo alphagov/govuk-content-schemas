@@ -179,7 +179,9 @@
         "body": "<p>This email service only offers information and advice for British nationals planning to travel abroad. </p>\n\n<p>If you need urgent help because something has happened to a friend or relative abroad, contact the consular assistance team on 020 7008 1500 (24 hours).</p>\n\n<p>If you’re abroad and need emergency help, please contact the nearest <a href=\"https://www.gov.uk/government/world/organisations\">British embassy, consulate or high commission</a>.</p>\n\n<p>If you have a question about this travel advice, you can email us at <a href=\"&#109;&#097;&#105;&#108;&#116;&#111;:&#084;&#114;&#097;&#118;&#101;&#108;&#065;&#100;&#118;&#105;&#099;&#101;&#080;&#117;&#098;&#108;&#105;&#099;&#069;&#110;&#113;&#117;&#105;&#114;&#105;&#101;&#115;&#064;&#102;&#099;&#111;&#046;&#103;&#111;&#118;&#046;&#117;&#107;\">&#084;&#114;&#097;&#118;&#101;&#108;&#065;&#100;&#118;&#105;&#099;&#101;&#080;&#117;&#098;&#108;&#105;&#099;&#069;&#110;&#113;&#117;&#105;&#114;&#105;&#101;&#115;&#064;&#102;&#099;&#111;&#046;&#103;&#111;&#118;&#046;&#117;&#107;</a></p>\n\n<p>Before you send an email, make sure you have read the travel advice for the country you’re travelling to, and the guidance on <a href=\"https://www.gov.uk/how-the-foreign-commonwealth-office-puts-together-travel-advice\">how the FCO puts travel advice together</a>.</p>\n"
       }
     ],
-    "alert_status": [],
+    "alert_status": [
+      "avoid_all_travel_to_parts"
+    ],
     "image": {
       "url": "https://www.gov.uk/media/55e5d564e5274a558000000b/150824_Turkey_jpeg.jpg",
       "content_type": "image/jpeg"
