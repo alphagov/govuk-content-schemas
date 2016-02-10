@@ -10,10 +10,6 @@
       "title" : "Agile community",
       "href" : "http://sm-11.herokuapp.com/communities/design-community/"
     },
-    "related_discussion" : {
-      "title" : "Design community on hackpad",
-      "href" : "https://designpatterns.hackpad.com/"
-    },
     "header_links" : [
       { "title" : "What is it, why it works and how to do it", "href" : "#what-is-it-why-it-works-and-how-to-do-it" }
     ]
