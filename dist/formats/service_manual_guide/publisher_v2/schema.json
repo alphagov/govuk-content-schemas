@@ -108,8 +108,7 @@
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "body",
-        "content_owner"
+        "body"
       ],
       "properties": {
         "body": {

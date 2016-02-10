@@ -18,6 +18,10 @@
           "description": "Includes all content ids referenced in 'details'. This is a temporary measure to expand content ids for frontends which is planned to be replaced by a dependency resolution service.",
           "$ref": "#/definitions/guid_list"
         },
+        "content_owners": {
+          "description": "References pages of organisations responsible for maintaining a topic e.g. in case of Service Manual it's community pages 'Design community', 'Agile delivery community' etc",
+          "$ref": "#/definitions/guid_list"
+        },
         "alpha_taxons": {
           "description": "Prototype-stage taxonomy label for this content item",
           "$ref": "#/definitions/guid_list"

@@ -17,6 +17,28 @@
       { "title" : "What is it, why it works and how to do it", "href" : "#what-is-it-why-it-works-and-how-to-do-it" }
     ]
   },
+  "links": {
+    "topics": [{
+      "content_id": "f08d0fbb-c14e-4c08-8260-a24c9eacceb4",
+      "title": "Agile delivery",
+      "base_path": "/service-manual/agile-delivery",
+      "description": "Agile delivery topic description",
+      "api_url": "http://content-store.dev.gov.uk/content/service-manual/agile-delivery",
+      "web_url": "http://www.dev.gov.uk/service-manual/agile-delivery",
+      "locale": "en",
+      "analytics_identifier": null
+    }],
+    "content_owners": [{
+      "content_id": "e5f09422-bf55-417c-b520-8a42cb409814",
+      "title": "Agile delivery community",
+      "base_path": "/service-manual/communities/agile-delivery-community",
+      "description": "Agile delivery community takes care of...",
+      "api_url": "http://content-store.dev.gov.uk/content/service-manual/communities/agile-delivery-community",
+      "web_url": "http://www.dev.gov.uk/service-manual/communities/agile-delivery-community",
+      "locale": "en",
+      "analytics_identifier": null
+    }]
+  },
   "base_path" : "/service-manual/agile",
   "description" : "What agile is, why it works and how to do it",
   "title" : "Agile",

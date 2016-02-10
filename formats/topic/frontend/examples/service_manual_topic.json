@@ -42,6 +42,18 @@
         "analytics_identifier":null
       }
     ],
+    "content_owners": [
+      {
+        "content_id": "e5f09422-bf55-417c-b520-8a42cb409814",
+        "title": "Agile delivery community",
+        "base_path": "/service-manual/communities/agile-delivery-community",
+        "description": "Agile delivery community takes care of...",
+        "api_url": "http://content-store.dev.gov.uk/content/service-manual/communities/agile-delivery-community",
+        "web_url": "http://www.dev.gov.uk/service-manual/communities/agile-delivery-community",
+        "locale": "en",
+        "analytics_identifier": null
+      }
+    ],
     "available_translations":[
       {
         "content_id":"cd02b82d-c706-435c-a2fc-2dcabd168ef4",
