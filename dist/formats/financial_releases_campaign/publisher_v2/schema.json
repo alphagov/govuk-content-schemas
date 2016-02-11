@@ -116,23 +116,19 @@
           "$ref": "#/definitions/image"
         },
         "header_legal_disclaimer": {
-          "description": "an html snippet with legal disclaimer for financial release to go above content.",
-          "type": "string"
+          "$ref": "#/definitions/multiple_content_types"
         },
         "body": {
-          "type": "string"
+          "$ref": "#/definitions/multiple_content_types"
         },
         "legend": {
-          "description": "html legend snippet to register interest in campaign",
-          "type": "string"
+          "$ref": "#/definitions/multiple_content_types"
         },
         "email_caption": {
-          "description": "small disclaimer/description text to go under email registration form.",
-          "type": "string"
+          "$ref": "#/definitions/multiple_content_types"
         },
         "footer_legal_disclaimer": {
-          "description": "an html snippet with legal disclaimer for financial release to go below content, may be different from header disclaimer.",
-          "type": "string"
+          "$ref": "#/definitions/multiple_content_types"
         }
       }
     }

@@ -73,22 +73,18 @@
           "$ref": "#/definitions/image"
         },
         "header_legal_disclaimer": {
-          "description": "an html snippet with legal disclaimer for financial release to go above content.",
           "type": "string"
         },
         "body": {
           "type": "string"
         },
         "legend": {
-          "description": "html legend snippet to register interest in campaign",
           "type": "string"
         },
         "email_caption": {
-          "description": "small disclaimer/description text to go under email registration form.",
           "type": "string"
         },
         "footer_legal_disclaimer": {
-          "description": "an html snippet with legal disclaimer for financial release to go below content, may be different from header disclaimer.",
           "type": "string"
         }
       }
