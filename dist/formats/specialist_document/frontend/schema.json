@@ -796,7 +796,7 @@
         "document_type": {
           "type": "string",
           "enum": [
-            "european_structural_investment_fund"
+            "esi_fund"
           ]
         },
         "fund_state": {
