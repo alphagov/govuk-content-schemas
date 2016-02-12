@@ -2,7 +2,7 @@
   "base_path":"/service-manual/test-topic",
   "content_id":"cd02b82d-c706-435c-a2fc-2dcabd168ef4",
   "title":"Service Manual Test Topic",
-  "format":"topic",
+  "format":"service_manual_topic",
   "need_ids":[],
   "locale":"en",
   "updated_at":"2016-01-15T16:53:47.645Z",
@@ -51,6 +51,14 @@
         "api_url":"http://content-store.dev.gov.uk/content/service-manual/test-topic",
         "web_url":"http://www.dev.gov.uk/service-manual/test-topic",
         "locale":"en"
+      }
+    ],
+    "parent": [
+      {
+        "content_id": "51dd8775-cd2a-4fb3-b6df-8ed03591122d",
+        "title": "Service manual",
+        "base_path": "/service-manual",
+        "locale": "en"
       }
     ]
   },
