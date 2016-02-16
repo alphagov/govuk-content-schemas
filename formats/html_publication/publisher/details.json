@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "body",
+    "headers",
+    "public_timestamp",
+    "first_published_version"
+  ],
+  "properties": {
+    "body": {
+      "type": "string"
+    },
+    "headers": {
+      "type": "string"
+    },
+    "public_timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "first_published_version": {
+      "type": "boolean"
+    }
+  }
+}
