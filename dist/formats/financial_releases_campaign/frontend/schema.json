@@ -78,7 +78,7 @@
         "body": {
           "type": "string"
         },
-        "legend": {
+        "email_header": {
           "type": "string"
         },
         "email_caption": {
