@@ -20,6 +20,10 @@
       }
     ],
     "first_published_at": "2015-10-05",
+    "image": {
+      "alt_text": "lloyds-logo",
+      "url": "pressrelease.jpg"
+    },
     "body":  [
       {
         "content_type": "text/govspeak",
