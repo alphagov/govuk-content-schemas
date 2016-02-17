@@ -32,14 +32,14 @@
       "additionalProperties": false,
       "required": [
         "url",
-        "content_type"
+        "alt_text"
       ],
       "properties": {
         "url": {
           "type": "string",
           "format": "uri"
         },
-        "content_type": {
+        "alt_text": {
           "type": "string"
         }
       }
