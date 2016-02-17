@@ -16,7 +16,7 @@
     "body": {
       "$ref" : "#/definitions/multiple_content_types"
     },
-    "legend": {
+    "email_header": {
       "$ref" : "#/definitions/multiple_content_types"
     },
     "email_caption": {
