@@ -8,19 +8,17 @@
    ],
   "properties": {
     "header_legal_disclaimer": {
-      "description": "an html snippet with legal disclaimer for financial release to go above content.",
-      "type": "string"
+      "$ref" : "#/definitions/multiple_content_types"
     },
     "body": {
-      "type": "string"
+      "$ref" : "#/definitions/multiple_content_types"
     },
     "first_published_at": {
       "type": "string",
       "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-([012][0-9]|3[0-1])$"
     },
     "footer_legal_disclaimer": {
-      "description": "an html snippet with legal disclaimer for financial release to go below content, may be different from header disclaimer.",
-      "type": "string"
+      "$ref" : "#/definitions/multiple_content_types"
     }
   }
 }
