@@ -68,6 +68,14 @@ RSpec.describe GovukContentSchemas::FrontendSchemaGenerator do
     end
   end
 
+  it "merges properties from all top-level oneOf options" do
+    additional_properties = %w{a_property another_property yet_another}
+    publisher_schema.schema['oneOf'] << {'properties' => build_string_properties(*additional_properties)}
+
+    expected_keys = publisher_properties - internal_properties + additional_properties
+    expect(generated.schema['properties'].keys).to include(*expected_keys)
+  end
+
   it "adds updated_at as an allowed datetime property" do
     expect(generated.schema['properties']).to include(
       "updated_at" => {
@@ -101,7 +109,7 @@ RSpec.describe GovukContentSchemas::FrontendSchemaGenerator do
   context "publisher schema specifies a required link" do
     let(:publisher_schema_with_required_link) {
       clone_schema(publisher_schema).tap do |cloned|
-        cloned.schema['properties']['links']['required'] = link_names
+        cloned.schema['oneOf'][0]['properties']['links']['required'] = link_names
       end
     }
 
@@ -169,7 +177,7 @@ RSpec.describe GovukContentSchemas::FrontendSchemaGenerator do
     end
 
     let(:generated) do
-      schema = build_schema("schema.json", properties: properties)
+      schema = build_schema("schema.json", oneOf: [{'properties' => properties}], definitions: {})
       described_class.new(schema, frontend_links_definition).generate
     end
 

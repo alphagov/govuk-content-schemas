@@ -28,7 +28,7 @@ class GovukContentSchemas::FrontendSchemaGenerator
       "additionalProperties" => false,
       "required" => required_properties,
       "properties" => frontend_properties,
-      "definitions" => publisher_definitions.merge(frontend_definitions)
+      "definitions" => frontend_definitions
     }, @publisher_schema.uri)
   end
 
@@ -38,13 +38,24 @@ private
   end
 
   def required_properties
-    return [] unless @publisher_schema.schema.has_key?('required')
-    ['base_path'] + (@publisher_schema.schema['required'] - INTERNAL_PROPERTIES)
+    required = @publisher_schema.schema.fetch('oneOf', []).map { |s| s.fetch('required', []) }.flatten.uniq
+    if required.empty?
+      []
+    else
+      ['base_path'] + (required - INTERNAL_PROPERTIES)
+    end
+  end
+
+  def publisher_properties
+    @pub_properties ||= @publisher_schema.schema.fetch('oneOf', []).reduce({}) { |prop, s| prop.merge(s.fetch('properties', {})) }
+  end
+
+  def publisher_links
+    @publisher_schema.schema["definitions"]["links"] || publisher_properties["links"] || {'properties' => {}}
   end
 
   def frontend_properties
-    properties = @publisher_schema.schema['properties']
-    properties = properties.reject { |property_name| internal?(property_name) }
+    properties = publisher_properties.reject { |property_name| internal?(property_name) }
     properties = resolve_multiple_content_types(properties)
 
     properties = properties.merge(
@@ -57,8 +68,7 @@ private
   end
 
   def frontend_link_names
-    links = @publisher_schema.schema['properties'].fetch('links', {'properties' => {}})
-    links.fetch('properties', {}).keys + ['available_translations']
+    publisher_links.fetch('properties', {}).keys + ['available_translations']
   end
 
   def frontend_link_properties
@@ -68,7 +78,7 @@ private
   end
 
   def frontend_links
-    clone_hash(@publisher_schema.schema['properties']['links'] || {}).merge(
+    clone_hash(publisher_links || {}).merge(
       "additionalProperties" => false,
       "type" => "object",
       "properties" => frontend_link_properties
@@ -79,10 +89,14 @@ private
     clone_hash(@publisher_schema.schema['definitions']) || {}
   end
 
+  def converted_definitions
+    resolve_multiple_content_types(publisher_definitions.reject { |k,v| k == "links" })
+  end
+
   def frontend_definitions
     {
       'frontend_links' => frontend_links_definition.schema.reject { |k| k == '$schema' }
-    }
+    }.merge(converted_definitions)
   end
 
   def updated_at
