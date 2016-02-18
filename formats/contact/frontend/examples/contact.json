@@ -149,5 +149,7 @@
     ],
     "more_info_post_address": "\n",
     "language": "en"
-  }
+  },
+  "schema_name": "contact",
+  "document_type": "contact"
 }

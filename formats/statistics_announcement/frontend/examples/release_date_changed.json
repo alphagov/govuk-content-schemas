@@ -37,5 +37,7 @@
   "need_ids": [],
   "public_updated_at": "2016-01-17T14:19:42.460Z",
   "title": "Diagnostic imaging dataset for September 2015",
-  "updated_at": "2016-01-17T14:19:42.460Z"
+  "updated_at": "2016-01-17T14:19:42.460Z",
+  "schema_name": "statistics_announcement",
+  "document_type": "statistics_announcement"
 }

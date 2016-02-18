@@ -366,5 +366,7 @@
         "locale": "en"
       }
     ]
-  }
+  },
+  "schema_name": "finder",
+  "document_type": "finder"
 }

@@ -35,5 +35,7 @@
   "need_ids": [],
   "public_updated_at": "2016-02-02T14:19:42.460Z",
   "title": "TR4 8EE, Mr Derek Mears: environmental permit application",
-  "updated_at": "2016-02-02T14:19:42.460Z"
+  "updated_at": "2016-02-02T14:19:42.460Z",
+  "schema_name": "html_publication",
+  "document_type": "html_publication"
 }

@@ -33,5 +33,7 @@
         "locale": "en"
       }
     ]
-  }
+  },
+  "schema_name": "email_alert_signup",
+  "document_type": "email_alert_signup"
 }

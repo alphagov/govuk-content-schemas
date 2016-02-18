@@ -1,95 +1,97 @@
 {
-   "content_id": "c3fee553-1891-411b-8d00-4aefbe86e40a",
-   "base_path": "/government/policies/keeping-northern-ireland-safe",
-   "title": "Keeping Northern Ireland safe",
-   "description": "",
-   "format": "policy",
-   "need_ids": [],
-   "locale": "en",
-   "updated_at": "2015-03-10T11:55:11.570Z",
-   "public_updated_at": "2015-03-10T11:55:11.066+00:00",
-   "details": {
-      "document_noun": "document",
-      "email_signup_enabled": false,
-      "filter": {
-         "policies": [
-            "keeping-northern-ireland-safe"
-         ]
+  "content_id": "c3fee553-1891-411b-8d00-4aefbe86e40a",
+  "base_path": "/government/policies/keeping-northern-ireland-safe",
+  "title": "Keeping Northern Ireland safe",
+  "description": "",
+  "format": "policy",
+  "need_ids": [],
+  "locale": "en",
+  "updated_at": "2015-03-10T11:55:11.570Z",
+  "public_updated_at": "2015-03-10T11:55:11.066+00:00",
+  "details": {
+    "document_noun": "document",
+    "email_signup_enabled": false,
+    "filter": {
+      "policies": [
+        "keeping-northern-ireland-safe"
+      ]
+    },
+    "human_readable_finder_format": "Policy",
+    "signup_link": "",
+    "summary": "While day-to-day policing and justice functions are devolved to the Northern Ireland Executive, the UK government retains responsibility for national security issues in Northern Ireland.",
+    "show_summaries": false,
+    "facets": [
+      {
+        "key": "is_historic",
+        "display_as_result_metadata": true,
+        "filterable": false
       },
-      "human_readable_finder_format": "Policy",
-      "signup_link": "",
-      "summary": "While day-to-day policing and justice functions are devolved to the Northern Ireland Executive, the UK government retains responsibility for national security issues in Northern Ireland.",
-      "show_summaries": false,
-      "facets": [
+      {
+        "key": "government_name",
+        "display_as_result_metadata": true,
+        "filterable": false
+      }
+    ],
+    "nation_applicability": {
+      "applies_to": [
+        "england",
+        "northern_ireland"
+      ],
+      "alternative_policies": [
         {
-          "key": "is_historic",
-          "display_as_result_metadata": true,
-          "filterable": false
+          "nation": "scotland",
+          "alt_policy_url": "http://www.gov.scot/"
         },
         {
-          "key": "government_name",
-          "display_as_result_metadata": true,
-          "filterable": false
+          "nation": "wales",
+          "alt_policy_url": "http://wales.gov.uk/"
         }
-      ],
-      "nation_applicability": {
-        "applies_to": [
-          "england",
-          "northern_ireland"
-        ],
-        "alternative_policies": [
-          {
-            "nation": "scotland",
-            "alt_policy_url": "http://www.gov.scot/"
-          },
-          {
-            "nation": "wales",
-            "alt_policy_url": "http://wales.gov.uk/"
-          }
-        ]
-      }
-   },
-   "links": {
-      "organisations":[
-        {
-          "content_id": "8927158f-e4b2-4361-b55d-02de7599b220",
-          "title": "Northern Ireland Office",
-          "base_path": "/government/organisations/northern-ireland-office",
-          "api_url": "https://www.gov.uk/api/organisations/northern-ireland-office",
-          "web_url": "https://www.gov.uk/government/organisations/northern-ireland-office",
-          "locale": "en"
-        }
-      ],
-      "lead_organisations":[
-        {
-          "content_id": "8927158f-e4b2-4361-b55d-02de7599b220",
-          "title": "Northern Ireland Office",
-          "base_path": "/government/organisations/northern-ireland-office",
-          "api_url": "https://www.gov.uk/api/organisations/northern-ireland-office",
-          "web_url": "https://www.gov.uk/government/organisations/northern-ireland-office",
-          "locale": "en"
-        }
-      ],
-      "people": [
-        {
-          "content_id": "70dc1901-2d36-4c3d-98ee-e1d5587a5ba9",
-          "title": "George Dough",
-          "base_path": "/government/people/george-dough",
-          "api_url": "https://www.gov.uk/api/government/people/george-dough",
-          "web_url": "https://www.gov.uk/people/george-dough",
-          "locale": "en"
-        }
-      ],
-      "related":[],
-      "available_translations":[
-         {
-            "content_id": "c3fee553-1891-411b-8d00-4aefbe86e40a",
-            "title": "Keeping Northern Ireland safe",
-            "base_path": "/government/policies/keeping-northern-ireland-safe",
-            "api_url": "https://www.gov.uk/api/content/government/policies/keeping-northern-ireland-safe",
-            "web_url": "https://www.gov.uk/government/policies/keeping-northern-ireland-safe",
-            "locale": "en"
-         }
       ]
-   }
+    }
+  },
+  "links": {
+    "organisations": [
+      {
+        "content_id": "8927158f-e4b2-4361-b55d-02de7599b220",
+        "title": "Northern Ireland Office",
+        "base_path": "/government/organisations/northern-ireland-office",
+        "api_url": "https://www.gov.uk/api/organisations/northern-ireland-office",
+        "web_url": "https://www.gov.uk/government/organisations/northern-ireland-office",
+        "locale": "en"
+      }
+    ],
+    "lead_organisations": [
+      {
+        "content_id": "8927158f-e4b2-4361-b55d-02de7599b220",
+        "title": "Northern Ireland Office",
+        "base_path": "/government/organisations/northern-ireland-office",
+        "api_url": "https://www.gov.uk/api/organisations/northern-ireland-office",
+        "web_url": "https://www.gov.uk/government/organisations/northern-ireland-office",
+        "locale": "en"
+      }
+    ],
+    "people": [
+      {
+        "content_id": "70dc1901-2d36-4c3d-98ee-e1d5587a5ba9",
+        "title": "George Dough",
+        "base_path": "/government/people/george-dough",
+        "api_url": "https://www.gov.uk/api/government/people/george-dough",
+        "web_url": "https://www.gov.uk/people/george-dough",
+        "locale": "en"
+      }
+    ],
+    "related": [],
+    "available_translations": [
+      {
+        "content_id": "c3fee553-1891-411b-8d00-4aefbe86e40a",
+        "title": "Keeping Northern Ireland safe",
+        "base_path": "/government/policies/keeping-northern-ireland-safe",
+        "api_url": "https://www.gov.uk/api/content/government/policies/keeping-northern-ireland-safe",
+        "web_url": "https://www.gov.uk/government/policies/keeping-northern-ireland-safe",
+        "locale": "en"
+      }
+    ]
+  },
+  "schema_name": "policy",
+  "document_type": "policy"
 }

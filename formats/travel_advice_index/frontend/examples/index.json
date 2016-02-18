@@ -12,7 +12,7 @@
         "updated_at": "2016-01-01T00:00:00+00:00",
         "public_updated_at": "2015-01-01T00:00:00+00:00",
         "change_description": "Latest update: Summary - on 26 October 2015 a serious earthquake struck causing casualties around the country and affecting communications networks; if someone you know is likely to have been involved and you're unable to contact them, contact the British Embassy in Kabul",
-        "synonyms": [ ]
+        "synonyms": []
       },
       {
         "name": "Austria",
@@ -20,7 +20,7 @@
         "updated_at": "2016-01-02T00:00:00+00:00",
         "public_updated_at": "2015-01-02T00:00:00+00:00",
         "change_description": "Latest update: Summary – there’s ongoing disruption to rail and road transport; you should monitor local media and check with your transport provider or the Austrian Railways (OBB) website",
-        "synonyms": [ ]
+        "synonyms": []
       },
       {
         "name": "Finland",
@@ -28,7 +28,9 @@
         "updated_at": "2016-01-03T00:00:00+00:00",
         "public_updated_at": "2015-01-03T00:00:00+00:00",
         "change_description": "Latest update: Summary – removal of advice on Northern Ireland football match",
-        "synonyms": [ "arctic" ]
+        "synonyms": [
+          "arctic"
+        ]
       },
       {
         "name": "India",
@@ -36,7 +38,7 @@
         "updated_at": "2016-01-04T00:00:00+00:00",
         "public_updated_at": "2015-01-04T00:00:00+00:00",
         "change_description": "Latest update: Summary – removal of advice on Assam floods and the curfew in Srinagar ",
-        "synonyms": [ ]
+        "synonyms": []
       },
       {
         "name": "Malaysia",
@@ -44,7 +46,9 @@
         "updated_at": "2016-01-05T00:00:00+00:00",
         "public_updated_at": "2015-01-05T00:00:00+00:00",
         "change_description": "Latest update: Summary - haze can cause disruption to local, regional air travel and to government and private schools",
-        "synonyms": [ "Borneo" ]
+        "synonyms": [
+          "Borneo"
+        ]
       },
       {
         "name": "Spain",
@@ -52,7 +56,18 @@
         "updated_at": "2016-01-06T00:00:00+00:00",
         "public_updated_at": "2015-01-06T00:00:00+00:00",
         "change_description": "Latest update: Summary – information and advice for Manchester City fans travelling to Seville ",
-        "synonyms": [ "Ibiza", "Majorca", "Mallorca", "Lanzarote", "Barcelona", "Benidorm", "Tenerife", "Canary Islands", "Canaries", "Gran Canaria" ]
+        "synonyms": [
+          "Ibiza",
+          "Majorca",
+          "Mallorca",
+          "Lanzarote",
+          "Barcelona",
+          "Benidorm",
+          "Tenerife",
+          "Canary Islands",
+          "Canaries",
+          "Gran Canaria"
+        ]
       }
     ]
   },
@@ -116,7 +131,11 @@
     ]
   },
   "locale": "en",
-  "need_ids": ["101191"],
+  "need_ids": [
+    "101191"
+  ],
   "public_updated_at": "2015-04-28T17:11:23+01:00",
-  "updated_at": "2015-08-28T17:16:43+01:00"
+  "updated_at": "2015-08-28T17:16:43+01:00",
+  "schema_name": "travel_advice_index",
+  "document_type": "travel_advice_index"
 }

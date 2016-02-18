@@ -10,5 +10,7 @@
   "public_updated_at": "2015-04-15T16:12:55.000+00:00",
   "details": {
     "email": "aviation.stats@dft.gsi.gov.uk"
-  }
+  },
+  "schema_name": "working_group",
+  "document_type": "working_group"
 }

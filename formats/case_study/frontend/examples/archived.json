@@ -79,5 +79,7 @@
         "locale": "en"
       }
     ]
-  }
+  },
+  "schema_name": "case_study",
+  "document_type": "case_study"
 }

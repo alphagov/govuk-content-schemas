@@ -33,5 +33,7 @@
         "locale": "en"
       }
     ]
-  }
+  },
+  "schema_name": "financial_releases_index",
+  "document_type": "financial_releases_index"
 }

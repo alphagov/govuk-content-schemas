@@ -211,7 +211,11 @@
     ]
   },
   "locale": "en",
-  "need_ids": ["101191"],
+  "need_ids": [
+    "101191"
+  ],
   "public_updated_at": "2015-10-15T11:00:20+01:00",
-  "updated_at": "2015-10-15T11:04:13+01:00"
+  "updated_at": "2015-10-15T11:04:13+01:00",
+  "schema_name": "travel_advice",
+  "document_type": "travel_advice"
 }
