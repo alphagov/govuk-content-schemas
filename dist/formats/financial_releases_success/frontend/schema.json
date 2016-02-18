@@ -4,13 +4,21 @@
   "additionalProperties": false,
   "required": [
     "base_path",
-    "title",
     "format",
+    "title",
     "locale",
     "public_updated_at",
-    "content_id"
+    "content_id",
+    "document_type",
+    "schema_name"
   ],
   "properties": {
+    "format": {
+      "type": "string",
+      "enum": [
+        "financial_releases_success"
+      ]
+    },
     "base_path": {
       "$ref": "#/definitions/absolute_path"
     },
@@ -25,12 +33,6 @@
         {
           "type": "null"
         }
-      ]
-    },
-    "format": {
-      "type": "string",
-      "enum": [
-        "financial_releases_success"
       ]
     },
     "public_updated_at": {
@@ -58,28 +60,11 @@
         "live"
       ]
     },
+    "details": {
+      "$ref": "#/definitions/details"
+    },
     "content_id": {
       "$ref": "#/definitions/guid"
-    },
-    "details": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "body"
-      ],
-      "properties": {
-        "header_legal_disclaimer": {
-          "description": "an html snippet with legal disclaimer for financial release to go above content.",
-          "type": "string"
-        },
-        "body": {
-          "type": "string"
-        },
-        "footer_legal_disclaimer": {
-          "description": "an html snippet with legal disclaimer for financial release to go above content.",
-          "type": "string"
-        }
-      }
     },
     "links": {
       "type": "object",
@@ -114,12 +99,98 @@
         }
       }
     },
+    "document_type": {
+      "type": "string"
+    },
+    "schema_name": {
+      "type": "string",
+      "enum": [
+        "financial_releases_success"
+      ]
+    },
     "updated_at": {
       "type": "string",
       "format": "date-time"
     }
   },
   "definitions": {
+    "frontend_links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "required": [
+          "content_id",
+          "title",
+          "base_path",
+          "locale"
+        ],
+        "properties": {
+          "content_id": {
+            "$ref": "#/definitions/guid"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "base_path": {
+            "$ref": "#/definitions/absolute_path"
+          },
+          "api_url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "web_url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "locale": {
+            "type": "string"
+          },
+          "analytics_identifier": {
+            "$ref": "#/definitions/analytics_identifier"
+          },
+          "links": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "parent": {
+                "$ref": "#/definitions/guid_list"
+              }
+            }
+          }
+        }
+      }
+    },
+    "details": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "body"
+      ],
+      "properties": {
+        "header_legal_disclaimer": {
+          "description": "an html snippet with legal disclaimer for financial release to go above content.",
+          "type": "string"
+        },
+        "body": {
+          "type": "string"
+        },
+        "footer_legal_disclaimer": {
+          "description": "an html snippet with legal disclaimer for financial release to go above content.",
+          "type": "string"
+        }
+      }
+    },
     "absolute_path": {
       "type": "string",
       "pattern": "^/(([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})+(/([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)*)?$",
@@ -241,63 +312,6 @@
           },
           "content": {
             "type": "string"
-          }
-        }
-      }
-    },
-    "frontend_links": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "additionalProperties": true,
-        "required": [
-          "content_id",
-          "title",
-          "base_path",
-          "locale"
-        ],
-        "properties": {
-          "content_id": {
-            "$ref": "#/definitions/guid"
-          },
-          "title": {
-            "type": "string"
-          },
-          "description": {
-            "anyOf": [
-              {
-                "type": "string"
-              },
-              {
-                "type": "null"
-              }
-            ]
-          },
-          "base_path": {
-            "$ref": "#/definitions/absolute_path"
-          },
-          "api_url": {
-            "type": "string",
-            "format": "uri"
-          },
-          "web_url": {
-            "type": "string",
-            "format": "uri"
-          },
-          "locale": {
-            "type": "string"
-          },
-          "analytics_identifier": {
-            "$ref": "#/definitions/analytics_identifier"
-          },
-          "links": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-              "parent": {
-                "$ref": "#/definitions/guid_list"
-              }
-            }
           }
         }
       }
