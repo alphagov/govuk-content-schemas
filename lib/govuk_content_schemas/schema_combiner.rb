@@ -84,7 +84,7 @@ private
       },
       {
         "properties" => {
-          "document_type" => { "type" => "string" },
+          "document_type" => document_type,
           "schema_name" => format_with_name
         }.merge(properties),
         "required" => ['document_type', 'schema_name'] + required,
@@ -105,6 +105,14 @@ private
         "type" => "string",
         "enum" => [format_name]
       }
+    end
+  end
+
+  def document_type
+    if schemas.key?(:document_types)
+      schemas[:document_types].schema["properties"]["document_type"]
+    else
+      { "type" => "string" }
     end
   end
 

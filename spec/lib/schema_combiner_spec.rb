@@ -6,12 +6,16 @@ RSpec.describe GovukContentSchemas::SchemaCombiner do
   let(:base_links) { build_schema('base_links.json', properties: build_ref_properties(["mainstream_browse_pages"], 'guid_list')) }
   let(:format_name) { 'my_format' }
 
-  subject(:combined) do
-    described_class.new({
+  let(:schemas) {
+    {
       definitions: definitions,
       metadata: metadata_schema,
       details: details_schema
-    }, format_name).combined
+    }
+  }
+
+  subject(:combined) do
+    described_class.new(schemas, format_name).combined
   end
 
   context "combining a simple metadata and details schema" do
@@ -50,6 +54,44 @@ RSpec.describe GovukContentSchemas::SchemaCombiner do
 
     it 'uses the original uri for the combined schema' do
       expect(combined.uri).to eq(metadata_schema.uri)
+    end
+
+    context "without a document_types schema" do
+      it "allows any string in the document_type field" do
+        expect(combined.schema['oneOf'][1]['properties']['document_type']).to eq(
+          {
+            "type" => "string",
+          }
+        )
+      end
+    end
+
+    context "with a document_types schema" do
+      let(:document_types) {
+        {
+          "document_type" => {
+            "type" => "string",
+            "enum" => [
+              "aaib_report",
+              "asylum_support_decision",
+              "cma_case",
+            ]
+          }
+        }
+      }
+
+      let(:schemas) {
+        {
+          definitions: definitions,
+          metadata: metadata_schema,
+          details: details_schema,
+          document_types: build_schema('document_types.json', properties: document_types )
+        }
+      }
+
+      it "sets the allowed values for the document_type field" do
+        expect(combined.schema['oneOf'][1]['properties']['document_type']).to eq(document_types["document_type"])
+      end
     end
   end
 

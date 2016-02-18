@@ -1,0 +1,34 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "title",
+    "publishing_app",
+    "rendering_app",
+    "locale",
+    "routes",
+    "public_updated_at"
+  ],
+  "properties": {
+    "document_type": {
+      "type": "string",
+      "enum": [
+        "aaib_report",
+        "asylum_support_decision",
+        "cma_case",
+        "countryside_stewardship_grant",
+        "drug_safety_update",
+        "employment_appeal_tribunal_decision",
+        "employment_tribunal_decision",
+        "esi_fund",
+        "international_development_fund",
+        "maib_report",
+        "medical_safety_alert",
+        "raib_report",
+        "tax_tribunal_decision",
+        "vehicle_recalls_and_faults_alert"
+      ]
+    }
+  }
+}

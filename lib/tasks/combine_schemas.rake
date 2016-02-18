@@ -21,7 +21,7 @@ task hand_made_publisher_schemas: hand_made_publisher_schemas.pathmap("dist/%p")
 def sources_for_v1_schema(filename)
   Rake::FileList.new(
     "formats/{definitions,metadata,v1_metadata,base_links}.json",
-    filename.pathmap("%{^dist/,}p").pathmap("%d/{details,links}.json")
+    filename.pathmap("%{^dist/,}p").pathmap("%d/{details,links,document_types}.json")
   )
 end
 
