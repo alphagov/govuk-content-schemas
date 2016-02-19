@@ -19,10 +19,6 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "policies": {
-          "description": "These are for collecting content related to a particular government policy.",
-          "$ref": "#/definitions/guid_list"
-        },
         "alpha_taxons": {
           "description": "Prototype-stage taxonomy label for this content item",
           "$ref": "#/definitions/guid_list"
@@ -47,6 +43,10 @@
           "description": "The parent content item.",
           "$ref": "#/definitions/guid_list",
           "maxItems": 1
+        },
+        "policies": {
+          "description": "These are for collecting content related to a particular government policy.",
+          "$ref": "#/definitions/guid_list"
         },
         "policy_areas": {
           "description": "A largely deprecated tag currently only used to power email alerts.",
