@@ -30,7 +30,7 @@
     "format": {
       "type": "string",
       "enum": [
-        "policy_group"
+        "working_group"
       ]
     },
     "public_updated_at": {
