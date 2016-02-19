@@ -8,7 +8,7 @@
       "additionalProperties": false,
       "required": [
         "body",
-        "headers",
+        "headings",
         "public_timestamp",
         "first_published_version"
       ],
@@ -16,7 +16,7 @@
         "body": {
           "type": "string"
         },
-        "headers": {
+        "headings": {
           "type": "string"
         },
         "public_timestamp": {
