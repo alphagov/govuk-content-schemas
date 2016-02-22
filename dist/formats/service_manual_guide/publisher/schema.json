@@ -116,6 +116,9 @@
         "body": {
           "type": "string"
         },
+        "main_topic": {
+          "type": "string"
+        },
         "content_owner": {
           "type": "object",
           "properties": {
