@@ -31,6 +31,10 @@
     "links": {
       "type": "object",
       "additionalProperties": false,
+      "required": [
+        "parent",
+        "organisations"
+      ],
       "properties": {
         "parent": {
           "description": "The parent content item.",
