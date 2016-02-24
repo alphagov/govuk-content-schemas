@@ -8,6 +8,8 @@
     "first_published_version": true
   },
   "format": "html_publication",
+  "schema_name": "html_publication",
+  "document_type": "html_publication",
   "links": {
     "parent": [
       {
