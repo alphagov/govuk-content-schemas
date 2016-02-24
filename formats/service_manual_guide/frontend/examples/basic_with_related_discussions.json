@@ -5,10 +5,6 @@
   "locale": "en",
   "details": {
     "body": "<h2 id=\"what\">What it is, why it works and how to do it</h2>\n<p>Agile methodologies will help you and your team to build world-class, user-centred services quickly and affordably.</p>\n",
-    "content_owner": {
-      "title": "Agile community",
-      "href": "http://sm-11.herokuapp.com/communities/design-community/"
-    },
     "related_discussion": {
       "title": "Design community on hackpad",
       "href": "https://designpatterns.hackpad.com/"
@@ -19,6 +15,18 @@
         "href": "#what-is-it-why-it-works-and-how-to-do-it"
       }
     ]
+  },
+  "links": {
+    "content_owners": [{
+      "content_id": "e5f09422-bf55-417c-b520-8a42cb409814",
+      "title": "Agile delivery community",
+      "base_path": "/service-manual/communities/agile-delivery-community",
+      "description": "Agile delivery community takes care of...",
+      "api_url": "http://content-store.dev.gov.uk/content/service-manual/communities/agile-delivery-community",
+      "web_url": "http://www.dev.gov.uk/service-manual/communities/agile-delivery-community",
+      "locale": "en",
+      "analytics_identifier": null
+    }]
   },
   "base_path": "/service-manual/agile",
   "description": "What agile is, why it works and how to do it",
