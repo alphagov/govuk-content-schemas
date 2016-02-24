@@ -12,6 +12,9 @@
     },
     "update_type": {
       "enum": [ "major", "minor", "republish" ]
+    },
+    "links": {
+      "$ref": "#/definitions/links"
     }
   }
 }

@@ -6,23 +6,36 @@ RSpec.describe GovukContentSchemas::SchemaCombiner do
   let(:base_links) { build_schema('base_links.json', properties: build_ref_properties(["mainstream_browse_pages"], 'guid_list')) }
   let(:format_name) { 'my_format' }
 
-  subject(:combined) do
-    described_class.new({
+  let(:schemas) {
+    {
       definitions: definitions,
       metadata: metadata_schema,
       details: details_schema
-    }, format_name).combined
+    }
+  }
+
+  subject(:combined) do
+    described_class.new(schemas, format_name).combined
   end
 
   context "combining a simple metadata and details schema" do
     let(:details_schema) { build_schema('details.json', properties: build_string_properties('detail')) }
 
-    it 'adds a details property to the combined schema' do
-      expect(combined.schema['properties']['details']).to be_a(Hash)
+    it 'adds a details property to the combined schema definitions' do
+      expect(combined.schema['definitions']['details']).to be_a(Hash)
+    end
+
+    it 'duplicates the metadata to add format and document_type/schema_name options' do
+      expect(combined.schema).not_to have_key('properties')
+      prop1 = combined.schema['oneOf'][0]['properties']
+      expect(prop1.keys).to include('format')
+      prop2 = combined.schema['oneOf'][1]['properties']
+      expect(prop2.keys).to include('schema_name', 'document_type')
+      expect(prop1.keys - ['format']).to eq(prop2.keys - ['document_type', 'schema_name'])
     end
 
     it 'explicitly defines the format name in the format property' do
-      expect(combined.schema['properties']['format']).to eq(
+      expect(combined.schema['oneOf'][0]['properties']['format']).to eq(
         {
           "type" => "string",
           "enum" => [format_name]
@@ -31,16 +44,54 @@ RSpec.describe GovukContentSchemas::SchemaCombiner do
     end
 
     it 'strips the $schema key from the embedded details property' do
-      expect(combined.schema['properties']['details']).not_to have_key('$schema')
+      expect(combined.schema['definitions']['details']).not_to have_key('$schema')
     end
 
     it 'embeds the remaining content of the details schema as the details property definition' do
       remaining_content_of_details_schema = details_schema.schema.reject { |k, v| k == '$schema'}
-      expect(combined.schema['properties']['details']).to eq(remaining_content_of_details_schema)
+      expect(combined.schema['definitions']['details']).to eq(remaining_content_of_details_schema)
     end
 
     it 'uses the original uri for the combined schema' do
       expect(combined.uri).to eq(metadata_schema.uri)
+    end
+
+    context "without a document_types schema" do
+      it "allows any string in the document_type field" do
+        expect(combined.schema['oneOf'][1]['properties']['document_type']).to eq(
+          {
+            "type" => "string",
+          }
+        )
+      end
+    end
+
+    context "with a document_types schema" do
+      let(:document_types) {
+        {
+          "document_type" => {
+            "type" => "string",
+            "enum" => [
+              "aaib_report",
+              "asylum_support_decision",
+              "cma_case",
+            ]
+          }
+        }
+      }
+
+      let(:schemas) {
+        {
+          definitions: definitions,
+          metadata: metadata_schema,
+          details: details_schema,
+          document_types: build_schema('document_types.json', properties: document_types )
+        }
+      }
+
+      it "sets the allowed values for the document_type field" do
+        expect(combined.schema['oneOf'][1]['properties']['document_type']).to eq(document_types["document_type"])
+      end
     end
   end
 
@@ -49,7 +100,7 @@ RSpec.describe GovukContentSchemas::SchemaCombiner do
       build_schema('v1_metadata.json', properties: build_string_properties('bar'), required: ['bar'])
     }
 
-    let(:details) { build_schema('details.json', properties: build_string_properties('detail')) }
+    let(:details) { build_schema('details.json', properties: build_string_properties('detail'), definitions: {}) }
 
     subject(:combined) do
       described_class.new({
@@ -61,7 +112,8 @@ RSpec.describe GovukContentSchemas::SchemaCombiner do
     end
 
     it "combines the v1 metadata with simple metadata and details and adds the format" do
-      expect(combined.schema['properties'].keys).to match_array(['bar', 'body', 'details', 'format'])
+      expect(combined.schema['oneOf'][0]['properties'].keys).to match_array(['bar', 'body', 'format'])
+      expect(combined.schema['definitions']).to have_key('details')
     end
   end
 
@@ -93,7 +145,7 @@ RSpec.describe GovukContentSchemas::SchemaCombiner do
     end
 
     it 'removes the definitions from the embedded details property' do
-      expect(combined.schema['properties']['details']).not_to have_key('definitions')
+      expect(combined.schema['definitions']['details']).not_to have_key('definitions')
     end
 
     it 'merges the definitions from the details schema into the top-level definitions' do
@@ -119,16 +171,16 @@ RSpec.describe GovukContentSchemas::SchemaCombiner do
     end
 
     it 'adds a links property to the combined schema' do
-      expect(combined.schema['properties']['links']).to be_a(Hash)
+      expect(combined.schema['definitions']['links']).to be_a(Hash)
     end
 
     it 'strips the $schema key from the embedded links property' do
-      expect(combined.schema['properties']['links']).not_to have_key('$schema')
+      expect(combined.schema['definitions']['links']).not_to have_key('$schema')
     end
 
     it 'embeds the remaining content of the links schema as the links property definition' do
       remaining_content_of_links_schema = links_schema.schema.reject { |k, v| %w{$schema definitions}.include?(k) }
-      expect(combined.schema['properties']['links']['properties'].keys).to eq(['lead_organisations', 'mainstream_browse_pages'])
+      expect(combined.schema['definitions']['links']['properties'].keys).to eq(['lead_organisations', 'mainstream_browse_pages'])
     end
 
     it 'merges the definitions from the links schema into the combined schemas definitions' do
@@ -170,7 +222,7 @@ RSpec.describe GovukContentSchemas::SchemaCombiner do
     end
 
     it 'removes the definitions from the embedded details property' do
-      expect(combined.schema['properties']['details']).not_to have_key('definitions')
+      expect(combined.schema['definitions']['details']).not_to have_key('definitions')
     end
 
     it 'merges the definitions into the combined schema' do
@@ -182,11 +234,11 @@ RSpec.describe GovukContentSchemas::SchemaCombiner do
     end
 
     it "merges in v2 required properties" do
-      expect(combined.schema['required']).to include('foo')
+      expect(combined.schema['oneOf'][0]['required']).to include('foo')
     end
 
     it "merges in v2 properties" do
-      expect(combined.schema['properties']).to have_key('foo')
+      expect(combined.schema['oneOf'][0]['properties']).to have_key('foo')
     end
   end
 

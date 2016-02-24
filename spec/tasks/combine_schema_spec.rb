@@ -56,7 +56,7 @@ RSpec.describe 'combine_schemas' do
       end
 
       it "derives the format name from the filesystem path" do
-        expect(generated_schema.schema['properties']['format']).to eq(
+        expect(generated_schema.schema['oneOf'][0]['properties']['format']).to eq(
           {"type" => "string", "enum" => [format_name]}
         )
       end

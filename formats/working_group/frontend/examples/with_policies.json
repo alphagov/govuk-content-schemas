@@ -22,5 +22,7 @@
         "locale": "en"
       }
     ]
-  }
+  },
+  "schema_name": "working_group",
+  "document_type": "working_group"
 }

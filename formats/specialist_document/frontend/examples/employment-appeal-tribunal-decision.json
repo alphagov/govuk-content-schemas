@@ -43,5 +43,7 @@
         "locale": "en"
       }
     ]
-  }
+  },
+  "schema_name": "specialist_document",
+  "document_type": "employment_appeal_tribunal_decision"
 }

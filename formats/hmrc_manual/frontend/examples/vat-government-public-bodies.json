@@ -139,5 +139,7 @@
         "locale": "en"
       }
     ]
-  }
+  },
+  "schema_name": "hmrc_manual",
+  "document_type": "hmrc_manual"
 }

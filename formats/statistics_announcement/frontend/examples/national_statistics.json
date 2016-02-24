@@ -35,5 +35,7 @@
   "need_ids": [],
   "public_updated_at": "2014-11-17T14:19:42.460Z",
   "title": "UK armed forces quarterly personnel report: 1 October 2015",
-  "updated_at": "2014-11-17T14:19:42.460Z"
+  "updated_at": "2014-11-17T14:19:42.460Z",
+  "schema_name": "statistics_announcement",
+  "document_type": "statistics_announcement"
 }

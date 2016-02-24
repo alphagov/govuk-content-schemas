@@ -15,14 +15,16 @@ class GovukContentSchemas::SchemaCombiner
   def combined
     if schemas.key?(:metadata)
       combined_schema = clone_schema(schemas.fetch(:metadata))
+      add_version_properties(combined_schema.schema)
+      add_details(combined_schema.schema)
+      add_links(combined_schema.schema, 'definitions')
       add_format_field(combined_schema.schema)
     else
       combined_schema = clone_schema(schemas.fetch(:links_metadata))
+      add_version_properties(combined_schema.schema)
+      add_details(combined_schema.schema)
+      add_links(combined_schema.schema, 'properties')
     end
-
-    add_version_properties(combined_schema.schema)
-    add_details(combined_schema.schema)
-    add_links(combined_schema.schema)
 
     add_combined_definitions(combined_schema.schema)
 
@@ -47,16 +49,17 @@ private
 
   def add_details(schema)
     return unless schemas[:details]
-    schema['properties']['details'] = embeddable_schema(schemas[:details])
+    schema['definitions'] = schema.fetch('definitions', {}).merge({'details' => embeddable_schema(schemas[:details])})
   end
 
-  def add_links(schema)
+  def add_links(schema, target)
     return unless schemas.key?(:base_links)
 
+    schema[target] = {} unless schema.key?(target)
     if schemas.key?(:links)
-      schema['properties']['links'] = merge_schemas(schemas[:links], schemas.fetch(:base_links))
+      schema[target]['links'] = merge_schemas(schemas[:links], schemas.fetch(:base_links))
     else
-      schema['properties']['links'] = embeddable_schema(schemas.fetch(:base_links))
+      schema[target]['links'] = embeddable_schema(schemas.fetch(:base_links))
     end
   end
 
@@ -68,23 +71,54 @@ private
   end
 
   def add_format_field(schema)
+    properties = schema.delete('properties')
+    required = schema.delete('required') || []
+    schema['additionalProperties'] = true
+    schema['oneOf'] = [
+      {
+        "properties" => {
+          "format" => format_with_name
+        }.merge(properties),
+        "required" => ['format'] + required,
+        "additionalProperties" => false
+      },
+      {
+        "properties" => {
+          "document_type" => document_type,
+          "schema_name" => format_with_name
+        }.merge(properties),
+        "required" => ['document_type', 'schema_name'] + required,
+        "additionalProperties" => false
+      }
+    ]
+  end
+
+  def format_with_name
     if format_name == "placeholder"
-      schema['properties']['format'] = {
+      {
         "type" => "string",
         "pattern" => "^(placeholder|placeholder_.+)$",
         "description" => "Should be of the form 'placeholder_my_format_name'. 'placeholder' is allowed for backwards compatibility.",
       }
     else
-      schema['properties']['format'] = {
+      {
         "type" => "string",
         "enum" => [format_name]
       }
     end
   end
 
+  def document_type
+    if schemas.key?(:document_types)
+      schemas[:document_types].schema["properties"]["document_type"]
+    else
+      { "type" => "string" }
+    end
+  end
+
   def add_combined_definitions(schema)
     return unless definitions_from_all_schemas.any?
-    schema['definitions'] = definitions_from_all_schemas
+    schema['definitions'] = schema.fetch('definitions', {}).merge!(definitions_from_all_schemas)
   end
 
   def embeddable_schema(embeddable)

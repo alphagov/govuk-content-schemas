@@ -151,8 +151,12 @@
     ]
   },
   "locale": "en",
-  "need_ids": ["101191"],
+  "need_ids": [
+    "101191"
+  ],
   "public_updated_at": "2015-04-28T17:11:23+01:00",
   "title": "Antarctica travel advice",
-  "updated_at": "2015-08-28T17:16:43+01:00"
+  "updated_at": "2015-08-28T17:16:43+01:00",
+  "schema_name": "travel_advice",
+  "document_type": "travel_advice"
 }

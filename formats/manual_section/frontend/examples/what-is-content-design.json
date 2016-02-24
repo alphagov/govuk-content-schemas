@@ -32,5 +32,7 @@
         "locale": "en"
       }
     ]
-  }
+  },
+  "schema_name": "manual_section",
+  "document_type": "manual_section"
 }
