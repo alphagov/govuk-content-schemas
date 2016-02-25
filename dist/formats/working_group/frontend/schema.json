@@ -70,9 +70,6 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "policies": {
-          "$ref": "#/definitions/frontend_links"
-        },
         "alpha_taxons": {
           "$ref": "#/definitions/frontend_links"
         },
@@ -89,6 +86,9 @@
           "$ref": "#/definitions/frontend_links"
         },
         "parent": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "policies": {
           "$ref": "#/definitions/frontend_links"
         },
         "policy_areas": {
@@ -178,7 +178,7 @@
         "email": {
           "type": "string"
         },
-        "summary": {
+        "body": {
           "type": "string"
         }
       }
