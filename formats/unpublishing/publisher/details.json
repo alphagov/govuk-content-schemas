@@ -16,6 +16,10 @@
     "alternative_url": {
       "type": ["string", "null"],
       "format": "uri"
+    },
+    "public_updated_at": {
+      "type": "string",
+      "format": "date-time"
     }
   }
 }

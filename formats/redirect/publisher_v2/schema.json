@@ -24,6 +24,10 @@
     "update_type": {
       "enum": [ "major", "minor", "republish" ]
     },
+    "public_updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
     "redirects": {
       "type": "array",
       "items": {
