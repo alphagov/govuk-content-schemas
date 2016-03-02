@@ -7,6 +7,10 @@
     "summary"
   ],
   "properties": {
+    "subscriber_list_document_type": {
+      "type": "string",
+      "description": "The document_type to pass through to the email alert api when creating a subscriber list"
+    },
     "email_alert_type": {
       "type": "string",
       "enum": ["topics", "policies", "countries"]
