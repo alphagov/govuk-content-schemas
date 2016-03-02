@@ -183,7 +183,8 @@
           "type": "string",
           "enum": [
             "topics",
-            "policies"
+            "policies",
+            "countries"
           ]
         },
         "signup_tags": {
@@ -195,6 +196,9 @@
               "type": "array"
             },
             "topics": {
+              "type": "array"
+            },
+            "countries": {
               "type": "array"
             }
           }
