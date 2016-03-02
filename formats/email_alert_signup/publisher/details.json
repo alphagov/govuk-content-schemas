@@ -9,7 +9,7 @@
   "properties": {
     "email_alert_type": {
       "type": "string",
-      "enum": ["topics", "policies"]
+      "enum": ["topics", "policies", "countries"]
     },
     "signup_tags": {
       "type": "object",
@@ -17,7 +17,8 @@
       "additionalProperties": false,
       "properties": {
         "policies": { "type": "array" },
-        "topics": { "type": "array" }
+        "topics": { "type": "array" },
+        "countries": { "type": "array" }
       }
     },
     "summary": {
