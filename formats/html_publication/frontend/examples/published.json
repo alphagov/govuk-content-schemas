@@ -26,6 +26,10 @@
       {
         "content_id": "90c1be18-70a4-476b-9244-ef4c36e1a042",
         "title": "Environment Agency",
+        "logo": {
+          "formatted_title": "Environment Agency",
+          "crest": "custom"
+        },
         "base_path": "/government/organisations/environment-agency",
         "api_url": "https://www.gov.uk/api/content/government/organisations/environment-agency",
         "web_url": "https://www.gov.uk/government/organisations/environment-agency",

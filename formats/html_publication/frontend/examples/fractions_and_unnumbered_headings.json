@@ -26,6 +26,11 @@
       {
         "content_id": "90c1be18-70a4-476b-9244-ef4c36e1a042",
         "title": "Department for Education",
+        "brand": "department-for-education",
+        "logo": {
+          "formatted_title": "Department<br>for Education",
+          "crest": "single-identity"
+        },
         "base_path": "/government/organisations/department-for-education",
         "api_url": "https://www.gov.uk/api/content/government/organisations/department-for-education",
         "web_url": "https://www.gov.uk/government/organisations/department-for-education",

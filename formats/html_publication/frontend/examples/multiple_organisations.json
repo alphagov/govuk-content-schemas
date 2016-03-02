@@ -26,6 +26,11 @@
       {
         "content_id": "90c1be18-70a4-476b-9244-ef4c36e1a042",
         "title": "Bona Vacantia",
+        "brand": "attorney-generals-office",
+        "logo": {
+          "formatted_title": "Bona Vacantia",
+          "crest": "single-identity"
+        },
         "base_path": "/government/organisations/bona-vacantia",
         "api_url": "https://www.gov.uk/api/content/government/organisations/bona-vacantia",
         "web_url": "https://www.gov.uk/government/organisations/bona-vacantia",
@@ -35,6 +40,11 @@
       {
         "content_id": "83c1be18-70a4-476b-9244-ef4c36e1a042",
         "title": "Treasury Solicitor’s Department",
+        "brand": "attorney-generals-office",
+        "logo": {
+          "formatted_title": "Treasury<br>Solicitor's<br>Department",
+          "crest": "single-identity"
+        },
         "base_path": "/government/organisations/treasury-solicitor-s-department",
         "api_url": "https://www.gov.uk/api/content/government/organisations/treasury-solicitor-s-department",
         "web_url": "https://www.gov.uk/government/organisations/treasury-solicitor-s-department",
