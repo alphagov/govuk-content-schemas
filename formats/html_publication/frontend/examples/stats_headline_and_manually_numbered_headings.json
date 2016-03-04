@@ -26,6 +26,11 @@
       {
         "content_id": "90c1be18-70a4-476b-9244-ef4c36e1a042",
         "title": "Department for Work & Pensions",
+        "brand": "department-for-work-pensions",
+        "logo": {
+          "formatted_title": "Department<br>for Work &amp;<br>Pensions",
+          "crest": "single-identity"
+        },
         "base_path": "/government/organisations/department-for-work-pensions",
         "api_url": "https://www.gov.uk/api/content/government/organisations/department-for-work-pensions",
         "web_url": "https://www.gov.uk/government/organisations/department-for-work-pensions",

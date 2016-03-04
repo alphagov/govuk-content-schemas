@@ -26,6 +26,11 @@
       {
         "content_id": "90c1be18-70a4-476b-9244-ef4c36e1a042",
         "title": "HM Treasury",
+        "brand": "hm-treasury",
+        "logo": {
+          "crest": "single-identity",
+          "formatted_title": "HM Treasury"
+        },
         "base_path": "/government/organisations/hm-treasury",
         "api_url": "https://www.gov.uk/api/content/government/organisations/hm-treasury",
         "web_url": "https://www.gov.uk/government/organisations/hm-treasury",
