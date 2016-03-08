@@ -3,7 +3,6 @@
   "rendering_app":"government-frontend",
   "format":"service_manual_topic",
   "locale":"en",
-  "update_type":"minor",
   "base_path":"/service-manual/technology",
   "public_updated_at":"2016-02-11T15:42:55Z",
   "title":"Technology",
