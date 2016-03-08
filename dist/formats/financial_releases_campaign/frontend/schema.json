@@ -180,7 +180,7 @@
       ],
       "properties": {
         "image": {
-          "$ref": "#/definitions/image"
+          "$ref": "#/definitions/asset_link"
         },
         "header_legal_disclaimer": {
           "type": "string"
@@ -321,6 +321,23 @@
           "content": {
             "type": "string"
           }
+        }
+      }
+    },
+    "asset_link": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "url",
+        "alt_text"
+      ],
+      "properties": {
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "alt_text": {
+          "type": "string"
         }
       }
     }

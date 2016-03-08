@@ -8,7 +8,7 @@
    ],
   "properties": {
     "image": {
-      "$ref": "#/definitions/image"
+      "$ref": "#/definitions/asset_link"
     },
     "header_legal_disclaimer": {
       "$ref" : "#/definitions/multiple_content_types"
@@ -24,6 +24,25 @@
     },
     "footer_legal_disclaimer": {
       "$ref" : "#/definitions/multiple_content_types"
+    }
+  },
+  "definitions": {
+    "asset_link": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "url",
+        "alt_text"
+      ],
+      "properties": {
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "alt_text": {
+          "type": "string"
+        }
+      }
     }
   }
 }

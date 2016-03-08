@@ -10,8 +10,8 @@
   "phase": "live",
   "details": {
     "image": {
-      "alt_text": "HM Government",
-      "url": "campaign.large.jpg"
+      "url": "https://assets.digital.cabinet-office.gov.uk/media/X/campaign.large.jpg",
+      "alt_text": "HM Government"
     },
     "header_legal_disclaimer": [
       {
