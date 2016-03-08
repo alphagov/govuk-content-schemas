@@ -228,13 +228,6 @@
         },
         "previous_version": {
           "type": "string"
-        },
-        "update_type": {
-          "enum": [
-            "major",
-            "minor",
-            "republish"
-          ]
         }
       },
       "required": [
@@ -340,13 +333,6 @@
         },
         "previous_version": {
           "type": "string"
-        },
-        "update_type": {
-          "enum": [
-            "major",
-            "minor",
-            "republish"
-          ]
         }
       },
       "required": [
