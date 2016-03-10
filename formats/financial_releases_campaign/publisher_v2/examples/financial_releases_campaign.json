@@ -64,7 +64,8 @@
       }
     ],
     "pdf": {
-      "url": "campaign.pdf"
+      "url": "campaign.pdf",
+      "content_type": "application/pdf"
     }
   },
   "routes": [
