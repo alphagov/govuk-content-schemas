@@ -198,7 +198,7 @@
           "type": "string"
         },
         "pdf": {
-          "$ref": "#/definitions/image"
+          "$ref": "#/definitions/asset_link"
         }
       }
     },
@@ -324,6 +324,23 @@
           "content": {
             "type": "string"
           }
+        }
+      }
+    },
+    "asset_link": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "url",
+        "content_type"
+      ],
+      "properties": {
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "content_type": {
+          "type": "string"
         }
       }
     }
