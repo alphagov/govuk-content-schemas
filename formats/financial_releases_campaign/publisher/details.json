@@ -24,6 +24,9 @@
     },
     "footer_legal_disclaimer": {
       "$ref" : "#/definitions/multiple_content_types"
+    },
+    "pdf": {
+      "$ref": "#/definitions/asset_link"
     }
   }
 }

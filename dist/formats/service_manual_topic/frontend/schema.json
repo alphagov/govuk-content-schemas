@@ -332,6 +332,23 @@
           }
         }
       }
+    },
+    "asset_link": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "url",
+        "content_type"
+      ],
+      "properties": {
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "content_type": {
+          "type": "string"
+        }
+      }
     }
   }
 }

@@ -28,6 +28,9 @@
         },
         "footer_legal_disclaimer": {
           "$ref": "#/definitions/multiple_content_types"
+        },
+        "pdf": {
+          "$ref": "#/definitions/asset_link"
         }
       }
     },
@@ -192,6 +195,23 @@
           "content": {
             "type": "string"
           }
+        }
+      }
+    },
+    "asset_link": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "url",
+        "content_type"
+      ],
+      "properties": {
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "content_type": {
+          "type": "string"
         }
       }
     }
