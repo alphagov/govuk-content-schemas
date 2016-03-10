@@ -62,7 +62,10 @@
         "content_type": "text/html",
         "content": "<p>Legal disclaimer:</p>\n\n<p>The contents of this advertisement, which have been prepared by and are the sole responsibility of HM Treasury, have been approved by Barclays Bank PLC (Barclays) solely for the purposes of section 21(2)(b) of the FSMA. Barclays, whose registered office is 1 Churchill Place, London E14 5HP, is authorised by the Prudential Regulation Authority and regulated by the Prudential Regulation Authority and the Financial Conduct Authority. No reliance may be placed on Barclays for advice or recommendations with respect to the contents of this advertisement and, to the extent it may do so under applicable law, Barclays makes no representation or warranty to the persons viewing this advertisement with regards to the information contained herein.</p>\n\n<p><strong>This advertisement does not constitute an offer, invitation or recommendation concerning the securities referred to in this advertisement. The price and value of securities can go down as well as up, and so you could get back less than you invested. Past performance is not a guide to future performance. Information in this advertisement cannot be relied upon as a guide to future performance. Before purchasing any securities referred to in this advertisement, persons viewing this advertisement should make sure that they fully understand and accept the risks which are to be set out in the prospectus referred to above. Potential Investors should consult an independent financial adviser as to the suitability of the securities referred to in this advertisement to the person concerned</strong>.</p>\n"
       }
-    ]
+    ],
+    "pdf": {
+      "url": "campaign.pdf"
+    }
   },
   "routes": [
     {

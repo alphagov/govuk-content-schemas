@@ -196,6 +196,9 @@
         },
         "footer_legal_disclaimer": {
           "type": "string"
+        },
+        "pdf": {
+          "$ref": "#/definitions/image"
         }
       }
     },
