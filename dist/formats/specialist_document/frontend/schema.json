@@ -199,6 +199,12 @@
         "body": {
           "type": "string"
         },
+        "attachments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/asset_link"
+          }
+        },
         "metadata": {
           "$ref": "#/definitions/any_metadata"
         },

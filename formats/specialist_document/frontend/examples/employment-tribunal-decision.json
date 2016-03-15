@@ -26,7 +26,17 @@
         "note": "First published."
       }
     ],
-    "body": "<p>Download PDF: </p>\n"
+    "body": "<p>Download PDF: </p>\n",
+    "attachments": [
+      {
+        "url": "https://assets.digital.cabinet-office.gov.uk/media/513a0efbed915d425e000002/employment-tribunal-decision-image.jpg",
+        "content_type": "application/jpeg"
+      },
+      {
+        "url": "https://assets.digital.cabinet-office.gov.uk/media/513a0efbed915d425e000002/employment-tribunal-decision-pdf.pdf",
+        "content_type": "application/pdf"
+      }
+    ]
   },
   "links": {
     "available_translations": [
