@@ -11,16 +11,6 @@
   "schema_name": "html_publication",
   "document_type": "html_publication",
   "links": {
-    "available_translations": [
-      {
-        "content_id": "1d0ba5bd-8a0a-41a7-950a-c7b819da6336",
-        "api_url": "https://www.gov.uk/api/content/government/publications/why-overseas-companies-should-set-up-in-the-uk/why-overseas-companies-should-set-up-in-the-uk",
-        "base_path": "/government/publications/why-overseas-companies-should-set-up-in-the-uk/why-overseas-companies-should-set-up-in-the-uk",
-        "locale": "en",
-        "title": "Why overseas companies should set up in the UK",
-        "web_url": "https://www.gov.uk/government/publications/why-overseas-companies-should-set-up-in-the-uk/why-overseas-companies-should-set-up-in-the-uk"
-      }
-    ],
     "parent": [
       {
         "content_id": "8b19c238-54e3-4e27-b0d7-60f8e2a677c9",
