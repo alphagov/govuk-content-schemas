@@ -29,7 +29,17 @@
         "note": "First published."
       }
     ],
-    "body": "<p>Download PDF: <a rel=\"external\" href=\"http://assets-origin.dev.gov.uk/media/56324037759b742c00000001/15_0144rjfhMDLA.doc\">UKEAT/0144/15/LA</a></p>\n"
+    "body": "<p>Download PDF: <a rel=\"external\" href=\"http://assets-origin.dev.gov.uk/media/56324037759b742c00000001/15_0144rjfhMDLA.doc\">UKEAT/0144/15/LA</a></p>\n",
+    "attachments": [
+      {
+        "url": "https://assets.digital.cabinet-office.gov.uk/media/513a0efbed915d425e000002/employment-appeal-tribunal-decision-image.jpg",
+        "content_type": "application/jpeg"
+      },
+      {
+        "url": "https://assets.digital.cabinet-office.gov.uk/media/513a0efbed915d425e000002/employment-appeal-tribunal-decision-pdf.pdf",
+        "content_type": "application/pdf"
+      }
+    ]
   },
   "links": {
     "available_translations": [

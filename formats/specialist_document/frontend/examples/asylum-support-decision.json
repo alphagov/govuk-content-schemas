@@ -32,7 +32,17 @@
         "note": "date format"
       }
     ],
-    "body": "<p>Download decision: </p>\n"
+    "body": "<p>Download decision: </p>\n",
+    "attachments": [
+      {
+        "url": "https://assets.digital.cabinet-office.gov.uk/media/513a0efbed915d425e000002/asylum-support-image.jpg",
+        "content_type": "application/jpeg"
+      },
+      {
+        "url": "https://assets.digital.cabinet-office.gov.uk/media/513a0efbed915d425e000002/asylum-support-pdf.pdf",
+        "content_type": "application/pdf"
+      }
+    ]
   },
   "links": {
     "available_translations": [
