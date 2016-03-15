@@ -30,6 +30,9 @@
           }
         }
       }
+    },
+    "withdraw_reason": {
+      "type": "string"
     }
   }
 }

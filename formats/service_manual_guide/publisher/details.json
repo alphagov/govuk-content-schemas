@@ -21,6 +21,9 @@
         }
       }
     },
+    "withdraw_reason": {
+      "type": "string"
+    },
     "related_discussion": {
       "type": "object",
       "properties": {
