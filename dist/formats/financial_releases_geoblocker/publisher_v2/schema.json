@@ -151,6 +151,9 @@
         "content_type"
       ],
       "properties": {
+        "content_id": {
+          "$ref": "#/definitions/guid"
+        },
         "url": {
           "type": "string",
           "format": "uri"
