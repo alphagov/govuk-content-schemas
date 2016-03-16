@@ -13,11 +13,17 @@
     "attachments": [
       {
         "url": "https://assets.digital.cabinet-office.gov.uk/media/56e7fc15ed915d037a000004/example-cma-case-image.jpg",
-        "content_type": "application/jpg"
+        "content_type": "application/jpg",
+        "title": "example cma case image",
+        "created_at": "2015-02-11T13:45:00.000+00:00",
+        "updated_at": "2015-02-13T13:45:00.000+00:00"
       },
       {
         "url": "https://assets.digital.cabinet-office.gov.uk/media/56e7fc15ed915d037a000004/example-cma-case-pdf.pdf",
-        "content_type": "application/pdf"
+        "content_type": "application/pdf",
+        "title": "example cma case pdf",
+        "created_at": "2015-02-11T13:45:00.000+00:00",
+        "updated_at": "2015-02-13T13:45:00.000+00:00"
       }
     ],
     "change_history": [],

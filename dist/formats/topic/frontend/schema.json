@@ -364,6 +364,15 @@
         },
         "content_type": {
           "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "created_at": {
+          "format": "date-time"
+        },
+        "updated_at": {
+          "format": "date-time"
         }
       }
     }
