@@ -10,10 +10,12 @@
   "public_updated_at": "2015-04-14T10:56:00.000+00:00",
   "details": {
     "email_alert_type": "policies",
-    "signup_tags": {
-      "policies": [
-        "employment"
-      ]
+    "subscriber_list": {
+      "tags": {
+        "policies": [
+          "employment"
+        ]
+      }
     },
     "breadcrumbs": [
       {

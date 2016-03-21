@@ -7,13 +7,43 @@
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "signup_tags",
+        "subscriber_list",
         "summary"
       ],
       "properties": {
-        "subscriber_list_document_type": {
-          "type": "string",
-          "description": "The document_type to pass through to the email alert api when creating a subscriber list"
+        "subscriber_list": {
+          "type": "object",
+          "description": "The attributes used to match subscriber lists in email-alert-api",
+          "minProperties": 1,
+          "properties": {
+            "tags": {
+              "type": "object",
+              "description": "DEPRECATED: The tags used to match subscribers lists",
+              "additionalProperties": false,
+              "properties": {
+                "policies": {
+                  "type": "array"
+                },
+                "topics": {
+                  "type": "array"
+                }
+              }
+            },
+            "links": {
+              "type": "object",
+              "description": "The links used to match subscribers lists",
+              "additionalProperties": false,
+              "properties": {
+                "countries": {
+                  "type": "array"
+                }
+              }
+            },
+            "document_type": {
+              "type": "string",
+              "description": "The document_type used to match subscribers lists"
+            }
+          }
         },
         "email_alert_type": {
           "type": "string",
@@ -22,22 +52,6 @@
             "policies",
             "countries"
           ]
-        },
-        "signup_tags": {
-          "type": "object",
-          "description": "The content item for which this is handling email signups",
-          "additionalProperties": false,
-          "properties": {
-            "policies": {
-              "type": "array"
-            },
-            "topics": {
-              "type": "array"
-            },
-            "countries": {
-              "type": "array"
-            }
-          }
         },
         "summary": {
           "type": "string"

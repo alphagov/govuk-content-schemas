@@ -10,10 +10,12 @@
   "rendering_app": "government-frontend",
   "details": {
     "email_alert_type": "policies",
-    "signup_tags": {
-      "policies": [
-        "employment"
-      ]
+    "subscriber_list": {
+      "tags": {
+        "policies": [
+          "employment"
+        ]
+      }
     },
     "breadcrumbs": [
       {
