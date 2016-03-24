@@ -10,6 +10,28 @@
   "phase": "alpha",
   "analytics_identifier": null,
   "links": {
+    "content_owners": [
+      {
+        "content_id": "fb87cca9-311e-4fd3-af42-03616164a407",
+        "title": "Agile delivery community",
+        "base_path": "/service-manual/communities/agile-delivery-community",
+        "description": "Agile delivery community takes care of...",
+        "api_url": "http://content-store.dev.gov.uk/content/service-manual/communities/agile-delivery-community",
+        "web_url": "http://www.dev.gov.uk/service-manual/communities/agile-delivery-community",
+        "locale": "en",
+        "analytics_identifier": null
+      },
+      {
+        "content_id": "d6f49e7f-4f54-44e6-815b-ac3098a5f509",
+        "title": "User research community",
+        "base_path": "/service-manual/communities/user-research-community",
+        "description": "User research community takes care of...",
+        "api_url": "http://content-store.dev.gov.uk/content/service-manual/communities/user-research-community",
+        "web_url": "http://www.dev.gov.uk/service-manual/communities/user-research-community",
+        "locale": "en",
+        "analytics_identifier": null
+      }
+    ],
     "linked_items": [
       {
         "content_id": "60b91f03-9dfe-4cb1-a01b-d0391b261cd8",
