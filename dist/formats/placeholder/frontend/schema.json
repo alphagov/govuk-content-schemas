@@ -205,15 +205,16 @@
             "description": "Used for organisations, to allow us to publish branding / logo information. Remove when organisations are migrated."
           },
           "crest": {
-            "type": "string",
+            "type": [
+              "string",
+              "null"
+            ],
             "enum": [
               "bis",
-              "custom",
               "eo",
               "hmrc",
               "ho",
               "mod",
-              "no-identity",
               "portcullis",
               "single-identity",
               "so",

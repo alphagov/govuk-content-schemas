@@ -28,7 +28,7 @@
         "title": "Environment Agency",
         "logo": {
           "formatted_title": "Environment Agency",
-          "crest": "custom"
+          "crest": null
         },
         "base_path": "/government/organisations/environment-agency",
         "api_url": "https://www.gov.uk/api/content/government/organisations/environment-agency",
