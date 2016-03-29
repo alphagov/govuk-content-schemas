@@ -54,7 +54,8 @@
         "change_description": "Latest update: Summary – information and advice for Manchester City fans travelling to Seville ",
         "synonyms": [ "Ibiza", "Majorca", "Mallorca", "Lanzarote", "Barcelona", "Benidorm", "Tenerife", "Canary Islands", "Canaries", "Gran Canaria" ]
       }
-    ]
+    ],
+    "max_cache_time": 10
   },
   "format": "travel_advice_index",
   "locale": "en",

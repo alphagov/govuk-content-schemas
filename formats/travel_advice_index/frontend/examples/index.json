@@ -69,7 +69,8 @@
           "Gran Canaria"
         ]
       }
-    ]
+    ],
+    "max_cache_time": 10
   },
   "format": "travel_advice_index",
   "links": {
