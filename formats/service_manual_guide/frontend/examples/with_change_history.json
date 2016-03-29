@@ -1,0 +1,47 @@
+{
+  "content_id": "2b81a47b-7c8f-4280-b6c7-b6fa25822222",
+  "public_updated_at": "2015-10-09T08:17:10+00:00",
+  "format": "service_manual_guide",
+  "locale": "en",
+  "details": {
+    "body": "<h2 id=\"what\">What it is, why it works and how to do it</h2>\n<p>Agile methodologies will help you and your team to build world-class, user-centred services quickly and affordably.</p>\n",
+    "related_discussion": {
+      "title": "Design community on hackpad",
+      "href": "https://designpatterns.hackpad.com/"
+    },
+    "header_links": [
+      {
+        "title": "What is it, why it works and how to do it",
+        "href": "#what-is-it-why-it-works-and-how-to-do-it"
+      }
+    ],
+    "change_history": [
+      {
+        "public_timestamp": "2015-10-09T08:17:10+00:00",
+        "note": "This is a change"
+      },
+      {
+        "public_timestamp": "2016-01-09T08:17:10+00:00",
+        "note": "This is another change"
+      }
+    ]
+  },
+  "links": {
+    "content_owners": [{
+      "content_id": "e5f09422-bf55-417c-b520-8a42cb409814",
+      "title": "Agile delivery community",
+      "base_path": "/service-manual/communities/agile-delivery-community",
+      "description": "Agile delivery community takes care of...",
+      "api_url": "http://content-store.dev.gov.uk/content/service-manual/communities/agile-delivery-community",
+      "web_url": "http://www.dev.gov.uk/service-manual/communities/agile-delivery-community",
+      "locale": "en",
+      "analytics_identifier": null
+    }]
+  },
+  "base_path": "/service-manual/with-change-history",
+  "description": "This guide has some change history",
+  "title": "Agile",
+  "updated_at": "2015-10-12T08:54:30+00:00",
+  "schema_name": "service_manual_guide",
+  "document_type": "service_manual_guide"
+}
