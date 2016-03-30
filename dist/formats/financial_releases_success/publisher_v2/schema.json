@@ -176,6 +176,26 @@
           "format": "date-time"
         }
       }
+    },
+    "change_history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "public_timestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "note": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "public_timestamp",
+          "note"
+        ]
+      }
     }
   },
   "oneOf": [

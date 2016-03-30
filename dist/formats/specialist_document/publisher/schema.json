@@ -28,24 +28,7 @@
           "$ref": "#/definitions/nested_headers"
         },
         "change_history": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-              "public_timestamp": {
-                "type": "string",
-                "format": "date-time"
-              },
-              "note": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "public_timestamp",
-              "note"
-            ]
-          }
+          "$ref": "#/definitions/change_history"
         }
       }
     },
@@ -240,6 +223,26 @@
         "updated_at": {
           "format": "date-time"
         }
+      }
+    },
+    "change_history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "public_timestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "note": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "public_timestamp",
+          "note"
+        ]
       }
     },
     "any_metadata": {
