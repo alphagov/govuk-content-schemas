@@ -186,6 +186,12 @@
         "body": {
           "type": "string"
         },
+        "attachments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/asset_link"
+          }
+        },
         "manual": {
           "type": "object",
           "additionalProperties": false,
