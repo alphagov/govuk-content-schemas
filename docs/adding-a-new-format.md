@@ -40,3 +40,7 @@ using the rake task in content-store:
 
 If there are examples which are invalid, you may want to change your publisher
 and republish the documents.
+
+## Deploying your changes
+
+Deploy your changes with the [Deploy GOVUK Content Schemas](https://deploy.publishing.service.gov.uk/job/Deploy_GOVUK_Content_Schemas/) Jenkins job.  This makes your changes available to the publishing API for validation and dependency resolution.
