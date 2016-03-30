@@ -13,7 +13,8 @@
     "change_description": "Latest update: Info about the cold.",
     "alert_status": [],
     "email_signup_link": "https://public.govdelivery.com/accounts/UKGOVUK/subscriber/topics?qsp=TRAVEL",
-    "parts": []
+    "parts": [],
+    "max_cache_time": 10
   },
   "format": "travel_advice",
   "links": {
