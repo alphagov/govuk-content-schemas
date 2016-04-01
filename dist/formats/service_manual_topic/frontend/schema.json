@@ -73,6 +73,9 @@
         "linked_items": {
           "$ref": "#/definitions/frontend_links"
         },
+        "content_owners": {
+          "$ref": "#/definitions/frontend_links"
+        },
         "alpha_taxons": {
           "$ref": "#/definitions/frontend_links"
         },
