@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "lead_organisations"
+  ],
+  "properties": {
+    "related_guides": {
+      "$ref": "#/definitions/guid_list"
+    },
+    "alternative_format_provider_organisation": {
+      "$ref": "#/definitions/guid_list"
+    },
+    "related_mainstream": {
+      "$ref": "#/definitions/guid_list"
+    }
+  }
+}
