@@ -9,7 +9,15 @@
   "locale": "en",
   "phase": "live",
   "details": {
-    "body": "## Header\r\n\r\nThis is the long body of an example CMA case\r\n\r\nThis is the long body of an example CMA case\r\n\r\nThis is the long body of an example CMA case\r\n\r\nThis is the long body of an example CMA case\r\n\r\nThis is the long body of an example CMA case\r\n\r\nThis is the long body of an example CMA case\r\n\r\nThis is the long body of an example CMA case\r\n\r\nThis is the long body of an example CMA case\r\n\r\nThis is the long body of an example CMA case\r\n\r\nThis is the long body of an example CMA case",
+    "body": [
+      {
+        "content_type": "text/html",
+        "content": "<h2 id=\"header\">Header</h2>\n\n<p>This is the long body of an example CMA case</p>\n\n<p>This is the long body of an example CMA case</p>\n\n<p>This is the long body of an example CMA case</p>\n\n<p>This is the long body of an example CMA case</p>\n\n<p>This is the long body of an example CMA case</p>\n\n<p>This is the long body of an example CMA case</p>\n\n<p>This is the long body of an example CMA case</p>\n\n<p>This is the long body of an example CMA case</p>\n\n<p>This is the long body of an example CMA case</p>\n\n<p>This is the long body of an example CMA case</p>\n"
+      },
+      {
+        "content_type": "text/govspeak",
+        "content": "## Header\r\n\r\nThis is the long body of an example CMA case\r\n\r\nThis is the long body of an example CMA case\r\n\r\nThis is the long body of an example CMA case\r\n\r\nThis is the long body of an example CMA case\r\n\r\nThis is the long body of an example CMA case\r\n\r\nThis is the long body of an example CMA case\r\n\r\nThis is the long body of an example CMA case\r\n\r\nThis is the long body of an example CMA case\r\n\r\nThis is the long body of an example CMA case\r\n\r\nThis is the long body of an example CMA case"
+      }],
     "attachments": [
       {
         "content_id": "0aa1aa33-36b9-4677-a643-52b9034a1c32",
