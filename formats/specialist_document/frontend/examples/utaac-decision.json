@@ -1,0 +1,53 @@
+{
+  "content_id": "3917cb0e-0928-45b7-bf63-20f9bc113a7b",
+  "base_path": "/administrative-appeals-tribunal-decisions/example-utaac-decision",
+  "title": "Example UTAAC Decision",
+  "description": "Example text.",
+  "format": "specialist_document",
+  "need_ids": [],
+  "locale": "en",
+  "updated_at": "2016-04-05T14:41:08.625Z",
+  "public_updated_at": "2016-04-05T14:41:08.000+00:00",
+  "details": {
+    "metadata": {
+      "hidden_indexable_content": "Example text.",
+      "tribunal_decision_categories": [
+        "benefits-for-children",
+        "bereavement-and-death-benefits"
+      ],
+      "tribunal_decision_decision_date": "2015-08-30",
+      "tribunal_decision_judges": [
+        "angus-r"
+      ],
+      "tribunal_decision_sub_categories": [
+        "benefits-for-children-benefit-increases-for-children",
+        "bereavement-and-death-benefits-bereaved-parents-allowance"
+      ],
+      "bulk_published": false,
+      "document_type": "utaac_decision"
+    },
+    "change_history": [
+      {
+        "public_timestamp": "2016-04-05T14:41:08+00:00",
+        "note": "First published."
+      }
+    ],
+    "body": "<p>Example text.</p>\n"
+  },
+  "phase": "beta",
+  "links": {
+    "available_translations": [
+      {
+        "content_id": "3917cb0e-0928-45b7-bf63-20f9bc113a7c",
+        "title": "Example UTAAC Decision",
+        "base_path": "/administrative-appeals-tribunal-decisions/example-utaac-decision",
+        "description": "Example text.",
+        "api_url": "http://content-store.dev.gov.uk/content/administrative-appeals-tribunal-decisions/example-utaac-decision",
+        "web_url": "http://www.dev.gov.uk/administrative-appeals-tribunal-decisions/example-utaac-decision",
+        "locale": "en"
+      }
+    ]
+  },
+  "schema_name": "specialist_document",
+  "document_type": "utaac_decision"
+}
