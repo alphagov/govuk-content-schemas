@@ -147,22 +147,10 @@
             "type": "string"
           }
         },
-        "tribunal_decision_judges_name": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
         "tribunal_decision_category": {
           "type": "string"
         },
-        "tribunal_decision_category_name": {
-          "type": "string"
-        },
         "tribunal_decision_sub_category": {
-          "type": "string"
-        },
-        "tribunal_decision_sub_category_name": {
           "type": "string"
         },
         "tribunal_decision_landmark": {
@@ -171,9 +159,6 @@
             "not-landmark",
             "landmark"
           ]
-        },
-        "tribunal_decision_landmark_name": {
-          "type": "string"
         },
         "tribunal_decision_reference_number": {
           "type": "string"
@@ -443,19 +428,7 @@
             "type": "string"
           }
         },
-        "tribunal_decision_categories_name": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
         "tribunal_decision_sub_categories": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "tribunal_decision_sub_categories_name": {
           "type": "array",
           "items": {
             "type": "string"
@@ -467,9 +440,6 @@
             "landmark",
             "not-landmark"
           ]
-        },
-        "tribunal_decision_landmark_name": {
-          "type": "string"
         },
         "tribunal_decision_decision_date": {
           "type": "string",
@@ -497,16 +467,7 @@
             "scotland"
           ]
         },
-        "tribunal_decision_country_name": {
-          "type": "string"
-        },
         "tribunal_decision_categories": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "tribunal_decision_categories_name": {
           "type": "array",
           "items": {
             "type": "string"
@@ -869,9 +830,6 @@
             "tax"
           ]
         },
-        "tribunal_decision_category_name": {
-          "type": "string"
-        },
         "tribunal_decision_decision_date": {
           "type": "string",
           "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-([012][0-9]|3[0-1])$"
@@ -900,31 +858,13 @@
             "type": "string"
           }
         },
-        "tribunal_decision_judges_name": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
         "tribunal_decision_categories": {
           "type": "array",
           "items": {
             "type": "string"
           }
         },
-        "tribunal_decision_categories_name": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
         "tribunal_decision_sub_categories": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "tribunal_decision_sub_categories_name": {
           "type": "array",
           "items": {
             "type": "string"
