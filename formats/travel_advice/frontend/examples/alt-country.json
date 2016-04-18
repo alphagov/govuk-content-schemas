@@ -190,7 +190,8 @@
       "url": "https://www.gov.uk/media/55e5d9b2ed915d06a100000e/Turkey.pdf",
       "content_type": "application/pdf"
     },
-    "max_cache_time": 10
+    "max_cache_time": 10,
+    "publishing_request_id": "2546-1460985144476-19268198-3242"
   },
   "schema_name": "travel_advice",
   "document_type": "travel_advice"
