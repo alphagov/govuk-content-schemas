@@ -123,7 +123,7 @@ RSpec.describe GovukContentSchemas::FinderSchemaConverter do
                 },
                 "date_of_occurrence" => {
                   "type" => "string",
-                  "pattern" => "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-([012][0-9]|3[0-1])$"
+                  "pattern" => "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
                 }
               }
             }

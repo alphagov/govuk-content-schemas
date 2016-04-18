@@ -115,7 +115,7 @@
         },
         "date_of_occurrence": {
           "type": "string",
-          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-([012][0-9]|3[0-1])$"
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
         },
         "aircraft_type": {
           "type": "string"
@@ -147,22 +147,10 @@
             "type": "string"
           }
         },
-        "tribunal_decision_judges_name": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
         "tribunal_decision_category": {
           "type": "string"
         },
-        "tribunal_decision_category_name": {
-          "type": "string"
-        },
         "tribunal_decision_sub_category": {
-          "type": "string"
-        },
-        "tribunal_decision_sub_category_name": {
           "type": "string"
         },
         "tribunal_decision_landmark": {
@@ -172,15 +160,12 @@
             "landmark"
           ]
         },
-        "tribunal_decision_landmark_name": {
-          "type": "string"
-        },
         "tribunal_decision_reference_number": {
           "type": "string"
         },
         "tribunal_decision_decision_date": {
           "type": "string",
-          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-([012][0-9]|3[0-1])$"
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
         },
         "hidden_indexable_content": {
           "type": "string"
@@ -289,11 +274,11 @@
         },
         "opened_date": {
           "type": "string",
-          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-([012][0-9]|3[0-1])$"
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
         },
         "closed_date": {
           "type": "string",
-          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-([012][0-9]|3[0-1])$"
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
         }
       }
     },
@@ -417,7 +402,7 @@
         },
         "first_published_at": {
           "type": "string",
-          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-([012][0-9]|3[0-1])$"
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
         }
       }
     },
@@ -443,19 +428,7 @@
             "type": "string"
           }
         },
-        "tribunal_decision_categories_name": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
         "tribunal_decision_sub_categories": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "tribunal_decision_sub_categories_name": {
           "type": "array",
           "items": {
             "type": "string"
@@ -468,12 +441,9 @@
             "not-landmark"
           ]
         },
-        "tribunal_decision_landmark_name": {
-          "type": "string"
-        },
         "tribunal_decision_decision_date": {
           "type": "string",
-          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-([012][0-9]|3[0-1])$"
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
         }
       }
     },
@@ -497,16 +467,7 @@
             "scotland"
           ]
         },
-        "tribunal_decision_country_name": {
-          "type": "string"
-        },
         "tribunal_decision_categories": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "tribunal_decision_categories_name": {
           "type": "array",
           "items": {
             "type": "string"
@@ -514,7 +475,7 @@
         },
         "tribunal_decision_decision_date": {
           "type": "string",
-          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-([012][0-9]|3[0-1])$"
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
         },
         "hidden_indexable_content": {
           "type": "string"
@@ -592,7 +553,7 @@
         },
         "closing_date": {
           "type": "string",
-          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-([012][0-9]|3[0-1])$"
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
         }
       }
     },
@@ -743,7 +704,7 @@
         },
         "date_of_occurrence": {
           "type": "string",
-          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-([012][0-9]|3[0-1])$"
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
         }
       }
     },
@@ -801,7 +762,7 @@
         },
         "issued_date": {
           "type": "string",
-          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-([012][0-9]|3[0-1])$"
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
         }
       }
     },
@@ -841,7 +802,7 @@
         },
         "date_of_occurrence": {
           "type": "string",
-          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-([012][0-9]|3[0-1])$"
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
         }
       }
     },
@@ -869,12 +830,9 @@
             "tax"
           ]
         },
-        "tribunal_decision_category_name": {
-          "type": "string"
-        },
         "tribunal_decision_decision_date": {
           "type": "string",
-          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-([012][0-9]|3[0-1])$"
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
         },
         "hidden_indexable_content": {
           "type": "string"
@@ -900,19 +858,7 @@
             "type": "string"
           }
         },
-        "tribunal_decision_judges_name": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
         "tribunal_decision_categories": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "tribunal_decision_categories_name": {
           "type": "array",
           "items": {
             "type": "string"
@@ -924,15 +870,9 @@
             "type": "string"
           }
         },
-        "tribunal_decision_sub_categories_name": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
         "tribunal_decision_decision_date": {
           "type": "string",
-          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-([012][0-9]|3[0-1])$"
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
         },
         "hidden_indexable_content": {
           "type": "string"
@@ -997,15 +937,15 @@
         },
         "alert_issue_date": {
           "type": "string",
-          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-([012][0-9]|3[0-1])$"
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
         },
         "build_start_date": {
           "type": "string",
-          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-([012][0-9]|3[0-1])$"
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
         },
         "build_end_date": {
           "type": "string",
-          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-([012][0-9]|3[0-1])$"
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
         }
       }
     }
