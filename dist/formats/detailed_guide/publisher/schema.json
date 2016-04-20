@@ -1,0 +1,544 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties": true,
+  "definitions": {
+    "details": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "body",
+        "first_public_at"
+      ],
+      "properties": {
+        "body": {
+          "type": "string"
+        },
+        "related_mainstream_content": {
+          "description": "The ordered list of related and additional mainstream content item IDs. Use in conjunction with the (unordered) `related_mainstream_content` link.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/guid"
+          }
+        },
+        "first_public_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "image": {
+          "$ref": "#/definitions/image"
+        },
+        "excluded_nations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "england",
+              "scotland",
+              "wales",
+              "northern_ireland"
+            ]
+          }
+        },
+        "change_history": {
+          "$ref": "#/definitions/change_history"
+        },
+        "alternative_scotland_url": {
+          "type": "string"
+        },
+        "alternative_wales_url": {
+          "type": "string"
+        },
+        "alternative_nothern_ireland_url": {
+          "type": "string"
+        },
+        "tags": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "browse_pages": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "topics": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "policies": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "links": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "lead_organisations"
+      ],
+      "properties": {
+        "related_guides": {
+          "$ref": "#/definitions/guid_list"
+        },
+        "alternative_format_provider_organisation": {
+          "$ref": "#/definitions/guid_list"
+        },
+        "related_mainstream": {
+          "$ref": "#/definitions/guid_list"
+        },
+        "alpha_taxons": {
+          "description": "Prototype-stage taxonomy label for this content item",
+          "$ref": "#/definitions/guid_list"
+        },
+        "mainstream_browse_pages": {
+          "description": "Powers the /browse section of the site. These are known as sections in some legacy apps.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "topics": {
+          "description": "Powers the /topic section of the site. These are known as specialist sectors in some legacy apps.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "organisations": {
+          "description": "All organisations linked to this content item. This should include lead organisations.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "lead_organisations": {
+          "description": "A subset of organisations that should be emphasised in relation to this content item. All organisations specified here should also be part of the organisations array.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "parent": {
+          "description": "The parent content item.",
+          "$ref": "#/definitions/guid_list",
+          "maxItems": 1
+        },
+        "policies": {
+          "description": "These are for collecting content related to a particular government policy.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "policy_areas": {
+          "description": "A largely deprecated tag currently only used to power email alerts.",
+          "$ref": "#/definitions/guid_list"
+        }
+      }
+    },
+    "absolute_path": {
+      "type": "string",
+      "pattern": "^/(([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})+(/([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)*)?$",
+      "description": "A path only. Query string and/or fragment are not allowed."
+    },
+    "absolute_fullpath": {
+      "type": "string",
+      "pattern": "^/(([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})+(/([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)*)?(\\?([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)?(#([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)?$",
+      "description": "A path with optional query string and/or fragment."
+    },
+    "analytics_identifier": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "A short identifier we send to Google Analytics for multi-valued fields. This means we avoid the truncated values we would get if we sent the path or slug of eg organisations."
+    },
+    "guid": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-[1-5][a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$"
+    },
+    "guid_list": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/guid"
+      }
+    },
+    "image": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "url"
+      ],
+      "properties": {
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "alt_text": {
+          "type": "string"
+        },
+        "caption": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    },
+    "route": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "type"
+      ],
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "type": {
+          "enum": [
+            "prefix",
+            "exact"
+          ]
+        }
+      }
+    },
+    "redirect_route": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "type",
+        "destination"
+      ],
+      "properties": {
+        "path": {
+          "$ref": "#/definitions/absolute_path"
+        },
+        "type": {
+          "enum": [
+            "prefix",
+            "exact"
+          ]
+        },
+        "destination": {
+          "$ref": "#/definitions/absolute_fullpath"
+        },
+        "segments_mode": {
+          "enum": [
+            "preserve",
+            "ignore"
+          ],
+          "description": "For prefix redirects, preserve or ignore the rest of the fullpath. For exact, preserve or ignore the querystring."
+        }
+      }
+    },
+    "multiple_content_types": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "content_type",
+          "content"
+        ],
+        "properties": {
+          "content_type": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "asset_link": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "url",
+        "content_type"
+      ],
+      "properties": {
+        "content_id": {
+          "$ref": "#/definitions/guid"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "content_type": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "created_at": {
+          "format": "date-time"
+        },
+        "updated_at": {
+          "format": "date-time"
+        }
+      }
+    },
+    "change_history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "public_timestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "note": {
+            "type": "string",
+            "description": "A summary of the change"
+          },
+          "reason_for_change": {
+            "type": "string",
+            "description": "Why the change is being made. This is multiline text, and will be rendered inside <p> tags. Govspeak is not yet supported here."
+          }
+        },
+        "required": [
+          "public_timestamp",
+          "note"
+        ]
+      }
+    }
+  },
+  "oneOf": [
+    {
+      "properties": {
+        "format": {
+          "type": "string",
+          "enum": [
+            "detailed_guide"
+          ]
+        },
+        "base_path": {
+          "$ref": "#/definitions/absolute_path"
+        },
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "public_updated_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "publishing_app": {
+          "type": "string"
+        },
+        "rendering_app": {
+          "type": "string"
+        },
+        "locale": {
+          "type": "string"
+        },
+        "need_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "routes": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/definitions/route"
+          }
+        },
+        "redirects": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/redirect_route"
+          }
+        },
+        "access_limited": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "users"
+          ],
+          "properties": {
+            "users": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "analytics_identifier": {
+          "$ref": "#/definitions/analytics_identifier"
+        },
+        "phase": {
+          "description": "The service design phase of this content item - https://www.gov.uk/service-manual/phases",
+          "type": "string",
+          "enum": [
+            "alpha",
+            "beta",
+            "live"
+          ]
+        },
+        "details": {
+          "$ref": "#/definitions/details"
+        },
+        "content_id": {
+          "$ref": "#/definitions/guid"
+        },
+        "update_type": {
+          "enum": [
+            "major",
+            "minor",
+            "republish"
+          ]
+        },
+        "links": {
+          "$ref": "#/definitions/links"
+        }
+      },
+      "required": [
+        "format",
+        "title",
+        "publishing_app",
+        "rendering_app",
+        "locale",
+        "routes",
+        "public_updated_at",
+        "content_id",
+        "update_type"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "properties": {
+        "document_type": {
+          "type": "string"
+        },
+        "schema_name": {
+          "type": "string",
+          "enum": [
+            "detailed_guide"
+          ]
+        },
+        "base_path": {
+          "$ref": "#/definitions/absolute_path"
+        },
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "public_updated_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "publishing_app": {
+          "type": "string"
+        },
+        "rendering_app": {
+          "type": "string"
+        },
+        "locale": {
+          "type": "string"
+        },
+        "need_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "routes": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/definitions/route"
+          }
+        },
+        "redirects": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/redirect_route"
+          }
+        },
+        "access_limited": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "users"
+          ],
+          "properties": {
+            "users": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "analytics_identifier": {
+          "$ref": "#/definitions/analytics_identifier"
+        },
+        "phase": {
+          "description": "The service design phase of this content item - https://www.gov.uk/service-manual/phases",
+          "type": "string",
+          "enum": [
+            "alpha",
+            "beta",
+            "live"
+          ]
+        },
+        "details": {
+          "$ref": "#/definitions/details"
+        },
+        "content_id": {
+          "$ref": "#/definitions/guid"
+        },
+        "update_type": {
+          "enum": [
+            "major",
+            "minor",
+            "republish"
+          ]
+        },
+        "links": {
+          "$ref": "#/definitions/links"
+        }
+      },
+      "required": [
+        "document_type",
+        "schema_name",
+        "title",
+        "publishing_app",
+        "rendering_app",
+        "locale",
+        "routes",
+        "public_updated_at",
+        "content_id",
+        "update_type"
+      ],
+      "additionalProperties": false
+    }
+  ]
+}
