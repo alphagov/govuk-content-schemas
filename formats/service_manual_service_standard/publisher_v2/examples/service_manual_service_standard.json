@@ -1,0 +1,32 @@
+{
+  "base_path" : "/service-manual/service-standard",
+  "title" : "The Digital Service Standard",
+  "schema_name" : "service_manual_service_standard",
+  "document_type" : "service_manual_service_standard",
+  "publishing_app" : "service-manual-publisher",
+  "rendering_app" : "service-manual-frontend",
+  "public_updated_at" : "2016-01-01T08:00:00+00:00",
+  "format" : "service_manual_service_standard",
+  "locale" : "en",
+  "update_type" : "major",
+  "details" : {
+    "points" : [
+      {
+        "title" : "1. Understand user needs",
+        "summary" : "Understand user needs. Research to develop a deep knowledge of who the service users are and what that means for the design of the service.",
+        "base_path" : "/service-manual/service-standard/point-1"
+      },
+      {
+        "title" : "2. Do ongoing user research",
+        "summary" : "Put a plan in place for ongoing user research and usability testing to continuously seek feedback from users to improve the service.",
+        "base_path" : "/service-manual/service-standard/point-2"
+      }
+    ]
+  },
+  "routes" : [
+    {
+      "path" : "/service-manual/service-standard",
+      "type" : "exact"
+    }
+  ]
+}
