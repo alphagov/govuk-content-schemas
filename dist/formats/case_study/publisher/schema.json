@@ -65,16 +65,7 @@
           }
         },
         "withdrawn_notice": {
-          "type": "object",
-          "additionalProperties": false,
-          "properties": {
-            "explanation": {
-              "type": "string"
-            },
-            "withdrawn_at": {
-              "format": "date-time"
-            }
-          }
+          "$ref": "#/definitions/withdrawn_notice"
         },
         "archive_notice": {
           "type": "object",
@@ -327,6 +318,18 @@
           "public_timestamp",
           "note"
         ]
+      }
+    },
+    "withdrawn_notice": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "explanation": {
+          "type": "string"
+        },
+        "withdrawn_at": {
+          "format": "date-time"
+        }
       }
     }
   },
