@@ -8,7 +8,9 @@
       "additionalProperties": false,
       "required": [
         "body",
-        "first_public_at"
+        "first_public_at",
+        "government",
+        "political"
       ],
       "properties": {
         "body": {
@@ -75,6 +77,12 @@
               }
             }
           }
+        },
+        "government": {
+          "$ref": "#/definitions/government"
+        },
+        "political": {
+          "$ref": "#/definitions/political"
         },
         "withdrawn_notice": {
           "$ref": "#/definitions/withdrawn_notice"

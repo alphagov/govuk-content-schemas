@@ -27,6 +27,12 @@
       "topics": [],
       "policies": []
     },
+    "government": {
+      "title": "2010 to 2015 Conservative and Liberal Democrat coalition government",
+      "slug": "2010-to-2015-conservative-and-liberal-democrat-coalition-government",
+      "current": false
+    },
+    "political": false,
     "withdrawn_notice": {
       "explanation": "<div class=\"govspeak\"><p>This information has been archived as it is now out of date. For current information please go to <a rel=\"external\" href=\"http://www.hse.gov.uk/reach/\">http://www.hse.gov.uk/reach/</a></p></div>",
       "withdrawn_at": "2015-01-28T13:05:30Z"
