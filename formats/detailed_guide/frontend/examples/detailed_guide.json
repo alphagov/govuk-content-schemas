@@ -30,7 +30,13 @@
       "browse_pages": [],
       "topics": [],
       "policies": []
-    }
+    },
+    "government": {
+      "title": "2010 to 2015 Conservative and Liberal Democrat coalition government",
+      "slug": "2010-to-2015-conservative-and-liberal-democrat-coalition-government",
+      "current": false
+    },
+    "political": false
   },
   "links": {
     "lead_organisations": [
