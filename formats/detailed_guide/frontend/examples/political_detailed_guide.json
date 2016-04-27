@@ -57,6 +57,16 @@
         ]
       }
     ],
+    "related_guides": [
+      {
+        "content_id": "0d59f5e7-a230-4bac-b02c-624a59a34dab",
+        "title": "Offshore wind: part of the UK's energy mix",
+        "base_path": "/guidance/offshore-wind-part-of-the-uks-energy-mix",
+        "api_url": "https://www.gov.uk/api/content/guidance/offshore-wind-part-of-the-uks-energy-mix",
+        "web_url": "https://www.gov.uk/guidance/offshore-wind-part-of-the-uks-energy-mix",
+        "locale": "en"
+      }
+    ],
     "topics": [
       {
         "content_id": "0d59f5e7-a230-4bac-b02c-624a59a34dab",
