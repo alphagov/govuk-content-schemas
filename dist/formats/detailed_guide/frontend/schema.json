@@ -73,6 +73,9 @@
         "lead_organisations"
       ],
       "properties": {
+        "document_collections": {
+          "$ref": "#/definitions/frontend_links"
+        },
         "related_guides": {
           "$ref": "#/definitions/frontend_links"
         },
