@@ -181,6 +181,10 @@
         "body"
       ],
       "properties": {
+        "summary": {
+          "type": "string",
+          "description": "A single line short summary that does not contain formatting."
+        },
         "body": {
           "type": "string"
         },
