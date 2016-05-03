@@ -88,9 +88,6 @@
         "worldwide_organisations": {
           "$ref": "#/definitions/frontend_links"
         },
-        "worldwide_priorities": {
-          "$ref": "#/definitions/frontend_links"
-        },
         "document_collections": {
           "$ref": "#/definitions/frontend_links"
         },

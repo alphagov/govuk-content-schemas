@@ -21,9 +21,6 @@
     "worldwide_organisations": {
       "$ref": "#/definitions/guid_list"
     },
-    "worldwide_priorities": {
-      "$ref": "#/definitions/guid_list"
-    },
     "document_collections": {
       "$ref": "#/definitions/guid_list"
     }
