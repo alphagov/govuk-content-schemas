@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "lead_organisations"
+  ],
+  "properties": {
+    "document_collections": {
+      "$ref": "#/definitions/guid_list"
+    },
+    "supporting_organisations": {
+      "$ref": "#/definitions/guid_list"
+    },
+    "ministers": {
+      "$ref": "#/definitions/guid_list"
+    },
+    "related_statistical_data_sets": {
+      "$ref": "#/definitions/guid_list"
+    },
+    "topical_events": {
+      "$ref": "#/definitions/guid_list"
+    },
+    "world_locations": {
+      "$ref": "#/definitions/guid_list"
+    }
+  }
+}

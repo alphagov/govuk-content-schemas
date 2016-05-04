@@ -1,0 +1,41 @@
+{
+  "base_path": "/government/publications/d17-9ly-veolia-es-uk-limited-environmental-permit-issued",
+  "content_id": "223d5519-da25-4210-8fec-52d77a7d2af6",
+  "title": "D17 9LY, Veolia ES (UK) Limited: environmental permit issued",
+  "description": "View the permit issued for Leeming Biogas Facility, Leeming under the Industrial Emissions Directive.",
+  "format": "publication",
+  "need_ids": [],
+  "locale": "en",
+  "updated_at": "2016-05-03T14:11:53.023Z",
+  "public_updated_at": "2016-05-03T14:11:50.000+00:00",
+  "details": {
+    "body": "<div class=\"govspeak\"><p>The Environment Agency publish permits that they issue under the Industrial Emissions Directive (IED).</p>\n\n<p>This decision includes the permit &amp; decision document for:</p>\n\n<ul>\n<li>Operator name: Veolia ES (UK) Limited</li>\n<li>Installation name: Leeming Biogas Facility</li>\n<li>Permit number: EPR/MP3730RL/A001</li>\n</ul>\n</div>",
+    "first_public_at": "2016-05-03T14:11:50.000+00:00",
+    "tags": {
+      "browse_pages": [],
+      "policies": [],
+      "topics": []
+    },
+    "government": {
+      "title": "2015 Conservative government",
+      "slug": "2015-conservative-government",
+      "current": true
+    },
+    "political": false
+  },
+  "links": {
+    "lead_organisations": [
+      {
+        "content_id": "16628142-57b2-4611-bc03-5912785acee3",
+        "title": "Environment Agency",
+        "base_path": "/government/organisations/environment-agency",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/environment-agency",
+        "web_url": "https://www.gov.uk/government/organisations/environment-agency",
+        "locale": "en",
+        "analytics_identifier": "EA199"
+      }
+    ]
+  },
+  "schema_name": "publication",
+  "document_type": "publication"
+}
