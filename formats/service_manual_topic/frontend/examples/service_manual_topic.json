@@ -78,6 +78,7 @@
   },
   "description": "Service Manual Topic description",
   "details": {
+    "visually_collapsed": true,
     "groups": [
       {
         "name": "Group 1",
