@@ -8,6 +8,7 @@
       "additionalProperties": false,
       "required": [
         "body",
+        "documents",
         "first_public_at",
         "government",
         "political"
@@ -15,6 +16,12 @@
       "properties": {
         "body": {
           "type": "string"
+        },
+        "documents": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         },
         "first_public_at": {
           "type": "string",
