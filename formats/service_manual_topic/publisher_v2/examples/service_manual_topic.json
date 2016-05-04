@@ -16,6 +16,7 @@
     }
   ],
   "details": {
+    "visually_collapsed": true,
     "groups": [
       {
         "name":"Security",

@@ -3,6 +3,10 @@
   "type": "object",
   "additionalProperties": false,
   "properties": {
+    "visually_collapsed": {
+      "type": "boolean",
+      "description": "A flag set by a content designer when they want the sections of a topic to be collapsed into an accordion. This will likely be used when there are many items in the topic."
+    },
     "groups": {
       "type": "array",
       "items": {

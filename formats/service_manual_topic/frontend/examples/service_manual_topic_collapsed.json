@@ -1,7 +1,7 @@
 {
-  "base_path": "/service-manual/test-expanded-topic",
+  "base_path": "/service-manual/test-topic",
   "content_id": "cd02b82d-c706-435c-a2fc-2dcabd168ef4",
-  "title": "Service Manual Test Expanded Topic",
+  "title": "Service Manual Test Topic",
   "format": "service_manual_topic",
   "need_ids": [],
   "locale": "en",
@@ -78,6 +78,7 @@
   },
   "description": "Service Manual Topic description",
   "details": {
+    "visually_collapsed": true,
     "groups": [
       {
         "name": "Group 1",
