@@ -45,7 +45,7 @@ RSpec.describe GovukContentSchemas::FrontendSchemaGenerator do
   }
 
   let(:internal_properties) {
-    %w{publishing_app redirects rendering_app routes update_type}
+    GovukContentSchemas::FrontendSchemaGenerator::INTERNAL_PROPERTIES
   }
 
   it "does not modify its input" do
