@@ -85,9 +85,6 @@
         "related_guides": {
           "$ref": "#/definitions/frontend_links"
         },
-        "alternative_format_provider_organisation": {
-          "$ref": "#/definitions/frontend_links"
-        },
         "related_mainstream": {
           "$ref": "#/definitions/frontend_links"
         },
