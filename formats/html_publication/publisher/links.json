@@ -6,14 +6,5 @@
     "parent",
     "organisations"
   ],
-  "properties": {
-    "parent": {
-      "description": "The parent content item.",
-      "$ref": "#/definitions/guid_list",
-      "maxItems": 1
-    },
-    "organisations": {
-      "$ref": "#/definitions/guid_list"
-    }
-  }
+  "properties": {}
 }
