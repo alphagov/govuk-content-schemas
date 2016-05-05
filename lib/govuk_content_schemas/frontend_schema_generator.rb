@@ -9,11 +9,14 @@ class GovukContentSchemas::FrontendSchemaGenerator
 
   INTERNAL_PROPERTIES = %w{
     access_limited
-    publishing_app
     redirects
-    rendering_app
     routes
     update_type
+  }.freeze
+
+  OPTIONAL_PROPERTIES = %w{
+    publishing_app
+    rendering_app
   }.freeze
 
   def initialize(publisher_schema, frontend_links_definition)
@@ -42,7 +45,7 @@ private
     if required.empty?
       []
     else
-      ['base_path'] + (required - INTERNAL_PROPERTIES)
+      ['base_path'] + (required - INTERNAL_PROPERTIES - OPTIONAL_PROPERTIES)
     end
   end
 
