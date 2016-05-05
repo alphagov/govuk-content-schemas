@@ -39,6 +39,12 @@
       "type": "string",
       "format": "date-time"
     },
+    "publishing_app": {
+      "type": "string"
+    },
+    "rendering_app": {
+      "type": "string"
+    },
     "locale": {
       "type": "string"
     },
