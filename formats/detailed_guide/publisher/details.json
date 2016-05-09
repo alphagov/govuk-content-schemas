@@ -26,13 +26,6 @@
     "image": {
       "$ref": "#/definitions/image"
     },
-    "excluded_nations": {
-      "type": "array",
-      "items": {
-        "type": "string",
-        "enum": ["england", "scotland", "wales", "northern_ireland"]
-      }
-    },
     "change_history": {
       "$ref": "#/definitions/change_history"
     },
@@ -77,6 +70,9 @@
     },
     "withdrawn_notice": {
       "$ref": "#/definitions/withdrawn_notice"
+    },
+    "national_applicability": {
+      "$ref": "#/definitions/national_applicability"
     }
   }
 }
