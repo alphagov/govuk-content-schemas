@@ -16,6 +16,7 @@
       "tribunal_decision_decision_date": "2015-09-08",
       "hidden_indexable_content": "whether FTT entitled not to find or infer that car dealer had accounted for VAT on bonuses paid by manufacturers to dealer on purchase of demonstrator and courtesy cars in claim periods - appeal dismissed"
     },
+    "max_cache_time": 10,
     "change_history": [
       {
         "public_timestamp": "2015-10-07T10:54:48+00:00",

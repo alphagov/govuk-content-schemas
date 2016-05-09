@@ -20,6 +20,7 @@
       "bulk_published": false,
       "document_type": "employment_tribunal_decision"
     },
+    "max_cache_time": 10,
     "change_history": [
       {
         "public_timestamp": "2015-10-15T12:00:37+00:00",

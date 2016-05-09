@@ -26,6 +26,7 @@
       "bulk_published": false,
       "document_type": "utaac_decision"
     },
+    "max_cache_time": 10,
     "change_history": [
       {
         "public_timestamp": "2016-04-05T14:41:08+00:00",

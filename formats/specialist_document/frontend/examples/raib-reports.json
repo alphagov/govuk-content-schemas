@@ -32,6 +32,7 @@
       "date_of_occurrence": "2014-09-24",
       "document_type": "raib_report"
     },
+    "max_cache_time": 10,
     "change_history": [
       {
         "note": "First published.",
