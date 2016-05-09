@@ -24,7 +24,28 @@
       "slug": "2010-to-2015-conservative-and-liberal-democrat-coalition-government",
       "current": false
     },
-    "political": false
+    "political": false,
+    "national_applicability": {
+      "england": {
+        "label": "England",
+        "applicable": true
+      },
+      "northern_ireland": {
+        "label": "Northern Ireland",
+        "applicable": false,
+        "alternative_url": "http://www.dsdni.gov.uk/index/stats_and_research/stats-publications/stats-housing-publications/housing_stats.htm"
+      },
+      "scotland": {
+        "label": "Scotland",
+        "applicable": false,
+        "alternative_url": "http://www.scotland.gov.uk/Topics/Statistics/Browse/Housing-Regeneration/HSfS"
+      },
+      "wales": {
+        "label": "Wales",
+        "applicable": false,
+        "alternative_url": "http://wales.gov.uk/topics/statistics/headlines/housing2012/121025/?lang=en"
+      }
+    }
   },
   "links": {
     "lead_organisations": [
