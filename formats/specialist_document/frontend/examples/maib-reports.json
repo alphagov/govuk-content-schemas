@@ -30,6 +30,7 @@
       "date_of_occurrence": "2014-12-21",
       "document_type": "maib_report"
     },
+    "max_cache_time": 10,
     "headers": [
       {
         "text": "Accident Investigation Report 16/2015",

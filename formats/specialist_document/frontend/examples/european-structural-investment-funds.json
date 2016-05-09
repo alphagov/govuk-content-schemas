@@ -35,6 +35,7 @@
       "closing_date": "2015-05-29",
       "document_type": "esi_fund"
     },
+    "max_cache_time": 10,
     "headers": [
       {
         "text": "Important Notice for this Call",

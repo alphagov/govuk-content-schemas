@@ -36,6 +36,7 @@
       "issued_date": "2015-07-06",
       "document_type": "medical_safety_alert"
     },
+    "max_cache_time": 10,
     "headers": [
       {
         "text": "Action",

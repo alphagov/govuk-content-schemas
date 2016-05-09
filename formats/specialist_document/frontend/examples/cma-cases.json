@@ -33,6 +33,7 @@
       "opened_date": "2015-07-10",
       "closed_date": "2015-08-20"
     },
+    "max_cache_time": 10,
     "headers": [
       {
         "text": "Statutory timetable",
