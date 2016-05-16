@@ -25,6 +25,7 @@
       "current": false
     },
     "political": false,
+    "emphasised_organisations": ["2e7868a8-38f5-4ff6-b62f-9a15d1c22d28"],
     "national_applicability": {
       "england": {
         "label": "England",
@@ -48,6 +49,17 @@
     }
   },
   "links": {
+    "organisations": [
+      {
+        "content_id": "2e7868a8-38f5-4ff6-b62f-9a15d1c22d28",
+        "title": "Department for Communities and Local Government",
+        "base_path": "/government/organisations/department-for-communities-and-local-government",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/department-for-communities-and-local-government",
+        "web_url": "https://www.gov.uk/government/organisations/department-for-communities-and-local-government",
+        "locale": "en",
+        "analytics_identifier": "D4"
+      }
+    ],
     "lead_organisations": [
       {
         "content_id": "2e7868a8-38f5-4ff6-b62f-9a15d1c22d28",
