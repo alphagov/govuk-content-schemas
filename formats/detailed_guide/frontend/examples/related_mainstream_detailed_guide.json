@@ -35,6 +35,7 @@
       "slug": "2010-to-2015-conservative-and-liberal-democrat-coalition-government",
       "current": false
     },
+    "emphasised_organisations": ["9adfc4ed-9f6c-4976-a6d8-18d34356367c"],
     "political": false
   },
   "links": {
@@ -59,6 +60,17 @@
       }
     ],
     "lead_organisations": [
+      {
+        "content_id": "9adfc4ed-9f6c-4976-a6d8-18d34356367c",
+        "title": "Foreign & Commonwealth Office",
+        "base_path": "/government/organisations/foreign-commonwealth-office",
+        "api_url": "https://www.gov.uk/api/organisations/foreign-commonwealth-office",
+        "web_url": "https://www.gov.uk/government/organisations/foreign-commonwealth-office",
+        "locale": "en",
+        "analytics_identifier": "D13"
+      }
+    ],
+    "organisations": [
       {
         "content_id": "9adfc4ed-9f6c-4976-a6d8-18d34356367c",
         "title": "Foreign & Commonwealth Office",

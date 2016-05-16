@@ -30,6 +30,13 @@
         "change_history": {
           "$ref": "#/definitions/change_history"
         },
+        "emphasised_organisations": {
+          "description": "The content ids of the organisations that should be displayed first in the list of organisations related to the item, these content ids must be present in the item organisation links hash.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/guid"
+          }
+        },
         "tags": {
           "type": "object",
           "additionalProperties": false,
@@ -111,7 +118,7 @@
           "$ref": "#/definitions/guid_list"
         },
         "lead_organisations": {
-          "description": "A subset of organisations that should be emphasised in relation to this content item. All organisations specified here should also be part of the organisations array.",
+          "description": "DEPRECATED: A subset of organisations that should be emphasised in relation to this content item. All organisations specified here should also be part of the organisations array.",
           "$ref": "#/definitions/guid_list"
         },
         "parent": {

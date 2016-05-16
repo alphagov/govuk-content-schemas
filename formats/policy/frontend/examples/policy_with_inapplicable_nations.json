@@ -20,6 +20,7 @@
     "signup_link": "",
     "summary": "While day-to-day policing and justice functions are devolved to the Northern Ireland Executive, the UK government retains responsibility for national security issues in Northern Ireland.",
     "show_summaries": false,
+    "emphasised_organisations": ["8927158f-e4b2-4361-b55d-02de7599b220"],
     "facets": [
       {
         "key": "is_historic",

@@ -36,9 +36,21 @@
       "slug": "2010-to-2015-conservative-and-liberal-democrat-coalition-government",
       "current": false
     },
+    "emphasised_organisations": ["6667cce2-e809-4e21-ae09-cb0bdc1ddda3"],
     "political": false
   },
   "links": {
+    "organisations": [
+      {
+        "content_id": "6667cce2-e809-4e21-ae09-cb0bdc1ddda3",
+        "title": "HM Revenue & Customs",
+        "base_path": "/government/organisations/hm-revenue-customs",
+        "api_url": "https://www.gov.uk/api/organisations/hm-revenue-customs",
+        "web_url": "https://www.gov.uk/government/organisations/hm-revenue-customs",
+        "locale": "en",
+        "analytics_identifier": "D25"
+      }
+    ],
     "lead_organisations": [
       {
         "content_id": "6667cce2-e809-4e21-ae09-cb0bdc1ddda3",
