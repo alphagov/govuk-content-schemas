@@ -47,7 +47,8 @@
             "single-identity",
             "so",
             "ukaea",
-            "wales"
+            "wales",
+            null
           ],
           "description": "Used for organisations, to allow us to publish branding / logo information. Remove when organisations are migrated."
         }
