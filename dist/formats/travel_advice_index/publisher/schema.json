@@ -469,6 +469,7 @@
       "required": [
         "format",
         "title",
+        "details",
         "publishing_app",
         "rendering_app",
         "locale",
@@ -586,6 +587,7 @@
         "document_type",
         "schema_name",
         "title",
+        "details",
         "publishing_app",
         "rendering_app",
         "locale",

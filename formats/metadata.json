@@ -4,6 +4,7 @@
   "additionalProperties": false,
   "required": [
     "title",
+    "details",
     "publishing_app",
     "rendering_app",
     "locale",

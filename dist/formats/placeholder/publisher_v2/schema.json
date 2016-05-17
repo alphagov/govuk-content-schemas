@@ -34,28 +34,32 @@
           "description": "Used for organisations, to allow us to publish branding / logo information. Remove when organisations are migrated."
         },
         "logo": {
-          "formatted_title": {
-            "type": "string",
-            "description": "Used for organisations, to allow us to publish branding / logo information. Remove when organisations are migrated."
-          },
-          "crest": {
-            "type": [
-              "string",
-              "null"
-            ],
-            "enum": [
-              "bis",
-              "eo",
-              "hmrc",
-              "ho",
-              "mod",
-              "portcullis",
-              "single-identity",
-              "so",
-              "ukaea",
-              "wales"
-            ],
-            "description": "Used for organisations, to allow us to publish branding / logo information. Remove when organisations are migrated."
+          "type": "object",
+          "properties": {
+            "formatted_title": {
+              "type": "string",
+              "description": "Used for organisations, to allow us to publish branding / logo information. Remove when organisations are migrated."
+            },
+            "crest": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "enum": [
+                "bis",
+                "eo",
+                "hmrc",
+                "ho",
+                "mod",
+                "portcullis",
+                "single-identity",
+                "so",
+                "ukaea",
+                "wales",
+                null
+              ],
+              "description": "Used for organisations, to allow us to publish branding / logo information. Remove when organisations are migrated."
+            }
           }
         },
         "tags": {
@@ -447,6 +451,7 @@
       "required": [
         "format",
         "title",
+        "details",
         "publishing_app",
         "rendering_app",
         "locale",
@@ -559,6 +564,7 @@
         "document_type",
         "schema_name",
         "title",
+        "details",
         "publishing_app",
         "rendering_app",
         "locale",
