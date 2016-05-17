@@ -323,6 +323,7 @@
     },
     "guid_list": {
       "type": "array",
+      "uniqueItems": true,
       "items": {
         "$ref": "#/definitions/guid"
       }
