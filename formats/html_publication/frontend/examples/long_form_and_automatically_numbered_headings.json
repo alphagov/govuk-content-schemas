@@ -14,7 +14,8 @@
     "parent": [
       {
         "content_id": "8b19c238-54e3-4e27-b0d7-60f8e2a677c9",
-        "format_sub_type": "policy_paper",
+        "schema_name": "placeholder_publication",
+        "document_type": "policy_paper",
         "title": "Summer Budget 2015",
         "base_path": "/government/publications/summer-budget-2015",
         "api_url": "https://www.gov.uk/api/content/government/publications/summer-budget-2015",
@@ -26,10 +27,12 @@
       {
         "content_id": "90c1be18-70a4-476b-9244-ef4c36e1a042",
         "title": "HM Treasury",
-        "brand": "hm-treasury",
-        "logo": {
-          "crest": "single-identity",
-          "formatted_title": "HM Treasury"
+        "details": {
+          "brand": "hm-treasury",
+          "logo": {
+            "crest": "single-identity",
+            "formatted_title": "HM Treasury"
+          }
         },
         "base_path": "/government/organisations/hm-treasury",
         "api_url": "https://www.gov.uk/api/content/government/organisations/hm-treasury",
