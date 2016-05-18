@@ -14,7 +14,8 @@
     "parent": [
       {
         "content_id": "8b19c238-54e3-4e27-b0d7-60f8e2a677c9",
-        "format_sub_type": "statutory_guidance",
+        "schema_name": "placeholder_publication",
+        "document_type": "statutory_guidance",
         "title": "National curriculum in England: mathematics programmes of study",
         "base_path": "/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
         "api_url": "https://www.gov.uk/api/content/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
@@ -26,10 +27,12 @@
       {
         "content_id": "90c1be18-70a4-476b-9244-ef4c36e1a042",
         "title": "Department for Education",
-        "brand": "department-for-education",
-        "logo": {
-          "formatted_title": "Department<br>for Education",
-          "crest": "single-identity"
+        "details": {
+          "brand": "department-for-education",
+          "logo": {
+            "formatted_title": "Department<br>for Education",
+            "crest": "single-identity"
+          }
         },
         "base_path": "/government/organisations/department-for-education",
         "api_url": "https://www.gov.uk/api/content/government/organisations/department-for-education",

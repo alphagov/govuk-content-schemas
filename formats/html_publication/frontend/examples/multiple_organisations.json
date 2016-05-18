@@ -14,7 +14,8 @@
     "parent": [
       {
         "content_id": "8b19c238-54e3-4e27-b0d7-60f8e2a677c9",
-        "format_sub_type": "guidance",
+        "schema_name": "placeholder_publication",
+        "document_type": "guidance",
         "title": "Proof of identity checklist",
         "base_path": "/government/publications/proof-of-identity-checklist",
         "api_url": "https://www.gov.uk/api/content/government/publications/proof-of-identity-checklist",
@@ -26,10 +27,12 @@
       {
         "content_id": "90c1be18-70a4-476b-9244-ef4c36e1a042",
         "title": "Bona Vacantia",
-        "brand": "attorney-generals-office",
-        "logo": {
-          "formatted_title": "Bona Vacantia",
-          "crest": "single-identity"
+        "details": {
+          "brand": "attorney-generals-office",
+          "logo": {
+            "formatted_title": "Bona Vacantia",
+            "crest": "single-identity"
+          }
         },
         "base_path": "/government/organisations/bona-vacantia",
         "api_url": "https://www.gov.uk/api/content/government/organisations/bona-vacantia",
@@ -40,10 +43,12 @@
       {
         "content_id": "83c1be18-70a4-476b-9244-ef4c36e1a042",
         "title": "Treasury Solicitor’s Department",
-        "brand": "attorney-generals-office",
-        "logo": {
-          "formatted_title": "Treasury<br>Solicitor's<br>Department",
-          "crest": "single-identity"
+        "details": {
+          "brand": "attorney-generals-office",
+          "logo": {
+            "formatted_title": "Treasury<br>Solicitor's<br>Department",
+            "crest": "single-identity"
+          }
         },
         "base_path": "/government/organisations/treasury-solicitor-s-department",
         "api_url": "https://www.gov.uk/api/content/government/organisations/treasury-solicitor-s-department",

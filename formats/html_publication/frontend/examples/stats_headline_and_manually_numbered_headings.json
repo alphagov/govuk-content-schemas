@@ -14,7 +14,8 @@
     "parent": [
       {
         "content_id": "8b19c238-54e3-4e27-b0d7-60f8e2a677c9",
-        "format_sub_type": "corporate_report",
+        "schema_name": "placeholder_publication",
+        "document_type": "corporate_report",
         "title": "National curriculum in England: mathematics programmes of study",
         "base_path": "/government/publications/dwp-single-departmental-plan-2015-to-2020",
         "api_url": "https://www.gov.uk/api/content/government/publications/dwp-single-departmental-plan-2015-to-2020",
@@ -26,10 +27,12 @@
       {
         "content_id": "90c1be18-70a4-476b-9244-ef4c36e1a042",
         "title": "Department for Work & Pensions",
-        "brand": "department-for-work-pensions",
-        "logo": {
-          "formatted_title": "Department<br>for Work &amp;<br>Pensions",
-          "crest": "single-identity"
+        "details": {
+          "brand": "department-for-work-pensions",
+          "logo": {
+            "formatted_title": "Department<br>for Work &amp;<br>Pensions",
+            "crest": "single-identity"
+          }
         },
         "base_path": "/government/organisations/department-for-work-pensions",
         "api_url": "https://www.gov.uk/api/content/government/organisations/department-for-work-pensions",

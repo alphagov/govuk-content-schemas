@@ -14,7 +14,8 @@
     "parent": [
       {
         "content_id": "8b19c238-54e3-4e27-b0d7-60f8e2a677c9",
-        "format_sub_type": "policy_paper",
+        "schema_name": "placeholder_publication",
+        "document_type": "policy_paper",
         "title": "Canada-United Kingdom Joint Declaration",
         "base_path": "/government/publications/canada-united-kingdom-joint-declaration",
         "api_url": "https://www.gov.uk/api/content/government/publications/canada-united-kingdom-joint-declaration",
@@ -26,10 +27,12 @@
       {
         "content_id": "90c1be18-70a4-476b-9244-ef4c36e1a042",
         "title": "Department for Business, Innovation &amp; Skills",
-        "brand": "department-for-business-innovation-skills",
-        "logo": {
-          "formatted_title": "Department<br>for Business<br>Innovation &amp; Skills",
-          "crest": "bis"
+        "details": {
+          "brand": "department-for-business-innovation-skills",
+          "logo": {
+            "formatted_title": "Department<br>for Business<br>Innovation &amp; Skills",
+            "crest": "bis"
+          }
         },
         "base_path": "/government/organisations/department-for-business-innovation-skills",
         "api_url": "https://www.gov.uk/api/content/government/organisations/department-for-business-innovation-skills",
@@ -40,10 +43,12 @@
       {
         "content_id": "83c1be18-70a4-476b-9244-ef4c36e1a042",
         "title": "Foreign & Commonwealth Office",
-        "brand": "foreign-commonwealth-office",
-        "logo": {
-          "formatted_title": "Foreign &amp;<br>Commonwealth<br>Office",
-          "crest": "single-identity"
+        "details": {
+          "brand": "foreign-commonwealth-office",
+          "logo": {
+            "formatted_title": "Foreign &amp;<br>Commonwealth<br>Office",
+            "crest": "single-identity"
+          }
         },
         "base_path": "/government/organisations/foreign-commonwealth-office",
         "api_url": "https://www.gov.uk/api/content/government/organisations/foreign-commonwealth-office",
@@ -54,10 +59,12 @@
       {
         "content_id": "d994e55c-48c9-4795-b872-58d8ec98af12",
         "title": "Ministry of Defence",
-        "brand": "ministry-of-defence",
-        "logo": {
-          "formatted_title": "Ministry<br>of Defence",
-          "crest": "mod"
+        "details": {
+          "brand": "ministry-of-defence",
+          "logo": {
+            "formatted_title": "Ministry<br>of Defence",
+            "crest": "mod"
+          }
         },
         "base_path": "/government/organisations/ministry-of-defence",
         "api_url": "https://www.gov.uk/api/content/government/organisations/ministry-of-defence",
@@ -68,10 +75,12 @@
       {
         "content_id": "705dbea4-8bd7-422e-ba9c-254557f77f81",
         "title": "Prime Minister's Office, 10 Downing Street",
-        "brand": "cabinet-office",
-        "logo": {
-          "formatted_title": "Prime Minister's Office, 10 Downing Street",
-          "crest": "eo"
+        "details": {
+          "brand": "cabinet-office",
+          "logo": {
+            "formatted_title": "Prime Minister's Office, 10 Downing Street",
+            "crest": "eo"
+          }
         },
         "base_path": "/government/organisations/prime-ministers-office-10-downing-street",
         "api_url": "https://www.gov.uk/api/content/government/organisations/prime-ministers-office-10-downing-street",
@@ -82,10 +91,12 @@
       {
         "content_id": "90c1be18-70a4-476b-9244-ef4c36e1a042",
         "title": "UK Trade & Investment",
-        "brand": "uk-trade-investment",
-        "logo": {
-          "formatted_title": "UK Trade<br>&amp; Investment",
-          "crest": "single-identity"
+        "details": {
+          "brand": "uk-trade-investment",
+          "logo": {
+            "formatted_title": "UK Trade<br>&amp; Investment",
+            "crest": "single-identity"
+          }
         },
         "base_path": "/government/organisations/uk-trade-investment",
         "api_url": "https://www.gov.uk/api/content/government/organisations/uk-trade-investment",
