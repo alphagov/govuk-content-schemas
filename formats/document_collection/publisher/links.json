@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "documents",
+    "organisations"
+  ],
+  "properties": {
+    "documents": {
+      "description": "An unordered list of all documents in this collection",
+      "$ref": "#/definitions/guid_list"
+    },
+    "topical_events": {
+      "$ref": "#/definitions/guid_list"
+    }
+  }
+}
