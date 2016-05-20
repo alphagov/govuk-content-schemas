@@ -5,10 +5,6 @@
   "locale": "en",
   "details": {
     "body": "<h2 id=\"what\">What it is, why it works and how to do it</h2>\n<p>Agile methodologies will help you and your team to build world-class, user-centred services quickly and affordably.</p>\n",
-    "related_discussion": {
-      "title": "Design community on hackpad",
-      "href": "https://designpatterns.hackpad.com/"
-    },
     "header_links": [
       {
         "title": "What is it, why it works and how to do it",
