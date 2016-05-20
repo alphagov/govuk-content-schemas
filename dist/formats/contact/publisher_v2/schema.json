@@ -549,6 +549,9 @@
         "details": {
           "$ref": "#/definitions/details"
         },
+        "withdrawn_notice": {
+          "$ref": "#/definitions/withdrawn_notice"
+        },
         "previous_version": {
           "type": "string"
         },
@@ -661,6 +664,9 @@
         },
         "details": {
           "$ref": "#/definitions/details"
+        },
+        "withdrawn_notice": {
+          "$ref": "#/definitions/withdrawn_notice"
         },
         "previous_version": {
           "type": "string"

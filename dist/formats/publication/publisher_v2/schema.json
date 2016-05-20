@@ -67,9 +67,6 @@
         "political": {
           "$ref": "#/definitions/political"
         },
-        "withdrawn_notice": {
-          "$ref": "#/definitions/withdrawn_notice"
-        },
         "national_applicability": {
           "$ref": "#/definitions/national_applicability"
         }
@@ -420,6 +417,9 @@
         "details": {
           "$ref": "#/definitions/details"
         },
+        "withdrawn_notice": {
+          "$ref": "#/definitions/withdrawn_notice"
+        },
         "previous_version": {
           "type": "string"
         },
@@ -532,6 +532,9 @@
         },
         "details": {
           "$ref": "#/definitions/details"
+        },
+        "withdrawn_notice": {
+          "$ref": "#/definitions/withdrawn_notice"
         },
         "previous_version": {
           "type": "string"
