@@ -75,9 +75,6 @@
         "$ref": "#/definitions/guid"
       }
     },
-    "withdrawn_notice": {
-      "$ref": "#/definitions/withdrawn_notice"
-    },
     "national_applicability": {
       "$ref": "#/definitions/national_applicability"
     }

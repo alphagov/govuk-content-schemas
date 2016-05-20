@@ -8,6 +8,10 @@
   "locale": "en",
   "updated_at": "2015-12-02T10:43:02.887Z",
   "public_updated_at": "2013-09-06T09:11:28.000+00:00",
+  "withdrawn_notice": {
+    "explanation": "<div class=\"govspeak\"><p>This information is now out of date. For our current guidance please read <a href=\"https://www.gov.uk/government/collections/guidance-for-keepers-of-sheep-goats-and-pigs\">guidance for keepers of sheep, goats and pigs</a>.</p></div>",
+    "withdrawn_at": "2015-01-13T13:05:30Z"
+  },
   "details": {
     "body": "<div class=\"govspeak\"><p>This guide provides information for pig keepers on registering, identifying and moving your pigs.</p>\n\n<p>Whether you keep one pet pig or a commercial herd you must by law be registered as a pig keeper with the <a rel=\"external\" href=\"http://www.defra.gov.uk/ahvla-en/\">Animal Health and Veterinary Laboratories Agency (<abbr title=\"Animal Health and Veterinary Laboratories Agency\">AHVLA</abbr>)</a>. </p>\n\n<p>In the event of a disease outbreak, knowing the precise location of all livestock is essential for effective measures to control and eradicate disease. You place both your own and other livestock in the area at risk if you do not register your holding or <a href=\"http://www.dev.gov.uk/guidance/disease-notification-duties-of-farmers\">report notifiable diseases</a>.</p>\n\n<h2 id=\"further-information\">Further information</h2>\n\n<ul>\n  <li><a href=\"http://www.dev.gov.uk/guidance/pigs-identification-registration-and-movement\">Pigs: identification, registration and movement</a></li>\n</ul>\n\n</div>",
     "documents": [
@@ -35,11 +39,7 @@
       "current": false
     },
     "political": false,
-    "emphasised_organisations": ["de4e9dc6-cca4-43af-a594-682023b84d6c"],
-    "withdrawn_notice": {
-      "explanation": "<div class=\"govspeak\"><p>This information is now out of date. For our current guidance please read <a href=\"https://www.gov.uk/government/collections/guidance-for-keepers-of-sheep-goats-and-pigs\">guidance for keepers of sheep, goats and pigs</a>.</p></div>",
-      "withdrawn_at": "2015-01-13T13:05:30Z"
-    }
+    "emphasised_organisations": ["de4e9dc6-cca4-43af-a594-682023b84d6c"]
   },
   "links": {
     "organisations": [
