@@ -71,16 +71,6 @@
         "locale": "en"
       }
     ],
-    "document_collections": [
-      {
-        "content_id": "5eb67fbf-7631-11e4-a3cb-005056011aef",
-        "title": "Climate Change Agreements guidance",
-        "base_path": "/government/collections/climate-change-agreements-guidance",
-        "api_url": "https://www.gov.uk/api/content/government/collections/climate-change-agreements-guidance",
-        "web_url": "https://www.gov.uk/government/collections/climate-change-agreements-guidance",
-        "locale": "en"
-      }
-    ],
     "policies": [
       {
         "content_id": "5d2b69f0-7631-11e4-a3cb-005056011aef",
