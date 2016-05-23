@@ -2,9 +2,6 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "additionalProperties": false,
-  "required": [
-    "lead_organisations"
-  ],
   "properties": {
     "document_collections": {
       "$ref": "#/definitions/guid_list"

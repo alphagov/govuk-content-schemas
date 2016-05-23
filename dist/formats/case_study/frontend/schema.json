@@ -76,9 +76,6 @@
     "links": {
       "type": "object",
       "additionalProperties": false,
-      "required": [
-        "lead_organisations"
-      ],
       "properties": {
         "lead_organisations": {
           "$ref": "#/definitions/frontend_links"
