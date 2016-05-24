@@ -77,10 +77,10 @@
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "fields_of_operation"
+        "field_of_operation"
       ],
       "properties": {
-        "fields_of_operation": {
+        "field_of_operation": {
           "$ref": "#/definitions/frontend_links"
         },
         "ministers": {

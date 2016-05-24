@@ -10,11 +10,12 @@
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "fields_of_operation"
+        "field_of_operation"
       ],
       "properties": {
-        "fields_of_operation": {
+        "field_of_operation": {
           "minItems": 1,
+          "maxItems": 1,
           "$ref": "#/definitions/guid_list"
         },
         "ministers": {
