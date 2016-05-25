@@ -2,9 +2,6 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "additionalProperties": false,
-  "required": [
-    "lead_organisations"
-  ],
   "properties": {
     "lead_organisations": {
       "description": "DEPRECATED: this field is being replaced by the `emphasised_organisations` field in the details hash.",

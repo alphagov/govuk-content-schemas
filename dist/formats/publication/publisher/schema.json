@@ -78,9 +78,6 @@
     "links": {
       "type": "object",
       "additionalProperties": false,
-      "required": [
-        "lead_organisations"
-      ],
       "properties": {
         "document_collections": {
           "$ref": "#/definitions/guid_list"
