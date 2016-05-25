@@ -8,6 +8,10 @@
   "locale": "en",
   "updated_at": "2014-12-08T15:26:28.258Z",
   "public_updated_at": "2013-04-15T16:12:55.000+00:00",
+  "withdrawn_notice": {
+    "explanation": "<div class=\"govspeak\"><p>We’ve withdrawn this case study and published newer <a href=\"https://www.gov.uk/government/collections/work-programme-real-life-stories\">Work Programme real life stories</a>.</p></div>",
+    "withdrawn_at": "2014-08-22T10:29:02+01:00"
+  },
   "details": {
     "change_note": null,
     "tags": {

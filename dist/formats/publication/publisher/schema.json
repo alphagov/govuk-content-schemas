@@ -478,6 +478,9 @@
         "details": {
           "$ref": "#/definitions/details"
         },
+        "withdrawn_notice": {
+          "$ref": "#/definitions/withdrawn_notice"
+        },
         "content_id": {
           "$ref": "#/definitions/guid"
         },
@@ -594,6 +597,9 @@
         },
         "details": {
           "$ref": "#/definitions/details"
+        },
+        "withdrawn_notice": {
+          "$ref": "#/definitions/withdrawn_notice"
         },
         "content_id": {
           "$ref": "#/definitions/guid"

@@ -83,6 +83,9 @@
     },
     "details": {
       "$ref": "#/definitions/details"
+    },
+    "withdrawn_notice": {
+      "$ref": "#/definitions/withdrawn_notice"
     }
   },
   "definitions": {}
