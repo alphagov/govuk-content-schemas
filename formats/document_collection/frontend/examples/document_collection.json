@@ -9,6 +9,10 @@
   "document_type": "document_collection",
   "format": "document_collection",
   "locale": "en",
+  "withdrawn_notice": {
+    "explanation": "<div class=\"govspeak\"><p>This information is now out of date.</p></div>",
+    "withdrawn_at": "2016-03-01T13:05:30Z"
+  },
   "details": {
     "collection_groups": [
       {
