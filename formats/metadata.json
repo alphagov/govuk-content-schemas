@@ -8,8 +8,7 @@
     "publishing_app",
     "rendering_app",
     "locale",
-    "routes",
-    "public_updated_at"
+    "routes"
   ],
   "properties": {
     "base_path": {
