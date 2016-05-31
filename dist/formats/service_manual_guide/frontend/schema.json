@@ -198,18 +198,6 @@
         "body": {
           "type": "string"
         },
-        "content_owner": {
-          "type": "object",
-          "properties": {
-            "title": {
-              "type": "string"
-            },
-            "href": {
-              "type": "string",
-              "format": "uri"
-            }
-          }
-        },
         "withdrawn_notice": {
           "type": "object",
           "additionalProperties": false,
@@ -219,18 +207,6 @@
             },
             "withdrawn_at": {
               "format": "date-time"
-            }
-          }
-        },
-        "related_discussion": {
-          "type": "object",
-          "properties": {
-            "title": {
-              "type": "string"
-            },
-            "href": {
-              "type": "string",
-              "format": "uri"
             }
           }
         },
