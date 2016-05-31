@@ -432,7 +432,6 @@
         "rendering_app",
         "locale",
         "routes",
-        "public_updated_at",
         "content_id",
         "update_type"
       ],
@@ -553,7 +552,6 @@
         "rendering_app",
         "locale",
         "routes",
-        "public_updated_at",
         "content_id",
         "update_type"
       ],

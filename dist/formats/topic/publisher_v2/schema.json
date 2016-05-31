@@ -418,7 +418,6 @@
         "rendering_app",
         "locale",
         "routes",
-        "public_updated_at",
         "base_path"
       ],
       "additionalProperties": false
@@ -535,7 +534,6 @@
         "rendering_app",
         "locale",
         "routes",
-        "public_updated_at",
         "base_path"
       ],
       "additionalProperties": false

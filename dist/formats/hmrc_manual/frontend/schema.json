@@ -8,7 +8,6 @@
     "title",
     "details",
     "locale",
-    "public_updated_at",
     "content_id",
     "document_type",
     "schema_name"
