@@ -21,17 +21,6 @@
   },
   "format": "case_study",
   "links": {
-    "lead_organisations": [
-      {
-        "content_id": "8b19c238-54e3-4e27-b0d7-60f8e2a677c9",
-        "title": "Department for International Development",
-        "base_path": "/government/organisations/department-for-international-development",
-        "api_url": "https://www.gov.uk/api/organisations/department-for-international-development",
-        "web_url": "https://www.gov.uk/government/organisations/department-for-international-development",
-        "locale": "en",
-        "analytics_identifier": "L2"
-      }
-    ],
     "organisations": [
       {
         "content_id": "8b19c238-54e3-4e27-b0d7-60f8e2a677c9",

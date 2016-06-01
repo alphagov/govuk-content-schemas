@@ -68,16 +68,6 @@
         "locale": "en"
       }
     ],
-    "lead_organisations": [
-      {
-        "content_id": "a4759607-4fd8-4cf0-9d56-af9d14a71162",
-        "title": "Department for Work and Pensions",
-        "base_path": "/government/organisations/department-for-work-and-pensions",
-        "api_url": "https://www.gov.uk/api/organisations/department-for-work-and-pensions",
-        "web_url": "https://www.gov.uk/government/organisations/department-for-work-and-pensions",
-        "locale": "en"
-      }
-    ],
     "people": [],
     "working_groups": [],
     "related": [],
