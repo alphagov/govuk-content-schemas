@@ -21,7 +21,7 @@ RSpec.describe GovukContentSchemas::FrontendSchemaGenerator do
     }
   }
 
-  let(:link_names) { ["lead_organisations"] }
+  let(:link_names) { ["organisations"] }
 
   let(:required_properties) {
     %w{

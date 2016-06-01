@@ -89,6 +89,9 @@
         "working_groups": {
           "$ref": "#/definitions/frontend_links"
         },
+        "lead_organisations": {
+          "$ref": "#/definitions/frontend_links"
+        },
         "related": {
           "$ref": "#/definitions/frontend_links"
         },
@@ -108,9 +111,6 @@
           "$ref": "#/definitions/frontend_links"
         },
         "organisations": {
-          "$ref": "#/definitions/frontend_links"
-        },
-        "lead_organisations": {
           "$ref": "#/definitions/frontend_links"
         },
         "parent": {

@@ -29,17 +29,6 @@
     "emphasised_organisations": ["16628142-57b2-4611-bc03-5912785acee3"]
   },
   "links": {
-    "lead_organisations": [
-      {
-        "content_id": "16628142-57b2-4611-bc03-5912785acee3",
-        "title": "Environment Agency",
-        "base_path": "/government/organisations/environment-agency",
-        "api_url": "https://www.gov.uk/api/content/government/organisations/environment-agency",
-        "web_url": "https://www.gov.uk/government/organisations/environment-agency",
-        "locale": "en",
-        "analytics_identifier": "EA199"
-      }
-    ],
     "organisations": [
       {
         "content_id": "16628142-57b2-4611-bc03-5912785acee3",

@@ -37,17 +37,6 @@
         "analytics_identifier": "D11"
       }
     ],
-    "lead_organisations": [
-      {
-        "content_id": "d65d4203-01f5-4920-a3b1-f614bfd8e83e",
-        "title": "Department of Energy & Climate Change",
-        "base_path": "/government/organisations/department-for-environment-food-rural-affairs",
-        "api_url": "https://www.gov.uk/api/organisations/department-of-energy-climate-change",
-        "web_url": "https://www.gov.uk/government/organisations/department-of-energy-climate-change",
-        "locale": "en",
-        "analytics_identifier": "D11"
-      }
-    ],
     "parent": [
       {
         "content_id": "0d59f5e7-a230-4bac-b02c-624a59a34dab",

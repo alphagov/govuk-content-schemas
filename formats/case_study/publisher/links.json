@@ -3,15 +3,7 @@
   "type": "object",
   "additionalProperties": false,
   "properties": {
-    "lead_organisations": {
-      "description": "DEPRECATED: this field is being replaced by the `emphasised_organisations` field in the details hash.",
-      "$ref": "#/definitions/guid_list"
-    },
     "related_policies": {
-      "$ref": "#/definitions/guid_list"
-    },
-    "supporting_organisations": {
-      "description": "DEPRECATED: this field will be removed.",
       "$ref": "#/definitions/guid_list"
     },
     "world_locations": {

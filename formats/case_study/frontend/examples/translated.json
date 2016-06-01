@@ -63,26 +63,6 @@
         "web_url": "https://www.gov.uk/government/organisations/uk-trade-investment"
       }
     ],
-    "lead_organisations": [
-      {
-        "content_id": "8449fbe1-bffe-46cf-a141-07df52c530b7",
-        "api_url": "https://www.gov.uk/api/content/government/organisations/uk-trade-investment",
-        "base_path": "/government/organisations/uk-trade-investment",
-        "locale": "en",
-        "title": "UK Trade & Investment",
-        "web_url": "https://www.gov.uk/government/organisations/uk-trade-investment"
-      }
-    ],
-    "supporting_organisations": [
-      {
-        "content_id": "4e5d0f10-65cb-4036-8a18-123240e3698a",
-        "api_url": "https://www.gov.uk/api/content/government/organisations/foreign-commonwealth-office",
-        "base_path": "/government/organisations/foreign-commonwealth-office",
-        "locale": "en",
-        "title": "Foreign & Commonwealth Office",
-        "web_url": "https://www.gov.uk/government/organisations/foreign-commonwealth-office"
-      }
-    ],
     "world_locations": [
       {
         "content_id": "1a47d8eb-36e8-4a9e-8a05-ca33184c2f86",

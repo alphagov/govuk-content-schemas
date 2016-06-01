@@ -82,9 +82,6 @@
         "document_collections": {
           "$ref": "#/definitions/frontend_links"
         },
-        "supporting_organisations": {
-          "$ref": "#/definitions/frontend_links"
-        },
         "ministers": {
           "$ref": "#/definitions/frontend_links"
         },
@@ -107,9 +104,6 @@
           "$ref": "#/definitions/frontend_links"
         },
         "organisations": {
-          "$ref": "#/definitions/frontend_links"
-        },
-        "lead_organisations": {
           "$ref": "#/definitions/frontend_links"
         },
         "parent": {
