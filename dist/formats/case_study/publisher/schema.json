@@ -95,10 +95,6 @@
         "related_policies": {
           "$ref": "#/definitions/guid_list"
         },
-        "supporting_organisations": {
-          "description": "DEPRECATED: this field will be removed.",
-          "$ref": "#/definitions/guid_list"
-        },
         "world_locations": {
           "$ref": "#/definitions/guid_list"
         },

@@ -82,9 +82,6 @@
         "related_policies": {
           "$ref": "#/definitions/frontend_links"
         },
-        "supporting_organisations": {
-          "$ref": "#/definitions/frontend_links"
-        },
         "world_locations": {
           "$ref": "#/definitions/frontend_links"
         },
