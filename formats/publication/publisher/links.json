@@ -6,10 +6,6 @@
     "document_collections": {
       "$ref": "#/definitions/guid_list"
     },
-    "supporting_organisations": {
-      "description": "DEPRECATED: this field is being removed.",
-      "$ref": "#/definitions/guid_list"
-    },
     "ministers": {
       "$ref": "#/definitions/guid_list"
     },
