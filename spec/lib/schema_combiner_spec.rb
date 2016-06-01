@@ -157,7 +157,7 @@ RSpec.describe GovukContentSchemas::SchemaCombiner do
   context "combining a metadata schema and a links schema" do
     let(:links_schema) {
       build_schema('links.json',
-        properties: build_string_properties('lead_organisations'),
+        properties: build_string_properties('organisations'),
         definitions: build_string_properties('guid_list')
       )
     }
@@ -180,7 +180,7 @@ RSpec.describe GovukContentSchemas::SchemaCombiner do
 
     it 'embeds the remaining content of the links schema as the links property definition' do
       remaining_content_of_links_schema = links_schema.schema.reject { |k, v| %w{$schema definitions}.include?(k) }
-      expect(combined.schema['definitions']['links']['properties'].keys).to eq(['lead_organisations', 'mainstream_browse_pages'])
+      expect(combined.schema['definitions']['links']['properties'].keys).to eq(['organisations', 'mainstream_browse_pages'])
     end
 
     it 'merges the definitions from the links schema into the combined schemas definitions' do
@@ -205,7 +205,7 @@ RSpec.describe GovukContentSchemas::SchemaCombiner do
     }
 
     let(:links_schema) {
-      build_schema('links.json', properties: build_string_properties('lead_organisations'))
+      build_schema('links.json', properties: build_string_properties('organisations'))
     }
 
     let(:definitions) {
@@ -254,7 +254,7 @@ RSpec.describe GovukContentSchemas::SchemaCombiner do
     }
 
     let(:links_schema) {
-      build_schema('links.json', properties: build_string_properties('lead_organisations', 'mainstream_browse_pages'))
+      build_schema('links.json', properties: build_string_properties('organisations', 'mainstream_browse_pages'))
     }
 
     let(:definitions) {
@@ -285,7 +285,7 @@ RSpec.describe GovukContentSchemas::SchemaCombiner do
     it 'embeds the merged links schemas as the links property' do
       remaining_content_of_links_schema = links_schema.schema.reject { |k, v| %w{$schema definitions}.include?(k) }
       expect(combined.schema['properties']['links']['properties'].keys).to match_array(
-        ['lead_organisations', 'mainstream_browse_pages', 'organisations', 'parent'])
+        ['organisations', 'mainstream_browse_pages', 'parent'])
     end
 
     it 'merges the definitions from the definitions schema into the combined schemas definitions' do
