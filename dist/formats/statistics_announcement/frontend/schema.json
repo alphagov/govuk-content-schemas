@@ -98,9 +98,6 @@
         "topics": {
           "$ref": "#/definitions/frontend_links"
         },
-        "lead_organisations": {
-          "$ref": "#/definitions/frontend_links"
-        },
         "parent": {
           "$ref": "#/definitions/frontend_links"
         },

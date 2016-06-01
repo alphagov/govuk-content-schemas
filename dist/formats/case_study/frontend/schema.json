@@ -79,9 +79,6 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "lead_organisations": {
-          "$ref": "#/definitions/frontend_links"
-        },
         "related_policies": {
           "$ref": "#/definitions/frontend_links"
         },
