@@ -73,6 +73,7 @@
     "documents": [
       {
         "content_id": "5e2fd5e9-7631-11e4-a3cb-005056011aef",
+        "public_updated_at": "2014-08-24T15:00:02+00:00",
         "title": "Financial sanctions, Somalia",
         "base_path": "/government/publications/financial-sanctions-somalia",
         "description": "Somalia is currently subject to financial sanctions. This document contains the current list of designated persons.",
@@ -83,6 +84,7 @@
       },
       {
         "content_id": "5e2fd762-7631-11e4-a3cb-005056011aef",
+        "public_updated_at": "2004-11-04T15:00:02+00:00",
         "title": "Current list of designated persons, terrorism and terrorist financing",
         "base_path": "/government/publications/current-list-of-designated-persons-terrorism-and-terrorist-financing",
         "description": "This document provides a current list of designated persons currently subject to financial sanctions for believed involvement in terrorist activity.",
@@ -93,6 +95,7 @@
       },
       {
         "content_id": "841f225a-80b2-44d5-ba13-a36c7a82b859",
+        "public_updated_at": "2007-12-15T15:00:02+00:00",
         "title": "Financial Sanctions, UK freezing orders",
         "base_path": "/government/publications/financial-sanctions-uk-freezing-orders",
         "description": "Somalia is currently subject to financial sanctions. This document contains the current list of designated persons.",
