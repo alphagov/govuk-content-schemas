@@ -39,6 +39,10 @@
       "type": "string",
       "format": "date-time"
     },
+    "first_published_at": {
+      "type": "string",
+      "format": "date-time"
+    },
     "publishing_app": {
       "type": "string"
     },
@@ -123,6 +127,9 @@
         "fatality_notice"
       ]
     },
+    "expanded_links": {
+      "type": "object"
+    },
     "updated_at": {
       "type": "string",
       "format": "date-time"
@@ -176,7 +183,7 @@
           },
           "links": {
             "type": "object",
-            "additionalProperties": false,
+            "additionalProperties": true,
             "properties": {
               "parent": {
                 "$ref": "#/definitions/guid_list"
