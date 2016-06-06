@@ -31,6 +31,10 @@
       "type": "string",
       "format": "date-time"
     },
+    "first_published_at": {
+      "type": "string",
+      "format": "date-time"
+    },
     "publishing_app": {
       "type": "string"
     },
