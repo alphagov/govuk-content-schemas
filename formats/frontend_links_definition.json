@@ -46,7 +46,7 @@
       },
       "links": {
         "type": "object",
-        "additionalProperties": false,
+        "additionalProperties": true,
         "properties": {
           "parent": {
             "$ref": "#/definitions/guid_list"
