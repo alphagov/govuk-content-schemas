@@ -1,61 +1,86 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
-  "additionalProperties": false,
-  "required": [
-    "format",
-    "publishing_app",
-    "redirects",
-    "base_path"
-  ],
-  "properties": {
-    "base_path": {
-      "$ref": "#/definitions/absolute_path"
-    },
-    "content_id": {
-      "$ref": "#/definitions/guid"
-    },
-    "format": {
-      "enum": [ "redirect" ]
-    },
-    "publishing_app": {
-      "type": "string"
-    },
-    "update_type": {
-      "enum": [ "major", "minor", "republish" ]
-    },
-    "public_updated_at": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "redirects": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "additionalProperties": false,
-        "required": [
-          "path",
-          "type",
-          "destination"
-        ],
-        "properties": {
-          "path": {
-            "$ref": "#/definitions/absolute_path"
-          },
-          "type": {
-            "enum": [ "prefix", "exact" ]
-          },
-          "destination": {
-            "$ref": "#/definitions/absolute_fullpath"
-          },
-          "segments_mode": {
-            "enum": [ "preserve", "ignore" ],
-            "description": "For prefix redirects, preserve or ignore the rest of the fullpath. For exact, preserve or ignore the querystring."
+  "oneOf": [
+    {
+      "properties": {
+        "base_path": {
+          "$ref": "#/definitions/absolute_path"
+        },
+        "content_id": {
+          "$ref": "#/definitions/guid"
+        },
+        "format": {
+          "enum": [ "redirect" ]
+        },
+        "publishing_app": {
+          "type": "string"
+        },
+        "update_type": {
+          "enum": [ "major", "minor", "republish" ]
+        },
+        "public_updated_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "redirects": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/redirect_route"
           }
         }
-      }
+      },
+      "additionalProperties": false,
+      "required": [
+        "format",
+        "publishing_app",
+        "redirects",
+        "base_path"
+      ]
+    },
+    {
+      "properties": {
+        "base_path": {
+          "$ref": "#/definitions/absolute_path"
+        },
+        "content_id": {
+          "$ref": "#/definitions/guid"
+        },
+        "document_type": {
+          "type": "string",
+          "enum": [ "redirect" ]
+        },
+        "schema_name": {
+          "type": "string",
+          "enum": [ "redirect" ]
+        },
+        "publishing_app": {
+          "type": "string"
+        },
+        "update_type": {
+          "enum": [ "major", "minor", "republish" ]
+        },
+        "public_updated_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "redirects": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/redirect_route"
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "document_type",
+        "schema_name",
+        "publishing_app",
+        "redirects",
+        "base_path"
+      ]
     }
-  },
+  ],
   "definitions": {
     "absolute_path": {
       "type": "string",
@@ -75,6 +100,30 @@
       "type": "array",
       "items": {
         "$ref": "#/definitions/guid"
+      }
+    },
+    "redirect_route": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "type",
+        "destination"
+      ],
+      "properties": {
+        "path": {
+          "$ref": "#/definitions/absolute_path"
+        },
+        "type": {
+          "enum": [ "prefix", "exact" ]
+        },
+        "destination": {
+          "$ref": "#/definitions/absolute_fullpath"
+        },
+        "segments_mode": {
+          "enum": [ "preserve", "ignore" ],
+          "description": "For prefix redirects, preserve or ignore the rest of the fullpath. For exact, preserve or ignore the querystring."
+        }
       }
     }
   }
