@@ -13,20 +13,47 @@
     ]
   },
   "links": {
-    "content_owners": [{
-      "content_id": "e5f09422-bf55-417c-b520-8a42cb409814",
-      "title": "Agile delivery community",
-      "base_path": "/service-manual/communities/agile-delivery-community",
-      "description": "Agile delivery community takes care of...",
-      "api_url": "http://content-store.dev.gov.uk/content/service-manual/communities/agile-delivery-community",
-      "web_url": "http://www.dev.gov.uk/service-manual/communities/agile-delivery-community",
-      "locale": "en",
-      "analytics_identifier": null
-    }]
+    "content_owners": [
+      {
+        "content_id": "e5f09422-bf55-417c-b520-8a42cb409814",
+        "title": "Agile delivery community",
+        "base_path": "/service-manual/communities/agile-delivery-community",
+        "description": "Agile delivery community takes care of...",
+        "api_url": "http://content-store.dev.gov.uk/content/service-manual/communities/agile-delivery-community",
+        "web_url": "http://www.dev.gov.uk/service-manual/communities/agile-delivery-community",
+        "locale": "en",
+        "analytics_identifier": null
+      }
+    ],
+    "service_manual_topics": [
+      {
+        "content_id": "370e00b2-3c79-4816-aaa9-1a7059e6155d",
+        "title": "Agile",
+        "base_path": "/service-manual/agile",
+        "description": "",
+        "api_url": "https://content-store.gov.uk/content/service-manual/agile",
+        "web_url": "https://www.gov.uk/service-manual/agile",
+        "locale": "en",
+        "schema_name": "service_manual_topic",
+        "document_type": "service_manual_topic",
+        "analytics_identifier": null,
+        "links": {
+          "linked_items": [
+            "fb81a47b-7c8f-4280-b6c7-b6fa25822222"
+          ],
+          "content_owners": [
+            "e50286e4-2d79-44aa-bcf4-f024e5e17061"
+          ],
+          "organisations": [
+            "af07d5a5-df63-4ddc-9383-6a666845ebe9"
+          ]
+        }
+      }
+    ]
   },
-  "base_path": "/service-manual/agile",
+  "base_path": "/service-manual/agile/agile-delivery",
   "description": "What agile is, why it works and how to do it",
-  "title": "Agile",
+  "title": "Agile Delivery",
   "updated_at": "2015-10-12T08:54:30+00:00",
   "schema_name": "service_manual_guide",
   "document_type": "service_manual_guide"

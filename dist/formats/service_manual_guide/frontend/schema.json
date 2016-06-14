@@ -86,6 +86,9 @@
         "content_owners": {
           "$ref": "#/definitions/frontend_links"
         },
+        "service_manual_topics": {
+          "$ref": "#/definitions/frontend_links"
+        },
         "alpha_taxons": {
           "$ref": "#/definitions/frontend_links"
         },
