@@ -1,0 +1,23 @@
+{
+  "format": "service_manual_service_standard",
+  "base_path": "/service-manual/service-standard",
+  "content_id": "cd02b82d-c706-435c-a2fc-2dcabd168ef4",
+  "title": "Digital Service Standard",
+  "locale": "en",
+  "schema_name": "service_manual_service_standard",
+  "document_type": "service_manual_service_standard",
+  "details": {
+    "points": [
+      {
+        "title": "1. Understand user needs",
+        "summary": "Summary goes here",
+        "base_path": "/service-manual/service-standard/understand-user-needs"
+      },
+      {
+        "title": "2. Do ongoing user research",
+        "summary": "Another summary goes here",
+        "base_path": "/service-manual/service-standard/do-ongoing-user-research"
+      }
+    ]
+  }
+}

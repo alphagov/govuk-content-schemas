@@ -11,12 +11,12 @@
       { "title" : "Why it's in the standard", "href" : "#why-its-in-the-standard" }
     ]
   },
-  "base_path" : "/service-standard/point-1",
+  "base_path" : "/service-standard/service-standard/understand-user-needs",
   "description" : "Understand user needs.",
-  "title" : "Point 1",
+  "title" : "1. Understand user needs",
   "routes": [
     {
-      "path": "/service-standard/point-1",
+      "path": "/service-standard/service-standard/understand-user-needs",
       "type": "exact"
     }
   ]
