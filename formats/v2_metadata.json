@@ -9,6 +9,11 @@
     "base_path": {
       "$ref" : "#/definitions/absolute_path"
     },
+    "last_edited_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Last time when the content recieved a major or minor update."
+    },
     "previous_version": {
       "type": "string"
     },
