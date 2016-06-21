@@ -191,8 +191,7 @@
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "title",
-        "description"
+        "title"
       ],
       "properties": {
         "slug": {
@@ -257,6 +256,12 @@
               "type": "null"
             }
           ]
+        },
+        "contact_type": {
+          "type": "string"
+        },
+        "feature_on_homepage": {
+          "type": "boolean"
         },
         "email_addresses": {
           "type": "array",
