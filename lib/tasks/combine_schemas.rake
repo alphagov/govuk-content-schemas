@@ -27,7 +27,8 @@ end
 
 def sources_for_v2_details(filename)
   Rake::FileList.new(
-    "formats/{definitions,metadata,v2_metadata}.json",
+    "formats/definitions.json",
+    metadata_sources(filename),
     filename.pathmap("%{^dist/,}p").pathmap("%{_v2,}d/details.json")
   )
 end
@@ -37,6 +38,16 @@ def sources_for_v2_links(filename)
     "formats/{definitions,links_metadata,base_links}.json",
     filename.pathmap("%{^dist/,}p").pathmap("%{_v2,}d/links.json")
   ).select { |f| File.exist?(f) }
+end
+
+def metadata_sources(filename)
+  format_metadata = filename.pathmap("%{^dist/,}d/metadata.json")
+
+  if File.exist?(format_metadata)
+    format_metadata
+  else
+    "formats/{definitions,metadata,v2_metadata}.json"
+  end
 end
 
 def sources_for_frontend_schema(filename)
