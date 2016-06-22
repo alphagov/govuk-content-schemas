@@ -36,11 +36,16 @@ In the future, there may be a third:
 
 The 'publisher' [`schema.json`](dist/formats/case_study/publisher/schema.json) is built from three parts:
 
-  - [`metadata.json`](formats/metadata.json): the top level set of fields. These are the **same for every content
-    format**.
+  - [`metadata.json`](formats/metadata.json): the top level set of fields. These are **common to most content
+    formats**.
 
   - [version metadata eg. `v2_metadata.json`](formats/v2_metadata.json): Fields specific to the publisher version.
     Either [`v1_metadata.json`](formats/v1_metadata.json) or [`v2_metadata.json`](formats/v2_metadata.json)
+
+  - [format specific metadata eg. `formats/contact/publisher_v2/metadata.json`](formats/contact/publisher_v2/metadata.json):
+    Exceptional formats which do not conform to common, v1 or v2 metadata definitions may define their own
+    format specific metadata.
+    An example of this is pathless content such as Whitehall contacts.
 
   - [`definitions.json`](formats/definitions.json) Common definitions used across schemas.
 
