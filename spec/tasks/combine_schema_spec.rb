@@ -39,8 +39,6 @@ RSpec.describe 'combine_schemas' do
       FileUtils.mkdir_p(publisher_schema_dir)
       File.write(publisher_schema_dir.join("details.json").to_s, schemas[:details].to_s)
       File.write(publisher_schema_dir.join("links.json").to_s, schemas[:links].to_s)
-
-      subject.invoke
     end
 
     after(:each) do
@@ -48,60 +46,93 @@ RSpec.describe 'combine_schemas' do
       FileUtils.rm_r(project_root.join("dist/formats", format_name))
     end
 
-    describe "publisher/schema.json" do
-      let(:output_filename) { File.join("dist/formats", format_name, "publisher/schema.json") }
+    context "with common metadata" do
 
-      it "produces a combined schema file at the specified output path" do
-        expect(output_filename).to exist
+      before(:each) do
+        subject.invoke
       end
 
-      it "derives the format name from the filesystem path" do
-        expect(generated_schema.schema['oneOf'][0]['properties']['format']).to eq(
-          {"type" => "string", "enum" => [format_name]}
-        )
+      describe "publisher/schema.json" do
+        let(:output_filename) { File.join("dist/formats", format_name, "publisher/schema.json") }
+
+        it "produces a combined schema file at the specified output path" do
+          expect(output_filename).to exist
+        end
+
+        it "derives the format name from the filesystem path" do
+          expect(generated_schema.schema['oneOf'][0]['properties']['format']).to eq(
+            {"type" => "string", "enum" => [format_name]}
+          )
+        end
+
+        specify "the schema.json file contains the combined schemas" do
+          expected = GovukContentSchemas::SchemaCombiner.new(
+            slice_hash(schemas, :definitions, :metadata, :v1_metadata, :base_links, :details, :links),
+            format_name
+          ).combined
+
+          expect(generated_schema.schema).to eq(expected.schema)
+        end
       end
 
-      specify "the schema.json file contains the combined schemas" do
-        expected = GovukContentSchemas::SchemaCombiner.new(
-          slice_hash(schemas, :definitions, :metadata, :v1_metadata, :base_links, :details, :links),
-          format_name
-        ).combined
+      describe "publisher_v2/details.json" do
+        let(:output_filename) { File.join("dist/formats", format_name, "publisher_v2/schema.json") }
 
-        expect(generated_schema.schema).to eq(expected.schema)
+        it "produces a combined schema file at the specified output path" do
+          expect(output_filename).to exist
+        end
+
+        specify "the schema.json file contains the combined schemas" do
+          expected = GovukContentSchemas::SchemaCombiner.new(
+            slice_hash(schemas, :definitions, :metadata, :v2_metadata, :details),
+            format_name
+          ).combined
+
+          expect(generated_schema.schema).to eq(expected.schema)
+        end
+      end
+
+      describe "publisher_v2/links.json" do
+        let(:output_filename) { File.join("dist/formats", format_name, "publisher_v2/links.json") }
+
+        it "produces a combined schema file at the specified output path" do
+          expect(output_filename).to exist
+        end
+
+        specify "the schema.json file contains the combined schemas" do
+          expected = GovukContentSchemas::SchemaCombiner.new(
+            slice_hash(schemas, :definitions, :links_metadata, :base_links, :links),
+            format_name
+          ).combined
+
+          expect(generated_schema.schema).to eq(expected.schema)
+        end
       end
     end
 
-    describe "publisher_v2/details.json" do
-      let(:output_filename) { File.join("dist/formats", format_name, "publisher_v2/schema.json") }
-
-      it "produces a combined schema file at the specified output path" do
-        expect(output_filename).to exist
+    context "with format specific metadata" do
+      before(:each) do
+        FileUtils.mkdir_p(publisher_v2_schema_dir)
+        File.write(publisher_v2_schema_dir.join("metadata.json").to_s, schemas[:metadata].to_s)
+        subject.invoke
       end
 
-      specify "the schema.json file contains the combined schemas" do
-        expected = GovukContentSchemas::SchemaCombiner.new(
-          slice_hash(schemas, :definitions, :metadata, :v2_metadata, :details),
-          format_name
-        ).combined
+      describe "publisher_v2/details.json" do
+        let(:publisher_v2_schema_dir) { project_root.join("formats", format_name, "publisher_v2") }
+        let(:output_filename) { File.join("dist/formats", format_name, "publisher_v2/schema.json") }
 
-        expect(generated_schema.schema).to eq(expected.schema)
-      end
-    end
+        it "produces a combined schema file at the specified output path" do
+          expect(output_filename).to exist
+        end
 
-    describe "publisher_v2/links.json" do
-      let(:output_filename) { File.join("dist/formats", format_name, "publisher_v2/links.json") }
+        specify "the schema.json file contains the combined schemas" do
+          expected = GovukContentSchemas::SchemaCombiner.new(
+            slice_hash(schemas, :definitions, :metadata, :details),
+            format_name
+          ).combined
 
-      it "produces a combined schema file at the specified output path" do
-        expect(output_filename).to exist
-      end
-
-      specify "the schema.json file contains the combined schemas" do
-        expected = GovukContentSchemas::SchemaCombiner.new(
-          slice_hash(schemas, :definitions, :links_metadata, :base_links, :links),
-          format_name
-        ).combined
-
-        expect(generated_schema.schema).to eq(expected.schema)
+          expect(generated_schema.schema).to eq(expected.schema)
+        end
       end
     end
   end
