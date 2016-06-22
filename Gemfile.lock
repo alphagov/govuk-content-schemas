@@ -6,7 +6,7 @@ GEM
     foreman (0.78.0)
       thor (~> 0.19.1)
     git-version-bump (0.15.1)
-    govuk-dummy_content_store (0.0.4)
+    govuk-dummy_content_store (0.0.5)
       rack
       rack-contrib
     json-schema (2.5.0)
@@ -35,7 +35,7 @@ PLATFORMS
 
 DEPENDENCIES
   foreman (= 0.78.0)
-  govuk-dummy_content_store (= 0.0.4)
+  govuk-dummy_content_store (= 0.0.5)
   json-schema
   rake
   rspec
