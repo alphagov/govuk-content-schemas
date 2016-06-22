@@ -34,7 +34,7 @@ In the future, there may be a third:
 
 ### Publisher schema defined using component parts
 
-The 'publisher' [`schema.json`](dist/formats/case_study/publisher/schema.json) is built from three parts:
+The 'publisher' [`schema.json`](dist/formats/case_study/publisher/schema.json) is built from several parts:
 
   - [`metadata.json`](formats/metadata.json): the top level set of fields. These are **common to most content
     formats**.
@@ -42,10 +42,10 @@ The 'publisher' [`schema.json`](dist/formats/case_study/publisher/schema.json) i
   - [version metadata eg. `v2_metadata.json`](formats/v2_metadata.json): Fields specific to the publisher version.
     Either [`v1_metadata.json`](formats/v1_metadata.json) or [`v2_metadata.json`](formats/v2_metadata.json)
 
-  - [format specific metadata eg. `formats/contact/publisher_v2/metadata.json`](formats/contact/publisher_v2/metadata.json):
-    Exceptional formats which do not conform to common, v1 or v2 metadata definitions may define their own
-    format specific metadata.
-    An example of this is pathless content such as Whitehall contacts.
+  - Alternatively, [format specific metadata](formats/contact/publisher_v2/metadata.json) can be defined for
+    exceptional formats which do not conform to common, v1 or v2 metadata definitions.
+    An example of this is pathless content such as [Whitehall contacts](dist/formats/contact/publisher_v2/schema.json)
+    which do not contain the normally required `base_path` and `routes` properties.
 
   - [`definitions.json`](formats/definitions.json) Common definitions used across schemas.
 
