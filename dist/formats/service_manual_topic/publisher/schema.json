@@ -451,6 +451,11 @@
         "content_id": {
           "$ref": "#/definitions/guid"
         },
+        "last_edited_at": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Last time when the content recieved a major or minor update."
+        },
         "update_type": {
           "enum": [
             "major",
@@ -573,6 +578,11 @@
         },
         "content_id": {
           "$ref": "#/definitions/guid"
+        },
+        "last_edited_at": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Last time when the content recieved a major or minor update."
         },
         "update_type": {
           "enum": [
