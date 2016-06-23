@@ -1,0 +1,148 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "definitions": {
+    "formats": {
+      "title": "This is a placeholder, and filled when the schema is built"
+    }
+  },
+  "allOf": [
+    {
+      "additionalProperties": false,
+      "required": [
+        "update_type",
+        "analytics_identifier",
+        "content_id",
+        "description",
+        "details",
+        "document_type",
+        "first_published_at",
+        "need_ids",
+        "phase",
+        "public_updated_at",
+        "publishing_app",
+        "redirects",
+        "rendering_app",
+        "routes",
+        "schema_name",
+        "title",
+        "base_path",
+        "locale",
+        "format"
+      ],
+      "properties": {
+        "update_type": {
+          "enum": [ "major", "minor", "republish", "links" ]
+        },
+        "content_id": {
+          "$ref": "#/definitions/guid"
+        },
+        "analytics_identifier": {
+          "$ref": "#/definitions/analytics_identifier"
+        },
+        "links": {
+          "$ref": "#/definitions/links"
+        },
+        "expanded_links": {
+          "type": "object"
+        },
+        "base_path": {
+          "$ref" : "#/definitions/absolute_path"
+        },
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "public_updated_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "first_published_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "publishing_app": {
+          "type": "string"
+        },
+        "rendering_app": {
+          "type": "string"
+        },
+        "locale": {
+          "type": "string"
+        },
+        "need_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "title": "This is intended to be used by front end applications to present pages to users to show how effectively users' needs are being met"
+          },
+          "title": "Identifiers of user needs"
+        },
+        "routes": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/definitions/route"
+          }
+        },
+        "redirects": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/redirect_route"
+          }
+        },
+        "access_limited": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [ "users" ],
+          "properties": {
+            "users": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "phase": {
+          "description": "The service design phase of this content item - https://www.gov.uk/service-manual/phases",
+          "type": "string",
+          "enum": [ "alpha", "beta", "live" ]
+        },
+        "details": {
+          "type": "object"
+        },
+        "withdrawn_notice": {
+          "$ref": "#/definitions/withdrawn_notice"
+        },
+        "schema_name": {
+          "type": "string",
+          "title": "Determines the schema used to validate details",
+          "description": "This field should only be used as part of the validation process"
+        },
+        "format": {
+          "type": "string",
+          "description": "Deprecated in favor of schema_name, but required to be identical in value"
+        },
+        "document_type": {
+          "type": "string"
+        },
+        "govuk_request_id": {
+          "type": ["string", "null"]
+        }
+      }
+    },
+    {
+      "$ref": "#/definitions/formats"
+    }
+  ]
+}

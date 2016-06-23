@@ -1,5 +1,6 @@
 require 'rake/clean'
 require 'govuk_content_schemas/schema_combiner'
+require 'govuk_content_schemas/message_queue_schema_generator'
 require 'govuk_content_schemas/frontend_schema_generator'
 require 'json-schema'
 require 'json'
@@ -54,6 +55,36 @@ def sources_for_frontend_schema(filename)
   Rake::FileList.new(filename.pathmap("%{frontend,publisher}p"))
 end
 
+desc "Create the message_queue schema by combining the base with the definitions"
+file "dist/message_queue.json" do |task|
+  root = ENV["FORMAT_ROOT"] || "formats"
+
+  details_file_list = FileList.new("#{root}/*/publisher/details.json")
+
+  details_schemas = Hash[
+    details_file_list.map do |path|
+      [path.pathmap("%{#{root}/,;/publisher/details.json,}p"), schema_reader.read(path)]
+    end
+  ]
+
+  # Add nils for the hand made schemas, such that the messages containing them
+  # are considered valid, but no validation of the details occurs
+  hand_made_publisher_schemas.pathmap("%{#{root}/,;/publisher/schema.json,}p").each do |schema_name|
+    details_schemas[schema_name] = nil
+  end
+
+  schema = GovukContentSchemas::MessageQueueSchemaCombiner.new.combine(
+    schema_reader.read("#{root}/message_queue_base.json"),
+    schema_reader.read("#{root}/definitions.json"),
+    schema_reader.read("#{root}/base_links.json"),
+    details_schemas,
+  )
+
+  File.open(task.name, 'w') do |file|
+    file.puts JSON.pretty_generate(schema.schema)
+  end
+end
+
 combine_publisher_schemas = ->(task) do
   source_schemas = Hash[task.sources.map { |s| [s.pathmap("%n").to_sym, schema_reader.read(s)] }]
   FileUtils.mkdir_p task.name.pathmap("%d")
@@ -97,6 +128,7 @@ task combine_publisher_schemas: %i{
   combine_publisher_v1_schemas
   combine_publisher_v2_schemas
   combine_publisher_v2_links
+  dist/message_queue.json
 }
 
 task combine_schemas: %i{combine_publisher_schemas combine_frontend_schemas}
