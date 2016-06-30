@@ -29,6 +29,7 @@ In the future, there may be a third:
 * [Suggested workflows](docs/suggested-workflows.md)
 * [Why do contract testing?](docs/why-contract-testing.md)
 * [Running your frontend against the examples (content-store not needed)](docs/running-frontend-against-examples.md)
+* [Deployment](docs/deployment.md)
 
 ## Background
 

@@ -15,4 +15,4 @@ The steps would be:
 4. create a new branch and commit and push your changes
    - this will run a branch build of govuk-content-schemas. This includes running the contract tests for each application which relies on the schemas. You'll get immediate feedback about whether publishing applications generate content items compatible with the new schema.
 5. once the tests pass, someone will merge your pull request and the new schemas will be available to use
-6. Deploy your changes with the [Deploy GOVUK Content Schemas](https://deploy.publishing.service.gov.uk/job/Deploy_GOVUK_Content_Schemas/) Jenkins job.  This makes your changes available to the publishing API for validation and dependency resolution.
+6. Deploy your changes (see [`docs/deployment.md`](docs/deployment.md) for details).
