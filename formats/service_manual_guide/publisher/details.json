@@ -6,9 +6,9 @@
     "body"
   ],
   "properties": {
-    "summary": {
-      "type": "string",
-      "description": "A single line short summary that does not contain formatting."
+    "show_description": {
+      "type": "boolean",
+      "description": "Display the description on the page if true. This is needed for the service standard points."
     },
     "body": {
       "type": "string"

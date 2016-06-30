@@ -4,13 +4,13 @@
   "format": "service_manual_guide",
   "locale": "en",
   "base_path": "/service-standard/service-standard/understand-user-needs",
-  "description": "Understand user needs.",
+  "description": "Understand user needs. Research to develop a deep knowledge of who the service users are and what that means for the design of the service.",
   "title": "1. Understand user needs",
   "updated_at": "2015-10-12T08:54:30+00:00",
   "schema_name": "service_manual_guide",
   "document_type": "service_manual_guide",
   "details": {
-    "summary": "Understand user needs. Research to develop a deep knowledge of who the service users are and what that means for the design of the service.",
+    "show_description": true,
     "body": "<h2>Why it's in the standard</h2>\n<p>You need to know the people who use your service (your users) and what they want to do (their user needs) if you want to build a service that works for them.</p>\n",
     "header_links": [
       {
