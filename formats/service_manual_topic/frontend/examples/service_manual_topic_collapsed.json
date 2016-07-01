@@ -83,10 +83,6 @@
       {
         "name": "Group 1",
         "description": "The first group",
-        "contents": [
-          "/service-manual/user-centred-design/accessibility",
-          "/service-manual/user-centred-design/resources/patterns/addresses"
-        ],
         "content_ids": [
           "0c23c42e-d1ae-433a-834b-ebc5e4c3785f",
           "56b79735-fd9b-4119-a9f4-682098087953"
@@ -95,10 +91,6 @@
       {
         "name": "Group 2",
         "description": "The second group",
-        "contents": [
-          "/service-manual/operations/helpdesk",
-          "/service-manual/user-centred-design/resources/creating-accessible-PDFs"
-        ],
         "content_ids": [
           "60b91f03-9dfe-4cb1-a01b-d0391b261cd8",
           "65744959-71cc-495c-922e-da4709a5f89b"
