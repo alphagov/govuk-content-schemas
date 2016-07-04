@@ -3,6 +3,7 @@ require 'rake'
 require 'fileutils'
 
 require 'govuk_content_schemas/schema_combiner'
+require 'govuk_content_schemas/message_queue_schema_generator'
 require 'govuk_content_schemas/frontend_schema_generator'
 
 RSpec::Matchers.define :exist do
@@ -166,6 +167,50 @@ RSpec.describe 'combine_schemas' do
       expected = GovukContentSchemas::FrontendSchemaGenerator.new(publisher_schema, frontend_links_definition).generate
 
       expect(actual.schema).to eq(expected.schema)
+    end
+  end
+
+  context "message queue schema" do
+    let(:output_filename) { File.join("dist", "message_queue.json") }
+    let(:details) { build_schema('details.json', properties: build_string_properties('detail')) }
+    let(:publisher_schema_dir) { project_root.join("formats", format_name, "publisher") }
+
+    around do |example|
+      format_root = ENV["FORMAT_ROOT"]
+      FileUtils.mv("dist/message_queue.json", "dist/message_queue.json.bkp")
+
+      Dir.mktmpdir do |dir|
+        test_root = ENV["FORMAT_ROOT"] = "#{dir}"
+
+        ["format_foo", "format_bar"].each do |format|
+          FileUtils.mkdir_p("#{test_root}/#{format}/publisher")
+        end
+
+        File.write("#{test_root}/message_queue_base.json", "{}")
+        File.write("#{test_root}/definitions.json", "{}")
+        File.write("#{test_root}/base_links.json", "{}")
+
+        File.write("#{test_root}/format_foo/publisher/details.json", "{}")
+
+        example.run
+      end
+
+      FileUtils.mv("dist/message_queue.json.bkp", "dist/message_queue.json")
+      ENV["FORMAT_ROOT"] = format_root
+    end
+
+    it "correctly finds the details schemas" do
+      expect_any_instance_of(GovukContentSchemas::MessageQueueSchemaCombiner).to receive(:combine)
+        .with(
+          anything,
+          anything,
+          anything,
+          a_hash_including(
+            "format_foo" => an_instance_of(JSON::Schema),
+          )
+        ).and_return(double(schema: {}))
+
+      subject.invoke
     end
   end
 end
