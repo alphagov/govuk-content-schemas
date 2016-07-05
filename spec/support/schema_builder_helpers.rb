@@ -55,6 +55,38 @@ module SchemaBuilderHelpers
     }
   end
 
+  def build_message_queue_base_schema(*properties)
+    schema = build_schema(
+      "message_queue_base.json",
+      definitions: {
+        "formats" => {
+          "title" => "This is a placeholder, and filled when the schema is built",
+        },
+      },
+    )
+
+    schema.schema["allOf"] = [
+      {
+        "additionalProperties" => false,
+        "required" => properties,
+        "properties" => build_string_properties(*properties),
+      }
+    ]
+
+    schema
+  end
+
+  def build_base_links_schema(*link_names)
+    schema = build_schema(
+      "base_links.json",
+      properties: build_ref_properties(link_names, "base_links"),
+    )
+
+    schema.schema["additionalProperties"] = false
+
+    schema
+  end
+
   def slice_hash(hash, *keys)
     keys.each_with_object({}) { |k, h| h[k] = hash[k] if hash.has_key?(k) }
   end

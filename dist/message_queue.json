@@ -1,0 +1,4275 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "definitions": {
+    "absolute_path": {
+      "type": "string",
+      "pattern": "^/(([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})+(/([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)*)?$",
+      "description": "A path only. Query string and/or fragment are not allowed."
+    },
+    "absolute_fullpath": {
+      "type": "string",
+      "pattern": "^/(([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})+(/([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)*)?(\\?([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)?(#([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)?$",
+      "description": "A path with optional query string and/or fragment."
+    },
+    "analytics_identifier": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "A short identifier we send to Google Analytics for multi-valued fields. This means we avoid the truncated values we would get if we sent the path or slug of eg organisations."
+    },
+    "government": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "title",
+        "slug",
+        "current"
+      ],
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Name of the government that first published this document, eg '1970 to 1974 Conservative government'."
+        },
+        "slug": {
+          "type": "string",
+          "description": "Government slug, used for analytics, eg '1970-to-1974-conservative-government'."
+        },
+        "current": {
+          "type": "boolean",
+          "description": "Is the government that published this document still the current government."
+        }
+      }
+    },
+    "guid": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-[1-5][a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$"
+    },
+    "guid_list": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/definitions/guid"
+      }
+    },
+    "image": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "url"
+      ],
+      "properties": {
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "alt_text": {
+          "type": "string"
+        },
+        "caption": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    },
+    "political": {
+      "type": "boolean",
+      "description": "If the content is considered political in nature, reflecting views of the government it was published under."
+    },
+    "route": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "type"
+      ],
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "type": {
+          "enum": [
+            "prefix",
+            "exact"
+          ]
+        }
+      }
+    },
+    "redirect_route": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "type",
+        "destination"
+      ],
+      "properties": {
+        "path": {
+          "$ref": "#/definitions/absolute_path"
+        },
+        "type": {
+          "enum": [
+            "prefix",
+            "exact"
+          ]
+        },
+        "destination": {
+          "$ref": "#/definitions/absolute_fullpath"
+        },
+        "segments_mode": {
+          "enum": [
+            "preserve",
+            "ignore"
+          ],
+          "description": "For prefix redirects, preserve or ignore the rest of the fullpath. For exact, preserve or ignore the querystring."
+        }
+      }
+    },
+    "multiple_content_types": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "content_type",
+          "content"
+        ],
+        "properties": {
+          "content_type": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "asset_link": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "url",
+        "content_type"
+      ],
+      "properties": {
+        "content_id": {
+          "$ref": "#/definitions/guid"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "content_type": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "created_at": {
+          "format": "date-time"
+        },
+        "updated_at": {
+          "format": "date-time"
+        }
+      }
+    },
+    "change_history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "public_timestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "note": {
+            "type": "string",
+            "description": "A summary of the change"
+          },
+          "reason_for_change": {
+            "type": "string",
+            "description": "Why the change is being made. This is multiline text, and will be rendered inside <p> tags. Govspeak is not yet supported here."
+          }
+        },
+        "required": [
+          "public_timestamp",
+          "note"
+        ]
+      }
+    },
+    "withdrawn_notice": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "explanation": {
+          "type": "string"
+        },
+        "withdrawn_at": {
+          "format": "date-time"
+        }
+      }
+    },
+    "nation_applicability": {
+      "description": "An object specifying the applicability of a particular nation.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "label": {
+          "description": "The pretty-printed, translated label for this nation.",
+          "type": "string"
+        },
+        "alternative_url": {
+          "description": "An optional alternative URL to link to for more information on this content item pertaining to this nation.",
+          "type": "string"
+        },
+        "applicable": {
+          "description": "Whether the content applies to this nation or not.",
+          "type": "boolean"
+        }
+      }
+    },
+    "national_applicability": {
+      "description": "An object specifying the applicable nations for this content item. If it applies to all nations, it should be omitted.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "england": {
+          "$ref": "#/definitions/nation_applicability"
+        },
+        "northern_ireland": {
+          "$ref": "#/definitions/nation_applicability"
+        },
+        "scotland": {
+          "$ref": "#/definitions/nation_applicability"
+        },
+        "wales": {
+          "$ref": "#/definitions/nation_applicability"
+        }
+      }
+    },
+    "details": {
+      "definitions": {
+        "case_study": {
+          "$schema": "http://json-schema.org/draft-04/schema#",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "body",
+            "first_public_at"
+          ],
+          "properties": {
+            "body": {
+              "type": "string"
+            },
+            "image": {
+              "$ref": "#/definitions/image"
+            },
+            "format_display_type": {
+              "type": "string",
+              "enum": [
+                "case_study"
+              ]
+            },
+            "first_public_at": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "change_note": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "change_history": {
+              "$ref": "#/definitions/change_history"
+            },
+            "tags": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "browse_pages": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "topics": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "policies": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "withdrawn_notice": {
+              "$ref": "#/definitions/withdrawn_notice"
+            },
+            "archive_notice": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "explanation": {
+                  "type": "string"
+                },
+                "archived_at": {
+                  "format": "date-time"
+                }
+              }
+            },
+            "emphasised_organisations": {
+              "description": "The content ids of the organisations that should be displayed first in the list of organisations related to the item, these content ids must be present in the item organisation links hash.",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/guid"
+              }
+            }
+          }
+        },
+        "coming_soon": {
+          "$schema": "http://json-schema.org/draft-04/schema#",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "publish_time"
+          ],
+          "properties": {
+            "publish_time": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "public_updated_at": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "contact": {
+          "$schema": "http://json-schema.org/draft-04/schema#",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "title"
+          ],
+          "properties": {
+            "slug": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "quick_links": {
+              "type": "array",
+              "maxItems": 3,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "title",
+                  "url"
+                ],
+                "properties": {
+                  "title": {
+                    "type": "string"
+                  },
+                  "url": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "query_response_time": {
+              "type": [
+                "string",
+                "boolean"
+              ]
+            },
+            "contact_form_links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "title": {
+                    "type": "string"
+                  },
+                  "link": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "more_info_contact_form": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "contact_type": {
+              "type": "string"
+            },
+            "feature_on_homepage": {
+              "type": "boolean"
+            },
+            "email_addresses": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "title",
+                  "email"
+                ],
+                "properties": {
+                  "title": {
+                    "type": "string"
+                  },
+                  "email": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "more_info_email_address": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "phone_numbers": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "title",
+                  "number"
+                ],
+                "properties": {
+                  "title": {
+                    "type": "string"
+                  },
+                  "number": {
+                    "type": "string"
+                  },
+                  "textphone": {
+                    "type": "string"
+                  },
+                  "international_phone": {
+                    "type": "string"
+                  },
+                  "fax": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "open_hours": {
+                    "type": "string"
+                  },
+                  "best_time_to_call": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "more_info_phone_number": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "post_addresses": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "title",
+                  "street_address",
+                  "postal_code",
+                  "world_location"
+                ],
+                "properties": {
+                  "title": {
+                    "type": "string"
+                  },
+                  "street_address": {
+                    "type": "string"
+                  },
+                  "postal_code": {
+                    "type": "string"
+                  },
+                  "world_location": {
+                    "type": "string"
+                  },
+                  "locality": {
+                    "type": "string"
+                  },
+                  "region": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "more_info_post_address": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "language": {
+              "type": "string"
+            }
+          }
+        },
+        "detailed_guide": {
+          "$schema": "http://json-schema.org/draft-04/schema#",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "body",
+            "first_public_at",
+            "government",
+            "political"
+          ],
+          "properties": {
+            "body": {
+              "type": "string"
+            },
+            "related_mainstream_content": {
+              "description": "The ordered list of related and additional mainstream content item IDs. Use in conjunction with the (unordered) `related_mainstream_content` link.",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/guid"
+              }
+            },
+            "first_public_at": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "image": {
+              "$ref": "#/definitions/image"
+            },
+            "change_history": {
+              "$ref": "#/definitions/change_history"
+            },
+            "alternative_scotland_url": {
+              "type": "string"
+            },
+            "alternative_wales_url": {
+              "type": "string"
+            },
+            "alternative_nothern_ireland_url": {
+              "type": "string"
+            },
+            "tags": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "browse_pages": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "topics": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "policies": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "government": {
+              "$ref": "#/definitions/government"
+            },
+            "political": {
+              "$ref": "#/definitions/political"
+            },
+            "emphasised_organisations": {
+              "description": "The content ids of the organisations that should be displayed first in the list of organisations related to the item, these content ids must be present in the item organisation links hash.",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/guid"
+              }
+            },
+            "withdrawn_notice": {
+              "$ref": "#/definitions/withdrawn_notice"
+            },
+            "national_applicability": {
+              "$ref": "#/definitions/national_applicability"
+            }
+          }
+        },
+        "document_collection": {
+          "$schema": "http://json-schema.org/draft-04/schema#",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "first_public_at",
+            "collection_groups",
+            "government",
+            "political"
+          ],
+          "properties": {
+            "body": {
+              "type": "string"
+            },
+            "collection_groups": {
+              "description": "The ordered list of collection groups",
+              "type": "array",
+              "items": {
+                "description": "Collection group",
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "title",
+                  "documents"
+                ],
+                "properties": {
+                  "title": {
+                    "type": "string"
+                  },
+                  "body": {
+                    "type": "string"
+                  },
+                  "documents": {
+                    "description": "An ordered list of documents in this collection group",
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/definitions/guid"
+                    }
+                  }
+                }
+              }
+            },
+            "first_public_at": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "tags": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "browse_pages": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "topics": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "policies": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "government": {
+              "$ref": "#/definitions/government"
+            },
+            "political": {
+              "$ref": "#/definitions/political"
+            },
+            "change_history": {
+              "$ref": "#/definitions/change_history"
+            },
+            "emphasised_organisations": {
+              "description": "The content ids of the organisations that should be displayed first in the list of organisations related to the item, these content ids must be present in the item organisation links hash.",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/guid"
+              }
+            },
+            "withdrawn_notice": {
+              "$ref": "#/definitions/withdrawn_notice"
+            }
+          }
+        },
+        "email_alert_signup": {
+          "$schema": "http://json-schema.org/draft-04/schema#",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "subscriber_list",
+            "summary"
+          ],
+          "properties": {
+            "subscriber_list": {
+              "type": "object",
+              "description": "The attributes used to match subscriber lists in email-alert-api",
+              "minProperties": 1,
+              "properties": {
+                "tags": {
+                  "type": "object",
+                  "description": "DEPRECATED: The tags used to match subscribers lists",
+                  "additionalProperties": false,
+                  "properties": {
+                    "policies": {
+                      "type": "array"
+                    },
+                    "topics": {
+                      "type": "array"
+                    }
+                  }
+                },
+                "links": {
+                  "type": "object",
+                  "description": "The links used to match subscribers lists",
+                  "additionalProperties": false,
+                  "properties": {
+                    "countries": {
+                      "type": "array"
+                    }
+                  }
+                },
+                "document_type": {
+                  "type": "string",
+                  "description": "The document_type used to match subscribers lists"
+                }
+              }
+            },
+            "email_alert_type": {
+              "type": "string",
+              "enum": [
+                "topics",
+                "policies",
+                "countries"
+              ]
+            },
+            "summary": {
+              "type": "string"
+            },
+            "breadcrumbs": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "link",
+                  "title"
+                ],
+                "properties": {
+                  "link": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "title": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "govdelivery_title": {
+              "type": "string"
+            }
+          }
+        },
+        "fatality_notice": {
+          "$schema": "http://json-schema.org/draft-04/schema#",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "body",
+            "first_public_at",
+            "government",
+            "political"
+          ],
+          "properties": {
+            "body": {
+              "type": "string"
+            },
+            "first_public_at": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "emphasised_organisations": {
+              "description": "The content ids of the organisations that should be displayed first in the list of organisations related to the item, these content ids must be present in the item organisation links hash.",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/guid"
+              }
+            },
+            "government": {
+              "$ref": "#/definitions/government"
+            },
+            "political": {
+              "$ref": "#/definitions/political"
+            },
+            "change_history": {
+              "$ref": "#/definitions/change_history"
+            }
+          }
+        },
+        "financial_release": {
+          "$schema": "http://json-schema.org/draft-04/schema#",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "image",
+            "body",
+            "first_published_at"
+          ],
+          "properties": {
+            "header_legal_disclaimer": {
+              "$ref": "#/definitions/multiple_content_types"
+            },
+            "first_published_at": {
+              "type": "string",
+              "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+            },
+            "image": {
+              "$ref": "#/definitions/image"
+            },
+            "body": {
+              "$ref": "#/definitions/multiple_content_types"
+            },
+            "footer_legal_disclaimer": {
+              "$ref": "#/definitions/multiple_content_types"
+            }
+          }
+        },
+        "financial_releases_campaign": {
+          "$schema": "http://json-schema.org/draft-04/schema#",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "image",
+            "body"
+          ],
+          "properties": {
+            "image": {
+              "$ref": "#/definitions/image"
+            },
+            "header_legal_disclaimer": {
+              "$ref": "#/definitions/multiple_content_types"
+            },
+            "body": {
+              "$ref": "#/definitions/multiple_content_types"
+            },
+            "email_header": {
+              "$ref": "#/definitions/multiple_content_types"
+            },
+            "email_caption": {
+              "$ref": "#/definitions/multiple_content_types"
+            },
+            "footer_legal_disclaimer": {
+              "$ref": "#/definitions/multiple_content_types"
+            },
+            "pdf": {
+              "$ref": "#/definitions/asset_link"
+            }
+          }
+        },
+        "financial_releases_geoblocker": {
+          "$schema": "http://json-schema.org/draft-04/schema#",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "body"
+          ],
+          "properties": {
+            "body": {
+              "type": "string"
+            },
+            "footer_legal_disclaimer": {
+              "type": "string"
+            }
+          }
+        },
+        "financial_releases_index": {
+          "$schema": "http://json-schema.org/draft-04/schema#",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "image"
+          ],
+          "properties": {
+            "image": {
+              "$ref": "#/definitions/image"
+            }
+          }
+        },
+        "financial_releases_success": {
+          "$schema": "http://json-schema.org/draft-04/schema#",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "body"
+          ],
+          "properties": {
+            "header_legal_disclaimer": {
+              "description": "an html snippet with legal disclaimer for financial release to go above content.",
+              "type": "string"
+            },
+            "body": {
+              "type": "string"
+            },
+            "footer_legal_disclaimer": {
+              "description": "an html snippet with legal disclaimer for financial release to go above content.",
+              "type": "string"
+            }
+          }
+        },
+        "finder": {
+          "$schema": "http://json-schema.org/draft-04/schema#",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "document_noun",
+            "facets"
+          ],
+          "properties": {
+            "beta": {
+              "anyOf": [
+                {
+                  "type": "boolean"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "beta_message": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "document_noun": {
+              "type": "string",
+              "additionalProperties": false
+            },
+            "default_documents_per_page": {
+              "type": "integer"
+            },
+            "logo_path": {
+              "type": "string"
+            },
+            "default_order": {
+              "type": "string"
+            },
+            "filter": {
+              "description": "This is the fixed filter that scopes the finder",
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "document_type": {
+                  "type": "string"
+                },
+                "organisations": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "policies": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "reject": {
+              "description": "A fixed filter that rejects documents which match the conditions",
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "policies": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "facets": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "key",
+                  "filterable",
+                  "display_as_result_metadata"
+                ],
+                "properties": {
+                  "key": {
+                    "type": "string"
+                  },
+                  "filterable": {
+                    "type": "boolean"
+                  },
+                  "display_as_result_metadata": {
+                    "type": "boolean"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "preposition": {
+                    "type": "string"
+                  },
+                  "short_name": {
+                    "type": "string"
+                  },
+                  "type": {
+                    "type": "string"
+                  },
+                  "allowed_values": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "label",
+                        "value"
+                      ],
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "format_name": {
+              "type": "string"
+            },
+            "show_summaries": {
+              "type": "boolean"
+            },
+            "signup_link": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "summary": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        "finder_email_signup": {
+          "$schema": "http://json-schema.org/draft-04/schema#",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "email_signup_choice",
+            "email_filter_by",
+            "subscription_list_title_prefix"
+          ],
+          "properties": {
+            "beta": {
+              "type": "boolean"
+            },
+            "email_signup_choice": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "key",
+                  "radio_button_name",
+                  "topic_name",
+                  "prechecked"
+                ],
+                "properties": {
+                  "key": {
+                    "type": "string"
+                  },
+                  "radio_button_name": {
+                    "type": "string"
+                  },
+                  "topic_name": {
+                    "type": "string"
+                  },
+                  "prechecked": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            },
+            "email_filter_by": {
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "subscription_list_title_prefix": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "plural": {
+                      "type": "string"
+                    },
+                    "singular": {
+                      "type": "string"
+                    }
+                  }
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        "hmrc_manual": {
+          "$schema": "http://json-schema.org/draft-04/schema#",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "child_section_groups"
+          ],
+          "properties": {
+            "body": {
+              "type": "string"
+            },
+            "child_section_groups": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "child_sections"
+                ],
+                "properties": {
+                  "title": {
+                    "type": "string"
+                  },
+                  "child_sections": {
+                    "type": "array",
+                    "items": {
+                      "required": [
+                        "section_id",
+                        "title",
+                        "description",
+                        "base_path"
+                      ],
+                      "additionalProperties": false,
+                      "type": "object",
+                      "properties": {
+                        "section_id": {
+                          "type": "string"
+                        },
+                        "title": {
+                          "type": "string"
+                        },
+                        "description": {
+                          "type": "string"
+                        },
+                        "base_path": {
+                          "$ref": "#/definitions/absolute_path"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "change_notes": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "section_id",
+                  "base_path",
+                  "title",
+                  "change_note",
+                  "published_at"
+                ],
+                "properties": {
+                  "section_id": {
+                    "type": "string"
+                  },
+                  "base_path": {
+                    "$ref": "#/definitions/absolute_path"
+                  },
+                  "title": {
+                    "type": "string"
+                  },
+                  "change_note": {
+                    "type": "string"
+                  },
+                  "published_at": {
+                    "type": "string",
+                    "format": "date-time"
+                  }
+                }
+              }
+            },
+            "organisations": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "title",
+                  "abbreviation",
+                  "web_url"
+                ],
+                "properties": {
+                  "title": {
+                    "type": "string"
+                  },
+                  "abbreviation": {
+                    "type": "string"
+                  },
+                  "web_url": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "tags": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "topics": {
+                  "description": "Slugs of the Manual's topics. An example of a topic slug is 'business-tax/vat'.",
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "hmrc_manual_section": {
+          "$schema": "http://json-schema.org/draft-04/schema#",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "section_id",
+            "manual"
+          ],
+          "properties": {
+            "section_id": {
+              "type": "string"
+            },
+            "breadcrumbs": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "base_path",
+                  "section_id"
+                ],
+                "properties": {
+                  "base_path": {
+                    "$ref": "#/definitions/absolute_path"
+                  },
+                  "section_id": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "body": {
+              "type": "string"
+            },
+            "manual": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "base_path"
+              ],
+              "properties": {
+                "base_path": {
+                  "$ref": "#/definitions/absolute_path"
+                }
+              }
+            },
+            "organisations": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "title",
+                  "abbreviation",
+                  "web_url"
+                ],
+                "properties": {
+                  "title": {
+                    "type": "string"
+                  },
+                  "abbreviation": {
+                    "type": "string"
+                  },
+                  "web_url": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "child_section_groups": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "child_sections"
+                ],
+                "properties": {
+                  "title": {
+                    "type": "string"
+                  },
+                  "child_sections": {
+                    "type": "array",
+                    "items": {
+                      "required": [
+                        "section_id",
+                        "title",
+                        "description",
+                        "base_path"
+                      ],
+                      "additionalProperties": false,
+                      "type": "object",
+                      "properties": {
+                        "section_id": {
+                          "type": "string"
+                        },
+                        "title": {
+                          "type": "string"
+                        },
+                        "description": {
+                          "type": "string"
+                        },
+                        "base_path": {
+                          "$ref": "#/definitions/absolute_path"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "html_publication": {
+          "$schema": "http://json-schema.org/draft-04/schema#",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "body",
+            "headings",
+            "public_timestamp",
+            "first_published_version"
+          ],
+          "properties": {
+            "body": {
+              "type": "string"
+            },
+            "headings": {
+              "type": "string"
+            },
+            "public_timestamp": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "first_published_version": {
+              "type": "boolean"
+            }
+          }
+        },
+        "mainstream_browse_page": {
+          "$schema": "http://json-schema.org/draft-04/schema#",
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "internal_name": {
+              "type": "string",
+              "description": "An internal name for admin interfaces. Includes parent."
+            },
+            "second_level_ordering": {
+              "enum": [
+                "alphabetical",
+                "curated"
+              ]
+            },
+            "groups": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "name",
+                  "contents"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "contents": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/definitions/absolute_path"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "manual": {
+          "$schema": "http://json-schema.org/draft-04/schema#",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "body"
+          ],
+          "properties": {
+            "body": {
+              "$ref": "#/definitions/multiple_content_types"
+            },
+            "child_section_groups": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "title",
+                  "child_sections"
+                ],
+                "properties": {
+                  "title": {
+                    "type": "string"
+                  },
+                  "child_sections": {
+                    "type": "array",
+                    "items": {
+                      "required": [
+                        "title",
+                        "description",
+                        "base_path"
+                      ],
+                      "additionalProperties": false,
+                      "type": "object",
+                      "properties": {
+                        "title": {
+                          "type": "string"
+                        },
+                        "description": {
+                          "type": "string"
+                        },
+                        "base_path": {
+                          "$ref": "#/definitions/absolute_path"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "change_notes": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "base_path",
+                  "title",
+                  "change_note",
+                  "published_at"
+                ],
+                "properties": {
+                  "base_path": {
+                    "$ref": "#/definitions/absolute_path"
+                  },
+                  "title": {
+                    "type": "string"
+                  },
+                  "change_note": {
+                    "type": "string"
+                  },
+                  "published_at": {
+                    "type": "string",
+                    "format": "date-time"
+                  }
+                }
+              }
+            },
+            "organisations": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "title",
+                  "abbreviation",
+                  "web_url"
+                ],
+                "properties": {
+                  "title": {
+                    "type": "string"
+                  },
+                  "abbreviation": {
+                    "type": "string"
+                  },
+                  "web_url": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "manual_section": {
+          "$schema": "http://json-schema.org/draft-04/schema#",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "body",
+            "manual",
+            "organisations"
+          ],
+          "properties": {
+            "body": {
+              "$ref": "#/definitions/multiple_content_types"
+            },
+            "attachments": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/asset_link"
+              }
+            },
+            "manual": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "base_path"
+              ],
+              "properties": {
+                "base_path": {
+                  "$ref": "#/definitions/absolute_path"
+                }
+              }
+            },
+            "organisations": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "title",
+                  "abbreviation",
+                  "web_url"
+                ],
+                "properties": {
+                  "title": {
+                    "type": "string"
+                  },
+                  "abbreviation": {
+                    "type": "string"
+                  },
+                  "web_url": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "placeholder": {
+          "$schema": "http://json-schema.org/draft-04/schema#",
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "analytics_identifier": {
+              "$ref": "#/definitions/analytics_identifier"
+            },
+            "change_note": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "start_date": {
+              "type": "string",
+              "format": "date-time",
+              "description": "Used for topical events, so that related documents can get the date. Remove when topical events are migrated."
+            },
+            "end_date": {
+              "type": "string",
+              "format": "date-time",
+              "description": "Used for topical events, so that related documents can get the date. Remove when topical events are migrated."
+            },
+            "brand": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "Used for organisations, to allow us to publish branding / logo information. Remove when organisations are migrated."
+            },
+            "logo": {
+              "type": "object",
+              "properties": {
+                "formatted_title": {
+                  "type": "string",
+                  "description": "Used for organisations, to allow us to publish branding / logo information. Remove when organisations are migrated."
+                },
+                "crest": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "enum": [
+                    "bis",
+                    "eo",
+                    "hmrc",
+                    "ho",
+                    "mod",
+                    "portcullis",
+                    "single-identity",
+                    "so",
+                    "ukaea",
+                    "wales",
+                    null
+                  ],
+                  "description": "Used for organisations, to allow us to publish branding / logo information. Remove when organisations are migrated."
+                }
+              }
+            },
+            "tags": {
+              "type": "object",
+              "properties": {
+                "browse_pages": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "primary_topic": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "additional_topics": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "topics": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "policy": {
+          "$schema": "http://json-schema.org/draft-04/schema#",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "document_noun",
+            "facets"
+          ],
+          "properties": {
+            "internal_name": {
+              "type": "string",
+              "description": "An internal name for admin interfaces. Includes parent."
+            },
+            "document_noun": {
+              "type": "string"
+            },
+            "default_documents_per_page": {
+              "type": "integer"
+            },
+            "email_signup_enabled": {
+              "type": "boolean"
+            },
+            "default_order": {
+              "type": "string"
+            },
+            "emphasised_organisations": {
+              "description": "The content ids of the organisations that should be displayed first in the list of organisations related to the item, these content ids must be present in the item organisation links hash.",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/guid"
+              }
+            },
+            "filter": {
+              "type": "object",
+              "additionalProperties": true
+            },
+            "facets": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": true,
+                "required": [
+                  "key",
+                  "filterable",
+                  "display_as_result_metadata"
+                ],
+                "properties": {
+                  "key": {
+                    "type": "string"
+                  },
+                  "filterable": {
+                    "type": "boolean"
+                  },
+                  "display_as_result_metadata": {
+                    "type": "boolean"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "type": {
+                    "type": "string"
+                  },
+                  "allowed_values": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "label",
+                        "value"
+                      ],
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "human_readable_finder_format": {
+              "type": "string"
+            },
+            "show_summaries": {
+              "type": "boolean"
+            },
+            "signup_link": {
+              "type": "string"
+            },
+            "summary": {
+              "type": "string"
+            },
+            "nation_applicability": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "applies_to",
+                "alternative_policies"
+              ],
+              "properties": {
+                "applies_to": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "alternative_policies": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "nation",
+                      "alt_policy_url"
+                    ],
+                    "properties": {
+                      "nation": {
+                        "type": "string"
+                      },
+                      "alt_policy_url": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "publication": {
+          "$schema": "http://json-schema.org/draft-04/schema#",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "body",
+            "documents",
+            "first_public_at",
+            "government",
+            "political"
+          ],
+          "properties": {
+            "body": {
+              "type": "string"
+            },
+            "documents": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "first_public_at": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "change_history": {
+              "$ref": "#/definitions/change_history"
+            },
+            "emphasised_organisations": {
+              "description": "The content ids of the organisations that should be displayed first in the list of organisations related to the item, these content ids must be present in the item organisation links hash.",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/guid"
+              }
+            },
+            "tags": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "browse_pages": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "topics": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "policies": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "government": {
+              "$ref": "#/definitions/government"
+            },
+            "political": {
+              "$ref": "#/definitions/political"
+            },
+            "withdrawn_notice": {
+              "$ref": "#/definitions/withdrawn_notice"
+            },
+            "national_applicability": {
+              "$ref": "#/definitions/national_applicability"
+            }
+          }
+        },
+        "service_manual_guide": {
+          "$schema": "http://json-schema.org/draft-04/schema#",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "body"
+          ],
+          "properties": {
+            "summary": {
+              "type": "string",
+              "description": "A single line short summary that does not contain formatting."
+            },
+            "body": {
+              "type": "string"
+            },
+            "withdrawn_notice": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "explanation": {
+                  "type": "string"
+                },
+                "withdrawn_at": {
+                  "format": "date-time"
+                }
+              }
+            },
+            "header_links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "$ref": "#/definitions/anchor_href"
+                  }
+                },
+                "required": [
+                  "title",
+                  "href"
+                ]
+              }
+            },
+            "change_history": {
+              "$ref": "#/definitions/change_history"
+            }
+          },
+          "definitions": {
+            "anchor_href": {
+              "type": "string",
+              "pattern": "^#.+$",
+              "description": "Anchor links for navigation within the same page. Format: '#anchor-link-id'"
+            }
+          }
+        },
+        "service_manual_service_standard": {
+          "$schema": "http://json-schema.org/draft-04/schema#",
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "points": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string",
+                    "description": "The title of the point. It matches the title of the relevant page."
+                  },
+                  "summary": {
+                    "type": "string",
+                    "description": "The summary of the point. It matches the summary on the relevant page."
+                  },
+                  "base_path": {
+                    "$ref": "#/definitions/absolute_path"
+                  }
+                },
+                "required": [
+                  "title",
+                  "summary",
+                  "base_path"
+                ]
+              }
+            }
+          }
+        },
+        "service_manual_topic": {
+          "$schema": "http://json-schema.org/draft-04/schema#",
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "visually_collapsed": {
+              "type": "boolean",
+              "description": "A flag set by a content designer when they want the sections of a topic to be collapsed into an accordion. This will likely be used when there are many items in the topic."
+            },
+            "groups": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "name",
+                  "contents"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "contents": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/definitions/absolute_path"
+                    }
+                  },
+                  "content_ids": {
+                    "$ref": "#/definitions/guid_list"
+                  }
+                }
+              }
+            },
+            "withdrawn_notice": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "explanation": {
+                  "type": "string"
+                },
+                "withdrawn_at": {
+                  "format": "date-time"
+                }
+              }
+            }
+          }
+        },
+        "specialist_document": {
+          "$schema": "http://json-schema.org/draft-04/schema#",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "body",
+            "metadata",
+            "change_history"
+          ],
+          "properties": {
+            "body": {
+              "$ref": "#/definitions/multiple_content_types"
+            },
+            "attachments": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/asset_link"
+              }
+            },
+            "metadata": {
+              "$ref": "#/definitions/any_metadata"
+            },
+            "max_cache_time": {
+              "description": "The maximum length of time the content should be cached, in seconds.",
+              "type": "integer"
+            },
+            "headers": {
+              "$ref": "#/definitions/nested_headers"
+            },
+            "change_history": {
+              "$ref": "#/definitions/change_history"
+            }
+          },
+          "definitions": {
+            "any_metadata": {
+              "type": "object",
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/aaib_report_metadata"
+                },
+                {
+                  "$ref": "#/definitions/asylum_support_decision_metadata"
+                },
+                {
+                  "$ref": "#/definitions/cma_case_metadata"
+                },
+                {
+                  "$ref": "#/definitions/countryside_stewardship_grant_metadata"
+                },
+                {
+                  "$ref": "#/definitions/drug_safety_update_metadata"
+                },
+                {
+                  "$ref": "#/definitions/employment_appeal_tribunal_decision_metadata"
+                },
+                {
+                  "$ref": "#/definitions/employment_tribunal_decision_metadata"
+                },
+                {
+                  "$ref": "#/definitions/european_structural_investment_fund_metadata"
+                },
+                {
+                  "$ref": "#/definitions/international_development_fund_metadata"
+                },
+                {
+                  "$ref": "#/definitions/maib_report_metadata"
+                },
+                {
+                  "$ref": "#/definitions/medical_safety_alert_metadata"
+                },
+                {
+                  "$ref": "#/definitions/raib_report_metadata"
+                },
+                {
+                  "$ref": "#/definitions/tax_tribunal_decision_metadata"
+                },
+                {
+                  "$ref": "#/definitions/utaac_decision_metadata"
+                },
+                {
+                  "$ref": "#/definitions/vehicle_recalls_and_faults_alert_metadata"
+                }
+              ]
+            },
+            "nested_headers": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "text",
+                  "level",
+                  "id"
+                ],
+                "properties": {
+                  "text": {
+                    "type": "string"
+                  },
+                  "level": {
+                    "type": "integer"
+                  },
+                  "id": {
+                    "type": "string"
+                  },
+                  "headers": {
+                    "$ref": "#/definitions/nested_headers"
+                  }
+                }
+              }
+            },
+            "aaib_report_metadata": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "bulk_published": {
+                  "type": "boolean"
+                },
+                "document_type": {
+                  "type": "string",
+                  "enum": [
+                    "aaib_report"
+                  ]
+                },
+                "aircraft_category": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "commercial-fixed-wing",
+                      "commercial-rotorcraft",
+                      "general-aviation-fixed-wing",
+                      "general-aviation-rotorcraft",
+                      "sport-aviation-and-balloons"
+                    ]
+                  }
+                },
+                "report_type": {
+                  "type": "string",
+                  "enum": [
+                    "annual-safety-report",
+                    "correspondence-investigation",
+                    "field-investigation",
+                    "pre-1997-monthly-report",
+                    "foreign-report",
+                    "formal-report",
+                    "special-bulletin",
+                    "safety-study"
+                  ]
+                },
+                "date_of_occurrence": {
+                  "type": "string",
+                  "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+                },
+                "aircraft_type": {
+                  "type": "string"
+                },
+                "location": {
+                  "type": "string"
+                },
+                "registration": {
+                  "type": "string"
+                }
+              }
+            },
+            "asylum_support_decision_metadata": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "bulk_published": {
+                  "type": "boolean"
+                },
+                "document_type": {
+                  "type": "string",
+                  "enum": [
+                    "asylum_support_decision"
+                  ]
+                },
+                "tribunal_decision_judges": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "tribunal_decision_category": {
+                  "type": "string"
+                },
+                "tribunal_decision_sub_category": {
+                  "type": "string"
+                },
+                "tribunal_decision_landmark": {
+                  "type": "string",
+                  "enum": [
+                    "not-landmark",
+                    "landmark"
+                  ]
+                },
+                "tribunal_decision_reference_number": {
+                  "type": "string"
+                },
+                "tribunal_decision_decision_date": {
+                  "type": "string",
+                  "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+                },
+                "hidden_indexable_content": {
+                  "type": "string"
+                }
+              }
+            },
+            "cma_case_metadata": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "bulk_published": {
+                  "type": "boolean"
+                },
+                "document_type": {
+                  "type": "string",
+                  "enum": [
+                    "cma_case"
+                  ]
+                },
+                "case_type": {
+                  "type": "string",
+                  "enum": [
+                    "ca98-and-civil-cartels",
+                    "criminal-cartels",
+                    "markets",
+                    "mergers",
+                    "consumer-enforcement",
+                    "regulatory-references-and-appeals",
+                    "review-of-orders-and-undertakings"
+                  ]
+                },
+                "case_state": {
+                  "type": "string",
+                  "enum": [
+                    "open",
+                    "closed"
+                  ]
+                },
+                "market_sector": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "aerospace",
+                      "agriculture-environment-and-natural-resources",
+                      "building-and-construction",
+                      "chemicals",
+                      "clothing-footwear-and-fashion",
+                      "communications",
+                      "defence",
+                      "distribution-and-service-industries",
+                      "electronics-industry",
+                      "energy",
+                      "engineering",
+                      "financial-services",
+                      "fire-police-and-security",
+                      "food-manufacturing",
+                      "giftware-jewellery-and-tableware",
+                      "healthcare-and-medical-equipment",
+                      "household-goods-furniture-and-furnishings",
+                      "mineral-extraction-mining-and-quarrying",
+                      "motor-industry",
+                      "oil-and-gas-refining-and-petrochemicals",
+                      "paper-printing-and-packaging",
+                      "pharmaceuticals",
+                      "public-markets",
+                      "recreation-and-leisure",
+                      "retail-and-wholesale",
+                      "telecommunications",
+                      "textiles",
+                      "transport",
+                      "utilities"
+                    ]
+                  }
+                },
+                "outcome_type": {
+                  "type": "string",
+                  "enum": [
+                    "ca98-no-grounds-for-action-non-infringement",
+                    "ca98-infringement-chapter-i",
+                    "ca98-infringement-chapter-ii",
+                    "ca98-administrative-priorities",
+                    "ca98-commitment",
+                    "criminal-cartels-verdict",
+                    "markets-phase-1-no-enforcement-action",
+                    "markets-phase-1-undertakings-in-lieu-of-reference",
+                    "markets-phase-1-referral",
+                    "mergers-phase-1-clearance",
+                    "mergers-phase-1-clearance-with-undertakings-in-lieu",
+                    "mergers-phase-1-referral",
+                    "mergers-phase-1-found-not-to-qualify",
+                    "mergers-phase-1-public-interest-interventions",
+                    "markets-phase-2-clearance-no-adverse-effect-on-competition",
+                    "markets-phase-2-adverse-effect-on-competition-leading-to-remedies",
+                    "markets-phase-2-decision-to-dispense-with-procedural-obligations",
+                    "mergers-phase-2-clearance",
+                    "mergers-phase-2-clearance-with-remedies",
+                    "mergers-phase-2-prohibition",
+                    "mergers-phase-2-cancellation",
+                    "consumer-enforcement-no-action",
+                    "consumer-enforcement-court-order",
+                    "consumer-enforcement-undertakings",
+                    "consumer-enforcement-changes-to-business-practices-agreed",
+                    "regulatory-references-and-appeals-final-determination"
+                  ]
+                },
+                "opened_date": {
+                  "type": "string",
+                  "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+                },
+                "closed_date": {
+                  "type": "string",
+                  "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+                }
+              }
+            },
+            "countryside_stewardship_grant_metadata": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "bulk_published": {
+                  "type": "boolean"
+                },
+                "document_type": {
+                  "type": "string",
+                  "enum": [
+                    "countryside_stewardship_grant"
+                  ]
+                },
+                "grant_type": {
+                  "type": "string",
+                  "enum": [
+                    "option",
+                    "capital-item",
+                    "supplement"
+                  ]
+                },
+                "land_use": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "arable-land",
+                      "boundaries",
+                      "coast",
+                      "educational-access",
+                      "flood-risk",
+                      "grassland",
+                      "historic-environment",
+                      "livestock-management",
+                      "organic-land",
+                      "priority-habitats",
+                      "trees-non-woodland",
+                      "uplands",
+                      "vegetation-control",
+                      "water-quality",
+                      "wildlife-package",
+                      "woodland"
+                    ]
+                  }
+                },
+                "tiers_or_standalone_items": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "higher-tier",
+                      "mid-tier",
+                      "standalone-capital-items"
+                    ]
+                  }
+                },
+                "funding_amount": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "up-to-100",
+                      "101-to-200",
+                      "201-to-300",
+                      "301-to-400",
+                      "401-to-500",
+                      "more-than-500",
+                      "up-to-50-actual-costs",
+                      "more-than-50-actual-costs"
+                    ]
+                  }
+                }
+              }
+            },
+            "drug_safety_update_metadata": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "bulk_published": {
+                  "type": "boolean"
+                },
+                "document_type": {
+                  "type": "string",
+                  "enum": [
+                    "drug_safety_update"
+                  ]
+                },
+                "therapeutic_area": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "anaesthesia-intensive-care",
+                      "cancer",
+                      "cardiovascular-disease-lipidology",
+                      "dentistry",
+                      "dermatology",
+                      "ear-nose-throat",
+                      "endocrinology-diabetology-metabolism",
+                      "gi-hepatology-pancreatic-disorders",
+                      "haematology",
+                      "immunology-vaccination",
+                      "immunosuppression-transplantation",
+                      "infectious-disease",
+                      "neurology",
+                      "nutrition-dietetics",
+                      "obstetrics-gynaecology-fertility",
+                      "ophthalmology",
+                      "paediatrics-neonatology",
+                      "pain-management-palliation",
+                      "psychiatry",
+                      "radiology-imaging",
+                      "respiratory-disease-allergy",
+                      "rheumatology",
+                      "urology-nephrology"
+                    ]
+                  }
+                },
+                "first_published_at": {
+                  "type": "string",
+                  "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+                }
+              }
+            },
+            "employment_appeal_tribunal_decision_metadata": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "bulk_published": {
+                  "type": "boolean"
+                },
+                "document_type": {
+                  "type": "string",
+                  "enum": [
+                    "employment_appeal_tribunal_decision"
+                  ]
+                },
+                "hidden_indexable_content": {
+                  "type": "string"
+                },
+                "tribunal_decision_categories": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "tribunal_decision_sub_categories": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "tribunal_decision_landmark": {
+                  "type": "string",
+                  "enum": [
+                    "landmark",
+                    "not-landmark"
+                  ]
+                },
+                "tribunal_decision_decision_date": {
+                  "type": "string",
+                  "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+                }
+              }
+            },
+            "employment_tribunal_decision_metadata": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "bulk_published": {
+                  "type": "boolean"
+                },
+                "document_type": {
+                  "type": "string",
+                  "enum": [
+                    "employment_tribunal_decision"
+                  ]
+                },
+                "tribunal_decision_country": {
+                  "type": "string",
+                  "enum": [
+                    "england-and-wales",
+                    "scotland"
+                  ]
+                },
+                "tribunal_decision_categories": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "tribunal_decision_decision_date": {
+                  "type": "string",
+                  "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+                },
+                "hidden_indexable_content": {
+                  "type": "string"
+                }
+              }
+            },
+            "european_structural_investment_fund_metadata": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "bulk_published": {
+                  "type": "boolean"
+                },
+                "document_type": {
+                  "type": "string",
+                  "enum": [
+                    "esi_fund"
+                  ]
+                },
+                "fund_state": {
+                  "type": "string",
+                  "enum": [
+                    "open",
+                    "closed"
+                  ]
+                },
+                "fund_type": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "access-to-work",
+                      "business-support",
+                      "climate-change",
+                      "environment",
+                      "it-and-broadband",
+                      "learning-and-skills",
+                      "low-carbon",
+                      "renewable-energy",
+                      "research-and-innovation",
+                      "social-inclusion",
+                      "transport",
+                      "techincal-assistance",
+                      "tourism"
+                    ]
+                  }
+                },
+                "location": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "north-east",
+                      "north-west",
+                      "yorkshire-and-humber",
+                      "east-midlands",
+                      "west-midlands",
+                      "east-of-england",
+                      "south-east",
+                      "south-west",
+                      "london"
+                    ]
+                  }
+                },
+                "funding_source": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "european-social-fund",
+                      "european-regional-development-fund",
+                      "european-agricoltural-fund-for-rural"
+                    ]
+                  }
+                },
+                "closing_date": {
+                  "type": "string",
+                  "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+                }
+              }
+            },
+            "international_development_fund_metadata": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "bulk_published": {
+                  "type": "boolean"
+                },
+                "document_type": {
+                  "type": "string",
+                  "enum": [
+                    "international_development_fund"
+                  ]
+                },
+                "fund_state": {
+                  "type": "string",
+                  "enum": [
+                    "open",
+                    "closed"
+                  ]
+                },
+                "location": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "afghanistan",
+                      "bangladesh",
+                      "burma",
+                      "democratic-republic-of-congo",
+                      "ethiopia",
+                      "ghana",
+                      "india",
+                      "kenya",
+                      "kyrgyzstan",
+                      "liberia",
+                      "malawi",
+                      "mozambique",
+                      "nepal",
+                      "nigeria",
+                      "the-occupied-palestinian-territories",
+                      "pakistan",
+                      "rwanda",
+                      "sierra-leone",
+                      "somalia",
+                      "south-africa",
+                      "sudan",
+                      "south-sudan",
+                      "tajikistan",
+                      "tanzania",
+                      "uganda",
+                      "yemen",
+                      "zambia",
+                      "zimbabwe"
+                    ]
+                  }
+                },
+                "development_sector": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "agriculture",
+                      "climate-change",
+                      "disabilities",
+                      "education",
+                      "empowerment-and-accountability",
+                      "environment",
+                      "girls-and-women",
+                      "health",
+                      "humanitarian-emergencies-disasters",
+                      "livelihoods",
+                      "peace-and-access-to-justice",
+                      "private-sector-business",
+                      "technology",
+                      "trade",
+                      "water-and-sanitation"
+                    ]
+                  }
+                },
+                "eligible_entities": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "non-governmental-organisations",
+                      "uk-based-non-profit-organisations",
+                      "uk-based-small-and-diaspora-organisations",
+                      "companies",
+                      "local-government",
+                      "educational-institutions",
+                      "individuals",
+                      "humanitarian-relief-organisations"
+                    ]
+                  }
+                },
+                "value_of_funding": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "up-to-100000",
+                      "100001-500000",
+                      "500001-to-1000000",
+                      "more-than-1000000"
+                    ]
+                  }
+                }
+              }
+            },
+            "maib_report_metadata": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "bulk_published": {
+                  "type": "boolean"
+                },
+                "document_type": {
+                  "type": "string",
+                  "enum": [
+                    "maib_report"
+                  ]
+                },
+                "vessel_type": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "merchant-vessel-100-gross-tons-or-over",
+                      "merchant-vessel-under-100-gross-tons",
+                      "fishing-vessel",
+                      "recreational-craft-sail",
+                      "recreational-craft-power"
+                    ]
+                  }
+                },
+                "report_type": {
+                  "type": "string",
+                  "enum": [
+                    "investigation-report",
+                    "safety-bulletin",
+                    "completed-preliminary-examination",
+                    "overseas-report",
+                    "discontinued-investigation"
+                  ]
+                },
+                "date_of_occurrence": {
+                  "type": "string",
+                  "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+                }
+              }
+            },
+            "medical_safety_alert_metadata": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "bulk_published": {
+                  "type": "boolean"
+                },
+                "document_type": {
+                  "type": "string",
+                  "enum": [
+                    "medical_safety_alert"
+                  ]
+                },
+                "alert_type": {
+                  "type": "string",
+                  "enum": [
+                    "drugs",
+                    "devices",
+                    "field-safety-notices",
+                    "company-led-drugs"
+                  ]
+                },
+                "medical_specialism": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "anaesthetics",
+                      "cardiology",
+                      "care-home-staff",
+                      "cosmetic-surgery",
+                      "critical-care",
+                      "dentistry",
+                      "general-practice",
+                      "general-surgery",
+                      "haematology-oncology",
+                      "infection-prevention",
+                      "obstetrics-gynaecology",
+                      "ophthalmology",
+                      "orthopaedics",
+                      "paediatrics",
+                      "pathology",
+                      "pharmacy",
+                      "physiotherapy-occupational-therapy",
+                      "radiology",
+                      "renal-medicine",
+                      "theatre-practitioners",
+                      "urology",
+                      "vascular-cardiac-surgery"
+                    ]
+                  }
+                },
+                "issued_date": {
+                  "type": "string",
+                  "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+                }
+              }
+            },
+            "raib_report_metadata": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "bulk_published": {
+                  "type": "boolean"
+                },
+                "document_type": {
+                  "type": "string",
+                  "enum": [
+                    "raib_report"
+                  ]
+                },
+                "railway_type": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "heavy-rail",
+                      "light-rail",
+                      "metros",
+                      "heritage-railways"
+                    ]
+                  }
+                },
+                "report_type": {
+                  "type": "string",
+                  "enum": [
+                    "investigation-report",
+                    "bulletin",
+                    "interim-report",
+                    "discontinuation-report"
+                  ]
+                },
+                "date_of_occurrence": {
+                  "type": "string",
+                  "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+                }
+              }
+            },
+            "tax_tribunal_decision_metadata": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "bulk_published": {
+                  "type": "boolean"
+                },
+                "document_type": {
+                  "type": "string",
+                  "enum": [
+                    "tax_tribunal_decision"
+                  ]
+                },
+                "tribunal_decision_category": {
+                  "type": "string",
+                  "enum": [
+                    "banking",
+                    "charity",
+                    "financial-services",
+                    "land-registration",
+                    "pensions",
+                    "tax"
+                  ]
+                },
+                "tribunal_decision_decision_date": {
+                  "type": "string",
+                  "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+                },
+                "hidden_indexable_content": {
+                  "type": "string"
+                }
+              }
+            },
+            "utaac_decision_metadata": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "bulk_published": {
+                  "type": "boolean"
+                },
+                "document_type": {
+                  "type": "string",
+                  "enum": [
+                    "utaac_decision"
+                  ]
+                },
+                "tribunal_decision_judges": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "tribunal_decision_categories": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "tribunal_decision_sub_categories": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "tribunal_decision_decision_date": {
+                  "type": "string",
+                  "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+                },
+                "hidden_indexable_content": {
+                  "type": "string"
+                }
+              }
+            },
+            "vehicle_recalls_and_faults_alert_metadata": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "bulk_published": {
+                  "type": "boolean"
+                },
+                "document_type": {
+                  "type": "string",
+                  "enum": [
+                    "vehicle_recalls_and_faults_alert"
+                  ]
+                },
+                "fault_type": {
+                  "type": "string",
+                  "enum": [
+                    "recall",
+                    "non_urgent_fault"
+                  ]
+                },
+                "faulty_item_type": {
+                  "type": "string",
+                  "enum": [
+                    "vehicle",
+                    "baby-seat",
+                    "tyres",
+                    "parts",
+                    "agricultural-equipment",
+                    "other-accessories"
+                  ]
+                },
+                "manufacturer": {
+                  "type": "string",
+                  "enum": [
+                    "alfa-romeo",
+                    "audi",
+                    "balco",
+                    "bmw",
+                    "bridgestone",
+                    "britax",
+                    "citroen",
+                    "ferrari",
+                    "mccormick-tractors-ltd",
+                    "michelin",
+                    "mitas-tyres-ltd",
+                    "mothercare",
+                    "nim-engineering-ltd",
+                    "other-manufacturer"
+                  ]
+                },
+                "faulty_item_model": {
+                  "type": "string"
+                },
+                "serial_number": {
+                  "type": "string"
+                },
+                "alert_issue_date": {
+                  "type": "string",
+                  "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+                },
+                "build_start_date": {
+                  "type": "string",
+                  "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+                },
+                "build_end_date": {
+                  "type": "string",
+                  "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+                }
+              }
+            }
+          }
+        },
+        "statistics_announcement": {
+          "$schema": "http://json-schema.org/draft-04/schema#",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "display_date",
+            "state",
+            "format_sub_type"
+          ],
+          "properties": {
+            "cancellation_reason": {
+              "type": "string"
+            },
+            "cancelled_at": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "latest_change_note": {
+              "type": "string"
+            },
+            "previous_display_date": {
+              "type": "string"
+            },
+            "display_date": {
+              "type": "string"
+            },
+            "state": {
+              "type": "string",
+              "enum": [
+                "cancelled",
+                "confirmed",
+                "provisional"
+              ]
+            },
+            "format_sub_type": {
+              "type": "string",
+              "enum": [
+                "national",
+                "official"
+              ]
+            }
+          }
+        },
+        "take_part": {
+          "$schema": "http://json-schema.org/draft-04/schema#",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "body",
+            "image"
+          ],
+          "properties": {
+            "body": {
+              "type": "string"
+            },
+            "image": {
+              "$ref": "#/definitions/image"
+            }
+          }
+        },
+        "taxon": {
+          "$schema": "http://json-schema.org/draft-04/schema#",
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "internal_name": {
+              "type": "string",
+              "description": "An internal name for admin interfaces. Includes parent."
+            }
+          }
+        },
+        "topic": {
+          "$schema": "http://json-schema.org/draft-04/schema#",
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "internal_name": {
+              "type": "string",
+              "description": "An internal name for admin interfaces. Includes parent."
+            },
+            "beta": {
+              "anyOf": [
+                {
+                  "type": "boolean"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "groups": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "name",
+                  "contents"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "contents": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/definitions/absolute_path"
+                    }
+                  },
+                  "content_ids": {
+                    "$ref": "#/definitions/guid_list"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "topical_event_about_page": {
+          "$schema": "http://json-schema.org/draft-04/schema#",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "read_more",
+            "body"
+          ],
+          "properties": {
+            "read_more": {
+              "type": "string"
+            },
+            "body": {
+              "type": "string"
+            }
+          }
+        },
+        "travel_advice": {
+          "$schema": "http://json-schema.org/draft-04/schema#",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "summary",
+            "country",
+            "updated_at",
+            "reviewed_at",
+            "change_description",
+            "alert_status",
+            "email_signup_link",
+            "parts"
+          ],
+          "properties": {
+            "summary": {
+              "$ref": "#/definitions/multiple_content_types"
+            },
+            "country": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "slug",
+                "name"
+              ],
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "slug": {
+                  "type": "string"
+                }
+              }
+            },
+            "updated_at": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "reviewed_at": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "change_description": {
+              "type": "string"
+            },
+            "alert_status": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "email_signup_link": {
+              "type": "string",
+              "format": "uri"
+            },
+            "image": {
+              "$ref": "#/definitions/asset_link"
+            },
+            "document": {
+              "$ref": "#/definitions/asset_link"
+            },
+            "parts": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "slug",
+                  "title",
+                  "body"
+                ],
+                "properties": {
+                  "slug": {
+                    "type": "string"
+                  },
+                  "title": {
+                    "type": "string"
+                  },
+                  "body": {
+                    "$ref": "#/definitions/multiple_content_types"
+                  }
+                }
+              }
+            },
+            "max_cache_time": {
+              "description": "The maximum length of time the content should be cached, in seconds.",
+              "type": "integer"
+            },
+            "publishing_request_id": {
+              "description": "A unique identifier used to track publishing requests to rendered content",
+              "type": "string"
+            }
+          }
+        },
+        "travel_advice_index": {
+          "$schema": "http://json-schema.org/draft-04/schema#",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "email_signup_link",
+            "countries"
+          ],
+          "properties": {
+            "email_signup_link": {
+              "type": "string",
+              "format": "uri"
+            },
+            "countries": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "name",
+                  "base_path",
+                  "updated_at",
+                  "public_updated_at",
+                  "change_description",
+                  "synonyms"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "base_path": {
+                    "$ref": "#/definitions/absolute_path"
+                  },
+                  "updated_at": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "public_updated_at": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "change_description": {
+                    "type": "string"
+                  },
+                  "synonyms": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            },
+            "max_cache_time": {
+              "description": "The maximum length of time the content should be cached, in seconds.",
+              "type": "integer"
+            },
+            "publishing_request_id": {
+              "description": "A unique identifier used to track publishing requests to rendered content",
+              "type": "string"
+            }
+          }
+        },
+        "unpublishing": {
+          "$schema": "http://json-schema.org/draft-04/schema#",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "unpublished_at"
+          ],
+          "properties": {
+            "explanation": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "unpublished_at": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "alternative_url": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "uri"
+            },
+            "public_updated_at": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "working_group": {
+          "$schema": "http://json-schema.org/draft-04/schema#",
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "email": {
+              "type": "string"
+            },
+            "body": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "formats": {
+      "oneOf": [
+        {
+          "properties": {
+            "schema_name": {
+              "enum": [
+                "case_study"
+              ]
+            },
+            "format": {
+              "enum": [
+                "case_study"
+              ]
+            },
+            "details": {
+              "$ref": "#/definitions/details/definitions/case_study"
+            }
+          }
+        },
+        {
+          "properties": {
+            "schema_name": {
+              "enum": [
+                "coming_soon"
+              ]
+            },
+            "format": {
+              "enum": [
+                "coming_soon"
+              ]
+            },
+            "details": {
+              "$ref": "#/definitions/details/definitions/coming_soon"
+            }
+          }
+        },
+        {
+          "properties": {
+            "schema_name": {
+              "enum": [
+                "contact"
+              ]
+            },
+            "format": {
+              "enum": [
+                "contact"
+              ]
+            },
+            "details": {
+              "$ref": "#/definitions/details/definitions/contact"
+            }
+          }
+        },
+        {
+          "properties": {
+            "schema_name": {
+              "enum": [
+                "detailed_guide"
+              ]
+            },
+            "format": {
+              "enum": [
+                "detailed_guide"
+              ]
+            },
+            "details": {
+              "$ref": "#/definitions/details/definitions/detailed_guide"
+            }
+          }
+        },
+        {
+          "properties": {
+            "schema_name": {
+              "enum": [
+                "document_collection"
+              ]
+            },
+            "format": {
+              "enum": [
+                "document_collection"
+              ]
+            },
+            "details": {
+              "$ref": "#/definitions/details/definitions/document_collection"
+            }
+          }
+        },
+        {
+          "properties": {
+            "schema_name": {
+              "enum": [
+                "email_alert_signup"
+              ]
+            },
+            "format": {
+              "enum": [
+                "email_alert_signup"
+              ]
+            },
+            "details": {
+              "$ref": "#/definitions/details/definitions/email_alert_signup"
+            }
+          }
+        },
+        {
+          "properties": {
+            "schema_name": {
+              "enum": [
+                "fatality_notice"
+              ]
+            },
+            "format": {
+              "enum": [
+                "fatality_notice"
+              ]
+            },
+            "details": {
+              "$ref": "#/definitions/details/definitions/fatality_notice"
+            }
+          }
+        },
+        {
+          "properties": {
+            "schema_name": {
+              "enum": [
+                "financial_release"
+              ]
+            },
+            "format": {
+              "enum": [
+                "financial_release"
+              ]
+            },
+            "details": {
+              "$ref": "#/definitions/details/definitions/financial_release"
+            }
+          }
+        },
+        {
+          "properties": {
+            "schema_name": {
+              "enum": [
+                "financial_releases_campaign"
+              ]
+            },
+            "format": {
+              "enum": [
+                "financial_releases_campaign"
+              ]
+            },
+            "details": {
+              "$ref": "#/definitions/details/definitions/financial_releases_campaign"
+            }
+          }
+        },
+        {
+          "properties": {
+            "schema_name": {
+              "enum": [
+                "financial_releases_geoblocker"
+              ]
+            },
+            "format": {
+              "enum": [
+                "financial_releases_geoblocker"
+              ]
+            },
+            "details": {
+              "$ref": "#/definitions/details/definitions/financial_releases_geoblocker"
+            }
+          }
+        },
+        {
+          "properties": {
+            "schema_name": {
+              "enum": [
+                "financial_releases_index"
+              ]
+            },
+            "format": {
+              "enum": [
+                "financial_releases_index"
+              ]
+            },
+            "details": {
+              "$ref": "#/definitions/details/definitions/financial_releases_index"
+            }
+          }
+        },
+        {
+          "properties": {
+            "schema_name": {
+              "enum": [
+                "financial_releases_success"
+              ]
+            },
+            "format": {
+              "enum": [
+                "financial_releases_success"
+              ]
+            },
+            "details": {
+              "$ref": "#/definitions/details/definitions/financial_releases_success"
+            }
+          }
+        },
+        {
+          "properties": {
+            "schema_name": {
+              "enum": [
+                "finder"
+              ]
+            },
+            "format": {
+              "enum": [
+                "finder"
+              ]
+            },
+            "details": {
+              "$ref": "#/definitions/details/definitions/finder"
+            }
+          }
+        },
+        {
+          "properties": {
+            "schema_name": {
+              "enum": [
+                "finder_email_signup"
+              ]
+            },
+            "format": {
+              "enum": [
+                "finder_email_signup"
+              ]
+            },
+            "details": {
+              "$ref": "#/definitions/details/definitions/finder_email_signup"
+            }
+          }
+        },
+        {
+          "properties": {
+            "schema_name": {
+              "enum": [
+                "hmrc_manual"
+              ]
+            },
+            "format": {
+              "enum": [
+                "hmrc_manual"
+              ]
+            },
+            "details": {
+              "$ref": "#/definitions/details/definitions/hmrc_manual"
+            }
+          }
+        },
+        {
+          "properties": {
+            "schema_name": {
+              "enum": [
+                "hmrc_manual_section"
+              ]
+            },
+            "format": {
+              "enum": [
+                "hmrc_manual_section"
+              ]
+            },
+            "details": {
+              "$ref": "#/definitions/details/definitions/hmrc_manual_section"
+            }
+          }
+        },
+        {
+          "properties": {
+            "schema_name": {
+              "enum": [
+                "html_publication"
+              ]
+            },
+            "format": {
+              "enum": [
+                "html_publication"
+              ]
+            },
+            "details": {
+              "$ref": "#/definitions/details/definitions/html_publication"
+            }
+          }
+        },
+        {
+          "properties": {
+            "schema_name": {
+              "enum": [
+                "mainstream_browse_page"
+              ]
+            },
+            "format": {
+              "enum": [
+                "mainstream_browse_page"
+              ]
+            },
+            "details": {
+              "$ref": "#/definitions/details/definitions/mainstream_browse_page"
+            }
+          }
+        },
+        {
+          "properties": {
+            "schema_name": {
+              "enum": [
+                "manual"
+              ]
+            },
+            "format": {
+              "enum": [
+                "manual"
+              ]
+            },
+            "details": {
+              "$ref": "#/definitions/details/definitions/manual"
+            }
+          }
+        },
+        {
+          "properties": {
+            "schema_name": {
+              "enum": [
+                "manual_section"
+              ]
+            },
+            "format": {
+              "enum": [
+                "manual_section"
+              ]
+            },
+            "details": {
+              "$ref": "#/definitions/details/definitions/manual_section"
+            }
+          }
+        },
+        {
+          "properties": {
+            "schema_name": {
+              "enum": [
+                "placeholder"
+              ]
+            },
+            "format": {
+              "enum": [
+                "placeholder"
+              ]
+            },
+            "details": {
+              "$ref": "#/definitions/details/definitions/placeholder"
+            }
+          }
+        },
+        {
+          "properties": {
+            "schema_name": {
+              "enum": [
+                "policy"
+              ]
+            },
+            "format": {
+              "enum": [
+                "policy"
+              ]
+            },
+            "details": {
+              "$ref": "#/definitions/details/definitions/policy"
+            }
+          }
+        },
+        {
+          "properties": {
+            "schema_name": {
+              "enum": [
+                "publication"
+              ]
+            },
+            "format": {
+              "enum": [
+                "publication"
+              ]
+            },
+            "details": {
+              "$ref": "#/definitions/details/definitions/publication"
+            }
+          }
+        },
+        {
+          "properties": {
+            "schema_name": {
+              "enum": [
+                "service_manual_guide"
+              ]
+            },
+            "format": {
+              "enum": [
+                "service_manual_guide"
+              ]
+            },
+            "details": {
+              "$ref": "#/definitions/details/definitions/service_manual_guide"
+            }
+          }
+        },
+        {
+          "properties": {
+            "schema_name": {
+              "enum": [
+                "service_manual_service_standard"
+              ]
+            },
+            "format": {
+              "enum": [
+                "service_manual_service_standard"
+              ]
+            },
+            "details": {
+              "$ref": "#/definitions/details/definitions/service_manual_service_standard"
+            }
+          }
+        },
+        {
+          "properties": {
+            "schema_name": {
+              "enum": [
+                "service_manual_topic"
+              ]
+            },
+            "format": {
+              "enum": [
+                "service_manual_topic"
+              ]
+            },
+            "details": {
+              "$ref": "#/definitions/details/definitions/service_manual_topic"
+            }
+          }
+        },
+        {
+          "properties": {
+            "schema_name": {
+              "enum": [
+                "specialist_document"
+              ]
+            },
+            "format": {
+              "enum": [
+                "specialist_document"
+              ]
+            },
+            "details": {
+              "$ref": "#/definitions/details/definitions/specialist_document"
+            }
+          }
+        },
+        {
+          "properties": {
+            "schema_name": {
+              "enum": [
+                "statistics_announcement"
+              ]
+            },
+            "format": {
+              "enum": [
+                "statistics_announcement"
+              ]
+            },
+            "details": {
+              "$ref": "#/definitions/details/definitions/statistics_announcement"
+            }
+          }
+        },
+        {
+          "properties": {
+            "schema_name": {
+              "enum": [
+                "take_part"
+              ]
+            },
+            "format": {
+              "enum": [
+                "take_part"
+              ]
+            },
+            "details": {
+              "$ref": "#/definitions/details/definitions/take_part"
+            }
+          }
+        },
+        {
+          "properties": {
+            "schema_name": {
+              "enum": [
+                "taxon"
+              ]
+            },
+            "format": {
+              "enum": [
+                "taxon"
+              ]
+            },
+            "details": {
+              "$ref": "#/definitions/details/definitions/taxon"
+            }
+          }
+        },
+        {
+          "properties": {
+            "schema_name": {
+              "enum": [
+                "topic"
+              ]
+            },
+            "format": {
+              "enum": [
+                "topic"
+              ]
+            },
+            "details": {
+              "$ref": "#/definitions/details/definitions/topic"
+            }
+          }
+        },
+        {
+          "properties": {
+            "schema_name": {
+              "enum": [
+                "topical_event_about_page"
+              ]
+            },
+            "format": {
+              "enum": [
+                "topical_event_about_page"
+              ]
+            },
+            "details": {
+              "$ref": "#/definitions/details/definitions/topical_event_about_page"
+            }
+          }
+        },
+        {
+          "properties": {
+            "schema_name": {
+              "enum": [
+                "travel_advice"
+              ]
+            },
+            "format": {
+              "enum": [
+                "travel_advice"
+              ]
+            },
+            "details": {
+              "$ref": "#/definitions/details/definitions/travel_advice"
+            }
+          }
+        },
+        {
+          "properties": {
+            "schema_name": {
+              "enum": [
+                "travel_advice_index"
+              ]
+            },
+            "format": {
+              "enum": [
+                "travel_advice_index"
+              ]
+            },
+            "details": {
+              "$ref": "#/definitions/details/definitions/travel_advice_index"
+            }
+          }
+        },
+        {
+          "properties": {
+            "schema_name": {
+              "enum": [
+                "unpublishing"
+              ]
+            },
+            "format": {
+              "enum": [
+                "unpublishing"
+              ]
+            },
+            "details": {
+              "$ref": "#/definitions/details/definitions/unpublishing"
+            }
+          }
+        },
+        {
+          "properties": {
+            "schema_name": {
+              "enum": [
+                "working_group"
+              ]
+            },
+            "format": {
+              "enum": [
+                "working_group"
+              ]
+            },
+            "details": {
+              "$ref": "#/definitions/details/definitions/working_group"
+            }
+          }
+        },
+        {
+          "properties": {
+            "schema_name": {
+              "enum": [
+                "gone"
+              ]
+            },
+            "format": {
+              "enum": [
+                "gone"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "schema_name": {
+              "enum": [
+                "redirect"
+              ]
+            },
+            "format": {
+              "enum": [
+                "redirect"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "schema_name": {
+              "enum": [
+                "special_route"
+              ]
+            },
+            "format": {
+              "enum": [
+                "special_route"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "links": {
+      "$schema": "http://json-schema.org/draft-04/schema#",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "alpha_taxons": {
+          "description": "Prototype-stage taxonomy label for this content item",
+          "$ref": "#/definitions/guid_list"
+        },
+        "mainstream_browse_pages": {
+          "description": "Powers the /browse section of the site. These are known as sections in some legacy apps.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "topics": {
+          "description": "Powers the /topic section of the site. These are known as specialist sectors in some legacy apps.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "organisations": {
+          "description": "All organisations linked to this content item. This should include lead organisations.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "parent": {
+          "description": "The parent content item.",
+          "$ref": "#/definitions/guid_list",
+          "maxItems": 1
+        },
+        "policies": {
+          "description": "These are for collecting content related to a particular government policy.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "policy_areas": {
+          "description": "A largely deprecated tag currently only used to power email alerts.",
+          "$ref": "#/definitions/guid_list"
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "additionalProperties": false,
+      "required": [
+        "update_type",
+        "analytics_identifier",
+        "content_id",
+        "description",
+        "details",
+        "document_type",
+        "first_published_at",
+        "need_ids",
+        "phase",
+        "public_updated_at",
+        "publishing_app",
+        "redirects",
+        "rendering_app",
+        "routes",
+        "schema_name",
+        "title",
+        "base_path",
+        "locale",
+        "format"
+      ],
+      "properties": {
+        "update_type": {
+          "enum": [
+            "major",
+            "minor",
+            "republish",
+            "links"
+          ]
+        },
+        "content_id": {
+          "$ref": "#/definitions/guid"
+        },
+        "analytics_identifier": {
+          "$ref": "#/definitions/analytics_identifier"
+        },
+        "links": {
+          "$ref": "#/definitions/links"
+        },
+        "expanded_links": {
+          "type": "object"
+        },
+        "base_path": {
+          "$ref": "#/definitions/absolute_path"
+        },
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "public_updated_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "first_published_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "publishing_app": {
+          "type": "string"
+        },
+        "rendering_app": {
+          "type": "string"
+        },
+        "locale": {
+          "type": "string"
+        },
+        "need_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "title": "This is intended to be used by front end applications to present pages to users to show how effectively users' needs are being met"
+          },
+          "title": "Identifiers of user needs"
+        },
+        "routes": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/definitions/route"
+          }
+        },
+        "redirects": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/redirect_route"
+          }
+        },
+        "access_limited": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "users"
+          ],
+          "properties": {
+            "users": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "phase": {
+          "description": "The service design phase of this content item - https://www.gov.uk/service-manual/phases",
+          "type": "string",
+          "enum": [
+            "alpha",
+            "beta",
+            "live"
+          ]
+        },
+        "details": {
+          "type": "object"
+        },
+        "withdrawn_notice": {
+          "$ref": "#/definitions/withdrawn_notice"
+        },
+        "schema_name": {
+          "type": "string",
+          "title": "Determines the schema used to validate details",
+          "description": "This field should only be used as part of the validation process"
+        },
+        "format": {
+          "type": "string",
+          "description": "Deprecated in favor of schema_name, but required to be identical in value"
+        },
+        "document_type": {
+          "type": "string"
+        },
+        "govuk_request_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    {
+      "$ref": "#/definitions/formats"
+    }
+  ]
+}
