@@ -10,6 +10,10 @@
     "second_level_ordering": {
       "enum": [ "alphabetical", "curated" ]
     },
+    "ordered_second_level_browse_pages": {
+      "description": "All 2nd level browse pages under active_top_level_browse_page, with ordering preserved",
+      "$ref": "#/definitions/guid_list"
+    },
     "groups": {
       "type": "array",
       "items": {
