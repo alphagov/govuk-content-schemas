@@ -629,6 +629,13 @@
             "dfid_research_output"
           ]
         },
+        "dfid_review_status": {
+          "type": "string",
+          "enum": [
+            "unreviewed",
+            "peer_reviewed"
+          ]
+        },
         "country": {
           "type": "array",
           "items": {
