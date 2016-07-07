@@ -3,7 +3,12 @@
   "base_path": "/browse/visas-immigration",
   "description": "Visas, settlement, asylum and sponsorship",
   "details": {
-    "second_level_ordering": "curated"
+    "second_level_ordering": "curated",
+    "ordered_second_level_browse_pages": [
+      "0529f318-e05a-4798-9e77-a901eedfdb37",
+      "8e9576ca-8bbe-450f-9eb9-14bea6f93534",
+      "ce9f6198-f7d1-4625-9ae7-9611ffc9caa7"
+    ]
   },
   "format": "mainstream_browse_page",
   "links": {
