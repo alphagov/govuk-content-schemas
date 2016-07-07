@@ -34,6 +34,7 @@
       "bulk_published": true,
       "dfid_review_status": "unreviewed",
       "country": ["AL", "AF"],
+      "dfid_theme": ["agriculture", "infrastructure"],
       "dfid_authors": ["Mr. Potato Head", "Mrs. Potato Head"],
       "first_published_at": "2016-07-01"
     }

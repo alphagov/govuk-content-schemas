@@ -852,6 +852,26 @@
         "first_published_at": {
           "type": "string",
           "pattern": "^[1-9][0-9]{3}[-/](0[1-9]|1[0-2])[-/](0[1-9]|[12][0-9]|3[0-1])$"
+        },
+        "dfid_theme": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "agriculture",
+              "climate_and_environment",
+              "economic_growth",
+              "education",
+              "food_and_nutrition",
+              "governance_and_conflict",
+              "health",
+              "humanitarian_disasters_and_emergencies",
+              "infrastructure",
+              "research_communication_and_uptake",
+              "social_change",
+              "water_and_sanitation"
+            ]
+          }
         }
       }
     },
