@@ -33,6 +33,7 @@
       "document_type": "dfid_research_output",
       "bulk_published": true,
       "dfid_review_status": "unreviewed",
+      "dfid_document_type": "book_chapter",
       "country": ["AL", "AF"],
       "dfid_theme": ["agriculture", "infrastructure"],
       "dfid_authors": ["Mr. Potato Head", "Mrs. Potato Head"],
