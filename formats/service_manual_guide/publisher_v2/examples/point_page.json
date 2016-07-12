@@ -5,14 +5,14 @@
   "format": "service_manual_guide",
   "locale": "en",
   "details" : {
-    "summary": "Understand user needs. Research to develop a deep knowledge of who the service users are and what that means for the design of the service.",
+    "show_description": true,
     "body": "<h2>Why it's in the standard</h2>\n<p>You need to know the people who use your service (your users) and what they want to do (their user needs) if you want to build a service that works for them.</p>\n",
     "header_links" : [
       { "title" : "Why it's in the standard", "href" : "#why-its-in-the-standard" }
     ]
   },
   "base_path" : "/service-standard/service-standard/understand-user-needs",
-  "description" : "Understand user needs.",
+  "description" : "Understand user needs. Research to develop a deep knowledge of who the service users are and what that means for the design of the service.",
   "title" : "1. Understand user needs",
   "routes": [
     {
