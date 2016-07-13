@@ -3717,6 +3717,7 @@
     "formats": {
       "oneOf": [
         {
+          "type": "object",
           "properties": {
             "schema_name": {
               "enum": [
@@ -3734,6 +3735,7 @@
           }
         },
         {
+          "type": "object",
           "properties": {
             "schema_name": {
               "enum": [
@@ -3751,6 +3753,7 @@
           }
         },
         {
+          "type": "object",
           "properties": {
             "schema_name": {
               "enum": [
@@ -3768,6 +3771,7 @@
           }
         },
         {
+          "type": "object",
           "properties": {
             "schema_name": {
               "enum": [
@@ -3785,6 +3789,7 @@
           }
         },
         {
+          "type": "object",
           "properties": {
             "schema_name": {
               "enum": [
@@ -3802,6 +3807,7 @@
           }
         },
         {
+          "type": "object",
           "properties": {
             "schema_name": {
               "enum": [
@@ -3819,6 +3825,7 @@
           }
         },
         {
+          "type": "object",
           "properties": {
             "schema_name": {
               "enum": [
@@ -3836,6 +3843,7 @@
           }
         },
         {
+          "type": "object",
           "properties": {
             "schema_name": {
               "enum": [
@@ -3853,6 +3861,7 @@
           }
         },
         {
+          "type": "object",
           "properties": {
             "schema_name": {
               "enum": [
@@ -3870,6 +3879,7 @@
           }
         },
         {
+          "type": "object",
           "properties": {
             "schema_name": {
               "enum": [
@@ -3887,6 +3897,7 @@
           }
         },
         {
+          "type": "object",
           "properties": {
             "schema_name": {
               "enum": [
@@ -3904,6 +3915,7 @@
           }
         },
         {
+          "type": "object",
           "properties": {
             "schema_name": {
               "enum": [
@@ -3921,6 +3933,7 @@
           }
         },
         {
+          "type": "object",
           "properties": {
             "schema_name": {
               "enum": [
@@ -3938,6 +3951,7 @@
           }
         },
         {
+          "type": "object",
           "properties": {
             "schema_name": {
               "enum": [
@@ -3955,6 +3969,7 @@
           }
         },
         {
+          "type": "object",
           "properties": {
             "schema_name": {
               "enum": [
@@ -3972,6 +3987,7 @@
           }
         },
         {
+          "type": "object",
           "properties": {
             "schema_name": {
               "enum": [
@@ -3989,6 +4005,7 @@
           }
         },
         {
+          "type": "object",
           "properties": {
             "schema_name": {
               "enum": [
@@ -4006,6 +4023,7 @@
           }
         },
         {
+          "type": "object",
           "properties": {
             "schema_name": {
               "enum": [
@@ -4023,6 +4041,7 @@
           }
         },
         {
+          "type": "object",
           "properties": {
             "schema_name": {
               "enum": [
@@ -4040,6 +4059,7 @@
           }
         },
         {
+          "type": "object",
           "properties": {
             "schema_name": {
               "enum": [
@@ -4057,6 +4077,7 @@
           }
         },
         {
+          "type": "object",
           "properties": {
             "schema_name": {
               "enum": [
@@ -4074,6 +4095,7 @@
           }
         },
         {
+          "type": "object",
           "properties": {
             "schema_name": {
               "enum": [
@@ -4091,6 +4113,7 @@
           }
         },
         {
+          "type": "object",
           "properties": {
             "schema_name": {
               "enum": [
@@ -4108,6 +4131,7 @@
           }
         },
         {
+          "type": "object",
           "properties": {
             "schema_name": {
               "enum": [
@@ -4125,6 +4149,7 @@
           }
         },
         {
+          "type": "object",
           "properties": {
             "schema_name": {
               "enum": [
@@ -4142,6 +4167,7 @@
           }
         },
         {
+          "type": "object",
           "properties": {
             "schema_name": {
               "enum": [
@@ -4159,6 +4185,7 @@
           }
         },
         {
+          "type": "object",
           "properties": {
             "schema_name": {
               "enum": [
@@ -4176,6 +4203,7 @@
           }
         },
         {
+          "type": "object",
           "properties": {
             "schema_name": {
               "enum": [
@@ -4193,6 +4221,7 @@
           }
         },
         {
+          "type": "object",
           "properties": {
             "schema_name": {
               "enum": [
@@ -4210,6 +4239,7 @@
           }
         },
         {
+          "type": "object",
           "properties": {
             "schema_name": {
               "enum": [
@@ -4227,6 +4257,7 @@
           }
         },
         {
+          "type": "object",
           "properties": {
             "schema_name": {
               "enum": [
@@ -4244,6 +4275,7 @@
           }
         },
         {
+          "type": "object",
           "properties": {
             "schema_name": {
               "enum": [
@@ -4261,6 +4293,7 @@
           }
         },
         {
+          "type": "object",
           "properties": {
             "schema_name": {
               "enum": [
@@ -4278,6 +4311,7 @@
           }
         },
         {
+          "type": "object",
           "properties": {
             "schema_name": {
               "enum": [
@@ -4295,6 +4329,7 @@
           }
         },
         {
+          "type": "object",
           "properties": {
             "schema_name": {
               "enum": [
@@ -4312,6 +4347,7 @@
           }
         },
         {
+          "type": "object",
           "properties": {
             "schema_name": {
               "enum": [
@@ -4329,6 +4365,7 @@
           }
         },
         {
+          "type": "object",
           "properties": {
             "schema_name": {
               "enum": [
@@ -4343,6 +4380,7 @@
           }
         },
         {
+          "type": "object",
           "properties": {
             "schema_name": {
               "enum": [
@@ -4357,6 +4395,7 @@
           }
         },
         {
+          "type": "object",
           "properties": {
             "schema_name": {
               "enum": [
@@ -4412,6 +4451,7 @@
   "allOf": [
     {
       "additionalProperties": false,
+      "type": "object",
       "required": [
         "update_type",
         "analytics_identifier",

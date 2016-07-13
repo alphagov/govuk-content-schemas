@@ -47,6 +47,7 @@ RSpec.describe GovukContentSchemas::MessageQueueSchemaCombiner do
     expect(
       subject.schema["definitions"]["formats"]["oneOf"]
     ).to include(
+      "type" => "object",
       "properties" => a_hash_including(
         "details" => {
           "$ref" => "#/definitions/details/definitions/format_foo",
@@ -74,6 +75,7 @@ RSpec.describe GovukContentSchemas::MessageQueueSchemaCombiner do
 
     ["format_foo", "format_bar"].each do |format|
       expect(oneOf).to include(
+        "type" => "object",
         "properties" => a_hash_including(
           "schema_name" => {
             "enum" => [format],

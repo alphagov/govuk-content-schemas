@@ -9,6 +9,7 @@
   "allOf": [
     {
       "additionalProperties": false,
+      "type": "object",
       "required": [
         "update_type",
         "analytics_identifier",

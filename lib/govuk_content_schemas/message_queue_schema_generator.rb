@@ -24,6 +24,7 @@ private
 
     details_schemas.each do |detail_name, schema|
       sub_schema = {
+        "type" => "object",
         "properties" => {
           "schema_name" => {
             "enum" => [detail_name],
