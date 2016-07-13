@@ -6,6 +6,7 @@ require 'json-schema'
 require 'json'
 
 CLEAN << "dist/formats"
+CLEAN << "dist/message_queue.json"
 
 schema_reader = JSON::Schema::Reader.new(accept_file: true, accept_uri: false)
 
