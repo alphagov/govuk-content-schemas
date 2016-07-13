@@ -1478,6 +1478,10 @@
                 "curated"
               ]
             },
+            "ordered_second_level_browse_pages": {
+              "description": "All 2nd level browse pages under active_top_level_browse_page, with ordering preserved",
+              "$ref": "#/definitions/guid_list"
+            },
             "groups": {
               "type": "array",
               "items": {
@@ -1965,9 +1969,9 @@
             "body"
           ],
           "properties": {
-            "summary": {
-              "type": "string",
-              "description": "A single line short summary that does not contain formatting."
+            "show_description": {
+              "type": "boolean",
+              "description": "Display the description on the page if true. This is needed for the service standard points."
             },
             "body": {
               "type": "string"
@@ -2060,8 +2064,7 @@
                 "type": "object",
                 "additionalProperties": false,
                 "required": [
-                  "name",
-                  "contents"
+                  "name"
                 ],
                 "properties": {
                   "name": {
@@ -2069,12 +2072,6 @@
                   },
                   "description": {
                     "type": "string"
-                  },
-                  "contents": {
-                    "type": "array",
-                    "items": {
-                      "$ref": "#/definitions/absolute_path"
-                    }
                   },
                   "content_ids": {
                     "$ref": "#/definitions/guid_list"
@@ -2144,6 +2141,9 @@
                 },
                 {
                   "$ref": "#/definitions/countryside_stewardship_grant_metadata"
+                },
+                {
+                  "$ref": "#/definitions/dfid_research_output_metadata"
                 },
                 {
                   "$ref": "#/definitions/drug_safety_update_metadata"
@@ -2412,6 +2412,296 @@
                 "closed_date": {
                   "type": "string",
                   "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+                }
+              }
+            },
+            "dfid_research_output_metadata": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "bulk_published": {
+                  "type": "boolean"
+                },
+                "document_type": {
+                  "type": "string",
+                  "enum": [
+                    "dfid_research_output"
+                  ]
+                },
+                "dfid_review_status": {
+                  "type": "string",
+                  "enum": [
+                    "unreviewed",
+                    "peer_reviewed"
+                  ]
+                },
+                "country": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "AF",
+                      "AL",
+                      "DZ",
+                      "AD",
+                      "AO",
+                      "AG",
+                      "AR",
+                      "AM",
+                      "AU",
+                      "AT",
+                      "AZ",
+                      "BH",
+                      "BD",
+                      "BB",
+                      "BY",
+                      "BE",
+                      "BZ",
+                      "BJ",
+                      "BT",
+                      "BO",
+                      "BA",
+                      "BW",
+                      "BR",
+                      "BN",
+                      "BG",
+                      "BF",
+                      "MM",
+                      "BI",
+                      "KH",
+                      "CM",
+                      "CA",
+                      "CV",
+                      "CF",
+                      "TD",
+                      "CL",
+                      "CN",
+                      "CO",
+                      "KM",
+                      "CG",
+                      "CD",
+                      "CR",
+                      "HR",
+                      "CU",
+                      "CY",
+                      "CZ",
+                      "CS",
+                      "DK",
+                      "DJ",
+                      "DM",
+                      "DO",
+                      "DD",
+                      "TL",
+                      "EC",
+                      "EG",
+                      "SV",
+                      "GQ",
+                      "ER",
+                      "EE",
+                      "ET",
+                      "FJ",
+                      "FI",
+                      "FR",
+                      "GA",
+                      "GE",
+                      "DE",
+                      "GH",
+                      "GR",
+                      "GD",
+                      "GT",
+                      "GN",
+                      "GW",
+                      "GY",
+                      "HT",
+                      "HN",
+                      "HU",
+                      "IS",
+                      "IN",
+                      "ID",
+                      "IR",
+                      "IQ",
+                      "IE",
+                      "IL",
+                      "IT",
+                      "CI",
+                      "JM",
+                      "JP",
+                      "JO",
+                      "KZ",
+                      "KE",
+                      "KI",
+                      "XK",
+                      "KW",
+                      "KG",
+                      "LA",
+                      "LV",
+                      "LB",
+                      "LS",
+                      "LR",
+                      "LY",
+                      "LI",
+                      "LT",
+                      "LU",
+                      "MK",
+                      "MG",
+                      "MW",
+                      "MY",
+                      "MV",
+                      "ML",
+                      "MT",
+                      "MH",
+                      "MR",
+                      "MU",
+                      "MX",
+                      "FM",
+                      "MD",
+                      "MC",
+                      "MN",
+                      "ME",
+                      "MA",
+                      "MZ",
+                      "NA",
+                      "NR",
+                      "NP",
+                      "NL",
+                      "NZ",
+                      "NI",
+                      "NE",
+                      "NG",
+                      "KP",
+                      "NO",
+                      "OM",
+                      "PK",
+                      "PW",
+                      "PA",
+                      "PG",
+                      "PY",
+                      "PE",
+                      "PH",
+                      "PL",
+                      "PT",
+                      "QA",
+                      "RO",
+                      "RU",
+                      "RW",
+                      "WS",
+                      "SM",
+                      "ST",
+                      "SA",
+                      "SN",
+                      "RS",
+                      "SC",
+                      "SL",
+                      "SG",
+                      "SK",
+                      "SI",
+                      "SB",
+                      "SO",
+                      "ZA",
+                      "KR",
+                      "SS",
+                      "ES",
+                      "LK",
+                      "KN",
+                      "LC",
+                      "VC",
+                      "SD",
+                      "SR",
+                      "SZ",
+                      "SE",
+                      "CH",
+                      "SY",
+                      "TJ",
+                      "TZ",
+                      "TH",
+                      "BS",
+                      "GM",
+                      "TG",
+                      "TO",
+                      "TT",
+                      "TN",
+                      "TR",
+                      "TM",
+                      "TV",
+                      "SU",
+                      "UG",
+                      "UA",
+                      "AE",
+                      "GB",
+                      "US",
+                      "UY",
+                      "UZ",
+                      "VU",
+                      "VA",
+                      "VE",
+                      "VN",
+                      "YE",
+                      "YU",
+                      "ZM",
+                      "ZW"
+                    ]
+                  }
+                },
+                "dfid_authors": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "first_published_at": {
+                  "type": "string",
+                  "pattern": "^[1-9][0-9]{3}[-/](0[1-9]|1[0-2])[-/](0[1-9]|[12][0-9]|3[0-1])$"
+                },
+                "dfid_theme": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "agriculture",
+                      "climate_and_environment",
+                      "economic_growth",
+                      "education",
+                      "food_and_nutrition",
+                      "governance_and_conflict",
+                      "health",
+                      "humanitarian_disasters_and_emergencies",
+                      "infrastructure",
+                      "research_communication_and_uptake",
+                      "social_change",
+                      "water_and_sanitation"
+                    ]
+                  }
+                },
+                "dfid_document_type": {
+                  "type": "string",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "book",
+                      "book_chapter",
+                      "briefing",
+                      "case_study",
+                      "conference_paper",
+                      "country_report",
+                      "dataset",
+                      "discussion_paper",
+                      "evaluation_report",
+                      "journal_article",
+                      "journal_issue",
+                      "lessons_learned",
+                      "literature_review",
+                      "manual",
+                      "protocol",
+                      "questionnaire",
+                      "research_paper",
+                      "systematic_review",
+                      "technical_report",
+                      "thematic_summary",
+                      "tool_kit",
+                      "training_materials",
+                      "working_paper"
+                    ]
+                  }
                 }
               }
             },
