@@ -1,9 +1,6 @@
 def schema_path_for(example)
   schema_filename = example.end_with?("_links.json") ? "links.json" : "schema.json"
-  candidates = []
-  candidates << (File.dirname(File.dirname(example)) + "/" + schema_filename).gsub(%r{formats/}, "dist/formats/")
-  candidates << (File.dirname(File.dirname(example)) + "/" + schema_filename).gsub(%r{formats/}, "formats/")
-  candidates.find { |path| File.exist?(path) }
+  (File.dirname(File.dirname(example)) + "/" + schema_filename).gsub(%r[formats/], "dist/formats/")
 end
 
 def valid?(example)
