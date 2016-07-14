@@ -3,7 +3,6 @@
   "type": "object",
   "additionalProperties": false,
   "required": [
-    "format",
     "publishing_app",
     "routes"
   ],
@@ -15,6 +14,13 @@
       "$ref": "#/definitions/guid"
     },
     "format": {
+      "description": "DEPRECATED. This field will be removed by Tijmen.",
+      "enum": [ "gone" ]
+    },
+    "document_type": {
+      "enum": [ "gone" ]
+    },
+    "schema_name": {
       "enum": [ "gone" ]
     },
     "publishing_app": {
