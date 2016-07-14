@@ -2078,29 +2078,9 @@
           "type": "object",
           "additionalProperties": false,
           "properties": {
-            "points": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "title": {
-                    "type": "string",
-                    "description": "The title of the point. It matches the title of the relevant page."
-                  },
-                  "summary": {
-                    "type": "string",
-                    "description": "The summary of the point. It matches the summary on the relevant page."
-                  },
-                  "base_path": {
-                    "$ref": "#/definitions/absolute_path"
-                  }
-                },
-                "required": [
-                  "title",
-                  "summary",
-                  "base_path"
-                ]
-              }
+            "body": {
+              "type": "string",
+              "description": "A single line of text that serves as a second, less prominent introduction."
             }
           }
         },

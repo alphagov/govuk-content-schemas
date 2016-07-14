@@ -3,9 +3,12 @@
   "type": "object",
   "additionalProperties": false,
   "properties": {
-    "points": {
-      "description": "Related points in the digital service standard.",
-      "$ref": "#/definitions/guid_list"
+    "children": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true
+      }
     }
   }
 }
