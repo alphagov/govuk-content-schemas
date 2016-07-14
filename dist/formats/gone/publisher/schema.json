@@ -3,9 +3,11 @@
   "type": "object",
   "additionalProperties": false,
   "required": [
+    "document_type",
     "publishing_app",
-    "update_type",
-    "routes"
+    "routes",
+    "schema_name",
+    "update_type"
   ],
   "properties": {
     "base_path": {
@@ -14,10 +16,6 @@
     "content_id": {
       "type": "string",
       "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-[1-5][a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$"
-    },
-    "format": {
-      "description": "DEPRECATED. This field will be removed by Tijmen.",
-      "enum": [ "gone" ]
     },
     "document_type": {
       "enum": [ "gone" ]

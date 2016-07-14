@@ -3,10 +3,12 @@
   "type": "object",
   "additionalProperties": false,
   "required": [
+    "base_path",
+    "content_id",
+    "document_type",
     "publishing_app",
     "redirects",
-    "base_path",
-    "content_id"
+    "schema_name"
   ],
   "properties": {
     "base_path": {
@@ -14,10 +16,6 @@
     },
     "content_id": {
       "$ref": "#/definitions/guid"
-    },
-    "format": {
-      "description": "DEPRECATED: This field will be removed by Tijmen.",
-      "enum": [ "redirect" ]
     },
     "document_type": {
       "enum": [ "redirect" ]

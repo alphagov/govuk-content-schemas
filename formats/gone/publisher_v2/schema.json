@@ -3,8 +3,10 @@
   "type": "object",
   "additionalProperties": false,
   "required": [
+    "document_type",
     "publishing_app",
-    "routes"
+    "routes",
+    "schema_name"
   ],
   "properties": {
     "base_path": {
@@ -12,10 +14,6 @@
     },
     "content_id": {
       "$ref": "#/definitions/guid"
-    },
-    "format": {
-      "description": "DEPRECATED. This field will be removed by Tijmen.",
-      "enum": [ "gone" ]
     },
     "document_type": {
       "enum": [ "gone" ]
