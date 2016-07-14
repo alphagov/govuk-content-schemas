@@ -1,14 +1,13 @@
 {
-  "publishing_app":"service-manual-publisher",
-  "rendering_app":"service-manual-frontend",
-  "format": "service_manual_service_standard",
+  "publishing_app": "service-manual-publisher",
+  "rendering_app": "service-manual-frontend",
   "locale": "en",
-  "update_type":"major",
+  "update_type": "major",
   "base_path": "/service-manual/service-standard",
-  "public_updated_at" : "2015-10-09T08:17:10+00:00",
+  "public_updated_at": "2015-10-09T08:17:10+00:00",
   "title": "Digital Service Standard",
-  "description":"Digital Service Standard",
-  "phase":"beta",
+  "description": "Digital Service Standard",
+  "phase": "beta",
   "routes": [
     {
       "path": "/service-manual/service-standard",
@@ -28,5 +27,7 @@
         "base_path": "/service-manual/service-standard/do-ongoing-user-research"
       }
     ]
-  }
+  },
+  "document_type": "service_manual_service_standard",
+  "schema_name": "service_manual_service_standard"
 }

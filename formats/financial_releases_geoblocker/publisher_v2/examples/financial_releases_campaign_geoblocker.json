@@ -2,7 +2,6 @@
   "base_path": "/lloydsshares/location",
   "title": "Financial Releases geoblocker",
   "description": "The government will be making shares in Lloyds Banking Group available for sale to the general public.",
-  "format": "financial_releases_geoblocker",
   "locale": "en",
   "public_updated_at": "2015-12-01T00:00:00.000Z",
   "publishing_app": "share-sale-publisher",
@@ -18,7 +17,10 @@
       "type": "exact"
     }
   ],
-  "redirects": [],
-  "update_type": "major"
-}
+  "redirects": [
 
+  ],
+  "update_type": "major",
+  "document_type": "financial_releases_geoblocker",
+  "schema_name": "financial_releases_geoblocker"
+}

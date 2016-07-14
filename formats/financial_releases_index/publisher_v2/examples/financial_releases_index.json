@@ -4,7 +4,6 @@
   "description": "Index page for listing financial press releases",
   "locale": "en",
   "public_updated_at": "2015-12-02T17:11:23+01:00",
-  "format": "financial_releases_index",
   "publishing_app": "share-sale-publisher",
   "rendering_app": "email-campaign-frontend",
   "phase": "live",
@@ -20,6 +19,10 @@
       "type": "exact"
     }
   ],
-  "redirects": [],
-  "update_type": "major"
+  "redirects": [
+
+  ],
+  "update_type": "major",
+  "document_type": "financial_releases_index",
+  "schema_name": "financial_releases_index"
 }

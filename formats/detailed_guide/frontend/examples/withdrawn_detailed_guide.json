@@ -27,9 +27,15 @@
       }
     ],
     "tags": {
-      "browse_pages": [],
-      "topics": [],
-      "policies": []
+      "browse_pages": [
+
+      ],
+      "topics": [
+
+      ],
+      "policies": [
+
+      ]
     },
     "government": {
       "title": "2010 to 2015 Conservative and Liberal Democrat coalition government",
@@ -37,7 +43,9 @@
       "current": false
     },
     "political": false,
-    "emphasised_organisations": ["de4e9dc6-cca4-43af-a594-682023b84d6c"],
+    "emphasised_organisations": [
+      "de4e9dc6-cca4-43af-a594-682023b84d6c"
+    ],
     "withdrawn_notice": {
       "explanation": "<div class=\"govspeak\"><p>This information has been archived as it is now out of date. For current information please go to <a rel=\"external\" href=\"http://www.hse.gov.uk/reach/\">http://www.hse.gov.uk/reach/</a></p></div>",
       "withdrawn_at": "2015-01-28T13:05:30Z"

@@ -20,7 +20,9 @@
     "updated_at": "2015-10-15T11:00:20+01:00",
     "reviewed_at": "2015-10-15T11:00:20+01:00",
     "change_description": "Latest Update - this advice has been reviewed and re-issued without amendment",
-    "alert_status": [],
+    "alert_status": [
+
+    ],
     "email_signup_link": "https://public.govdelivery.com/accounts/UKGOVUK/subscriber/topics?qsp=TRAVEL",
     "image": {
       "url": "https://assets.digital.cabinet-office.gov.uk/media/513a0efbed915d425e000002/120613_Albania_Travel_Advice_WEB_Ed2_jpeg.jpg",
@@ -147,9 +149,10 @@
     "max_cache_time": 10,
     "publishing_request_id": "2546-1460985144476-19268198-3242"
   },
-  "format": "travel_advice",
   "locale": "en",
-  "need_ids": ["101191"],
+  "need_ids": [
+    "101191"
+  ],
   "public_updated_at": "2015-10-15T11:00:20+01:00",
   "publishing_app": "travel-advice-publisher",
   "rendering_app": "frontend",
@@ -158,5 +161,7 @@
       "path": "/foreign-travel-advice/albania",
       "type": "exact"
     }
-  ]
+  ],
+  "document_type": "travel_advice",
+  "schema_name": "travel_advice"
 }

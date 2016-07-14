@@ -2,8 +2,9 @@
   "base_path": "/government/policies/employment/email-signup",
   "title": "Employment",
   "description": "",
-  "format": "email_alert_signup",
-  "need_ids": [],
+  "need_ids": [
+
+  ],
   "locale": "en",
   "public_updated_at": "2015-04-14T10:56:00.000+00:00",
   "publishing_app": "whitehall",
@@ -31,5 +32,7 @@
       "path": "/government/policies/employment/email-signup",
       "type": "exact"
     }
-  ]
+  ],
+  "document_type": "email_alert_signup",
+  "schema_name": "email_alert_signup"
 }
