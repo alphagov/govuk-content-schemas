@@ -4,86 +4,12 @@
   "additionalProperties": false,
   "required": [
     "base_path",
-    "format",
     "title",
     "details",
     "locale",
-    "content_id",
-    "document_type",
-    "schema_name"
+    "content_id"
   ],
   "properties": {
-    "format": {
-      "type": "string",
-      "enum": [
-        "detailed_guide"
-      ]
-    },
-    "base_path": {
-      "$ref": "#/definitions/absolute_path"
-    },
-    "title": {
-      "type": "string"
-    },
-    "description": {
-      "anyOf": [
-        {
-          "type": "string"
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
-    "public_updated_at": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "first_published_at": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "publishing_app": {
-      "type": "string"
-    },
-    "rendering_app": {
-      "type": "string"
-    },
-    "locale": {
-      "type": "string"
-    },
-    "need_ids": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
-    },
-    "analytics_identifier": {
-      "$ref": "#/definitions/analytics_identifier"
-    },
-    "phase": {
-      "description": "The service design phase of this content item - https://www.gov.uk/service-manual/phases",
-      "type": "string",
-      "enum": [
-        "alpha",
-        "beta",
-        "live"
-      ]
-    },
-    "details": {
-      "$ref": "#/definitions/details"
-    },
-    "withdrawn_notice": {
-      "$ref": "#/definitions/withdrawn_notice"
-    },
-    "content_id": {
-      "$ref": "#/definitions/guid"
-    },
-    "last_edited_at": {
-      "type": "string",
-      "format": "date-time",
-      "description": "Last time when the content recieved a major or minor update."
-    },
     "links": {
       "type": "object",
       "additionalProperties": false,
@@ -123,21 +49,15 @@
         }
       }
     },
-    "document_type": {
-      "type": "string"
-    },
-    "schema_name": {
-      "type": "string",
-      "enum": [
-        "detailed_guide"
-      ]
-    },
     "expanded_links": {
       "type": "object"
     },
     "updated_at": {
       "type": "string",
       "format": "date-time"
+    },
+    "base_path": {
+      "$ref": "#/definitions/absolute_path"
     }
   },
   "definitions": {

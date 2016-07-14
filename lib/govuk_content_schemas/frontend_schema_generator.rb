@@ -41,7 +41,7 @@ private
   end
 
   def required_properties
-    required = @publisher_schema.schema.fetch('oneOf', []).map { |s| s.fetch('required', []) }.flatten.uniq
+    required = @publisher_schema.schema.fetch('required', [])
     if required.empty?
       []
     else
