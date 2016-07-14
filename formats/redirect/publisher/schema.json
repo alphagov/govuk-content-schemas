@@ -3,7 +3,6 @@
   "type": "object",
   "additionalProperties": false,
   "required": [
-    "format",
     "publishing_app",
     "redirects",
     "base_path",
@@ -17,6 +16,13 @@
       "$ref": "#/definitions/guid"
     },
     "format": {
+      "description": "DEPRECATED: This field will be removed by Tijmen.",
+      "enum": [ "redirect" ]
+    },
+    "document_type": {
+      "enum": [ "redirect" ]
+    },
+    "schema_name": {
       "enum": [ "redirect" ]
     },
     "publishing_app": {
