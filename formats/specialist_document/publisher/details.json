@@ -35,22 +35,54 @@
     "any_metadata": {
       "type": "object",
       "oneOf": [
-        { "$ref": "#/definitions/aaib_report_metadata" },
-        { "$ref": "#/definitions/asylum_support_decision_metadata" },
-        { "$ref": "#/definitions/cma_case_metadata" },
-        { "$ref": "#/definitions/countryside_stewardship_grant_metadata" },
-        { "$ref": "#/definitions/dfid_research_output_metadata" },
-        { "$ref": "#/definitions/drug_safety_update_metadata" },
-        { "$ref": "#/definitions/employment_appeal_tribunal_decision_metadata" },
-        { "$ref": "#/definitions/employment_tribunal_decision_metadata" },
-        { "$ref": "#/definitions/european_structural_investment_fund_metadata" },
-        { "$ref": "#/definitions/international_development_fund_metadata" },
-        { "$ref": "#/definitions/maib_report_metadata" },
-        { "$ref": "#/definitions/medical_safety_alert_metadata" },
-        { "$ref": "#/definitions/raib_report_metadata" },
-        { "$ref": "#/definitions/tax_tribunal_decision_metadata" },
-        { "$ref": "#/definitions/utaac_decision_metadata" },
-        { "$ref": "#/definitions/vehicle_recalls_and_faults_alert_metadata" }
+        {
+          "$ref": "#/definitions/aaib_report_metadata"
+        },
+        {
+          "$ref": "#/definitions/asylum_support_decision_metadata"
+        },
+        {
+          "$ref": "#/definitions/cma_case_metadata"
+        },
+        {
+          "$ref": "#/definitions/countryside_stewardship_grant_metadata"
+        },
+        {
+          "$ref": "#/definitions/dfid_research_output_metadata"
+        },
+        {
+          "$ref": "#/definitions/drug_safety_update_metadata"
+        },
+        {
+          "$ref": "#/definitions/employment_appeal_tribunal_decision_metadata"
+        },
+        {
+          "$ref": "#/definitions/employment_tribunal_decision_metadata"
+        },
+        {
+          "$ref": "#/definitions/european_structural_investment_fund_metadata"
+        },
+        {
+          "$ref": "#/definitions/international_development_fund_metadata"
+        },
+        {
+          "$ref": "#/definitions/maib_report_metadata"
+        },
+        {
+          "$ref": "#/definitions/medical_safety_alert_metadata"
+        },
+        {
+          "$ref": "#/definitions/raib_report_metadata"
+        },
+        {
+          "$ref": "#/definitions/tax_tribunal_decision_metadata"
+        },
+        {
+          "$ref": "#/definitions/utaac_decision_metadata"
+        },
+        {
+          "$ref": "#/definitions/vehicle_recalls_and_faults_alert_metadata"
+        }
       ]
     },
     "nested_headers": {
@@ -324,6 +356,7 @@
               "AU",
               "AT",
               "AZ",
+              "BS",
               "BH",
               "BD",
               "BB",
@@ -353,17 +386,16 @@
               "KM",
               "CG",
               "CD",
+              "CK",
               "CR",
               "HR",
               "CU",
               "CY",
               "CZ",
-              "CS",
               "DK",
               "DJ",
               "DM",
               "DO",
-              "DD",
               "TL",
               "EC",
               "EG",
@@ -376,6 +408,7 @@
               "FI",
               "FR",
               "GA",
+              "GM",
               "GE",
               "DE",
               "GH",
@@ -487,8 +520,6 @@
               "TJ",
               "TZ",
               "TH",
-              "BS",
-              "GM",
               "TG",
               "TO",
               "TT",
@@ -496,7 +527,6 @@
               "TR",
               "TM",
               "TV",
-              "SU",
               "UG",
               "UA",
               "AE",
@@ -509,7 +539,6 @@
               "VE",
               "VN",
               "YE",
-              "YU",
               "ZM",
               "ZW"
             ]
