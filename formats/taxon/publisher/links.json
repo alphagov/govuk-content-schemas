@@ -2,5 +2,10 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "additionalProperties": false,
-  "properties": {}
+  "properties": {
+    "taxon_parents": {
+      "description": "The list of taxon parents.",
+      "$ref": "#/definitions/guid_list"
+    }
+  }
 }

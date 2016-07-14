@@ -7,6 +7,24 @@
   "locale": "en",
   "details": {},
   "links": {
+    "taxon_parents": [
+      {
+        "content_id": "f6eef5ca-be55-41b2-98be-f72b3e649b84",
+        "base_path": "/alpha-taxonomy/curriculum-and-qualifications",
+        "title": "Curriculum and qualifications",
+        "api_url": "https://www.gov.uk/api/content/alpha-taxonomy/curriculum-and-qualifications",
+        "web_url": "https://www.gov.uk/alpha-taxonomy/curriculum-and-qualifications",
+        "locale": "en"
+      },
+      {
+        "content_id": "6b404e13-f681-44cb-b51f-bff084710fd9",
+        "base_path": "/alpha-taxonomy/driving-and-vehicles",
+        "title": "Driving and vehicles",
+        "api_url": "https://www.gov.uk/api/content/alpha-taxonomy/driving-and-vehicles",
+        "web_url": "https://www.gov.uk/alpha-taxonomy/driving-and-vehicles",
+        "locale": "en"
+      }
+    ],
     "parent": [
       {
         "content_id": "f6eef5ca-be55-41b2-98be-f72b3e649b84",
