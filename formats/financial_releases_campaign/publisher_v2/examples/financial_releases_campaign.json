@@ -4,7 +4,6 @@
   "description": "Campaign page for financial press releases",
   "locale": "en",
   "public_updated_at": "2015-12-07T11:22:21.000Z",
-  "format": "financial_releases_campaign",
   "publishing_app": "share-sale-publisher",
   "rendering_app": "email-campaign-frontend",
   "phase": "live",
@@ -23,7 +22,7 @@
         "content": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum <a href=\"/lloydsshares\">www.gov.uk/lloydsshares</a>.</p>\n"
       }
     ],
-    "body":  [
+    "body": [
       {
         "content_type": "text/govspeak",
         "content": "Vis nostro intellegebat at. Impedit pericula duo ne, pri nonumes ullamcorper in. Oratio invidunt et his, ele, at principes similique nam. No eam eleifend euripidis intellegat, sensibus theophrastus consectetuer.\nSumo solum quaestio has cu. Eu oblique euismod deleniti eum, congue necessitatibus ne sit.\nNo eum mutat soleat definiebas, ut argumentum efficiantur delicatissimi ius. At feugait adversarium vel. At cum mutat numquam graecis. Sit appareat adolescens constituto eu, te eleifend postulant theophrastus eam\nIf you would like to receive email updates for daily ice cream flavours, send us a hand written note.\nVel ut iudico dolore. Vix ne diam iuvaret referrentur, eam nisl accusamus temporibus ne.If you like yoga [click here](/lloydsfactsheet)."
@@ -74,6 +73,10 @@
       "type": "exact"
     }
   ],
-  "redirects": [],
-  "update_type": "major"
+  "redirects": [
+
+  ],
+  "update_type": "major",
+  "document_type": "financial_releases_campaign",
+  "schema_name": "financial_releases_campaign"
 }

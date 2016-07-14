@@ -1,22 +1,26 @@
 {
   "publishing_app": "service-manual-publisher",
   "rendering_app": "government-frontend",
-  "public_updated_at" : "2015-10-09T08:17:10+00:00",
-  "format": "service_manual_guide",
+  "public_updated_at": "2015-10-09T08:17:10+00:00",
   "locale": "en",
-  "details" : {
-    "body" : "<h2 id=\"what\">What it is, why it works and how to do it</h2>\n<p>Agile methodologies will help you and your team to build world-class, user-centred services quickly and affordably.</p>\n",
-    "header_links" : [
-      { "title" : "What is it, why it works and how to do it", "href" : "#what-is-it-why-it-works-and-how-to-do-it" }
+  "details": {
+    "body": "<h2 id=\"what\">What it is, why it works and how to do it</h2>\n<p>Agile methodologies will help you and your team to build world-class, user-centred services quickly and affordably.</p>\n",
+    "header_links": [
+      {
+        "title": "What is it, why it works and how to do it",
+        "href": "#what-is-it-why-it-works-and-how-to-do-it"
+      }
     ]
   },
-  "base_path" : "/service-manual/agile",
-  "description" : "What agile is, why it works and how to do it",
-  "title" : "Agile",
+  "base_path": "/service-manual/agile",
+  "description": "What agile is, why it works and how to do it",
+  "title": "Agile",
   "routes": [
     {
       "path": "/service-manual/agile",
       "type": "exact"
     }
-  ]
+  ],
+  "document_type": "service_manual_guide",
+  "schema_name": "service_manual_guide"
 }

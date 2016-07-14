@@ -2,7 +2,6 @@
   "base_path": "/lloyds-share-offer",
   "title": "Financial Release",
   "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation",
-  "format": "financial_release",
   "locale": "en",
   "public_updated_at": "2015-12-01T00:00:00.000Z",
   "publishing_app": "share-sale-publisher",
@@ -24,7 +23,7 @@
       "alt_text": "lloyds-logo",
       "url": "pressrelease.jpg"
     },
-    "body":  [
+    "body": [
       {
         "content_type": "text/govspeak",
         "content": "Vis nostro intellegebat at. Impedit pericula duo ne, pri nonumes ullamcorper in. Oratio invidunt et his, ele, at principes similique nam. No eam eleifend euripidis intellegat, sensibus theophrastus consectetuer.\n\nVis nostro intellegebat at. Impedit pericula duo ne, pri nonumes ullamcorper in. Oratio invidunt et his, ele, at principes similique nam. No eam eleifend euripidis intellegat, sensibus theophrastus consectetuer.\n\nSumo solum quaestio has cu. Eu oblique euismod deleniti eum, congue necessitatibus ne sit.\n\nNo eum mutat soleat definiebas, ut argumentum efficiantur delicatissimi ius. At feugait adversarium vel. At cum mutat numquam graecis. Sit appareat adolescens constituto eu, te eleifend postulant theophrastus eam.\n\nIf you would like to receive email updates for daily ice cream flavours, send us a hand written note.\n\nSumo solum quaestio has cu. Eu oblique euismod deleniti eum, congue necessitatibus ne sit.\n\nVel ut iudico dolore. Vix ne diam iuvaret referrentur, eam nisl accusamus temporibus ne. This can be found at [www.gov.uk/financial-release-campaign](/financial-release-campaign)."
@@ -51,7 +50,10 @@
       "type": "exact"
     }
   ],
-  "redirects": [],
-  "update_type": "major"
-}
+  "redirects": [
 
+  ],
+  "update_type": "major",
+  "document_type": "financial_release",
+  "schema_name": "financial_release"
+}

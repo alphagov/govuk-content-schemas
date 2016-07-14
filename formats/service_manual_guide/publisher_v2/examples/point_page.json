@@ -1,23 +1,27 @@
 {
   "publishing_app": "service-manual-publisher",
   "rendering_app": "government-frontend",
-  "public_updated_at" : "2015-10-09T08:17:10+00:00",
-  "format": "service_manual_guide",
+  "public_updated_at": "2015-10-09T08:17:10+00:00",
   "locale": "en",
-  "details" : {
+  "details": {
     "show_description": true,
     "body": "<h2>Why it's in the standard</h2>\n<p>You need to know the people who use your service (your users) and what they want to do (their user needs) if you want to build a service that works for them.</p>\n",
-    "header_links" : [
-      { "title" : "Why it's in the standard", "href" : "#why-its-in-the-standard" }
+    "header_links": [
+      {
+        "title": "Why it's in the standard",
+        "href": "#why-its-in-the-standard"
+      }
     ]
   },
-  "base_path" : "/service-standard/service-standard/understand-user-needs",
-  "description" : "Understand user needs. Research to develop a deep knowledge of who the service users are and what that means for the design of the service.",
-  "title" : "1. Understand user needs",
+  "base_path": "/service-standard/service-standard/understand-user-needs",
+  "description": "Understand user needs. Research to develop a deep knowledge of who the service users are and what that means for the design of the service.",
+  "title": "1. Understand user needs",
   "routes": [
     {
       "path": "/service-standard/service-standard/understand-user-needs",
       "type": "exact"
     }
-  ]
+  ],
+  "document_type": "service_manual_guide",
+  "schema_name": "service_manual_guide"
 }

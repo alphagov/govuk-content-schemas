@@ -1,6 +1,5 @@
 {
   "content_id": "f779f980-403d-473b-80aa-f038a58c3107",
-  "format": "redirect",
   "base_path": "/406beacon",
   "publishing_app": "short-url-manager",
   "update_type": "minor",
@@ -10,5 +9,7 @@
       "type": "exact",
       "destination": "/maritime-safety-weather-and-navigation/register-406-mhz-beacons?query=answer#fragment"
     }
-  ]
+  ],
+  "document_type": "redirect",
+  "schema_name": "redirect"
 }

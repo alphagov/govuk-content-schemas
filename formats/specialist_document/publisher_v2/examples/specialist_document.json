@@ -2,7 +2,6 @@
   "base_path": "/cma-cases/example-cma-case",
   "title": "Example CMA Case",
   "description": "This is the summary of an example CMA case",
-  "format": "specialist_document",
   "public_updated_at": "2015-02-11T13:45:00.000+00:00",
   "publishing_app": "specialist-publisher",
   "rendering_app": "specialist-frontend",
@@ -17,7 +16,8 @@
       {
         "content_type": "text/govspeak",
         "content": "## Header\r\n\r\nThis is the long body of an example CMA case\r\n\r\nThis is the long body of an example CMA case\r\n\r\nThis is the long body of an example CMA case\r\n\r\nThis is the long body of an example CMA case\r\n\r\nThis is the long body of an example CMA case\r\n\r\nThis is the long body of an example CMA case\r\n\r\nThis is the long body of an example CMA case\r\n\r\nThis is the long body of an example CMA case\r\n\r\nThis is the long body of an example CMA case\r\n\r\nThis is the long body of an example CMA case"
-      }],
+      }
+    ],
     "attachments": [
       {
         "content_id": "0aa1aa33-36b9-4677-a643-52b9034a1c32",
@@ -36,24 +36,32 @@
         "updated_at": "2015-02-13T13:45:00.000+00:00"
       }
     ],
-    "change_history": [],
+    "change_history": [
+
+    ],
     "metadata": {
       "bulk_published": false,
       "opened_date": "2014-01-01",
       "closed_date": "2015-02-02",
       "case_type": "ca98-and-civil-cartels",
       "case_state": "open",
-      "market_sector": ["energy"],
+      "market_sector": [
+        "energy"
+      ],
       "outcome_type": "ca98-commitment",
       "document_type": "cma_case"
     },
     "max_cache_time": 10
   },
- "routes": [
+  "routes": [
     {
       "path": "/cma-cases/example-cma-case",
       "type": "exact"
     }
   ],
-  "redirects": []
+  "redirects": [
+
+  ],
+  "document_type": "cma_case",
+  "schema_name": "specialist_document"
 }

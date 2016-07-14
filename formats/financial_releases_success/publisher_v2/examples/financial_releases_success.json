@@ -3,7 +3,6 @@
   "locale": "en",
   "public_updated_at": "2015-12-07T11:22:21.000Z",
   "title": "dummy title content for success page",
-  "format": "financial_releases_success",
   "publishing_app": "share-sale-publisher",
   "rendering_app": "email-campaign-frontend",
   "phase": "live",
@@ -18,6 +17,10 @@
       "type": "exact"
     }
   ],
-  "redirects": [],
-  "update_type": "major"
+  "redirects": [
+
+  ],
+  "update_type": "major",
+  "document_type": "financial_releases_success",
+  "schema_name": "financial_releases_success"
 }

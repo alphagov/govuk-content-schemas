@@ -3,16 +3,17 @@
   "details": {
     "publish_time": "2014-12-17T09:30:00+00:00"
   },
-  "format": "coming_soon",
   "locale": "en",
   "title": "Coming soon",
   "publishing_app": "whitehall",
   "rendering_app": "government-frontend",
-   "routes": [
+  "routes": [
     {
       "path": "/government/case-studies/a-random-title-for-a-random-document",
       "type": "exact"
     }
   ],
-  "public_updated_at": "2014-12-15T12:31:00+00:00"
+  "public_updated_at": "2014-12-15T12:31:00+00:00",
+  "document_type": "coming_soon",
+  "schema_name": "coming_soon"
 }
