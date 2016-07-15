@@ -225,6 +225,10 @@
             "$ref": "#/definitions/asset_link"
           }
         },
+        "uploaded_attachment": {
+          "type": "boolean",
+          "description": "This is true if the last update to the document uploaded an attachment."
+        },
         "metadata": {
           "$ref": "#/definitions/any_metadata"
         },
