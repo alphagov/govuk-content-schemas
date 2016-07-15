@@ -29,6 +29,10 @@
     },
     "change_history": {
       "$ref": "#/definitions/change_history"
+    },
+    "temporary_update_type": {
+      "type": "boolean",
+      "description": "Indicates that the user should choose a new update type on the next save."
     }
   },
   "definitions": {
