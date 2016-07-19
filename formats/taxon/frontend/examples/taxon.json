@@ -7,7 +7,7 @@
   "locale": "en",
   "details": {},
   "links": {
-    "taxon_parents": [
+    "parent_taxons": [
       {
         "content_id": "f6eef5ca-be55-41b2-98be-f72b3e649b84",
         "base_path": "/alpha-taxonomy/curriculum-and-qualifications",

@@ -88,7 +88,7 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "taxon_parents": {
+        "parent_taxons": {
           "$ref": "#/definitions/frontend_links"
         },
         "alpha_taxons": {
