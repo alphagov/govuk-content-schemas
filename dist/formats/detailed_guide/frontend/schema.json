@@ -94,6 +94,9 @@
         "related_guides": {
           "$ref": "#/definitions/frontend_links"
         },
+        "related_policies": {
+          "$ref": "#/definitions/frontend_links"
+        },
         "related_mainstream": {
           "$ref": "#/definitions/frontend_links"
         },

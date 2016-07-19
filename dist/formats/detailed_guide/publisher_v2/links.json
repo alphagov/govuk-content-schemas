@@ -16,6 +16,9 @@
         "related_guides": {
           "$ref": "#/definitions/guid_list"
         },
+        "related_policies": {
+          "$ref": "#/definitions/guid_list"
+        },
         "related_mainstream": {
           "$ref": "#/definitions/guid_list"
         },
