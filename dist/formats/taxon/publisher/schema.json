@@ -21,7 +21,7 @@
           "description": "The list of taxon parents.",
           "$ref": "#/definitions/guid_list"
         },
-        "alpha_taxons": {
+        "taxons": {
           "description": "Prototype-stage taxonomy label for this content item",
           "$ref": "#/definitions/guid_list"
         },

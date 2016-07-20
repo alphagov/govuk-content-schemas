@@ -64,7 +64,7 @@
           "description": "References an array of 'service_manual_topic's. Not to be confused with 'topics'.",
           "$ref": "#/definitions/guid_list"
         },
-        "alpha_taxons": {
+        "taxons": {
           "description": "Prototype-stage taxonomy label for this content item",
           "$ref": "#/definitions/guid_list"
         },
