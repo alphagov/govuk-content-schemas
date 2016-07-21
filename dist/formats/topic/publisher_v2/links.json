@@ -18,7 +18,7 @@
           "description": "Includes all content ids referenced in 'details'. This is a temporary measure to expand content ids for frontends which is planned to be replaced by a dependency resolution service.",
           "$ref": "#/definitions/guid_list"
         },
-        "alpha_taxons": {
+        "taxons": {
           "description": "Prototype-stage taxonomy label for this content item",
           "$ref": "#/definitions/guid_list"
         },

@@ -94,7 +94,7 @@
         "press_releases": {
           "$ref": "#/definitions/frontend_links"
         },
-        "alpha_taxons": {
+        "taxons": {
           "$ref": "#/definitions/frontend_links"
         },
         "mainstream_browse_pages": {

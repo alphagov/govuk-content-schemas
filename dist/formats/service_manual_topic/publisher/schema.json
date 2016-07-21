@@ -58,7 +58,7 @@
           "description": "References a page of a GDS community responsible for maintaining the guide e.g. Agile delivery community, Design community",
           "$ref": "#/definitions/guid_list"
         },
-        "alpha_taxons": {
+        "taxons": {
           "description": "Prototype-stage taxonomy label for this content item",
           "$ref": "#/definitions/guid_list"
         },
