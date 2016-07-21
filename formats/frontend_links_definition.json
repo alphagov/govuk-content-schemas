@@ -39,7 +39,7 @@
         "format": "uri"
       },
       "locale": {
-        "type": "string"
+        "$ref": "#/definitions/locale"
       },
       "analytics_identifier": {
         "$ref": "#/definitions/analytics_identifier"
