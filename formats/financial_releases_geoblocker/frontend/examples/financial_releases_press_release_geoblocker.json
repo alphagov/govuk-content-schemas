@@ -11,5 +11,7 @@
     "footer_legal_disclaimer": "This notice and its content are not and should not be deemed to be an offer or invitation to engage in any investment activity. The securities have not been and will not be registered under the U.S. Securities Act of 1933 and may not be offered or sold in the U.S. absent registration or an exemption therefrom."
   },
   "schema_name": "financial_releases_geoblocker",
-  "document_type": "financial_releases_geoblocker"
+  "document_type": "financial_releases_geoblocker",
+  "links": {
+  }
 }

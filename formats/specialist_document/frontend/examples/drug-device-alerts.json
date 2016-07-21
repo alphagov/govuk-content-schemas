@@ -131,5 +131,7 @@
   },
   "public_updated_at": "2015-07-06T13:38:42+00:00",
   "schema_name": "specialist_document",
-  "document_type": "medical_safety_alert"
+  "document_type": "medical_safety_alert",
+  "links": {
+  }
 }

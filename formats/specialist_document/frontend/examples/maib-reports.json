@@ -62,5 +62,7 @@
   "title": "Collision between chemical tanker Orakai and beam trawler Margriet",
   "public_updated_at": "2015-07-09T09:13:18+00:00",
   "schema_name": "specialist_document",
-  "document_type": "maib_report"
+  "document_type": "maib_report",
+  "links": {
+  }
 }

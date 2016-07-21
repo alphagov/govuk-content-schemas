@@ -72,5 +72,7 @@
   },
   "public_updated_at": "2015-07-10T13:09:46+00:00",
   "schema_name": "specialist_document",
-  "document_type": "cma_case"
+  "document_type": "cma_case",
+  "links": {
+  }
 }

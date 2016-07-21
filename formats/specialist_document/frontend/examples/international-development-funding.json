@@ -23,7 +23,9 @@
     "metadata": {
       "bulk_published": false,
       "fund_state": "open",
-      "location": [],
+      "location": [
+
+      ],
       "development_sector": [
         "agriculture",
         "climate-change",
@@ -106,5 +108,7 @@
   "title": "Forest Governance, Markets and Climate 2015 Grants Round",
   "public_updated_at": "2015-07-09T12:00:46+00:00",
   "schema_name": "specialist_document",
-  "document_type": "international_development_fund"
+  "document_type": "international_development_fund",
+  "links": {
+  }
 }

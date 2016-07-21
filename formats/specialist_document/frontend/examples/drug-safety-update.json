@@ -57,5 +57,7 @@
   "title": "SGLT2 inhibitors (canagliflozin, dapagliflozin, empagliflozin): risk of diabetic ketoacidosis",
   "public_updated_at": "2015-07-08T14:08:17+00:00",
   "schema_name": "specialist_document",
-  "document_type": "drug_safety_update"
+  "document_type": "drug_safety_update",
+  "links": {
+  }
 }
