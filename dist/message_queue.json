@@ -3220,7 +3220,8 @@
                     "investigation-report",
                     "bulletin",
                     "interim-report",
-                    "discontinuation-report"
+                    "discontinuation-report",
+                    "safety-digest"
                   ]
                 },
                 "date_of_occurrence": {
