@@ -17,7 +17,9 @@
         "title": "Why it's in the standard",
         "href": "#why-its-in-the-standard"
       }
-    ]
+    ],
+    "latest_change_note": "This is our latest change",
+    "latest_change_reason_for_change": "This is the reason for our latest change"
   },
   "links": {
     "parent": [
