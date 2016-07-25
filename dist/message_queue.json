@@ -2061,6 +2061,12 @@
                 ]
               }
             },
+            "latest_change_note": {
+              "type": "string"
+            },
+            "latest_change_reason_for_change": {
+              "type": "string"
+            },
             "change_history": {
               "$ref": "#/definitions/change_history"
             }

@@ -10,7 +10,9 @@
         "title": "What is it, why it works and how to do it",
         "href": "#what-is-it-why-it-works-and-how-to-do-it"
       }
-    ]
+    ],
+    "latest_change_note": "This is our latest change",
+    "latest_change_reason_for_change": "This is the reason for our latest change"
   },
   "links": {
     "content_owners": [

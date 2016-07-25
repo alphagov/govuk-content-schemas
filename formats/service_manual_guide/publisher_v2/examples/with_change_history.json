@@ -11,6 +11,8 @@
         "href": "#what-is-it-why-it-works-and-how-to-do-it"
       }
     ],
+    "latest_change_note": "This is our latest change",
+    "latest_change_reason_for_change": "This is the reason for our latest change",
     "change_history": [
       {
         "public_timestamp": "2015-10-09T08:17:10+00:00",
