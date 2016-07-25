@@ -147,5 +147,7 @@
   },
   "public_updated_at": "2015-04-02T11:07:32+00:00",
   "schema_name": "specialist_document",
-  "document_type": "countryside_stewardship_grant"
+  "document_type": "countryside_stewardship_grant",
+  "links": {
+  }
 }

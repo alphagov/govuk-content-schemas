@@ -45,7 +45,7 @@ private
     if required.empty?
       []
     else
-      ['base_path'] + (required - INTERNAL_PROPERTIES - OPTIONAL_PROPERTIES)
+      %w[base_path links] + (required - INTERNAL_PROPERTIES - OPTIONAL_PROPERTIES)
     end
   end
 

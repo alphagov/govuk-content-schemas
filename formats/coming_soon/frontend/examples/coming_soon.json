@@ -9,5 +9,7 @@
   "title": "Coming soon",
   "public_updated_at": "2014-12-15T12:31:00+00:00",
   "schema_name": "coming_soon",
-  "document_type": "coming_soon"
+  "document_type": "coming_soon",
+  "links": {
+  }
 }

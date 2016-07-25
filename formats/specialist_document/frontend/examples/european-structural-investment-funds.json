@@ -123,5 +123,7 @@
   "title": "CLOSED Access to employment: Tees Valley",
   "public_updated_at": "2015-06-01T08:26:26+00:00",
   "schema_name": "specialist_document",
-  "document_type": "esi_fund"
+  "document_type": "esi_fund",
+  "links": {
+  }
 }

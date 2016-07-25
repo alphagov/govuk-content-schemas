@@ -10,5 +10,7 @@
     "body": "<p>Dummy body content to explain why you are not permitted to view Lloyds campaign if you are not from the correct country"
   },
   "schema_name": "financial_releases_geoblocker",
-  "document_type": "financial_releases_geoblocker"
+  "document_type": "financial_releases_geoblocker",
+  "links": {
+  }
 }

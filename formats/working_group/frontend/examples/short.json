@@ -4,7 +4,9 @@
   "title": "Aviation statistics team",
   "description": "",
   "format": "working_group",
-  "need_ids": [],
+  "need_ids": [
+
+  ],
   "locale": "en",
   "updated_at": "2015-12-08T15:26:28.258Z",
   "public_updated_at": "2015-04-15T16:12:55.000+00:00",
@@ -12,5 +14,7 @@
     "email": "aviation.stats@dft.gsi.gov.uk"
   },
   "schema_name": "working_group",
-  "document_type": "working_group"
+  "document_type": "working_group",
+  "links": {
+  }
 }

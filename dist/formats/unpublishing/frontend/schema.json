@@ -4,6 +4,7 @@
   "additionalProperties": false,
   "required": [
     "base_path",
+    "links",
     "format",
     "title",
     "details",

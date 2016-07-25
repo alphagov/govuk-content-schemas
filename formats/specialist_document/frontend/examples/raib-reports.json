@@ -42,5 +42,7 @@
   },
   "public_updated_at": "2015-06-24T08:59:35+00:00",
   "schema_name": "specialist_document",
-  "document_type": "raib_report"
+  "document_type": "raib_report",
+  "links": {
+  }
 }

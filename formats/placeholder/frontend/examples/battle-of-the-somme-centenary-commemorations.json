@@ -5,9 +5,14 @@
   "description": "",
   "format": "placeholder_topical_event",
   "locale": "en",
-  "need_ids": [],
+  "need_ids": [
+
+  ],
   "public_updated_at": "2015-07-04T11:32:28.000+01:00",
-  "details": {},
+  "details": {
+  },
   "schema_name": "placeholder_topical_event",
-  "document_type": "placeholder_topical_event"
+  "document_type": "placeholder_topical_event",
+  "links": {
+  }
 }
