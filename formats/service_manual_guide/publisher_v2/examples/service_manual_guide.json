@@ -9,6 +9,13 @@
         "title": "What is it, why it works and how to do it",
         "href": "#what-is-it-why-it-works-and-how-to-do-it"
       }
+    ],
+    "change_history": [
+      {
+        "public_timestamp": "2015-09-01T08:17:10+00:00",
+        "note": "Guidance created",
+        "reason_for_change": ""
+      }
     ]
   },
   "base_path": "/service-manual/agile",
