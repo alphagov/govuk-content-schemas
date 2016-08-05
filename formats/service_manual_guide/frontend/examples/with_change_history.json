@@ -13,12 +13,12 @@
     ],
     "change_history": [
       {
-        "public_timestamp": "2017-10-09T08:17:10+00:00",
+        "public_timestamp": "2015-10-07T08:17:10+00:00",
         "note": "This is a change",
         "reason_for_change": "This is our latest change"
       },
       {
-        "public_timestamp": "2016-01-09T08:17:10+00:00",
+        "public_timestamp": "2015-09-09T08:17:10+00:00",
         "note": "This is another change",
         "reason_for_change": "This is why we made this change\nand it has a second line of text"
       }
