@@ -3,7 +3,6 @@
   "type": "object",
   "additionalProperties": false,
   "required": [
-    "format",
     "publishing_app",
     "routes"
   ],
@@ -15,6 +14,12 @@
       "$ref": "#/definitions/guid"
     },
     "format": {
+      "enum": [ "special_route" ]
+    },
+    "schema_name": {
+      "enum": [ "special_route" ]
+    },
+    "document_type": {
       "enum": [ "special_route" ]
     },
     "publishing_app": {
