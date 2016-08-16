@@ -5,16 +5,18 @@
   "required": [
     "base_path",
     "links",
-    "format",
+    "document_type",
+    "schema_name",
     "title",
     "details",
     "locale",
-    "content_id",
-    "document_type",
-    "schema_name"
+    "content_id"
   ],
   "properties": {
-    "format": {
+    "document_type": {
+      "type": "string"
+    },
+    "schema_name": {
       "type": "string",
       "enum": [
         "financial_releases_success"
@@ -115,14 +117,8 @@
         }
       }
     },
-    "document_type": {
+    "format": {
       "type": "string"
-    },
-    "schema_name": {
-      "type": "string",
-      "enum": [
-        "financial_releases_success"
-      ]
     },
     "expanded_links": {
       "type": "object"
