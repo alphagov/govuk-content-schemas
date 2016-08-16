@@ -33,8 +33,9 @@
               "type": "object",
               "description": "The links used to match subscribers lists",
               "additionalProperties": false,
-              "properties": {
-                "countries": {
+              "maxProperties": 1,
+              "patternProperties": {
+                "^[a-z_]+$": {
                   "type": "array"
                 }
               }
