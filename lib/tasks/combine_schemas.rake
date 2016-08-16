@@ -11,14 +11,17 @@ CLEAN << "dist/message_queue.json"
 schema_reader = JSON::Schema::Reader.new(accept_file: true, accept_uri: false)
 
 hand_made_publisher_schemas = FileList.new("formats/*/publisher/schema.json")
+hand_made_frontend_schemas = FileList.new("formats/*/frontend/schema.json")
 
-rule %r{^dist/formats/.*/publisher(_v2)?/schema.json} => ->(f) { f.sub(%r{^dist/}, '') } do |t|
+rule %r{^dist/formats/.*/(frontend|publisher)(_v2)?/schema.json} => ->(f) { f.sub(%r{^dist/}, '') } do |t|
   FileUtils.mkdir_p t.name.pathmap("%d")
   FileUtils.cp t.source, t.name
 end
 
 task hand_made_publisher_schemas: hand_made_publisher_schemas.pathmap("dist/%p").add(
   hand_made_publisher_schemas.pathmap("dist/%p").pathmap("%{publisher,publisher_v2}p"))
+
+task hand_made_frontend_schemas: hand_made_frontend_schemas.pathmap("dist/%p")
 
 def sources_for_v1_schema(filename)
   Rake::FileList.new(
@@ -126,6 +129,7 @@ task combine_frontend_schemas: generated_frontend_formats.pathmap("dist/%p/schem
 
 task combine_publisher_schemas: %i{
   hand_made_publisher_schemas
+  hand_made_frontend_schemas
   combine_publisher_v1_schemas
   combine_publisher_v2_schemas
   combine_publisher_v2_links
