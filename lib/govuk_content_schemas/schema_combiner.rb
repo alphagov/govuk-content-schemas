@@ -77,13 +77,6 @@ private
     schema['oneOf'] = [
       {
         "properties" => {
-          "format" => format_with_name
-        }.merge(properties),
-        "required" => ['format'] + required,
-        "additionalProperties" => false
-      },
-      {
-        "properties" => {
           "document_type" => document_type,
           "schema_name" => format_with_name
         }.merge(properties),
