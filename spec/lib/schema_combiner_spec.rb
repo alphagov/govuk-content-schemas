@@ -27,20 +27,8 @@ RSpec.describe GovukContentSchemas::SchemaCombiner do
 
     it 'duplicates the metadata to add format and document_type/schema_name options' do
       expect(combined.schema).not_to have_key('properties')
-      prop1 = combined.schema['oneOf'][0]['properties']
-      expect(prop1.keys).to include('format')
-      prop2 = combined.schema['oneOf'][1]['properties']
+      prop2 = combined.schema['oneOf'][0]['properties']
       expect(prop2.keys).to include('schema_name', 'document_type')
-      expect(prop1.keys - ['format']).to eq(prop2.keys - ['document_type', 'schema_name'])
-    end
-
-    it 'explicitly defines the format name in the format property' do
-      expect(combined.schema['oneOf'][0]['properties']['format']).to eq(
-        {
-          "type" => "string",
-          "enum" => [format_name]
-        }
-      )
     end
 
     it 'strips the $schema key from the embedded details property' do
@@ -58,7 +46,7 @@ RSpec.describe GovukContentSchemas::SchemaCombiner do
 
     context "without a document_types schema" do
       it "allows any string in the document_type field" do
-        expect(combined.schema['oneOf'][1]['properties']['document_type']).to eq(
+        expect(combined.schema['oneOf'][0]['properties']['document_type']).to eq(
           {
             "type" => "string",
           }
@@ -90,7 +78,7 @@ RSpec.describe GovukContentSchemas::SchemaCombiner do
       }
 
       it "sets the allowed values for the document_type field" do
-        expect(combined.schema['oneOf'][1]['properties']['document_type']).to eq(document_types["document_type"])
+        expect(combined.schema['oneOf'][0]['properties']['document_type']).to eq(document_types["document_type"])
       end
     end
   end
@@ -112,7 +100,7 @@ RSpec.describe GovukContentSchemas::SchemaCombiner do
     end
 
     it "combines the v1 metadata with simple metadata and details and adds the format" do
-      expect(combined.schema['oneOf'][0]['properties'].keys).to match_array(['bar', 'body', 'format'])
+      expect(combined.schema['oneOf'][0]['properties'].keys).to match_array(['bar', 'body', 'document_type', 'schema_name'])
       expect(combined.schema['definitions']).to have_key('details')
     end
   end
