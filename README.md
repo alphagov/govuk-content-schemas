@@ -138,3 +138,4 @@ Not all fields for the frontend examples are defined in the schema, instead they
 
 - `schema_name`
 - `document_type`
+
