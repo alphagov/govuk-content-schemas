@@ -26,25 +26,7 @@
         "locale": "en",
         "public_updated_at": "2016-06-29T14:10:56.000Z",
         "title": "1. Understand user needs",
-        "web_url": "https://www.gov.uk/service-manual/service-standard/understand-user-needs",
-        "links": {
-          "parent": [
-            {
-              "analytics_identifier": null,
-              "api_url": "https://www.gov.uk/api/content/service-manual/service-standard",
-              "base_path": "/service-manual/service-standard",
-              "content_id": "00f693d4-866a-4fe6-a8d6-09cd7db8980b",
-              "description": null,
-              "document_type": "service_manual_service_standard",
-              "locale": "en",
-              "public_updated_at": "2016-06-30T13:28:52.610Z",
-              "schema_name": "service_manual_service_standard",
-              "title": "Digital Service Standard",
-              "web_url": "https://www.gov.uk/service-manual/service-standard",
-              "links": {}
-            }
-          ]
-        }
+        "web_url": "https://www.gov.uk/service-manual/service-standard/understand-user-needs"
       },
       {
         "analytics_identifier": null,
@@ -55,25 +37,7 @@
         "locale": "en",
         "public_updated_at": "2016-06-29T15:00:03.000Z",
         "title": "2. Do ongoing user research",
-        "web_url": "https://www.gov.uk/service-manual/service-standard/do-ongoing-user-research",
-        "links": {
-          "parent": [
-            {
-              "analytics_identifier": null,
-              "api_url": "https://www.gov.uk/api/content/service-manual/service-standard",
-              "base_path": "/service-manual/service-standard",
-              "content_id": "00f693d4-866a-4fe6-a8d6-09cd7db8980b",
-              "description": null,
-              "document_type": "service_manual_service_standard",
-              "locale": "en",
-              "public_updated_at": "2016-06-30T13:28:52.610Z",
-              "schema_name": "service_manual_service_standard",
-              "title": "Digital Service Standard",
-              "web_url": "https://www.gov.uk/service-manual/service-standard",
-              "links": {}
-            }
-          ]
-        }
+        "web_url": "https://www.gov.uk/service-manual/service-standard/do-ongoing-user-research"
       },
       {
         "analytics_identifier": null,
@@ -84,25 +48,7 @@
         "locale": "en",
         "public_updated_at": "2016-06-29T15:11:52.000Z",
         "title": "3. Have a multidisciplinary team",
-        "web_url": "https://www.gov.uk/service-manual/service-standard/have-a-multidisciplinary-team",
-        "links": {
-          "parent": [
-            {
-              "analytics_identifier": null,
-              "api_url": "https://www.gov.uk/api/content/service-manual/service-standard",
-              "base_path": "/service-manual/service-standard",
-              "content_id": "00f693d4-866a-4fe6-a8d6-09cd7db8980b",
-              "description": null,
-              "document_type": "service_manual_service_standard",
-              "locale": "en",
-              "public_updated_at": "2016-06-30T13:28:52.610Z",
-              "schema_name": "service_manual_service_standard",
-              "title": "Digital Service Standard",
-              "web_url": "https://www.gov.uk/service-manual/service-standard",
-              "links": {}
-            }
-          ]
-        }
+        "web_url": "https://www.gov.uk/service-manual/service-standard/have-a-multidisciplinary-team"
       }
     ],
     "available_translations": [
