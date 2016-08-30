@@ -1,25 +1,75 @@
 {
-  "format": "service_manual_service_standard",
+  "analytics_identifier": null,
   "base_path": "/service-manual/service-standard",
-  "content_id": "cd02b82d-c706-435c-a2fc-2dcabd168ef4",
-  "title": "Digital Service Standard",
-  "locale": "en",
-  "schema_name": "service_manual_service_standard",
+  "content_id": "00f693d4-866a-4fe6-a8d6-09cd7db8980b",
   "document_type": "service_manual_service_standard",
-  "details": {
-    "points": [
+  "first_published_at": "2016-06-29T14:56:50.000+00:00",
+  "format": "service_manual_service_standard",
+  "locale": "en",
+  "need_ids": [],
+  "phase": "beta",
+  "public_updated_at": "2016-06-30T13:28:52.000+00:00",
+  "publishing_app": "service-manual-publisher",
+  "rendering_app": "service-manual-frontend",
+  "schema_name": "service_manual_service_standard",
+  "title": "Digital Service Standard",
+  "updated_at": "2016-06-30T13:28:53.128Z",
+  "withdrawn_notice": {},
+  "links": {
+    "children": [
       {
+        "analytics_identifier": null,
+        "api_url": "https://www.gov.uk/api/content/service-manual/service-standard/understand-user-needs",
+        "base_path": "/service-manual/service-standard/understand-user-needs",
+        "content_id": "639bd981-ad5a-4160-a0fe-011bc7a71715",
+        "description": "Understand user needs. Research to develop a deep knowledge of who the service users are and what that means for the design of the service.",
+        "locale": "en",
+        "public_updated_at": "2016-06-29T14:10:56.000Z",
         "title": "1. Understand user needs",
-        "summary": "Summary goes here",
-        "base_path": "/service-manual/service-standard/understand-user-needs"
+        "web_url": "https://www.gov.uk/service-manual/service-standard/understand-user-needs"
       },
       {
+        "analytics_identifier": null,
+        "api_url": "https://www.gov.uk/api/content/service-manual/service-standard/do-ongoing-user-research",
+        "base_path": "/service-manual/service-standard/do-ongoing-user-research",
+        "content_id": "57ca5168-b6ce-4498-aecf-cca42f1ebd6b",
+        "description": "Put a plan in place for ongoing user research and usability testing to continuously seek feedback from users to improve the service.",
+        "locale": "en",
+        "public_updated_at": "2016-06-29T15:00:03.000Z",
         "title": "2. Do ongoing user research",
-        "summary": "Another summary goes here",
-        "base_path": "/service-manual/service-standard/do-ongoing-user-research"
+        "web_url": "https://www.gov.uk/service-manual/service-standard/do-ongoing-user-research"
+      },
+      {
+        "analytics_identifier": null,
+        "api_url": "https://www.gov.uk/api/content/service-manual/service-standard/have-a-multidisciplinary-team",
+        "base_path": "/service-manual/service-standard/have-a-multidisciplinary-team",
+        "content_id": "a08c46ce-d521-4422-ae9d-dad8925f9cda",
+        "description": "Put in place a sustainable multidisciplinary team that can design, build and operate the service, led by a suitably skilled and senior service manager with decision-making responsibility.",
+        "locale": "en",
+        "public_updated_at": "2016-06-29T15:11:52.000Z",
+        "title": "3. Have a multidisciplinary team",
+        "web_url": "https://www.gov.uk/service-manual/service-standard/have-a-multidisciplinary-team"
+      }
+    ],
+    "available_translations": [
+      {
+        "content_id": "00f693d4-866a-4fe6-a8d6-09cd7db8980b",
+        "title": "Digital Service Standard",
+        "base_path": "/service-manual/service-standard",
+        "description": null,
+        "api_url": "https://www.gov.uk/api/content/service-manual/service-standard",
+        "web_url": "https://www.gov.uk/service-manual/service-standard",
+        "locale": "en",
+        "public_updated_at": "2016-06-30T13:28:52.000+00:00",
+        "schema_name": "service_manual_service_standard",
+        "document_type": "service_manual_service_standard",
+        "analytics_identifier": null,
+        "links": {}
       }
     ]
   },
-  "links": {
+  "description": "The Digital Service Standard is a set of 18 criteria to help government create and run good digital services.",
+  "details": {
+    "body": "All public facing transactional services must meet the standard. It’s used by departments and the Government Digital Service to check whether a service is good enough for public use."
   }
 }

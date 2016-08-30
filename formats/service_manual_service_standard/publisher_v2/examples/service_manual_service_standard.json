@@ -14,20 +14,9 @@
       "type": "exact"
     }
   ],
-  "details": {
-    "points": [
-      {
-        "title": "1. Understand user needs",
-        "summary": "Summary goes here",
-        "base_path": "/service-manual/service-standard/understand-user-needs"
-      },
-      {
-        "title": "2. Do ongoing user research",
-        "summary": "Another summary goes here",
-        "base_path": "/service-manual/service-standard/do-ongoing-user-research"
-      }
-    ]
-  },
   "document_type": "service_manual_service_standard",
-  "schema_name": "service_manual_service_standard"
+  "schema_name": "service_manual_service_standard",
+  "details": {
+    "body": "All public facing transactional services must meet the standard. It’s used by departments and the Government Digital Service to check whether a service is good enough for public use."
+  }
 }
