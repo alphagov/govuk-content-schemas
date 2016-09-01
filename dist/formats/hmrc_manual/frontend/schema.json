@@ -5,23 +5,14 @@
   "required": [
     "base_path",
     "links",
-    "document_type",
-    "schema_name",
     "title",
     "details",
     "locale",
-    "content_id"
+    "content_id",
+    "document_type",
+    "schema_name"
   ],
   "properties": {
-    "document_type": {
-      "type": "string"
-    },
-    "schema_name": {
-      "type": "string",
-      "enum": [
-        "hmrc_manual"
-      ]
-    },
     "base_path": {
       "$ref": "#/definitions/absolute_path"
     },
@@ -116,6 +107,15 @@
           "$ref": "#/definitions/frontend_links"
         }
       }
+    },
+    "document_type": {
+      "type": "string"
+    },
+    "schema_name": {
+      "type": "string",
+      "enum": [
+        "hmrc_manual"
+      ]
     },
     "format": {
       "type": "string"

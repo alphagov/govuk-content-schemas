@@ -41,7 +41,8 @@ private
   end
 
   def required_properties
-    required = @publisher_schema.schema.fetch('oneOf', []).map { |s| s.fetch('required', []) }.flatten.uniq
+    required = @publisher_schema.schema['required'].to_a
+
     if required.empty?
       []
     else
@@ -50,7 +51,7 @@ private
   end
 
   def publisher_properties
-    @pub_properties ||= @publisher_schema.schema.fetch('oneOf', []).reduce({}) { |prop, s| prop.merge(s.fetch('properties', {})) }
+    @pub_properties ||= @publisher_schema.schema['properties'] || {}
   end
 
   def publisher_links
