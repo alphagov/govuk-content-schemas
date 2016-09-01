@@ -2073,6 +2073,12 @@
             }
           }
         },
+        "service_manual_homepage": {
+          "$schema": "http://json-schema.org/draft-04/schema#",
+          "type": "object",
+          "properties": {
+          }
+        },
         "service_manual_service_standard": {
           "$schema": "http://json-schema.org/draft-04/schema#",
           "type": "object",
@@ -4181,6 +4187,24 @@
             },
             "details": {
               "$ref": "#/definitions/details/definitions/service_manual_guide"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "schema_name": {
+              "enum": [
+                "service_manual_homepage"
+              ]
+            },
+            "format": {
+              "enum": [
+                "service_manual_homepage"
+              ]
+            },
+            "details": {
+              "$ref": "#/definitions/details/definitions/service_manual_homepage"
             }
           }
         },
