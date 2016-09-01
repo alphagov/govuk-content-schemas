@@ -6,7 +6,7 @@ module SchemaBuilderHelpers
     Pathname.new(File.expand_path("../../", __dir__))
   end
 
-  def build_schema(name, properties: nil, definitions: nil, required: nil, oneOf: nil)
+  def build_schema(name, properties: nil, definitions: nil, required: nil)
     schema = {
       "$schema" => "http://json-schema.org/draft-04/schema#",
       "type" => "object"
@@ -14,7 +14,6 @@ module SchemaBuilderHelpers
     schema['properties'] = properties if properties
     schema['definitions'] = definitions if definitions
     schema['required'] = required if required
-    schema['oneOf'] = oneOf if oneOf
     JSON::Schema.new(schema, URI.parse(name))
   end
 
@@ -36,7 +35,7 @@ module SchemaBuilderHelpers
     properties = build_string_properties(*properties)
     properties['links'] = build_publisher_links_schema(*link_names) if link_names
     definitions = build_string_properties('guid_list')
-    build_schema('schema.json', oneOf: [{'properties' => properties, 'required' => required_properties}], definitions: definitions)
+    build_schema('schema.json', properties: properties, required: required_properties, definitions: definitions)
   end
 
   def build_publisher_links_schema(*link_names)

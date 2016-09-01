@@ -71,19 +71,12 @@ private
   end
 
   def add_format_field(schema)
-    properties = schema.delete('properties')
-    required = schema.delete('required') || []
-    schema['additionalProperties'] = true
-    schema['oneOf'] = [
-      {
-        "properties" => {
-          "document_type" => document_type,
-          "schema_name" => format_with_name
-        }.merge(properties),
-        "required" => ['document_type', 'schema_name'] + required,
-        "additionalProperties" => false
-      }
-    ]
+    schema["properties"]["document_type"] = document_type
+    schema["properties"]["schema_name"] = format_with_name
+    schema["required"] ||= []
+    schema["required"] << "document_type"
+    schema["required"] << "schema_name"
+    schema
   end
 
   def format_with_name
