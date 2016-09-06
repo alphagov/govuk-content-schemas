@@ -24,8 +24,7 @@
       "bulk_published": false,
       "therapeutic_area": [
         "endocrinology-diabetology-metabolism"
-      ],
-      "document_type": "drug_safety_update"
+      ]
     },
     "max_cache_time": 10,
     "headers": [

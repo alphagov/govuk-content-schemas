@@ -27,8 +27,7 @@
         "fishing-vessel"
       ],
       "report_type": "investigation-report",
-      "date_of_occurrence": "2014-12-21",
-      "document_type": "maib_report"
+      "date_of_occurrence": "2014-12-21"
     },
     "max_cache_time": 10,
     "headers": [

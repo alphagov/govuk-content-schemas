@@ -48,8 +48,7 @@
       "market_sector": [
         "energy"
       ],
-      "outcome_type": "ca98-commitment",
-      "document_type": "cma_case"
+      "outcome_type": "ca98-commitment"
     },
     "max_cache_time": 10
   },

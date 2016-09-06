@@ -33,8 +33,7 @@
         "paediatrics",
         "theatre-practitioners"
       ],
-      "issued_date": "2015-07-06",
-      "document_type": "medical_safety_alert"
+      "issued_date": "2015-07-06"
     },
     "max_cache_time": 10,
     "headers": [
