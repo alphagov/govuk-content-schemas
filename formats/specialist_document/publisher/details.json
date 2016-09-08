@@ -123,12 +123,6 @@
         "bulk_published": {
           "type": "boolean"
         },
-        "document_type": {
-          "type": "string",
-          "enum": [
-            "aaib_report"
-          ]
-        },
         "aircraft_category": {
           "type": "array",
           "items": {
@@ -177,12 +171,6 @@
         "bulk_published": {
           "type": "boolean"
         },
-        "document_type": {
-          "type": "string",
-          "enum": [
-            "asylum_support_decision"
-          ]
-        },
         "tribunal_decision_judges": {
           "type": "array",
           "items": {
@@ -190,7 +178,12 @@
           }
         },
         "tribunal_decision_category": {
-          "type": "string"
+          "type": "string",
+          "enum": [
+            "section-4-1-support-for-persons-who-are-neither-an-asylum-seeker-nor-a-failed-asylum-seeker",
+            "section-4-2-support-for-failed-asylum-seekers",
+            "section-95-support-for-asylum-seekers"
+           ]
         },
         "tribunal_decision_sub_category": {
           "type": "string"
@@ -220,12 +213,6 @@
       "properties": {
         "bulk_published": {
           "type": "boolean"
-        },
-        "document_type": {
-          "type": "string",
-          "enum": [
-            "cma_case"
-          ]
         },
         "case_type": {
           "type": "string",
@@ -330,12 +317,6 @@
       "properties": {
         "bulk_published": {
           "type": "boolean"
-        },
-        "document_type": {
-          "type": "string",
-          "enum": [
-            "dfid_research_output"
-          ]
         },
         "dfid_review_status": {
           "type": "string",
@@ -617,12 +598,6 @@
         "bulk_published": {
           "type": "boolean"
         },
-        "document_type": {
-          "type": "string",
-          "enum": [
-            "countryside_stewardship_grant"
-          ]
-        },
         "grant_type": {
           "type": "string",
           "enum": [
@@ -691,12 +666,6 @@
         "bulk_published": {
           "type": "boolean"
         },
-        "document_type": {
-          "type": "string",
-          "enum": [
-            "drug_safety_update"
-          ]
-        },
         "therapeutic_area": {
           "type": "array",
           "items": {
@@ -741,12 +710,6 @@
         "bulk_published": {
           "type": "boolean"
         },
-        "document_type": {
-          "type": "string",
-          "enum": [
-            "employment_appeal_tribunal_decision"
-          ]
-        },
         "hidden_indexable_content": {
           "type": "string"
         },
@@ -782,12 +745,6 @@
         "bulk_published": {
           "type": "boolean"
         },
-        "document_type": {
-          "type": "string",
-          "enum": [
-            "employment_tribunal_decision"
-          ]
-        },
         "tribunal_decision_country": {
           "type": "string",
           "enum": [
@@ -816,12 +773,6 @@
       "properties": {
         "bulk_published": {
           "type": "boolean"
-        },
-        "document_type": {
-          "type": "string",
-          "enum": [
-            "esi_fund"
-          ]
         },
         "fund_state": {
           "type": "string",
@@ -891,12 +842,6 @@
       "properties": {
         "bulk_published": {
           "type": "boolean"
-        },
-        "document_type": {
-          "type": "string",
-          "enum": [
-            "international_development_fund"
-          ]
         },
         "fund_state": {
           "type": "string",
@@ -1001,12 +946,6 @@
         "bulk_published": {
           "type": "boolean"
         },
-        "document_type": {
-          "type": "string",
-          "enum": [
-            "maib_report"
-          ]
-        },
         "vessel_type": {
           "type": "array",
           "items": {
@@ -1042,12 +981,6 @@
       "properties": {
         "bulk_published": {
           "type": "boolean"
-        },
-        "document_type": {
-          "type": "string",
-          "enum": [
-            "medical_safety_alert"
-          ]
         },
         "alert_type": {
           "type": "string",
@@ -1101,12 +1034,6 @@
         "bulk_published": {
           "type": "boolean"
         },
-        "document_type": {
-          "type": "string",
-          "enum": [
-            "raib_report"
-          ]
-        },
         "railway_type": {
           "type": "array",
           "items": {
@@ -1142,12 +1069,6 @@
         "bulk_published": {
           "type": "boolean"
         },
-        "document_type": {
-          "type": "string",
-          "enum": [
-            "tax_tribunal_decision"
-          ]
-        },
         "tribunal_decision_category": {
           "type": "string",
           "enum": [
@@ -1174,12 +1095,6 @@
       "properties": {
         "bulk_published": {
           "type": "boolean"
-        },
-        "document_type": {
-          "type": "string",
-          "enum": [
-            "utaac_decision"
-          ]
         },
         "tribunal_decision_judges": {
           "type": "array",
@@ -1214,12 +1129,6 @@
       "properties": {
         "bulk_published": {
           "type": "boolean"
-        },
-        "document_type": {
-          "type": "string",
-          "enum": [
-            "vehicle_recalls_and_faults_alert"
-          ]
         },
         "fault_type": {
           "type": "string",

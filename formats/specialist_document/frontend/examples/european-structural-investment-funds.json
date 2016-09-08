@@ -32,8 +32,7 @@
       "funding_source": [
         "european-social-fund"
       ],
-      "closing_date": "2015-05-29",
-      "document_type": "esi_fund"
+      "closing_date": "2015-05-29"
     },
     "max_cache_time": 10,
     "headers": [

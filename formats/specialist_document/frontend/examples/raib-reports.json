@@ -29,8 +29,7 @@
         "heavy-rail"
       ],
       "report_type": "investigation-report",
-      "date_of_occurrence": "2014-09-24",
-      "document_type": "raib_report"
+      "date_of_occurrence": "2014-09-24"
     },
     "max_cache_time": 10,
     "change_history": [

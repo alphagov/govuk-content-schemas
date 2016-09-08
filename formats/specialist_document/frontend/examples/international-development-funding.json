@@ -42,8 +42,7 @@
       "value_of_funding": [
         "500001-to-1000000",
         "more-than-1000000"
-      ],
-      "document_type": "international_development_fund"
+      ]
     },
     "max_cache_time": 10,
     "headers": [

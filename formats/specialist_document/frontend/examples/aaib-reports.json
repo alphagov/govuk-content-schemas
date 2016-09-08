@@ -30,8 +30,7 @@
       "bulk_published": false,
       "aircraft_type": "Rotorsport UK Calidus",
       "location": "Damyns Hall Aerodrome, Essex",
-      "registration": "G-PCPC",
-      "document_type": "aaib_report"
+      "registration": "G-PCPC"
     },
     "max_cache_time": 10,
     "headers": [
