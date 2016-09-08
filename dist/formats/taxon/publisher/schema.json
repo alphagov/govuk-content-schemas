@@ -135,7 +135,11 @@
       "properties": {
         "internal_name": {
           "type": "string",
-          "description": "An internal name for admin interfaces. Includes parent."
+          "description": "An internal name for admin interfaces."
+        },
+        "notes_for_editors": {
+          "type": "string",
+          "description": "Usage notes for editors when tagging content to a taxon."
         }
       }
     },
