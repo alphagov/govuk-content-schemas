@@ -834,8 +834,9 @@
                   "type": "object",
                   "description": "The links used to match subscribers lists",
                   "additionalProperties": false,
-                  "properties": {
-                    "countries": {
+                  "maxProperties": 1,
+                  "patternProperties": {
+                    "^[a-z_]+$": {
                       "type": "array"
                     }
                   }
@@ -2060,6 +2061,10 @@
                   "href"
                 ]
               }
+            },
+            "change_note": {
+              "type": "string",
+              "description": "The change note for this edition, as used by the email alert service"
             },
             "change_history": {
               "$ref": "#/definitions/change_history"
