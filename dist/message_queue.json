@@ -1166,16 +1166,6 @@
             "show_summaries": {
               "type": "boolean"
             },
-            "signup_link": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ]
-            },
             "summary": {
               "anyOf": [
                 {
@@ -1901,9 +1891,6 @@
             },
             "show_summaries": {
               "type": "boolean"
-            },
-            "signup_link": {
-              "type": "string"
             },
             "summary": {
               "type": "string"
