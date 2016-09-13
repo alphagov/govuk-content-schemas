@@ -89,6 +89,7 @@
       "type": "boolean"
     },
     "signup_link": {
+      "description": "DEPRECATED: Don't use this for linking to the email alert signup page. Use `links.email_alert_signup`.",
       "type": "string"
     },
     "summary": {
