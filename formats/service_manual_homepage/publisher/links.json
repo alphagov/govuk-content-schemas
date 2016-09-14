@@ -2,10 +2,5 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "additionalProperties": false,
-  "properties": {
-    "service_manual_topics": {
-    	"description": "References an array of 'service_manual_topic's. Not to be confused with 'topics'.",
-    	"$ref": "#/definitions/guid_list"
-    }
-  }
+  "properties": {}
 }
