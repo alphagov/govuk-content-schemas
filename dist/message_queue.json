@@ -883,42 +883,6 @@
             }
           }
         },
-        "fatality_notice": {
-          "$schema": "http://json-schema.org/draft-04/schema#",
-          "type": "object",
-          "additionalProperties": false,
-          "required": [
-            "body",
-            "first_public_at",
-            "government",
-            "political"
-          ],
-          "properties": {
-            "body": {
-              "type": "string"
-            },
-            "first_public_at": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "emphasised_organisations": {
-              "description": "The content ids of the organisations that should be displayed first in the list of organisations related to the item, these content ids must be present in the item organisation links hash.",
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/guid"
-              }
-            },
-            "government": {
-              "$ref": "#/definitions/government"
-            },
-            "political": {
-              "$ref": "#/definitions/political"
-            },
-            "change_history": {
-              "$ref": "#/definitions/change_history"
-            }
-          }
-        },
         "financial_release": {
           "$schema": "http://json-schema.org/draft-04/schema#",
           "type": "object",
@@ -3781,24 +3745,6 @@
             },
             "details": {
               "$ref": "#/definitions/details/definitions/email_alert_signup"
-            }
-          }
-        },
-        {
-          "type": "object",
-          "properties": {
-            "schema_name": {
-              "enum": [
-                "fatality_notice"
-              ]
-            },
-            "format": {
-              "enum": [
-                "fatality_notice"
-              ]
-            },
-            "details": {
-              "$ref": "#/definitions/details/definitions/fatality_notice"
             }
           }
         },
