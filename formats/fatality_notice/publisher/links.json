@@ -2,12 +2,14 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "additionalProperties": false,
-  // "required": [
-  //   "organisations"
-  // ],
+  "required": [
+    "field_of_operation"
+  ],
   "properties": {
-    // "organisations": {
-    //   "$ref": "#/definitions/guid_list"
-    // }
+    "field_of_operation": {
+      "$ref": "#/definitions/guid_list",
+      "maxItems": 1,
+      "minItems": 1
+    }
   }
 }

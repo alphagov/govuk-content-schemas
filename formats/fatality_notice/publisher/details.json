@@ -2,12 +2,29 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "additionalProperties": false,
-  // "required": [
-  //   "body"
-  // ],
+  "required": [
+    "body",
+    "first_public_at",
+    "change_history",
+    "emphasised_organisations"
+  ],
   "properties": {
-    // "body": {
-    //   "type": "string"
-    // }
+    "body": {
+      "type": "string"
+    },
+    "first_public_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "change_history": {
+      "$ref": "#/definitions/change_history"
+    },
+    "emphasised_organisations": {
+      "description": "The content ids of the organisations that should be displayed first in the list of organisations related to the item, these content ids must be present in the item organisation links hash.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/guid"
+      }
+    }
   }
 }
