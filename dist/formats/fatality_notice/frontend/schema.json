@@ -88,6 +88,9 @@
         "field_of_operation": {
           "$ref": "#/definitions/frontend_links"
         },
+        "ministers": {
+          "$ref": "#/definitions/frontend_links"
+        },
         "taxons": {
           "$ref": "#/definitions/frontend_links"
         },

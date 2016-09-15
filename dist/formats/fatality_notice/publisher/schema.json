@@ -170,6 +170,9 @@
           "maxItems": 1,
           "minItems": 1
         },
+        "ministers": {
+          "$ref": "#/definitions/guid_list"
+        },
         "taxons": {
           "description": "Prototype-stage taxonomy label for this content item",
           "$ref": "#/definitions/guid_list"
