@@ -10,6 +10,9 @@
       "$ref": "#/definitions/guid_list",
       "maxItems": 1,
       "minItems": 1
+    },
+    "ministers": {
+      "$ref": "#/definitions/guid_list"
     }
   }
 }
