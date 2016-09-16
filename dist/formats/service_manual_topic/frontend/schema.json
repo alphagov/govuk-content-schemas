@@ -142,7 +142,7 @@
       "type": "array",
       "items": {
         "type": "object",
-        "additionalProperties": true,
+        "additionalProperties": false,
         "required": [
           "content_id",
           "title",
@@ -150,6 +150,19 @@
           "locale"
         ],
         "properties": {
+          "details": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "document_type": {
+            "type": "string"
+          },
+          "schema_name": {
+            "type": "string"
+          },
+          "public_updated_at": {
+            "type": "string"
+          },
           "content_id": {
             "$ref": "#/definitions/guid"
           },
@@ -186,11 +199,7 @@
           "links": {
             "type": "object",
             "additionalProperties": true,
-            "properties": {
-              "parent": {
-                "$ref": "#/definitions/guid_list"
-              }
-            }
+            "description": "TODO: investigate if could this be validated recursively."
           }
         }
       }
