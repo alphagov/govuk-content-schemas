@@ -42,17 +42,7 @@
         "schema_name": "service_manual_topic",
         "document_type": "service_manual_topic",
         "analytics_identifier": null,
-        "links": {
-          "linked_items": [
-            "fb81a47b-7c8f-4280-b6c7-b6fa25822222"
-          ],
-          "content_owners": [
-            "e50286e4-2d79-44aa-bcf4-f024e5e17061"
-          ],
-          "organisations": [
-            "af07d5a5-df63-4ddc-9383-6a666845ebe9"
-          ]
-        }
+        "links": {}
       }
     ]
   },
