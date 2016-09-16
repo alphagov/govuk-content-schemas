@@ -274,11 +274,6 @@
         "content_id": "cf2ab891-5bd9-4788-8254-f9444423719c",
         "description": "List of information about Managing your charity.",
         "document_type": "topic",
-        "links": {
-          "parent": [
-            "68f2ac58-4394-442a-b309-6a7f372f345e"
-          ]
-        },
         "locale": "en",
         "public_updated_at": "2016-03-21T13:12:32.000+00:00",
         "schema_name": "topic",
