@@ -208,8 +208,11 @@
           },
           "links": {
             "type": "object",
-            "additionalProperties": true,
-            "description": "TODO: investigate if could this be validated recursively."
+            "patternProperties": {
+              "^[a-z_]+$": {
+                "$ref": "#/definitions/frontend_links"
+              }
+            }
           }
         }
       }
