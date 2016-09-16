@@ -106,11 +106,7 @@
         "api_url": "https://www.gov.uk/api/content/renew-adult-passport",
         "web_url": "https://www.gov.uk/renew-adult-passport",
         "locale": "en",
-        "links": {
-          "parent": [
-            "86eb717a-fb40-42e7-83fa-d031a03880fb"
-          ]
-        }
+        "links": {}
       },
       {
         "content_id": "86eb717a-fb40-42e7-83fa-d031a03880fb",
@@ -130,11 +126,7 @@
         "api_url": "https://www.gov.uk/api/content/driving-abroad",
         "web_url": "https://www.gov.uk/driving-abroad",
         "locale": "en",
-        "links": {
-          "parent": [
-            "b9849cd6-61a7-42dc-8124-362d2c7d48b0"
-          ]
-        }
+        "links": {}
       },
       {
         "content_id": "95f9c380-30bc-44c7-86b4-e9c9ef0fc272",
@@ -144,11 +136,7 @@
         "api_url": "https://www.gov.uk/api/content/hand-luggage-restrictions",
         "web_url": "https://www.gov.uk/hand-luggage-restrictions",
         "locale": "en",
-        "links": {
-          "parent": [
-            "b9849cd6-61a7-42dc-8124-362d2c7d48b0"
-          ]
-        }
+        "links": {}
       },
       {
         "content_id": "b9849cd6-61a7-42dc-8124-362d2c7d48b0",
@@ -171,34 +159,6 @@
         "web_url": "https://www.gov.uk/browse/abroad",
         "locale": "en",
         "links": {}
-      },
-      {
-        "content_id": "b9849cd6-61a7-42dc-8124-362d2c7d48b0",
-        "title": "Travel abroad",
-        "base_path": "/browse/abroad/travel-abroad",
-        "description": null,
-        "api_url": "https://www.gov.uk/api/content/browse/abroad/travel-abroad",
-        "web_url": "https://www.gov.uk/browse/abroad/travel-abroad",
-        "locale": "en",
-        "links": {
-          "parent": [
-            "86eb717a-fb40-42e7-83fa-d031a03880fb"
-          ]
-        }
-      },
-      {
-        "content_id": "08d48cdd-6b50-43ff-a53b-beab47f4aab0",
-        "title": "Foreign travel advice",
-        "base_path": "/foreign-travel-advice",
-        "description": null,
-        "api_url": "https://www.gov.uk/api/content/foreign-travel-advice",
-        "web_url": "https://www.gov.uk/foreign-travel-advice",
-        "locale": "en",
-        "links": {
-          "parent": [
-            "b9849cd6-61a7-42dc-8124-362d2c7d48b0"
-          ]
-        }
       }
     ],
     "available_translations": [

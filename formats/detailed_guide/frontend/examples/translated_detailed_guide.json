@@ -52,127 +52,6 @@
     }
   },
   "document_type": "detailed_guidance",
-  "expanded_links": {
-    "available_translations": [
-      {
-        "analytics_identifier": null,
-        "api_url": "https://www.gov.uk/api/content/guidance/prepare-a-charity-annual-return.cy",
-        "base_path": "/guidance/prepare-a-charity-annual-return.cy",
-        "content_id": "5fec94c4-7631-11e4-a3cb-005056011aef",
-        "description": "Mae'n rhaid i chi anfon ffurflen flynyddol (neu ddiweddaru eich manylion) bob blwyddyn os yw'ch elusen wedi cofrestru yng Nghymru neu Loegr.",
-        "locale": "cy",
-        "public_updated_at": "2013-05-22T23:00:00.000Z",
-        "title": "Paratoi ffurflen flynyddol elusen",
-        "web_url": "https://www.gov.uk/guidance/prepare-a-charity-annual-return.cy"
-      },
-      {
-        "analytics_identifier": null,
-        "api_url": "https://www.gov.uk/api/content/guidance/prepare-a-charity-annual-return",
-        "base_path": "/guidance/prepare-a-charity-annual-return",
-        "content_id": "5fec94c4-7631-11e4-a3cb-005056011aef",
-        "description": "You must send an annual return (or update your details) every year if your charity is registered in England or Wales.",
-        "locale": "en",
-        "public_updated_at": "2013-05-22T23:00:00.000Z",
-        "title": "Prepare a charity annual return",
-        "web_url": "https://www.gov.uk/guidance/prepare-a-charity-annual-return"
-      }
-    ],
-    "organisations": [
-      {
-        "analytics_identifier": "D98",
-        "api_url": "https://www.gov.uk/api/content/government/organisations/charity-commission",
-        "base_path": "/government/organisations/charity-commission",
-        "content_id": "489e651f-34c8-4b34-bdd7-e13c2324cde3",
-        "description": null,
-        "expanded_links": {},
-        "locale": "en",
-        "public_updated_at": "2014-10-15T14:35:31.000Z",
-        "title": "The Charity Commission",
-        "web_url": "https://www.gov.uk/government/organisations/charity-commission"
-      }
-    ],
-    "parent": [
-      {
-        "analytics_identifier": null,
-        "api_url": "https://www.gov.uk/api/content/topic/running-charity/managing-charity",
-        "base_path": "/topic/running-charity/managing-charity",
-        "content_id": "cf2ab891-5bd9-4788-8254-f9444423719c",
-        "description": "List of information about Managing your charity.",
-        "expanded_links": {
-          "parent": [
-            {
-              "analytics_identifier": null,
-              "api_url": "https://www.gov.uk/api/content/topic/running-charity",
-              "base_path": "/topic/running-charity",
-              "content_id": "68f2ac58-4394-442a-b309-6a7f372f345e",
-              "description": "List of information about Setting up and running a charity.",
-              "expanded_links": {},
-              "locale": "en",
-              "public_updated_at": "2015-08-11T14:45:10.000Z",
-              "title": "Setting up and running a charity",
-              "web_url": "https://www.gov.uk/topic/running-charity"
-            }
-          ]
-        },
-        "locale": "en",
-        "public_updated_at": "2016-03-21T13:12:32.000Z",
-        "title": "Managing your charity",
-        "web_url": "https://www.gov.uk/topic/running-charity/managing-charity"
-      }
-    ],
-    "related_guides": [
-      {
-        "analytics_identifier": null,
-        "api_url": "https://www.gov.uk/api/content/guidance/charity-commission-services-log-in-or-get-a-password",
-        "base_path": "/guidance/charity-commission-services-log-in-or-get-a-password",
-        "content_id": "601aa6ca-7631-11e4-a3cb-005056011aef",
-        "description": "Start or continue your charity's annual return or registration application, plus how to get a new or replacement password.",
-        "expanded_links": {},
-        "locale": "en",
-        "public_updated_at": "2013-03-31T23:00:00.000Z",
-        "title": "Charity Commission services: log in or get a password",
-        "web_url": "https://www.gov.uk/guidance/charity-commission-services-log-in-or-get-a-password"
-      },
-      {
-        "analytics_identifier": null,
-        "api_url": "https://www.gov.uk/api/content/guidance/prepare-a-charity-trustees-annual-report",
-        "base_path": "/guidance/prepare-a-charity-trustees-annual-report",
-        "content_id": "5feebf0e-7631-11e4-a3cb-005056011aef",
-        "description": "What to put in your trustees' annual report, depending on your charity's income and the value of its assets.",
-        "expanded_links": {},
-        "locale": "en",
-        "public_updated_at": "2013-05-09T23:00:00.000Z",
-        "title": "Prepare a charity trustees' annual report",
-        "web_url": "https://www.gov.uk/guidance/prepare-a-charity-trustees-annual-report"
-      }
-    ],
-    "topics": [
-      {
-        "analytics_identifier": null,
-        "api_url": "https://www.gov.uk/api/content/topic/running-charity/money-accounts",
-        "base_path": "/topic/running-charity/money-accounts",
-        "content_id": "6db5a402-5916-4820-89a6-a19c6c9e085e",
-        "description": "List of information about Charity money, tax and accounts.",
-        "expanded_links": {},
-        "locale": "en",
-        "public_updated_at": "2015-08-11T15:10:00.000Z",
-        "title": "Charity money, tax and accounts",
-        "web_url": "https://www.gov.uk/topic/running-charity/money-accounts"
-      },
-      {
-        "analytics_identifier": null,
-        "api_url": "https://www.gov.uk/api/content/topic/running-charity/managing-charity",
-        "base_path": "/topic/running-charity/managing-charity",
-        "content_id": "cf2ab891-5bd9-4788-8254-f9444423719c",
-        "description": "List of information about Managing your charity.",
-        "expanded_links": {},
-        "locale": "en",
-        "public_updated_at": "2016-03-21T13:12:32.000Z",
-        "title": "Managing your charity",
-        "web_url": "https://www.gov.uk/topic/running-charity/managing-charity"
-      }
-    ]
-  },
   "first_published_at": "2016-02-29T09:24:10.000+00:00",
   "format": "detailed_guide",
   "links": {
@@ -184,25 +63,6 @@
         "content_id": "5fec94c4-7631-11e4-a3cb-005056011aef",
         "description": "Mae'n rhaid i chi anfon ffurflen flynyddol (neu ddiweddaru eich manylion) bob blwyddyn os yw'ch elusen wedi cofrestru yng Nghymru neu Loegr.",
         "document_type": "detailed_guidance",
-        "links": {
-          "lead_organisations": [
-            "489e651f-34c8-4b34-bdd7-e13c2324cde3"
-          ],
-          "organisations": [
-            "489e651f-34c8-4b34-bdd7-e13c2324cde3"
-          ],
-          "parent": [
-            "cf2ab891-5bd9-4788-8254-f9444423719c"
-          ],
-          "related_guides": [
-            "601aa6ca-7631-11e4-a3cb-005056011aef",
-            "5feebf0e-7631-11e4-a3cb-005056011aef"
-          ],
-          "topics": [
-            "6db5a402-5916-4820-89a6-a19c6c9e085e",
-            "cf2ab891-5bd9-4788-8254-f9444423719c"
-          ]
-        },
         "locale": "cy",
         "public_updated_at": "2013-05-22T23:00:00.000+00:00",
         "schema_name": "detailed_guide",
@@ -216,25 +76,6 @@
         "content_id": "5fec94c4-7631-11e4-a3cb-005056011aef",
         "description": "You must send an annual return (or update your details) every year if your charity is registered in England or Wales.",
         "document_type": "detailed_guidance",
-        "links": {
-          "lead_organisations": [
-            "489e651f-34c8-4b34-bdd7-e13c2324cde3"
-          ],
-          "organisations": [
-            "489e651f-34c8-4b34-bdd7-e13c2324cde3"
-          ],
-          "parent": [
-            "cf2ab891-5bd9-4788-8254-f9444423719c"
-          ],
-          "related_guides": [
-            "601aa6ca-7631-11e4-a3cb-005056011aef",
-            "5feebf0e-7631-11e4-a3cb-005056011aef"
-          ],
-          "topics": [
-            "6db5a402-5916-4820-89a6-a19c6c9e085e",
-            "cf2ab891-5bd9-4788-8254-f9444423719c"
-          ]
-        },
         "locale": "en",
         "public_updated_at": "2013-05-22T23:00:00.000+00:00",
         "schema_name": "detailed_guide",
@@ -289,27 +130,6 @@
         "content_id": "601aa6ca-7631-11e4-a3cb-005056011aef",
         "description": "Start or continue your charity's annual return or registration application, plus how to get a new or replacement password.",
         "document_type": "detailed_guidance",
-        "links": {
-          "lead_organisations": [
-            "489e651f-34c8-4b34-bdd7-e13c2324cde3"
-          ],
-          "organisations": [
-            "489e651f-34c8-4b34-bdd7-e13c2324cde3"
-          ],
-          "parent": [
-            "cf2ab891-5bd9-4788-8254-f9444423719c"
-          ],
-          "related_guides": [
-            "5f525ead-7631-11e4-a3cb-005056011aef",
-            "5fec94c4-7631-11e4-a3cb-005056011aef"
-          ],
-          "related_mainstream": [
-            "4688ad1e-6a55-4471-9c59-092c942b6349"
-          ],
-          "topics": [
-            "cf2ab891-5bd9-4788-8254-f9444423719c"
-          ]
-        },
         "locale": "en",
         "public_updated_at": "2013-03-31T23:00:00.000+00:00",
         "schema_name": "detailed_guide",
@@ -323,29 +143,6 @@
         "content_id": "5feebf0e-7631-11e4-a3cb-005056011aef",
         "description": "What to put in your trustees' annual report, depending on your charity's income and the value of its assets.",
         "document_type": "detailed_guidance",
-        "links": {
-          "lead_organisations": [
-            "489e651f-34c8-4b34-bdd7-e13c2324cde3"
-          ],
-          "organisations": [
-            "489e651f-34c8-4b34-bdd7-e13c2324cde3"
-          ],
-          "parent": [
-            "6db5a402-5916-4820-89a6-a19c6c9e085e"
-          ],
-          "related_guides": [
-            "5f162fca-7631-11e4-a3cb-005056011aef",
-            "5fec94c4-7631-11e4-a3cb-005056011aef"
-          ],
-          "related_mainstream": [
-            "4688ad1e-6a55-4471-9c59-092c942b6349"
-          ],
-          "topics": [
-            "9430260c-677d-4da9-b61e-bb3b524cdad9",
-            "6db5a402-5916-4820-89a6-a19c6c9e085e",
-            "cf2ab891-5bd9-4788-8254-f9444423719c"
-          ]
-        },
         "locale": "en",
         "public_updated_at": "2013-05-09T23:00:00.000+00:00",
         "schema_name": "detailed_guide",
@@ -361,11 +158,6 @@
         "content_id": "6db5a402-5916-4820-89a6-a19c6c9e085e",
         "description": "List of information about Charity money, tax and accounts.",
         "document_type": "topic",
-        "links": {
-          "parent": [
-            "68f2ac58-4394-442a-b309-6a7f372f345e"
-          ]
-        },
         "locale": "en",
         "public_updated_at": "2015-08-11T15:10:00.000+00:00",
         "schema_name": "topic",
@@ -379,11 +171,6 @@
         "content_id": "cf2ab891-5bd9-4788-8254-f9444423719c",
         "description": "List of information about Managing your charity.",
         "document_type": "topic",
-        "links": {
-          "parent": [
-            "68f2ac58-4394-442a-b309-6a7f372f345e"
-          ]
-        },
         "locale": "en",
         "public_updated_at": "2016-03-21T13:12:32.000+00:00",
         "schema_name": "topic",

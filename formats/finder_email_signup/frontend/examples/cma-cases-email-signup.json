@@ -14,8 +14,7 @@
         "locale": "en",
         "public_updated_at": "2016-06-13T14:30:40.000Z",
         "title": "Competition and Markets Authority cases",
-        "web_url": "https://www.gov.uk/cma-cases",
-        "expanded_links": { }
+        "web_url": "https://www.gov.uk/cma-cases"
       }
     ],
     "organisations": [
@@ -28,8 +27,7 @@
         "locale": "en",
         "public_updated_at": "2015-03-10T16:23:14.000Z",
         "title": "Competition and Markets Authority",
-        "web_url": "https://www.gov.uk/government/organisations/competition-and-markets-authority",
-        "expanded_links": { }
+        "web_url": "https://www.gov.uk/government/organisations/competition-and-markets-authority"
       }
     ],
     "available_translations": [
@@ -71,22 +69,7 @@
         "public_updated_at": "2016-06-13T14:30:40.000+00:00",
         "schema_name": "finder",
         "document_type": "finder",
-        "analytics_identifier": null,
-        "links": {
-          "topics": [
-            "fd11e3b0-76bc-4197-b652-a030b57915be",
-            "7aa3ec0c-683e-44ba-aa3f-cc9655651b9b",
-            "1433d403-333f-4d81-b83a-c5358412fd1b",
-            "65a89136-2117-41aa-ba96-35feb9d821f5",
-            "4a6f14ad-baa1-4b15-8026-8282913ef693"
-          ],
-          "email_alert_signup": [
-            "43dd2b13-93ec-4ca6-a7a4-e2eb5f5d485a"
-          ],
-          "organisations": [
-            "957eb4ec-089b-4f71-ba2a-dc69ac8919ea"
-          ]
-        }
+        "analytics_identifier": null
       }
     ],
     "organisations": [
@@ -124,15 +107,7 @@
         "public_updated_at": "2016-06-13T14:30:40.000+00:00",
         "schema_name": "finder_email_signup",
         "document_type": "finder_email_signup",
-        "analytics_identifier": null,
-        "links": {
-          "related": [
-            "fef4ac7c-024a-4943-9f19-e85a8369a1f3"
-          ],
-          "organisations": [
-            "957eb4ec-089b-4f71-ba2a-dc69ac8919ea"
-          ]
-        }
+        "analytics_identifier": null
       }
     ]
   },
@@ -189,5 +164,4 @@
       "plural": "Competition and Markets Authority (CMA) cases with the following case types: "
     }
   }
-
 }
