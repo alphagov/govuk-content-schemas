@@ -218,9 +218,6 @@
         "show_summaries": {
           "type": "boolean"
         },
-        "signup_link": {
-          "type": "string"
-        },
         "summary": {
           "type": "string"
         },

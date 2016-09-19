@@ -261,16 +261,6 @@
         "show_summaries": {
           "type": "boolean"
         },
-        "signup_link": {
-          "anyOf": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "null"
-            }
-          ]
-        },
         "summary": {
           "anyOf": [
             {

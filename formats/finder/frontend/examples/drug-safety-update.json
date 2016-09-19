@@ -128,8 +128,7 @@
       "document_type": "drug_safety_update"
     },
     "format_name": "Drug Safety Update",
-    "show_summaries": true,
-    "signup_link": "/government/organisations/medicines-and-healthcare-products-regulatory-agency/email-signup"
+    "show_summaries": true
   },
   "links": {
     "email_alert_signup": [
