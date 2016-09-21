@@ -54,27 +54,6 @@ module SchemaBuilderHelpers
     }
   end
 
-  def build_message_queue_base_schema(*properties)
-    schema = build_schema(
-      "message_queue_base.json",
-      definitions: {
-        "formats" => {
-          "title" => "This is a placeholder, and filled when the schema is built",
-        },
-      },
-    )
-
-    schema.schema["allOf"] = [
-      {
-        "additionalProperties" => false,
-        "required" => properties,
-        "properties" => build_string_properties(*properties),
-      }
-    ]
-
-    schema
-  end
-
   def build_base_links_schema(*link_names)
     schema = build_schema(
       "base_links.json",
