@@ -8,15 +8,12 @@ processable formats.
 
 We use [JSON Schema](http://json-schema.org/) to define the formats.
 
-For each format there are two possible representations:
+For each format there are three possible representations:
 
 * the 'publisher' representation, which is used when a publishing application
   transmits data to the content store.
 * the 'frontend' representation, which is produced by the content store when a
   frontend application requests data
-
-In the future, there may be a third:
-
 * the 'notification' representation, which is used when broadcasting messages about content
   items on the message queue
 

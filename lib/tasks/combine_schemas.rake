@@ -105,11 +105,24 @@ combine_frontend_schemas = ->(task) do
   publisher_schema = schema_reader.read(task.sources.first)
   frontend_links_definition = schema_reader.read("formats/frontend_links_definition.json")
 
-  FileUtils.mkdir_p task.name.pathmap("%d")
-  generator = GovukContentSchemas::FrontendSchemaGenerator.new(publisher_schema, frontend_links_definition)
+  FileUtils.mkdir_p(task.name.pathmap("%d"))
+  frontend_generator = GovukContentSchemas::FrontendSchemaGenerator.new(publisher_schema, frontend_links_definition)
+  frontend_schema = frontend_generator.generate.schema
 
   File.open(task.name, 'w') do |file|
-    file.puts JSON.pretty_generate(generator.generate.schema)
+    file.puts JSON.pretty_generate(frontend_schema)
+  end
+
+  notification_schema_filename = task.name.gsub("frontend", "notification")
+  FileUtils.mkdir_p(notification_schema_filename.pathmap("%d"))
+
+  notification_schema = frontend_schema
+  notification_base = schema_reader.read("formats/notification_base.json").schema
+  notification_schema["properties"].merge!(notification_base["properties"])
+  notification_schema["required"] = (notification_schema["required"] + notification_base["required"]).uniq.sort
+
+  File.open(notification_schema_filename, 'w') do |file|
+    file.puts JSON.pretty_generate(notification_schema)
   end
 end
 
