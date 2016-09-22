@@ -31,6 +31,12 @@
     "logo": {
       "formatted_title": "Bona Vacantia",
       "crest": "single-identity"
-    }
+    },
+    "external_related_links": [
+      {
+        "title": "Definition",
+        "url": "http://www.dictionary.com/browse/bona-vacantia"
+      }
+    ]
   }
 }

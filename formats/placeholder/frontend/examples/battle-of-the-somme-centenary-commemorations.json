@@ -10,6 +10,16 @@
   ],
   "public_updated_at": "2015-07-04T11:32:28.000+01:00",
   "details": {
+    "external_related_links": [
+      {
+        "title": "Somme EN",
+        "url": "http://somme2016.org/en/"
+      },
+      {
+        "title": "Somme FR",
+        "url": "http://somme2016.org/fr/"
+      }
+    ]
   },
   "schema_name": "placeholder_topical_event",
   "document_type": "placeholder_topical_event",

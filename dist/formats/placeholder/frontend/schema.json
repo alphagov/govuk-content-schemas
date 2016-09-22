@@ -256,6 +256,24 @@
             }
           }
         },
+        "external_related_links": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "title",
+              "url"
+            ],
+            "properties": {
+              "title": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              }
+            }
+          }
+        },
         "tags": {
           "type": "object",
           "properties": {
