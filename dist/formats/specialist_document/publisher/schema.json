@@ -533,7 +533,7 @@
     },
     "any_metadata": {
       "type": "object",
-      "oneOf": [
+      "anyOf": [
         {
           "$ref": "#/definitions/aaib_report_metadata"
         },
