@@ -80,6 +80,24 @@
         "locale": "en"
       }
     ],
+    "related_mainstream_content": [
+      {
+        "content_id": "dd113259-fcaf-4e9b-83d5-d1148f33cf34",
+        "title": "Overseas British passport applications",
+        "base_path": "/overseas-passports",
+        "api_url": "https://www.gov.uk/api/content/overseas-passports",
+        "web_url": "https://www.gov.uk/overseas-passports",
+        "locale": "en"
+      },
+      {
+        "content_id": "f02fc2c9-f5ff-4ea2-acc4-730bbda957bb",
+        "title": "Cancel a lost or stolen passport",
+        "base_path": "/report-a-lost-or-stolen-passport",
+        "api_url": "https://www.gov.uk/api/content/report-a-lost-or-stolen-passport",
+        "web_url": "https://www.gov.uk/report-a-lost-or-stolen-passport",
+        "locale": "en"
+      }
+    ],
     "related_mainstream": [
       {
         "content_id": "dd113259-fcaf-4e9b-83d5-d1148f33cf34",
