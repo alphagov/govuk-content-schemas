@@ -94,6 +94,9 @@
         "related_mainstream": {
           "$ref": "#/definitions/frontend_links"
         },
+        "related_mainstream_content": {
+          "$ref": "#/definitions/frontend_links"
+        },
         "taxons": {
           "$ref": "#/definitions/frontend_links"
         },
