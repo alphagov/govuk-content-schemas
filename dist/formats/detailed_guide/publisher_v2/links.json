@@ -19,10 +19,6 @@
         "related_policies": {
           "$ref": "#/definitions/guid_list"
         },
-        "related_mainstream": {
-          "$ref": "#/definitions/guid_list",
-          "_comment": "DEPRECATED USE related_mainstream_content"
-        },
         "related_mainstream_content": {
           "$ref": "#/definitions/guid_list"
         },
