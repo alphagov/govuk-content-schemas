@@ -191,6 +191,9 @@
           "base_path": {
             "$ref": "#/definitions/absolute_path"
           },
+          "api_path": {
+            "$ref": "#/definitions/absolute_path"
+          },
           "api_url": {
             "type": "string",
             "format": "uri"
