@@ -1,4 +1,4 @@
-require 'govuk_content_schemas/finder_schema_converter'
+require "govuk_content_schemas/finder_schema_converter"
 
 RSpec.describe GovukContentSchemas::FinderSchemaConverter do
   let(:converter) { GovukContentSchemas::FinderSchemaConverter.new }
@@ -24,11 +24,11 @@ RSpec.describe GovukContentSchemas::FinderSchemaConverter do
 
     context "no facets" do
       let(:facets) { [] }
-      let(:document_type_name) { "my_random_document_type"}
+      let(:document_type_name) { "my_random_document_type" }
       let(:schema_file) { tmpdir + "#{document_type_name}.json" }
 
       it "derives the definition name from the file name" do
-        expect(converted['definitions'].keys).to eq(["#{document_type_name}_metadata"])
+        expect(converted["definitions"].keys).to eq(["#{document_type_name}_metadata"])
       end
     end
 
@@ -42,11 +42,11 @@ RSpec.describe GovukContentSchemas::FinderSchemaConverter do
           "display_as_result_metadata" => true,
           "filterable" => true,
           "allowed_values" => [
-            {"label" => "Commercial - fixed wing", "value" => "commercial-fixed-wing"},
-            {"label" => "Commercial - rotorcraft", "value" => "commercial-rotorcraft"},
-            {"label" => "General aviation - fixed wing", "value" => "general-aviation-fixed-wing"},
-            {"label" => "General aviation - rotorcraft", "value" => "general-aviation-rotorcraft"},
-            {"label" => "Sport aviation and balloons", "value" => "sport-aviation-and-balloons"}
+            { "label" => "Commercial - fixed wing", "value" => "commercial-fixed-wing" },
+            { "label" => "Commercial - rotorcraft", "value" => "commercial-rotorcraft" },
+            { "label" => "General aviation - fixed wing", "value" => "general-aviation-fixed-wing" },
+            { "label" => "General aviation - rotorcraft", "value" => "general-aviation-rotorcraft" },
+            { "label" => "Sport aviation and balloons", "value" => "sport-aviation-and-balloons" }
           ]
         }
       }
@@ -56,41 +56,37 @@ RSpec.describe GovukContentSchemas::FinderSchemaConverter do
       let(:converter) { GovukContentSchemas::FinderSchemaConverter.new(select_field_multiplicity_identifier: multiplicity_identifier) }
 
       context "select_field_multiplicity_identifier identifies the field as a single select" do
-        let(:multiplicity_identifier) { ->(document_type, facet_name) { false } }
+        let(:multiplicity_identifier) { ->(_, _) { false } }
 
         it "generates a field which matches a string constrained by the allowed_values" do
           expect(aircraft_category).to eq(
-            {
-              "type" => "string",
-              "enum" => [
-                "commercial-fixed-wing",
-                "commercial-rotorcraft",
-                "general-aviation-fixed-wing",
-                "general-aviation-rotorcraft",
-                "sport-aviation-and-balloons"
-              ]
-            }
+            "type" => "string",
+            "enum" => %w[
+              commercial-fixed-wing
+              commercial-rotorcraft
+              general-aviation-fixed-wing
+              general-aviation-rotorcraft
+              sport-aviation-and-balloons
+            ],
           )
         end
       end
 
       context "select_field_multiplicity_identifier identifies the field as a single select" do
-        let(:multiplicity_identifier) { ->(document_type, facet_name) { true } }
+        let(:multiplicity_identifier) { ->(_, _) { true } }
 
         it "generates a field which matches a array whose elements are constrained by the allowed_values" do
           expect(aircraft_category).to eq(
-            {
-              "type" => "array",
-              "items" => {
-                "type" => "string",
-                "enum" => [
-                  "commercial-fixed-wing",
-                  "commercial-rotorcraft",
-                  "general-aviation-fixed-wing",
-                  "general-aviation-rotorcraft",
-                  "sport-aviation-and-balloons"
-                ]
-              }
+            "type" => "array",
+            "items" => {
+              "type" => "string",
+              "enum" => %w[
+                commercial-fixed-wing
+                commercial-rotorcraft
+                general-aviation-fixed-wing
+                general-aviation-rotorcraft
+                sport-aviation-and-balloons
+              ],
             }
           )
         end
@@ -106,7 +102,7 @@ RSpec.describe GovukContentSchemas::FinderSchemaConverter do
           "type" => "date",
           "preposition" => "occurred",
           "display_as_result_metadata" => true,
-          "filterable" => true
+          "filterable" => true,
         }
       }
 
@@ -119,14 +115,14 @@ RSpec.describe GovukContentSchemas::FinderSchemaConverter do
               "properties" => {
                 "document_type" => {
                   "type" => "string",
-                  "enum" => ["schema"]
+                  "enum" => %w[schema],
                 },
                 "date_of_occurrence" => {
                   "type" => "string",
-                  "pattern" => "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
-                }
-              }
-            }
+                  "pattern" => "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$",
+                },
+              },
+            },
           }
         )
       end
@@ -139,7 +135,7 @@ RSpec.describe GovukContentSchemas::FinderSchemaConverter do
           "name" => "Aircraft type",
           "type" => "text",
           "display_as_result_metadata" => false,
-          "filterable" => false
+          "filterable" => false,
         }
       }
 
@@ -152,13 +148,13 @@ RSpec.describe GovukContentSchemas::FinderSchemaConverter do
               "properties" => {
                 "document_type" => {
                   "type" => "string",
-                  "enum" => ["schema"]
+                  "enum" => %w[schema],
                 },
                 "aircraft_type" => {
                   "type" => "string"
-                }
-              }
-            }
+                },
+              },
+            },
           }
         )
       end
@@ -178,8 +174,8 @@ RSpec.describe GovukContentSchemas::FinderSchemaConverter do
       }
 
       it "uses the mapper to generate the document_type and facet name" do
-        expect(converted['definitions'].keys).to eq(["schema_CONVERTED_metadata"])
-        expect(converted['definitions']["schema_CONVERTED_metadata"]["properties"]["document_type"]).to eq(
+        expect(converted["definitions"].keys).to eq(["schema_CONVERTED_metadata"])
+        expect(converted["definitions"]["schema_CONVERTED_metadata"]["properties"]["document_type"]).to eq(
           "type" => "string",
           "enum" => ["schema_CONVERTED"]
         )
@@ -215,7 +211,7 @@ RSpec.describe GovukContentSchemas::FinderSchemaConverter do
     }
 
     it "produces definitions for each format" do
-      expect(converted["definitions"].keys).to eq(['schema1_metadata', 'schema2_metadata'])
+      expect(converted["definitions"].keys).to eq(%w[schema1_metadata schema2_metadata])
     end
   end
 
@@ -225,9 +221,9 @@ RSpec.describe GovukContentSchemas::FinderSchemaConverter do
     }
 
     it "combines all of the facets from each file" do
-      expect(converted['definitions'].keys).to eq(['aaib-reports_metadata', 'drug-safety-updates_metadata'])
-      expect(converted['definitions']['aaib-reports_metadata']['properties'].keys).to eq(["document_type", "aircraft_category", "report_type", "date_of_occurrence", "aircraft_type", "location", "registration"])
-      expect(converted['definitions']['drug-safety-updates_metadata']['properties'].keys).to eq(["document_type", "therapeutic_area", "first_published_at"])
+      expect(converted["definitions"].keys).to eq(%w[aaib-reports_metadata drug-safety-updates_metadata])
+      expect(converted["definitions"]["aaib-reports_metadata"]["properties"].keys).to eq(%w[document_type aircraft_category report_type date_of_occurrence aircraft_type location registration])
+      expect(converted["definitions"]["drug-safety-updates_metadata"]["properties"].keys).to eq(%w[document_type therapeutic_area first_published_at])
     end
   end
 end

@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
 
 $LOAD_PATH << File.dirname(__FILE__) + "/../lib"
-require 'govuk_content_schemas/finder_schema_converter'
-require 'json'
+require "govuk_content_schemas/finder_schema_converter"
+require "json"
 
 def usage
   $stderr.puts "USAGE: #{File.basename(__FILE__)} <finder_schema_1.json ... finder_schema_n.json>"
@@ -26,11 +26,11 @@ class DocumentTypeMapper
 
   def call(filepath)
     file_name = File.basename(filepath)
-    MAPPING.fetch(file_name) do |file_name|
-      document_type = file_name.chomp('s.json').gsub('-','_')
-      STDERR.puts "Implicitly mapping #{file_name} to '#{document_type}' document type."
-      STDERR.puts "To override #{file_name} mapping, edit DocumentTypeMapper::MAPPING."
-      MAPPING[file_name] = document_type
+    MAPPING.fetch(file_name) do |name|
+      document_type = name.chomp("s.json").tr("-", "_")
+      STDERR.puts "Implicitly mapping #{name} to '#{document_type}' document type."
+      STDERR.puts "To override #{name} mapping, edit DocumentTypeMapper::MAPPING."
+      MAPPING[name] = document_type
       document_type
     end
   end
@@ -43,41 +43,29 @@ end
 # code it here
 class SelectFieldMultiplicityIdentifier
   MULTI_SELECTS_BY_DOCUMENT_TYPE = {
-    "aaib_report" => [
-      "aircraft_category"
-    ],
-    "cma_case" => [
-      "market_sector"
-    ],
-    "countryside_stewardship_grant" => [
-      "land_use",
-      "tiers_or_standalone_items",
-      "funding_amount"
-    ],
-    "drug_safety_update" => [
-      "therapeutic_area"
-    ],
-    "european_structural_investment_fund" => [
-      "fund_type",
-      "location",
-      "funding_source"
-    ],
-    "international_development_fund" => [
+    "aaib_report" => %w[aircraft_category].freeze,
+    "cma_case" => %w[market_sector].freeze,
+    "countryside_stewardship_grant" => %w[
+      land_use
+      tiers_or_standalone_items
+      funding_amount
+    ].freeze,
+    "drug_safety_update" => %w[therapeutic_area].freeze,
+    "european_structural_investment_fund" => %w[
+      fund_type
+      location
+      funding_source
+    ].freeze,
+    "international_development_fund" => %w[
       "location",
       "development_sector",
       "eligible_entities",
       "value_of_funding"
-    ],
-    "maib_report" => [
-      "vessel_type"
-    ],
-    "medical_safety_alert" => [
-      "medical_specialism"
-    ],
-    "raib_report" => [
-      "railway_type"
-    ]
-  }
+    ].freeze,
+    "maib_report" => %w[vessel_type].freeze,
+    "medical_safety_alert" => %w[medical_specialism].freeze,
+    "raib_report" => %w[railway_type].freeze,
+  }.freeze
 
   def call(document_type, facet_name)
     MULTI_SELECTS_BY_DOCUMENT_TYPE.fetch(document_type, []).include?(facet_name)

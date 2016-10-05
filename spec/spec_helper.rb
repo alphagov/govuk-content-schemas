@@ -1,6 +1,6 @@
-$LOAD_PATH << File.expand_path('../lib', File.dirname(__FILE__))
+$LOAD_PATH << File.expand_path("../lib", File.dirname(__FILE__))
 
-Dir[File.dirname(__FILE__) + '/support/*.rb'].each do |helper|
+Dir[File.dirname(__FILE__) + "/support/*.rb"].each do |helper|
   require helper
 end
 
@@ -18,7 +18,7 @@ RSpec.configure do |config|
   config.warnings = false
 
   if config.files_to_run.one?
-    config.default_formatter = 'doc'
+    config.default_formatter = "doc"
   end
 
   config.order = :random

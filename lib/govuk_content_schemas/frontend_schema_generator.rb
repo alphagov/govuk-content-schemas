@@ -1,6 +1,6 @@
-require 'govuk_content_schemas'
-require 'govuk_content_schemas/utils'
-require 'json-schema'
+require "govuk_content_schemas"
+require "govuk_content_schemas/utils"
+require "json-schema"
 
 class GovukContentSchemas::FrontendSchemaGenerator
   include ::GovukContentSchemas::Utils
@@ -36,12 +36,13 @@ class GovukContentSchemas::FrontendSchemaGenerator
   end
 
 private
+
   def internal?(property_name)
     INTERNAL_PROPERTIES.include?(property_name)
   end
 
   def required_properties
-    required = @publisher_schema.schema['required'].to_a
+    required = @publisher_schema.schema["required"].to_a
 
     if required.empty?
       []
@@ -51,11 +52,11 @@ private
   end
 
   def publisher_properties
-    @pub_properties ||= @publisher_schema.schema['properties'] || {}
+    @pub_properties ||= @publisher_schema.schema["properties"] || {}
   end
 
   def publisher_links
-    @publisher_schema.schema["definitions"]["links"] || publisher_properties["links"] || {'properties' => {}}
+    @publisher_schema.schema["definitions"]["links"] || publisher_properties["links"] || { "properties" => {} }
   end
 
   def frontend_properties
@@ -63,18 +64,18 @@ private
     properties = resolve_multiple_content_types(properties)
 
     properties = properties.merge(
-      'links' => frontend_links,
-      'format' => { "type" => "string" },
-      'expanded_links' => { "type" => "object" },
-      'updated_at' => updated_at,
-      'base_path' => { '$ref' => '#/definitions/absolute_path' }
+      "links" => frontend_links,
+      "format" => { "type" => "string" },
+      "expanded_links" => { "type" => "object" },
+      "updated_at" => updated_at,
+      "base_path" => { "$ref" => "#/definitions/absolute_path" }
     )
 
     properties
   end
 
   def frontend_link_names
-    publisher_links.fetch('properties', {}).keys + ['available_translations']
+    publisher_links.fetch("properties", {}).keys + ["available_translations"]
   end
 
   def frontend_link_properties
@@ -92,28 +93,28 @@ private
   end
 
   def publisher_definitions
-    clone_hash(@publisher_schema.schema['definitions']) || {}
+    clone_hash(@publisher_schema.schema["definitions"]) || {}
   end
 
   def converted_definitions
-    resolve_multiple_content_types(publisher_definitions.reject { |k,v| k == "links" })
+    resolve_multiple_content_types(publisher_definitions.reject { |k| k == "links" })
   end
 
   def frontend_definitions
     {
-      'frontend_links' => frontend_links_definition.schema.reject { |k| k == '$schema' }
+      "frontend_links" => frontend_links_definition.schema.reject { |k| k == "$schema" }
     }.merge(converted_definitions)
   end
 
   def updated_at
     {
-      'type' => 'string',
-      'format' => 'date-time'
+      "type" => "string",
+      "format" => "date-time"
     }
   end
 
   def frontend_links_ref
-    {"$ref" => "#/definitions/frontend_links"}
+    { "$ref" => "#/definitions/frontend_links" }
   end
 
   def multiple_content_types_ref

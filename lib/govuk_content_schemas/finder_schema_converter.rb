@@ -1,4 +1,4 @@
-require 'govuk_content_schemas'
+require "govuk_content_schemas"
 
 class GovukContentSchemas::FinderSchemaConverter
   attr_reader :document_type_mapper, :select_field_multiplicity_identifier
@@ -9,11 +9,11 @@ class GovukContentSchemas::FinderSchemaConverter
   end
 
   def default_document_type_mapper
-    ->(filename) { File.basename(filename, '.json') }
+    ->(filename) { File.basename(filename, ".json") }
   end
 
   def default_select_field_multiplicity_identifier
-    ->(document_type, facet_name) { false }
+    ->(_, _) { false }
   end
 
   def call(*files)
@@ -31,7 +31,7 @@ class GovukContentSchemas::FinderSchemaConverter
   class FinderSchema
     attr_reader :file, :document_type_mapper, :select_field_multiplicity_identifier
 
-    def initialize(file, document_type_mapper: , select_field_multiplicity_identifier: )
+    def initialize(file, document_type_mapper:, select_field_multiplicity_identifier:)
       @file = file
       @document_type_mapper = document_type_mapper
       @select_field_multiplicity_identifier = ->(facet_name) { select_field_multiplicity_identifier.call(document_type, facet_name) }
@@ -60,7 +60,7 @@ class GovukContentSchemas::FinderSchemaConverter
     end
 
     def facets
-      data['facets'].map { |facet_json| FinderFacet.type_of(select_field_multiplicity_identifier, facet_json).new(facet_json) }
+      data["facets"].map { |facet_json| FinderFacet.type_of(select_field_multiplicity_identifier, facet_json).new(facet_json) }
     end
 
     def document_type_definition
@@ -81,15 +81,15 @@ class GovukContentSchemas::FinderSchemaConverter
     attr_reader :json
 
     def self.type_of(select_field_multiplicity_identifier, json)
-      if json['type'] == 'text' && json.has_key?('allowed_values')
-        if select_field_multiplicity_identifier.call(json['key'])
+      if json["type"] == "text" && json.has_key?("allowed_values")
+        if select_field_multiplicity_identifier.call(json["key"])
           FinderArrayFacet
         else
           FinderSingleSelectFacet
         end
-      elsif json['type'] == 'text'
+      elsif json["type"] == "text"
         FinderStringFacet
-      elsif json['type'] == 'date'
+      elsif json["type"] == "date"
         FinderDateFacet
       else
         raise "Unknown finder facet type #{json['type']}"
@@ -101,9 +101,8 @@ class GovukContentSchemas::FinderSchemaConverter
     end
 
     def facet_name
-      json['key']
+      json["key"]
     end
-
   end
 
   class FinderArrayFacet < FinderFacet
@@ -120,7 +119,7 @@ class GovukContentSchemas::FinderSchemaConverter
     end
 
     def allowed_values
-      json['allowed_values'].map { |record| record['value'] }
+      json["allowed_values"].map { |record| record["value"] }
     end
   end
 
@@ -135,7 +134,7 @@ class GovukContentSchemas::FinderSchemaConverter
     end
 
     def allowed_values
-      json['allowed_values'].map { |record| record['value'] }
+      json["allowed_values"].map { |record| record["value"] }
     end
   end
 

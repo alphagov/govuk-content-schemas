@@ -1,8 +1,8 @@
-require 'spec_helper'
-require 'json'
-require 'rake'
+require "spec_helper"
+require "json"
+require "rake"
 
-RSpec.describe 'validate' do
+RSpec.describe "validate" do
   include_context "rake"
 
   def generate_example(name, base_path)

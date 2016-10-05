@@ -1,15 +1,15 @@
-require 'spec_helper'
-require 'rake'
-require 'fileutils'
+require "spec_helper"
+require "rake"
+require "fileutils"
 
-require 'govuk_content_schemas/schema_combiner'
-require 'govuk_content_schemas/frontend_schema_generator'
+require "govuk_content_schemas/schema_combiner"
+require "govuk_content_schemas/frontend_schema_generator"
 
 RSpec::Matchers.define :exist do
   match { |actual| File.exist?(actual) }
 end
 
-RSpec.describe 'combine_schemas' do
+RSpec.describe "combine_schemas" do
   include_context "rake"
   let(:task_path) { "lib/tasks/combine_schemas" }
 
@@ -29,8 +29,8 @@ RSpec.describe 'combine_schemas' do
         v2_metadata: reader.read(project_root.join("formats/v2_metadata.json")),
         links_metadata: reader.read(project_root.join("formats/links_metadata.json")),
         definitions: reader.read(project_root.join("formats/definitions.json")),
-        details: build_schema('details.json', properties: build_string_properties('detail')),
-        links: build_schema('links.json', properties: build_string_properties('links')),
+        details: build_schema("details.json", properties: build_string_properties("detail")),
+        links: build_schema("links.json", properties: build_string_properties("links")),
         base_links: reader.read(project_root.join("formats/base_links.json"))
       }
     }
@@ -47,7 +47,6 @@ RSpec.describe 'combine_schemas' do
     end
 
     context "with common metadata" do
-
       before(:each) do
         subject.invoke
       end
@@ -60,8 +59,9 @@ RSpec.describe 'combine_schemas' do
         end
 
         it "derives the format name from the filesystem path" do
-          expect(generated_schema.schema['properties']['schema_name']).to eq(
-            {"type" => "string", "enum" => [format_name]}
+          expect(generated_schema.schema["properties"]["schema_name"]).to eq(
+            "type" => "string",
+            "enum" => [format_name],
           )
         end
 

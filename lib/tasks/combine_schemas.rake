@@ -1,8 +1,8 @@
-require 'rake/clean'
-require 'govuk_content_schemas/schema_combiner'
-require 'govuk_content_schemas/frontend_schema_generator'
-require 'json-schema'
-require 'json'
+require "rake/clean"
+require "govuk_content_schemas/schema_combiner"
+require "govuk_content_schemas/frontend_schema_generator"
+require "json-schema"
+require "json"
 
 CLEAN << "dist/formats"
 
@@ -11,7 +11,7 @@ schema_reader = JSON::Schema::Reader.new(accept_file: true, accept_uri: false)
 hand_made_publisher_schemas = FileList.new("formats/*/publisher/schema.json")
 hand_made_frontend_schemas = FileList.new("formats/*/frontend/schema.json")
 
-rule %r{^dist/formats/.*/(frontend|publisher)(_v2)?/schema.json} => ->(f) { f.sub(%r{^dist/}, '') } do |t|
+rule %r{^dist/formats/.*/(frontend|publisher)(_v2)?/schema.json} => ->(f) { f.sub(%r{^dist/}, "") } do |t|
   FileUtils.mkdir_p t.name.pathmap("%d")
   FileUtils.cp t.source, t.name
 end
@@ -64,7 +64,7 @@ combine_publisher_schemas = ->(task) do
 
   combiner = GovukContentSchemas::SchemaCombiner.new(source_schemas, format_name)
 
-  File.open(task.name, 'w') do |file|
+  File.open(task.name, "w") do |file|
     file.puts JSON.pretty_generate(combiner.combined.schema)
   end
 end
@@ -77,7 +77,7 @@ combine_frontend_schemas = ->(task) do
   frontend_generator = GovukContentSchemas::FrontendSchemaGenerator.new(publisher_schema, frontend_links_definition)
   frontend_schema = frontend_generator.generate.schema
 
-  File.open(task.name, 'w') do |file|
+  File.open(task.name, "w") do |file|
     file.puts JSON.pretty_generate(frontend_schema)
   end
 
@@ -89,7 +89,7 @@ combine_frontend_schemas = ->(task) do
   notification_schema["properties"].merge!(notification_base["properties"])
   notification_schema["required"] = (notification_schema["required"] + notification_base["required"]).uniq.sort
 
-  File.open(notification_schema_filename, 'w') do |file|
+  File.open(notification_schema_filename, "w") do |file|
     file.puts JSON.pretty_generate(notification_schema)
   end
 end
