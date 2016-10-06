@@ -1,6 +1,6 @@
-require 'govuk_content_schemas'
-require 'govuk_content_schemas/utils'
-require 'json-schema'
+require "govuk_content_schemas"
+require "govuk_content_schemas/utils"
+require "json-schema"
 
 class GovukContentSchemas::SchemaCombiner
   include ::GovukContentSchemas::Utils
@@ -17,13 +17,13 @@ class GovukContentSchemas::SchemaCombiner
       combined_schema = clone_schema(schemas.fetch(:metadata))
       add_version_properties(combined_schema.schema)
       add_details(combined_schema.schema)
-      add_links(combined_schema.schema, 'definitions')
+      add_links(combined_schema.schema, "definitions")
       add_format_field(combined_schema.schema)
     else
       combined_schema = clone_schema(schemas.fetch(:links_metadata))
       add_version_properties(combined_schema.schema)
       add_details(combined_schema.schema)
-      add_links(combined_schema.schema, 'properties')
+      add_links(combined_schema.schema, "properties")
     end
 
     add_combined_definitions(combined_schema.schema)
@@ -39,17 +39,17 @@ private
     if version_schema
       version_schema = embeddable_schema(version_schema)
 
-      if schema['required']
-        schema['required'] = schema['required'] + version_schema['required']
+      if schema["required"]
+        schema["required"] = schema["required"] + version_schema["required"]
       end
 
-      schema['properties'] = schema['properties'].merge(version_schema['properties'])
+      schema["properties"] = schema["properties"].merge(version_schema["properties"])
     end
   end
 
   def add_details(schema)
     return unless schemas[:details]
-    schema['definitions'] = schema.fetch('definitions', {}).merge({'details' => embeddable_schema(schemas[:details])})
+    schema["definitions"] = schema.fetch("definitions", {}).merge("details" => embeddable_schema(schemas[:details]))
   end
 
   def add_links(schema, target)
@@ -57,16 +57,16 @@ private
 
     schema[target] = {} unless schema.key?(target)
     if schemas.key?(:links)
-      schema[target]['links'] = merge_schemas(schemas[:links], schemas.fetch(:base_links))
+      schema[target]["links"] = merge_schemas(schemas[:links], schemas.fetch(:base_links))
     else
-      schema[target]['links'] = embeddable_schema(schemas.fetch(:base_links))
+      schema[target]["links"] = embeddable_schema(schemas.fetch(:base_links))
     end
   end
 
   def merge_schemas(base_schema, other)
     merged_schema = embeddable_schema(base_schema)
     other = embeddable_schema(other)
-    merged_schema['properties'] = merged_schema['properties'].merge(other['properties'])
+    merged_schema["properties"] = merged_schema["properties"].merge(other["properties"])
     merged_schema
   end
 
@@ -104,7 +104,7 @@ private
 
   def add_combined_definitions(schema)
     return unless definitions_from_all_schemas.any?
-    schema['definitions'] = schema.fetch('definitions', {}).merge!(definitions_from_all_schemas)
+    schema["definitions"] = schema.fetch("definitions", {}).merge!(definitions_from_all_schemas)
   end
 
   def embeddable_schema(embeddable)
@@ -115,10 +115,10 @@ private
   end
 
   def definitions_from_all_schemas
-    combined = clone_hash(schemas.fetch(:definitions).schema.fetch('definitions', {}))
+    combined = clone_hash(schemas.fetch(:definitions).schema.fetch("definitions", {}))
 
     [schemas[:details], schemas[:links]].compact.inject(combined) do |memo, embedded_schema|
-      memo.merge(embedded_schema.schema.fetch('definitions', {}))
+      memo.merge(embedded_schema.schema.fetch("definitions", {}))
     end
   end
 end

@@ -1,4 +1,4 @@
-require 'govuk_content_schemas/frontend_schema_generator'
+require "govuk_content_schemas/frontend_schema_generator"
 
 RSpec.describe GovukContentSchemas::FrontendSchemaGenerator do
   include GovukContentSchemas::Utils
@@ -37,7 +37,7 @@ RSpec.describe GovukContentSchemas::FrontendSchemaGenerator do
   }
 
   let(:frontend_links_definition) {
-    build_schema('frontend_links.json', properties: build_string_properties('test'))
+    build_schema("frontend_links.json", properties: build_string_properties("test"))
   }
 
   subject(:generated) {
@@ -58,18 +58,18 @@ RSpec.describe GovukContentSchemas::FrontendSchemaGenerator do
 
   it "removes internal properties from the top level properties list" do
     internal_properties.each do |internal_property|
-      expect(generated.schema['properties'].keys).to_not include(internal_property)
+      expect(generated.schema["properties"].keys).to_not include(internal_property)
     end
   end
 
   it "removes internal properties from the top level list of required properties" do
     internal_properties.each do |internal_property|
-      expect(generated.schema['required']).to_not include(internal_property)
+      expect(generated.schema["required"]).to_not include(internal_property)
     end
   end
 
   it "adds updated_at as an allowed datetime property" do
-    expect(generated.schema['properties']).to include(
+    expect(generated.schema["properties"]).to include(
       "updated_at" => {
         "type" => "string",
         "format" => "date-time"
@@ -78,7 +78,7 @@ RSpec.describe GovukContentSchemas::FrontendSchemaGenerator do
   end
 
   it "adds base_path as a required string property" do
-    expect(generated.schema['properties']).to include(
+    expect(generated.schema["properties"]).to include(
       "base_path" => {
         "$ref" => "#/definitions/absolute_path"
       }
@@ -89,19 +89,19 @@ RSpec.describe GovukContentSchemas::FrontendSchemaGenerator do
   end
 
   it "injects a frontend_links definition" do
-    expect(generated.schema['definitions']).to include('frontend_links')
-    expected_embed = frontend_links_definition.schema.reject { |k| k == '$schema' }
-    expect(generated.schema['definitions']['frontend_links']).to eq(expected_embed)
+    expect(generated.schema["definitions"]).to include("frontend_links")
+    expected_embed = frontend_links_definition.schema.reject { |k| k == "$schema" }
+    expect(generated.schema["definitions"]["frontend_links"]).to eq(expected_embed)
   end
 
   it "transforms the links specification to allow expanded links and available_tranlsations" do
-    expect(generated.schema['properties']['links']).to eq(build_frontend_links_schema(*link_names, 'available_translations'))
+    expect(generated.schema["properties"]["links"]).to eq(build_frontend_links_schema(*link_names, "available_translations"))
   end
 
   context "publisher schema specifies a required link" do
     let(:publisher_schema_with_required_link) {
       clone_schema(publisher_schema).tap do |cloned|
-        cloned.schema['properties']['links']['required'] = link_names
+        cloned.schema["properties"]["links"]["required"] = link_names
       end
     }
 
@@ -110,7 +110,7 @@ RSpec.describe GovukContentSchemas::FrontendSchemaGenerator do
     }
 
     it "preserves list of required items" do
-      expect(generated.schema['properties']['links']['required']).to eq(link_names)
+      expect(generated.schema["properties"]["links"]["required"]).to eq(link_names)
     end
   end
 
@@ -118,7 +118,7 @@ RSpec.describe GovukContentSchemas::FrontendSchemaGenerator do
     let(:link_names) { nil }
 
     it "transforms the links specification to allow available_tranlsations" do
-      expect(generated.schema['properties']['links']).to eq(build_frontend_links_schema('available_translations'))
+      expect(generated.schema["properties"]["links"]).to eq(build_frontend_links_schema("available_translations"))
     end
   end
 

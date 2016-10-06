@@ -1,7 +1,7 @@
 $LOAD_PATH << File.expand_path("../lib", __FILE__)
 
 begin
-  require 'rspec/core/rake_task'
+  require "rspec/core/rake_task"
   RSpec::Core::RakeTask.new(:spec)
 rescue LoadError
 end
@@ -20,7 +20,7 @@ task :new_format, [:format_name] do |_task, args|
 
   template_files.each do |file|
     destination = "#{format_path}/publisher/#{file}"
-    if File.exists?(destination)
+    if File.exist?(destination)
       puts "\tSkipping #{destination} because it already exists"
     else
       FileUtils.cp("templates/#{file}", destination)
@@ -28,6 +28,6 @@ task :new_format, [:format_name] do |_task, args|
   end
 end
 
-task :default => [:build]
+task default: [:build]
 
-Dir.glob('lib/tasks/*.rake').each { |r| import r }
+Dir.glob("lib/tasks/*.rake").each { |r| import r }

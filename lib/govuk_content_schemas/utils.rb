@@ -1,5 +1,5 @@
-require 'govuk_content_schemas'
-require 'json-schema'
+require "govuk_content_schemas"
+require "json-schema"
 
 module GovukContentSchemas::Utils
   def clone_hash(hash)
