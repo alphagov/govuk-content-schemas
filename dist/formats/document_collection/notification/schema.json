@@ -43,10 +43,10 @@
       "format": "date-time"
     },
     "publishing_app": {
-      "type": "string"
+      "$ref": "#/definitions/application_name"
     },
     "rendering_app": {
-      "type": "string"
+      "$ref": "#/definitions/application_name"
     },
     "locale": {
       "$ref": "#/definitions/locale"
@@ -356,6 +356,11 @@
       "items": {
         "$ref": "#/definitions/guid"
       }
+    },
+    "application_name": {
+      "description": "Applications on GOV.UK only use lowercase letters and dashes",
+      "type": "string",
+      "pattern": "[a-z-]"
     },
     "image": {
       "type": "object",
