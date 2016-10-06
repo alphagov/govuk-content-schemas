@@ -89,6 +89,7 @@
       {
         "content_id": "81e62338-4644-4520-bbfc-6378855e9e43",
         "title": "Rail Accident Investigation Branch reports",
+        "api_path": "/api/content/raib-reports/email-signup",
         "base_path": "/raib-reports/email-signup",
         "description": "You'll get an email each time a report is updated or a new report is published.",
         "api_url": "https://www.gov.uk/api/content/raib-reports/email-signup",
@@ -100,6 +101,7 @@
       {
         "content_id": "7c87edb4-1b32-4da2-bce8-f67fd9bb50db",
         "title": "Rail Accident Investigation Branch",
+        "api_path": "/api/content/government/organisations/rail-accident-investigation-branch",
         "base_path": "/government/organisations/rail-accident-investigation-branch",
         "api_url": "https://www.gov.uk/api/content/government/organisations/rail-accident-investigation-branch",
         "web_url": "https://www.gov.uk/government/organisations/rail-accident-investigation-branch",
@@ -111,6 +113,7 @@
       {
         "content_id": "bec582be-a95c-41f2-8a56-53dc19f45b76",
         "title": "Rail Accident Investigation Branch reports",
+        "api_path": "/api/content/raib-reports",
         "base_path": "/raib-reports",
         "description": "",
         "api_url": "https://www.gov.uk/api/content/raib-reports",

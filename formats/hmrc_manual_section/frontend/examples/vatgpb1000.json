@@ -70,9 +70,10 @@
       {
         "content_id": "2189bae1-a94e-4f90-917b-ffe25ec9ac4d",
         "title": "Introduction: contents",
+        "api_path": "/api/content/hmrc-internal-manuals/vat-government-and-public-bodies/vatgpb1000",
         "base_path": "/hmrc-internal-manuals/vat-government-and-public-bodies/vatgpb1000",
-        "api_url": "https://content-store.preview.alphagov.co.uk/content/hmrc-internal-manuals/vat-government-and-public-bodies/vatgpb1000",
-        "web_url": "https://www.preview.alphagov.co.uk/hmrc-internal-manuals/vat-government-and-public-bodies/vatgpb1000",
+        "api_url": "https://www.gov.uk/api/content/hmrc-internal-manuals/vat-government-and-public-bodies/vatgpb1000",
+        "web_url": "https://www.gov.uk/hmrc-internal-manuals/vat-government-and-public-bodies/vatgpb1000",
         "locale": "en"
       }
     ],
@@ -80,6 +81,7 @@
       {
         "content_id": "6667cce2-e809-4e21-ae09-cb0bdc1ddda3",
         "title": "HM Revenue & Customs",
+        "api_path": "/api/content/government/organisations/hm-revenue-customs",
         "base_path": "/government/organisations/hm-revenue-customs",
         "api_url": "https://www.gov.uk/api/content/government/organisations/hm-revenue-customs",
         "web_url": "https://www.gov.uk/government/organisations/hm-revenue-customs",

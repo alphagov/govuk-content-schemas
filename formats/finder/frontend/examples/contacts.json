@@ -43,6 +43,7 @@
       {
         "content_id": "378d0b6a-36e5-4a74-8495-215187ab8316",
         "title": "HM Cheese & Biscuits",
+        "api_path": "/api/content/government/organisations/hm-cheese-biscuits",
         "base_path": "/government/organisations/hm-cheese-biscuits",
         "api_url": "https://www.gov.uk/api/content/government/organisations/government/organisations/hm-cheese-biscuits",
         "web_url": "https://www.gov.uk/government/organisations/government/organisations/hm-cheese-biscuits",

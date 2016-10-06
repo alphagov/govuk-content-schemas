@@ -40,14 +40,15 @@
     "parent": [
       {
         "analytics_identifier": null,
-        "api_url": "http://www.dev.gov.uk/api/content/service-manual/service-standard",
+        "api_path": "/api/content/service-manual/service-standard",
+        "api_url": "https://www.gov.uk/api/content/service-manual/service-standard",
         "base_path": "/service-manual/service-standard",
         "content_id": "00f693d4-866a-4fe6-a8d6-09cd7db8980b",
         "description": null,
         "locale": "en",
         "public_updated_at": "2016-06-22T10:35:24.641Z",
         "title": "The Digital Service Standard",
-        "web_url": "http://www.dev.gov.uk/service-manual/service-standard"
+        "web_url": "https://www.gov.uk/service-manual/service-standard"
       }
     ]
   }

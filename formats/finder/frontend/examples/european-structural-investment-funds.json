@@ -181,6 +181,7 @@
       {
         "content_id": "af366ed4-2ff5-45e2-b694-cc13c5a4e887",
         "title": "European Structural and Investment Funds (ESIF)",
+        "api_path": "/api/content/european-structural-investment-funds/email-signup",
         "base_path": "/european-structural-investment-funds/email-signup",
         "description": "You'll get an email each time a fund is updated or a new fund is published.",
         "api_url": "https://www.gov.uk/api/content/european-structural-investment-funds/email-signup",
@@ -192,6 +193,7 @@
       {
         "content_id": "b1e4e105-c157-43ae-899c-4bccca45b336",
         "title": "Department for Communities and Local Government",
+        "api_path": "/api/content/government/organisations/department-for-communities-and-local-government",
         "base_path": "/government/organisations/department-for-communities-and-local-government",
         "api_url": "https://www.gov.uk/api/content/government/organisations/department-for-communities-and-local-government",
         "web_url": "https://www.gov.uk/government/organisations/department-for-communities-and-local-government",
@@ -200,6 +202,7 @@
       {
         "content_id": "b2f980f7-eca3-4bc8-aaa3-a40788a72e52",
         "title": "Department for Environment, Food & Rural Affairs",
+        "api_path": "/api/content/government/organisations/department-for-environment-food-rural-affairs",
         "base_path": "/government/organisations/department-for-environment-food-rural-affairs",
         "api_url": "https://www.gov.uk/api/content/government/organisations/department-for-environment-food-rural-affairs",
         "web_url": "https://www.gov.uk/government/organisations/department-for-environment-food-rural-affairs",
@@ -208,6 +211,7 @@
       {
         "content_id": "3d7941fc-e5d6-4309-b5f9-eeee0e9f1109",
         "title": "Department for Business, Innovation & Skills",
+        "api_path": "/api/content/government/organisations/department-for-business-innovation-skills",
         "base_path": "/government/organisations/department-for-business-innovation-skills",
         "api_url": "https://www.gov.uk/api/content/government/organisations/department-for-business-innovation-skills",
         "web_url": "https://www.gov.uk/government/organisations/department-for-business-innovation-skills",
@@ -219,6 +223,7 @@
       {
         "content_id": "5057413b-82ea-4172-af10-18c307f98012",
         "title": "European Structural and Investment Funds (ESIF)",
+        "api_path": "/api/content/european-structural-investment-funds",
         "base_path": "/european-structural-investment-funds",
         "description": "",
         "api_url": "https://www.gov.uk/api/content/european-structural-investment-funds",

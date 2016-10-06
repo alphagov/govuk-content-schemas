@@ -33,6 +33,7 @@
       {
         "content_id": "16628142-57b2-4611-bc03-5912785acee3",
         "title": "Environment Agency",
+        "api_path": "/api/content/government/organisations/environment-agency",
         "base_path": "/government/organisations/environment-agency",
         "api_url": "https://www.gov.uk/api/content/government/organisations/environment-agency",
         "web_url": "https://www.gov.uk/government/organisations/environment-agency",
@@ -44,6 +45,7 @@
       {
         "content_id": "852925f7-c0f1-11e4-8223-005056011aef",
         "title": "The Rt Hon Sir Eric Pickles MP",
+        "api_path": "/api/content/government/people/eric-pickles",
         "base_path": "/government/people/eric-pickles",
         "api_url": "https://www.gov.uk/api/content/government/people/eric-pickles",
         "web_url": "https://www.gov.uk/government/people/eric-pickles",
@@ -54,6 +56,7 @@
       {
         "content_id": "7dbb1a8b-2149-4aba-bd87-87bd929d3635",
         "title": "Anti-Corruption Summit: London 2016",
+        "api_path": "/api/content/government/topical-events/anti-corruption-summit-london-2016",
         "base_path": "/government/topical-events/anti-corruption-summit-london-2016",
         "api_url": "https://www.gov.uk/api/content/government/topical-events/anti-corruption-summit-london-2016",
         "web_url": "https://www.gov.uk/government/topical-events/anti-corruption-summit-london-2016",

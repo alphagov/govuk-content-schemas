@@ -108,10 +108,11 @@
       {
         "content_id": "1f5911f4-417a-4380-a5a0-674ebff332df",
         "title": "Employment appeal tribunal decisions",
+        "api_path": "/api/content/employment-appeal-tribunal-decisions/email-signup",
         "base_path": "/employment-appeal-tribunal-decisions/email-signup",
         "description": "You'll get an email each time a decision is updated or a new decision is published.",
-        "api_url": "http://content-store.dev.gov.uk/content/employment-appeal-tribunal-decisions/email-signup",
-        "web_url": "http://www.dev.gov.uk/employment-appeal-tribunal-decisions/email-signup",
+        "api_url": "https://www.gov.uk/api/content/employment-appeal-tribunal-decisions/email-signup",
+        "web_url": "https://www.gov.uk/employment-appeal-tribunal-decisions/email-signup",
         "locale": "en"
       }
     ],
@@ -119,10 +120,11 @@
       {
         "content_id": "975cf540-6e64-40e3-b62a-df655a8c99ef",
         "title": "Employment appeal tribunal decisions",
+        "api_path": "/api/content/employment-appeal-tribunal-decisions",
         "base_path": "/employment-appeal-tribunal-decisions",
         "description": "Find decisions on appeals against employment tribunals heard by the Employment Appeal Tribunal.",
-        "api_url": "http://content-store.dev.gov.uk/content/employment-appeal-tribunal-decisions",
-        "web_url": "http://www.dev.gov.uk/employment-appeal-tribunal-decisions",
+        "api_url": "https://www.gov.uk/api/content/employment-appeal-tribunal-decisions",
+        "web_url": "https://www.gov.uk/employment-appeal-tribunal-decisions",
         "locale": "en"
       }
     ]

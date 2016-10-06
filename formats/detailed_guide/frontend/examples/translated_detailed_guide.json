@@ -58,6 +58,7 @@
     "available_translations": [
       {
         "analytics_identifier": null,
+        "api_path": "/api/content/guidance/prepare-a-charity-annual-return.cy",
         "api_url": "https://www.gov.uk/api/content/guidance/prepare-a-charity-annual-return.cy",
         "base_path": "/guidance/prepare-a-charity-annual-return.cy",
         "content_id": "5fec94c4-7631-11e4-a3cb-005056011aef",
@@ -71,6 +72,7 @@
       },
       {
         "analytics_identifier": null,
+        "api_path": "/api/content/guidance/prepare-a-charity-annual-return",
         "api_url": "https://www.gov.uk/api/content/guidance/prepare-a-charity-annual-return",
         "base_path": "/guidance/prepare-a-charity-annual-return",
         "content_id": "5fec94c4-7631-11e4-a3cb-005056011aef",
@@ -87,6 +89,7 @@
     "organisations": [
       {
         "analytics_identifier": "D98",
+        "api_path": "/api/content/government/organisations/charity-commission",
         "api_url": "https://www.gov.uk/api/content/government/organisations/charity-commission",
         "base_path": "/government/organisations/charity-commission",
         "content_id": "489e651f-34c8-4b34-bdd7-e13c2324cde3",
@@ -110,6 +113,7 @@
     "parent": [
       {
         "analytics_identifier": null,
+        "api_path": "/api/content/topic/running-charity/managing-charity",
         "api_url": "https://www.gov.uk/api/content/topic/running-charity/managing-charity",
         "base_path": "/topic/running-charity/managing-charity",
         "content_id": "cf2ab891-5bd9-4788-8254-f9444423719c",
@@ -125,6 +129,7 @@
     "related_guides": [
       {
         "analytics_identifier": null,
+        "api_path": "/api/content/guidance/charity-commission-services-log-in-or-get-a-password",
         "api_url": "https://www.gov.uk/api/content/guidance/charity-commission-services-log-in-or-get-a-password",
         "base_path": "/guidance/charity-commission-services-log-in-or-get-a-password",
         "content_id": "601aa6ca-7631-11e4-a3cb-005056011aef",
@@ -138,6 +143,7 @@
       },
       {
         "analytics_identifier": null,
+        "api_path": "/api/content/guidance/prepare-a-charity-trustees-annual-report",
         "api_url": "https://www.gov.uk/api/content/guidance/prepare-a-charity-trustees-annual-report",
         "base_path": "/guidance/prepare-a-charity-trustees-annual-report",
         "content_id": "5feebf0e-7631-11e4-a3cb-005056011aef",
@@ -153,6 +159,7 @@
     "topics": [
       {
         "analytics_identifier": null,
+        "api_path": "/api/content/topic/running-charity/money-accounts",
         "api_url": "https://www.gov.uk/api/content/topic/running-charity/money-accounts",
         "base_path": "/topic/running-charity/money-accounts",
         "content_id": "6db5a402-5916-4820-89a6-a19c6c9e085e",
@@ -166,6 +173,7 @@
       },
       {
         "analytics_identifier": null,
+        "api_path": "/api/content/topic/running-charity/managing-charity",
         "api_url": "https://www.gov.uk/api/content/topic/running-charity/managing-charity",
         "base_path": "/topic/running-charity/managing-charity",
         "content_id": "cf2ab891-5bd9-4788-8254-f9444423719c",

@@ -19,6 +19,7 @@
     "children": [
       {
         "analytics_identifier": null,
+        "api_path": "/api/content/service-manual/service-standard/understand-user-needs",
         "api_url": "https://www.gov.uk/api/content/service-manual/service-standard/understand-user-needs",
         "base_path": "/service-manual/service-standard/understand-user-needs",
         "content_id": "639bd981-ad5a-4160-a0fe-011bc7a71715",
@@ -30,6 +31,7 @@
       },
       {
         "analytics_identifier": null,
+        "api_path": "/api/content/service-manual/service-standard/do-ongoing-user-research",
         "api_url": "https://www.gov.uk/api/content/service-manual/service-standard/do-ongoing-user-research",
         "base_path": "/service-manual/service-standard/do-ongoing-user-research",
         "content_id": "57ca5168-b6ce-4498-aecf-cca42f1ebd6b",
@@ -41,6 +43,7 @@
       },
       {
         "analytics_identifier": null,
+        "api_path": "/api/content/service-manual/service-standard/have-a-multidisciplinary-team",
         "api_url": "https://www.gov.uk/api/content/service-manual/service-standard/have-a-multidisciplinary-team",
         "base_path": "/service-manual/service-standard/have-a-multidisciplinary-team",
         "content_id": "a08c46ce-d521-4422-ae9d-dad8925f9cda",
@@ -55,6 +58,7 @@
       {
         "content_id": "00f693d4-866a-4fe6-a8d6-09cd7db8980b",
         "title": "Digital Service Standard",
+        "api_path": "/api/content/service-manual/service-standard",
         "base_path": "/service-manual/service-standard",
         "description": null,
         "api_url": "https://www.gov.uk/api/content/service-manual/service-standard",

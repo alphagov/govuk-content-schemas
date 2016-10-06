@@ -123,6 +123,7 @@
       {
         "content_id": "28b9541f-0414-405c-8eb0-16a6fbaa800f",
         "title": "Air Accidents Investigation Branch",
+        "api_path": "/api/content/government/organisations/air-accidents-investigation-branch",
         "base_path": "/government/organisations/air-accidents-investigation-branch",
         "api_url": "https://www.gov.uk/api/content/government/organisations/air-accidents-investigation-branch",
         "web_url": "https://www.gov.uk/government/organisations/air-accidents-investigation-branch",
@@ -134,6 +135,7 @@
       {
         "content_id": "68518b2a-bb48-4807-99d6-de31d39b3810",
         "title": "Air Accidents Investigation Branch reports",
+        "api_path": "/api/content/aaib-reports",
         "base_path": "/aaib-reports",
         "description": "",
         "api_url": "https://www.gov.uk/api/content/aaib-reports",

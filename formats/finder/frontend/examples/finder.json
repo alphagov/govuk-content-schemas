@@ -87,6 +87,7 @@
       {
         "content_id": "3338f283-64a1-4062-842e-677f520c1f15",
         "title": "Ministry of Silly Walks",
+        "api_path": "/api/content/government/organisations/ministry-of-silly-walks",
         "base_path": "/government/organisations/ministry-of-silly-walks",
         "api_url": "https://www.gov.uk/api/content/government/organisations/government/organisations/ministry-of-silly-walks",
         "web_url": "https://www.gov.uk/government/organisations/government/organisations/ministry-of-silly-walks",
@@ -98,6 +99,7 @@
       {
         "content_id": "5c35b119-aebc-4ec8-9413-370bd01c24b3",
         "title": "Ministry of Silly Walks reports",
+        "api_path": "/api/content/mosw-reports/email-signup",
         "base_path": "/mosw-reports/email-signup",
         "api_url": "https://www.gov.uk/api/content/mosw-reports/email-signup",
         "web_url": "https://www.gov.uk/mosw-reports/email-signup",
@@ -108,6 +110,7 @@
       {
         "content_id": "23ec51f6-b1a1-41a7-97bc-59e18041e2e7",
         "title": "Ministry of Silly Walks reports",
+        "api_path": "/api/contnet/mosw-reports",
         "base_path": "/mosw-reports",
         "api_url": "https://www.gov.uk/api/content/mosw-reports",
         "web_url": "https://www.gov.uk/mosw-reports",

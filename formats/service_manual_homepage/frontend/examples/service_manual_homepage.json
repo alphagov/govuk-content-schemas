@@ -34,10 +34,11 @@
       {
         "content_id": "370e00b2-3c79-4816-aaa9-1a7059e6155d",
         "title": "Agile delivery",
+        "api_path": "/api/content/service-manual/agile-delivery",
         "base_path": "/service-manual/agile-delivery",
         "description": "How to work in an agile way: principles, tools and governance.",
-        "api_url": "https://content-store.gov.uk/content/service-manual/agile",
-        "web_url": "https://www.gov.uk/service-manual/agile",
+        "api_url": "https://www.gov.uk/api/content/service-manual/agile-delivery",
+        "web_url": "https://www.gov.uk/service-manual/agile-delivery",
         "locale": "en",
         "schema_name": "service_manual_topic",
         "document_type": "service_manual_topic",

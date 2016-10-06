@@ -44,8 +44,9 @@
       {
         "content_id": "6667cce2-e809-4e21-ae09-cb0bdc1ddda3",
         "title": "HM Revenue & Customs",
+        "api_path": "/api/content/government/organisations/hm-revenue-customs",
         "base_path": "/government/organisations/hm-revenue-customs",
-        "api_url": "https://www.gov.uk/api/organisations/hm-revenue-customs",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/hm-revenue-customs",
         "web_url": "https://www.gov.uk/government/organisations/hm-revenue-customs",
         "locale": "en",
         "analytics_identifier": "D25"
@@ -55,6 +56,7 @@
       {
         "content_id": "8034be95-4ac2-4fff-93c5-e7514ed9504a",
         "title": "Tax and revenue",
+        "api_path": "/api/content/government/topics/tax-and-revenue",
         "base_path": "/government/topics/tax-and-revenue",
         "api_url": "https://www.gov.uk/api/content/government/world/topics/tax-and-revenue",
         "web_url": "https://www.gov.uk/government/world/topics/tax-and-revenue",
@@ -66,6 +68,7 @@
         "content_id": "6e1d83bc-d37a-447c-bdac-31be4b441417",
         "title": "PAYE",
         "base_path": "/topic/business-tax/paye",
+        "api_path": "/api/content/topic/business-tax/paye",
         "api_url": "https://www.gov.uk/api/content/topic/business-tax/paye",
         "web_url": "https://www.gov.uk/topic/business-tax/paye",
         "locale": "en",
@@ -75,6 +78,7 @@
               "content_id": "a481832e-5f10-4d3b-8131-a064b36730ae",
               "title": "Business tax",
               "base_path": "/topic/business-tax",
+              "api_path": "/api/content/topic/business-tax",
               "api_url": "https://www.gov.uk/api/content/topic/business-tax",
               "web_url": "https://www.gov.uk/topic/business-tax",
               "locale": "en"
@@ -88,6 +92,7 @@
         "content_id": "6e1d83bc-d37a-447c-bdac-31be4b441417",
         "title": "PAYE",
         "base_path": "/topic/business-tax/paye",
+        "api_path": "/api/content/topic/business-tax/paye",
         "api_url": "https://www.gov.uk/api/content/topic/business-tax/paye",
         "web_url": "https://www.gov.uk/topic/business-tax/paye",
         "locale": "en"
@@ -96,6 +101,7 @@
         "content_id": "a481832e-5f10-4d3b-8131-a064b36730ae",
         "title": "Business tax",
         "base_path": "/topic/business-tax",
+        "api_path": "/api/content/topic/business-tax",
         "api_url": "https://www.gov.uk/api/content/topic/business-tax",
         "web_url": "https://www.gov.uk/topic/business-tax",
         "locale": "en"

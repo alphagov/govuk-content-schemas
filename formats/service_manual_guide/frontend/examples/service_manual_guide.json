@@ -35,10 +35,11 @@
       {
         "content_id": "e5f09422-bf55-417c-b520-8a42cb409814",
         "title": "Agile delivery community",
+        "api_path": "/api/content/service-manual/communities/agile-delivery-community",
         "base_path": "/service-manual/communities/agile-delivery-community",
         "description": "Agile delivery community takes care of...",
-        "api_url": "http://content-store.dev.gov.uk/content/service-manual/communities/agile-delivery-community",
-        "web_url": "http://www.dev.gov.uk/service-manual/communities/agile-delivery-community",
+        "api_url": "https://www.gov.uk/api/content/service-manual/communities/agile-delivery-community",
+        "web_url": "https://www.gov.uk/service-manual/communities/agile-delivery-community",
         "locale": "en",
         "analytics_identifier": null,
         "links": {}
@@ -48,9 +49,10 @@
       {
         "content_id": "370e00b2-3c79-4816-aaa9-1a7059e6155d",
         "title": "Agile",
+        "api_path": "/api/content/service-manual/agile",
         "base_path": "/service-manual/agile",
         "description": "",
-        "api_url": "https://content-store.gov.uk/content/service-manual/agile",
+        "api_url": "https://www.gov.uk/api/content/service-manual/agile",
         "web_url": "https://www.gov.uk/service-manual/agile",
         "locale": "en",
         "schema_name": "service_manual_topic",

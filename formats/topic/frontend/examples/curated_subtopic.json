@@ -24,6 +24,7 @@
     "parent": [
       {
         "content_id": "9d7a445f-7451-4ef8-815e-ae66676a240b",
+        "api_path": "/api/content/topic/oil-and-gas",
         "base_path": "/topic/oil-and-gas",
         "title": "Oil and gas",
         "api_url": "https://www.gov.uk/api/content/topic/oil-and-gas",

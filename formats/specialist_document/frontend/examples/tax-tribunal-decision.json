@@ -45,10 +45,11 @@
       {
         "content_id": "5ea90783-1a5b-4c0b-9c48-ce7ba478ee7b",
         "title": "Why Pay More For Cars Limited v The Commissioners For Her Majesty's Revenue And Customs",
+        "api_path": "/api/content/tax-and-chancery-tribunal-decisions/why-pay-more-for-cars-limited-v-the-commissioners-for-her-majesty-s-revenue-and-customs",
         "base_path": "/tax-and-chancery-tribunal-decisions/why-pay-more-for-cars-limited-v-the-commissioners-for-her-majesty-s-revenue-and-customs",
         "description": "VALUE ADDED TAX - Edwards v Bairstow - jurisdiction of Upper Tribunal - appeal against refusal of claim for repayment of overpaid VAT",
-        "api_url": "http://content-store.dev.gov.uk/content/tax-and-chancery-tribunal-decisions/why-pay-more-for-cars-limited-v-the-commissioners-for-her-majesty-s-revenue-and-customs",
-        "web_url": "http://www.dev.gov.uk/tax-and-chancery-tribunal-decisions/why-pay-more-for-cars-limited-v-the-commissioners-for-her-majesty-s-revenue-and-customs",
+        "api_url": "https://www.gov.uk/api/content/tax-and-chancery-tribunal-decisions/why-pay-more-for-cars-limited-v-the-commissioners-for-her-majesty-s-revenue-and-customs",
+        "web_url": "https://www.gov.uk/tax-and-chancery-tribunal-decisions/why-pay-more-for-cars-limited-v-the-commissioners-for-her-majesty-s-revenue-and-customs",
         "locale": "en"
       }
     ]

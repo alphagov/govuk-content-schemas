@@ -34,9 +34,10 @@
       {
         "content_id": "370e00b2-3c79-4816-aaa9-1a7059e6155d",
         "title": "Communities",
+        "api_path": "/api/content/service-manual/communities",
         "base_path": "/service-manual/communities",
         "description": "",
-        "api_url": "https://content-store.gov.uk/content/service-manual/communities",
+        "api_url": "https://www.gov.uk/api/content/service-manual/communities",
         "web_url": "https://www.gov.uk/service-manual/communities",
         "locale": "en",
         "schema_name": "service_manual_topic",

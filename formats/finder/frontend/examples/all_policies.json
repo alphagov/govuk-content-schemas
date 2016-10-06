@@ -28,6 +28,7 @@
       {
         "content_id": "3f68ef63-252c-4982-8569-a01a911e7397",
         "title": "All policy content",
+        "api_path": "/api/content/government/policies/all",
         "base_path": "/government/policies/all",
         "description": "",
         "api_url": "https://www.gov.uk/api/content/government/policies/all",
