@@ -75,7 +75,10 @@ private
   end
 
   def frontend_link_names
-    publisher_links.fetch("properties", {}).keys + ["available_translations"]
+    publisher_links.fetch("properties", {}).keys + [
+      "available_translations",
+      "children"
+    ]
   end
 
   def frontend_link_properties

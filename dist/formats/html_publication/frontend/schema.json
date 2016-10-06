@@ -112,6 +112,9 @@
         },
         "available_translations": {
           "$ref": "#/definitions/frontend_links"
+        },
+        "children": {
+          "$ref": "#/definitions/frontend_links"
         }
       }
     },

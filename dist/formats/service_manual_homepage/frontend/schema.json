@@ -82,9 +82,6 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "service_manual_topics": {
-          "$ref": "#/definitions/frontend_links"
-        },
         "taxons": {
           "$ref": "#/definitions/frontend_links"
         },
@@ -110,6 +107,9 @@
           "$ref": "#/definitions/frontend_links"
         },
         "available_translations": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "children": {
           "$ref": "#/definitions/frontend_links"
         }
       }

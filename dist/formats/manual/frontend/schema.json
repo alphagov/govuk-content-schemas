@@ -111,6 +111,9 @@
         },
         "policy_areas": {
           "$ref": "#/definitions/frontend_links"
+        },
+        "children": {
+          "$ref": "#/definitions/frontend_links"
         }
       }
     },
