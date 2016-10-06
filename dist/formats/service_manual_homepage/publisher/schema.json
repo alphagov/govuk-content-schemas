@@ -138,10 +138,6 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "service_manual_topics": {
-          "description": "References an array of 'service_manual_topic's. Not to be confused with 'topics'.",
-          "$ref": "#/definitions/guid_list"
-        },
         "taxons": {
           "description": "Prototype-stage taxonomy label for this content item",
           "$ref": "#/definitions/guid_list"
