@@ -92,6 +92,11 @@
       "pattern": "^/(([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})+(/([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)*)?(\\?([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)?(#([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)?$",
       "description": "A path with optional query string and/or fragment."
     },
+    "govuk_campaign_url": {
+      "type": "string",
+      "pattern": "^https://([a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[A-Za-z0-9])?\\.)+campaign\\.gov\\.uk(/(([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})+(/([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)*)?(\\?([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)?(#([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)?)?$",
+      "description": "A gov.uk campaign URL with optional query string and/or fragment."
+    },
     "guid": {
       "type": "string",
       "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-[1-5][a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$"
@@ -118,7 +123,11 @@
           "enum": [ "prefix", "exact" ]
         },
         "destination": {
-          "$ref": "#/definitions/absolute_fullpath"
+          "type": "string",
+          "oneOf": [
+            { "$ref": "#/definitions/absolute_fullpath" },
+            { "$ref": "#/definitions/govuk_campaign_url" }
+          ]
         },
         "segments_mode": {
           "enum": [ "preserve", "ignore" ],
