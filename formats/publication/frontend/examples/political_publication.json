@@ -43,6 +43,7 @@
       {
         "content_id": "d65d4203-01f5-4920-a3b1-f614bfd8e83e",
         "title": "Department of Energy & Climate Change",
+        "api_path": "/api/content/government/organisations/department-of-energy-climate-change",
         "base_path": "/government/organisations/department-of-energy-climate-change",
         "api_url": "https://www.gov.uk/api/content/government/organisations/department-of-energy-climate-change",
         "web_url": "https://www.gov.uk/government/organisations/department-of-energy-climate-change",
@@ -54,6 +55,7 @@
       {
         "content_id": "5eb67fbf-7631-11e4-a3cb-005056011aef",
         "title": "Climate Change Agreements guidance",
+        "api_path": "/api/content/government/collections/climate-change-agreements-guidance",
         "base_path": "/government/collections/climate-change-agreements-guidance",
         "api_url": "https://www.gov.uk/api/content/government/collections/climate-change-agreements-guidance",
         "web_url": "https://www.gov.uk/government/collections/climate-change-agreements-guidance",
@@ -64,6 +66,7 @@
       {
         "content_id": "5d2b69f0-7631-11e4-a3cb-005056011aef",
         "title": "Climate change impact in developing countries",
+        "api_path": "/api/content/government/policies/climate-change-impact-in-developing-countries",
         "base_path": "/government/policies/climate-change-impact-in-developing-countries",
         "api_url": "https://www.gov.uk/api/content/government/policies/climate-change-impact-in-developing-countries",
         "web_url": "https://www.gov.uk/government/policies/climate-change-impact-in-developing-countries",

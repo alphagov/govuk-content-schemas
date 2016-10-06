@@ -14,10 +14,11 @@
       {
         "content_id": "c5042bc1-d95c-41d7-8742-1f0b59f891ff",
         "title": "Standards and assurance community",
+        "api_path": "/api/content/service-manual/communities/standards-and-assurance-community",
         "base_path": "/service-manual/communities/standards-and-assurance-community",
         "description": "The standards and assurance community is for anyone with an interest in government standards and how they can be used to build high quality digital services.",
-        "api_url": "http://content-store.dev.gov.uk/content/service-manual/communities/standards-and-assurance-community",
-        "web_url": "http://www.dev.gov.uk/service-manual/communities/standards-and-assurance-community",
+        "api_url": "https://www.gov.uk/api/content/service-manual/communities/standards-and-assurance-community",
+        "web_url": "https://www.gov.uk/service-manual/communities/standards-and-assurance-community",
         "locale": "en",
         "analytics_identifier": null
       }
@@ -26,20 +27,22 @@
       {
         "content_id": "a69b577d-8660-4bee-90de-e5ac3b267a03",
         "title": "How service assessments work",
+        "api_path": "/api/content/service-manual/service-assessments/how-service-assessments-work",
         "base_path": "/service-manual/service-assessments/how-service-assessments-work",
         "description": "What happens at a service assessment and what to do when you get your results.",
-        "api_url": "http://content-store.dev.gov.uk/content/service-manual/service-assessments/how-service-assessments-work",
-        "web_url": "http://www.dev.gov.uk/service-manual/service-assessments/how-service-assessments-work",
+        "api_url": "https://www.gov.uk/api/content/service-manual/service-assessments/how-service-assessments-work",
+        "web_url": "https://www.gov.uk/service-manual/service-assessments/how-service-assessments-work",
         "locale": "en",
         "analytics_identifier": null
       },
       {
         "content_id": "5394d049-1f7d-466e-af1a-44afd7dab46f",
         "title": "Check if you need to get your service assessed",
+        "api_path": "/api/content/service-manual/service-assessments/check-if-you-need-a-service-assessment",
         "base_path": "/service-manual/service-assessments/check-if-you-need-a-service-assessment",
         "description": "How to find out if your service needs to be assessed and arrange your 3 assessments.",
-        "api_url": "http://content-store.dev.gov.uk/content/service-manual/service-assessments/check-if-you-need-a-service-assessment",
-        "web_url": "http://www.dev.gov.uk/service-manual/service-assessments/check-if-you-need-a-service-assessment",
+        "api_url": "https://www.gov.uk/api/content/service-manual/service-assessments/check-if-you-need-a-service-assessment",
+        "web_url": "https://www.gov.uk/service-manual/service-assessments/check-if-you-need-a-service-assessment",
         "locale": "en",
         "analytics_identifier": null
       }

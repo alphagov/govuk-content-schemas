@@ -40,10 +40,11 @@
       {
         "content_id": "3917cb0e-0928-45b7-bf63-20f9bc113a7c",
         "title": "Example UTAAC Decision",
+        "api_path": "/api/content/administrative-appeals-tribunal-decisions/example-utaac-decision",
         "base_path": "/administrative-appeals-tribunal-decisions/example-utaac-decision",
         "description": "Example text.",
-        "api_url": "http://content-store.dev.gov.uk/content/administrative-appeals-tribunal-decisions/example-utaac-decision",
-        "web_url": "http://www.dev.gov.uk/administrative-appeals-tribunal-decisions/example-utaac-decision",
+        "api_url": "https://www.gov.uk/api/content/administrative-appeals-tribunal-decisions/example-utaac-decision",
+        "web_url": "https://www.gov.uk/administrative-appeals-tribunal-decisions/example-utaac-decision",
         "locale": "en"
       }
     ]

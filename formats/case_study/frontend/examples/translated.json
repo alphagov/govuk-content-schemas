@@ -30,6 +30,7 @@
     "available_translations": [
       {
         "content_id": "394f8be4-175b-4fb8-8470-35049451b1c7",
+        "api_path": "/api/content/government/case-studies/doing-business-in-spain",
         "api_url": "https://www.gov.uk/api/content/government/case-studies/doing-business-in-spain",
         "base_path": "/government/case-studies/doing-business-in-spain",
         "locale": "en",
@@ -38,6 +39,7 @@
       },
       {
         "content_id": "394f8be4-175b-4fb8-8470-35049451b1c7",
+        "api_path": "/api/content/government/case-studies/doing-business-in-spain.es",
         "api_url": "https://www.gov.uk/api/content/government/case-studies/doing-business-in-spain.es",
         "base_path": "/government/case-studies/doing-business-in-spain.es",
         "locale": "es",
@@ -46,6 +48,7 @@
       },
       {
         "content_id": "394f8be4-175b-4fb8-8470-35049451b1c7",
+        "api_path": "/api/content/government/case-studies/doing-business-in-spain.ar",
         "api_url": "https://www.gov.uk/api/content/government/case-studies/doing-business-in-spain.ar",
         "base_path": "/government/case-studies/doing-business-in-spain.ar",
         "locale": "ar",
@@ -56,6 +59,7 @@
     "organisations": [
       {
         "content_id": "8449fbe1-bffe-46cf-a141-07df52c530b7",
+        "api_path": "/api/content/government/organisations/uk-trade-investment",
         "api_url": "https://www.gov.uk/api/content/government/organisations/uk-trade-investment",
         "base_path": "/government/organisations/uk-trade-investment",
         "locale": "en",
@@ -66,6 +70,7 @@
     "world_locations": [
       {
         "content_id": "1a47d8eb-36e8-4a9e-8a05-ca33184c2f86",
+        "api_path": "/api/content/government/world/spain.es",
         "api_url": "https://www.gov.uk/api/content/government/world/spain.es",
         "base_path": "/government/world/spain.es",
         "locale": "es",

@@ -16,6 +16,7 @@
       {
         "content_id": "c9109663-0128-4db4-b513-a9cdfb691034",
         "title": "Bona Vacantia",
+        "api_path": "/api/content/government/organisations/bona-vacantia",
         "base_path": "/government/organisations/bona-vacantia",
         "description": null,
         "api_url": "https://www.gov.uk/api/content/government/organisations/bona-vacantia",

@@ -61,6 +61,7 @@
       {
         "content_id": "a4759607-4fd8-4cf0-9d56-af9d14a71162",
         "title": "Department for Work and Pensions",
+        "api_path": "/api/content/government/organisations/department-for-work-and-pensions",
         "base_path": "/government/organisations/department-for-work-and-pensions",
         "api_url": "https://www.gov.uk/api/organisations/department-for-work-and-pensions",
         "web_url": "https://www.gov.uk/government/organisations/department-for-work-and-pensions",
@@ -74,6 +75,7 @@
       {
         "content_id": "69938c64-4bb3-4b4f-814b-e73cb71831ef",
         "title": "Benefits Reform",
+        "api_path": "/api/content/government/policies/benefits-reform/email-signup",
         "base_path": "/government/policies/benefits-reform/email-signup",
         "api_url": "https://www.gov.uk/api/content/government/policies/benefits-reform/email-signup",
         "web_url": "https://www.gov.uk/government/policies/benefits-reform/email-signup",
@@ -84,6 +86,7 @@
       {
         "content_id": "f8c3682c-3a88-4f35-afba-3607384e39e6",
         "title": "Benefits Reform",
+        "api_path": "/api/content/government/policies/benefits-reform",
         "base_path": "/government/policies/benefits-reform",
         "api_url": "https://www.gov.uk/api/content/government/policies/benefits-reform",
         "web_url": "https://www.gov.uk/government/policies/benefits-reform",

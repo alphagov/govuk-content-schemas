@@ -8,6 +8,7 @@
     "parent": [
       {
         "content_id": "a6510b11-75c8-4df3-be2d-17d0e2c081be",
+        "api_path": "/api/content/topic/oil-and-gas",
         "base_path": "/topic/oil-and-gas",
         "title": "Oil and gas",
         "api_url": "https://www.gov.uk/api/content/topic/oil-and-gas",

@@ -93,6 +93,7 @@
       {
         "content_id": "21c88fa0-79f0-4ec2-8936-4b086f2ce5ed",
         "title": "Marine Accident Investigation Branch reports",
+        "api_path": "/api/content/maib-reports/email-signup",
         "base_path": "/maib-reports/email-signup",
         "description": "You'll get an email each time a report is updated or a new report is published.",
         "api_url": "https://www.gov.uk/api/content/maib-reports/email-signup",
@@ -104,6 +105,7 @@
       {
         "content_id": "5415d422-e3ab-4cb7-bd84-d54640be0b1c",
         "title": "Marine Accident Investigation Branch",
+        "api_path": "/api/content/government/organisations/marine-accident-investigation-branch",
         "base_path": "/government/organisations/marine-accident-investigation-branch",
         "api_url": "https://www.gov.uk/api/content/government/organisations/marine-accident-investigation-branch",
         "web_url": "https://www.gov.uk/government/organisations/marine-accident-investigation-branch",
@@ -115,6 +117,7 @@
       {
         "content_id": "3df5a305-2819-4125-882b-65c2f3edf6cf",
         "title": "Marine Accident Investigation Branch reports",
+        "api_path": "/api/content/maib-reports",
         "base_path": "/maib-reports",
         "description": "",
         "api_url": "https://www.gov.uk/api/content/maib-reports",

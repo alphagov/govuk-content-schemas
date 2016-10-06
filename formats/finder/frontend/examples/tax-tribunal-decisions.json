@@ -76,10 +76,11 @@
       {
         "content_id": "ae5afec1-30d6-4997-bdf8-7de94d2dd910",
         "title": "Tax and Chancery tribunal decisions",
+        "api_path": "/api/content/tax-and-chancery-tribunal-decisions/email-signup",
         "base_path": "/tax-and-chancery-tribunal-decisions/email-signup",
         "description": "You'll get an email each time a decision is updated or a new decision is published.",
-        "api_url": "http://content-store.dev.gov.uk/content/tax-and-chancery-tribunal-decisions/email-signup",
-        "web_url": "http://www.dev.gov.uk/tax-and-chancery-tribunal-decisions/email-signup",
+        "api_url": "https://www.gov.uk/api/content/tax-and-chancery-tribunal-decisions/email-signup",
+        "web_url": "https://www.gov.uk/tax-and-chancery-tribunal-decisions/email-signup",
         "locale": "en"
       }
     ],
@@ -87,10 +88,11 @@
       {
         "content_id": "632290ae-aad8-4895-b135-1e0a72a6bdeb",
         "title": "Tax and Chancery tribunal decisions",
+        "api_path": "/api/content/tax-and-chancery-tribunal-decisions",
         "base_path": "/tax-and-chancery-tribunal-decisions",
         "description": "Find decisions on tax, financial services, pensions, charity and land registration appeals to the Upper Tribunal (Tax and Chancery Chamber).",
-        "api_url": "http://content-store.dev.gov.uk/content/tax-and-chancery-tribunal-decisions",
-        "web_url": "http://www.dev.gov.uk/tax-and-chancery-tribunal-decisions",
+        "api_url": "https://www.gov.uk/api/content/tax-and-chancery-tribunal-decisions",
+        "web_url": "https://www.gov.uk/tax-and-chancery-tribunal-decisions",
         "locale": "en"
       }
     ]

@@ -142,6 +142,7 @@
       {
         "content_id": "6a0da4c9-1969-4c2f-972c-88b5497c2b65",
         "title": "First-tier Tribunal (Asylum Support) decisions",
+        "api_path": "/api/content/asylum-support-decisions",
         "base_path": "/asylum-support-decisions",
         "description": "Find decisions by the First-tier Tribunal (Asylum Support)",
         "api_url": "http://content-store.dev.gov.uk/content/asylum-support-decisions",

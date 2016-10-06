@@ -7,6 +7,7 @@
     "related": [
       {
         "analytics_identifier": null,
+        "api_path": "/api/content/cma-cases",
         "api_url": "https://www.gov.uk/api/content/cma-cases",
         "base_path": "/cma-cases",
         "content_id": "fef4ac7c-024a-4943-9f19-e85a8369a1f3",
@@ -20,6 +21,7 @@
     "organisations": [
       {
         "analytics_identifier": "D550",
+        "api_path": "/api/content/government/organisations/competition-and-markets-authority",
         "api_url": "https://www.gov.uk/api/content/government/organisations/competition-and-markets-authority",
         "base_path": "/government/organisations/competition-and-markets-authority",
         "content_id": "957eb4ec-089b-4f71-ba2a-dc69ac8919ea",
@@ -33,6 +35,7 @@
     "available_translations": [
       {
         "analytics_identifier": null,
+        "api_path": "/api/content/cma-cases/email-signup",
         "api_url": "https://www.gov.uk/api/content/cma-cases/email-signup",
         "base_path": "/cma-cases/email-signup",
         "content_id": "43dd2b13-93ec-4ca6-a7a4-e2eb5f5d485a",
@@ -61,6 +64,7 @@
       {
         "content_id": "fef4ac7c-024a-4943-9f19-e85a8369a1f3",
         "title": "Competition and Markets Authority cases",
+        "api_path": "/api/content/cma-cases",
         "base_path": "/cma-cases",
         "description": "Find reports and updates on current and historical CMA investigations",
         "api_url": "https://www.gov.uk/api/content/cma-cases",
@@ -76,6 +80,7 @@
       {
         "content_id": "957eb4ec-089b-4f71-ba2a-dc69ac8919ea",
         "title": "Competition and Markets Authority",
+        "api_path": "/api/content/government/organisations/competition-and-markets-authority",
         "base_path": "/government/organisations/competition-and-markets-authority",
         "description": null,
         "api_url": "https://www.gov.uk/api/content/government/organisations/competition-and-markets-authority",
@@ -99,6 +104,7 @@
       {
         "content_id": "43dd2b13-93ec-4ca6-a7a4-e2eb5f5d485a",
         "title": "Competition and Markets Authority cases",
+        "api_path": "/api/content/cma-cases/email-signup",
         "base_path": "/cma-cases/email-signup",
         "description": "You'll get an email each time a case is updated or a new case is published.",
         "api_url": "https://www.gov.uk/api/content/cma-cases/email-signup",

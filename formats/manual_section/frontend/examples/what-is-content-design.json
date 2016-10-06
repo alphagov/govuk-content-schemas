@@ -42,9 +42,10 @@
       {
         "content_id": "66d565ea-1544-4410-85ff-2e411cdf78e6",
         "title": "What is content design?",
+        "api_path": "/api/content/guidance/content-design/what-is-content-design",
         "base_path": "/guidance/content-design/what-is-content-design",
-        "api_url": "https://content-store.preview.alphagov.co.uk/content/guidance/content-design/what-is-content-design",
-        "web_url": "https://www.preview.alphagov.co.uk/guidance/content-design/what-is-content-design",
+        "api_url": "https://www.gov.uk/api/content/guidance/content-design/what-is-content-design",
+        "web_url": "https://www.gov.uk/guidance/content-design/what-is-content-design",
         "locale": "en"
       }
     ]

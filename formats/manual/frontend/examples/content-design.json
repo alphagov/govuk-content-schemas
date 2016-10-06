@@ -71,9 +71,10 @@
       {
         "content_id": "9b2e22e1-a222-4cda-9799-de7ce56088b0",
         "title": "Content design: planning, writing and managing content",
+        "api_path": "/api/content/guidance/content-design",
         "base_path": "/guidance/content-design",
-        "api_url": "https://content-store.preview.alphagov.co.uk/content/guidance/content-design",
-        "web_url": "https://www.preview.alphagov.co.uk/guidance/content-design",
+        "api_url": "https://www.gov.uk/api/content/guidance/content-design",
+        "web_url": "https://www.gov.uk/guidance/content-design",
         "locale": "en"
       }
     ]

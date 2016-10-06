@@ -55,10 +55,11 @@
       {
         "content_id": "3917cb0e-0928-45b7-bf63-20f9bc113a7a",
         "title": "AST / 06 / 04 / 13140",
+        "api_path": "/api/content/asylum-support-decisions/ast-06-04-13140",
         "base_path": "/asylum-support-decisions/ast-06-04-13140",
         "description": "The House of Lords guidance in Limbuela did not include failed asylum seekers - paragraphs 13, 81 and 100 of their Lordships' judgement refers - the solution to a failed asylum seeker's destitution lies in his own hands by way of a voluntary return home - an option not expected of an asylum seeker",
-        "api_url": "http://content-store.dev.gov.uk/content/asylum-support-decisions/ast-06-04-13140",
-        "web_url": "http://www.dev.gov.uk/asylum-support-decisions/ast-06-04-13140",
+        "api_url": "https://www.gov.uk/api/content/asylum-support-decisions/ast-06-04-13140",
+        "web_url": "https://www.gov.uk/asylum-support-decisions/ast-06-04-13140",
         "locale": "en"
       }
     ]

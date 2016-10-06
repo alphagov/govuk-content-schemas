@@ -50,6 +50,7 @@
       {
         "content_id": "de4e9dc6-cca4-43af-a594-682023b84d6c",
         "title": "Department for Environment, Food & Rural Affairs",
+        "api_path": "/api/content/government/organisations/department-for-environment-food-rural-affairs",
         "base_path": "/government/organisations/department-for-environment-food-rural-affairs",
         "api_url": "https://www.gov.uk/api/content/government/organisations/department-for-environment-food-rural-affairs",
         "web_url": "https://www.gov.uk/government/organisations/department-for-environment-food-rural-affairs",

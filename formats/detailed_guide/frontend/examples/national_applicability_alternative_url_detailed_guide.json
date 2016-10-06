@@ -54,8 +54,9 @@
       {
         "content_id": "49e09fa7-f65b-49d6-b4ab-0ca82a548e93",
         "title": "British Cattle Movement Service",
+        "api_path": "/api/content/government/organisations/british-cattle-movement-service",
         "base_path": "/government/organisations/british-cattle-movement-service",
-        "api_url": "https://www.gov.uk/api/organisations/british-cattle-movement-service",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/british-cattle-movement-service",
         "web_url": "https://www.gov.uk/government/organisations/british-cattle-movement-service",
         "locale": "en",
         "analytics_identifier": "OT1051"

@@ -60,6 +60,7 @@
       {
         "content_id": "9417d532-a080-4856-9a0f-08b1d9d78c98",
         "title": "Department for Work and Pensions",
+        "api_path": "/api/content/government/organisations/department-for-work-and-pensions",
         "base_path": "/government/organisations/department-for-work-and-pensions",
         "api_url": "https://www.gov.uk/api/content/government/organisations/department-for-work-and-pensions",
         "web_url": "https://www.gov.uk/government/organisations/department-for-work-and-pensions",
@@ -70,6 +71,7 @@
       {
         "content_id": "295ce3e3-a68b-4952-8f13-72ea62f5c16b",
         "title": "George Dough",
+        "api_path": "/api/content/government/people/george-dough",
         "base_path": "/government/people/george-dough",
         "api_url": "https://www.gov.uk/api/content/government/people/george-dough",
         "web_url": "https://www.gov.uk/people/george-dough",
@@ -80,6 +82,7 @@
       {
         "content_id": "248de49c-da2a-4142-9310-bcea244c6dce",
         "title": "Medical Advisory Group",
+        "api_path": "/api/content/government/groups/medical-advisory-group",
         "base_path": "/government/groups/medical-advisory-group",
         "api_url": "https://www.gov.uk/api/content/government/groups/medical-advisory-group",
         "web_url": "https://www.gov.uk/government/groups/medical-advisory-group",
@@ -91,6 +94,7 @@
       {
         "content_id": "a0f12caf-2555-4bfc-9c85-0c8ad4c1e766",
         "title": "Universal Credit",
+        "api_path": "/api/content/government/policies/universal-credit/email-signup",
         "base_path": "/government/policies/universal-credit/email-signup",
         "api_url": "https://www.gov.uk/api/content/government/policies/universal-credit/email-signup",
         "web_url": "https://www.gov.uk/government/policies/universal-credit/email-signup",
@@ -101,6 +105,7 @@
       {
         "content_id": "848b8564-328c-4787-bebb-9e1b60ccf0d7",
         "title": "Benefits Reform",
+        "api_path": "/api/content/government/policies/benefits-reform",
         "base_path": "/government/policies/benefits-reform",
         "api_url": "https://www.gov.uk/api/content/government/policies/benefits-reform",
         "web_url": "https://www.gov.uk/government/policies/benefits-reform",
@@ -111,6 +116,7 @@
       {
         "content_id": "6c767453-c328-4cb4-8812-fae88a250bb3",
         "title": "Unveirsal Credit",
+        "api_path": "/api/content/government/policies/universal-credit",
         "base_path": "/government/policies/universal-credit",
         "api_url": "https://www.gov.uk/api/content/government/policies/universal-credit",
         "web_url": "https://www.gov.uk/government/policies/universal-credit",

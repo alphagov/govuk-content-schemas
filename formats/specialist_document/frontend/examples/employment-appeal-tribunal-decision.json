@@ -52,10 +52,11 @@
       {
         "content_id": "3917cb0e-0928-45b7-bf63-20f9bc113a7a",
         "title": "UKEAT/0144/15/LA",
+        "api_path": "/api/content/employment-appeal-tribunal-decisions/ukeat-0144-15-la",
         "base_path": "/employment-appeal-tribunal-decisions/ukeat-0144-15-la",
         "description": "Discrimination on grounds of race - Subjecting an employee to a detriment",
-        "api_url": "http://content-store.dev.gov.uk/content/employment-appeal-tribunal-decisions/ukeat-0144-15-la",
-        "web_url": "http://www.dev.gov.uk/employment-appeal-tribunal-decisions/ukeat-0144-15-la",
+        "api_url": "https://www.gov.uk/api/content/employment-appeal-tribunal-decisions/ukeat-0144-15-la",
+        "web_url": "https://www.gov.uk/employment-appeal-tribunal-decisions/ukeat-0144-15-la",
         "locale": "en"
       }
     ]

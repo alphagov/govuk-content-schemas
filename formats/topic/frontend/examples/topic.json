@@ -8,6 +8,7 @@
     "children": [
       {
         "content_id": "f6eef5ca-be55-41b2-98be-f72b3e649b84",
+        "api_path": "/api/content/topic/oil-and-gas/fields-and-wells",
         "base_path": "/topic/oil-and-gas/fields-and-wells",
         "title": "Fields and wells",
         "api_url": "https://www.gov.uk/api/content/topic/oil-and-gas/fields-and-wells",
@@ -16,6 +17,7 @@
       },
       {
         "content_id": "0a6116da-fbf6-4d5c-baa9-2a74ae8a8fb9",
+        "api_path": "/api/content/topic/oil-and-gas/licensing",
         "base_path": "/topic/oil-and-gas/licensing",
         "title": "Licensing",
         "api_url": "https://www.gov.uk/api/content/topic/oil-and-gas/licensing",

@@ -84,10 +84,11 @@
       {
         "content_id": "6d7ace06-f437-4fb3-b948-8534ff34540f",
         "title": "Employment tribunal decisions",
+        "api_path": "/api/content/employment-tribunal-decisions/email-signup",
         "base_path": "/employment-tribunal-decisions/email-signup",
         "description": "You'll get an email each time a decision is updated or a new decision is published.",
-        "api_url": "http://content-store.dev.gov.uk/content/employment-tribunal-decisions/email-signup",
-        "web_url": "http://www.dev.gov.uk/employment-tribunal-decisions/email-signup",
+        "api_url": "https://www.gov.uk/api/content/employment-tribunal-decisions/email-signup",
+        "web_url": "https://www.gov.uk/employment-tribunal-decisions/email-signup",
         "locale": "en"
       }
     ],
@@ -95,10 +96,11 @@
       {
         "content_id": "1b5e08c8-ddde-4637-9375-f79e085ba6d5",
         "title": "Employment tribunal decisions",
+        "api_path": "/api/content/employment-tribunal-decisions",
         "base_path": "/employment-tribunal-decisions",
         "description": "Find decisions on Employment Tribunal cases in England, Wales and Scotland.",
-        "api_url": "http://content-store.dev.gov.uk/content/employment-tribunal-decisions",
-        "web_url": "http://www.dev.gov.uk/employment-tribunal-decisions",
+        "api_url": "https://www.gov.uk/api/content/employment-tribunal-decisions",
+        "web_url": "https://www.gov.uk/employment-tribunal-decisions",
         "locale": "en"
       }
     ]

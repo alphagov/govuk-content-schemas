@@ -7,6 +7,7 @@
     "related": [
       {
         "analytics_identifier": null,
+        "api_path": "/api/content/raib-reports",
         "api_url": "https://www.gov.uk/api/content/raib-reports",
         "base_path": "/raib-reports",
         "content_id": "e3ff7fc5-6788-45de-83f0-cbf34e9fe8bd",
@@ -21,6 +22,7 @@
     "organisations": [
       {
         "analytics_identifier": "OT249",
+        "api_path": "/api/content/government/organisations/rail-accident-investigation-branch",
         "api_url": "https://www.gov.uk/api/content/government/organisations/rail-accident-investigation-branch",
         "base_path": "/government/organisations/rail-accident-investigation-branch",
         "content_id": "013872d8-8bbb-4e80-9b79-45c7c5cf9177",
@@ -35,6 +37,7 @@
     "available_translations": [
       {
         "analytics_identifier": null,
+        "api_path": "/api/content/raib-reports/email-signup",
         "api_url": "https://www.gov.uk/api/content/raib-reports/email-signup",
         "base_path": "/raib-reports/email-signup",
         "content_id": "db81c7e8-b1b6-4c29-992a-1289f1b63073",

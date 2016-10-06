@@ -17,6 +17,7 @@
         "schema_name": "placeholder_publication",
         "document_type": "notice",
         "title": "TR4 8EE, Mr Derek Mears: environmental permit application advertisement",
+        "api_path": "/api/content/government/publications/tr4-8ee-mr-derek-mears-environmental-permit-application-advertisement",
         "base_path": "/government/publications/tr4-8ee-mr-derek-mears-environmental-permit-application-advertisement",
         "api_url": "https://www.gov.uk/api/content/government/publications/tr4-8ee-mr-derek-mears-environmental-permit-application-advertisement",
         "web_url": "https://www.gov.uk/government/publications/tr4-8ee-mr-derek-mears-environmental-permit-application-advertisement",
@@ -33,6 +34,7 @@
             "crest": null
           }
         },
+        "api_path": "/api/content/government/organisations/environment-agency",
         "base_path": "/government/organisations/environment-agency",
         "api_url": "https://www.gov.uk/api/content/government/organisations/environment-agency",
         "web_url": "https://www.gov.uk/government/organisations/environment-agency",

@@ -54,6 +54,7 @@
       {
         "content_id": "8927158f-e4b2-4361-b55d-02de7599b220",
         "title": "Northern Ireland Office",
+        "api_path": "/api/content/government/organisations/northern-ireland-office",
         "base_path": "/government/organisations/northern-ireland-office",
         "api_url": "https://www.gov.uk/api/organisations/northern-ireland-office",
         "web_url": "https://www.gov.uk/government/organisations/northern-ireland-office",
@@ -64,6 +65,7 @@
       {
         "content_id": "70dc1901-2d36-4c3d-98ee-e1d5587a5ba9",
         "title": "George Dough",
+        "api_path": "/api/content/government/people/george-dough",
         "base_path": "/government/people/george-dough",
         "api_url": "https://www.gov.uk/api/government/people/george-dough",
         "web_url": "https://www.gov.uk/people/george-dough",
@@ -75,6 +77,7 @@
       {
         "content_id": "c3fee553-1891-411b-8d00-4aefbe86e40a",
         "title": "Keeping Northern Ireland safe",
+        "api_path": "/api/content/government/policies/keeping-northern-ireland-safe",
         "base_path": "/government/policies/keeping-northern-ireland-safe",
         "api_url": "https://www.gov.uk/api/content/government/policies/keeping-northern-ireland-safe",
         "web_url": "https://www.gov.uk/government/policies/keeping-northern-ireland-safe",

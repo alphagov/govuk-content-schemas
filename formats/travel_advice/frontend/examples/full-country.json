@@ -73,6 +73,7 @@
       {
         "content_id": "b9849cd6-61a7-42dc-8124-362d2c7d48b0",
         "title": "Travel abroad",
+        "api_path": "/api/content/browse/abroad/travel-abroad",
         "base_path": "/browse/abroad/travel-abroad",
         "api_url": "https://www.gov.uk/api/content/browse/abroad/travel-abroad",
         "web_url": "https://www.gov.uk/browse/abroad/travel-abroad",
@@ -81,6 +82,7 @@
       {
         "content_id": "bbb8985a-5451-4e9d-a601-8c55853a096c",
         "title": "Living abroad",
+        "api_path": "/api/content/browse/abroad/living-abroad",
         "base_path": "/browse/abroad/living-abroad",
         "api_url": "https://www.gov.uk/api/content/browse/abroad/living-abroad",
         "web_url": "https://www.gov.uk/browse/abroad/living-abroad",
@@ -91,6 +93,7 @@
       {
         "content_id": "8b19c238-54e3-4e27-b0d7-60f8e2a677c9",
         "title": "Foreign & Commonwealth Office",
+        "api_path": "/api/content/government/organisations/foreign-commonwealth-office",
         "base_path": "/government/organisations/foreign-commonwealth-office",
         "api_url": "https://www.gov.uk/api/content/government/organisations/foreign-commonwealth-office",
         "web_url": "https://www.gov.uk/government/government/organisations/foreign-commonwealth-office",
@@ -101,6 +104,7 @@
       {
         "content_id": "82248bb1-c4d6-41e0-9494-d98123475626",
         "title": "Renew or replace your adult passport",
+        "api_path": "/api/content/renew-adult-passport",
         "base_path": "/renew-adult-passport",
         "description": null,
         "api_url": "https://www.gov.uk/api/content/renew-adult-passport",
@@ -111,6 +115,7 @@
       {
         "content_id": "86eb717a-fb40-42e7-83fa-d031a03880fb",
         "title": "Passports, travel and living abroad",
+        "api_path": "/api/content/browse/abroad",
         "base_path": "/browse/abroad",
         "description": null,
         "api_url": "https://www.gov.uk/api/content/browse/abroad",
@@ -121,6 +126,7 @@
       {
         "content_id": "e4d06cb9-9e2e-4e82-b802-0aad013ae16c",
         "title": "Driving abroad",
+        "api_path": "/api/content/driving-abroad",
         "base_path": "/driving-abroad",
         "description": null,
         "api_url": "https://www.gov.uk/api/content/driving-abroad",
@@ -131,6 +137,7 @@
       {
         "content_id": "95f9c380-30bc-44c7-86b4-e9c9ef0fc272",
         "title": "Hand luggage restrictions at UK airports",
+        "api_path": "/api/content/hand-luggage-restrictions",
         "base_path": "/hand-luggage-restrictions",
         "description": null,
         "api_url": "https://www.gov.uk/api/content/hand-luggage-restrictions",
@@ -141,6 +148,7 @@
       {
         "content_id": "b9849cd6-61a7-42dc-8124-362d2c7d48b0",
         "title": "Travel abroad",
+        "api_path": "/api/content/browse/abroad/travel-abroad",
         "base_path": "/browse/abroad/travel-abroad",
         "description": null,
         "api_url": "https://www.gov.uk/api/content/browse/abroad/travel-abroad",
@@ -153,6 +161,7 @@
       {
         "content_id": "86eb717a-fb40-42e7-83fa-d031a03880fb",
         "title": "Passports, travel and living abroad",
+        "api_path": "/api/content/browse/abroad",
         "base_path": "/browse/abroad",
         "description": null,
         "api_url": "https://www.gov.uk/api/content/browse/abroad",
@@ -165,6 +174,7 @@
       {
         "content_id": "2a3938e1-d588-45fc-8c8f-0f51814d5409",
         "title": "Albania travel advice",
+        "api_path": "/api/content/foreign-travel-advice/albania",
         "base_path": "/foreign-travel-advice/albania",
         "api_url": "https://www.gov.uk/api/content/foreign-travel-advice/albania",
         "web_url": "https://www.gov.uk/foreign-travel-advice/albania",

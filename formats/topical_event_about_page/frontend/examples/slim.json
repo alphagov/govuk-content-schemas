@@ -13,6 +13,7 @@
       {
         "content_id": "8b19c222-54e3-4e27-b0d7-67f8e2a677c9",
         "title": "Battle of the Somme Centenary",
+        "api_path": "/api/content/government/topical-events/battle-of-the-somme-centenary-commemorations",
         "base_path": "/government/topical-events/battle-of-the-somme-centenary-commemorations",
         "api_url": "https://www.gov.uk/api/content/government/topical-events/battle-of-the-somme-centenary-commemorations",
         "web_url": "https://www.gov.uk/government/topical-events/battle-of-the-somme-centenary-commemorations",

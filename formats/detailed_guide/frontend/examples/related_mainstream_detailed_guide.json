@@ -43,6 +43,7 @@
       {
         "content_id": "5eb78a4e-7631-11e4-a3cb-005056011aef",
         "title": "Living in country guides",
+        "api_path": "/api/content/government/collections/overseas-living-in-guides",
         "base_path": "/government/collections/overseas-living-in-guides",
         "api_url": "https://www.gov.uk/api/content/government/collections/overseas-living-in-guides",
         "web_url": "https://www.gov.uk/government/collections/overseas-living-in-guides",
@@ -53,6 +54,7 @@
       {
         "content_id": "0d59f5e7-a230-4bac-b02c-624a59a34dab",
         "title": "Living in Fiji",
+        "api_path": "/api/content/guidance/living-in-fiji",
         "base_path": "/guidance/living-in-fiji",
         "api_url": "https://www.gov.uk/api/content/guidance/living-in-fiji",
         "web_url": "https://www.gov.uk/guidance/living-in-fiji",
@@ -63,8 +65,9 @@
       {
         "content_id": "9adfc4ed-9f6c-4976-a6d8-18d34356367c",
         "title": "Foreign & Commonwealth Office",
+        "api_path": "/api/content/government/organisations/foreign-commonwealth-office",
         "base_path": "/government/organisations/foreign-commonwealth-office",
-        "api_url": "https://www.gov.uk/api/organisations/foreign-commonwealth-office",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/foreign-commonwealth-office",
         "web_url": "https://www.gov.uk/government/organisations/foreign-commonwealth-office",
         "locale": "en",
         "analytics_identifier": "D13"
@@ -74,6 +77,7 @@
       {
         "content_id": "0d59f5e7-a230-4bac-b02c-624a59a34dab",
         "title": "Living in Fiji",
+        "api_path": "/api/content/guidance/living-in-fiji",
         "base_path": "/guidance/living-in-fiji",
         "api_url": "https://www.gov.uk/api/content/guidance/living-in-fiji",
         "web_url": "https://www.gov.uk/guidance/living-in-fiji",
@@ -84,6 +88,7 @@
       {
         "content_id": "dd113259-fcaf-4e9b-83d5-d1148f33cf34",
         "title": "Overseas British passport applications",
+        "api_path": "/api/content/overseas-passports",
         "base_path": "/overseas-passports",
         "api_url": "https://www.gov.uk/api/content/overseas-passports",
         "web_url": "https://www.gov.uk/overseas-passports",
@@ -92,6 +97,7 @@
       {
         "content_id": "f02fc2c9-f5ff-4ea2-acc4-730bbda957bb",
         "title": "Cancel a lost or stolen passport",
+        "api_path": "/api/content/report-a-lost-or-stolen-passport",
         "base_path": "/report-a-lost-or-stolen-passport",
         "api_url": "https://www.gov.uk/api/content/report-a-lost-or-stolen-passport",
         "web_url": "https://www.gov.uk/report-a-lost-or-stolen-passport",

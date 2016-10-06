@@ -15,6 +15,7 @@
       {
         "content_id": "8b19c238-54e3-4e27-b0d7-60f8e2a677c9",
         "title": "NHS England",
+        "api_path": "/api/content/government/organisations/nhs-commissioning-board",
         "base_path": "/government/organisations/nhs-commissioning-board",
         "api_url": "https://www.gov.uk/api/content/government/organisations/nhs-commissioning-board",
         "web_url": "https://www.gov.uk/government/organisations/nhs-commissioning-board",
@@ -26,6 +27,7 @@
       {
         "content_id": "848b8564-328c-4787-bebb-9e1b60ccf0d7",
         "title": "National Health Service",
+        "api_path": "/api/content/government/topics/national-health-service",
         "base_path": "/government/topics/national-health-service",
         "api_url": "https://www.gov.uk/api/content/government/topics/national-health-service",
         "web_url": "https://www.gov.uk/government/topics/national-health-service",

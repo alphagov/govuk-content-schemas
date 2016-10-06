@@ -26,6 +26,7 @@
       {
         "content_id": "2054b5e5-8d58-456b-8832-66c0d2b72565",
         "title": "Minimal Benefits Reform",
+        "api_path": "/api/content/government/policies/minimal-benefits-reform/email-signup",
         "base_path": "/government/policies/minimal-benefits-reform/email-signup",
         "api_url": "https://www.gov.uk/api/content/government/policies/minimal-benefits-reform/email-signup",
         "web_url": "https://www.gov.uk/government/policies/minimal-benefits-reform/email-signup",

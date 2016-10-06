@@ -32,8 +32,9 @@
       {
         "content_id": "6667cce2-e809-4e21-ae09-cb0bdc1ddda3",
         "title": "Ministry of Defence",
+        "api_path": "/api/content/government/organisations/ministry-of-defence",
         "base_path": "/government/organisations/ministry-of-defence",
-        "api_url": "https://www.gov.uk/api/organisations/ministry-of-defence",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/ministry-of-defence",
         "web_url": "https://www.gov.uk/government/organisations/ministry-of-defence",
         "locale": "en",
         "analytics_identifier": "D25"
@@ -43,6 +44,7 @@
       {
         "content_id": "b360d7b0-664d-4030-93f9-ee8bff36ab53",
         "title": "Defence and armed forces",
+        "api_path": "/api/content/government/topics/defence-and-armed-forces",
         "base_path": "/government/topics/defence-and-armed-forces",
         "api_url": "https://www.gov.uk/api/content/government/topics/defence-and-armed-forces",
         "web_url": "https://www.gov.uk/government/topics/defence-and-armed-forces",
@@ -53,6 +55,7 @@
       {
         "content_id": "fd2565bf-12da-4fda-8413-824f92031688",
         "title": "Zululand",
+        "api_path": "/api/content/government/fields-of-operation/zululand",
         "base_path": "/government/fields-of-operation/zululand",
         "api_url": "https://www.gov.uk/api/content/government/fields-of-operation/zululand",
         "web_url": "https://www.gov.uk/government/fields-of-operation/zululand",

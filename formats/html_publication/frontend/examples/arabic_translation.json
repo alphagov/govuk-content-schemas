@@ -17,6 +17,7 @@
         "schema_name": "placeholder_publication",
         "document_type": "promotional",
         "title": "لٍم تعتبر المملكة المتحدة الوجهة الأمثل لتؤسس الشركات الأجنبية أعمالها فيها",
+        "api_path": "/api/content/government/publications/why-overseas-companies-should-set-up-in-the-uk.ar",
         "base_path": "/government/publications/why-overseas-companies-should-set-up-in-the-uk.ar",
         "api_url": "https://www.gov.uk/api/content/government/publications/why-overseas-companies-should-set-up-in-the-uk.ar",
         "web_url": "https://www.gov.uk/government/publications/why-overseas-companies-should-set-up-in-the-uk.ar",
@@ -34,6 +35,7 @@
             "crest": "single-identity"
           }
         },
+        "api_path": "/api/content/government/organisations/uk-trade-investment",
         "base_path": "/government/organisations/uk-trade-investment",
         "api_url": "https://www.gov.uk/api/content/government/organisations/uk-trade-investment",
         "web_url": "https://www.gov.uk/government/organisations/uk-trade-investment",

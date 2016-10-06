@@ -53,6 +53,7 @@
       {
         "content_id": "2e7868a8-38f5-4ff6-b62f-9a15d1c22d28",
         "title": "Department for Communities and Local Government",
+        "api_path": "/api/content/government/organisations/department-for-communities-and-local-government",
         "base_path": "/government/organisations/department-for-communities-and-local-government",
         "api_url": "https://www.gov.uk/api/content/government/organisations/department-for-communities-and-local-government",
         "web_url": "https://www.gov.uk/government/organisations/department-for-communities-and-local-government",
@@ -64,6 +65,7 @@
       {
         "content_id": "5eb622a8-7631-11e4-a3cb-005056011aef",
         "title": "Affordable housing supply",
+        "api_path": "/api/content/government/collections/affordable-housing-supply",
         "base_path": "/government/collections/affordable-housing-supply",
         "api_url": "https://www.gov.uk/api/content/government/collections/affordable-housing-supply",
         "web_url": "https://www.gov.uk/government/collections/affordable-housing-supply",
@@ -74,6 +76,7 @@
       {
         "content_id": "5c81d7b6-7631-11e4-a3cb-005056011aef",
         "title": "Live tables on affordable housing supply",
+        "api_path": "/api/content/government/statistical-data-sets/live-tables-on-affordable-housing-supply",
         "base_path": "/government/statistical-data-sets/live-tables-on-affordable-housing-supply",
         "api_url": "https://www.gov.uk/api/content/government/statistical-data-sets/live-tables-on-affordable-housing-supply",
         "web_url": "https://www.gov.uk/government/statistical-data-sets/live-tables-on-affordable-housing-supply",

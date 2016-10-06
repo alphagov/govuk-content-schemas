@@ -18,6 +18,7 @@
         "content_id": "57add221-0376-4f3e-a025-849954df97ac",
         "title": "Press Release 1",
         "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation",
+        "api_path": "/api/content/lloydsshares/lloyds-share-offer",
         "base_path": "/lloydsshares/lloyds-share-offer",
         "api_url": "https://www.gov.uk/api/content/base_path",
         "web_url": "/lloydsshares/lloyds-share-offer",

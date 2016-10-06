@@ -49,10 +49,11 @@
       {
         "content_id": "a66a167f-081b-4b0c-bd8e-3bb1242507df",
         "title": "Retained Firefighters:Case Management Order of Employment Tribunal of 19 December 2008",
+        "api_path": "/api/content/employment-tribunal-decisions/retained-firefighters-case-management-order-of-employment-tribunal-of-19-december-2008",
         "base_path": "/employment-tribunal-decisions/retained-firefighters-case-management-order-of-employment-tribunal-of-19-december-2008",
         "description": "This Case Management Discussion concerns the large number of claims brought by retained fire-fighters, principally in 1994 and 1995, complaining that their exclusion from the pension scheme.",
-        "api_url": "http://content-store.dev.gov.uk/content/employment-tribunal-decisions/retained-firefighters-case-management-order-of-employment-tribunal-of-19-december-2008",
-        "web_url": "http://www.dev.gov.uk/employment-tribunal-decisions/retained-firefighters-case-management-order-of-employment-tribunal-of-19-december-2008",
+        "api_url": "https://www.gov.uk/api/content/employment-tribunal-decisions/retained-firefighters-case-management-order-of-employment-tribunal-of-19-december-2008",
+        "web_url": "https://www.gov.uk/employment-tribunal-decisions/retained-firefighters-case-management-order-of-employment-tribunal-of-19-december-2008",
         "locale": "en"
       }
     ]
