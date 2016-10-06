@@ -1,0 +1,8 @@
+{
+  "type": "object",
+  "patternProperties": {
+    "^[a-z_]+$": {
+      "$ref": "#/definitions/frontend_links"
+    }
+  }
+}

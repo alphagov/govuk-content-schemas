@@ -1,0 +1,8 @@
+{
+  "type": "object",
+  "patternProperties": {
+    "^/(([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})+(/([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)*)?$": {
+      "$ref": "#/definitions/guid"
+    }
+  }
+}

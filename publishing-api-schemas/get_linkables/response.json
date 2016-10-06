@@ -1,0 +1,32 @@
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "title",
+      "content_id",
+      "publication_state",
+      "base_path",
+      "internal_name"
+    ],
+    "properties": {
+      "title": {
+        "type": "string"
+      },
+      "content_id": {
+        "$ref" : "#/definitions/guid"
+      },
+      "publication_state": {
+        "type": "string",
+        "enum": ["draft", "published"]
+      },
+      "base_path": {
+        "$ref" : "#/definitions/absolute_path"
+      },
+      "internal_name": {
+        "type": "string"
+      }
+    }
+  }
+}

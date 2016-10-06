@@ -116,4 +116,20 @@ task combine_publisher_schemas: %i{
   combine_publisher_v2_links
 }
 
-task combine_schemas: %i{combine_publisher_schemas combine_frontend_schemas}
+task :combine_publishing_api_schemas do
+  definitions = JSON.parse(File.read("formats/definitions.json"))["definitions"]
+  definitions["frontend_links"] = JSON.parse(File.read("formats/frontend_links_definition.json"))
+
+  Dir.glob("publishing-api-schemas/*/*.json").each do |filename|
+    actual = JSON.parse(File.read(filename))
+    actual["definitions"] = definitions
+    dist_json = JSON.pretty_generate(actual)
+
+    new_filename = "dist/#{filename}"
+
+    FileUtils.mkdir_p(File.dirname(new_filename))
+    File.write(new_filename, dist_json)
+  end
+end
+
+task combine_schemas: %i{combine_publishing_api_schemas combine_publisher_schemas combine_frontend_schemas}
