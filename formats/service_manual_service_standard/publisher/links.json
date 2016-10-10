@@ -9,6 +9,10 @@
         "type": "object",
         "additionalProperties": true
       }
+    },
+    "email_alert_signup": {
+      "description": "References an email alert signup page for the service standard",
+      "$ref": "#/definitions/guid_list"
     }
   }
 }

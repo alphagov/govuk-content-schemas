@@ -54,6 +54,22 @@
         "web_url": "https://www.gov.uk/service-manual/service-standard/have-a-multidisciplinary-team"
       }
     ],
+    "email_alert_signup": [
+      {
+        "analytics_identifier": null,
+        "api_url": "http://content-store.dev.gov.uk/content/service-manual/service-standard/email-signup",
+        "base_path": "/service-manual/service-standard/email-signup",
+        "content_id": "4a94ae54-5a47-40c1-b9aa-ff47dcaace85",
+        "description": null,
+        "document_type": "email_alert_signup",
+        "locale": "en",
+        "public_updated_at": "2016-08-17T10:52:00Z",
+        "schema_name": "email_alert_signup",
+        "title": "Service Manual – Service Standard",
+        "web_url": "http://www.dev.gov.uk/service-manual/service-standard/email-signup",
+        "links": {}
+      }
+    ],
     "available_translations": [
       {
         "content_id": "00f693d4-866a-4fe6-a8d6-09cd7db8980b",
