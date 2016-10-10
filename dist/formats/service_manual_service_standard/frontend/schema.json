@@ -85,6 +85,9 @@
         "children": {
           "$ref": "#/definitions/frontend_links"
         },
+        "email_alert_signup": {
+          "$ref": "#/definitions/frontend_links"
+        },
         "taxons": {
           "$ref": "#/definitions/frontend_links"
         },
