@@ -3,50 +3,6 @@
   "base_path": "/cma-cases/email-signup",
   "content_id": "43dd2b13-93ec-4ca6-a7a4-e2eb5f5d485a",
   "document_type": "finder_email_signup",
-  "expanded_links": {
-    "related": [
-      {
-        "analytics_identifier": null,
-        "api_path": "/api/content/cma-cases",
-        "api_url": "https://www.gov.uk/api/content/cma-cases",
-        "base_path": "/cma-cases",
-        "content_id": "fef4ac7c-024a-4943-9f19-e85a8369a1f3",
-        "description": "Find reports and updates on current and historical CMA investigations",
-        "locale": "en",
-        "public_updated_at": "2016-06-13T14:30:40.000Z",
-        "title": "Competition and Markets Authority cases",
-        "web_url": "https://www.gov.uk/cma-cases"
-      }
-    ],
-    "organisations": [
-      {
-        "analytics_identifier": "D550",
-        "api_path": "/api/content/government/organisations/competition-and-markets-authority",
-        "api_url": "https://www.gov.uk/api/content/government/organisations/competition-and-markets-authority",
-        "base_path": "/government/organisations/competition-and-markets-authority",
-        "content_id": "957eb4ec-089b-4f71-ba2a-dc69ac8919ea",
-        "description": null,
-        "locale": "en",
-        "public_updated_at": "2015-03-10T16:23:14.000Z",
-        "title": "Competition and Markets Authority",
-        "web_url": "https://www.gov.uk/government/organisations/competition-and-markets-authority"
-      }
-    ],
-    "available_translations": [
-      {
-        "analytics_identifier": null,
-        "api_path": "/api/content/cma-cases/email-signup",
-        "api_url": "https://www.gov.uk/api/content/cma-cases/email-signup",
-        "base_path": "/cma-cases/email-signup",
-        "content_id": "43dd2b13-93ec-4ca6-a7a4-e2eb5f5d485a",
-        "description": "You'll get an email each time a case is updated or a new case is published.",
-        "locale": "en",
-        "public_updated_at": "2016-06-13T14:30:40.000Z",
-        "title": "Competition and Markets Authority cases",
-        "web_url": "https://www.gov.uk/cma-cases/email-signup"
-      }
-    ]
-  },
   "first_published_at": "2016-02-29T09:24:10.000+00:00",
   "format": "finder_email_signup",
   "locale": "en",
