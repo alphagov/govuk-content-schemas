@@ -2,7 +2,7 @@
   "content_id": "5eb851bc-7631-11e4-a3cb-005056011aef",
   "base_path": "/government/collections/financial-sanctions-regime-specific-consolidated-lists-and-releases",
   "description": "This document series contains details of all regimes currently subject to financial sanctions.",
-  "public_updated_at": "2016-02-08T17:36:26.000+00:00",
+  "public_updated_at": "2013-10-11T17:12:00.000+00:00",
   "title": "Financial sanctions: Regime-specific lists and releases",
   "updated_at": "2016-05-17T12:21:21.185Z",
   "schema_name": "document_collection",
@@ -21,41 +21,7 @@
         ]
       }
     ],
-    "first_public_at": "2013-10-11T17:12:00+01:00",
-    "change_history": [
-      {
-        "public_timestamp": "2016-02-08T17:36:26+00:00",
-        "note": "Liberia removed - Council Regulation (EC) No 872/2004 imposing financial sanctions against Liberia has been repealed with effect from 6 October 2015."
-      },
-      {
-        "public_timestamp": "2016-01-22T12:36:47+00:00",
-        "note": "Updated to add - Financial Sanctions, UK freezing orders"
-      },
-      {
-        "public_timestamp": "2014-12-23T10:17:01+00:00",
-        "note": "Updated to include Yemen in collection"
-      },
-      {
-        "public_timestamp": "2014-07-15T16:24:28+01:00",
-        "note": "Updated to reflect latest HM Treasury notices, 15/07/14 Sudan (Reg 747/2014) and 15/07/14 South Sudan (Reg 748/2014)"
-      },
-      {
-        "public_timestamp": "2014-03-18T12:36:37+00:00",
-        "note": "added 'Financial sanctions, Ukraine (Sovereignty and Territorial Integrity)' to collection"
-      },
-      {
-        "public_timestamp": "2014-03-12T15:33:27+00:00",
-        "note": "added Central African Republic"
-      },
-      {
-        "public_timestamp": "2014-02-21T16:59:49+00:00",
-        "note": "added publication 'Financial sanctions, Ukraine'"
-      },
-      {
-        "public_timestamp": "2013-10-11T17:12:00+01:00",
-        "note": "First published."
-      }
-    ],
+    "first_public_at": "2013-10-11T17:12:00.000+00:00",
     "tags": {
       "browse_pages": [],
       "topics": [],
