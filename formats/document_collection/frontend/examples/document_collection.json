@@ -69,12 +69,8 @@
       "slug": "2010-to-2015-conservative-and-liberal-democrat-coalition-government",
       "current": false
     },
-    "political": true,
-    "emphasised_organisations": ["d39237a5-678b-4bb5-a372-eb2cb036933d"],
-    "withdrawn_notice": {
-      "explanation": "<div class=\"govspeak\"><p>This information is now out of date.</p></div>",
-      "withdrawn_at": "2016-03-01T13:05:30Z"
-    }
+    "political": false,
+    "emphasised_organisations": ["d39237a5-678b-4bb5-a372-eb2cb036933d"]
   },
   "links": {
     "documents": [
