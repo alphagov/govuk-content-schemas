@@ -20,7 +20,7 @@
         ]
       }
     ],
-    "first_public_at": "2013-10-11T17:12:00+01:00",
+    "first_public_at": "2013-10-11T17:12:00+00:00",
     "change_history": [
       {
         "public_timestamp": "2016-02-08T17:36:26+00:00",
@@ -35,7 +35,7 @@
         "note": "Updated to include Yemen in collection"
       },
       {
-        "public_timestamp": "2014-07-15T16:24:28+01:00",
+        "public_timestamp": "2014-07-15T16:24:28+00:00",
         "note": "Updated to reflect latest HM Treasury notices, 15/07/14 Sudan (Reg 747/2014) and 15/07/14 South Sudan (Reg 748/2014)"
       },
       {
@@ -51,7 +51,7 @@
         "note": "added publication 'Financial sanctions, Ukraine'"
       },
       {
-        "public_timestamp": "2013-10-11T17:12:00+01:00",
+        "public_timestamp": "2013-10-11T17:12:00+00:00",
         "note": "First published."
       }
     ],
