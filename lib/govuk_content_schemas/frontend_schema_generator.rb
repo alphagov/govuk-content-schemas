@@ -77,7 +77,11 @@ private
   def frontend_link_names
     publisher_links.fetch("properties", {}).keys + [
       "available_translations",
-      "children"
+      "children",
+
+      # Working groups have a `policies` link type containing the policies it is
+      # tagged to.
+      "policies",
     ]
   end
 
