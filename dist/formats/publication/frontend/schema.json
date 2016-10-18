@@ -88,6 +88,9 @@
         "ministers": {
           "$ref": "#/definitions/frontend_links"
         },
+        "related_policies": {
+          "$ref": "#/definitions/frontend_links"
+        },
         "related_statistical_data_sets": {
           "$ref": "#/definitions/frontend_links"
         },
