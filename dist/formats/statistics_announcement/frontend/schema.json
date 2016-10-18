@@ -107,13 +107,13 @@
         "parent": {
           "$ref": "#/definitions/frontend_links"
         },
-        "policies": {
-          "$ref": "#/definitions/frontend_links"
-        },
         "available_translations": {
           "$ref": "#/definitions/frontend_links"
         },
         "children": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "policies": {
           "$ref": "#/definitions/frontend_links"
         }
       }
