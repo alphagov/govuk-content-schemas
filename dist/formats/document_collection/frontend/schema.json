@@ -136,9 +136,6 @@
     "format": {
       "type": "string"
     },
-    "expanded_links": {
-      "type": "object"
-    },
     "updated_at": {
       "type": "string",
       "format": "date-time"

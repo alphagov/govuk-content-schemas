@@ -103,14 +103,6 @@
     "format": {
       "type": "string"
     },
-    "expanded_links": {
-      "type": "object",
-      "patternProperties": {
-        "^[a-z_]+$": {
-          "$ref": "#/definitions/frontend_links"
-        }
-      }
-    },
     "updated_at": {
       "type": "string",
       "format": "date-time"
@@ -140,6 +132,14 @@
         "string",
         "null"
       ]
+    },
+    "expanded_links": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-z_]+$": {
+          "$ref": "#/definitions/frontend_links"
+        }
+      }
     }
   },
   "definitions": {

@@ -66,7 +66,6 @@ private
     properties = properties.merge(
       "links" => frontend_links,
       "format" => { "type" => "string" },
-      "expanded_links" => { "type" => "object" },
       "updated_at" => updated_at,
       "base_path" => { "$ref" => "#/definitions/absolute_path" }
     )
