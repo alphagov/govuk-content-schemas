@@ -309,10 +309,6 @@
           "$ref": "#/definitions/guid_list",
           "maxItems": 1
         },
-        "policies": {
-          "description": "These are for collecting content related to a particular government policy.",
-          "$ref": "#/definitions/guid_list"
-        },
         "policy_areas": {
           "description": "A largely deprecated tag currently only used to power email alerts.",
           "$ref": "#/definitions/guid_list"
