@@ -19,6 +19,20 @@ class GovukContentSchemas::FrontendSchemaGenerator
     rendering_app
   }.freeze
 
+  LINK_NAMES_ADDED_BY_PUBLISHING_API = [
+    # The Publishing API will automatically link to any translations (content
+    # with the same content_id but a different locale).
+    "available_translations",
+
+    # Content items that are linked to with a `parent` link type will automatically
+    # have a `children` link type with those items.
+    "children",
+
+    # Working groups have a `policies` link type containing the policies it is
+    # tagged to.
+    "policies",
+  ]
+
   def initialize(publisher_schema, frontend_links_definition)
     @publisher_schema = publisher_schema
     @frontend_links_definition = frontend_links_definition
@@ -75,14 +89,7 @@ private
   end
 
   def frontend_link_names
-    publisher_links.fetch("properties", {}).keys + [
-      "available_translations",
-      "children",
-
-      # Working groups have a `policies` link type containing the policies it is
-      # tagged to.
-      "policies",
-    ]
+    publisher_links.fetch("properties", {}).keys + LINK_NAMES_ADDED_BY_PUBLISHING_API
   end
 
   def frontend_link_properties
