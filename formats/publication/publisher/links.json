@@ -9,6 +9,9 @@
     "ministers": {
       "$ref": "#/definitions/guid_list"
     },
+    "related_policies": {
+      "$ref": "#/definitions/guid_list"
+    },
     "related_statistical_data_sets": {
       "$ref": "#/definitions/guid_list"
     },
