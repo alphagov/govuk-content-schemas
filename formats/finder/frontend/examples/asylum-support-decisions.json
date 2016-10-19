@@ -145,7 +145,7 @@
         "api_path": "/api/content/asylum-support-decisions",
         "base_path": "/asylum-support-decisions",
         "description": "Find decisions by the First-tier Tribunal (Asylum Support)",
-        "api_url": "http://content-store.dev.gov.uk/content/asylum-support-decisions",
+        "api_url": "http://www.dev.gov.uk/api/content/asylum-support-decisions",
         "web_url": "http://www.dev.gov.uk/asylum-support-decisions",
         "locale": "en"
       }
