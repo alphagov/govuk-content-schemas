@@ -243,6 +243,17 @@
         "web_url": "https://www.gov.uk/topic/business-tax",
         "locale": "en"
       }
+    ],
+    "policies": [
+      {
+        "content_id": "ec736c24-aed1-4635-8f3c-389222ca312d",
+        "title": "Transport security",
+        "api_path": "/api/content/government/policies/transport-security",
+        "base_path": "/government/policies/transport-security",
+        "api_url": "https://www.gov.uk/api/content/government/policies/transport-security",
+        "web_url": "https://www.gov.uk/government/policies/transport-security",
+        "locale": "en"
+      }
     ]
   }
 }
