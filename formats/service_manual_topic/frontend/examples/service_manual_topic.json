@@ -10,6 +10,20 @@
   "phase": "alpha",
   "analytics_identifier": null,
   "links": {
+    "parent": [
+      {
+        "content_id": "053d245d-b1cd-4807-9dbc-ce78654121d1",
+        "title": "Service manual",
+        "base_path": "/service-manual",
+        "description": "Helping government teams create and run great digital services that meet the Digital Service Standard.",
+        "api_url": "https://www.gov.uk/api/content/service-manual",
+        "web_url": "https://www.gov.uk/service-manual",
+        "locale": "en",
+        "schema_name": "service_manual_homepage",
+        "document_type": "service_manual_homepage",
+        "analytics_identifier": null
+      }
+    ],
     "content_owners": [
       {
         "content_id": "fb87cca9-311e-4fd3-af42-03616164a407",
