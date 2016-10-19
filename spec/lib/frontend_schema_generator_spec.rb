@@ -94,8 +94,8 @@ RSpec.describe GovukContentSchemas::FrontendSchemaGenerator do
     expect(generated.schema["definitions"]["frontend_links"]).to eq(expected_embed)
   end
 
-  it "transforms the links specification to allow expanded links, available_translations and children" do
-    expect(generated.schema["properties"]["links"]).to eq(build_frontend_links_schema(*link_names, "available_translations", "children"))
+  it "transforms the links specification to allow expanded links and links added by the publishing-api" do
+    expect(generated.schema["properties"]["links"]).to eq(build_frontend_links_schema(*(link_names + GovukContentSchemas::FrontendSchemaGenerator::LINK_NAMES_ADDED_BY_PUBLISHING_API)))
   end
 
   context "publisher schema specifies a required link" do
@@ -117,8 +117,8 @@ RSpec.describe GovukContentSchemas::FrontendSchemaGenerator do
   context "no links in publisher schema" do
     let(:link_names) { nil }
 
-    it "transforms the links specification to allow for available_translations and children" do
-      expect(generated.schema["properties"]["links"]).to eq(build_frontend_links_schema("available_translations", "children"))
+    it "transforms the links specification to allow for links added by publishing-api" do
+      expect(generated.schema["properties"]["links"]).to eq(build_frontend_links_schema(*GovukContentSchemas::FrontendSchemaGenerator::LINK_NAMES_ADDED_BY_PUBLISHING_API))
     end
   end
 

@@ -109,13 +109,13 @@
         "parent": {
           "$ref": "#/definitions/frontend_links"
         },
-        "policies": {
-          "$ref": "#/definitions/frontend_links"
-        },
         "policy_areas": {
           "$ref": "#/definitions/frontend_links"
         },
         "children": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "policies": {
           "$ref": "#/definitions/frontend_links"
         }
       }
