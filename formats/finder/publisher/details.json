@@ -51,6 +51,9 @@
           "items": {
             "type": "string"
           }
+        },
+        "format": {
+          "type": "string"
         }
       }
     },
