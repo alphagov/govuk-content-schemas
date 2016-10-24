@@ -12,6 +12,7 @@ class GovukContentSchemas::FrontendSchemaGenerator
     redirects
     routes
     update_type
+    change_note
   }.freeze
 
   OPTIONAL_PROPERTIES = %w{

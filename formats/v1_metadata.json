@@ -20,6 +20,9 @@
     },
     "links": {
       "$ref": "#/definitions/links"
+    },
+    "change_note": {
+      "type": [ "null", "string" ]
     }
   }
 }

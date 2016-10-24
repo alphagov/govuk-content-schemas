@@ -19,6 +19,9 @@
     },
     "update_type": {
       "enum": [ "major", "minor", "republish" ]
+    },
+    "change_note": {
+      "type": [ "null", "string" ]
     }
   }
 }
