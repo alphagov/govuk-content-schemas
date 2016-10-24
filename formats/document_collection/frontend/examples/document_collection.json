@@ -223,6 +223,48 @@
         "web_url": "https://www.gov.uk/government/world/topics/tax-and-revenue",
         "locale": "en"
       }
+    ],
+    "topics": [
+      {
+        "content_id": "6e1d83bc-d37a-447c-bdac-31be4b441417",
+        "title": "PAYE",
+        "base_path": "/topic/business-tax/paye",
+        "api_path": "/api/content/topic/business-tax/paye",
+        "api_url": "https://www.gov.uk/api/content/topic/business-tax/paye",
+        "web_url": "https://www.gov.uk/topic/business-tax/paye",
+        "locale": "en"
+      },
+      {
+        "content_id": "a481832e-5f10-4d3b-8131-a064b36730ae",
+        "title": "Business tax",
+        "base_path": "/topic/business-tax",
+        "api_path": "/api/content/topic/business-tax",
+        "api_url": "https://www.gov.uk/api/content/topic/business-tax",
+        "web_url": "https://www.gov.uk/topic/business-tax",
+        "locale": "en"
+      }
+    ],
+    "policies": [
+      {
+        "content_id": "ec736c24-aed1-4635-8f3c-389222ca312d",
+        "title": "Transport security",
+        "api_path": "/api/content/government/policies/transport-security",
+        "base_path": "/government/policies/transport-security",
+        "api_url": "https://www.gov.uk/api/content/government/policies/transport-security",
+        "web_url": "https://www.gov.uk/government/policies/transport-security",
+        "locale": "en"
+      }
+    ],
+    "topical_events": [
+      {
+        "content_id": "7dbb1a8b-2149-4aba-bd87-87bd929d3635",
+        "title": "Anti-Corruption Summit: London 2016",
+        "api_path": "/api/content/government/topical-events/anti-corruption-summit-london-2016",
+        "base_path": "/government/topical-events/anti-corruption-summit-london-2016",
+        "api_url": "https://www.gov.uk/api/content/government/topical-events/anti-corruption-summit-london-2016",
+        "web_url": "https://www.gov.uk/government/topical-events/anti-corruption-summit-london-2016",
+        "locale": "en"
+      }
     ]
   }
 }
