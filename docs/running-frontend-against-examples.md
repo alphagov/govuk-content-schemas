@@ -26,6 +26,14 @@ To start an instance of the dummy content store, from this repo, run:
 $ bundle exec dummy_content_store
 ```
 
+You can also include the dummy content store as a dependency when running Bowler, but you have to explicitly exclude the content store from being launched as well.
+
+For example:
+
+```
+$ bowl my-application-frontend my-application-publisher dummy-content-store --without content-store
+```
+
 ### On the GOV.UK VM
 
 It will be available at: [content-store.dev.gov.uk](http://content-store.dev.gov.uk).
