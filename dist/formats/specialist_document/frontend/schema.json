@@ -229,8 +229,7 @@
       "additionalProperties": false,
       "required": [
         "body",
-        "metadata",
-        "change_history"
+        "metadata"
       ],
       "properties": {
         "body": {
