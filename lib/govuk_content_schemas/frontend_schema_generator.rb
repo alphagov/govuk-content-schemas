@@ -5,7 +5,7 @@ require "json-schema"
 class GovukContentSchemas::FrontendSchemaGenerator
   include ::GovukContentSchemas::Utils
 
-  attr_reader :publisher_schema, :frontend_links_definition
+  attr_reader :publisher_schema, :frontend_links_definition, :format_name
 
   INTERNAL_PROPERTIES = %w{
     access_limited
@@ -32,11 +32,14 @@ class GovukContentSchemas::FrontendSchemaGenerator
     # Working groups have a `policies` link type containing the policies it is
     # tagged to.
     "policies",
-  ]
+  ].freeze
 
-  def initialize(publisher_schema, frontend_links_definition)
+  CHANGE_HISTORY_REQUIRED = ['specialist_document'].freeze
+
+  def initialize(publisher_schema, frontend_links_definition, format_name)
     @publisher_schema = publisher_schema
     @frontend_links_definition = frontend_links_definition
+    @format_name = format_name
   end
 
   def generate
@@ -111,7 +114,15 @@ private
   end
 
   def converted_definitions
-    resolve_multiple_content_types(publisher_definitions.reject { |k| k == "links" })
+    resolve_multiple_content_types(publisher_definitions.reject { |k| k == "links" }).tap do |converted|
+      if change_history_required?
+        converted['details']['required'] << 'change_history'
+      end
+    end
+  end
+
+  def change_history_required?
+    CHANGE_HISTORY_REQUIRED.include?(format_name)
   end
 
   def frontend_definitions

@@ -57,13 +57,6 @@ def sources_for_frontend_schema(filename)
   Rake::FileList.new(filename.pathmap("%{frontend,publisher}p"))
 end
 
-def add_required_change_history_for_specialist_documents(frontend_schema, task)
-  format_name = task.name.pathmap("%{dist/formats/,}d").pathmap("%d")
-  if format_name == "specialist_document"
-    frontend_schema["definitions"]["details"]["required"] << "change_history"
-  end
-end
-
 combine_publisher_schemas = ->(task) do
   source_schemas = Hash[task.sources.map { |s| [s.pathmap("%n").to_sym, schema_reader.read(s)] }]
   FileUtils.mkdir_p task.name.pathmap("%d")
@@ -81,10 +74,9 @@ combine_frontend_schemas = ->(task) do
   frontend_links_definition = schema_reader.read("formats/frontend_links_definition.json")
 
   FileUtils.mkdir_p(task.name.pathmap("%d"))
-  frontend_generator = GovukContentSchemas::FrontendSchemaGenerator.new(publisher_schema, frontend_links_definition)
+  format_name = task.name.pathmap("%{dist/formats/,}d").pathmap("%d")
+  frontend_generator = GovukContentSchemas::FrontendSchemaGenerator.new(publisher_schema, frontend_links_definition, format_name)
   frontend_schema = frontend_generator.generate.schema
-
-  add_required_change_history_for_specialist_documents(frontend_schema, task)
 
   File.open(task.name, "w") do |file|
     file.puts JSON.pretty_generate(frontend_schema)
