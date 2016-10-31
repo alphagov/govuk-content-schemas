@@ -229,7 +229,8 @@
       "additionalProperties": false,
       "required": [
         "body",
-        "metadata"
+        "metadata",
+        "change_history"
       ],
       "properties": {
         "body": {
