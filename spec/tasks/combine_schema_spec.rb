@@ -143,6 +143,7 @@ RSpec.describe "combine_schemas" do
     let(:publisher_schema_filename) { File.join("dist/formats", format_name, "publisher/schema.json") }
     let(:output_filename) { File.join("dist/formats", format_name, "frontend/schema.json") }
     let(:frontend_links_definition) { reader.read("formats/frontend_links_definition.json") }
+    let(:format) {}
 
     let(:task_name) { "combine_frontend_schemas" }
 
@@ -163,7 +164,11 @@ RSpec.describe "combine_schemas" do
 
     specify "the frontend schema file contains a frontend schema" do
       actual = reader.read(output_filename)
-      expected = GovukContentSchemas::FrontendSchemaGenerator.new(publisher_schema, frontend_links_definition).generate
+      expected = GovukContentSchemas::FrontendSchemaGenerator.new(
+        publisher_schema,
+        frontend_links_definition,
+        format
+      ).generate
 
       expect(actual.schema).to eq(expected.schema)
     end

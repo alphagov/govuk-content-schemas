@@ -5,7 +5,7 @@ require "json-schema"
 class GovukContentSchemas::FrontendSchemaGenerator
   include ::GovukContentSchemas::Utils
 
-  attr_reader :publisher_schema, :frontend_links_definition
+  attr_reader :publisher_schema, :frontend_links_definition, :format_name
 
   INTERNAL_PROPERTIES = %w{
     access_limited
@@ -32,11 +32,14 @@ class GovukContentSchemas::FrontendSchemaGenerator
     # Working groups have a `policies` link type containing the policies it is
     # tagged to.
     "policies",
-  ]
+  ].freeze
 
-  def initialize(publisher_schema, frontend_links_definition)
+  CHANGE_HISTORY_REQUIRED = ['specialist_document'].freeze
+
+  def initialize(publisher_schema, frontend_links_definition, format_name)
     @publisher_schema = publisher_schema
     @frontend_links_definition = frontend_links_definition
+    @format_name = format_name
   end
 
   def generate
@@ -47,7 +50,7 @@ class GovukContentSchemas::FrontendSchemaGenerator
       "required" => required_properties,
       "properties" => frontend_properties,
       "definitions" => frontend_definitions
-    }, @publisher_schema.uri)
+    }, publisher_schema.uri)
   end
 
 private
@@ -57,7 +60,7 @@ private
   end
 
   def required_properties
-    required = @publisher_schema.schema["required"].to_a
+    required = publisher_schema.schema["required"].to_a
 
     if required.empty?
       []
@@ -67,11 +70,11 @@ private
   end
 
   def publisher_properties
-    @pub_properties ||= @publisher_schema.schema["properties"] || {}
+    @pub_properties ||= publisher_schema.schema["properties"] || {}
   end
 
   def publisher_links
-    @publisher_schema.schema["definitions"]["links"] || publisher_properties["links"] || { "properties" => {} }
+    publisher_schema.schema["definitions"]["links"] || publisher_properties["links"] || { "properties" => {} }
   end
 
   def frontend_properties
@@ -107,11 +110,19 @@ private
   end
 
   def publisher_definitions
-    clone_hash(@publisher_schema.schema["definitions"]) || {}
+    clone_hash(publisher_schema.schema["definitions"]) || {}
   end
 
   def converted_definitions
-    resolve_multiple_content_types(publisher_definitions.reject { |k| k == "links" })
+    resolve_multiple_content_types(publisher_definitions.reject { |k| k == "links" }).tap do |converted|
+      if change_history_required?
+        converted['details']['required'] << 'change_history'
+      end
+    end
+  end
+
+  def change_history_required?
+    CHANGE_HISTORY_REQUIRED.include?(format_name)
   end
 
   def frontend_definitions

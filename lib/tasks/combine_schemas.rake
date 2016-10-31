@@ -74,7 +74,8 @@ combine_frontend_schemas = ->(task) do
   frontend_links_definition = schema_reader.read("formats/frontend_links_definition.json")
 
   FileUtils.mkdir_p(task.name.pathmap("%d"))
-  frontend_generator = GovukContentSchemas::FrontendSchemaGenerator.new(publisher_schema, frontend_links_definition)
+  format_name = task.name.pathmap("%{dist/formats/,}d").pathmap("%d")
+  frontend_generator = GovukContentSchemas::FrontendSchemaGenerator.new(publisher_schema, frontend_links_definition, format_name)
   frontend_schema = frontend_generator.generate.schema
 
   File.open(task.name, "w") do |file|

@@ -40,8 +40,10 @@ RSpec.describe GovukContentSchemas::FrontendSchemaGenerator do
     build_schema("frontend_links.json", properties: build_string_properties("test"))
   }
 
+  let(:format) {}
+
   subject(:generated) {
-    described_class.new(publisher_schema, frontend_links_definition).generate
+    described_class.new(publisher_schema, frontend_links_definition, format).generate
   }
 
   let(:internal_properties) {
@@ -98,6 +100,20 @@ RSpec.describe GovukContentSchemas::FrontendSchemaGenerator do
     expect(generated.schema["properties"]["links"]).to eq(build_frontend_links_schema(*(link_names + GovukContentSchemas::FrontendSchemaGenerator::LINK_NAMES_ADDED_BY_PUBLISHING_API)))
   end
 
+  context "format requires change history" do
+    let(:format) { "specialist_document" }
+    let(:publisher_schema) {
+      build_schema("schema.json",
+                   definitions: { "details" => { "required" => [] } }
+                  )
+    }
+
+    it "change history is added to the required fields" do
+      required = generated.schema["definitions"]["details"]["required"]
+      expect(required).to include("change_history")
+    end
+  end
+
   context "publisher schema specifies a required link" do
     let(:publisher_schema_with_required_link) {
       clone_schema(publisher_schema).tap do |cloned|
@@ -106,7 +122,7 @@ RSpec.describe GovukContentSchemas::FrontendSchemaGenerator do
     }
 
     subject(:generated) {
-      described_class.new(publisher_schema_with_required_link, frontend_links_definition).generate
+      described_class.new(publisher_schema_with_required_link, frontend_links_definition, format).generate
     }
 
     it "preserves list of required items" do
@@ -170,7 +186,7 @@ RSpec.describe GovukContentSchemas::FrontendSchemaGenerator do
 
     let(:generated) do
       schema = build_schema("schema.json", properties: properties, definitions: {})
-      described_class.new(schema, frontend_links_definition).generate
+      described_class.new(schema, frontend_links_definition, format).generate
     end
 
     it "replaces the field's 'ref' with a 'type' of 'string'" do
