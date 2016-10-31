@@ -50,7 +50,7 @@ class GovukContentSchemas::FrontendSchemaGenerator
       "required" => required_properties,
       "properties" => frontend_properties,
       "definitions" => frontend_definitions
-    }, @publisher_schema.uri)
+    }, publisher_schema.uri)
   end
 
 private
@@ -60,7 +60,7 @@ private
   end
 
   def required_properties
-    required = @publisher_schema.schema["required"].to_a
+    required = publisher_schema.schema["required"].to_a
 
     if required.empty?
       []
@@ -70,11 +70,11 @@ private
   end
 
   def publisher_properties
-    @pub_properties ||= @publisher_schema.schema["properties"] || {}
+    @pub_properties ||= publisher_schema.schema["properties"] || {}
   end
 
   def publisher_links
-    @publisher_schema.schema["definitions"]["links"] || publisher_properties["links"] || { "properties" => {} }
+    publisher_schema.schema["definitions"]["links"] || publisher_properties["links"] || { "properties" => {} }
   end
 
   def frontend_properties
@@ -110,7 +110,7 @@ private
   end
 
   def publisher_definitions
-    clone_hash(@publisher_schema.schema["definitions"]) || {}
+    clone_hash(publisher_schema.schema["definitions"]) || {}
   end
 
   def converted_definitions
