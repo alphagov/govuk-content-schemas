@@ -120,6 +120,9 @@
         },
         "document_collections": {
           "$ref": "#/definitions/frontend_links"
+        },
+        "child_taxons": {
+          "$ref": "#/definitions/frontend_links"
         }
       }
     },
