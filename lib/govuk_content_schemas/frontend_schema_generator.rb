@@ -36,6 +36,10 @@ class GovukContentSchemas::FrontendSchemaGenerator
     # Content items that are members of a collection will have a `document_collections`
     # link type
     "document_collections",
+
+    # Content items that are linked to with a `parent_taxon` link type will automatically
+    # have a `child_taxon` link type with those items.
+    "child_taxons",
   ].freeze
 
   CHANGE_HISTORY_REQUIRED = ['specialist_document'].freeze
