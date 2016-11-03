@@ -32,6 +32,10 @@ class GovukContentSchemas::FrontendSchemaGenerator
     # Working groups have a `policies` link type containing the policies it is
     # tagged to.
     "policies",
+
+    # Content items that are members of a collection will have a `document_collections`
+    # link type
+    "document_collections",
   ].freeze
 
   CHANGE_HISTORY_REQUIRED = ['specialist_document'].freeze
