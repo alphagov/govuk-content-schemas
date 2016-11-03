@@ -3,9 +3,6 @@
   "type": "object",
   "additionalProperties": false,
   "properties": {
-    "document_collections": {
-      "$ref": "#/definitions/guid_list"
-    },
     "related_guides": {
       "$ref": "#/definitions/guid_list"
     },

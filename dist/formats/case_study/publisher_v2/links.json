@@ -19,9 +19,6 @@
         "worldwide_organisations": {
           "$ref": "#/definitions/guid_list"
         },
-        "document_collections": {
-          "$ref": "#/definitions/guid_list"
-        },
         "taxons": {
           "description": "Prototype-stage taxonomy label for this content item",
           "$ref": "#/definitions/guid_list"
