@@ -82,9 +82,6 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "document_collections": {
-          "$ref": "#/definitions/frontend_links"
-        },
         "related_guides": {
           "$ref": "#/definitions/frontend_links"
         },
@@ -122,6 +119,9 @@
           "$ref": "#/definitions/frontend_links"
         },
         "policies": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "document_collections": {
           "$ref": "#/definitions/frontend_links"
         }
       }

@@ -121,6 +121,9 @@
         },
         "policies": {
           "$ref": "#/definitions/frontend_links"
+        },
+        "document_collections": {
+          "$ref": "#/definitions/frontend_links"
         }
       }
     },
