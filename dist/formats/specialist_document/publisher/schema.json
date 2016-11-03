@@ -690,8 +690,25 @@
             "section-95-support-for-asylum-seekers"
           ]
         },
+        "tribunal_decision_categories": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "section-4-1-support-for-persons-who-are-neither-an-asylum-seeker-nor-a-failed-asylum-seeker",
+              "section-4-2-support-for-failed-asylum-seekers",
+              "section-95-support-for-asylum-seekers"
+            ]
+          }
+        },
         "tribunal_decision_sub_category": {
           "type": "string"
+        },
+        "tribunal_decision_sub_categories": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         },
         "tribunal_decision_landmark": {
           "type": "string",
