@@ -2,10 +2,6 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "additionalProperties": false,
-  "required": [
-    "documents",
-    "organisations"
-  ],
   "properties": {
     "documents": {
       "description": "An unordered list of all documents in this collection",

@@ -163,10 +163,6 @@
     "links": {
       "type": "object",
       "additionalProperties": false,
-      "required": [
-        "parent",
-        "organisations"
-      ],
       "properties": {
         "taxons": {
           "description": "Prototype-stage taxonomy label for this content item",

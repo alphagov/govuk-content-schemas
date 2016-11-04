@@ -81,9 +81,6 @@
     "links": {
       "type": "object",
       "additionalProperties": false,
-      "required": [
-        "parent"
-      ],
       "properties": {
         "taxons": {
           "$ref": "#/definitions/frontend_links"

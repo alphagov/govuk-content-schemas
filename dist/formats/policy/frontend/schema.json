@@ -81,10 +81,6 @@
     "links": {
       "type": "object",
       "additionalProperties": false,
-      "required": [
-        "organisations",
-        "related"
-      ],
       "properties": {
         "people": {
           "$ref": "#/definitions/frontend_links"

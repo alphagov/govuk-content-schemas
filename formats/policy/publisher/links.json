@@ -2,10 +2,6 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "additionalProperties": false,
-  "required": [
-    "organisations",
-    "related"
-  ],
   "properties": {
     "people": {
       "$ref": "#/definitions/guid_list"

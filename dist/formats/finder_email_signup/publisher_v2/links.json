@@ -9,10 +9,6 @@
     "links": {
       "type": "object",
       "additionalProperties": false,
-      "required": [
-        "related",
-        "organisations"
-      ],
       "properties": {
         "related": {
           "$ref": "#/definitions/guid_list"

@@ -9,9 +9,6 @@
     "links": {
       "type": "object",
       "additionalProperties": false,
-      "required": [
-        "field_of_operation"
-      ],
       "properties": {
         "field_of_operation": {
           "$ref": "#/definitions/guid_list",
