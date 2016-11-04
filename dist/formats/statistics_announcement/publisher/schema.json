@@ -180,10 +180,6 @@
     "links": {
       "type": "object",
       "additionalProperties": false,
-      "required": [
-        "organisations",
-        "policy_areas"
-      ],
       "properties": {
         "organisations": {
           "description": "All organisations linked to this content item. This should include lead organisations.",

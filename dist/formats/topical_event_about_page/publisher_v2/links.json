@@ -9,9 +9,6 @@
     "links": {
       "type": "object",
       "additionalProperties": false,
-      "required": [
-        "parent"
-      ],
       "properties": {
         "taxons": {
           "description": "Prototype-stage taxonomy label for this content item",

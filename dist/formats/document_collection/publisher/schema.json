@@ -228,10 +228,6 @@
     "links": {
       "type": "object",
       "additionalProperties": false,
-      "required": [
-        "documents",
-        "organisations"
-      ],
       "properties": {
         "documents": {
           "description": "An unordered list of all documents in this collection",
