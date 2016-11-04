@@ -2,9 +2,5 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "additionalProperties": false,
-  "required": [
-    "parent",
-    "organisations"
-  ],
   "properties": {}
 }
