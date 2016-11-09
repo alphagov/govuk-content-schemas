@@ -112,7 +112,7 @@
     "last_edited_at": {
       "type": "string",
       "format": "date-time",
-      "description": "Last time when the content recieved a major or minor update."
+      "description": "Last time when the content received a major or minor update."
     },
     "update_type": {
       "enum": [
