@@ -57,6 +57,17 @@
         ]
       },
       {
+        "name": "São Tomé and Principe",
+        "base_path": "/foreign-travel-advice/sao-tome-and-principe",
+        "updated_at": "2016-11-17T17:28:21Z",
+        "public_updated_at": "2015-12-08T17:02:23Z",
+        "change_description": "Latest update: Entry requirements section - British nationals don’t need a visa to visit Sao Tome and Principe for up to 15 days; for longer stays, you should get a visa before you travel",
+        "synonyms": [
+          "Sao Tome and Principe",
+          "Sao Tome & Principe"
+        ]
+      },
+      {
         "name": "Spain",
         "base_path": "/foreign-travel-advice/spain",
         "updated_at": "2016-01-06T00:00:00+00:00",
