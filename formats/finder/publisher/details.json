@@ -115,21 +115,16 @@
             "description": "Possible values to show for non-dynamic select facets. All values are shown regardless of the search.",
             "type": "array",
             "items": {
-              "type": "object",
-              "additionalProperties": false,
-              "required": [
-                "label",
-                "value"
-              ],
-              "properties": {
-                "label": {
-                  "type": "string"
-                },
-                "value": {
-                  "type": "string"
-                }
-              }
+              "$ref": "#/definitions/label_value_pair"
             }
+          },
+          "open_value" : {
+            "description": "Value that determines the open state (the key field is in the future) of a topical facet.",
+            "$ref": "#/definitions/label_value_pair"
+          },
+          "closed_value" : {
+            "description": "Value that determines the closed state (the key field is in the past) of a topical facet.",
+            "$ref": "#/definitions/label_value_pair"
           }
         }
       }
