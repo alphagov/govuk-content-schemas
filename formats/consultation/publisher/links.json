@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "policies": {
+      "$ref": "#/definitions/guid_list"
+    },
+    "ministers": {
+      "$ref": "#/definitions/guid_list"
+    },
+    "topical_events": {
+      "$ref": "#/definitions/guid_list"
+    }
+  }
+}
