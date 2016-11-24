@@ -109,7 +109,9 @@
             "type": "string"
           },
           "type": {
-            "type": "string"
+            "description": "Defines the UI component and how the facet is queried from the search API",
+            "type": "string",
+            "enum": ["text", "date", "topical"]
           },
           "allowed_values": {
             "description": "Possible values to show for non-dynamic select facets. All values are shown regardless of the search.",
