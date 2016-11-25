@@ -34,10 +34,10 @@
       "format": "date-time"
     },
     "publishing_app": {
-      "type": "string"
+      "$ref": "#/definitions/publishing_app"
     },
     "rendering_app": {
-      "type": "string"
+      "$ref": "#/definitions/rendering_app"
     },
     "locale": {
       "type": "string"

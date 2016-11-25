@@ -36,10 +36,10 @@
       "format": "date-time"
     },
     "publishing_app": {
-      "$ref": "#/definitions/application_name"
+      "$ref": "#/definitions/publishing_app"
     },
     "rendering_app": {
-      "$ref": "#/definitions/application_name"
+      "$ref": "#/definitions/rendering_app"
     },
     "locale": {
       "$ref": "#/definitions/locale"
