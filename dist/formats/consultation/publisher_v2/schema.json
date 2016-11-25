@@ -182,7 +182,7 @@
             "type": "string"
           }
         },
-        "consultation_participation": {
+        "ways_to_respond": {
           "type": "object",
           "additionalProperties": false,
           "properties": {
@@ -195,10 +195,7 @@
             "postal_address": {
               "type": "string"
             },
-            "actions": {
-              "type": "string"
-            },
-            "how_to_respond_attachment_url": {
+            "attachment_url": {
               "type": "string"
             }
           }
