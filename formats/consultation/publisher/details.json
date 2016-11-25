@@ -38,6 +38,9 @@
     "change_history": {
       "$ref": "#/definitions/change_history"
     },
+    "national_applicability": {
+      "$ref": "#/definitions/national_applicability"
+    },
     "emphasised_organisations": {
       "$ref": "#/definitions/emphasised_organisations"
     },
