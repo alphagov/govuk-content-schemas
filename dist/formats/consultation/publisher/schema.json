@@ -187,9 +187,6 @@
             "type": "string"
           }
         },
-        "email": {
-          "type": "string"
-        },
         "consultation_participation": {
           "type": "object",
           "additionalProperties": false,
