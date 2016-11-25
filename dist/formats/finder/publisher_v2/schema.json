@@ -160,16 +160,19 @@
           ]
         },
         "document_noun": {
+          "description": "How to refer to documents when presenting the search results",
           "type": "string",
           "additionalProperties": false
         },
         "default_documents_per_page": {
+          "description": "Specify this to paginate results",
           "type": "integer"
         },
         "logo_path": {
           "type": "string"
         },
         "default_order": {
+          "description": "Rummager fields to order the results by",
           "type": "string"
         },
         "filter": {
@@ -211,6 +214,7 @@
           }
         },
         "facets": {
+          "description": "The facets shown to the user to refine their search.",
           "type": "array",
           "items": {
             "type": "object",
@@ -222,44 +226,51 @@
             ],
             "properties": {
               "key": {
+                "description": "The rummager field name used for this facet.",
                 "type": "string"
               },
               "filterable": {
+                "description": "This must be true to show the facet to users.",
                 "type": "boolean"
               },
               "display_as_result_metadata": {
+                "description": "Include this in search result metadata. Can be set for non-filterable facets.",
                 "type": "boolean"
               },
               "name": {
+                "description": "Label for the facet.",
                 "type": "string"
               },
               "preposition": {
+                "description": "Text used to augment the description of the search when the facet is used.",
                 "type": "string"
               },
               "short_name": {
                 "type": "string"
               },
               "type": {
-                "type": "string"
+                "description": "Defines the UI component and how the facet is queried from the search API",
+                "type": "string",
+                "enum": [
+                  "text",
+                  "date",
+                  "topical"
+                ]
               },
               "allowed_values": {
+                "description": "Possible values to show for non-dynamic select facets. All values are shown regardless of the search.",
                 "type": "array",
                 "items": {
-                  "type": "object",
-                  "additionalProperties": false,
-                  "required": [
-                    "label",
-                    "value"
-                  ],
-                  "properties": {
-                    "label": {
-                      "type": "string"
-                    },
-                    "value": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/definitions/label_value_pair"
                 }
+              },
+              "open_value": {
+                "description": "Value that determines the open state (the key field is in the future) of a topical facet.",
+                "$ref": "#/definitions/label_value_pair"
+              },
+              "closed_value": {
+                "description": "Value that determines the closed state (the key field is in the past) of a topical facet.",
+                "$ref": "#/definitions/label_value_pair"
               }
             }
           }
@@ -596,6 +607,25 @@
         },
         "wales": {
           "$ref": "#/definitions/nation_applicability"
+        }
+      }
+    },
+    "label_value_pair": {
+      "description": "One of many possible values a user can select from",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "label",
+        "value"
+      ],
+      "properties": {
+        "label": {
+          "description": "A human readable label",
+          "type": "string"
+        },
+        "value": {
+          "description": "A value to use for form controls",
+          "type": "string"
         }
       }
     }
