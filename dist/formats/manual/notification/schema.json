@@ -43,10 +43,10 @@
       "format": "date-time"
     },
     "publishing_app": {
-      "$ref": "#/definitions/application_name"
+      "$ref": "#/definitions/publishing_app"
     },
     "rendering_app": {
-      "$ref": "#/definitions/application_name"
+      "$ref": "#/definitions/rendering_app"
     },
     "locale": {
       "$ref": "#/definitions/locale"
@@ -374,10 +374,73 @@
         "$ref": "#/definitions/guid"
       }
     },
-    "application_name": {
-      "description": "Applications on GOV.UK only use lowercase letters and dashes",
+    "publishing_app": {
+      "description": "The application that owns this content item. Should be the hostname of the application creating it.",
       "type": "string",
-      "pattern": "[a-z-]"
+      "enum": [
+        "businesssupportfinder",
+        "calculators",
+        "calendars",
+        "collections-publisher",
+        "contacts",
+        "content-tagger",
+        "design-principles",
+        "external-link-tracker",
+        "feedback",
+        "frontend",
+        "govuk_content_api",
+        "hmrc-manuals-api",
+        "info-frontend",
+        "licencefinder",
+        "manuals-frontend",
+        "manuals-publisher",
+        "performanceplatform-big-screen-view",
+        "policy-publisher",
+        "publisher",
+        "rummager",
+        "service-manual-publisher",
+        "share-sale-publisher",
+        "short-url-manager",
+        "smartanswers",
+        "specialist-publisher",
+        "spotlight",
+        "static",
+        "tariff",
+        "travel-advice-publisher",
+        "whitehall"
+      ]
+    },
+    "rendering_app": {
+      "description": "The application that renders this content item. Used by the publishing platform to create a route. Should be a valid hostname in the GOV.UK stack.",
+      "type": "string",
+      "enum": [
+        "businesssupportfinder",
+        "calculators",
+        "calendars",
+        "collections",
+        "contacts-frontend",
+        "designprinciples",
+        "email-alert-frontend",
+        "email-campaign-frontend",
+        "feedback",
+        "finder-frontend",
+        "frontend",
+        "government-frontend",
+        "info-frontend",
+        "licencefinder",
+        "manuals-frontend",
+        "multipage-frontend",
+        "performanceplatform-big-screen-view",
+        "publicapi",
+        "rummager",
+        "service-manual-frontend",
+        "smartanswers",
+        "specialist-frontend",
+        "spotlight",
+        "static",
+        "tariff",
+        "whitehall-frontend"
+      ]
     },
     "image": {
       "type": "object",

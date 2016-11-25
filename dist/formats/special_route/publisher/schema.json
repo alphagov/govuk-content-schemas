@@ -20,10 +20,10 @@
       "enum": [ "special_route" ]
     },
     "publishing_app": {
-      "type": "string"
+      "$ref": "#/definitions/publishing_app"
     },
     "rendering_app": {
-      "type": "string"
+      "$ref": "#/definitions/rendering_app"
     },
     "update_type": {
       "enum": [ "major", "minor", "republish" ]
@@ -54,6 +54,11 @@
     "guid": {
       "type": "string",
       "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-[1-5][a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$"
+    },
+    "publishing_app": {
+      "description": "The application that owns this content item. Should be the hostname of the application creating it.",
+      "type": "string",
+      "enum": ["businesssupportfinder", "calculators", "calendars", "collections-publisher", "contacts", "content-tagger", "design-principles", "external-link-tracker", "feedback", "frontend", "govuk_content_api", "hmrc-manuals-api", "info-frontend", "licencefinder", "manuals-frontend", "manuals-publisher", "performanceplatform-big-screen-view", "policy-publisher", "publisher", "rummager", "service-manual-publisher", "share-sale-publisher", "short-url-manager", "smartanswers", "specialist-publisher", "spotlight", "static", "tariff", "travel-advice-publisher", "whitehall"]
     },
     "route": {
       "type": "object",

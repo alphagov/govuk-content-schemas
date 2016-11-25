@@ -24,7 +24,7 @@
       "enum": [ "gone" ]
     },
     "publishing_app": {
-      "type": "string"
+      "$ref": "#/definitions/publishing_app"
     },
     "update_type": {
       "enum": [ "major", "minor", "republish" ]
@@ -86,6 +86,11 @@
       "items": {
         "$ref": "#/definitions/guid"
       }
+    },
+    "publishing_app": {
+      "description": "The application that owns this content item. Should be the hostname of the application creating it.",
+      "type": "string",
+      "enum": ["businesssupportfinder", "calculators", "calendars", "collections-publisher", "contacts", "content-tagger", "design-principles", "external-link-tracker", "feedback", "frontend", "govuk_content_api", "hmrc-manuals-api", "info-frontend", "licencefinder", "manuals-frontend", "manuals-publisher", "performanceplatform-big-screen-view", "policy-publisher", "publisher", "rummager", "service-manual-publisher", "share-sale-publisher", "short-url-manager", "smartanswers", "specialist-publisher", "spotlight", "static", "tariff", "travel-advice-publisher", "whitehall"]
     }
   }
 }
