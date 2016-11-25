@@ -260,11 +260,7 @@
           "$ref": "#/definitions/national_applicability"
         },
         "emphasised_organisations": {
-          "description": "The content ids of the organisations that should be displayed first in the list of organisations related to the item, these content ids must be present in the item organisation links hash.",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/guid"
-          }
+          "$ref": "#/definitions/emphasised_organisations"
         },
         "documents": {
           "type": "array",
@@ -663,6 +659,32 @@
         "wales": {
           "$ref": "#/definitions/nation_applicability"
         }
+      }
+    },
+    "label_value_pair": {
+      "description": "One of many possible values a user can select from",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "label",
+        "value"
+      ],
+      "properties": {
+        "label": {
+          "description": "A human readable label",
+          "type": "string"
+        },
+        "value": {
+          "description": "A value to use for form controls",
+          "type": "string"
+        }
+      }
+    },
+    "emphasised_organisations": {
+      "description": "The content ids of the organisations that should be displayed first in the list of organisations related to the item, these content ids must be present in the item organisation links hash.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/guid"
       }
     }
   }
