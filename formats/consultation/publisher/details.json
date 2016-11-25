@@ -41,21 +41,6 @@
     "emphasised_organisations": {
       "$ref": "#/definitions/emphasised_organisations"
     },
-    "access_limited": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "users"
-      ],
-      "properties": {
-        "users": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        }
-      }
-    },
     "documents": {
       "type": "array",
       "items": {
