@@ -2,7 +2,7 @@
   "content_id": "1aa96aac-d978-4de2-b717-0f54acb33883",
   "base_path": "/government/consultations/review-of-museums-in-england",
   "description": "An online call for evidence to inform a review of the museums sector in England",
-  "public_updated_at": "2016-09-05T15:00:00.000+00:00",
+  "public_updated_at": "2016-09-05T14:00:00+01:00",
   "title": "Review of Museums in England",
   "updated_at": "2016-09-05T15:00:00Z",
   "schema_name": "consultation",
@@ -13,8 +13,6 @@
     "first_public_at": "2016-09-05T14:00:00+01:00",
     "opening_date": "2016-09-05T14:00:00+01:00",
     "closing_date": "2016-10-31T17:00:00+01:00",
-    "change_history": [
-    ],
     "tags": {
       "browse_pages": [],
       "topics": ["5d37acc4-7631-11e4-a3cb-005056011aef"],
