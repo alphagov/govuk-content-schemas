@@ -573,6 +573,13 @@
           "type": "string"
         }
       }
+    },
+    "emphasised_organisations": {
+      "description": "The content ids of the organisations that should be displayed first in the list of organisations related to the item, these content ids must be present in the item organisation links hash.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/guid"
+      }
     }
   }
 }
