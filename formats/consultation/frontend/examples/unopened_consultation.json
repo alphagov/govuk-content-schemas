@@ -14,16 +14,24 @@
     "opening_date": "2200-10-05T14:00:00+01:00",
     "closing_date": "2210-10-31T17:00:00+01:00",
     "tags": {
-      "browse_pages": [],
-      "topics": [],
-      "policies": []
+      "browse_pages": [
+
+      ],
+      "topics": [
+
+      ],
+      "policies": [
+
+      ]
     },
     "government": {
       "title": "2015 Conservative government",
       "slug": "2015-conservative-government",
       "current": true
     },
-    "emphasised_organisations": ["ebd15ade-73b2-4eaf-b1c3-43034a42eb37"],
+    "emphasised_organisations": [
+      "ebd15ade-73b2-4eaf-b1c3-43034a42eb37"
+    ],
     "political": true
   },
   "links": {

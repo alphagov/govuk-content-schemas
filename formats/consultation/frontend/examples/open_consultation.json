@@ -21,16 +21,24 @@
     ],
     "held_on_another_website_url": "https://consult.education.gov.uk/part-time-maintenance-loans/post-graduate-doctoral-loans/",
     "tags": {
-      "browse_pages": [],
-      "topics": [],
-      "policies": []
+      "browse_pages": [
+
+      ],
+      "topics": [
+
+      ],
+      "policies": [
+
+      ]
     },
     "government": {
       "title": "2015 Conservative government",
       "slug": "2015-conservative-government",
       "current": true
     },
-    "emphasised_organisations": ["ebd15ade-73b2-4eaf-b1c3-43034a42eb37"],
+    "emphasised_organisations": [
+      "ebd15ade-73b2-4eaf-b1c3-43034a42eb37"
+    ],
     "political": true
   },
   "links": {
