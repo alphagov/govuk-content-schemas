@@ -19,9 +19,15 @@
     },
     "political": false,
     "tags": {
-      "browse_pages": [],
-      "policies": [],
-      "topics": []
+      "browse_pages": [
+
+      ],
+      "policies": [
+
+      ],
+      "topics": [
+
+      ]
     },
     "change_history": [
       {
@@ -153,7 +159,9 @@
         "note": "First published."
       }
     ],
-    "emphasised_organisations": ["4c717efc-f47b-478e-a76d-ce1ae0af1946"]
+    "emphasised_organisations": [
+      "4c717efc-f47b-478e-a76d-ce1ae0af1946"
+    ]
   },
   "links": {
     "organisations": [
@@ -176,7 +184,7 @@
         "title": "Skills Funding Agency",
         "api_url": "https://www.gov.uk/api/content/government/organisations/skills-funding-agency",
         "web_url": "https://www.gov.uk/government/organisations/skills-funding-agency"
-        }
+      }
     ],
     "document_collections": [
       {

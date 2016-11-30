@@ -43,7 +43,8 @@
         "schema_name": "service_manual_topic",
         "document_type": "service_manual_topic",
         "analytics_identifier": null,
-        "links": {}
+        "links": {
+        }
       }
     ]
   },

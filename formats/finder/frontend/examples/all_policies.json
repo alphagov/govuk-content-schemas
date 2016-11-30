@@ -4,15 +4,20 @@
   "title": "All policy content",
   "description": "",
   "format": "finder",
-  "need_ids": [],
+  "need_ids": [
+
+  ],
   "locale": "en",
   "updated_at": "2015-07-28T13:31:24.082Z",
   "public_updated_at": "2015-07-28T13:29:02.000+00:00",
   "phase": "alpha",
   "details": {
     "document_noun": "documents",
-    "facets": [],
-    "filter": {},
+    "facets": [
+
+    ],
+    "filter": {
+    },
     "reject": {
       "policies": [
         "_MISSING"
@@ -21,9 +26,15 @@
     "show_summaries": false
   },
   "links": {
-    "email_alert_signup": [],
-    "organisations": [],
-    "related": [],
+    "email_alert_signup": [
+
+    ],
+    "organisations": [
+
+    ],
+    "related": [
+
+    ],
     "available_translations": [
       {
         "content_id": "3f68ef63-252c-4982-8569-a01a911e7397",

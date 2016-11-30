@@ -4,7 +4,9 @@
   "title": "First-tier Tribunal (Asylum Support) decisions",
   "description": "Find decisions by the First-tier Tribunal (Asylum Support)",
   "format": "finder",
-  "need_ids": [],
+  "need_ids": [
+
+  ],
   "locale": "en",
   "updated_at": "2015-09-02T15:56:15.163Z",
   "public_updated_at": "2015-09-02T10:06:06.000+00:00",
@@ -135,9 +137,15 @@
     ]
   },
   "links": {
-    "organisations": [],
-    "related": [],
-    "email_alert_signup": [],
+    "organisations": [
+
+    ],
+    "related": [
+
+    ],
+    "email_alert_signup": [
+
+    ],
     "available_translations": [
       {
         "content_id": "6a0da4c9-1969-4c2f-972c-88b5497c2b65",

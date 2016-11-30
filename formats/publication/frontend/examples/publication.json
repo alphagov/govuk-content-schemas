@@ -4,7 +4,9 @@
   "title": "D17 9LY, Veolia ES (UK) Limited: environmental permit issued",
   "description": "View the permit issued for Leeming Biogas Facility, Leeming under the Industrial Emissions Directive.",
   "format": "publication",
-  "need_ids": [],
+  "need_ids": [
+
+  ],
   "locale": "en",
   "updated_at": "2016-05-03T14:11:53.023Z",
   "public_updated_at": "2016-05-03T14:11:50.000+00:00",
@@ -16,9 +18,15 @@
     ],
     "first_public_at": "2016-05-03T14:11:50.000+00:00",
     "tags": {
-      "browse_pages": [],
-      "policies": [],
-      "topics": []
+      "browse_pages": [
+
+      ],
+      "policies": [
+
+      ],
+      "topics": [
+
+      ]
     },
     "government": {
       "title": "2015 Conservative government",
@@ -26,7 +34,9 @@
       "current": true
     },
     "political": false,
-    "emphasised_organisations": ["16628142-57b2-4611-bc03-5912785acee3"]
+    "emphasised_organisations": [
+      "16628142-57b2-4611-bc03-5912785acee3"
+    ]
   },
   "links": {
     "organisations": [

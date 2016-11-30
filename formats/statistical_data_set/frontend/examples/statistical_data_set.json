@@ -17,11 +17,19 @@
     },
     "political": false,
     "tags": {
-      "browse_pages": [],
-      "policies": [],
-      "topics": []
+      "browse_pages": [
+
+      ],
+      "policies": [
+
+      ],
+      "topics": [
+
+      ]
     },
-    "emphasised_organisations": ["4c717efc-f47b-478e-a76d-ce1ae0af1946"]
+    "emphasised_organisations": [
+      "4c717efc-f47b-478e-a76d-ce1ae0af1946"
+    ]
   },
   "links": {
     "organisations": [

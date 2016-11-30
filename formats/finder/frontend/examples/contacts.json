@@ -50,7 +50,9 @@
         "locale": "en"
       }
     ],
-    "related": []
+    "related": [
+
+    ]
   },
   "locale": "en",
   "schema_name": "finder",

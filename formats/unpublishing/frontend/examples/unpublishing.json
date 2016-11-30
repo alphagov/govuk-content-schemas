@@ -4,7 +4,9 @@
   "title": "Bubble and trouble",
   "description": "A case study about bubble and trouble.",
   "format": "unpublishing",
-  "need_ids": [],
+  "need_ids": [
+
+  ],
   "locale": "en",
   "updated_at": "2014-12-10T14:50:13.372Z",
   "public_updated_at": "2014-04-30T23:01:51.000+00:00",

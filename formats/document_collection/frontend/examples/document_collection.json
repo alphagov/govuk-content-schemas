@@ -9,7 +9,8 @@
   "document_type": "document_collection",
   "format": "document_collection",
   "locale": "en",
-  "withdrawn_notice": {},
+  "withdrawn_notice": {
+  },
   "details": {
     "collection_groups": [
       {
@@ -60,9 +61,15 @@
     ],
     "first_public_at": "2016-02-29T09:24:10.000+00:00",
     "tags": {
-      "browse_pages": [],
-      "topics": [],
-      "policies": []
+      "browse_pages": [
+
+      ],
+      "topics": [
+
+      ],
+      "policies": [
+
+      ]
     },
     "government": {
       "title": "2010 to 2015 Conservative and Liberal Democrat coalition government",
@@ -70,7 +77,9 @@
       "current": false
     },
     "political": false,
-    "emphasised_organisations": ["d39237a5-678b-4bb5-a372-eb2cb036933d"]
+    "emphasised_organisations": [
+      "d39237a5-678b-4bb5-a372-eb2cb036933d"
+    ]
   },
   "links": {
     "documents": [
