@@ -12,12 +12,20 @@
       "url": "http://static.dev.gov.uk/government/uploads/system/uploads/image_data/file/5693/s300_Carlisle_Park_1_960x640.jpg"
     },
     "tags": {
-      "browse_pages": [],
-      "topics": [],
-      "policies": []
+      "browse_pages": [
+
+      ],
+      "topics": [
+
+      ],
+      "policies": [
+
+      ]
     },
     "format_display_type": "case_study",
-    "emphasised_organisations": ["8b19c238-54e3-4e27-b0d7-60f8e2a677c9"]
+    "emphasised_organisations": [
+      "8b19c238-54e3-4e27-b0d7-60f8e2a677c9"
+    ]
   },
   "format": "case_study",
   "links": {
@@ -33,7 +41,9 @@
         "analytics_identifier": "L2"
       }
     ],
-    "related_policies": [],
+    "related_policies": [
+
+    ],
     "world_locations": [
       {
         "content_id": "456af51f-5fd3-4855-8a33-52cb32ff9985",

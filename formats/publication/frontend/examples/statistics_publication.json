@@ -4,7 +4,9 @@
   "title": "Affordable housing supply in England: 2011 to 2012",
   "description": "This release presents data on affordable housing supply in England.",
   "format": "publication",
-  "need_ids": [],
+  "need_ids": [
+
+  ],
   "locale": "en",
   "updated_at": "2015-12-02T10:47:58.310Z",
   "public_updated_at": "2012-11-01T00:00:00.000+00:00",
@@ -15,9 +17,15 @@
     ],
     "first_public_at": "2012-11-01T00:00:00.000+00:00",
     "tags": {
-      "browse_pages": [],
-      "policies": [],
-      "topics": []
+      "browse_pages": [
+
+      ],
+      "policies": [
+
+      ],
+      "topics": [
+
+      ]
     },
     "government": {
       "title": "2010 to 2015 Conservative and Liberal Democrat coalition government",
@@ -25,7 +33,9 @@
       "current": false
     },
     "political": false,
-    "emphasised_organisations": ["2e7868a8-38f5-4ff6-b62f-9a15d1c22d28"],
+    "emphasised_organisations": [
+      "2e7868a8-38f5-4ff6-b62f-9a15d1c22d28"
+    ],
     "national_applicability": {
       "england": {
         "label": "England",

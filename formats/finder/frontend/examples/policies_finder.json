@@ -4,7 +4,9 @@
   "title": "Policies",
   "description": "",
   "format": "finder",
-  "need_ids": [],
+  "need_ids": [
+
+  ],
   "locale": "en",
   "updated_at": "2015-05-14T15:39:39.405Z",
   "public_updated_at": "2015-05-14T11:04:29.000+00:00",
@@ -28,8 +30,12 @@
     ]
   },
   "links": {
-    "organisations": [],
-    "related": [],
+    "organisations": [
+
+    ],
+    "related": [
+
+    ],
     "available_translations": [
       {
         "content_id": "854c7a4a-e8bf-44df-a08a-edbb2a56a58e",

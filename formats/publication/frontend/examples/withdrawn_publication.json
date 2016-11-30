@@ -4,7 +4,9 @@
   "title": "A guide for pig keepers",
   "description": "Guidance for pig keepers on registering, identifying and moving your pigs.",
   "format": "publication",
-  "need_ids": [],
+  "need_ids": [
+
+  ],
   "locale": "en",
   "updated_at": "2015-12-02T10:43:02.887Z",
   "public_updated_at": "2013-09-06T09:11:28.000+00:00",
@@ -29,9 +31,15 @@
       }
     ],
     "tags": {
-      "browse_pages": [],
-      "policies": [],
-      "topics": []
+      "browse_pages": [
+
+      ],
+      "policies": [
+
+      ],
+      "topics": [
+
+      ]
     },
     "government": {
       "title": "2010 to 2015 Conservative and Liberal Democrat coalition government",
@@ -39,7 +47,9 @@
       "current": false
     },
     "political": false,
-    "emphasised_organisations": ["de4e9dc6-cca4-43af-a594-682023b84d6c"],
+    "emphasised_organisations": [
+      "de4e9dc6-cca4-43af-a594-682023b84d6c"
+    ],
     "withdrawn_notice": {
       "explanation": "<div class=\"govspeak\"><p>This information is now out of date. For our current guidance please read <a href=\"https://www.gov.uk/government/collections/guidance-for-keepers-of-sheep-goats-and-pigs\">guidance for keepers of sheep, goats and pigs</a>.</p></div>",
       "withdrawn_at": "2015-01-13T13:05:30Z"

@@ -42,7 +42,8 @@
         "web_url": "https://www.gov.uk/service-manual/communities/agile-delivery-community",
         "locale": "en",
         "analytics_identifier": null,
-        "links": {}
+        "links": {
+        }
       }
     ],
     "service_manual_topics": [
@@ -58,7 +59,8 @@
         "schema_name": "service_manual_topic",
         "document_type": "service_manual_topic",
         "analytics_identifier": null,
-        "links": {}
+        "links": {
+        }
       }
     ]
   },

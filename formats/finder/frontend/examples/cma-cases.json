@@ -4,7 +4,9 @@
   "title": "Competition and Markets Authority cases",
   "description": "",
   "format": "finder",
-  "need_ids": [],
+  "need_ids": [
+
+  ],
   "locale": "en",
   "updated_at": "2015-07-21T12:45:38.225Z",
   "public_updated_at": "2015-04-30T10:41:26.000+00:00",
@@ -356,7 +358,9 @@
         "locale": "en"
       }
     ],
-    "related": [],
+    "related": [
+
+    ],
     "available_translations": [
       {
         "content_id": "3631309f-b9c0-4942-afe6-3ae3819fc6a1",

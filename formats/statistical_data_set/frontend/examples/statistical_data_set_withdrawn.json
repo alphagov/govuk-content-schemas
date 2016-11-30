@@ -33,11 +33,19 @@
       }
     ],
     "tags": {
-      "browse_pages": [],
-      "policies": [],
-      "topics": []
+      "browse_pages": [
+
+      ],
+      "policies": [
+
+      ],
+      "topics": [
+
+      ]
     },
-    "emphasised_organisations": ["de4e9dc6-cca4-43af-a594-682023b84d6c"]
+    "emphasised_organisations": [
+      "de4e9dc6-cca4-43af-a594-682023b84d6c"
+    ]
   },
   "links": {
     "organisations": [

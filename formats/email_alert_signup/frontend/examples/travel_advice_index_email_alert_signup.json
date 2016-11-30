@@ -17,9 +17,12 @@
     "summary": "You'll get an email each time a country is updated."
   },
   "format": "email_alert_signup",
-  "links": {},
+  "links": {
+  },
   "locale": "en",
-  "need_ids": [],
+  "need_ids": [
+
+  ],
   "phase": "live",
   "public_updated_at": "2016-03-09T10:13:07.000+00:00",
   "title": "Foreign travel advice",

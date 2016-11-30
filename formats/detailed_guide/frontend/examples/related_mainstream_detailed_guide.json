@@ -23,19 +23,28 @@
       }
     ],
     "tags": {
-      "browse_pages": [],
-      "topics": [],
-      "policies": []
+      "browse_pages": [
+
+      ],
+      "topics": [
+
+      ],
+      "policies": [
+
+      ]
     },
     "related_mainstream_content": [
-      "dd113259-fcaf-4e9b-83d5-d1148f33cf34", "f02fc2c9-f5ff-4ea2-acc4-730bbda957bb"
+      "dd113259-fcaf-4e9b-83d5-d1148f33cf34",
+      "f02fc2c9-f5ff-4ea2-acc4-730bbda957bb"
     ],
     "government": {
       "title": "2010 to 2015 Conservative and Liberal Democrat coalition government",
       "slug": "2010-to-2015-conservative-and-liberal-democrat-coalition-government",
       "current": false
     },
-    "emphasised_organisations": ["9adfc4ed-9f6c-4976-a6d8-18d34356367c"],
+    "emphasised_organisations": [
+      "9adfc4ed-9f6c-4976-a6d8-18d34356367c"
+    ],
     "political": false
   },
   "links": {
@@ -71,17 +80,6 @@
         "web_url": "https://www.gov.uk/government/organisations/foreign-commonwealth-office",
         "locale": "en",
         "analytics_identifier": "D13"
-      }
-    ],
-    "related_guides": [
-      {
-        "content_id": "0d59f5e7-a230-4bac-b02c-624a59a34dab",
-        "title": "Living in Fiji",
-        "api_path": "/api/content/guidance/living-in-fiji",
-        "base_path": "/guidance/living-in-fiji",
-        "api_url": "https://www.gov.uk/api/content/guidance/living-in-fiji",
-        "web_url": "https://www.gov.uk/guidance/living-in-fiji",
-        "locale": "en"
       }
     ],
     "related_mainstream_content": [

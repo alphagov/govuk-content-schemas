@@ -6,7 +6,9 @@
   "first_published_at": "2016-06-29T14:56:50.000+00:00",
   "format": "service_manual_service_standard",
   "locale": "en",
-  "need_ids": [],
+  "need_ids": [
+
+  ],
   "phase": "beta",
   "public_updated_at": "2016-06-30T13:28:52.000+00:00",
   "publishing_app": "service-manual-publisher",
@@ -14,7 +16,8 @@
   "schema_name": "service_manual_service_standard",
   "title": "Digital Service Standard",
   "updated_at": "2016-06-30T13:28:53.128Z",
-  "withdrawn_notice": {},
+  "withdrawn_notice": {
+  },
   "links": {
     "children": [
       {
@@ -67,7 +70,8 @@
         "schema_name": "email_alert_signup",
         "title": "Service Manual – Service Standard",
         "web_url": "http://www.gov.uk/service-manual/service-standard/email-signup",
-        "links": {}
+        "links": {
+        }
       }
     ],
     "available_translations": [
@@ -84,7 +88,8 @@
         "schema_name": "service_manual_service_standard",
         "document_type": "service_manual_service_standard",
         "analytics_identifier": null,
-        "links": {}
+        "links": {
+        }
       }
     ]
   },

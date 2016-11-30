@@ -4,7 +4,9 @@
   "title": "Content design: planning, writing and managing content",
   "description": "Planning and managing digital content to meet the needs the public has of government.",
   "format": "manual",
-  "need_ids": [],
+  "need_ids": [
+
+  ],
   "locale": "en",
   "updated_at": "2015-04-27T12:54:38.685Z",
   "public_updated_at": "2015-04-27T12:54:27.000+00:00",

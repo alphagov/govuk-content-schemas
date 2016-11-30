@@ -9,7 +9,8 @@
   "document_type": "document_collection",
   "format": "document_collection",
   "locale": "en",
-  "withdrawn_notice": {},
+  "withdrawn_notice": {
+  },
   "details": {
     "collection_groups": [
       {
@@ -28,7 +29,9 @@
       "current": false
     },
     "political": false,
-    "emphasised_organisations": ["d39237a5-678b-4bb5-a372-eb2cb036933d"]
+    "emphasised_organisations": [
+      "d39237a5-678b-4bb5-a372-eb2cb036933d"
+    ]
   },
   "links": {
     "organisations": [

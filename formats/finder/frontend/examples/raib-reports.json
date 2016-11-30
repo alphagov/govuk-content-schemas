@@ -4,7 +4,9 @@
   "title": "Rail Accident Investigation Branch reports",
   "description": "",
   "format": "finder",
-  "need_ids": [],
+  "need_ids": [
+
+  ],
   "locale": "en",
   "updated_at": "2015-07-21T12:45:27.470Z",
   "public_updated_at": "2015-04-30T10:41:26.000+00:00",
@@ -108,7 +110,9 @@
         "locale": "en"
       }
     ],
-    "related": [],
+    "related": [
+
+    ],
     "available_translations": [
       {
         "content_id": "bec582be-a95c-41f2-8a56-53dc19f45b76",

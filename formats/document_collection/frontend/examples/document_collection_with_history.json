@@ -56,9 +56,15 @@
       }
     ],
     "tags": {
-      "browse_pages": [],
-      "topics": [],
-      "policies": []
+      "browse_pages": [
+
+      ],
+      "topics": [
+
+      ],
+      "policies": [
+
+      ]
     },
     "government": {
       "title": "2010 to 2015 Conservative and Liberal Democrat coalition government",
@@ -66,7 +72,9 @@
       "current": false
     },
     "political": false,
-    "emphasised_organisations": ["1994e0e4-bd19-4966-bbd7-f293d6e90a6b"]
+    "emphasised_organisations": [
+      "1994e0e4-bd19-4966-bbd7-f293d6e90a6b"
+    ]
   },
   "links": {
     "documents": [

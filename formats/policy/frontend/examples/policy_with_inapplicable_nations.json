@@ -4,7 +4,9 @@
   "title": "Keeping Northern Ireland safe",
   "description": "",
   "format": "policy",
-  "need_ids": [],
+  "need_ids": [
+
+  ],
   "locale": "en",
   "updated_at": "2015-03-10T11:55:11.570Z",
   "public_updated_at": "2015-03-10T11:55:11.066+00:00",
@@ -19,7 +21,9 @@
     "human_readable_finder_format": "Policy",
     "summary": "While day-to-day policing and justice functions are devolved to the Northern Ireland Executive, the UK government retains responsibility for national security issues in Northern Ireland.",
     "show_summaries": false,
-    "emphasised_organisations": ["8927158f-e4b2-4361-b55d-02de7599b220"],
+    "emphasised_organisations": [
+      "8927158f-e4b2-4361-b55d-02de7599b220"
+    ],
     "facets": [
       {
         "key": "is_historic",
@@ -72,7 +76,9 @@
         "locale": "en"
       }
     ],
-    "related": [],
+    "related": [
+
+    ],
     "available_translations": [
       {
         "content_id": "c3fee553-1891-411b-8d00-4aefbe86e40a",

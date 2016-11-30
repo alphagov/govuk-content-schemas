@@ -4,7 +4,9 @@
   "title": "Air Accidents Investigation Branch reports",
   "description": "",
   "format": "finder",
-  "need_ids": [],
+  "need_ids": [
+
+  ],
   "locale": "en",
   "updated_at": "2015-07-21T12:45:18.202Z",
   "public_updated_at": "2015-04-29T09:22:41.000+00:00",
@@ -118,7 +120,9 @@
     "show_summaries": true
   },
   "links": {
-    "email_alert_signup": [],
+    "email_alert_signup": [
+
+    ],
     "organisations": [
       {
         "content_id": "28b9541f-0414-405c-8eb0-16a6fbaa800f",
@@ -130,7 +134,9 @@
         "locale": "en"
       }
     ],
-    "related": [],
+    "related": [
+
+    ],
     "available_translations": [
       {
         "content_id": "68518b2a-bb48-4807-99d6-de31d39b3810",

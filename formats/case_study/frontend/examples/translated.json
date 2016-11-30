@@ -18,11 +18,19 @@
       "caption": "UKTI Spain",
       "url": "https://assets.digital.cabinet-office.gov.uk/government/uploads/system/uploads/image_data/file/7633/s300_foto_UKTI-1.jpg"
     },
-    "emphasised_organisations": ["8449fbe1-bffe-46cf-a141-07df52c530b7"],
+    "emphasised_organisations": [
+      "8449fbe1-bffe-46cf-a141-07df52c530b7"
+    ],
     "tags": {
-      "browse_pages": [],
-      "topics": [],
-      "policies": []
+      "browse_pages": [
+
+      ],
+      "topics": [
+
+      ],
+      "policies": [
+
+      ]
     }
   },
   "format": "case_study",
@@ -78,10 +86,14 @@
         "web_url": "https://www.gov.uk/government/world/spain.es"
       }
     ],
-    "worldwide_organisations": []
+    "worldwide_organisations": [
+
+    ]
   },
   "locale": "es",
-  "need_ids": [],
+  "need_ids": [
+
+  ],
   "public_updated_at": "2013-03-21T13:21:50.000+00:00",
   "title": "¿Qué puede hacer UKTI por tí?",
   "updated_at": "2014-12-02T14:59:55.613Z",

@@ -6,7 +6,9 @@
   "first_published_at": "2016-02-29T09:24:10.000+00:00",
   "format": "finder_email_signup",
   "locale": "en",
-  "need_ids": [ ],
+  "need_ids": [
+
+  ],
   "phase": "live",
   "public_updated_at": "2016-06-13T14:30:40.000+00:00",
   "publishing_app": "specialist-publisher",
@@ -14,7 +16,8 @@
   "schema_name": "finder_email_signup",
   "title": "Competition and Markets Authority cases",
   "updated_at": "2016-06-13T14:31:32.260Z",
-  "withdrawn_notice": { },
+  "withdrawn_notice": {
+  },
   "links": {
     "related": [
       {
@@ -46,7 +49,8 @@
         "schema_name": "placeholder_organisation",
         "document_type": "placeholder_organisation",
         "analytics_identifier": "D550",
-        "links": { },
+        "links": {
+        },
         "details": {
           "brand": "department-for-business-innovation-skills",
           "logo": {

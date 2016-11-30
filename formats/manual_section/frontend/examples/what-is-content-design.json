@@ -4,7 +4,9 @@
   "title": "What is content design?",
   "description": "Introduction to content design.",
   "format": "manual_section",
-  "need_ids": [],
+  "need_ids": [
+
+  ],
   "locale": "en",
   "updated_at": "2015-04-27T12:54:39.815Z",
   "public_updated_at": "2015-04-24T10:26:26.000+00:00",

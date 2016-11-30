@@ -3,14 +3,18 @@
   "content_id": "5c806926-7631-11e4-a3cb-005056011aea",
   "title": "Some placeholder",
   "format": "placeholder",
-  "need_ids": [],
+  "need_ids": [
+
+  ],
   "locale": "en",
   "updated_at": "2015-12-02T10:51:26.334Z",
   "public_updated_at": "2011-11-17T00:00:00.000+00:00",
   "phase": "live",
-  "links": {},
+  "links": {
+  },
   "description": "A placeholder",
-  "details": {},
+  "details": {
+  },
   "schema_name": "placeholder",
   "document_type": "placeholder"
 }
