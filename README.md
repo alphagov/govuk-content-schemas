@@ -1,14 +1,14 @@
 # GOV.UK content schemas
 
-This repo contains schemas and examples of the content formats used on GOV.UK.
+This repo contains schemas and examples of the content that uses them on GOV.UK.
 
 The aim of it is to support 'contract testing' between the frontend and
 publisher apps by expressing the schema and examples in strict, machine
-processable formats.
+processable form.
 
-We use [JSON Schema](http://json-schema.org/) to define the formats.
+We use [JSON Schema](http://json-schema.org/) to define the schemas.
 
-For each format there are three possible representations:
+For each schema, there are three possible representations:
 
 * the 'publisher' representation, which is used when a publishing application
   transmits data to the content store.
@@ -19,9 +19,9 @@ For each format there are three possible representations:
 
 ## Howtos
 
-* [How to change a format](docs/changing-a-format.md)
-* [How to add a new content format](docs/adding-a-new-format.md)
-* [How to convert finder schemas](docs/converting-finder-schemas.md) (needed when adding/changing specialist document formats)
+* [How to change a schema](docs/changing-a-schema.md)
+* [How to add a new content schema](docs/adding-a-new-schema.md)
+* [How to convert finder schemas](docs/converting-finder-schemas.md) (needed when adding/changing specialist document schema)
 * [Adding contract tests to your app](docs/contract-testing-howto.md)
 * [Suggested workflows](docs/suggested-workflows.md)
 * [Why do contract testing?](docs/why-contract-testing.md)
@@ -35,20 +35,20 @@ For each format there are three possible representations:
 The 'publisher' [`schema.json`](dist/formats/case_study/publisher/schema.json) is built from several parts:
 
   - [`metadata.json`](formats/metadata.json): the top level set of fields. These are **common to most content
-    formats**.
+    schemas**.
 
   - [version metadata eg. `v2_metadata.json`](formats/v2_metadata.json): Fields specific to the publisher version.
     Either [`v1_metadata.json`](formats/v1_metadata.json) or [`v2_metadata.json`](formats/v2_metadata.json)
 
-  - Alternatively, [format specific metadata](formats/contact/publisher_v2/metadata.json) can be defined for
-    exceptional formats which do not conform to common, v1 or v2 metadata definitions.
+  - Alternatively, [schema specific metadata](formats/contact/publisher_v2/metadata.json) can be defined for
+    exceptional schemas which do not conform to common, v1 or v2 metadata definitions.
     An example of this is pathless content such as [Whitehall contacts](dist/formats/contact/publisher_v2/schema.json)
     which do not contain the normally required `base_path` and `routes` properties.
 
   - [`definitions.json`](formats/definitions.json) Common definitions used across schemas.
 
   - [`details.json`](formats/case_study/publisher/details.json): the content of the details hash
-    which is **different for each content format**. It is under the control of the
+    which is **different for each content schema**. It is under the control of the
     publishing application.
 
   - [`links_metadata.json`](formats/links_metadata.json) The top level fields for v2 publisher links.
@@ -56,7 +56,7 @@ The 'publisher' [`schema.json`](dist/formats/case_study/publisher/schema.json) i
   - [`base_links.json`](formats/base_links.json) Common link properties definitions for v1 and v2 publisher schemas.
 
   - [`links.json`](formats/case_study/publisher/links.json): the list of 'related links'. This is also **different
-    for each content format**.
+    for each content schema**.
 
 These files are stored in the `govuk-content-schemas` repository in the
 [`formats`](/formats) subdirectory. A build process (implemented using a
