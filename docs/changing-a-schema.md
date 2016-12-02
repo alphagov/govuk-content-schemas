@@ -1,7 +1,7 @@
-## How to change a content format
+## How to change a content schema
 
 Imagine that you need to add a new optional field to the details hash of the
-`case_study` format.
+`case_study` schema.
 
 The steps would be:
 
