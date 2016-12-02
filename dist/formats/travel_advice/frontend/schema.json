@@ -230,7 +230,7 @@
       ],
       "properties": {
         "summary": {
-          "type": "string"
+          "$ref": "#/definitions/multiple_content_types"
         },
         "country": {
           "type": "object",
@@ -293,7 +293,7 @@
                 "type": "string"
               },
               "body": {
-                "type": "string"
+                "$ref": "#/definitions/multiple_content_types"
               }
             }
           }

@@ -223,7 +223,7 @@
       ],
       "properties": {
         "body": {
-          "type": "string"
+          "$ref": "#/definitions/multiple_content_types"
         },
         "child_section_groups": {
           "type": "array",
