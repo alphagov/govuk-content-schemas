@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties": false,
+    "required": [
+      "role",
+      "goal",
+      "benefit"
+    ],
+  "properties": {
+    "role": {
+      "type": "string",
+      "description": "The type of user, such as a small business, a tax agent, a healthcare practitioner."
+    },
+    "goal": {
+      "type": "string",
+      "description": "What the user wants to do"
+    },
+    "benefit": {
+      "type": "string",
+      "description": "Why the user wants to do it"
+    }
+  }
+}
