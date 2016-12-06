@@ -129,9 +129,6 @@
         "topical_event_about_page"
       ]
     },
-    "format": {
-      "type": "string"
-    },
     "updated_at": {
       "type": "string",
       "format": "date-time"
