@@ -21,7 +21,6 @@ For each schema, there are three possible representations:
 
 * [How to change a schema](docs/changing-a-schema.md)
 * [How to add a new content schema](docs/adding-a-new-schema.md)
-* [How to convert finder schemas](docs/converting-finder-schemas.md) (needed when adding/changing specialist document schema)
 * [Adding contract tests to your app](docs/contract-testing-howto.md)
 * [Suggested workflows](docs/suggested-workflows.md)
 * [Why do contract testing?](docs/why-contract-testing.md)
