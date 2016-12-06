@@ -10,9 +10,6 @@
         "content_id": {
           "$ref": "#/definitions/guid"
         },
-        "format": {
-          "enum": [ "redirect" ]
-        },
         "publishing_app": {
           "type": "string"
         },
@@ -32,7 +29,6 @@
       },
       "additionalProperties": false,
       "required": [
-        "format",
         "publishing_app",
         "redirects",
         "base_path"

@@ -13,10 +13,6 @@
     "content_id": {
       "$ref": "#/definitions/guid"
     },
-    "format": {
-      "description": "DEPRECATED. This field will be removed by Tijmen.",
-      "enum": [ "gone" ]
-    },
     "document_type": {
       "enum": [ "gone" ]
     },
