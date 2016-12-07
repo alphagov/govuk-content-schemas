@@ -200,6 +200,9 @@
           "analytics_identifier": {
             "$ref": "#/definitions/analytics_identifier"
           },
+          "withdrawn": {
+            "type": "boolean"
+          },
           "links": {
             "type": "object",
             "patternProperties": {
