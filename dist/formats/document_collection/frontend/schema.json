@@ -97,6 +97,9 @@
         "mainstream_browse_pages": {
           "$ref": "#/definitions/frontend_links"
         },
+        "meets_user_needs": {
+          "$ref": "#/definitions/frontend_links"
+        },
         "topics": {
           "$ref": "#/definitions/frontend_links"
         },

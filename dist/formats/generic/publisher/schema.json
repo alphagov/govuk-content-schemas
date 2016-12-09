@@ -157,6 +157,10 @@
           "description": "Powers the /browse section of the site. These are known as sections in some legacy apps.",
           "$ref": "#/definitions/guid_list"
         },
+        "meets_user_needs": {
+          "description": "The user needs this piece of content meets.",
+          "$ref": "#/definitions/guid_list"
+        },
         "topics": {
           "description": "Powers the /topic section of the site. These are known as specialist sectors in some legacy apps.",
           "$ref": "#/definitions/guid_list"
