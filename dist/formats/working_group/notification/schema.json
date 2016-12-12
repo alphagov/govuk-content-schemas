@@ -206,6 +206,10 @@
           "analytics_identifier": {
             "$ref": "#/definitions/analytics_identifier"
           },
+          "withdrawn": {
+            "description": "Indicates whether the item has been unpublished as withdrawn, https://github.com/alphagov/publishing-api/blob/master/doc/model.md#workflow",
+            "type": "boolean"
+          },
           "links": {
             "type": "object",
             "patternProperties": {
