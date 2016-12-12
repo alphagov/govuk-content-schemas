@@ -139,6 +139,7 @@
         "maib_report",
         "medical_safety_alert",
         "raib_report",
+        "service_standard_report",
         "tax_tribunal_decision",
         "utaac_decision",
         "vehicle_recalls_and_faults_alert"
@@ -658,6 +659,9 @@
         },
         {
           "$ref": "#/definitions/raib_report_metadata"
+        },
+        {
+          "$ref": "#/definitions/service_standard_report_metadata"
         },
         {
           "$ref": "#/definitions/tax_tribunal_decision_metadata"
@@ -1657,6 +1661,15 @@
         "date_of_occurrence": {
           "type": "string",
           "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+        }
+      }
+    },
+    "service_standard_report_metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "bulk_published": {
+          "type": "boolean"
         }
       }
     },
