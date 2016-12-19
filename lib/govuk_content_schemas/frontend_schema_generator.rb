@@ -124,7 +124,7 @@ private
   def converted_definitions
     resolve_multiple_content_types(publisher_definitions.reject { |k| k == "links" }).tap do |converted|
       if change_history_required?
-        converted['details']['required'] << 'change_history'
+        converted["details"]["required"] << "change_history"
       end
     end
   end
