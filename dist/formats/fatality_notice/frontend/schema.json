@@ -138,9 +138,6 @@
         "fatality_notice"
       ]
     },
-    "format": {
-      "type": "string"
-    },
     "updated_at": {
       "type": "string",
       "format": "date-time"

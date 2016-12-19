@@ -132,9 +132,6 @@
         "service_manual_homepage"
       ]
     },
-    "format": {
-      "type": "string"
-    },
     "updated_at": {
       "type": "string",
       "format": "date-time"

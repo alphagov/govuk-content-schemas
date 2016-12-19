@@ -135,9 +135,6 @@
         "service_manual_service_standard"
       ]
     },
-    "format": {
-      "type": "string"
-    },
     "updated_at": {
       "type": "string",
       "format": "date-time"

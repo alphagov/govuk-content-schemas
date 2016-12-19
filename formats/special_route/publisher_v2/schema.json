@@ -13,9 +13,6 @@
     "content_id": {
       "$ref": "#/definitions/guid"
     },
-    "format": {
-      "enum": [ "special_route" ]
-    },
     "schema_name": {
       "enum": [ "special_route" ]
     },

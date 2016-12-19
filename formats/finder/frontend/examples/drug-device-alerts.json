@@ -3,7 +3,6 @@
   "base_path": "/drug-device-alerts",
   "title": "Alerts and recalls for drugs and medical devices",
   "description": "",
-  "format": "finder",
   "need_ids": [
 
   ],

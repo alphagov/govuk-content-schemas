@@ -100,9 +100,6 @@
         "email_alert_signup"
       ]
     },
-    "format": {
-      "type": "string"
-    },
     "updated_at": {
       "type": "string",
       "format": "date-time"

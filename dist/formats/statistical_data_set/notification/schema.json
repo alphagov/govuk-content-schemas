@@ -100,9 +100,6 @@
         "statistical_data_set"
       ]
     },
-    "format": {
-      "type": "string"
-    },
     "updated_at": {
       "type": "string",
       "format": "date-time"

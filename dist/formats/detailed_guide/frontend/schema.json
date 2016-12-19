@@ -141,9 +141,6 @@
         "detailed_guide"
       ]
     },
-    "format": {
-      "type": "string"
-    },
     "updated_at": {
       "type": "string",
       "format": "date-time"
