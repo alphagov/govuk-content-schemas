@@ -135,6 +135,24 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "external_related_links": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "title",
+              "url"
+            ],
+            "properties": {
+              "title": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              }
+            }
+          }
+        }
       }
     },
     "absolute_path": {
