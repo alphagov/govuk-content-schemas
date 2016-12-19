@@ -223,6 +223,9 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "change_history": {
+          "$ref": "#/definitions/change_history"
+        }
       }
     },
     "absolute_path": {

@@ -425,6 +425,9 @@
         },
         "language": {
           "type": "string"
+        },
+        "change_history": {
+          "$ref": "#/definitions/change_history"
         }
       }
     },

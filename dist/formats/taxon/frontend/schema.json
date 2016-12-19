@@ -233,6 +233,9 @@
         "notes_for_editors": {
           "type": "string",
           "description": "Usage notes for editors when tagging content to a taxon."
+        },
+        "change_history": {
+          "$ref": "#/definitions/change_history"
         }
       }
     },
