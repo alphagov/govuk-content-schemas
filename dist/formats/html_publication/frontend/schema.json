@@ -241,6 +241,9 @@
         },
         "first_published_version": {
           "type": "boolean"
+        },
+        "change_history": {
+          "$ref": "#/definitions/change_history"
         }
       }
     },

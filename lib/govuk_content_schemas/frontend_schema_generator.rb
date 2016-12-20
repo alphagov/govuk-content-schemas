@@ -124,13 +124,22 @@ private
   def converted_definitions
     resolve_multiple_content_types(publisher_definitions.reject { |k| k == "links" }).tap do |converted|
       if change_history_required?
-        converted['details']['required'] << 'change_history'
+        converted["details"]["required"] << "change_history"
       end
-    end
+
+      if details_should_contain_change_history?(converted)
+        converted["details"]["properties"]["change_history"] = { "$ref"=>"#/definitions/change_history" }
+      end
+   end
   end
 
   def change_history_required?
     CHANGE_HISTORY_REQUIRED.include?(format_name)
+  end
+
+  def details_should_contain_change_history?(definition)
+    return if !definition.dig("details", "properties") || definition["details"]["properties"]["change_history"]
+    publisher_properties.has_key?("change_note")
   end
 
   def frontend_definitions

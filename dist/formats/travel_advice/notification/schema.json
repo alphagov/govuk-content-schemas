@@ -311,6 +311,9 @@
         "publishing_request_id": {
           "description": "A unique identifier used to track publishing requests to rendered content",
           "type": "string"
+        },
+        "change_history": {
+          "$ref": "#/definitions/change_history"
         }
       }
     },

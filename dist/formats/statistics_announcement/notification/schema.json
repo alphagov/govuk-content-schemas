@@ -260,6 +260,9 @@
             "national",
             "official"
           ]
+        },
+        "change_history": {
+          "$ref": "#/definitions/change_history"
         }
       }
     },

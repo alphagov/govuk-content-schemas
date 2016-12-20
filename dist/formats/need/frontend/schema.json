@@ -289,6 +289,9 @@
         "yearly_user_contacts": {
           "type": "string",
           "description": "Number of user contacts received about this need each year. Includes calls to contact centres, emails, customer service tickets"
+        },
+        "change_history": {
+          "$ref": "#/definitions/change_history"
         }
       }
     },

@@ -228,6 +228,9 @@
         "body": {
           "type": "string",
           "description": "A single line of text that serves as a second, less prominent introduction."
+        },
+        "change_history": {
+          "$ref": "#/definitions/change_history"
         }
       }
     },

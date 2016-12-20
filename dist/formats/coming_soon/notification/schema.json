@@ -235,6 +235,9 @@
         "public_updated_at": {
           "type": "string",
           "format": "date-time"
+        },
+        "change_history": {
+          "$ref": "#/definitions/change_history"
         }
       }
     },
