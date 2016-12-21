@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "speaker": {
+      "description": "A speaker that has a GOV.UK profile",
+      "$ref": "#/definitions/guid_list",
+      "maxItems": 1
+    },
+    "policies": {
+      "$ref": "#/definitions/guid_list"
+    },
+    "ministers": {
+      "$ref": "#/definitions/guid_list"
+    },
+    "topical_events": {
+      "$ref": "#/definitions/guid_list"
+    },
+    "world_locations": {
+      "$ref": "#/definitions/guid_list"
+    }
+  }
+}

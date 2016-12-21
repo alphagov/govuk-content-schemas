@@ -1,0 +1,77 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties": false,
+    "required": [
+      "body",
+      "government",
+      "political",
+      "delivered_on"
+    ],
+  "properties": {
+    "body": {
+      "type": "string"
+    },
+    "first_public_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "speech_type_explanation": {
+      "description": "Details about the type of speech",
+      "type": "string"
+    },
+    "speaker_without_profile": {
+      "description": "A speaker that does not have a GOV.UK profile (eg the Queen)",
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "delivered_on": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "government": {
+      "$ref": "#/definitions/government"
+    },
+    "political": {
+      "$ref": "#/definitions/political"
+    },
+    "image": {
+      "$ref": "#/definitions/image"
+    },
+    "change_history": {
+      "$ref": "#/definitions/change_history"
+    },
+    "emphasised_organisations": {
+      "$ref": "#/definitions/emphasised_organisations"
+    },
+    "tags": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "browse_pages": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "topics": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "policies": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "withdrawn_notice": {
+      "$ref": "#/definitions/withdrawn_notice"
+    }
+  }
+}
