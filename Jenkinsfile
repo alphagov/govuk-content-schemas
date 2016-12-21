@@ -30,12 +30,13 @@ node {
       sh('./jenkins.sh')
     }
 
-    stage("Push release tag") {
-      govuk.pushTag(REPOSITORY, env.BRANCH_NAME, 'release_' + env.BUILD_NUMBER)
+    if (env.BRANCH_NAME == 'master') {
+      stage("Push release tag") {
+        govuk.pushTag(REPOSITORY, env.BRANCH_NAME, 'release_' + env.BUILD_NUMBER)
+      }
+
+      govuk.deployIntegration(REPOSITORY, env.BRANCH_NAME, 'release', 'deploy')
     }
-
-    govuk.deployIntegration(REPOSITORY, env.BRANCH_NAME, 'release', 'deploy')
-
   } catch (e) {
     currentBuild.result = "FAILED"
     step([$class: 'Mailer',
@@ -44,4 +45,17 @@ node {
           sendToIndividuals: true])
     throw e
   }
+}
+
+// Run schema tests outside of 'node' definition, so that they do not block the
+// original executor while the downstream tests are being run
+stage("Check dependent projects against updated schema") {
+  build job: 'collections-publisher/deployed-to-production',
+    parameters: [
+      [$class: 'BooleanParameterValue',
+        name: 'IS_SCHEMA_TEST',
+        value: true],
+      [$class: 'StringParameterValue',
+        name: 'SCHEMA_BRANCH',
+        value: env.BRANCH_NAME]]
 }
