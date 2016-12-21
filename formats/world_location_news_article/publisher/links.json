@@ -5,6 +5,12 @@
   "properties": {
     "topical_events": {
       "$ref": "#/definitions/guid_list"
+    },
+    "worldwide_organisations": {
+      "$ref": "#/definitions/guid_list"
+    },
+    "world_locations": {
+      "$ref": "#/definitions/guid_list"
     }
   }
 }

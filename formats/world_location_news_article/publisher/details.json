@@ -12,6 +12,9 @@
     "body": {
       "type": "string"
     },
+    "image": {
+      "$ref": "#/definitions/image"
+    },
     "first_public_at": {
       "type": "string",
       "format": "date-time"
