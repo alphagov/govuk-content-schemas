@@ -6,7 +6,21 @@ begin
 rescue LoadError
 end
 
-task build: [:reformat_examples, :validate_source_schemas, :clean, :combine_schemas, :validate_dist_schemas, :validate_uniqueness_of_frontend_example_base_paths, :validate_links, :validate_examples]
+task build: [
+  :reformat_examples,
+  :validate_source_schemas,
+  :clean,
+  :combine_schemas,
+  :validate_dist_schemas,
+  :validate_uniqueness_of_frontend_example_base_paths,
+  :validate_links,
+  :validate_examples,
+  :remove_v1_schemas_again,
+]
+
+task :remove_v1_schemas_again do
+  sh "rm -rf dist/formats/*/publisher"
+end
 
 desc "creates the folders and files for adding a new format"
 task :new_format, [:format_name] do |_task, args|
