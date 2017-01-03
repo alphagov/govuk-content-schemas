@@ -820,6 +820,7 @@
           "type": "string",
           "enum": [
             "ca98-and-civil-cartels",
+            "competition-disqualification",
             "criminal-cartels",
             "markets",
             "mergers",
@@ -880,6 +881,9 @@
             "ca98-infringement-chapter-ii",
             "ca98-administrative-priorities",
             "ca98-commitment",
+            "competition-disqualification-order-granted",
+            "competition-disqualification-undertaking-given",
+            "competition-disqualification-no-order-granted-or-undertaking-given",
             "criminal-cartels-verdict",
             "markets-phase-1-no-enforcement-action",
             "markets-phase-1-undertakings-in-lieu-of-reference",
