@@ -1,0 +1,17 @@
+{
+  "publishing_app": "service-manual-publisher",
+  "rendering_app": "service-manual-frontend",
+  "locale": "en",
+  "details": {},
+  "base_path": "/service-toolkit",
+  "description": "All you need to design, build and run services that meet government standards.",
+  "title": "Service Toolkit",
+  "routes": [
+    {
+      "path": "/service-toolkit",
+      "type": "exact"
+    }
+  ],
+  "document_type": "service_manual_service_toolkit",
+  "schema_name": "service_manual_service_toolkit"
+}
