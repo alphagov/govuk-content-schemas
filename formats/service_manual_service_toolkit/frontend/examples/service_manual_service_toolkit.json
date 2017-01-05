@@ -6,27 +6,27 @@
   "details": {
     "collections": [
       {
-        "name": "Standards",
+        "title": "Standards",
         "description": "Meet the standards for government services",
         "links": [
           {
-            "name": "The Digital Service Standard",
+            "title": "The Digital Service Standard",
             "url": "https://www.gov.uk/service-manual/service-standard",
             "description": "Learn about the 18 point standard that government services must meet"
           },
           {
-            "name": "Service Manual",
+            "title": "Service Manual",
             "url": "https://www.gov.uk/service-manual",
             "description": "How to build a service that meets the standard: agile delivery, technology, user research, accessibility, training options and more"
           }
         ]
       },
       {
-        "name": "Buying",
+        "title": "Buying",
         "description": "Extra skills, people and technology to help build your service",
         "links": [
           {
-            "name": "Digital Marketplace",
+            "title": "Digital Marketplace",
             "url": "https://www.gov.uk/digital-marketplace",
             "description": "Buy cloud technology and specialist services for digital projects"
           }
