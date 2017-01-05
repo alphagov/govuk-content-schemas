@@ -117,4 +117,18 @@ task combine_publisher_schemas: %i{
   combine_publisher_v2_links
 }
 
-task combine_schemas: %i{combine_publisher_schemas combine_frontend_schemas}
+task :announce_combining_schemas do 
+  print "Combining (generating) schemas... "
+end
+
+task :announce_combining_schemas_done do
+  puts "✔︎"
+end
+
+desc 'Combine (generate) schemas'
+task combine_schemas: %i{
+  announce_combining_schemas
+  combine_publisher_schemas
+  combine_frontend_schemas
+  announce_combining_schemas_done
+}
