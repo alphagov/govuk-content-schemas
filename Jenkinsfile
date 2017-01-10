@@ -2,6 +2,16 @@
 
 REPOSITORY = 'govuk-content-schemas'
 
+def dependentApplications = [
+  'businesssupportfinder',
+  'collections',
+  'collections-publisher',
+  'finder-frontend',
+  'policy-publisher',
+  'rummager',
+  'specialist-publisher',
+]
+
 node {
   def govuk = load '/var/lib/jenkins/groovy_scripts/govuk_jenkinslib.groovy'
 
@@ -50,12 +60,26 @@ node {
 // Run schema tests outside of 'node' definition, so that they do not block the
 // original executor while the downstream tests are being run
 stage("Check dependent projects against updated schema") {
-  build job: 'collections-publisher/deployed-to-production',
-    parameters: [
-      [$class: 'BooleanParameterValue',
-        name: 'IS_SCHEMA_TEST',
-        value: true],
-      [$class: 'StringParameterValue',
-        name: 'SCHEMA_BRANCH',
-        value: env.BRANCH_NAME]]
+  def dependentBuilds = [:]
+
+  for (dependentApp in dependentApplications) {
+    // Dummy parameter to prevent mutation of the parameter used inside the
+    // closure below. If this is not defined, all of the builds will be for the
+    // last application in the array.
+    def app = dependentApp
+
+    dependentBuilds[app] = {
+      build job: "${app}/deployed-to-production",
+        parameters: [
+          [$class: 'BooleanParameterValue',
+            name: 'IS_SCHEMA_TEST',
+            value: true],
+          [$class: 'StringParameterValue',
+            name: 'SCHEMA_BRANCH',
+            value: env.BRANCH_NAME],
+        ]
+    }
+  }
+
+  parallel dependentBuilds
 }
