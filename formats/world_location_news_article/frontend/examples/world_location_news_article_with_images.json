@@ -1,0 +1,77 @@
+{
+  "base_path": "/government/world-location-news/hong-kong-consular-team-provides-support-to-british-national-overseas-detained-overseas",
+  "content_id": "02827d12-be2b-4d49-9887-0c441057618b",
+  "document_type": "news_article",
+  "first_published_at": "2016-11-28T10:08:18.000+00:00",
+  "format": "world_location_news_article",
+  "locale": "en",
+  "public_updated_at": "2016-11-28T10:08:18.000+00:00",
+  "schema_name": "world_location_news_article",
+  "title": "Hong Kong Consular team provides support to British National Overseas detained overseas",
+  "updated_at": "2016-11-28T10:08:18.000+00:00",
+  "links": {
+    "worldwide_organisations": [
+      {
+        "content_id": "f4c9814f-7a30-11e4-a3cb-005056011aef",
+        "title": "British Consulate General Hong Kong",
+        "base_path": "/government/world/organisations/british-consulate-general-hong-kong",
+        "api_path": "/api/content/government/world/organisations/british-consulate-general-hong-kong",
+        "api_url": "https://www.gov.uk/api/content/government/world/organisations/british-consulate-general-hong-kong",
+        "web_url": "https://www.gov.uk/government/world/organisations/british-consulate-general-hong-kong",
+        "locale": "en",
+        "analytics_identifier": "WO191"
+      }
+    ],
+    "world_locations": [
+      {
+        "content_id": "5e9f0369-7706-11e4-a3cb-005056011aef",
+        "title": "Hong Kong",
+        "base_path": "/government/world/hong-kong",
+        "api_path": "/api/content/government/world/hong-kong",
+        "api_url": "https://www.gov.uk/api/content/government/world/hong-kong",
+        "web_url": "https://www.gov.uk/government/world/hong-kong",
+        "locale": "en",
+        "analytics_identifier": "WL58"
+      }
+    ],
+    "available_translations": [
+      {
+        "base_path": "/government/world-location-news/hong-kong-consular-team-provides-support-to-british-national-overseas-detained-overseas",
+        "content_id": "02827d12-be2b-4d49-9887-0c441057618b",
+        "description": "The Consular team at the British Consulate General has recently completed its annual visits to around 40 British National (Overseas) prisoners in Thailand, the Philippines, Taiwan and Japan.",
+        "document_type": "news_article",
+        "locale": "en",
+        "public_updated_at": "2016-11-28T10:08:18.000+00:00",
+        "title": "Hong Kong Consular team provides support to British National Overseas detained overseas",
+        "web_url": "https://www.gov.uk/government/world-location-news/hong-kong-consular-team-provides-support-to-british-national-overseas-detained-overseas",
+        "api_path": "/api/content/government/world-location-news/hong-kong-consular-team-provides-support-to-british-national-overseas-detained-overseas"
+      }
+    ]
+  },
+  "description": "British High Commission is looking for women with leadership potential to apply for the scholarship to pursue a master's degree in Cameroon.",
+  "details": {
+    "image": {
+      "alt_text": "Philippenes prison",
+      "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/image_data/file/58732/s300_Philippines_prison_161128.jpg"
+    },
+    "body": "<div class=\"govspeak\">\n<p>British National (Overseas) passport holders are entitled to consular support from UK missions when they live or travel outside of Hong Kong and Greater China. If they have lost their passport, or been a victim of crime, involved in an accident or arrested and detained, the UK embassy or consulate in that country can help.</p>\n\n<figure class=\"image embedded\">\n  <div class=\"img\"><img alt=\"Klong Prem Prison in Thailand\" src=\"https://assets.publishing.service.gov.uk/government/uploads/system/uploads/image_data/file/58733/Klong_Prem_Prison_Thailand_161128.jpg\"></div>\n</figure>\n\n<p>More than 60 BN(O) passport holders who have been detained abroad have requested assistance from their nearest British mission. Given issues with language and that the detainee’s’ families live in Hong Kong rather than the UK, consular staff in the British Consulate-General Hong Kong help to offer support to these detainees. This can include sending money to the arrested person from their families, sending messages between the arrested person and their families, assisting with translation issues or helping them apply for a prisoner transfer to Hong Kong where possible.</p>\n\n<figure class=\"image embedded\">\n  <div class=\"img\"><img alt=\"Japan prison\" src=\"https://assets.publishing.service.gov.uk/government/uploads/system/uploads/image_data/file/58737/Japan_prison_161128_ed.jpg\"></div>\n</figure>\n\n<p>Continuing our commitment to providing excellence in consular assistance, the consular team in Hong Kong undertakes annual visits to those posts which have a significant number of BN(O) prisoners in the region.</p>\n\n<figure class=\"image embedded\">\n  <div class=\"img\"><img alt=\"Psychiatric clinic in Philippines\" src=\"https://assets.publishing.service.gov.uk/government/uploads/system/uploads/image_data/file/58735/Psychiatric_clinic_Philippines_161128.jpg\"></div>\n</figure>\n\n<p>This annual round of visits to Thailand, the Philippines, Taiwan and Japan has just been completed, covering around 40 prisoners. These visits give BN(O) prisoners the opportunity to speak in their native Cantonese, to receive news from their family in Hong Kong, and to hear about life in Hong Kong. The team also take the opportunity provided by these visits to help liaise with local authorities to arrange some basic medical treatment, and raise any issues of concern with the local authorities.</p>\n\n<h3 id=\"further-information\">Further information</h3>\n\n<ul>\n  <li>\n    <p>Information for <a href=\"https://www.gov.uk/government/world/organisations/british-consulate-general-hong-kong#our-services\">other services we provide in Hong Kong</a></p>\n  </li>\n  <li>\n    <p>Information for what the Foreign and Commonwealth Office <a href=\"https://www.gov.uk/help-if-you-are-arrested-abroad\">can do to help if you or someone you know is arrested abroad</a></p>\n  </li>\n  <li>\n    <p>Information for what <a href=\"https://www.gov.uk/types-of-british-nationality/british-national-overseas\">British National Overseas</a> is</p>\n  </li>\n  <li>\n    <p>Information for the <a href=\"https://www.gov.uk/foreign-travel-advice\">latest foreign travel advice</a> for the country you are travelling to</p>\n  </li>\n</ul>\n\n</div>",
+    "first_public_at": "2016-11-28T10:08:18.000+00:00",
+    "government": {
+      "current": false,
+      "slug": "hong-kong-consular-team-provides-support-to-british-national-overseas-detained-overseas",
+      "title": "hong-kong-consular-team-provides-support-to-british-national-overseas-detained-overseas"
+    },
+    "political": false,
+    "tags": {
+      "browse_pages": [
+
+      ],
+      "policies": [
+
+      ],
+      "topics": [
+
+      ]
+    }
+  }
+}
