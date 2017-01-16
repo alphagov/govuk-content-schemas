@@ -6,10 +6,12 @@ def dependentApplications = [
   'businesssupportfinder',
   'collections',
   'collections-publisher',
+  'content-tagger',
   'finder-frontend',
   'policy-publisher',
   'rummager',
   'specialist-publisher',
+  'whitehall',
 ]
 
 node {
