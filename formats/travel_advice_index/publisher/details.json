@@ -3,8 +3,7 @@
   "type": "object",
   "additionalProperties": false,
   "required": [
-    "email_signup_link",
-    "countries"
+    "email_signup_link"
   ],
   "properties": {
     "email_signup_link": {
