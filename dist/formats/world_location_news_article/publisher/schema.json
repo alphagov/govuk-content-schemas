@@ -70,15 +70,16 @@
     "access_limited": {
       "type": "object",
       "additionalProperties": false,
-      "required": [
-        "users"
-      ],
       "properties": {
         "users": {
           "type": "array",
           "items": {
             "type": "string"
           }
+        },
+        "fact_check_ids": {
+          "$ref": "#/definitions/guid_list",
+          "description": "A list of ids that will allow access to this item for fact checking."
         }
       }
     },
@@ -211,7 +212,7 @@
           "$ref": "#/definitions/guid_list"
         },
         "ordered_related_items": {
-          "description": "Related items, can be any page on GOV.UK. Mostly used for mainstream content to power the sidebar. Ordering of the links is determined by the editor in Panopticon.",
+          "description": "Related items, can be any page on GOV.UK. Mostly used for mainstream content to power the sidebar. Ordering of the links is determined by the editor in Content Tagger.",
           "$ref": "#/definitions/guid_list"
         },
         "mainstream_browse_pages": {
