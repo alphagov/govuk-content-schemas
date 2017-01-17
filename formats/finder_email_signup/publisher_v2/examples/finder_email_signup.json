@@ -18,9 +18,14 @@
   "details": {
     "beta": false,
     "email_filter_by": "case_type",
+    "email_filter_name": {
+      "singular": "case type",
+      "plural": "case types"
+    },
     "subscription_list_title_prefix": {
-      "plural": "CMA cases with the following case types: ",
-      "singular": "CMA cases with the following case type: "
+      "singular": "Competition and Markets Authority (CMA) cases with the following case type: ",
+      "plural": "Competition and Markets Authority (CMA) cases with the following case types: ",
+      "many": "Competition and Markets Authority (CMA) cases: "
     },
     "email_signup_choice": [
       {

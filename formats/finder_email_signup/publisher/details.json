@@ -47,6 +47,27 @@
         }
       ]
     },
+    "email_filter_name": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "plural": {
+              "type": "string"
+            },
+            "singular": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "subscription_list_title_prefix": {
       "oneOf": [
         {
@@ -56,6 +77,9 @@
               "type": "string"
             },
             "singular": {
+              "type": "string"
+            },
+            "many": {
               "type": "string"
             }
           }
