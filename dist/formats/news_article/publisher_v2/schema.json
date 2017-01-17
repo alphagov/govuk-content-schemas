@@ -126,7 +126,7 @@
     "schema_name": {
       "type": "string",
       "enum": [
-        "world_location_news_article"
+        "news_article"
       ]
     }
   },
@@ -177,6 +177,9 @@
               }
             }
           }
+        },
+        "emphasised_organisations": {
+          "$ref": "#/definitions/emphasised_organisations"
         },
         "government": {
           "$ref": "#/definitions/government"

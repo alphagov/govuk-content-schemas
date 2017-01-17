@@ -301,9 +301,6 @@
               }
             }
           }
-        },
-        "withdrawn_notice": {
-          "$ref": "#/definitions/withdrawn_notice"
         }
       }
     },

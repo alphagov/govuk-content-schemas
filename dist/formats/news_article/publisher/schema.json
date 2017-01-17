@@ -9,7 +9,8 @@
     "rendering_app",
     "locale",
     "routes",
-    "base_path",
+    "content_id",
+    "update_type",
     "document_type",
     "schema_name"
   ],
@@ -105,13 +106,13 @@
         "string"
       ]
     },
+    "content_id": {
+      "$ref": "#/definitions/guid"
+    },
     "last_edited_at": {
       "type": "string",
       "format": "date-time",
       "description": "Last time when the content received a major or minor update."
-    },
-    "previous_version": {
-      "type": "string"
     },
     "update_type": {
       "enum": [
@@ -120,13 +121,16 @@
         "republish"
       ]
     },
+    "links": {
+      "$ref": "#/definitions/links"
+    },
     "document_type": {
       "type": "string"
     },
     "schema_name": {
       "type": "string",
       "enum": [
-        "world_location_news_article"
+        "news_article"
       ]
     }
   },
@@ -178,11 +182,65 @@
             }
           }
         },
+        "emphasised_organisations": {
+          "$ref": "#/definitions/emphasised_organisations"
+        },
         "government": {
           "$ref": "#/definitions/government"
         },
         "political": {
           "$ref": "#/definitions/political"
+        }
+      }
+    },
+    "links": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "policies": {
+          "$ref": "#/definitions/guid_list"
+        },
+        "ministers": {
+          "$ref": "#/definitions/guid_list"
+        },
+        "topical_events": {
+          "$ref": "#/definitions/guid_list"
+        },
+        "world_locations": {
+          "$ref": "#/definitions/guid_list"
+        },
+        "taxons": {
+          "description": "Prototype-stage taxonomy label for this content item",
+          "$ref": "#/definitions/guid_list"
+        },
+        "ordered_related_items": {
+          "description": "Related items, can be any page on GOV.UK. Mostly used for mainstream content to power the sidebar. Ordering of the links is determined by the editor in Content Tagger.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "mainstream_browse_pages": {
+          "description": "Powers the /browse section of the site. These are known as sections in some legacy apps.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "meets_user_needs": {
+          "description": "The user needs this piece of content meets.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "topics": {
+          "description": "Powers the /topic section of the site. These are known as specialist sectors in some legacy apps.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "organisations": {
+          "description": "All organisations linked to this content item. This should include lead organisations.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "parent": {
+          "description": "The parent content item.",
+          "$ref": "#/definitions/guid_list",
+          "maxItems": 1
+        },
+        "policy_areas": {
+          "description": "A largely deprecated tag currently only used to power email alerts.",
+          "$ref": "#/definitions/guid_list"
         }
       }
     },
