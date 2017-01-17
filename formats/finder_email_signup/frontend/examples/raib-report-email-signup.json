@@ -96,9 +96,14 @@
       }
     ],
     "email_filter_by": "railway_type",
+    "email_filter_name": {
+      "singular": "railway type",
+      "plural": "railway types"
+    },
     "subscription_list_title_prefix": {
       "singular": "Rail Accident Investigation Branch (RAIB) reports with the following railway type: ",
-      "plural": "Rail Accident Investigation Branch (RAIB) reports with the following railway types: "
+      "plural": "Rail Accident Investigation Branch (RAIB) reports with the following railway types: ",
+      "many": "Rail Accident Investigation Branch (RAIB) reports: "
     }
   }
 }
