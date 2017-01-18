@@ -143,16 +143,6 @@
           "type": "string",
           "description": "An internal name for admin interfaces. Includes parent."
         },
-        "beta": {
-          "anyOf": [
-            {
-              "type": "boolean"
-            },
-            {
-              "type": "null"
-            }
-          ]
-        },
         "groups": {
           "type": "array",
           "items": {
