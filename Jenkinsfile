@@ -7,6 +7,8 @@ def dependentApplications = [
   'collections',
   'collections-publisher',
   'content-tagger',
+  'email-alert-frontend',
+  'email-alert-service',
   'finder-frontend',
   'policy-publisher',
   'rummager',
