@@ -40,8 +40,29 @@ node {
       checkout scm
     }
 
-    stage("Run jenkins.sh") {
-      sh('./jenkins.sh')
+    stage("Merge master") {
+      govuk.mergeMasterBranch();
+    }
+
+    stage("bundle install") {
+      govuk.bundleApp();
+    }
+
+    stage("Run tests") {
+      govuk.runRakeTask("spec")
+    }
+
+    stage("Check generated schemas are up-to-date") {
+      govuk.runRakeTask("clean build")
+      schemasAreUpToDate = sh(script: "git diff --exit-code", returnStatus: true) == 0
+
+      if (!schemasAreUpToDate) {
+        echo "Changes to checked-in files detected after running 'rake clean' " +
+          "and 'rake build'. If these are generated files, you might need to " +
+          "'rake clean build' to ensure they are regenerated and push the " +
+          "changes."
+        currentBuild.result = "FAILURE"
+      }
     }
 
     if (env.BRANCH_NAME == 'master') {
