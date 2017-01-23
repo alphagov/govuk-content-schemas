@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "analytics_identifier": null,
   "base_path": "/help/cookies",
   "content_id": "d6d6caaf-77db-47e1-8206-30cd4f3d0e3f",
@@ -17,11 +18,19 @@
   "title": "Cookies",
   "updated_at": "2017-01-30T12:30:33.483Z",
   "withdrawn_notice": {
+=======
+  "content_id": "464c5c16-dcdb-4ed0-9ba7-341ee652038a",
+  "base_path": "/help/about-govuk",
+  "description": "GOV.UK is the website for the UK government. It’s the best place to find government services and information.",
+  "details": {
+    "body": "<div class=\"govspeak\"><p>The site is maintained by the <a rel=\"external\" href=\"http://digital.cabinetoffice.gov.uk/\">Government Digital Service (<abbr title=\"Government Digital Service\">GDS</abbr>).</a></p><div role=\"note\" aria-label=\"Information\" class=\"application-notice info-notice\"><p>GOV.UK has replaced Business Link and Directgov.</p></div><h2>What’s on GOV.UK</h2><p>You can find:</p><ul>  <li>information and services for citizens and businesses</li>  <li>detailed guidance for professionals</li>  <li>information on government and policy</li></ul><h2>How GOV.UK is updated</h2><p>We work closely with every government department to make sure all the information on GOV.UK is accurate and up to date.</p><p>GOV.UK is also updated based on results from user testing and feedback from members of the public.</p><h2>Tracking users</h2><p>We track how you use GOV.UK, but we don’t collect or store your personal information (eg your name or address) while you’re browsing. This means that you can’t be personally identified.</p><p>We use Google Analytics software to track:</p><ul>  <li>what pages you visit</li>  <li>how long you use the site</li>  <li>how you got to the site and what links you clicked on</li></ul><p>We don’t allow Google to share this data with anyone else.</p><h2>Reuse information published on GOV.UK</h2><p>You can republish any of the content on GOV.UK, as long as you meet the conditions of the <a rel=\"external\" href=\"http://www.nationalarchives.gov.uk/doc/open-government-licence/\">Open Government Licence.</a></p><h2>Links to other sites from GOV.UK</h2><p>GOV.UK links to external organisations when that link is essential for helping someone complete a task that they begin on the site.</p><p>For example, there’s a link from the content on university applications to the Universities and Colleges Admissions Service (UCAS) website.</p><p>We will only consider link requests if the website falls into this ‘essential’ category.</p><p>You can <a href=\"/feedback/contact\">request a link to be added</a> to GOV.UK.</p><h2>Data sets on GOV.UK</h2><p>GOV.UK uses several data sets to help make the website better.</p><p>For example, data is used to take you to your council’s website if you want to know what day your bin’s collected.</p><p>Many of these data sets are used under the <a rel=\"external\" href=\"http://www.nationalarchives.gov.uk/doc/open-government-licence/\">Open Government Licence.</a></p><p>We use:</p><ul>  <li><a rel=\"external\" href=\"http://id.esd.org.uk/ServiceList\">Local Government Service List</a> by <a rel=\"external\" href=\"http://esd.org.uk/\">esd-toolkit</a></li>  <li><a rel=\"external\" href=\"http://www.ordnancesurvey.co.uk/oswebsite/products/code-point-open/index.html\">Code-Point Open</a> and <a rel=\"external\" href=\"http://www.ordnancesurvey.co.uk/oswebsite/products/boundary-line/index.html\">Boundary-Line</a> from <a rel=\"external\" href=\"http://www.ordnancesurvey.co.uk/oswebsite/\">Ordnance Survey</a></li>  <li><a rel=\"external\" href=\"http://www.ons.gov.uk/ons/guide-method/geography/products/postcode-directories/-nspp-/index.html\">ONS Postcode Directory</a> from <a rel=\"external\" href=\"http://www.ons.gov.uk/ons/index.html\">Office for National Statistics</a></li></ul></div>"
+>>>>>>> Add help page example
   },
   "links": {
     "ordered_related_items": [
       {
         "analytics_identifier": null,
+<<<<<<< HEAD
         "api_path": "/api/content/help/about-govuk",
         "base_path": "/help/about-govuk",
         "content_id": "464c5c16-dcdb-4ed0-9ba7-341ee652038a",
@@ -36,6 +45,35 @@
         },
         "api_url": "http://www.dev.gov.uk/api/content/help/about-govuk",
         "web_url": "http://www.dev.gov.uk/help/about-govuk"
+=======
+        "api_path": "/api/content/help/accessibility",
+        "base_path": "/help/accessibility",
+        "content_id": "97e87c59-5185-43a6-b2a1-a184dcf3c9da",
+        "description": "Information about accessibility on GOV.UK - screen readers and other software, help using a mouse or keyboard ",
+        "document_type": "help_page",
+        "locale": "en",
+        "public_updated_at": "2015-12-30T12:29:02Z",
+        "schema_name": "placeholder",
+        "title": "Accessibility",
+        "links": {},
+        "api_url": "https://www.gov.uk/api/content/help/accessibility",
+        "web_url": "https://www.gov.uk/help/accessibility"
+      },
+      {
+        "analytics_identifier": null,
+        "api_path": "/api/content/help/privacy-policy",
+        "base_path": "/help/privacy-policy",
+        "content_id": "333f53c7-36a2-47b9-b52d-e249929f6ef1",
+        "description": "What data is collected when you use gov.uk - how it's used, where it's stored, your rights",
+        "document_type": "help_page",
+        "locale": "en",
+        "public_updated_at": "2013-09-18T14:55:58Z",
+        "schema_name": "placeholder",
+        "title": "Privacy policy",
+        "links": {},
+        "api_url": "https://www.gov.uk/api/content/help/privacy-policy",
+        "web_url": "https://www.gov.uk/help/privacy-policy"
+>>>>>>> Add help page example
       },
       {
         "analytics_identifier": null,
@@ -46,6 +84,7 @@
         "document_type": "help_page",
         "locale": "en",
         "public_updated_at": "2015-10-06T13:20:06Z",
+<<<<<<< HEAD
         "schema_name": "help_page",
         "title": "Terms and conditions",
         "withdrawn": false,
@@ -75,12 +114,24 @@
     "available_translations": [
       {
         "analytics_identifier": null,
+=======
+        "schema_name": "placeholder",
+        "title": "Terms and conditions",
+        "links": {},
+        "api_url": "https://www.gov.uk/api/content/help/terms-conditions",
+        "web_url": "https://www.gov.uk/help/terms-conditions"
+      },
+      {
+        "analytics_identifier": null,
+        "api_path": "/api/content/help/cookies",
+>>>>>>> Add help page example
         "base_path": "/help/cookies",
         "content_id": "d6d6caaf-77db-47e1-8206-30cd4f3d0e3f",
         "description": "GOV.UK uses cookies to collect information about how users browse the site",
         "document_type": "help_page",
         "locale": "en",
         "public_updated_at": "2014-12-16T12:49:50Z",
+<<<<<<< HEAD
         "schema_name": "help_page",
         "title": "Cookies",
         "api_path": "/api/content/help/cookies",
@@ -99,4 +150,23 @@
 
     ]
   }
+=======
+        "schema_name": "placeholder",
+        "title": "Cookies",
+        "links": {},
+        "api_url": "https://www.gov.uk/api/content/help/cookies",
+        "web_url": "https://www.gov.uk/help/cookies"
+      }
+    ]
+  },
+  "locale": "en",
+  "need_ids": [
+
+  ],
+  "public_updated_at": "2014-11-12T12:25:24.000+00:00",
+  "title": "About GOV.UK",
+  "updated_at": "2016-11-04T10:24:35.010Z",
+  "schema_name": "help_page",
+  "document_type": "help_page"
+>>>>>>> Add help page example
 }

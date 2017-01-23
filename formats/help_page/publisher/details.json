@@ -2,12 +2,21 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "additionalProperties": false,
+<<<<<<< HEAD
   "properties": {
     "body": {
       "$ref": "#/definitions/body_html_and_govspeak"
     },
     "external_related_links": {
       "$ref": "#/definitions/external_related_links"
+=======
+  "required": [
+    "body"
+  ],
+  "properties": {
+    "body": {
+      "type": "string"
+>>>>>>> Add help page example
     }
   }
 }
