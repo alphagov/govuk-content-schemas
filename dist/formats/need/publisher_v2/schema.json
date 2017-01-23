@@ -192,19 +192,19 @@
           "description": "Validation status of the need, ie. proposed, valid, not valid or valid with conditions"
         },
         "yearly_need_views": {
-          "type": "string",
+          "type": "integer",
           "description": "Number of pageviews specific to this need generated each year"
         },
         "yearly_searches": {
-          "type": "string",
+          "type": "integer",
           "description": "Number of searches specific to this need carried out each year"
         },
         "yearly_site_views": {
-          "type": "string",
+          "type": "integer",
           "description": "Number of yearly pageviews of the whole site of the requester"
         },
         "yearly_user_contacts": {
-          "type": "string",
+          "type": "integer",
           "description": "Number of user contacts received about this need each year. Includes calls to contact centres, emails, customer service tickets"
         }
       }
