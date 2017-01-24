@@ -69,16 +69,15 @@
     "access_limited": {
       "type": "object",
       "additionalProperties": false,
+      "required": [
+        "users"
+      ],
       "properties": {
         "users": {
           "type": "array",
           "items": {
             "type": "string"
           }
-        },
-        "fact_check_ids": {
-          "$ref": "#/definitions/guid_list",
-          "description": "A list of ids that will allow access to this item for fact checking."
         }
       }
     },
@@ -127,7 +126,7 @@
     "schema_name": {
       "type": "string",
       "enum": [
-        "speech"
+        "news_article"
       ]
     }
   },
@@ -137,47 +136,23 @@
       "additionalProperties": false,
       "required": [
         "body",
+        "first_public_at",
         "government",
-        "political",
-        "delivered_on"
+        "political"
       ],
       "properties": {
         "body": {
           "type": "string"
         },
+        "image": {
+          "$ref": "#/definitions/image"
+        },
         "first_public_at": {
           "type": "string",
           "format": "date-time"
         },
-        "speech_type_explanation": {
-          "description": "Details about the type of speech",
-          "type": "string"
-        },
-        "speaker_without_profile": {
-          "description": "A speaker that does not have a GOV.UK profile (eg the Queen)",
-          "type": "string"
-        },
-        "location": {
-          "type": "string"
-        },
-        "delivered_on": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "government": {
-          "$ref": "#/definitions/government"
-        },
-        "political": {
-          "$ref": "#/definitions/political"
-        },
-        "image": {
-          "$ref": "#/definitions/image"
-        },
         "change_history": {
           "$ref": "#/definitions/change_history"
-        },
-        "emphasised_organisations": {
-          "$ref": "#/definitions/emphasised_organisations"
         },
         "tags": {
           "type": "object",
@@ -202,6 +177,15 @@
               }
             }
           }
+        },
+        "emphasised_organisations": {
+          "$ref": "#/definitions/emphasised_organisations"
+        },
+        "government": {
+          "$ref": "#/definitions/government"
+        },
+        "political": {
+          "$ref": "#/definitions/political"
         }
       }
     },

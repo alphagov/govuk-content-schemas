@@ -46,6 +46,9 @@
         }
       }
     },
+    "emphasised_organisations": {
+      "$ref": "#/definitions/emphasised_organisations"
+    },
     "government": {
       "$ref": "#/definitions/government"
     },

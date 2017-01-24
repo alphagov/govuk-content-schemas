@@ -3,13 +3,12 @@
   "type": "object",
   "additionalProperties": false,
   "required": [
+    "base_path",
+    "links",
     "title",
     "details",
-    "publishing_app",
-    "rendering_app",
     "locale",
-    "routes",
-    "base_path",
+    "content_id",
     "document_type",
     "schema_name"
   ],
@@ -53,35 +52,6 @@
         "type": "string"
       }
     },
-    "routes": {
-      "type": "array",
-      "minItems": 1,
-      "items": {
-        "$ref": "#/definitions/route"
-      }
-    },
-    "redirects": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/redirect_route"
-      }
-    },
-    "access_limited": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "users": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "fact_check_ids": {
-          "$ref": "#/definitions/guid_list",
-          "description": "A list of ids that will allow access to this item for fact checking."
-        }
-      }
-    },
     "analytics_identifier": {
       "$ref": "#/definitions/analytics_identifier"
     },
@@ -100,26 +70,67 @@
     "withdrawn_notice": {
       "$ref": "#/definitions/withdrawn_notice"
     },
-    "change_note": {
-      "type": [
-        "null",
-        "string"
-      ]
+    "content_id": {
+      "$ref": "#/definitions/guid"
     },
     "last_edited_at": {
       "type": "string",
       "format": "date-time",
       "description": "Last time when the content received a major or minor update."
     },
-    "previous_version": {
-      "type": "string"
-    },
-    "update_type": {
-      "enum": [
-        "major",
-        "minor",
-        "republish"
-      ]
+    "links": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "policies": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "ministers": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "topical_events": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "world_locations": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "taxons": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "ordered_related_items": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "mainstream_browse_pages": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "meets_user_needs": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "topics": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "organisations": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "parent": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "policy_areas": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "available_translations": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "children": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "document_collections": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "child_taxons": {
+          "$ref": "#/definitions/frontend_links"
+        }
+      }
     },
     "document_type": {
       "type": "string"
@@ -127,57 +138,118 @@
     "schema_name": {
       "type": "string",
       "enum": [
-        "speech"
+        "news_article"
       ]
+    },
+    "format": {
+      "type": "string"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
     }
   },
   "definitions": {
+    "frontend_links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "content_id",
+          "title",
+          "base_path",
+          "locale"
+        ],
+        "properties": {
+          "details": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "document_type": {
+            "type": "string"
+          },
+          "schema_name": {
+            "type": "string"
+          },
+          "public_updated_at": {
+            "type": "string"
+          },
+          "content_id": {
+            "$ref": "#/definitions/guid"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "base_path": {
+            "$ref": "#/definitions/absolute_path"
+          },
+          "api_path": {
+            "$ref": "#/definitions/absolute_path"
+          },
+          "api_url": {
+            "description": "DEPRECATED: api_path should be used instead of api_url. This is due to values of api_url being tied to an environment which can cause problems when data is synced between environments. In time this field will be removed by the Publishing Platform team.",
+            "type": "string",
+            "format": "uri"
+          },
+          "web_url": {
+            "description": "DEPRECATED: base_path should be used instead of web_url. This is due to values of web_url being tied to an environment which can cause problems when data is synced between environments. In time this field will be removed by the Publishing Platform team.",
+            "type": "string",
+            "format": "uri"
+          },
+          "locale": {
+            "$ref": "#/definitions/locale"
+          },
+          "analytics_identifier": {
+            "$ref": "#/definitions/analytics_identifier"
+          },
+          "withdrawn": {
+            "description": "Indicates whether the item has been unpublished as withdrawn, https://github.com/alphagov/publishing-api/blob/master/doc/model.md#workflow",
+            "type": "boolean"
+          },
+          "links": {
+            "type": "object",
+            "patternProperties": {
+              "^[a-z_]+$": {
+                "$ref": "#/definitions/frontend_links"
+              }
+            }
+          }
+        }
+      }
+    },
     "details": {
       "type": "object",
       "additionalProperties": false,
       "required": [
         "body",
+        "first_public_at",
         "government",
-        "political",
-        "delivered_on"
+        "political"
       ],
       "properties": {
         "body": {
           "type": "string"
         },
+        "image": {
+          "$ref": "#/definitions/image"
+        },
         "first_public_at": {
           "type": "string",
           "format": "date-time"
         },
-        "speech_type_explanation": {
-          "description": "Details about the type of speech",
-          "type": "string"
-        },
-        "speaker_without_profile": {
-          "description": "A speaker that does not have a GOV.UK profile (eg the Queen)",
-          "type": "string"
-        },
-        "location": {
-          "type": "string"
-        },
-        "delivered_on": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "government": {
-          "$ref": "#/definitions/government"
-        },
-        "political": {
-          "$ref": "#/definitions/political"
-        },
-        "image": {
-          "$ref": "#/definitions/image"
-        },
         "change_history": {
           "$ref": "#/definitions/change_history"
-        },
-        "emphasised_organisations": {
-          "$ref": "#/definitions/emphasised_organisations"
         },
         "tags": {
           "type": "object",
@@ -202,6 +274,15 @@
               }
             }
           }
+        },
+        "emphasised_organisations": {
+          "$ref": "#/definitions/emphasised_organisations"
+        },
+        "government": {
+          "$ref": "#/definitions/government"
+        },
+        "political": {
+          "$ref": "#/definitions/political"
         }
       }
     },

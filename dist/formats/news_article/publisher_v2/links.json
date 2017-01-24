@@ -2,209 +2,63 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "additionalProperties": false,
-  "required": [
-    "title",
-    "details",
-    "publishing_app",
-    "rendering_app",
-    "locale",
-    "routes",
-    "base_path",
-    "document_type",
-    "schema_name"
-  ],
   "properties": {
-    "base_path": {
-      "$ref": "#/definitions/absolute_path"
-    },
-    "title": {
-      "type": "string"
-    },
-    "description": {
-      "anyOf": [
-        {
-          "type": "string"
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
-    "public_updated_at": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "first_published_at": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "publishing_app": {
-      "$ref": "#/definitions/application_name"
-    },
-    "rendering_app": {
-      "$ref": "#/definitions/application_name"
-    },
-    "locale": {
-      "$ref": "#/definitions/locale"
-    },
-    "need_ids": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
-    },
-    "routes": {
-      "type": "array",
-      "minItems": 1,
-      "items": {
-        "$ref": "#/definitions/route"
-      }
-    },
-    "redirects": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/redirect_route"
-      }
-    },
-    "access_limited": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "users": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "fact_check_ids": {
-          "$ref": "#/definitions/guid_list",
-          "description": "A list of ids that will allow access to this item for fact checking."
-        }
-      }
-    },
-    "analytics_identifier": {
-      "$ref": "#/definitions/analytics_identifier"
-    },
-    "phase": {
-      "description": "The service design phase of this content item - https://www.gov.uk/service-manual/phases",
-      "type": "string",
-      "enum": [
-        "alpha",
-        "beta",
-        "live"
-      ]
-    },
-    "details": {
-      "$ref": "#/definitions/details"
-    },
-    "withdrawn_notice": {
-      "$ref": "#/definitions/withdrawn_notice"
-    },
-    "change_note": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
-    "last_edited_at": {
-      "type": "string",
-      "format": "date-time",
-      "description": "Last time when the content received a major or minor update."
-    },
     "previous_version": {
       "type": "string"
     },
-    "update_type": {
-      "enum": [
-        "major",
-        "minor",
-        "republish"
-      ]
-    },
-    "document_type": {
-      "type": "string"
-    },
-    "schema_name": {
-      "type": "string",
-      "enum": [
-        "speech"
-      ]
+    "links": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "policies": {
+          "$ref": "#/definitions/guid_list"
+        },
+        "ministers": {
+          "$ref": "#/definitions/guid_list"
+        },
+        "topical_events": {
+          "$ref": "#/definitions/guid_list"
+        },
+        "world_locations": {
+          "$ref": "#/definitions/guid_list"
+        },
+        "taxons": {
+          "description": "Prototype-stage taxonomy label for this content item",
+          "$ref": "#/definitions/guid_list"
+        },
+        "ordered_related_items": {
+          "description": "Related items, can be any page on GOV.UK. Mostly used for mainstream content to power the sidebar. Ordering of the links is determined by the editor in Content Tagger.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "mainstream_browse_pages": {
+          "description": "Powers the /browse section of the site. These are known as sections in some legacy apps.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "meets_user_needs": {
+          "description": "The user needs this piece of content meets.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "topics": {
+          "description": "Powers the /topic section of the site. These are known as specialist sectors in some legacy apps.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "organisations": {
+          "description": "All organisations linked to this content item. This should include lead organisations.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "parent": {
+          "description": "The parent content item.",
+          "$ref": "#/definitions/guid_list",
+          "maxItems": 1
+        },
+        "policy_areas": {
+          "description": "A largely deprecated tag currently only used to power email alerts.",
+          "$ref": "#/definitions/guid_list"
+        }
+      }
     }
   },
   "definitions": {
-    "details": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "body",
-        "government",
-        "political",
-        "delivered_on"
-      ],
-      "properties": {
-        "body": {
-          "type": "string"
-        },
-        "first_public_at": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "speech_type_explanation": {
-          "description": "Details about the type of speech",
-          "type": "string"
-        },
-        "speaker_without_profile": {
-          "description": "A speaker that does not have a GOV.UK profile (eg the Queen)",
-          "type": "string"
-        },
-        "location": {
-          "type": "string"
-        },
-        "delivered_on": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "government": {
-          "$ref": "#/definitions/government"
-        },
-        "political": {
-          "$ref": "#/definitions/political"
-        },
-        "image": {
-          "$ref": "#/definitions/image"
-        },
-        "change_history": {
-          "$ref": "#/definitions/change_history"
-        },
-        "emphasised_organisations": {
-          "$ref": "#/definitions/emphasised_organisations"
-        },
-        "tags": {
-          "type": "object",
-          "additionalProperties": false,
-          "properties": {
-            "browse_pages": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            "topics": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            "policies": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            }
-          }
-        }
-      }
-    },
     "absolute_path": {
       "type": "string",
       "pattern": "^/(([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})+(/([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)*)?$",
