@@ -210,6 +210,14 @@
         "yearly_user_contacts": {
           "type": "string",
           "description": "Number of user contacts received about this need each year. Includes calls to contact centres, emails, customer service tickets"
+        },
+        "author_name": {
+          "type": "string",
+          "description": "First name and Surname of the person that is creating or modifying the need."
+        },
+        "author_email": {
+          "type": "string",
+          "description": "Email address of the person that is creating or modifying the need."
         }
       }
     },
