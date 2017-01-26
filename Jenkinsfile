@@ -56,11 +56,10 @@ node {
       schemasAreUpToDate = sh(script: "git diff --exit-code", returnStatus: true) == 0
 
       if (!schemasAreUpToDate) {
-        echo "Changes to checked-in files detected after running 'rake clean' " +
-          "and 'rake build'. If these are generated files, you might need to " +
-          "'rake clean build' to ensure they are regenerated and push the " +
-          "changes."
-        currentBuild.result = "FAILURE"
+        error("Changes to checked-in files detected after running 'rake clean' "
+          + "and 'rake build'. If these are generated files, you might need to "
+          + "'rake clean build' to ensure they are regenerated and push the "
+          + "changes.")
       }
     }
 
