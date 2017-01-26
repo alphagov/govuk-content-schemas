@@ -37,8 +37,27 @@
         "details": {
           "brand": "department-of-health",
           "logo": {
-          "formatted_title": "Department<br/>of Health",
-          "crest": "single-identity"
+            "formatted_title": "Department<br/>of Health",
+            "crest": "single-identity"
+          }
+        }
+      }
+    ],
+    "parent": [
+      {
+        "content_id": "7cd6bf12-bbe9-4118-8523-f927b0442156",
+        "title": "Department of Health",
+        "api_path": "/api/content/government/organisations/department-of-health",
+        "base_path": "/government/organisations/department-of-health",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/department-of-health",
+        "web_url": "https://www.gov.uk/government/organisations/department-of-health",
+        "locale": "en",
+        "analytics_identifier": "D12",
+        "details": {
+          "brand": "department-of-health",
+          "logo": {
+            "formatted_title": "Department<br/>of Health",
+            "crest": "single-identity"
           }
         }
       }
