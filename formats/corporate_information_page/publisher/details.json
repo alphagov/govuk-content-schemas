@@ -3,11 +3,16 @@
   "type": "object",
   "additionalProperties": false,
   "required": [
-    "body"
+    "body",
+    "organisation"
   ],
   "properties": {
     "body": {
       "type": "string"
+    },
+    "organisation": {
+      "description": "A single organisation that is the subject of this corporate information page",
+      "$ref": "#/definitions/guid"
     },
     "tags": {
       "type": "object",
