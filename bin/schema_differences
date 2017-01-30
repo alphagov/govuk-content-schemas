@@ -1,0 +1,37 @@
+#! /usr/bin/env ruby
+
+require 'json'
+require 'json_schema'
+
+def schema_for(schema_name)
+  path = File.expand_path("../dist/formats/#{schema_name}/frontend/schema.json", __dir__)
+  schema = JsonSchema.parse!(JSON.load(File.read(path)))
+  schema.expand_references!
+  schema
+rescue Errno::ENOENT
+  nil
+end
+
+def fields_from(schema)
+  schema.properties["details"].properties.keys
+end
+
+fields = {}
+schemas = Dir[File.expand_path("../dist/formats/*", __dir__)].map { |s| s.split('/').last }
+
+schemas.each do |schema_name|
+  schema = schema_for(schema_name)
+  next unless schema
+  fields_from(schema).each do |field|
+    fields[field] ||= []
+    fields[field] << schema_name
+  end
+end
+
+puts (['schema_name'] + fields.keys).join(',')
+
+schemas.each do |schema_name|
+  columns = [schema_name]
+  columns += fields.keys.map { |f| 'x' if fields[f].include? schema_name }
+  puts columns.join(',')
+end
