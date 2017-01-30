@@ -17,19 +17,29 @@
     },
     "format": {
       "description": "DEPRECATED: This field will be removed by Tijmen.",
-      "enum": [ "redirect" ]
+      "enum": [
+        "redirect"
+      ]
     },
     "document_type": {
-      "enum": [ "redirect" ]
+      "enum": [
+        "redirect"
+      ]
     },
     "schema_name": {
-      "enum": [ "redirect" ]
+      "enum": [
+        "redirect"
+      ]
     },
     "publishing_app": {
       "type": "string"
     },
     "update_type": {
-      "enum": [ "major", "minor", "republish" ]
+      "enum": [
+        "major",
+        "minor",
+        "republish"
+      ]
     },
     "redirects": {
       "type": "array",
@@ -46,13 +56,19 @@
             "$ref": "#/definitions/absolute_path"
           },
           "type": {
-            "enum": [ "prefix", "exact" ]
+            "enum": [
+              "prefix",
+              "exact"
+            ]
           },
           "destination": {
             "$ref": "#/definitions/absolute_fullpath"
           },
           "segments_mode": {
-            "enum": [ "preserve", "ignore" ],
+            "enum": [
+              "preserve",
+              "ignore"
+            ],
             "description": "For prefix redirects, preserve or ignore the rest of the fullpath. For exact, preserve or ignore the querystring."
           }
         }

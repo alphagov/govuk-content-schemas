@@ -26,7 +26,7 @@
           "contents": {
             "type": "array",
             "items": {
-              "$ref" : "#/definitions/absolute_path"
+              "$ref": "#/definitions/absolute_path"
             }
           },
           "content_ids": {

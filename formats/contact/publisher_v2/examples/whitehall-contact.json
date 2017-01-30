@@ -17,8 +17,12 @@
         "world_location": "United Kingdom"
       }
     ],
-    "phone_numbers": [],
-    "email_addresses": []
+    "phone_numbers": [
+
+    ],
+    "email_addresses": [
+
+    ]
   },
   "publishing_app": "whitehall",
   "rendering_app": "government-frontend",

@@ -14,13 +14,19 @@
       "$ref": "#/definitions/guid"
     },
     "format": {
-      "enum": [ "special_route" ]
+      "enum": [
+        "special_route"
+      ]
     },
     "schema_name": {
-      "enum": [ "special_route" ]
+      "enum": [
+        "special_route"
+      ]
     },
     "document_type": {
-      "enum": [ "special_route" ]
+      "enum": [
+        "special_route"
+      ]
     },
     "publishing_app": {
       "type": "string"
@@ -29,7 +35,11 @@
       "type": "string"
     },
     "update_type": {
-      "enum": [ "major", "minor", "republish" ]
+      "enum": [
+        "major",
+        "minor",
+        "republish"
+      ]
     },
     "title": {
       "type": "string"
@@ -70,7 +80,10 @@
           "type": "string"
         },
         "type": {
-          "enum": [ "prefix", "exact" ]
+          "enum": [
+            "prefix",
+            "exact"
+          ]
         }
       }
     }

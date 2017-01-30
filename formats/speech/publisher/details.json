@@ -2,12 +2,12 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "additionalProperties": false,
-    "required": [
-      "body",
-      "government",
-      "political",
-      "delivered_on"
-    ],
+  "required": [
+    "body",
+    "government",
+    "political",
+    "delivered_on"
+  ],
   "properties": {
     "body": {
       "type": "string"

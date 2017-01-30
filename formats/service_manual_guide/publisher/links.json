@@ -8,8 +8,8 @@
       "$ref": "#/definitions/guid_list"
     },
     "service_manual_topics": {
-    	"description": "References an array of 'service_manual_topic's. Not to be confused with 'topics'.",
-    	"$ref": "#/definitions/guid_list"
+      "description": "References an array of 'service_manual_topic's. Not to be confused with 'topics'.",
+      "$ref": "#/definitions/guid_list"
     }
   }
 }

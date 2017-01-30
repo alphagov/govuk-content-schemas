@@ -32,7 +32,10 @@
       ]
     },
     "govuk_request_id": {
-      "type": ["string", "null"]
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "expanded_links": {
       "type": "object",

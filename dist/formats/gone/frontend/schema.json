@@ -15,19 +15,29 @@
     },
     "format": {
       "description": "DEPRECATED. This field will be removed by Tijmen.",
-      "enum": [ "gone" ]
+      "enum": [
+        "gone"
+      ]
     },
     "document_type": {
-      "enum": [ "gone" ]
+      "enum": [
+        "gone"
+      ]
     },
     "schema_name": {
-      "enum": [ "gone" ]
+      "enum": [
+        "gone"
+      ]
     },
     "publishing_app": {
       "type": "string"
     },
     "update_type": {
-      "enum": [ "major", "minor", "republish" ]
+      "enum": [
+        "major",
+        "minor",
+        "republish"
+      ]
     },
     "public_updated_at": {
       "type": "string",
@@ -47,7 +57,10 @@
             "type": "string"
           },
           "type": {
-            "enum": [ "exact", "prefix" ]
+            "enum": [
+              "exact",
+              "prefix"
+            ]
           }
         }
       }

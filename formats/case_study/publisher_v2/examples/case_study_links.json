@@ -3,7 +3,9 @@
     "organisations": [
       "8b19c238-54e3-4e27-b0d7-60f8e2a677c9"
     ],
-    "related_policies": [],
+    "related_policies": [
+
+    ],
     "world_locations": [
       "456af51f-5fd3-4855-8a33-52cb32ff9985"
     ],

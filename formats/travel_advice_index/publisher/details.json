@@ -2,10 +2,10 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "additionalProperties": false,
-   "required": [
-     "email_signup_link",
-     "countries"
-   ],
+  "required": [
+    "email_signup_link",
+    "countries"
+  ],
   "properties": {
     "email_signup_link": {
       "type": "string",
@@ -29,7 +29,7 @@
             "type": "string"
           },
           "base_path": {
-            "$ref" : "#/definitions/absolute_path"
+            "$ref": "#/definitions/absolute_path"
           },
           "updated_at": {
             "type": "string",

@@ -3,10 +3,10 @@
   "type": "object",
   "additionalProperties": false,
   "required": [
-   "body",
-   "first_public_at",
-   "government",
-   "political"
+    "body",
+    "first_public_at",
+    "government",
+    "political"
   ],
   "properties": {
     "body": {

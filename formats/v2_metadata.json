@@ -7,7 +7,7 @@
   ],
   "properties": {
     "base_path": {
-      "$ref" : "#/definitions/absolute_path"
+      "$ref": "#/definitions/absolute_path"
     },
     "last_edited_at": {
       "type": "string",
@@ -18,10 +18,17 @@
       "type": "string"
     },
     "update_type": {
-      "enum": [ "major", "minor", "republish" ]
+      "enum": [
+        "major",
+        "minor",
+        "republish"
+      ]
     },
     "change_note": {
-      "type": [ "null", "string" ]
+      "type": [
+        "null",
+        "string"
+      ]
     }
   }
 }

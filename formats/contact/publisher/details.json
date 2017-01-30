@@ -36,7 +36,10 @@
       }
     },
     "query_response_time": {
-      "type": ["string", "boolean"]
+      "type": [
+        "string",
+        "boolean"
+      ]
     },
     "contact_form_links": {
       "type": "array",
