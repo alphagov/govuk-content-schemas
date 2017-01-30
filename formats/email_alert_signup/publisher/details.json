@@ -17,8 +17,12 @@
           "description": "DEPRECATED: The tags used to match subscribers lists",
           "additionalProperties": false,
           "properties": {
-            "policies": { "type": "array" },
-            "topics": { "type": "array" }
+            "policies": {
+              "type": "array"
+            },
+            "topics": {
+              "type": "array"
+            }
           }
         },
         "links": {
@@ -27,7 +31,9 @@
           "additionalProperties": false,
           "maxProperties": 1,
           "patternProperties": {
-              "^[a-z_]+$": { "type": "array" }
+            "^[a-z_]+$": {
+              "type": "array"
+            }
           }
         },
         "document_type": {
@@ -38,7 +44,11 @@
     },
     "email_alert_type": {
       "type": "string",
-      "enum": ["topics", "policies", "countries"]
+      "enum": [
+        "topics",
+        "policies",
+        "countries"
+      ]
     },
     "summary": {
       "type": "string"

@@ -3,23 +3,26 @@
   "type": "object",
   "additionalProperties": false,
   "required": [
-     "summary",
-     "country",
-     "updated_at",
-     "reviewed_at",
-     "change_description",
-     "alert_status",
-     "email_signup_link",
-     "parts"
+    "summary",
+    "country",
+    "updated_at",
+    "reviewed_at",
+    "change_description",
+    "alert_status",
+    "email_signup_link",
+    "parts"
   ],
   "properties": {
     "summary": {
-      "$ref" : "#/definitions/multiple_content_types"
+      "$ref": "#/definitions/multiple_content_types"
     },
     "country": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["slug", "name"],
+      "required": [
+        "slug",
+        "name"
+      ],
       "properties": {
         "name": {
           "type": "string"
@@ -51,17 +54,21 @@
       "format": "uri"
     },
     "image": {
-      "$ref" : "#/definitions/asset_link"
+      "$ref": "#/definitions/asset_link"
     },
     "document": {
-      "$ref" : "#/definitions/asset_link"
+      "$ref": "#/definitions/asset_link"
     },
     "parts": {
       "type": "array",
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["slug", "title", "body"],
+        "required": [
+          "slug",
+          "title",
+          "body"
+        ],
         "properties": {
           "slug": {
             "type": "string"
@@ -70,7 +77,7 @@
             "type": "string"
           },
           "body": {
-            "$ref" : "#/definitions/multiple_content_types"
+            "$ref": "#/definitions/multiple_content_types"
           }
         }
       }

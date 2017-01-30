@@ -9,14 +9,22 @@
   "properties": {
     "beta": {
       "anyOf": [
-        { "type": "boolean" },
-        { "type": "null" }
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
       ]
     },
     "beta_message": {
       "anyOf": [
-        { "type": "string" },
-        { "type": "null" }
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
       ]
     },
     "document_noun": {
@@ -111,7 +119,11 @@
           "type": {
             "description": "Defines the UI component and how the facet is queried from the search API",
             "type": "string",
-            "enum": ["text", "date", "topical"]
+            "enum": [
+              "text",
+              "date",
+              "topical"
+            ]
           },
           "allowed_values": {
             "description": "Possible values to show for non-dynamic select facets. All values are shown regardless of the search.",
@@ -120,11 +132,11 @@
               "$ref": "#/definitions/label_value_pair"
             }
           },
-          "open_value" : {
+          "open_value": {
             "description": "Value that determines the open state (the key field is in the future) of a topical facet.",
             "$ref": "#/definitions/label_value_pair"
           },
-          "closed_value" : {
+          "closed_value": {
             "description": "Value that determines the closed state (the key field is in the past) of a topical facet.",
             "$ref": "#/definitions/label_value_pair"
           }
@@ -139,8 +151,12 @@
     },
     "summary": {
       "anyOf": [
-        { "type": "string" },
-        { "type": "null" }
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
       ]
     }
   }

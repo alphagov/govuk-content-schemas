@@ -10,19 +10,26 @@
     "content_id": {
       "$ref": "#/definitions/guid"
     },
-  "last_edited_at": {
+    "last_edited_at": {
       "type": "string",
       "format": "date-time",
       "description": "Last time when the content received a major or minor update."
     },
     "update_type": {
-      "enum": [ "major", "minor", "republish" ]
+      "enum": [
+        "major",
+        "minor",
+        "republish"
+      ]
     },
     "links": {
       "$ref": "#/definitions/links"
     },
     "change_note": {
-      "type": [ "null", "string" ]
+      "type": [
+        "null",
+        "string"
+      ]
     }
   }
 }

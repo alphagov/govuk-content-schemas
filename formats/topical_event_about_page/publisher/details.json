@@ -10,7 +10,7 @@
     "read_more": {
       "type": "string"
     },
-    "body":{
+    "body": {
       "type": "string"
     }
   }

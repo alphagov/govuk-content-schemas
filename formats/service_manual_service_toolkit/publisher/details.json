@@ -8,7 +8,10 @@
       "description": "Collections of links grouped under a title and description",
       "items": {
         "type": "object",
-        "required": ["title", "links"],
+        "required": [
+          "title",
+          "links"
+        ],
         "additionalProperties": false,
         "properties": {
           "title": {
@@ -24,7 +27,10 @@
             "description": "Array of links in this collection",
             "items": {
               "type": "object",
-              "required": ["title", "url"],
+              "required": [
+                "title",
+                "url"
+              ],
               "additionalProperties": false,
               "properties": {
                 "title": {

@@ -15,8 +15,12 @@
     },
     "analytics_identifier": {
       "anyOf": [
-        { "type": "string" },
-        { "type": "null" }
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
       ],
       "description": "A short identifier we send to Google Analytics for multi-valued fields. This means we avoid the truncated values we would get if we sent the path or slug of eg organisations."
     },
@@ -24,7 +28,9 @@
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "title", "slug", "current"
+        "title",
+        "slug",
+        "current"
       ],
       "properties": {
         "title": {
@@ -73,8 +79,12 @@
         },
         "caption": {
           "anyOf": [
-            { "type": "string" },
-            { "type": "null" }
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
           ]
         }
       }
@@ -95,7 +105,10 @@
           "type": "string"
         },
         "type": {
-          "enum": [ "prefix", "exact" ]
+          "enum": [
+            "prefix",
+            "exact"
+          ]
         }
       }
     },
@@ -112,20 +125,77 @@
           "$ref": "#/definitions/absolute_path"
         },
         "type": {
-          "enum": [ "prefix", "exact" ]
+          "enum": [
+            "prefix",
+            "exact"
+          ]
         },
         "destination": {
           "$ref": "#/definitions/absolute_fullpath"
         },
         "segments_mode": {
-          "enum": [ "preserve", "ignore" ],
+          "enum": [
+            "preserve",
+            "ignore"
+          ],
           "description": "For prefix redirects, preserve or ignore the rest of the fullpath. For exact, preserve or ignore the querystring."
         }
       }
     },
     "locale": {
       "type": "string",
-      "enum": ["ar", "az", "be", "bg", "bn", "cs", "cy", "de", "dr", "el", "en", "es", "es-419", "et", "fa", "fr", "he", "hi", "hu", "hy", "id", "it", "ja", "ka", "ko", "lt", "lv", "ms", "pl", "ps", "pt", "ro", "ru", "si", "sk", "so", "sq", "sr", "sw", "ta", "th", "tk", "tr", "uk", "ur", "uz", "vi", "zh", "zh-hk", "zh-tw"]
+      "enum": [
+        "ar",
+        "az",
+        "be",
+        "bg",
+        "bn",
+        "cs",
+        "cy",
+        "de",
+        "dr",
+        "el",
+        "en",
+        "es",
+        "es-419",
+        "et",
+        "fa",
+        "fr",
+        "he",
+        "hi",
+        "hu",
+        "hy",
+        "id",
+        "it",
+        "ja",
+        "ka",
+        "ko",
+        "lt",
+        "lv",
+        "ms",
+        "pl",
+        "ps",
+        "pt",
+        "ro",
+        "ru",
+        "si",
+        "sk",
+        "so",
+        "sq",
+        "sr",
+        "sw",
+        "ta",
+        "th",
+        "tk",
+        "tr",
+        "uk",
+        "ur",
+        "uz",
+        "vi",
+        "zh",
+        "zh-hk",
+        "zh-tw"
+      ]
     },
     "multiple_content_types": {
       "type": "array",
@@ -251,23 +321,23 @@
       }
     },
     "label_value_pair": {
-        "description": "One of many possible values a user can select from",
-        "type": "object",
-        "additionalProperties": false,
-        "required": [
-          "label",
-          "value"
-        ],
-        "properties": {
-          "label": {
-            "description": "A human readable label",
-            "type": "string"
-          },
-          "value": {
-            "description": "A value to use for form controls",
-            "type": "string"
-          }
+      "description": "One of many possible values a user can select from",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "label",
+        "value"
+      ],
+      "properties": {
+        "label": {
+          "description": "A human readable label",
+          "type": "string"
+        },
+        "value": {
+          "description": "A value to use for form controls",
+          "type": "string"
         }
+      }
     },
     "emphasised_organisations": {
       "description": "The content ids of the organisations that should be displayed first in the list of organisations related to the item, these content ids must be present in the item organisation links hash.",

@@ -10,7 +10,7 @@
   ],
   "properties": {
     "base_path": {
-      "$ref" : "#/definitions/absolute_path"
+      "$ref": "#/definitions/absolute_path"
     },
     "title": {
       "type": "string"
@@ -64,7 +64,9 @@
     "access_limited": {
       "type": "object",
       "additionalProperties": false,
-      "required": [ "users" ],
+      "required": [
+        "users"
+      ],
       "properties": {
         "users": {
           "type": "array",
@@ -80,7 +82,11 @@
     "phase": {
       "description": "The service design phase of this content item - https://www.gov.uk/service-manual/phases",
       "type": "string",
-      "enum": [ "alpha", "beta", "live" ]
+      "enum": [
+        "alpha",
+        "beta",
+        "live"
+      ]
     },
     "details": {
       "$ref": "#/definitions/details"
@@ -89,5 +95,6 @@
       "$ref": "#/definitions/withdrawn_notice"
     }
   },
-  "definitions": {}
+  "definitions": {
+  }
 }

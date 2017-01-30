@@ -7,14 +7,20 @@
   ],
   "properties": {
     "explanation": {
-      "type": ["string", "null"]
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "unpublished_at": {
       "type": "string",
       "format": "date-time"
     },
     "alternative_url": {
-      "type": ["string", "null"],
+      "type": [
+        "string",
+        "null"
+      ],
       "format": "uri"
     },
     "public_updated_at": {
