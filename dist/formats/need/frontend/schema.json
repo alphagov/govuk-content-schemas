@@ -274,10 +274,6 @@
           "type": "string",
           "description": "Six digit id which used to be the primary id for Needs. Still being displayed in Maslow and Info-Frontend, but likely to be deprecated in the future."
         },
-        "status": {
-          "type": "string",
-          "description": "Validation status of the need, ie. proposed, valid, not valid or valid with conditions"
-        },
         "yearly_need_views": {
           "type": "integer",
           "description": "Number of pageviews specific to this need generated each year"
