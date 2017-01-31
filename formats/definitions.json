@@ -24,7 +24,7 @@
       ],
       "description": "A short identifier we send to Google Analytics for multi-valued fields. This means we avoid the truncated values we would get if we sent the path or slug of eg organisations."
     },
-    "external_related_links":{
+    "external_related_links": {
       "type": "array",
       "items": {
         "type": "object",
