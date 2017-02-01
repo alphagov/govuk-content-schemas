@@ -12,6 +12,8 @@ def dependentApplications = [
   'finder-frontend',
   'policy-publisher',
   'publisher',
+  'service-manual-frontend',
+  'service-manual-publisher',
   'specialist-publisher',
   'whitehall',
 ]
