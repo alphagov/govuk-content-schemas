@@ -41,8 +41,7 @@
       }
     },
     "first_public_at": {
-      "type": "string",
-      "format": "date-time"
+      "$ref": "#/definitions/first_public_at"
     },
     "tags": {
       "type": "object",

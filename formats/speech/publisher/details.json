@@ -13,8 +13,7 @@
       "$ref": "#/definitions/body"
     },
     "first_public_at": {
-      "type": "string",
-      "format": "date-time"
+      "$ref": "#/definitions/first_public_at"
     },
     "speech_type_explanation": {
       "description": "Details about the type of speech",

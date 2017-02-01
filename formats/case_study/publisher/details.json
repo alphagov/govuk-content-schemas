@@ -20,8 +20,7 @@
       ]
     },
     "first_public_at": {
-      "type": "string",
-      "format": "date-time"
+      "$ref": "#/definitions/first_public_at"
     },
     "change_note": {
       "anyOf": [
