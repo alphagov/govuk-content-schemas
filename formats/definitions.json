@@ -446,6 +446,10 @@
     "publishing_request_id": {
       "description": "A unique identifier used to track publishing requests to rendered content",
       "type": "string"
+    },
+    "max_cache_time": {
+      "description": "The maximum length of time the content should be cached, in seconds",
+      "type": "integer"
     }
   }
 }
