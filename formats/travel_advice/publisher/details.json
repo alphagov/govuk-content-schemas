@@ -82,8 +82,7 @@
       }
     },
     "max_cache_time": {
-      "description": "The maximum length of time the content should be cached, in seconds.",
-      "type": "integer"
+      "$ref": "#/definitions/max_cache_time"
     },
     "publishing_request_id": {
       "$ref": "#/definitions/publishing_request_id"

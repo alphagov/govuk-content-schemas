@@ -20,8 +20,7 @@
       "$ref": "#/definitions/any_metadata"
     },
     "max_cache_time": {
-      "description": "The maximum length of time the content should be cached, in seconds.",
-      "type": "integer"
+      "$ref": "#/definitions/max_cache_time"
     },
     "headers": {
       "$ref": "#/definitions/nested_headers"
