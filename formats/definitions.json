@@ -378,6 +378,14 @@
         }
       ]
     },
+    "attachments_with_thumbnails": {
+      "description": "An ordered list of attachments",
+      "type": "array",
+      "items": {
+        "description": "Generated HTML for each attachment including thumbnail and download link",
+        "type": "string"
+      }
+    },
     "first_public_at": {
       "description": "The date the content was first published. Used in details. Will be deprecated in favour of top level first_published_at when publishing API allows it to be edited.",
       "type": "string",

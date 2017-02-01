@@ -14,10 +14,7 @@
       "$ref": "#/definitions/body"
     },
     "documents": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
+      "$ref": "#/definitions/attachments_with_thumbnails"
     },
     "first_public_at": {
       "$ref": "#/definitions/first_public_at"

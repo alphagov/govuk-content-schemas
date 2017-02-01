@@ -44,10 +44,7 @@
       "$ref": "#/definitions/emphasised_organisations"
     },
     "documents": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
+      "$ref": "#/definitions/attachments_with_thumbnails"
     },
     "ways_to_respond": {
       "type": "object",
@@ -75,10 +72,7 @@
       "type": "string"
     },
     "public_feedback_documents": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
+      "$ref": "#/definitions/attachments_with_thumbnails"
     },
     "final_outcome_publication_date": {
       "type": "string",
@@ -88,10 +82,7 @@
       "type": "string"
     },
     "final_outcome_documents": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
+      "$ref": "#/definitions/attachments_with_thumbnails"
     },
     "tags": {
       "$ref": "#/definitions/tags"
