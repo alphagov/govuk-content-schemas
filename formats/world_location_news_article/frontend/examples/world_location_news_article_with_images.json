@@ -1,7 +1,7 @@
 {
   "base_path": "/government/world-location-news/hong-kong-consular-team-provides-support-to-british-national-overseas-detained-overseas",
   "content_id": "02827d12-be2b-4d49-9887-0c441057618b",
-  "document_type": "news_article",
+  "document_type": "world_location_news_article",
   "first_published_at": "2016-11-28T10:08:18.000+00:00",
   "format": "world_location_news_article",
   "locale": "en",
@@ -39,7 +39,7 @@
         "base_path": "/government/world-location-news/hong-kong-consular-team-provides-support-to-british-national-overseas-detained-overseas",
         "content_id": "02827d12-be2b-4d49-9887-0c441057618b",
         "description": "The Consular team at the British Consulate General has recently completed its annual visits to around 40 British National (Overseas) prisoners in Thailand, the Philippines, Taiwan and Japan.",
-        "document_type": "news_article",
+        "document_type": "world_location_news_article",
         "locale": "en",
         "public_updated_at": "2016-11-28T10:08:18.000+00:00",
         "title": "Hong Kong Consular team provides support to British National Overseas detained overseas",

@@ -1,7 +1,7 @@
 {
   "base_path": "/government/world-location-news/embassy-hosts-hague-convention-mediation-training",
   "content_id": "fc87317b-0ea2-42c4-8ed6-9d85c21a464f",
-  "document_type": "news_article",
+  "document_type": "world_location_news_article",
   "first_published_at": "2015-04-01T07:30:51.000+00:00",
   "format": "world_location_news_article",
   "locale": "en",
@@ -39,7 +39,7 @@
         "base_path": "/government/world-location-news/embassy-hosts-hague-convention-mediation-training",
         "content_id": "fc87317b-0ea2-42c4-8ed6-9d85c21a464f",
         "description": "Expertise sharing continues one year on from Japan’s enactment of the Hague Convention on the Civil Aspects of International Child Abduction",
-        "document_type": "news_article",
+        "document_type": "world_location_news_article",
         "locale": "en",
         "public_updated_at": "2015-04-01T07:30:51Z",
         "title": "Embassy hosts Hague Convention mediation training",
