@@ -32,8 +32,7 @@
       "format": "date-time"
     },
     "first_published_at": {
-      "type": "string",
-      "format": "date-time"
+      "$ref": "#/definitions/first_published_at"
     },
     "publishing_app": {
       "$ref": "#/definitions/application_name"
