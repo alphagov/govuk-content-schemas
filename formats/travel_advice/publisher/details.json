@@ -86,8 +86,7 @@
       "type": "integer"
     },
     "publishing_request_id": {
-      "description": "A unique identifier used to track publishing requests to rendered content",
-      "type": "string"
+      "$ref": "#/definitions/publishing_request_id"
     }
   }
 }

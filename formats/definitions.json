@@ -442,6 +442,10 @@
       "description": "Path to email signup form. TODO: Check if can be switched to use links instead",
       "type": "string",
       "format": "uri"
+    },
+    "publishing_request_id": {
+      "description": "A unique identifier used to track publishing requests to rendered content",
+      "type": "string"
     }
   }
 }
