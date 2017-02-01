@@ -388,6 +388,11 @@
       "type": "string",
       "format": "date-time"
     },
+    "public_updated_at": {
+      "description": "When the content was last significantly changed, date shown to users",
+      "type": "string",
+      "format": "date-time"
+    },
     "tags": {
       "type": "object",
       "description": "Field used by email-alert-api to trigger email alerts for subscriptions to topics (gov.uk/topic) and policies (gov.uk/policies).",
