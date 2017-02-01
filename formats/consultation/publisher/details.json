@@ -9,7 +9,7 @@
   ],
   "properties": {
     "body": {
-      "type": "string"
+      "$ref": "#/definitions/body"
     },
     "opening_date": {
       "type": "string",

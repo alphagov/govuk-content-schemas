@@ -8,7 +8,7 @@
   ],
   "properties": {
     "body": {
-      "type": "string"
+      "$ref": "#/definitions/body"
     },
     "image": {
       "$ref": "#/definitions/image"

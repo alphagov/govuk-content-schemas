@@ -11,7 +11,7 @@
       "description": "Display the description on the page if true. This is needed for the service standard points."
     },
     "body": {
-      "type": "string"
+      "$ref": "#/definitions/body"
     },
     "withdrawn_notice": {
       "type": "object",
