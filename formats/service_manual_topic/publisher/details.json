@@ -29,16 +29,7 @@
       }
     },
     "withdrawn_notice": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "explanation": {
-          "type": "string"
-        },
-        "withdrawn_at": {
-          "format": "date-time"
-        }
-      }
+      "$ref": "#/definitions/withdrawn_notice"
     }
   }
 }
