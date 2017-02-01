@@ -437,6 +437,11 @@
           }
         }
       }
+    },
+    "email_signup_link": {
+      "description": "Path to email signup form. TODO: Check if can be switched to use links instead",
+      "type": "string",
+      "format": "uri"
     }
   }
 }
