@@ -11,8 +11,7 @@
       "format": "date-time"
     },
     "public_updated_at": {
-      "type": "string",
-      "format": "date-time"
+      "$ref": "#/definitions/public_updated_at"
     }
   }
 }
