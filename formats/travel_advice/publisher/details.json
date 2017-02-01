@@ -77,7 +77,7 @@
             "type": "string"
           },
           "body": {
-            "$ref": "#/definitions/multiple_content_types"
+            "$ref": "#/definitions/body_html_and_govspeak"
           }
         }
       }

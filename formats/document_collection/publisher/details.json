@@ -10,7 +10,7 @@
   ],
   "properties": {
     "body": {
-      "type": "string"
+      "$ref": "#/definitions/body"
     },
     "collection_groups": {
       "description": "The ordered list of collection groups",
@@ -28,7 +28,7 @@
             "type": "string"
           },
           "body": {
-            "type": "string"
+            "$ref": "#/definitions/body"
           },
           "documents": {
             "description": "An ordered list of documents in this collection group",

@@ -11,7 +11,7 @@
   ],
   "properties": {
     "body": {
-      "type": "string"
+      "$ref": "#/definitions/body"
     },
     "documents": {
       "type": "array",
