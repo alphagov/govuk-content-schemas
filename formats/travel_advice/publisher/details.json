@@ -50,8 +50,7 @@
       }
     },
     "email_signup_link": {
-      "type": "string",
-      "format": "uri"
+      "$ref": "#/definitions/email_signup_link"
     },
     "image": {
       "$ref": "#/definitions/asset_link"
