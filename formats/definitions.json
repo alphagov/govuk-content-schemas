@@ -387,6 +387,43 @@
       "description": "The date the content was first published",
       "type": "string",
       "format": "date-time"
+    },
+    "tags": {
+      "type": "object",
+      "description": "Field used by email-alert-api to trigger email alerts for subscriptions to topics (gov.uk/topic) and policies (gov.uk/policies).",
+      "additionalProperties": false,
+      "properties": {
+        "browse_pages": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "topics": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "primary_topic": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "additional_topics": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "policies": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
     }
   }
 }

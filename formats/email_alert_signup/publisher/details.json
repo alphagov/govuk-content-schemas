@@ -13,17 +13,7 @@
       "minProperties": 1,
       "properties": {
         "tags": {
-          "type": "object",
-          "description": "DEPRECATED: The tags used to match subscribers lists",
-          "additionalProperties": false,
-          "properties": {
-            "policies": {
-              "type": "array"
-            },
-            "topics": {
-              "type": "array"
-            }
-          }
+          "$ref": "#/definitions/tags"
         },
         "links": {
           "type": "object",

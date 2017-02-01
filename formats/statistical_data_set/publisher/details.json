@@ -19,28 +19,7 @@
       "$ref": "#/definitions/change_history"
     },
     "tags": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "browse_pages": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "topics": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "policies": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        }
-      }
+      "$ref": "#/definitions/tags"
     },
     "government": {
       "$ref": "#/definitions/government"
