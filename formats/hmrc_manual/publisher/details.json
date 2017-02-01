@@ -107,17 +107,7 @@
       }
     },
     "tags": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "topics": {
-          "description": "Slugs of the Manual's topics. An example of a topic slug is 'business-tax/vat'.",
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        }
-      }
+      "$ref": "#/definitions/tags"
     }
   }
 }
