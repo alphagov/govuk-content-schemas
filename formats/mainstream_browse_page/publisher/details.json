@@ -18,26 +18,7 @@
       "$ref": "#/definitions/guid_list"
     },
     "groups": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "additionalProperties": false,
-        "required": [
-          "name",
-          "contents"
-        ],
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "contents": {
-            "type": "array",
-            "items": {
-              "$ref": "#/definitions/absolute_path"
-            }
-          }
-        }
-      }
+      "$ref": "#/definitions/topic_groups"
     }
   }
 }
