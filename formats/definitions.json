@@ -265,6 +265,13 @@
         }
       }
     },
+    "asset_link_list": {
+      "description": "An ordered list of asset links",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/asset_link"
+      }
+    },
     "change_history": {
       "type": "array",
       "items": {
