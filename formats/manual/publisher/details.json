@@ -49,32 +49,7 @@
       }
     },
     "change_notes": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "additionalProperties": false,
-        "required": [
-          "base_path",
-          "title",
-          "change_note",
-          "published_at"
-        ],
-        "properties": {
-          "base_path": {
-            "$ref": "#/definitions/absolute_path"
-          },
-          "title": {
-            "type": "string"
-          },
-          "change_note": {
-            "type": "string"
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
-          }
-        }
-      }
+      "$ref": "#/definitions/manual_change_notes"
     },
     "organisations": {
       "$ref": "#/definitions/manual_organisations"
