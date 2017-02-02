@@ -696,6 +696,47 @@
         }
       }
     },
+    "hmrc_manual_breadcrumbs": {
+      "description": "Breadcrumbs for HMRC manuals based on section",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "base_path",
+          "section_id"
+        ],
+        "properties": {
+          "base_path": {
+            "$ref": "#/definitions/absolute_path"
+          },
+          "section_id": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "email_alert_signup_breadcrumbs": {
+      "description": "DEPRECATED. Breadcrumbs for email alert signup. Should use parent in links as other formats do.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "link",
+          "title"
+        ],
+        "properties": {
+          "link": {
+            "type": "string",
+            "format": "uri"
+          },
+          "title": {
+            "type": "string"
+          }
+        }
+      }
+    },
     "finder_document_noun": {
       "description": "How to refer to documents when presenting the search results",
       "type": "string"

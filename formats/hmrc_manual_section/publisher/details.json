@@ -11,23 +11,7 @@
       "type": "string"
     },
     "breadcrumbs": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "additionalProperties": false,
-        "required": [
-          "base_path",
-          "section_id"
-        ],
-        "properties": {
-          "base_path": {
-            "$ref": "#/definitions/absolute_path"
-          },
-          "section_id": {
-            "type": "string"
-          }
-        }
-      }
+      "$ref": "#/definitions/hmrc_manual_breadcrumbs"
     },
     "body": {
       "$ref": "#/definitions/body"
