@@ -44,24 +44,7 @@
       "$ref": "#/definitions/email_alert_signup_summary"
     },
     "breadcrumbs": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "additionalProperties": false,
-        "required": [
-          "link",
-          "title"
-        ],
-        "properties": {
-          "link": {
-            "type": "string",
-            "format": "uri"
-          },
-          "title": {
-            "type": "string"
-          }
-        }
-      }
+      "$ref": "#/definitions/email_alert_signup_breadcrumbs"
     },
     "govdelivery_title": {
       "type": "string"
