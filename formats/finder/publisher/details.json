@@ -8,14 +8,7 @@
   ],
   "properties": {
     "beta": {
-      "anyOf": [
-        {
-          "type": "boolean"
-        },
-        {
-          "type": "null"
-        }
-      ]
+      "$ref": "#/definitions/finder_beta"
     },
     "beta_message": {
       "anyOf": [
