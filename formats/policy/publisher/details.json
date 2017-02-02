@@ -8,8 +8,7 @@
   ],
   "properties": {
     "internal_name": {
-      "type": "string",
-      "description": "An internal name for admin interfaces. Includes parent."
+      "$ref": "#/definitions/taxonomy_internal_name"
     },
     "document_noun": {
       "type": "string"
