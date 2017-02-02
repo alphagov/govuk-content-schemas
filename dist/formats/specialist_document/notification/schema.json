@@ -953,6 +953,9 @@
             "peer_reviewed"
           ]
         },
+        "content_store_document_type": {
+          "type": "string"
+        },
         "country": {
           "type": "array",
           "items": {
