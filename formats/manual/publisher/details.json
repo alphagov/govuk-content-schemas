@@ -10,43 +10,7 @@
       "$ref": "#/definitions/body_html_and_govspeak"
     },
     "child_section_groups": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "additionalProperties": false,
-        "required": [
-          "title",
-          "child_sections"
-        ],
-        "properties": {
-          "title": {
-            "type": "string"
-          },
-          "child_sections": {
-            "type": "array",
-            "items": {
-              "required": [
-                "title",
-                "description",
-                "base_path"
-              ],
-              "additionalProperties": false,
-              "type": "object",
-              "properties": {
-                "title": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "base_path": {
-                  "$ref": "#/definitions/absolute_path"
-                }
-              }
-            }
-          }
-        }
-      }
+      "$ref": "#/definitions/manual_child_section_groups"
     },
     "change_notes": {
       "$ref": "#/definitions/manual_change_notes"
