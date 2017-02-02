@@ -11,6 +11,12 @@
     "public_updated_at"
   ],
   "properties": {
+    "content_store_document_type": {
+      "type": "string",
+      "enum": [
+        "dfid_research_output"
+      ]
+    },
     "document_type": {
       "type": "string",
       "enum": [
