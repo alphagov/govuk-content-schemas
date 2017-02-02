@@ -514,6 +514,19 @@
     "taxonomy_internal_name": {
       "type": "string",
       "description": "An internal name for taxonomy admin interfaces. Includes parent."
+    },
+    "manual_section_parent": {
+      "description": "The parent manual for a manual section",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "base_path"
+      ],
+      "properties": {
+        "base_path": {
+          "$ref": "#/definitions/absolute_path"
+        }
+      }
     }
   }
 }
