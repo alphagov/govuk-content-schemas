@@ -272,6 +272,13 @@
         "$ref": "#/definitions/asset_link"
       }
     },
+    "change_note": {
+      "description": "Change note for the most recent update",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
     "change_history": {
       "type": "array",
       "items": {

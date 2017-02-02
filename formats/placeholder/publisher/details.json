@@ -7,10 +7,7 @@
       "$ref": "#/definitions/analytics_identifier"
     },
     "change_note": {
-      "type": [
-        "string",
-        "null"
-      ]
+      "$ref": "#/definitions/change_note"
     },
     "start_date": {
       "type": "string",
