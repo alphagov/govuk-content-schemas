@@ -1,7 +1,7 @@
 {
   "base_path": "/government/world-location-news/cheveningbritish-library-fellowship-20162017",
   "content_id": "7cf2266f-a918-45a5-bec8-4b935aef4a76",
-  "document_type": "news_article",
+  "document_type": "world_location_news_article",
   "first_published_at": "2015-11-24T11:15:26.000+00:00",
   "format": "world_location_news_article",
   "locale": "en",
@@ -39,7 +39,7 @@
         "base_path": "/government/world-location-news/cheveningbritish-library-fellowship-20162017",
         "content_id": "7cf2266f-a918-45a5-bec8-4b935aef4a76",
         "description": "Chevening Secretariat announces the Chevening/British Library Fellowship",
-        "document_type": "news_article",
+        "document_type": "world_location_news_article",
         "locale": "en",
         "public_updated_at": "2015-11-24T11:15:26Z",
         "title": "Chevening/British Library Fellowship 2016/2017",

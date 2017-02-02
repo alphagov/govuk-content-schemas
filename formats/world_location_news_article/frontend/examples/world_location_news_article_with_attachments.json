@@ -1,7 +1,7 @@
 {
   "base_path": "/government/world-location-news/cameroon-womens-scholarship-20162017-edition-launched",
   "content_id": "33893d3f-0ed1-46f0-ba6b-747c6502c402",
-  "document_type": "news_article",
+  "document_type": "world_location_news_article",
   "first_published_at": "2016-09-13T16:21:09.000+00:00",
   "format": "world_location_news_article",
   "locale": "en",
@@ -39,7 +39,7 @@
         "base_path": "/government/world-location-news/cameroon-womens-scholarship-20162017-edition-launched",
         "content_id": "7cf2266f-a918-45a5-bec8-4b935aef4a76",
         "description": "British High Commission is looking for women with leadership potential to apply for the scholarship to pursue a master's degree in Cameroon.",
-        "document_type": "news_article",
+        "document_type": "world_location_news_article",
         "locale": "en",
         "public_updated_at": "2016-09-13T16:21:09.000+00:00",
         "title": "Cameroon Women's Scholarship 2016/2017 edition launched",
