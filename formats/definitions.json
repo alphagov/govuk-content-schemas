@@ -820,6 +820,17 @@
           "type": "null"
         }
       ]
+    },
+    "finder_beta": {
+      "description": "Indicates if finder is in beta. TODO: Switch to top-level phase label",
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ]
     }
   }
 }

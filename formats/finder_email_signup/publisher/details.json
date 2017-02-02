@@ -9,7 +9,7 @@
   ],
   "properties": {
     "beta": {
-      "type": "boolean"
+      "$ref": "#/definitions/finder_beta"
     },
     "email_signup_choice": {
       "type": "array",
