@@ -527,6 +527,30 @@
           "$ref": "#/definitions/absolute_path"
         }
       }
+    },
+    "manual_organisations": {
+      "description": "A manual’s organisations. TODO: Switch to use organisations in links",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "title",
+          "abbreviation",
+          "web_url"
+        ],
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "abbreviation": {
+            "type": "string"
+          },
+          "web_url": {
+            "type": "string"
+          }
+        }
+      }
     }
   }
 }
