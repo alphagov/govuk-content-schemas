@@ -22,16 +22,6 @@
     "first_public_at": {
       "$ref": "#/definitions/first_public_at"
     },
-    "change_note": {
-      "anyOf": [
-        {
-          "type": "string"
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
     "change_history": {
       "$ref": "#/definitions/change_history"
     },
