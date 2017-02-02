@@ -11,10 +11,7 @@
       "$ref": "#/definitions/body_html_and_govspeak"
     },
     "attachments": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/asset_link"
-      }
+      "$ref": "#/definitions/asset_link_list"
     },
     "metadata": {
       "$ref": "#/definitions/any_metadata"
