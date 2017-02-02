@@ -35,8 +35,7 @@
       }
     },
     "change_note": {
-      "type": "string",
-      "description": "The change note for this edition, as used by the email alert service"
+      "$ref": "#/definitions/change_note"
     },
     "change_history": {
       "$ref": "#/definitions/change_history"
