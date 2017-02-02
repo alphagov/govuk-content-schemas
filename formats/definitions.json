@@ -612,6 +612,89 @@
           }
         }
       }
+    },
+    "manual_child_section_groups": {
+      "description": "Grouped sections of a manual",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "title",
+          "child_sections"
+        ],
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "child_sections": {
+            "type": "array",
+            "items": {
+              "required": [
+                "title",
+                "description",
+                "base_path"
+              ],
+              "additionalProperties": false,
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "base_path": {
+                  "$ref": "#/definitions/absolute_path"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "hmrc_manual_child_section_groups": {
+      "description": "Grouped sections of an HMRC manual. Differs from manuals as section_id is required and group titles are optional.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "child_sections"
+        ],
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "child_sections": {
+            "type": "array",
+            "items": {
+              "required": [
+                "section_id",
+                "title",
+                "description",
+                "base_path"
+              ],
+              "additionalProperties": false,
+              "type": "object",
+              "properties": {
+                "section_id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "base_path": {
+                  "$ref": "#/definitions/absolute_path"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
