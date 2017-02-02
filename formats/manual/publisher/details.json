@@ -77,27 +77,7 @@
       }
     },
     "organisations": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "additionalProperties": false,
-        "required": [
-          "title",
-          "abbreviation",
-          "web_url"
-        ],
-        "properties": {
-          "title": {
-            "type": "string"
-          },
-          "abbreviation": {
-            "type": "string"
-          },
-          "web_url": {
-            "type": "string"
-          }
-        }
-      }
+      "$ref": "#/definitions/manual_organisations"
     }
   }
 }
