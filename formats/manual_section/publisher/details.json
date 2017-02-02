@@ -15,16 +15,7 @@
       "$ref": "#/definitions/asset_link_list"
     },
     "manual": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "base_path"
-      ],
-      "properties": {
-        "base_path": {
-          "$ref": "#/definitions/absolute_path"
-        }
-      }
+      "$ref": "#/definitions/manual_section_parent"
     },
     "organisations": {
       "type": "array",
