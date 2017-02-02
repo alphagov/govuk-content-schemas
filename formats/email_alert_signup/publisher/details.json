@@ -41,7 +41,7 @@
       ]
     },
     "summary": {
-      "type": "string"
+      "$ref": "#/definitions/email_alert_signup_summary"
     },
     "breadcrumbs": {
       "type": "array",
