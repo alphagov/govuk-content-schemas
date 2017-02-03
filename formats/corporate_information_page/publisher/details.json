@@ -8,35 +8,14 @@
   ],
   "properties": {
     "body": {
-      "type": "string"
+      "$ref": "#/definitions/body"
     },
     "organisation": {
       "description": "A single organisation that is the subject of this corporate information page",
       "$ref": "#/definitions/guid"
     },
     "tags": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "browse_pages": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "topics": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "policies": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        }
-      }
+      "$ref": "#/definitions/tags"
     }
   }
 }
