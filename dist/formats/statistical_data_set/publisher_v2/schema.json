@@ -160,9 +160,6 @@
         },
         "emphasised_organisations": {
           "$ref": "#/definitions/emphasised_organisations"
-        },
-        "withdrawn_notice": {
-          "$ref": "#/definitions/withdrawn_notice"
         }
       }
     },

@@ -255,9 +255,6 @@
         "tags": {
           "$ref": "#/definitions/tags"
         },
-        "withdrawn_notice": {
-          "$ref": "#/definitions/withdrawn_notice"
-        },
         "archive_notice": {
           "type": "object",
           "additionalProperties": false,
