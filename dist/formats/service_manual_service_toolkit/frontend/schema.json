@@ -30,12 +30,10 @@
       ]
     },
     "public_updated_at": {
-      "type": "string",
-      "format": "date-time"
+      "$ref": "#/definitions/public_updated_at"
     },
     "first_published_at": {
-      "type": "string",
-      "format": "date-time"
+      "$ref": "#/definitions/first_published_at"
     },
     "publishing_app": {
       "$ref": "#/definitions/application_name"
@@ -539,6 +537,20 @@
         }
       }
     },
+    "asset_link_list": {
+      "description": "An ordered list of asset links",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/asset_link"
+      }
+    },
+    "change_note": {
+      "description": "Change note for the most recent update",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
     "change_history": {
       "type": "array",
       "items": {
@@ -639,6 +651,510 @@
       "items": {
         "$ref": "#/definitions/guid"
       }
+    },
+    "body": {
+      "description": "The main content provided as HTML rendered from govspeak",
+      "type": "string"
+    },
+    "body_html_and_govspeak": {
+      "description": "The main content provided as HTML with the govspeak markdown it's rendered from",
+      "anyOf": [
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "attachments_with_thumbnails": {
+      "description": "An ordered list of attachments",
+      "type": "array",
+      "items": {
+        "description": "Generated HTML for each attachment including thumbnail and download link",
+        "type": "string"
+      }
+    },
+    "first_public_at": {
+      "description": "The date the content was first published. Used in details. Will be deprecated in favour of top level first_published_at when publishing API allows it to be edited.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "first_published_at": {
+      "description": "The date the content was first published",
+      "type": "string",
+      "format": "date-time"
+    },
+    "public_updated_at": {
+      "description": "When the content was last significantly changed, date shown to users",
+      "type": "string",
+      "format": "date-time"
+    },
+    "tags": {
+      "type": "object",
+      "description": "Field used by email-alert-api to trigger email alerts for subscriptions to topics (gov.uk/topic) and policies (gov.uk/policies).",
+      "additionalProperties": false,
+      "properties": {
+        "browse_pages": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "topics": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "primary_topic": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "additional_topics": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "policies": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "email_signup_link": {
+      "description": "Path to email signup form. TODO: Check if can be switched to use links instead",
+      "type": "string",
+      "format": "uri"
+    },
+    "publishing_request_id": {
+      "description": "A unique identifier used to track publishing requests to rendered content",
+      "type": "string"
+    },
+    "max_cache_time": {
+      "description": "The maximum length of time the content should be cached, in seconds",
+      "type": "integer"
+    },
+    "topic_groups": {
+      "description": "Lists of items with titles & paths in named groups, used for showing curated links on browse pages and topics",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "name",
+          "contents"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "description": "DEPRECATED",
+            "type": "string"
+          },
+          "contents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/absolute_path"
+            }
+          },
+          "content_ids": {
+            "description": "DEPRECATED",
+            "$ref": "#/definitions/guid_list"
+          }
+        }
+      }
+    },
+    "service_manual_topic_groups": {
+      "description": "Lists of items with titles & content IDs in named groups, used for service manual topic pages",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "name"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "content_ids": {
+            "$ref": "#/definitions/guid_list"
+          }
+        }
+      }
+    },
+    "taxonomy_internal_name": {
+      "type": "string",
+      "description": "An internal name for taxonomy admin interfaces. Includes parent."
+    },
+    "manual_section_parent": {
+      "description": "The parent manual for a manual section",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "base_path"
+      ],
+      "properties": {
+        "base_path": {
+          "$ref": "#/definitions/absolute_path"
+        }
+      }
+    },
+    "manual_organisations": {
+      "description": "A manual’s organisations. TODO: Switch to use organisations in links",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "title",
+          "abbreviation",
+          "web_url"
+        ],
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "abbreviation": {
+            "type": "string"
+          },
+          "web_url": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "hmrc_manual_change_notes": {
+      "description": "A history of changes to HMRC manuals and the associated section. section_id is included and required making it different to manual_change_notes",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "section_id",
+          "base_path",
+          "title",
+          "change_note",
+          "published_at"
+        ],
+        "properties": {
+          "section_id": {
+            "type": "string"
+          },
+          "base_path": {
+            "$ref": "#/definitions/absolute_path"
+          },
+          "title": {
+            "type": "string"
+          },
+          "change_note": {
+            "type": "string"
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      }
+    },
+    "manual_change_notes": {
+      "description": "A history of changes to manuals and the associated section",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "base_path",
+          "title",
+          "change_note",
+          "published_at"
+        ],
+        "properties": {
+          "base_path": {
+            "$ref": "#/definitions/absolute_path"
+          },
+          "title": {
+            "type": "string"
+          },
+          "change_note": {
+            "type": "string"
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      }
+    },
+    "manual_child_section_groups": {
+      "description": "Grouped sections of a manual",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "title",
+          "child_sections"
+        ],
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "child_sections": {
+            "type": "array",
+            "items": {
+              "required": [
+                "title",
+                "description",
+                "base_path"
+              ],
+              "additionalProperties": false,
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "base_path": {
+                  "$ref": "#/definitions/absolute_path"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "hmrc_manual_child_section_groups": {
+      "description": "Grouped sections of an HMRC manual. Differs from manuals as section_id is required and group titles are optional.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "child_sections"
+        ],
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "child_sections": {
+            "type": "array",
+            "items": {
+              "required": [
+                "section_id",
+                "title",
+                "description",
+                "base_path"
+              ],
+              "additionalProperties": false,
+              "type": "object",
+              "properties": {
+                "section_id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "base_path": {
+                  "$ref": "#/definitions/absolute_path"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "hmrc_manual_breadcrumbs": {
+      "description": "Breadcrumbs for HMRC manuals based on section",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "base_path",
+          "section_id"
+        ],
+        "properties": {
+          "base_path": {
+            "$ref": "#/definitions/absolute_path"
+          },
+          "section_id": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "email_alert_signup_breadcrumbs": {
+      "description": "DEPRECATED. Breadcrumbs for email alert signup. Should use parent in links as other formats do.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "link",
+          "title"
+        ],
+        "properties": {
+          "link": {
+            "type": "string",
+            "format": "uri"
+          },
+          "title": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "finder_document_noun": {
+      "description": "How to refer to documents when presenting the search results",
+      "type": "string"
+    },
+    "finder_default_documents_per_page": {
+      "description": "Specify this to paginate results",
+      "type": "integer"
+    },
+    "finder_default_order": {
+      "description": "Rummager fields to order the results by",
+      "type": "string"
+    },
+    "finder_filter": {
+      "description": "This is the fixed filter that scopes the finder",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "document_type": {
+          "type": "string"
+        },
+        "organisations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "policies": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "format": {
+          "type": "string"
+        }
+      }
+    },
+    "finder_reject_filter": {
+      "description": "A fixed filter that rejects documents which match the conditions",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "policies": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "finder_facets": {
+      "description": "The facets shown to the user to refine their search.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "key",
+          "filterable",
+          "display_as_result_metadata"
+        ],
+        "properties": {
+          "key": {
+            "description": "The rummager field name used for this facet.",
+            "type": "string"
+          },
+          "filterable": {
+            "description": "This must be true to show the facet to users.",
+            "type": "boolean"
+          },
+          "display_as_result_metadata": {
+            "description": "Include this in search result metadata. Can be set for non-filterable facets.",
+            "type": "boolean"
+          },
+          "name": {
+            "description": "Label for the facet.",
+            "type": "string"
+          },
+          "preposition": {
+            "description": "Text used to augment the description of the search when the facet is used.",
+            "type": "string"
+          },
+          "short_name": {
+            "type": "string"
+          },
+          "type": {
+            "description": "Defines the UI component and how the facet is queried from the search API",
+            "type": "string",
+            "enum": [
+              "text",
+              "date",
+              "topical"
+            ]
+          },
+          "allowed_values": {
+            "description": "Possible values to show for non-dynamic select facets. All values are shown regardless of the search.",
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/label_value_pair"
+            }
+          },
+          "open_value": {
+            "description": "Value that determines the open state (the key field is in the future) of a topical facet.",
+            "$ref": "#/definitions/label_value_pair"
+          },
+          "closed_value": {
+            "description": "Value that determines the closed state (the key field is in the past) of a topical facet.",
+            "$ref": "#/definitions/label_value_pair"
+          }
+        }
+      }
+    },
+    "finder_show_summaries": {
+      "type": "boolean"
+    },
+    "finder_summary": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "finder_beta": {
+      "description": "Indicates if finder is in beta. TODO: Switch to top-level phase label",
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "email_alert_signup_summary": {
+      "description": "TODO: Use top-level description instead",
+      "type": "string"
     }
   }
 }
