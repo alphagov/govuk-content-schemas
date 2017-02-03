@@ -10,11 +10,10 @@
   ],
   "properties": {
     "body": {
-      "type": "string"
+      "$ref": "#/definitions/body"
     },
     "first_public_at": {
-      "type": "string",
-      "format": "date-time"
+      "$ref": "#/definitions/first_public_at"
     },
     "speech_type_explanation": {
       "description": "Details about the type of speech",
@@ -47,28 +46,7 @@
       "$ref": "#/definitions/emphasised_organisations"
     },
     "tags": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "browse_pages": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "topics": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "policies": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        }
-      }
+      "$ref": "#/definitions/tags"
     }
   }
 }

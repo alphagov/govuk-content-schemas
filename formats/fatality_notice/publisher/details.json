@@ -10,11 +10,10 @@
   ],
   "properties": {
     "body": {
-      "type": "string"
+      "$ref": "#/definitions/body"
     },
     "first_public_at": {
-      "type": "string",
-      "format": "date-time"
+      "$ref": "#/definitions/first_public_at"
     },
     "change_history": {
       "$ref": "#/definitions/change_history"

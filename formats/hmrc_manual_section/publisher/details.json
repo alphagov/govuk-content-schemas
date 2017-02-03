@@ -11,103 +11,19 @@
       "type": "string"
     },
     "breadcrumbs": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "additionalProperties": false,
-        "required": [
-          "base_path",
-          "section_id"
-        ],
-        "properties": {
-          "base_path": {
-            "$ref": "#/definitions/absolute_path"
-          },
-          "section_id": {
-            "type": "string"
-          }
-        }
-      }
+      "$ref": "#/definitions/hmrc_manual_breadcrumbs"
     },
     "body": {
-      "type": "string"
+      "$ref": "#/definitions/body"
     },
     "manual": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "base_path"
-      ],
-      "properties": {
-        "base_path": {
-          "$ref": "#/definitions/absolute_path"
-        }
-      }
+      "$ref": "#/definitions/manual_section_parent"
     },
     "organisations": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "additionalProperties": false,
-        "required": [
-          "title",
-          "abbreviation",
-          "web_url"
-        ],
-        "properties": {
-          "title": {
-            "type": "string"
-          },
-          "abbreviation": {
-            "type": "string"
-          },
-          "web_url": {
-            "type": "string"
-          }
-        }
-      }
+      "$ref": "#/definitions/manual_organisations"
     },
     "child_section_groups": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "additionalProperties": false,
-        "required": [
-          "child_sections"
-        ],
-        "properties": {
-          "title": {
-            "type": "string"
-          },
-          "child_sections": {
-            "type": "array",
-            "items": {
-              "required": [
-                "section_id",
-                "title",
-                "description",
-                "base_path"
-              ],
-              "additionalProperties": false,
-              "type": "object",
-              "properties": {
-                "section_id": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "base_path": {
-                  "$ref": "#/definitions/absolute_path"
-                }
-              }
-            }
-          }
-        }
-      }
+      "$ref": "#/definitions/hmrc_manual_child_section_groups"
     }
   }
 }

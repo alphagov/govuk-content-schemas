@@ -50,8 +50,7 @@
       }
     },
     "email_signup_link": {
-      "type": "string",
-      "format": "uri"
+      "$ref": "#/definitions/email_signup_link"
     },
     "image": {
       "$ref": "#/definitions/asset_link"
@@ -77,18 +76,16 @@
             "type": "string"
           },
           "body": {
-            "$ref": "#/definitions/multiple_content_types"
+            "$ref": "#/definitions/body_html_and_govspeak"
           }
         }
       }
     },
     "max_cache_time": {
-      "description": "The maximum length of time the content should be cached, in seconds.",
-      "type": "integer"
+      "$ref": "#/definitions/max_cache_time"
     },
     "publishing_request_id": {
-      "description": "A unique identifier used to track publishing requests to rendered content",
-      "type": "string"
+      "$ref": "#/definitions/publishing_request_id"
     }
   }
 }

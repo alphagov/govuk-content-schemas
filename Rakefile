@@ -6,7 +6,16 @@ begin
 rescue LoadError
 end
 
-task build: [:reformat_authored_json, :validate_source_schemas, :clean, :combine_schemas, :validate_dist_schemas, :validate_uniqueness_of_frontend_example_base_paths, :validate_links, :validate_examples]
+task build: [
+              :reformat_authored_json,
+              :validate_shared_details_definitions,
+              :validate_source_schemas,
+              :clean, :combine_schemas,
+              :validate_dist_schemas,
+              :validate_uniqueness_of_frontend_example_base_paths,
+              :validate_links,
+              :validate_examples
+            ]
 
 desc "creates the folders and files for adding a new format"
 task :new_format, [:format_name] do |_task, args|

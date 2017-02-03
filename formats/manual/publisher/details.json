@@ -7,97 +7,16 @@
   ],
   "properties": {
     "body": {
-      "$ref": "#/definitions/multiple_content_types"
+      "$ref": "#/definitions/body_html_and_govspeak"
     },
     "child_section_groups": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "additionalProperties": false,
-        "required": [
-          "title",
-          "child_sections"
-        ],
-        "properties": {
-          "title": {
-            "type": "string"
-          },
-          "child_sections": {
-            "type": "array",
-            "items": {
-              "required": [
-                "title",
-                "description",
-                "base_path"
-              ],
-              "additionalProperties": false,
-              "type": "object",
-              "properties": {
-                "title": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "base_path": {
-                  "$ref": "#/definitions/absolute_path"
-                }
-              }
-            }
-          }
-        }
-      }
+      "$ref": "#/definitions/manual_child_section_groups"
     },
     "change_notes": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "additionalProperties": false,
-        "required": [
-          "base_path",
-          "title",
-          "change_note",
-          "published_at"
-        ],
-        "properties": {
-          "base_path": {
-            "$ref": "#/definitions/absolute_path"
-          },
-          "title": {
-            "type": "string"
-          },
-          "change_note": {
-            "type": "string"
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
-          }
-        }
-      }
+      "$ref": "#/definitions/manual_change_notes"
     },
     "organisations": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "additionalProperties": false,
-        "required": [
-          "title",
-          "abbreviation",
-          "web_url"
-        ],
-        "properties": {
-          "title": {
-            "type": "string"
-          },
-          "abbreviation": {
-            "type": "string"
-          },
-          "web_url": {
-            "type": "string"
-          }
-        }
-      }
+      "$ref": "#/definitions/manual_organisations"
     }
   }
 }

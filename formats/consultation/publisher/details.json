@@ -9,7 +9,7 @@
   ],
   "properties": {
     "body": {
-      "type": "string"
+      "$ref": "#/definitions/body"
     },
     "opening_date": {
       "type": "string",
@@ -32,8 +32,7 @@
       "type": "string"
     },
     "first_public_at": {
-      "type": "string",
-      "format": "date-time"
+      "$ref": "#/definitions/first_public_at"
     },
     "change_history": {
       "$ref": "#/definitions/change_history"
@@ -45,10 +44,7 @@
       "$ref": "#/definitions/emphasised_organisations"
     },
     "documents": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
+      "$ref": "#/definitions/attachments_with_thumbnails"
     },
     "ways_to_respond": {
       "type": "object",
@@ -76,10 +72,7 @@
       "type": "string"
     },
     "public_feedback_documents": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
+      "$ref": "#/definitions/attachments_with_thumbnails"
     },
     "final_outcome_publication_date": {
       "type": "string",
@@ -89,34 +82,10 @@
       "type": "string"
     },
     "final_outcome_documents": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
+      "$ref": "#/definitions/attachments_with_thumbnails"
     },
     "tags": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "browse_pages": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "topics": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "policies": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        }
-      }
+      "$ref": "#/definitions/tags"
     },
     "withdrawn_notice": {
       "$ref": "#/definitions/withdrawn_notice"

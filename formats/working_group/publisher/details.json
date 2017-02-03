@@ -7,7 +7,7 @@
       "type": "string"
     },
     "body": {
-      "type": "string"
+      "$ref": "#/definitions/body"
     }
   }
 }

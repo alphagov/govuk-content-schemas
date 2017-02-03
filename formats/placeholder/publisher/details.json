@@ -7,10 +7,7 @@
       "$ref": "#/definitions/analytics_identifier"
     },
     "change_note": {
-      "type": [
-        "string",
-        "null"
-      ]
+      "$ref": "#/definitions/change_note"
     },
     "start_date": {
       "type": "string",
@@ -59,51 +56,10 @@
       }
     },
     "external_related_links": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "required": [
-          "title",
-          "url"
-        ],
-        "properties": {
-          "title": {
-            "type": "string"
-          },
-          "url": {
-            "type": "string"
-          }
-        }
-      }
+      "$ref": "#/definitions/external_related_links"
     },
     "tags": {
-      "type": "object",
-      "properties": {
-        "browse_pages": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "primary_topic": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "additional_topics": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "topics": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        }
-      }
+      "$ref": "#/definitions/tags"
     }
   }
 }

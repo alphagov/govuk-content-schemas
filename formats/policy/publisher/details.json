@@ -8,86 +8,40 @@
   ],
   "properties": {
     "internal_name": {
-      "type": "string",
-      "description": "An internal name for admin interfaces. Includes parent."
+      "$ref": "#/definitions/taxonomy_internal_name"
     },
     "document_noun": {
-      "type": "string"
+      "$ref": "#/definitions/finder_document_noun"
     },
     "default_documents_per_page": {
-      "type": "integer"
+      "$ref": "#/definitions/finder_default_documents_per_page"
     },
     "email_signup_enabled": {
       "type": "boolean"
     },
     "default_order": {
-      "type": "string"
+      "$ref": "#/definitions/finder_default_order"
     },
     "emphasised_organisations": {
       "$ref": "#/definitions/emphasised_organisations"
     },
     "filter": {
-      "type": "object",
-      "additionalProperties": true
+      "$ref": "#/definitions/finder_filter"
     },
     "facets": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "additionalProperties": true,
-        "required": [
-          "key",
-          "filterable",
-          "display_as_result_metadata"
-        ],
-        "properties": {
-          "key": {
-            "type": "string"
-          },
-          "filterable": {
-            "type": "boolean"
-          },
-          "display_as_result_metadata": {
-            "type": "boolean"
-          },
-          "name": {
-            "type": "string"
-          },
-          "type": {
-            "type": "string"
-          },
-          "allowed_values": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "additionalProperties": false,
-              "required": [
-                "label",
-                "value"
-              ],
-              "properties": {
-                "label": {
-                  "type": "string"
-                },
-                "value": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        }
-      }
+      "$ref": "#/definitions/finder_facets"
     },
     "human_readable_finder_format": {
       "type": "string"
     },
     "show_summaries": {
-      "type": "boolean"
+      "$ref": "#/definitions/finder_show_summaries"
     },
     "summary": {
-      "type": "string"
+      "$ref": "#/definitions/finder_summary"
     },
     "nation_applicability": {
+      "description": "TODO: Switch to using national_applicability pattern",
       "type": "object",
       "additionalProperties": false,
       "required": [
