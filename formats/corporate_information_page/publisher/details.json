@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "body",
+    "organisation"
+  ],
+  "properties": {
+    "body": {
+      "$ref": "#/definitions/body"
+    },
+    "organisation": {
+      "description": "A single organisation that is the subject of this corporate information page",
+      "$ref": "#/definitions/guid"
+    },
+    "tags": {
+      "$ref": "#/definitions/tags"
+    }
+  }
+}
