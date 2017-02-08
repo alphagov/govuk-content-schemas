@@ -31,7 +31,11 @@
         "details": {
           "logo": {
             "formatted_title": "Environment Agency",
-            "crest": null
+            "crest": null,
+            "image": {
+              "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/organisation/logo/199/EAlogo.png",
+              "alt_text": "Environment Agency"
+            }
           }
         },
         "api_path": "/api/content/government/organisations/environment-agency",
