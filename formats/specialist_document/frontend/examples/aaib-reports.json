@@ -4,35 +4,35 @@
   "format": "specialist_document",
   "locale": "en",
   "details": {
-    "body": "<h2 id=\"summary\">Summary:</h2>\n<p>The gyroplane began to move forward against the brakes before sufficient rotor rpm had been achieved for takeoff.  The pilot responded by re-positioning the control stick fully aft and the rotors struck the tailplane.  The pilot lost directional control and the right landing gear subsequently failed, causing the gyroplane to tip onto its right side.  The pilot was uninjured.</p>\n\n<h3 id=\"download-report\">Download report:</h3>\n<p><a rel=\"external\" href=\"https://assets.digital.cabinet-office.gov.uk/media/559e25de40f0b61564000039/Rotorsport_UK_Calidus_G-PCPC_07-15.pdf\">Rotorsport UK Calidus G-PCPC 07-15</a> </p>\n\n<h3 id=\"download-glossary-of-abbreviations\">Download glossary of abbreviations:</h3>\n<p><a href=\"https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/433812/Glossary_of_abbreviations.pdf\">Glossary of abbreviations</a></p>\n\n",
-    "attachments": [
-      {
-        "url": "https://assets.digital.cabinet-office.gov.uk/media/513a0efbed915d425e000002/aaib-report-image.jpg",
-        "content_type": "application/jpeg",
-        "title": "aaib reports image title",
-        "created_at": "2015-02-11T13:45:00.000+00:00",
-        "updated_at": "2015-02-13T13:45:00.000+00:00"
-      },
-      {
-        "url": "https://assets.digital.cabinet-office.gov.uk/media/513a0efbed915d425e000002/aaib-report-pdf.pdf",
-        "content_type": "application/pdf",
-        "title": "aaib reports pdf title",
-        "created_at": "2015-02-11T13:45:00.000+00:00",
-        "updated_at": "2015-02-13T13:45:00.000+00:00"
-      }
-    ],
     "metadata": {
+      "date_of_occurrence": "2015-08-08",
       "aircraft_category": [
         "sport-aviation-and-balloons"
       ],
       "report_type": "correspondence-investigation",
-      "date_of_occurrence": "2015-08-08",
-      "bulk_published": false,
-      "aircraft_type": "Rotorsport UK Calidus",
       "location": "Damyns Hall Aerodrome, Essex",
-      "registration": "G-PCPC"
+      "aircraft_type": "Rotorsport UK Calidus",
+      "registration": "G-PCPC",
+      "bulk_published": false
     },
+    "change_history": [
+      {
+        "public_timestamp": "2015-07-09T08:17:10Z",
+        "note": "First published."
+      }
+    ],
+    "body": "<h2 id=\"summary\">Summary:</h2>\n<p>The gyroplane began to move forward against the brakes before sufficient rotor rpm had been achieved for takeoff.  The pilot responded by re-positioning the control stick fully aft and the rotors struck the tailplane.  The pilot lost directional control and the right landing gear subsequently failed, causing the gyroplane to tip onto its right side.  The pilot was uninjured.</p>\n\n<h3 id=\"download-report\">Download report:</h3>\n<p><a rel=\"external\" href=\"https://assets.digital.cabinet-office.gov.uk/media/559e25de40f0b61564000039/Rotorsport_UK_Calidus_G-PCPC_07-15.pdf\">Rotorsport UK Calidus G-PCPC 07-15</a> </p>\n\n<h3 id=\"download-glossary-of-abbreviations\">Download glossary of abbreviations:</h3>\n<p><a href=\"https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/433812/Glossary_of_abbreviations.pdf\">Glossary of abbreviations</a></p>\n\n",
     "max_cache_time": 10,
+    "attachments": [
+      {
+        "content_id": "bb227d96-abc7-4748-bd70-3029dba930bb",
+        "title": "Rotorsport UK Calidus G-PCPC 07-15",
+        "url": "https://assets.digital.cabinet-office.gov.uk/media/559e25de40f0b61564000039/Rotorsport_UK_Calidus_G-PCPC_07-15.pdf",
+        "updated_at": "2015-07-09T08:43:38Z",
+        "created_at": "2015-07-09T07:42:22Z",
+        "content_type": "application/pdf"
+      }
+    ],
     "headers": [
       {
         "text": "Summary:",
@@ -51,12 +51,6 @@
           }
         ]
       }
-    ],
-    "change_history": [
-      {
-        "note": "First published.",
-        "public_timestamp": "2015-07-09T08:17:10+00:00"
-      }
     ]
   },
   "base_path": "/aaib-reports/aaib-investigation-to-rotorsport-uk-calidus-g-pcpc",
@@ -66,5 +60,48 @@
   "schema_name": "specialist_document",
   "document_type": "aaib_report",
   "links": {
+    "organisations": [
+      {
+        "analytics_identifier": "OT248",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/air-accidents-investigation-branch",
+        "base_path": "/government/organisations/air-accidents-investigation-branch",
+        "content_id": "38eb5d8f-2d89-480c-8655-e2e7ac23f8f4",
+        "description": null,
+        "document_type": "organisation",
+        "locale": "en",
+        "public_updated_at": "2015-04-15T10:04:28Z",
+        "schema_name": "placeholder",
+        "title": "Air Accidents Investigation Branch",
+        "web_url": "https://www.gov.uk/government/organisations/air-accidents-investigation-branch",
+        "details": {
+          "brand": "department-for-transport",
+          "logo": {
+            "formatted_title": "Air Accidents<br/>Investigation Branch",
+            "crest": null
+          }
+        },
+        "links": {
+        },
+        "api_path": "/api/content/government/organisations/air-accidents-investigation-branch"
+      }
+    ],
+    "available_translations": [
+      {
+        "analytics_identifier": null,
+        "api_url": "https://www.gov.uk/api/content/aaib-reports/aaib-investigation-to-rotorsport-uk-calidus-g-pcpc",
+        "base_path": "/aaib-reports/aaib-investigation-to-rotorsport-uk-calidus-g-pcpc",
+        "content_id": "9854f859-3413-4d6d-b6d5-6a10cf2a9030",
+        "description": "Overturned after rotor struck tailplane during preparation for takeoff, Damyns Hall Aerodrome, Essex, 8 April 2015.",
+        "document_type": "aaib_report",
+        "locale": "en",
+        "public_updated_at": "2015-07-09T08:17:10Z",
+        "schema_name": "specialist_document",
+        "title": "AAIB investigation to Rotorsport UK Calidus, G-PCPC\t",
+        "web_url": "https://www.gov.uk/aaib-reports/aaib-investigation-to-rotorsport-uk-calidus-g-pcpc",
+        "api_path": "/api/content/aaib-reports/aaib-investigation-to-rotorsport-uk-calidus-g-pcpc",
+        "links": {
+        }
+      }
+    ]
   }
 }

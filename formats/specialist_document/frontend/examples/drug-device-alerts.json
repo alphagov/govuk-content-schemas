@@ -2,6 +2,7 @@
   "content_id": "23714fce-cd0f-45cf-abae-65eec4756981",
   "format": "specialist_document",
   "locale": "en",
+  "phase": "live",
   "base_path": "/drug-device-alerts/transwarmer-infant-transport-mattress-novaplus-transwarmer-infant-heat-therapy-mattress-with-warmgel-infant-heel-warmer-risk-of-serious-burn",
   "title": "TransWarmer infant transport mattress,  NovaPlus TransWarmer infant heat therapy mattress with WarmGel, infant heel warmer  - risk of serious burn",
   "description": "(CooperSurgical under different brand names) Risk of serious burn if device is used past its expiry date (MDA/2015/025)",
@@ -36,6 +37,7 @@
       "issued_date": "2015-07-06"
     },
     "max_cache_time": 10,
+    "temporary_update_type": false,
     "headers": [
       {
         "text": "Action",
@@ -128,9 +130,56 @@
       }
     ]
   },
+  "withdrawn_notice": {
+  },
   "public_updated_at": "2015-07-06T13:38:42+00:00",
   "schema_name": "specialist_document",
   "document_type": "medical_safety_alert",
   "links": {
+    "organisations": [
+      {
+        "analytics_identifier": "EA63",
+        "api_path": "/api/content/government/organisations/medicines-and-healthcare-products-regulatory-agency",
+        "base_path": "/government/organisations/medicines-and-healthcare-products-regulatory-agency",
+        "content_id": "240f72bd-9a4d-4f39-94d9-77235cadde8e",
+        "description": null,
+        "document_type": "organisation",
+        "locale": "en",
+        "public_updated_at": "2015-06-29T14:33:29Z",
+        "schema_name": "placeholder",
+        "title": "Medicines and Healthcare products Regulatory Agency",
+        "withdrawn": false,
+        "details": {
+          "brand": "department-of-health",
+          "logo": {
+            "formatted_title": "Medicines &amp; Healthcare products<br/>Regulatory Agency",
+            "crest": "single-identity"
+          }
+        },
+        "links": {
+        },
+        "api_url": "https://www.gov.uk/api/content/government/organisations/medicines-and-healthcare-products-regulatory-agency",
+        "web_url": "https://www.gov.uk/government/organisations/medicines-and-healthcare-products-regulatory-agency"
+      }
+    ],
+    "available_translations": [
+      {
+        "analytics_identifier": null,
+        "content_id": "aa7c4fb0-47dd-4335-b544-f2c50fdc804d",
+        "description": "(CooperSurgical under different brand names) Risk of serious burn if device is used past its expiry date (MDA/2015/025)",
+        "document_type": "medical_safety_alert",
+        "public_updated_at": "2015-07-06T13:38:42Z",
+        "schema_name": "specialist_document",
+        "title": "TransWarmer infant transport mattress,  NovaPlus TransWarmer infant heat therapy mattress with WarmGel, infant heel warmer  - risk of serious burn",
+        "base_path": "/drug-device-alerts/transwarmer-infant-transport-mattress-novaplus-transwarmer-infant-heat-therapy-mattress-with-warmgel-infant-heel-warmer-risk-of-serious-burn",
+        "locale": "en",
+        "api_path": "/api/content/drug-device-alerts/transwarmer-infant-transport-mattress-novaplus-transwarmer-infant-heat-therapy-mattress-with-warmgel-infant-heel-warmer-risk-of-serious-burn",
+        "withdrawn": false,
+        "api_url": "https://www.gov.uk/api/content/drug-device-alerts/transwarmer-infant-transport-mattress-novaplus-transwarmer-infant-heat-therapy-mattress-with-warmgel-infant-heel-warmer-risk-of-serious-burn",
+        "web_url": "https://www.gov.uk/drug-device-alerts/transwarmer-infant-transport-mattress-novaplus-transwarmer-infant-heat-therapy-mattress-with-warmgel-infant-heel-warmer-risk-of-serious-burn",
+        "links": {
+        }
+      }
+    ]
   }
 }
