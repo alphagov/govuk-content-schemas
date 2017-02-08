@@ -221,9 +221,6 @@
         },
         "tags": {
           "$ref": "#/definitions/tags"
-        },
-        "withdrawn_notice": {
-          "$ref": "#/definitions/withdrawn_notice"
         }
       }
     },
