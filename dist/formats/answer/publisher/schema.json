@@ -137,9 +137,6 @@
     "details": {
       "type": "object",
       "additionalProperties": false,
-      "required": [
-        "body"
-      ],
       "properties": {
         "body": {
           "$ref": "#/definitions/body_html_and_govspeak"
