@@ -1,0 +1,70 @@
+{
+  "analytics_identifier": null,
+  "base_path": "/national-curriculum",
+  "content_id": "be9f6021-f60a-47d2-a184-d1c31bc6eba0",
+  "document_type": "guide",
+  "first_published_at": "2017-02-16T15:29:04.000+00:00",
+  "format": "guide",
+  "locale": "en",
+  "need_ids": [
+
+  ],
+  "phase": "live",
+  "public_updated_at": "2014-12-02T10:28:58.000+00:00",
+  "publishing_app": "publisher",
+  "rendering_app": "frontend",
+  "schema_name": "guide",
+  "title": "The national curriculum ",
+  "updated_at": "2017-02-16T16:06:14.190Z",
+  "withdrawn_notice": {
+  },
+  "links": {
+    "available_translations": [
+      {
+        "title": "The national curriculum ",
+        "public_updated_at": "2014-12-02T10:28:58Z",
+        "analytics_identifier": null,
+        "document_type": "guide",
+        "schema_name": "guide",
+        "base_path": "/national-curriculum",
+        "description": "The national curriculum means primary and secondary school children study the same subjects to similar standards. It's split into key stages with tests.",
+        "api_path": "/api/content/national-curriculum",
+        "withdrawn": false,
+        "content_id": "be9f6021-f60a-47d2-a184-d1c31bc6eba0",
+        "locale": "en",
+        "api_url": "http://www.dev.gov.uk/api/content/national-curriculum",
+        "web_url": "http://www.dev.gov.uk/national-curriculum",
+        "links": {
+        }
+      }
+    ]
+  },
+  "description": "The national curriculum means primary and secondary school children study the same subjects to similar standards. It's split into key stages with tests.",
+  "details": {
+    "parts": [
+      {
+        "title": "Overview",
+        "slug": "overview",
+        "body": "<p>The national curriculum is a set of subjects and standards used by <a href=\"/types-of-school\" title=\"Types of school\">primary and secondary schools</a> so children learn the same things. It covers what subjects are taught and the standards children should reach in each subject.</p>\n\n<p>Other <a href=\"/types-of-school\" title=\"Types of school\">types of school</a> like <a href=\"/types-of-school/academies\" title=\"Academies\">academies</a> and <a href=\"/types-of-school/private-schools\" title=\"Private schools\">private schools</a> don’t have to follow the national curriculum. Academies must teach a broad and balanced curriculum including English, maths and science. They must also teach religious education.</p>\n\n<h2 id=\"key-stages\">Key stages</h2>\n\n<p>The national curriculum is organised into blocks of years called ‘key stages’ (KS). At the end of each key stage, your child’s teacher will formally assess their performance to measure your child’s progress.</p>\n\n<table>\n  <thead>\n    <tr>\n      <th>Age</th>\n      <th>Year</th>\n      <th>Key stage</th>\n      <th>Assessment</th>\n      <th>Average level of attainment</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>3-4</td>\n      <td> </td>\n      <td>Early years</td>\n      <td> </td>\n      <td> </td>\n    </tr>\n    <tr>\n      <td>4-5</td>\n      <td>Reception</td>\n      <td>Early years</td>\n      <td> </td>\n      <td> </td>\n    </tr>\n    <tr>\n      <td>5-6</td>\n      <td>Year 1</td>\n      <td>KS1</td>\n      <td> </td>\n      <td> </td>\n    </tr>\n    <tr>\n      <td>6-7</td>\n      <td>Year 2</td>\n      <td>KS1</td>\n      <td>Teacher assessments in English, maths and science</td>\n      <td>2</td>\n    </tr>\n    <tr>\n      <td>7-8</td>\n      <td>Year 3</td>\n      <td>KS2</td>\n      <td> </td>\n      <td> </td>\n    </tr>\n    <tr>\n      <td>8-9</td>\n      <td>Year 4</td>\n      <td>KS2</td>\n      <td> </td>\n      <td> </td>\n    </tr>\n    <tr>\n      <td>9-10</td>\n      <td>Year 5</td>\n      <td>KS2</td>\n      <td> </td>\n      <td> </td>\n    </tr>\n    <tr>\n      <td>10-11</td>\n      <td>Year 6</td>\n      <td>KS2</td>\n      <td>National tests and teacher assessments in English, maths and science</td>\n      <td>4</td>\n    </tr>\n    <tr>\n      <td>11-12</td>\n      <td>Year 7</td>\n      <td>KS3</td>\n      <td>Teacher assessments</td>\n      <td> </td>\n    </tr>\n    <tr>\n      <td>12-13</td>\n      <td>Year 8</td>\n      <td>KS3</td>\n      <td>Teacher assessments</td>\n      <td> </td>\n    </tr>\n    <tr>\n      <td>13-14</td>\n      <td>Year 9</td>\n      <td>KS3</td>\n      <td>Teacher assessments</td>\n      <td>5/6</td>\n    </tr>\n    <tr>\n      <td>14-15</td>\n      <td>Year 10</td>\n      <td>KS4</td>\n      <td>Some children take GCSEs</td>\n      <td> </td>\n    </tr>\n    <tr>\n      <td>15-16</td>\n      <td>Year 11</td>\n      <td>KS4</td>\n      <td>Most children take GCSEs or other national qualifications</td>\n      <td> </td>\n    </tr>\n  </tbody>\n</table>\n\n<h3 id=\"levels-of-attainment\">Levels of attainment</h3>\n\n<p>For each subject there’s a ‘programme of study’. It describes what children should learn. There are also ‘attainment targets’ - usually split into 8 levels for each subject. You’ll get a school report at the end of the year telling you what level your child is at. <a rel=\"external\" href=\"http://curriculum.qcda.gov.uk/index.aspx\" title=\"National Curriculum online\">Read more about what children will learn.</a></p>\n\n<h3 id=\"early-years\">Early years</h3>\n\n<p>The <a rel=\"external\" href=\"https://www.education.gov.uk/publications/standard/publicationDetail/Page1/DCSF-00261-2008\" title=\"Early Years Foundation Scheme\">Early Years Foundation Scheme</a> sets standards for the learning, development and care of children from birth to 5. It must be followed by all childminders, preschools and nurseries. It has levels of development most children can be expected to reach by age 5.</p>\n"
+      },
+      {
+        "title": "Other compulsory subjects",
+        "slug": "other-compulsory-subjects",
+        "body": "<p>There are other subjects children must study - these may not lead to exams:</p>\n\n<ul>\n  <li>careers education (year 9 onwards)</li>\n  <li>citizenship</li>\n  <li>information and communication technology (ICT)</li>\n  <li>physical education</li>\n  <li>sex and relationships education (year 7 onwards)</li>\n  <li>religious education</li>\n</ul>\n\n<h2 id=\"sex-and-relationship-education\">Sex and relationship education</h2>\n\n<p>Compulsory from age 11 onwards, sex and relationship education (<abbr title=\"Sex and relationship education\">SRE</abbr>) involves teaching children about reproduction, sexuality and sexual health. The importance of stable relationships (eg marriage) and family life are emphasised. <abbr title=\"Sex and relationship education\">SRE</abbr> doesn’t promote early sexual activity and it doesn’t promote any particular sexual orientation.</p>\n\n<p>Some elements of sex and relationship education are mandatory - these are part of the national curriculum for science. Parents can withdraw their children from all other parts of sex and relationship education if they want.</p>\n\n<h2 id=\"religious-education\">Religious education</h2>\n\n<p>Schools also have to teach religious education but parents can withdraw their children for all or part of the lessons. Local councils are responsible for deciding on a syllabus.</p>\n\n"
+      },
+      {
+        "title": "Key Stage 1 & 2",
+        "slug": "key-stage-1-2",
+        "body": "<p>Compulsory subjects:</p>\n\n<ul>\n  <li>English</li>\n  <li>Maths</li>\n  <li>Science</li>\n  <li>Design and technology</li>\n  <li>Information and Communication Technology (ICT)</li>\n  <li>History</li>\n  <li>Geography</li>\n  <li>Art and design</li>\n  <li>Music</li>\n  <li>Physical education (PE)</li>\n</ul>\n\n<p>Schools often also teach:</p>\n\n<ul>\n  <li>personal, social and health education (PSHE)</li>\n  <li>citizenship</li>\n  <li>modern foreign languages</li>\n</ul>\n\n<p><a rel=\"external\" href=\"http://curriculum.qcda.gov.uk/key-stages-1-and-2/subjects/index.aspx\" title=\"National curriculum online subjects\">Read about what children will learn at Key Stage 1 and 2.</a></p>\n\n<h2 id=\"tests\">Tests</h2>\n\n<h3 id=\"key-stage-1\">Key Stage 1</h3>\n\n<p>Key Stage 1 tests cover:</p>\n\n<ul>\n  <li>reading</li>\n  <li>writing</li>\n  <li>maths</li>\n  <li>science</li>\n</ul>\n\n<p>The tests are taken when the school chooses. You’ll get the results but they’re only used to help the teacher assess your child’s work.</p>\n\n<h3 id=\"key-stage-2\">Key Stage 2</h3>\n\n<p>Key Stage 2 tests cover:</p>\n\n<ul>\n  <li>English: reading, writing (including handwriting) and spelling</li>\n  <li>maths (including mental arithmetic)</li>\n  <li>science (only schools selected to participate in a national sample)</li>\n</ul>\n\n<p>The tests are taken on set days in mid-May and last under 5.5 hours. You will get the results of these tests.</p>\n"
+      },
+      {
+        "title": "Key Stage 3 & 4",
+        "slug": "key-stage-3-4",
+        "body": "<h2 id=\"tests\">Tests</h2>\n\n<h3 id=\"key-stage-3\">Key Stage 3</h3>\n\n<p>Compulsory subjects:</p>\n\n<ul>\n  <li>English</li>\n  <li>maths</li>\n  <li>science</li>\n  <li>history</li>\n  <li>geography</li>\n  <li>modern foreign languages</li>\n  <li>design and technology</li>\n  <li>Information and Communication Technology (ICT)</li>\n  <li>art and design</li>\n  <li>music</li>\n  <li>physical education</li>\n  <li>citizenship</li>\n  <li>religious education</li>\n</ul>\n\n<h3 id=\"key-stage-4\">Key Stage 4</h3>\n\n<p>During Key Stage 4 most pupils work towards national qualifications - usually GCSEs.</p>\n\n<p>Subjects children have to study:</p>\n\n<ul>\n  <li>English</li>\n  <li>maths</li>\n  <li>science</li>\n  <li>Information and Communication Technology (ICT)</li>\n  <li>physical education</li>\n  <li>citizenship</li>\n</ul>\n\n<p>Schools must also offer at least 1 subject from each of these areas:</p>\n\n<ul>\n  <li>arts</li>\n  <li>design and technology</li>\n  <li>humanities</li>\n  <li>modern foreign languages</li>\n</ul>\n"
+      }
+    ],
+    "external_related_links": [
+
+    ]
+  }
+}
