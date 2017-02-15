@@ -15,6 +15,7 @@ def dependentApplications = [
   'service-manual-frontend',
   'service-manual-publisher',
   'specialist-publisher',
+  'static',
   'whitehall',
 ]
 
