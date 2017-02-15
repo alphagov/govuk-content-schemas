@@ -337,6 +337,30 @@
         }
       }
     },
+    "parts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "title",
+          "slug",
+          "body"
+        ],
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "slug": {
+            "type": "string",
+            "format": "uri"
+          },
+          "body": {
+            "$ref": "#/definitions/body_html_and_govspeak"
+          }
+        }
+      }
+    },
     "political": {
       "type": "boolean",
       "description": "If the content is considered political in nature, reflecting views of the government it was published under."
