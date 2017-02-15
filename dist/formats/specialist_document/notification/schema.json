@@ -94,6 +94,7 @@
       "enum": [
         "aaib_report",
         "asylum_support_decision",
+        "business_finance_support_scheme",
         "cma_case",
         "countryside_stewardship_grant",
         "dfid_research_output",
@@ -1162,6 +1163,9 @@
           "$ref": "#/definitions/asylum_support_decision_metadata"
         },
         {
+          "$ref": "#/definitions/business_finance_support_scheme_metadata"
+        },
+        {
           "$ref": "#/definitions/cma_case_metadata"
         },
         {
@@ -1339,6 +1343,84 @@
           "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
         },
         "hidden_indexable_content": {
+          "type": "string"
+        }
+      }
+    },
+    "business_finance_support_scheme_metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "bulk_published": {
+          "type": "boolean"
+        },
+        "additional_information": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "continuation_link": {
+          "type": "string"
+        },
+        "eligibility": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "evaluation": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "max_employees": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "max_value": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "min_value": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "organiser": {
+          "type": "string"
+        },
+        "will_continue_on": {
           "type": "string"
         }
       }

@@ -16,6 +16,7 @@
       "enum": [
         "aaib_report",
         "asylum_support_decision",
+        "business_finance_support_scheme",
         "cma_case",
         "countryside_stewardship_grant",
         "dfid_research_output",
