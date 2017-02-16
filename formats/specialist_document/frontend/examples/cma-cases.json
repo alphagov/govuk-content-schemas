@@ -9,18 +9,20 @@
     "body": "<h2 id=\"statutory-timetable\">Statutory timetable</h2>\n\n<table>\n  <thead>\n    <tr>\n      <th>Phase 1 date</th>\n      <th>Action</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>7 September 2015</td>\n      <td>Deadline for phase 1 decision (*)</td>\n    </tr>\n    <tr>\n      <td>10 to 24 July 2015</td>\n      <td>Invitation to comment</td>\n    </tr>\n    <tr>\n      <td>10 July 2015</td>\n      <td>Launch of merger inquiry</td>\n    </tr>\n  </tbody>\n</table>\n\n<p>(*) This date is the current statutory deadline by when the decision will be announced. If any change occurs, the information is refreshed as soon as practicable. However, the CMA cannot guarantee that the decision will be announced on or before this current deadline, as the deadline of a given case may change during the merger assessment process due to different reasons.</p>\n\n<h2 id=\"phase-1\">Phase 1</h2>\n\n<h3 id=\"invitation-to-comment-closes-24-july-2015\">Invitation to comment: closes 24 July 2015</h3>\n\n<p>10 July 2015: The CMA is considering whether it is or may be the case that this transaction has resulted in the creation of a relevant merger situation under the merger provisions of the Enterprise Act 2002 and, if so, whether the creation of that situation has resulted, or may be expected to result, in a substantial lessening of competition within any market or markets in the United Kingdom for goods or services.</p>\n\n<h3 id=\"launch-of-cma-merger-inquiry\">Launch of CMA merger inquiry</h3>\n\n<p>10 July 2015: The CMA announced the launch of its merger inquiry by notice to the parties.</p>\n\n<ul>\n  <li><a rel=\"external\" href=\"https://assets.digital.cabinet-office.gov.uk/media/559fc1b240f0b61564000047/Richemont-Yoox-NAP_commencement_of_initial_period_notice.pdf\">Commencement of initial period notice</a> (10.7.15)</li>\n</ul>\n\n<h3 id=\"contact\">Contact</h3>\n\n<p>Please send written representations about any competition issues to:</p>\n\n<div class=\"address\"><div class=\"adr org fn\"><p>\n\nSuzanne Van Scheijen\n<br />Competition and Markets Authority \n<br />Victoria House \n<br />Southampton Row \n<br />London \n<br />WC1B 4AD\n<br />\n</p></div></div>\n\n<p><a href=\"&#109;&#097;&#105;&#108;&#116;&#111;:&#083;&#117;&#122;&#097;&#110;&#110;&#101;&#046;&#086;&#097;&#110;&#083;&#099;&#104;&#101;&#105;&#106;&#101;&#110;&#064;&#099;&#109;&#097;&#046;&#103;&#115;&#105;&#046;&#103;&#111;&#118;&#046;&#117;&#107;\">&#083;&#117;&#122;&#097;&#110;&#110;&#101;&#046;&#086;&#097;&#110;&#083;&#099;&#104;&#101;&#105;&#106;&#101;&#110;&#064;&#099;&#109;&#097;&#046;&#103;&#115;&#105;&#046;&#103;&#111;&#118;&#046;&#117;&#107;</a></p>\n",
     "attachments": [
       {
-        "url": "https://assets.digital.cabinet-office.gov.uk/media/513a0efbed915d425e000002/cma-cases-image.jpg",
-        "content_type": "application/jpeg",
-        "title": "cma-cases report image title",
-        "created_at": "2015-02-11T13:45:00.000+00:00",
-        "updated_at": "2015-02-13T13:45:00.000+00:00"
+        "content_id": "02338779-d8ce-4f9f-ae3c-dc21fb886219",
+        "title": "Commencement of initial period notice",
+        "url": "https://assets.digital.cabinet-office.gov.uk/media/559fc1b240f0b61564000047/Richemont-Yoox-NAP_commencement_of_initial_period_notice.pdf",
+        "updated_at": "2015-10-01T09:37:23Z",
+        "created_at": "2015-07-10T12:59:30Z",
+        "content_type": "application/pdf"
       },
       {
-        "url": "https://assets.digital.cabinet-office.gov.uk/media/513a0efbed915d425e000002/cma-cases-pdf.pdf",
-        "content_type": "application/pdf",
-        "title": "cma-cases report pdf title",
-        "created_at": "2015-02-11T13:45:00.000+00:00",
-        "updated_at": "2015-02-13T13:45:00.000+00:00"
+        "content_id": "5e099aef-0ea7-4af1-a1ee-0a12443079d8",
+        "title": "Full text decision",
+        "url": "https://assets.digital.cabinet-office.gov.uk/media/560cfe8940f0b6036a000001/Richemont_Yoox_Net-A-Porter_full_text_decision.pdf",
+        "updated_at": "2015-10-01T09:37:23Z",
+        "created_at": "2015-10-01T09:36:09Z",
+        "content_type": "application/pdf"
       }
     ],
     "metadata": {
@@ -30,10 +32,17 @@
       "market_sector": [
         "clothing-footwear-and-fashion"
       ],
+      "outcome_type": "mergers-phase-1-clearance",
       "opened_date": "2015-07-10",
       "closed_date": "2015-08-20"
     },
     "max_cache_time": 10,
+    "change_history": [
+      {
+        "note": "First published.",
+        "public_timestamp": "2015-07-10T13:09:46+00:00"
+      }
+    ],
     "headers": [
       {
         "text": "Statutory timetable",
@@ -62,17 +71,56 @@
           }
         ]
       }
-    ],
-    "change_history": [
-      {
-        "note": "First published.",
-        "public_timestamp": "2015-07-10T13:09:46+00:00"
-      }
     ]
   },
   "public_updated_at": "2015-07-10T13:09:46+00:00",
   "schema_name": "specialist_document",
   "document_type": "cma_case",
   "links": {
+    "organisations": [
+      {
+        "analytics_identifier": "D550",
+        "api_path": "/api/content/government/organisations/competition-and-markets-authority",
+        "base_path": "/government/organisations/competition-and-markets-authority",
+        "content_id": "957eb4ec-089b-4f71-ba2a-dc69ac8919ea",
+        "description": null,
+        "document_type": "organisation",
+        "locale": "en",
+        "public_updated_at": "2015-03-10T16:23:14Z",
+        "schema_name": "placeholder",
+        "title": "Competition and Markets Authority",
+        "withdrawn": false,
+        "details": {
+          "brand": "department-for-business-innovation-skills",
+          "logo": {
+            "formatted_title": "Competition and <br/>Markets Authority",
+            "crest": null
+          }
+        },
+        "links": {
+        },
+        "api_url": "https://www.gov.uk/api/content/government/organisations/competition-and-markets-authority",
+        "web_url": "https://www.gov.uk/government/organisations/competition-and-markets-authority"
+      }
+    ],
+    "available_translations": [
+      {
+        "analytics_identifier": null,
+        "content_id": "27210998-66fb-4ff7-8fa8-7115936d296a",
+        "description": "The CMA investigated the anticipated acquisition relating to Compagnie Financière Richemont S.A., Yoox S.p.A and The Net-A-Porter Group Limited. ",
+        "document_type": "cma_case",
+        "public_updated_at": "2015-10-01T11:00:38Z",
+        "schema_name": "specialist_document",
+        "title": "Richemont / Yoox / Net-A-Porter merger inquiry",
+        "base_path": "/cma-cases/richemont-yoox-net-a-porter-merger-inquiry",
+        "locale": "en",
+        "api_path": "/api/content/cma-cases/richemont-yoox-net-a-porter-merger-inquiry",
+        "withdrawn": false,
+        "api_url": "https://www.gov.uk/api/content/cma-cases/richemont-yoox-net-a-porter-merger-inquiry",
+        "web_url": "https://www.gov.uk/cma-cases/richemont-yoox-net-a-porter-merger-inquiry",
+        "links": {
+        }
+      }
+    ]
   }
 }
