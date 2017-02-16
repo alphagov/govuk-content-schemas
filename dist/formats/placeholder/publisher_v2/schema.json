@@ -220,6 +220,10 @@
                 null
               ],
               "description": "Used for organisations, to allow us to publish branding / logo information. Remove when organisations are migrated."
+            },
+            "image": {
+              "description": "An image for organisations that use a custom logo",
+              "$ref": "#/definitions/image"
             }
           }
         },

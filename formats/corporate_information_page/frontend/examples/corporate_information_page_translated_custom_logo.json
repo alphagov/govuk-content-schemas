@@ -39,7 +39,11 @@
           "brand": "department-for-business-innovation-skills",
           "logo": {
             "formatted_title": "Land Registry",
-            "crest": null
+            "crest": null,
+            "image": {
+              "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/organisation/logo/69/LR_logo_265.png",
+              "alt_text": "Land Registry"
+            }
           }
         }
       }
@@ -88,7 +92,11 @@
                 "brand": "department-for-business-innovation-skills",
                 "logo": {
                   "formatted_title": "Land Registry",
-                  "crest": null
+                  "crest": null,
+                  "image": {
+                    "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/organisation/logo/69/LR_logo_265.png",
+                    "alt_text": "Land Registry"
+                  }
                 }
               }
             }
