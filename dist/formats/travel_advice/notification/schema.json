@@ -279,27 +279,7 @@
           "$ref": "#/definitions/asset_link"
         },
         "parts": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "additionalProperties": false,
-            "required": [
-              "slug",
-              "title",
-              "body"
-            ],
-            "properties": {
-              "slug": {
-                "type": "string"
-              },
-              "title": {
-                "type": "string"
-              },
-              "body": {
-                "$ref": "#/definitions/body_html_and_govspeak"
-              }
-            }
-          }
+          "$ref": "#/definitions/parts"
         },
         "max_cache_time": {
           "$ref": "#/definitions/max_cache_time"
@@ -448,6 +428,30 @@
               "type": "null"
             }
           ]
+        }
+      }
+    },
+    "parts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "title",
+          "slug",
+          "body"
+        ],
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "slug": {
+            "type": "string",
+            "format": "uri"
+          },
+          "body": {
+            "$ref": "#/definitions/body_html_and_govspeak"
+          }
         }
       }
     },

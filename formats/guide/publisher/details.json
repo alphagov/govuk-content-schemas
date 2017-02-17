@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "parts": {
+      "description": "List of guide parts",
+      "$ref": "#/definitions/parts"
+    },
+    "external_related_links": {
+      "$ref": "#/definitions/external_related_links"
+    }
+  }
+}
