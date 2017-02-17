@@ -542,10 +542,6 @@
           "note": {
             "type": "string",
             "description": "A summary of the change"
-          },
-          "reason_for_change": {
-            "type": "string",
-            "description": "Why the change is being made. This is multiline text, and will be rendered inside <p> tags. Govspeak is not yet supported here."
           }
         },
         "required": [
