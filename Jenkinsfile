@@ -41,7 +41,7 @@ node {
       maxConcurrentPerNode: 1,
       maxConcurrentTotal: 0,
       paramsToUseForLimit: 'govuk-content-schemas',
-      throttleEnabled: true,
+      throttleEnabled: false,
       throttleOption: 'category'],
   ])
 
