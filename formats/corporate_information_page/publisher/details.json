@@ -16,6 +16,10 @@
     },
     "tags": {
       "$ref": "#/definitions/tags"
+    },
+    "corporate_information_groups": {
+      "description": "Groups of corporate information to display on about pages",
+      "$ref": "#/definitions/grouped_lists_of_links"
     }
   }
 }
