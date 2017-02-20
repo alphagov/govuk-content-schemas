@@ -13,18 +13,15 @@
     "change_history": [
       {
         "public_timestamp": "2015-10-07T08:17:10+00:00",
-        "note": "This is our latest change",
-        "reason_for_change": "This is the reason for our latest change"
+        "note": "This is our latest change"
       },
       {
         "public_timestamp": "2015-09-09T08:17:10+00:00",
-        "note": "This is another change",
-        "reason_for_change": "This is why we made this change\nand it has a second line of text"
+        "note": "This is another change"
       },
       {
         "public_timestamp": "2015-09-01T08:17:10+00:00",
-        "note": "Guidance first published",
-        "reason_for_change": ""
+        "note": "Guidance first published"
       }
     ]
   },
