@@ -227,6 +227,11 @@
         "body": {
           "$ref": "#/definitions/body"
         },
+        "poster_url": {
+          "type": "string",
+          "format": "uri",
+          "description": "URL to the service standard poster (absolute)"
+        },
         "change_history": {
           "$ref": "#/definitions/change_history"
         }
