@@ -8,14 +8,35 @@
 
     ],
     "metadata": {
-      "additional_information": "<p>Big issue Invest can also work with partner social investors to provide finance of over £3 million.</p>",
+      "business_sizes": [
+        "between-10-and-249",
+        "between-250-and-500",
+        "over-500",
+        "under-10"
+      ],
+      "business_stages": [
+        "established"
+      ],
       "continuation_link": "http://www.bigissueinvest.com",
-      "eligibility": "<p>Established social enterprises operating at least 24 months.</p>",
-      "evaluation": "",
+      "how_much_you_can_get": "£20,000 - £3,000,000",
+      "how_to_apply": null,
+      "industries": [
+        "business-and-finance",
+        "education",
+        "health",
+        "transport-and-distribution",
+        "travel-and-leisure",
+        "wholesale-and-retail"
+      ],
       "max_employees": null,
-      "max_value": 3000000,
-      "min_value": 20000,
       "organiser": "Big Issue Invest",
+      "types_of_support": [
+        "equity",
+        "finance",
+        "loan"
+      ],
+      "what_you_can_get": "<p>Big Issue Invest can also work with partner social investors to provide finance of over £3 million.</p>",
+      "who_it_is_for": "<p>Established social enterprises operating at least 24 months.</p>",
       "will_continue_on": "the Big Issue Invest website"
     },
     "max_cache_time": 10,
