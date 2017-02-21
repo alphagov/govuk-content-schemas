@@ -1432,21 +1432,34 @@
         "bulk_published": {
           "type": "boolean"
         },
-        "additional_information": {
-          "anyOf": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "null"
-            }
-          ]
+        "business_sizes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "between-10-and-249",
+              "between-250-and-500",
+              "over-500",
+              "under-10"
+            ]
+          }
+        },
+        "business_stages": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "established",
+              "not-yet-trading",
+              "start-up"
+            ]
+          }
         },
         "continuation_link": {
           "type": "string"
         },
-        "eligibility": {
-          "anyOf": [
+        "how_much_you_can_get": {
+          "oneOf": [
             {
               "type": "string"
             },
@@ -1455,8 +1468,8 @@
             }
           ]
         },
-        "evaluation": {
-          "anyOf": [
+        "how_to_apply": {
+          "oneOf": [
             {
               "type": "string"
             },
@@ -1464,29 +1477,33 @@
               "type": "null"
             }
           ]
+        },
+        "industries": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "agriculture-and-food",
+              "business-and-finance",
+              "construction",
+              "education",
+              "health",
+              "hospitality-and-catering",
+              "information-technology-digital-and-creative",
+              "manufacturing",
+              "mining",
+              "real-estate-and-property",
+              "science-and-technology",
+              "service-industries",
+              "transport-and-distribution",
+              "travel-and-leisure",
+              "utilities-providers",
+              "wholesale-and-retail"
+            ]
+          }
         },
         "max_employees": {
-          "anyOf": [
-            {
-              "type": "integer"
-            },
-            {
-              "type": "null"
-            }
-          ]
-        },
-        "max_value": {
-          "anyOf": [
-            {
-              "type": "integer"
-            },
-            {
-              "type": "null"
-            }
-          ]
-        },
-        "min_value": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -1496,10 +1513,58 @@
           ]
         },
         "organiser": {
-          "type": "string"
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "types_of_support": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "equity",
+              "expertise-and-advice",
+              "finance",
+              "grant",
+              "loan",
+              "recognition-award"
+            ]
+          }
+        },
+        "what_you_can_get": {
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "who_it_is_for": {
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
         },
         "will_continue_on": {
-          "type": "string"
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
         }
       }
     },
