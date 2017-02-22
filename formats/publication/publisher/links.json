@@ -7,6 +7,10 @@
       "$ref": "#/definitions/guid_list"
     },
     "related_policies": {
+      "$ref": "#/definitions/guid_list",
+      "description": "DEPRECATED use policies instead. @gpeng will remove"
+    },
+    "policies": {
       "$ref": "#/definitions/guid_list"
     },
     "related_statistical_data_sets": {
