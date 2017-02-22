@@ -150,10 +150,6 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "children": {
-          "description": "Any child topics",
-          "$ref": "#/definitions/guid_list"
-        },
         "linked_items": {
           "description": "Includes all content ids referenced in 'details'. This is a temporary measure to expand content ids for frontends which is planned to be replaced by a dependency resolution service.",
           "$ref": "#/definitions/guid_list"

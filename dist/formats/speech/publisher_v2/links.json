@@ -15,9 +15,6 @@
           "$ref": "#/definitions/guid_list",
           "maxItems": 1
         },
-        "policies": {
-          "$ref": "#/definitions/guid_list"
-        },
         "ministers": {
           "$ref": "#/definitions/guid_list"
         },

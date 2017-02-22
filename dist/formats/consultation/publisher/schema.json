@@ -228,9 +228,6 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "policies": {
-          "$ref": "#/definitions/guid_list"
-        },
         "ministers": {
           "$ref": "#/definitions/guid_list"
         },
