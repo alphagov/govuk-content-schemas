@@ -1458,26 +1458,6 @@
         "continuation_link": {
           "type": "string"
         },
-        "how_much_you_can_get": {
-          "oneOf": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "null"
-            }
-          ]
-        },
-        "how_to_apply": {
-          "oneOf": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "null"
-            }
-          ]
-        },
         "industries": {
           "type": "array",
           "items": {
@@ -1502,26 +1482,6 @@
             ]
           }
         },
-        "max_employees": {
-          "oneOf": [
-            {
-              "type": "integer"
-            },
-            {
-              "type": "null"
-            }
-          ]
-        },
-        "organiser": {
-          "oneOf": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "null"
-            }
-          ]
-        },
         "types_of_support": {
           "type": "array",
           "items": {
@@ -1535,26 +1495,6 @@
               "recognition-award"
             ]
           }
-        },
-        "what_you_can_get": {
-          "oneOf": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "null"
-            }
-          ]
-        },
-        "who_it_is_for": {
-          "oneOf": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "null"
-            }
-          ]
         },
         "will_continue_on": {
           "oneOf": [
