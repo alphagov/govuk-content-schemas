@@ -18,6 +18,7 @@ def dependentApplications = [
   'manuals-publisher',
   'policy-publisher',
   'publisher',
+  'publishing-api',
   'service-manual-frontend',
   'service-manual-publisher',
   'specialist-frontend',
