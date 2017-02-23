@@ -124,6 +124,12 @@
         },
         "child_taxons": {
           "$ref": "#/definitions/frontend_links"
+        },
+        "topic_content": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "mainstream_browse_content": {
+          "$ref": "#/definitions/frontend_links"
         }
       }
     },
