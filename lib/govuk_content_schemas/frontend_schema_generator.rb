@@ -40,6 +40,14 @@ class GovukContentSchemas::FrontendSchemaGenerator
     # Content items that are linked to with a `parent_taxon` link type will automatically
     # have a `child_taxon` link type with those items.
     "child_taxons",
+
+    # Content items that are linked to as a `topic` will automatically have a
+    # `topic_content` link type with those items.
+    "topic_content",
+
+    # Content items that are linked to as a `mainstream_browse_page` will automatically
+    # have a `mainstream_browse_content` link type with those items.
+    "mainstream_browse_content",
   ].freeze
 
   CHANGE_HISTORY_REQUIRED = ['specialist_document'].freeze

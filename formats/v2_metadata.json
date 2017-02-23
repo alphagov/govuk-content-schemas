@@ -58,6 +58,16 @@
             "required": [
               "child_taxons"
             ]
+          },
+          {
+            "required": [
+              "topic_content"
+            ]
+          },
+          {
+            "required": [
+              "mainstream_browse_content"
+            ]
           }
         ]
       }
