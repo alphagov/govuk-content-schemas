@@ -3,7 +3,7 @@
   "public_updated_at": "2016-11-08T12:55:20+00:00",
   "locale": "en",
   "details": {
-    "body": "Big Issue Invest helps scale up social enterprises and charities throughout the UK by providing loans and investments.\n\n## How much you can get\n\n£20,000 - £3,000,000",
+    "body": "<p>Big Issue Invest helps scale up social enterprises and charities throughout the UK by providing loans and investments.</p>\n\n<h2 id=\"more-testing\">How much you can get</h2>\n\n<p>£20,000 - £3,000,000</p>\n",
     "attachments": [
 
     ],
@@ -31,7 +31,7 @@
         "finance",
         "loan"
       ],
-      "will_continue_on": "the Big Issue Invest website"
+      "will_continue_on": "on the Big Issue Invest website"
     },
     "max_cache_time": 10,
     "change_history": [
