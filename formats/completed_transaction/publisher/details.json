@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "external_related_links": {
+      "$ref": "#/definitions/external_related_links"
+    },
+    "promotion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "category",
+        "url"
+      ],
+      "properties": {
+        "category": {
+          "enum": [
+            "organ_donor",
+            "register_to_vote"
+          ]
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    }
+  }
+}
