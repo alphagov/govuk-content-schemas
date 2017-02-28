@@ -63,10 +63,14 @@ private
     end
   end
 
-  def merge_schemas(base_schema, other)
+  def merge_schemas(base_schema, *others)
     merged_schema = embeddable_schema(base_schema)
-    other = embeddable_schema(other)
-    merged_schema["properties"] = merged_schema["properties"].merge(other["properties"])
+
+    other_properties = others.map do |other|
+      embeddable_schema(other)["properties"]
+    end
+
+    merged_schema["properties"].merge!(other_properties.reduce({}, :merge))
     merged_schema
   end
 
