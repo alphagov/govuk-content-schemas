@@ -4,6 +4,7 @@ RSpec.describe GovukContentSchemas::SchemaCombiner do
   let(:metadata_schema) { build_schema("metadata.json", properties: build_string_properties("body")) }
   let(:definitions) { build_schema("definitions.json", definitions: build_string_properties("def1")) }
   let(:base_links) { build_schema("base_links.json", properties: build_ref_properties(["mainstream_browse_pages"], "guid_list")) }
+  let(:edition_links) { build_schema("edition_links.json", properties: build_ref_properties(["finder"], "guid_list")) }
   let(:format_name) { "my_format" }
 
   let(:schemas) {
@@ -168,7 +169,7 @@ RSpec.describe GovukContentSchemas::SchemaCombiner do
     end
   end
 
-  context "combining metadata and details for a v2 schema" do
+  context "combining metadata, details and edition links for a v2 schema" do
     let(:metadata_schema) {
       build_schema("metadata.json",
                    properties: build_string_properties("body"),
@@ -183,8 +184,8 @@ RSpec.describe GovukContentSchemas::SchemaCombiner do
       build_schema("details.json", properties: build_string_properties("detail"))
     }
 
-    let(:links_schema) {
-      build_schema("links.json", properties: build_string_properties("organisations"))
+    let(:edition_links_schema) {
+      build_schema("edition_links.json", properties: build_string_properties("organisations"))
     }
 
     let(:definitions) {
@@ -196,7 +197,8 @@ RSpec.describe GovukContentSchemas::SchemaCombiner do
         definitions: definitions,
         metadata: metadata_schema,
         v2_metadata: v2_metadata,
-        details: details_schema
+        details: details_schema,
+        edition_links: edition_links_schema,
       }, format_name).combined
     end
 
@@ -208,8 +210,8 @@ RSpec.describe GovukContentSchemas::SchemaCombiner do
       expect(combined.schema["definitions"]).to include("def1", "def2")
     end
 
-    it "doesn't merge the links schema" do
-      expect(combined.schema).not_to have_key("links")
+    it "has the edition links" do
+      expect(combined.schema["definitions"]).to include("links")
     end
 
     it "merges in v2 required properties" do

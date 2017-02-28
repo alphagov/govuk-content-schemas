@@ -53,14 +53,15 @@ private
   end
 
   def add_links(schema, target)
-    return unless schemas.key?(:base_links)
+    base_links = schemas[:base_links]
+    edition_links = schemas[:edition_links]
+    linkset_links = schemas[:links]
+
+    order = [edition_links, linkset_links, base_links].compact
+    return if order.empty?
 
     schema[target] = {} unless schema.key?(target)
-    if schemas.key?(:links)
-      schema[target]["links"] = merge_schemas(schemas[:links], schemas.fetch(:base_links))
-    else
-      schema[target]["links"] = embeddable_schema(schemas.fetch(:base_links))
-    end
+    schema[target]["links"] = merge_schemas(*order)
   end
 
   def merge_schemas(base_schema, *others)
