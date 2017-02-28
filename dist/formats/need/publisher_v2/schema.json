@@ -120,52 +120,7 @@
       ]
     },
     "links": {
-      "type": "object",
-      "patternProperties": {
-        "^[a-z_]+$": {
-          "$ref": "#/definitions/guid_list"
-        }
-      },
-      "description": "Links associated with a particular edition of a document.",
-      "not": {
-        "anyOf": [
-          {
-            "required": [
-              "available_translations"
-            ]
-          },
-          {
-            "required": [
-              "children"
-            ]
-          },
-          {
-            "required": [
-              "policies"
-            ]
-          },
-          {
-            "required": [
-              "document_collections"
-            ]
-          },
-          {
-            "required": [
-              "child_taxons"
-            ]
-          },
-          {
-            "required": [
-              "topic_content"
-            ]
-          },
-          {
-            "required": [
-              "mainstream_browse_content"
-            ]
-          }
-        ]
-      }
+      "$ref": "#/definitions/links"
     },
     "document_type": {
       "type": "string"
@@ -249,6 +204,12 @@
           "type": "integer",
           "description": "Number of user contacts received about this need each year. Includes calls to contact centres, emails, customer service tickets"
         }
+      }
+    },
+    "links": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
       }
     },
     "absolute_path": {

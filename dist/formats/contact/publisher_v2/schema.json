@@ -313,6 +313,12 @@
         }
       }
     },
+    "links": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+      }
+    },
     "absolute_path": {
       "type": "string",
       "pattern": "^/(([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})+(/([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)*)?$",
