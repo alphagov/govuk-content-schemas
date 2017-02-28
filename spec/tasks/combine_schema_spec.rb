@@ -31,7 +31,8 @@ RSpec.describe "combine_schemas" do
         definitions: reader.read(project_root.join("formats/definitions.json")),
         details: build_schema("details.json", properties: build_string_properties("detail")),
         links: build_schema("links.json", properties: build_string_properties("links")),
-        base_links: reader.read(project_root.join("formats/base_links.json"))
+        base_links: reader.read(project_root.join("formats/base_links.json")),
+        base_edition_links: reader.read(project_root.join("formats/base_edition_links.json")),
       }
     }
 
@@ -84,7 +85,7 @@ RSpec.describe "combine_schemas" do
 
         specify "the schema.json file contains the combined schemas" do
           expected = GovukContentSchemas::SchemaCombiner.new(
-            slice_hash(schemas, :definitions, :metadata, :v2_metadata, :details),
+            slice_hash(schemas, :definitions, :metadata, :v2_metadata, :details, :base_edition_links),
             format_name
           ).combined
 
@@ -127,7 +128,7 @@ RSpec.describe "combine_schemas" do
 
         specify "the schema.json file contains the combined schemas" do
           expected = GovukContentSchemas::SchemaCombiner.new(
-            slice_hash(schemas, :definitions, :metadata, :details),
+            slice_hash(schemas, :definitions, :metadata, :details, :base_edition_links),
             format_name
           ).combined
 

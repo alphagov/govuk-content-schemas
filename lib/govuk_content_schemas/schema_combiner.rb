@@ -53,11 +53,18 @@ private
   end
 
   def add_links(schema, target)
-    base_links = schemas[:base_links]
-    edition_links = schemas[:edition_links]
+    base_linkset_links = schemas[:base_links]
     linkset_links = schemas[:links]
+    base_edition_links = schemas[:base_edition_links]
+    edition_links = schemas[:edition_links]
 
-    order = [edition_links, linkset_links, base_links].compact
+    order = [
+      edition_links,
+      linkset_links,
+      base_edition_links,
+      base_linkset_links
+    ].compact
+
     return if order.empty?
 
     schema[target] = {} unless schema.key?(target)
