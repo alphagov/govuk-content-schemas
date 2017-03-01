@@ -163,7 +163,7 @@
         "api_path": "/api/content/government/topics/business-and-enterprise"
       }
     ],
-    "policies": [
+    "related_policies": [
       {
         "analytics_identifier": null,
         "content_id": "5d37d041-7631-11e4-a3cb-005056011aef",

@@ -83,9 +83,6 @@
         "related_policies": {
           "$ref": "#/definitions/frontend_links"
         },
-        "policies": {
-          "$ref": "#/definitions/frontend_links"
-        },
         "world_locations": {
           "$ref": "#/definitions/frontend_links"
         },
@@ -120,6 +117,9 @@
           "$ref": "#/definitions/frontend_links"
         },
         "children": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "policies": {
           "$ref": "#/definitions/frontend_links"
         },
         "document_collections": {

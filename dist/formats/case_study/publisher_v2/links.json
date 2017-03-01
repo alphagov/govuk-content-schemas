@@ -11,10 +11,6 @@
       "additionalProperties": false,
       "properties": {
         "related_policies": {
-          "$ref": "#/definitions/guid_list",
-          "description": "DEPRECATED use policies instead. @gpeng will remove"
-        },
-        "policies": {
           "$ref": "#/definitions/guid_list"
         },
         "world_locations": {
