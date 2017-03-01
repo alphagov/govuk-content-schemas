@@ -28,11 +28,11 @@ def sources_for_v1_schema(filename)
   )
 end
 
-def sources_for_v2_details(filename)
+def sources_for_v2_schema(filename)
   Rake::FileList.new(
-    "formats/definitions.json",
+    "formats/{definitions,base_edition_links}.json",
     metadata_sources(filename),
-    filename.pathmap("%{^dist/,}p").pathmap("%{_v2,}d/details.json")
+    filename.pathmap("%{^dist/,}p").pathmap("%{_v2,}d/{details,edition_links}.json")
   )
 end
 
@@ -96,7 +96,7 @@ combine_frontend_schemas = ->(task) do
 end
 
 rule %r{^dist/formats/.*/publisher/schema.json} => ->(f) { sources_for_v1_schema(f) }, &combine_publisher_schemas
-rule %r{^dist/formats/.*/publisher_v2/schema.json} => ->(f) { sources_for_v2_details(f) }, &combine_publisher_schemas
+rule %r{^dist/formats/.*/publisher_v2/schema.json} => ->(f) { sources_for_v2_schema(f) }, &combine_publisher_schemas
 rule %r{^dist/formats/.*/publisher_v2/links.json} => ->(f) { sources_for_v2_links(f) }, &combine_publisher_schemas
 
 rule %r{^dist/formats/.*/frontend/schema.json} => ->(f) { sources_for_frontend_schema(f) }, &combine_frontend_schemas
@@ -117,7 +117,7 @@ task combine_publisher_schemas: %i{
   combine_publisher_v2_links
 }
 
-task :announce_combining_schemas do 
+task :announce_combining_schemas do
   print "Combining (generating) schemas... "
 end
 

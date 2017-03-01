@@ -25,52 +25,7 @@
       ]
     },
     "links": {
-      "type": "object",
-      "patternProperties": {
-        "^[a-z_]+$": {
-          "$ref": "#/definitions/guid_list"
-        }
-      },
-      "description": "Links associated with a particular edition of a document.",
-      "not": {
-        "anyOf": [
-          {
-            "required": [
-              "available_translations"
-            ]
-          },
-          {
-            "required": [
-              "children"
-            ]
-          },
-          {
-            "required": [
-              "policies"
-            ]
-          },
-          {
-            "required": [
-              "document_collections"
-            ]
-          },
-          {
-            "required": [
-              "child_taxons"
-            ]
-          },
-          {
-            "required": [
-              "topic_content"
-            ]
-          },
-          {
-            "required": [
-              "mainstream_browse_content"
-            ]
-          }
-        ]
-      }
+      "$ref": "#/definitions/links"
     },
     "change_note": {
       "type": [
