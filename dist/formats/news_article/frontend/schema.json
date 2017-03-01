@@ -80,6 +80,9 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "related_policies": {
+          "$ref": "#/definitions/frontend_links"
+        },
         "policies": {
           "$ref": "#/definitions/frontend_links"
         },
