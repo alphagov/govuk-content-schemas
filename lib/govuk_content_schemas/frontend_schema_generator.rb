@@ -99,7 +99,10 @@ private
 
     properties = properties.merge(
       "links" => frontend_links,
-      "format" => { "type" => "string" },
+      "format" => {
+        "type" => "string",
+        "description" => "DEPRECATED: use `document_type` instead. This field will be removed."
+      },
       "updated_at" => updated_at,
       "base_path" => { "$ref" => "#/definitions/absolute_path" }
     )

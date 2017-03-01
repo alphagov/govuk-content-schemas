@@ -152,7 +152,8 @@
       ]
     },
     "format": {
-      "type": "string"
+      "type": "string",
+      "description": "DEPRECATED: use `document_type` instead. This field will be removed."
     },
     "updated_at": {
       "type": "string",
