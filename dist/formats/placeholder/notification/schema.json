@@ -98,7 +98,8 @@
       "description": "Should be of the form 'placeholder_my_format_name'. 'placeholder' is allowed for backwards compatibility."
     },
     "format": {
-      "type": "string"
+      "type": "string",
+      "description": "DEPRECATED: use `document_type` instead. This field will be removed."
     },
     "updated_at": {
       "type": "string",
