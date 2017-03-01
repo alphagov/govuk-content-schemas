@@ -83,6 +83,9 @@
         "speaker": {
           "$ref": "#/definitions/frontend_links"
         },
+        "related_policies": {
+          "$ref": "#/definitions/frontend_links"
+        },
         "policies": {
           "$ref": "#/definitions/frontend_links"
         },
