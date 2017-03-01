@@ -169,6 +169,11 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "finder": {
+          "description": "The finder for this specialist document.",
+          "$ref": "#/definitions/guid_list",
+          "maxItems": 1
+        }
       }
     },
     "absolute_path": {
