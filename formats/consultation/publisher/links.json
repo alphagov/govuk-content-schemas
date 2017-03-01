@@ -3,8 +3,12 @@
   "type": "object",
   "additionalProperties": false,
   "properties": {
-    "policies": {
+    "related_policies": {
       "$ref": "#/definitions/guid_list"
+    },
+    "policies": {
+      "$ref": "#/definitions/guid_list",
+      "description": "DEPRECATED in favour of `related_policies`. @gpeng will remove"
     },
     "ministers": {
       "$ref": "#/definitions/guid_list"
