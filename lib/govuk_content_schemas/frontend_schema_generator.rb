@@ -103,6 +103,14 @@ private
         "type" => "string",
         "description" => "DEPRECATED: use `document_type` instead. This field will be removed."
       },
+      "navigation_document_supertype" => {
+        "type" => "string",
+        "description" => "Document type grouping powering the new taxonomy-based navigation pages",
+      },
+      "whitehall_document_supertype" => {
+        "type" => "string",
+        "description" => "Document type grouping intended to power the Whitehall finders and email subscriptions",
+      },
       "updated_at" => updated_at,
       "base_path" => { "$ref" => "#/definitions/absolute_path" }
     )
