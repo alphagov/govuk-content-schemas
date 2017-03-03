@@ -225,6 +225,12 @@
             "description": "Indicates whether the item has been unpublished as withdrawn, https://github.com/alphagov/publishing-api/blob/master/doc/model.md#workflow",
             "type": "boolean"
           },
+          "country": {
+            "$ref": "#/definitions/country"
+          },
+          "change_description": {
+            "type": "string"
+          },
           "links": {
             "type": "object",
             "patternProperties": {
@@ -1239,6 +1245,28 @@
     "email_alert_signup_summary": {
       "description": "TODO: Use top-level description instead",
       "type": "string"
+    },
+    "country": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "slug",
+        "name"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "slug": {
+          "type": "string"
+        },
+        "synonyms": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
     }
   }
 }
