@@ -15,7 +15,7 @@ def dependentApplications = [
   'hmrc-manuals-api',
   'licencefinder',
   'manuals-frontend',
-  'manuals-publisher',
+  // 'manuals-publisher', Currently broken: https://github.com/alphagov/manuals-publisher/issues/816
   'policy-publisher',
   'publisher',
   'publishing-api',
