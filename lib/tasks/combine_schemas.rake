@@ -82,16 +82,30 @@ combine_frontend_schemas = ->(task) do
     file.puts JSON.pretty_generate(frontend_schema)
   end
 
+  # Create "notification" variant
   notification_schema_filename = task.name.gsub("frontend", "notification")
   FileUtils.mkdir_p(notification_schema_filename.pathmap("%d"))
 
-  notification_schema = frontend_schema
+  notification_schema = frontend_schema.dup
   notification_base = schema_reader.read("formats/notification_base.json").schema
   notification_schema["properties"].merge!(notification_base["properties"])
   notification_schema["required"] = (notification_schema["required"] + notification_base["required"]).uniq.sort
 
   File.open(notification_schema_filename, "w") do |file|
     file.puts JSON.pretty_generate(notification_schema)
+  end
+
+  # Create "content_store_publish" variant
+  content_store_publish_schema_filename = task.name.gsub("frontend", "content_store_publish")
+  FileUtils.mkdir_p(content_store_publish_schema_filename.pathmap("%d"))
+
+  content_store_publish_schema = frontend_schema.dup
+  content_store_publish_base = schema_reader.read("formats/content_store_publish_base.json").schema
+  content_store_publish_schema["properties"].merge!(content_store_publish_base["properties"])
+  content_store_publish_schema["required"] = (content_store_publish_schema["required"] + content_store_publish_base["required"] - %w[links]).uniq.sort
+
+  File.open(content_store_publish_schema_filename, "w") do |file|
+    file.puts JSON.pretty_generate(content_store_publish_schema)
   end
 end
 
