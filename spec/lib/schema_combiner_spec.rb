@@ -43,14 +43,6 @@ RSpec.describe GovukContentSchemas::SchemaCombiner do
       expect(combined.uri).to eq(metadata_schema.uri)
     end
 
-    context "without a document_types schema" do
-      it "allows any string in the document_type field" do
-        expect(combined.schema["properties"]["document_type"]).to eq(
-          "type" => "string",
-        )
-      end
-    end
-
     context "with a document_types schema" do
       let(:document_types) {
         {
