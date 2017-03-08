@@ -116,5 +116,7 @@ stage("Check dependent projects against updated schema") {
     }
   }
 
+  dependentBuilds.failFast = true
+
   parallel dependentBuilds
 }
