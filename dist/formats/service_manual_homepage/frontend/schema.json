@@ -86,6 +86,9 @@
         "ordered_related_items": {
           "$ref": "#/definitions/frontend_links"
         },
+        "ordered_related_items_overrides": {
+          "$ref": "#/definitions/frontend_links"
+        },
         "mainstream_browse_pages": {
           "$ref": "#/definitions/frontend_links"
         },
