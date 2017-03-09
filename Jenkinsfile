@@ -3,28 +3,28 @@
 REPOSITORY = 'govuk-content-schemas'
 
 def dependentApplications = [
-  'businesssupportfinder',
-  'contacts',
-  'contacts-frontend',
-  'collections',
-  'collections-publisher',
-  'content-tagger',
-  'email-alert-frontend',
-  'email-alert-service',
-  'finder-frontend',
-  'hmrc-manuals-api',
-  'licencefinder',
-  'manuals-frontend',
-  'manuals-publisher',
-  'policy-publisher',
-  'publisher',
+  //'businesssupportfinder',
+  //'contacts',
+  //'contacts-frontend',
+  //'collections',
+  //'collections-publisher',
+  //'content-tagger',
+  //'email-alert-frontend',
+  //'email-alert-service',
+  //'finder-frontend',
+  //'hmrc-manuals-api',
+  //'licencefinder',
+  //'manuals-frontend',
+  //'manuals-publisher',
+  //'policy-publisher',
+  //'publisher',
   'publishing-api',
   'service-manual-frontend',
   'service-manual-publisher',
   'specialist-frontend',
   'specialist-publisher',
   'static',
-  'whitehall',
+  //'whitehall',
 ]
 
 node {
@@ -104,7 +104,7 @@ stage("Check dependent projects against updated schema") {
     def app = dependentApp
 
     dependentBuilds[app] = {
-      build job: "${app}/deployed-to-production",
+      def result = build job: "${app}/deployed-to-production",
         parameters: [
           [$class: 'BooleanParameterValue',
             name: 'IS_SCHEMA_TEST',
@@ -112,7 +112,14 @@ stage("Check dependent projects against updated schema") {
           [$class: 'StringParameterValue',
             name: 'SCHEMA_BRANCH',
             value: env.BRANCH_NAME],
-        ]
+        ],
+        propagate: false
+
+      println "Downstream job ${app} had result ${result.result}"
+      if (result.result == 'FAILED') {
+        println "Setting current result"
+        currentBuild.result = 'UNSTABLE'
+      }
     }
   }
 
