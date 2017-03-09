@@ -17,20 +17,7 @@
       "$ref": "#/definitions/multiple_content_types"
     },
     "country": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "slug",
-        "name"
-      ],
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "slug": {
-          "type": "string"
-        }
-      }
+      "$ref": "#/definitions/country"
     },
     "updated_at": {
       "type": "string",

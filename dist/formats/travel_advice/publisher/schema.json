@@ -152,20 +152,7 @@
           "$ref": "#/definitions/multiple_content_types"
         },
         "country": {
-          "type": "object",
-          "additionalProperties": false,
-          "required": [
-            "slug",
-            "name"
-          ],
-          "properties": {
-            "name": {
-              "type": "string"
-            },
-            "slug": {
-              "type": "string"
-            }
-          }
+          "$ref": "#/definitions/country"
         },
         "updated_at": {
           "type": "string",
@@ -1208,6 +1195,28 @@
     "email_alert_signup_summary": {
       "description": "TODO: Use top-level description instead",
       "type": "string"
+    },
+    "country": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "slug",
+        "name"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "slug": {
+          "type": "string"
+        },
+        "synonyms": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
     }
   }
 }

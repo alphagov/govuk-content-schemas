@@ -5,93 +5,192 @@
   "description": "Latest travel advice by country including safety and security, entry requirements, travel warnings and health",
   "details": {
     "email_signup_link": "https://public.govdelivery.com/accounts/UKGOVUK/subscriber/topics?qsp=TRAVEL",
-    "countries": [
-      {
-        "name": "Afghanistan",
-        "base_path": "/foreign-travel-advice/afghanistan",
-        "updated_at": "2016-01-01T00:00:00+00:00",
-        "public_updated_at": "2015-01-01T00:00:00+00:00",
-        "change_description": "Latest update: Summary - on 26 October 2015 a serious earthquake struck causing casualties around the country and affecting communications networks; if someone you know is likely to have been involved and you're unable to contact them, contact the British Embassy in Kabul",
-        "synonyms": [
-
-        ]
-      },
-      {
-        "name": "Austria",
-        "base_path": "/foreign-travel-advice/austria",
-        "updated_at": "2016-01-02T00:00:00+00:00",
-        "public_updated_at": "2015-01-02T00:00:00+00:00",
-        "change_description": "Latest update: Summary – there’s ongoing disruption to rail and road transport; you should monitor local media and check with your transport provider or the Austrian Railways (OBB) website",
-        "synonyms": [
-
-        ]
-      },
-      {
-        "name": "Finland",
-        "base_path": "/foreign-travel-advice/finland",
-        "updated_at": "2016-01-03T00:00:00+00:00",
-        "public_updated_at": "2015-01-03T00:00:00+00:00",
-        "change_description": "Latest update: Summary – removal of advice on Northern Ireland football match",
-        "synonyms": [
-          "arctic"
-        ]
-      },
-      {
-        "name": "India",
-        "base_path": "/foreign-travel-advice/india",
-        "updated_at": "2016-01-04T00:00:00+00:00",
-        "public_updated_at": "2015-01-04T00:00:00+00:00",
-        "change_description": "Latest update: Summary – removal of advice on Assam floods and the curfew in Srinagar ",
-        "synonyms": [
-
-        ]
-      },
-      {
-        "name": "Malaysia",
-        "base_path": "/foreign-travel-advice/malaysia",
-        "updated_at": "2016-01-05T00:00:00+00:00",
-        "public_updated_at": "2015-01-05T00:00:00+00:00",
-        "change_description": "Latest update: Summary - haze can cause disruption to local, regional air travel and to government and private schools",
-        "synonyms": [
-          "Borneo"
-        ]
-      },
-      {
-        "name": "São Tomé and Principe",
-        "base_path": "/foreign-travel-advice/sao-tome-and-principe",
-        "updated_at": "2016-11-17T17:28:21Z",
-        "public_updated_at": "2015-12-08T17:02:23Z",
-        "change_description": "Latest update: Entry requirements section - British nationals don’t need a visa to visit Sao Tome and Principe for up to 15 days; for longer stays, you should get a visa before you travel",
-        "synonyms": [
-          "Sao Tome and Principe",
-          "Sao Tome & Principe"
-        ]
-      },
-      {
-        "name": "Spain",
-        "base_path": "/foreign-travel-advice/spain",
-        "updated_at": "2016-01-06T00:00:00+00:00",
-        "public_updated_at": "2015-01-06T00:00:00+00:00",
-        "change_description": "Latest update: Summary – information and advice for Manchester City fans travelling to Seville ",
-        "synonyms": [
-          "Ibiza",
-          "Majorca",
-          "Mallorca",
-          "Lanzarote",
-          "Barcelona",
-          "Benidorm",
-          "Tenerife",
-          "Canary Islands",
-          "Canaries",
-          "Gran Canaria"
-        ]
-      }
-    ],
     "max_cache_time": 10,
     "publishing_request_id": "2546-1460985144476-19268198-3242"
   },
   "format": "travel_advice_index",
   "links": {
+    "children": [
+      {
+        "analytics_identifier": null,
+        "api_path": "/api/content/foreign-travel-advice/afghanistan",
+        "base_path": "/foreign-travel-advice/afghanistan",
+        "content_id": "5a292f20-a9b6-46ea-b35f-584f8b3d7392",
+        "description": "Latest travel advice for Afghanistan including safety and security, entry requirements, travel warnings and health",
+        "document_type": "travel_advice",
+        "locale": "en",
+        "public_updated_at": "2015-01-01T00:00:00+00:00",
+        "schema_name": "travel_advice",
+        "title": "Afghanistan travel advice",
+        "withdrawn": false,
+        "country": {
+          "slug": "afghanistan",
+          "name": "Afghanistan",
+          "synonyms": [
+
+          ]
+        },
+        "change_description": "Latest update: Summary - on 26 October 2015 a serious earthquake struck causing casualties around the country and affecting communications networks; if someone you know is likely to have been involved and you're unable to contact them, contact the British Embassy in Kabul",
+        "links": {
+        },
+        "api_url": "http://www.dev.gov.uk/api/content/foreign-travel-advice/afghanistan",
+        "web_url": "http://www.dev.gov.uk/foreign-travel-advice/afghanistan"
+      },
+      {
+        "analytics_identifier": null,
+        "api_path": "/api/content/foreign-travel-advice/austria",
+        "base_path": "/foreign-travel-advice/austria",
+        "content_id": "b662d0a3-c20d-4167-8056-b9c7d058d860",
+        "description": "Latest travel advice for Austria including safety and security, entry requirements, travel warnings and health",
+        "document_type": "travel_advice",
+        "locale": "en",
+        "public_updated_at": "2015-01-02T00:00:00+00:00",
+        "schema_name": "travel_advice",
+        "title": "Austria travel advice",
+        "withdrawn": false,
+        "country": {
+          "slug": "austria",
+          "name": "Austria",
+          "synonyms": [
+
+          ]
+        },
+        "change_description": "Latest update: Summary – there’s ongoing disruption to rail and road transport; you should monitor local media and check with your transport provider or the Austrian Railways (OBB) website",
+        "links": {
+        },
+        "api_url": "http://www.dev.gov.uk/api/content/foreign-travel-advice/austria",
+        "web_url": "http://www.dev.gov.uk/foreign-travel-advice/austria"
+      },
+      {
+        "analytics_identifier": null,
+        "api_path": "/api/content/foreign-travel-advice/finland",
+        "base_path": "/foreign-travel-advice/finland",
+        "content_id": "f14f4107-1731-4dd8-a890-8defe459e15a",
+        "description": "Latest travel advice for Finland including safety and security, entry requirements, travel warnings and health",
+        "document_type": "travel_advice",
+        "locale": "en",
+        "public_updated_at": "2015-01-03T00:00:00+00:00",
+        "schema_name": "travel_advice",
+        "title": "Finland travel advice",
+        "withdrawn": false,
+        "country": {
+          "slug": "finland",
+          "name": "Finland",
+          "synonyms": [
+            "arctic"
+          ]
+        },
+        "change_description": "Latest update: Summary – removal of advice on Northern Ireland football match",
+        "links": {
+        },
+        "api_url": "http://www.dev.gov.uk/api/content/foreign-travel-advice/finland",
+        "web_url": "http://www.dev.gov.uk/foreign-travel-advice/finland"
+      },
+      {
+        "analytics_identifier": null,
+        "api_path": "/api/content/foreign-travel-advice/india",
+        "base_path": "/foreign-travel-advice/india",
+        "content_id": "ea7e300b-24dd-40af-afde-fd690a2df678",
+        "description": "Latest travel advice for India including safety and security, entry requirements, travel warnings and health",
+        "document_type": "travel_advice",
+        "locale": "en",
+        "public_updated_at": "2015-01-04T00:00:00+00:00",
+        "schema_name": "travel_advice",
+        "title": "India travel advice",
+        "withdrawn": false,
+        "country": {
+          "slug": "india",
+          "name": "India",
+          "synonyms": [
+
+          ]
+        },
+        "change_description": "Latest update: Summary – removal of advice on Assam floods and the curfew in Srinagar ",
+        "links": {
+        },
+        "api_url": "http://www.dev.gov.uk/api/content/foreign-travel-advice/india",
+        "web_url": "http://www.dev.gov.uk/foreign-travel-advice/india"
+      },
+      {
+        "analytics_identifier": null,
+        "api_path": "/api/content/foreign-travel-advice/malaysia",
+        "base_path": "/foreign-travel-advice/malaysia",
+        "content_id": "126d47f7-5fd2-41ff-af17-b23564355e03",
+        "description": "Latest travel advice for Malaysia including safety and security, entry requirements, travel warnings and health",
+        "document_type": "travel_advice",
+        "locale": "en",
+        "public_updated_at": "2015-01-05T00:00:00+00:00",
+        "schema_name": "travel_advice",
+        "title": "Malaysia travel advice",
+        "withdrawn": false,
+        "country": {
+          "slug": "malaysia",
+          "name": "Malaysia",
+          "synonyms": [
+            "Borneo"
+          ]
+        },
+        "change_description": "Latest update: Summary - haze can cause disruption to local, regional air travel and to government and private schools",
+        "api_url": "http://www.dev.gov.uk/api/content/foreign-travel-advice/malaysia",
+        "web_url": "http://www.dev.gov.uk/foreign-travel-advice/malaysia"
+      },
+      {
+        "analytics_identifier": null,
+        "api_path": "/api/content/foreign-travel-advice/sao-tome-and-principe",
+        "base_path": "/foreign-travel-advice/sao-tome-and-principe",
+        "content_id": "a3605d0c-bf86-41f9-9f50-7bd577052c4c",
+        "description": "Latest travel advice for São Tomé and Principe including safety and security, entry requirements, travel warnings and health",
+        "document_type": "travel_advice",
+        "locale": "en",
+        "public_updated_at": "2015-12-08T17:02:23Z",
+        "schema_name": "travel_advice",
+        "title": "Sao Tome & Principe travel advice",
+        "withdrawn": false,
+        "country": {
+          "slug": "sao-tome-and-principe",
+          "name": "São Tomé and Principe",
+          "synonyms": [
+            "Sao Tome and Principe",
+            "Sao Tome & Principe"
+          ]
+        },
+        "change_description": "Latest update: Entry requirements section - British nationals don’t need a visa to visit Sao Tome and Principe for up to 15 days; for longer stays, you should get a visa before you travel",
+        "api_url": "http://www.dev.gov.uk/api/content/foreign-travel-advice/sao-tome-and-principe",
+        "web_url": "http://www.dev.gov.uk/foreign-travel-advice/sao-tome-and-principe"
+      },
+      {
+        "analytics_identifier": null,
+        "api_path": "/api/content/foreign-travel-advice/spain",
+        "base_path": "/foreign-travel-advice/spain",
+        "content_id": "24df0bb1-0ca1-4675-9237-528ecd3d17a5",
+        "description": "Latest travel advice for Spain including safety and security, entry requirements, travel warnings and health",
+        "document_type": "travel_advice",
+        "locale": "en",
+        "public_updated_at": "2015-01-06T00:00:00+00:00",
+        "schema_name": "travel_advice",
+        "title": "Spain travel advice",
+        "withdrawn": false,
+        "country": {
+          "slug": "spain",
+          "name": "Spain",
+          "synonyms": [
+            "Ibiza",
+            "Majorca",
+            "Mallorca",
+            "Lanzarote",
+            "Barcelona",
+            "Benidorm",
+            "Tenerife",
+            "Canary Islands",
+            "Canaries",
+            "Gran Canaria"
+          ]
+        },
+        "change_description": "Latest update: Summary – information and advice for Manchester City fans travelling to Seville ",
+        "api_url": "http://www.dev.gov.uk/api/content/foreign-travel-advice/spain",
+        "web_url": "http://www.dev.gov.uk/foreign-travel-advice/spain"
+      }
+    ],
     "mainstream_browse_pages": [
       {
         "content_id": "b9849cd6-61a7-42dc-8124-362d2c7d48b0",

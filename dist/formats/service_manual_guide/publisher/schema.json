@@ -1187,6 +1187,28 @@
       "description": "TODO: Use top-level description instead",
       "type": "string"
     },
+    "country": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "slug",
+        "name"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "slug": {
+          "type": "string"
+        },
+        "synonyms": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
     "anchor_href": {
       "type": "string",
       "pattern": "^#.+$",
