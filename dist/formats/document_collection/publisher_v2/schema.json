@@ -354,6 +354,27 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "documents": {
+          "$ref": "#/definitions/guid_list"
+        },
+        "organisations": {
+          "$ref": "#/definitions/guid_list"
+        },
+        "parent": {
+          "$ref": "#/definitions/guid_list"
+        },
+        "policy_areas": {
+          "$ref": "#/definitions/guid_list"
+        },
+        "related_policies": {
+          "$ref": "#/definitions/guid_list"
+        },
+        "topics": {
+          "$ref": "#/definitions/guid_list"
+        },
+        "topical_events": {
+          "$ref": "#/definitions/guid_list"
+        }
       }
     },
     "absolute_path": {
