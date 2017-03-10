@@ -104,6 +104,8 @@ stage("Check dependent projects against updated schema") {
     def app = dependentApp
 
     dependentBuilds[app] = {
+      start = System.currentTimeMillis()
+
       build job: "${app}/deployed-to-production",
         parameters: [
           [$class: 'BooleanParameterValue',
@@ -113,8 +115,24 @@ stage("Check dependent projects against updated schema") {
             name: 'SCHEMA_BRANCH',
             value: env.BRANCH_NAME],
         ]
+
+      now = System.currentTimeMillis()
+      runtime = now - start
+
+      node {
+        sh 'echo "ci.' + REPOSITORY + '.dependent_build.' + app + '.runtime:' + runtime + '|ms" | nc -w 1 -u localhost 8125'
+      }
     }
   }
 
+  start = System.currentTimeMillis()
+
   parallel dependentBuilds
+
+  now = System.currentTimeMillis()
+  runtime = now - start
+
+  node {
+    sh 'echo "ci.' + REPOSITORY + '.dependent_builds_total_runtime:' + runtime + '|ms" | nc -w 1 -u localhost 8125'
+  }
 }
