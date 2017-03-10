@@ -349,6 +349,10 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "featured_policies": {
+          "description": "Featured policies primarily for use with Whitehall organisations",
+          "$ref": "#/definitions/guid_list"
+        },
         "policy_areas": {
           "$ref": "#/definitions/guid_list"
         }
