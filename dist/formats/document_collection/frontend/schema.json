@@ -86,6 +86,9 @@
         "topical_events": {
           "$ref": "#/definitions/frontend_links"
         },
+        "related_policies": {
+          "$ref": "#/definitions/frontend_links"
+        },
         "taxons": {
           "$ref": "#/definitions/frontend_links"
         },
