@@ -19,6 +19,7 @@ def dependentApplications = [
   'policy-publisher',
   'publisher',
   'publishing-api',
+  'short-url-manager',
   'service-manual-frontend',
   'service-manual-publisher',
   'specialist-frontend',
