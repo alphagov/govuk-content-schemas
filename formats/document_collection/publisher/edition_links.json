@@ -12,16 +12,13 @@
     "parent": {
       "$ref": "#/definitions/guid_list"
     },
-    "policy_areas": {
-      "$ref": "#/definitions/guid_list"
-    },
     "related_policies": {
       "$ref": "#/definitions/guid_list"
     },
-    "topics": {
+    "topical_events": {
       "$ref": "#/definitions/guid_list"
     },
-    "topical_events": {
+    "topics": {
       "$ref": "#/definitions/guid_list"
     }
   }
