@@ -155,6 +155,14 @@
         },
         "first_published_version": {
           "type": "boolean"
+        },
+        "isbn": {
+          "type": "string",
+          "description": "Identifies the Web ISBN to be displayed when printing an HTML Publication"
+        },
+        "print_meta_data_contact_address": {
+          "type": "string",
+          "description": "Identifies the contact address of the institution which has produced the HTML Publication. To be displayed when printing an HTML Publication"
         }
       }
     },
