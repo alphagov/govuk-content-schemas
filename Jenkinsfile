@@ -37,14 +37,6 @@ node {
         numToKeepStr: '50')
       ),
     [$class: 'RebuildSettings', autoRebuild: false, rebuildDisabled: false],
-    [$class: 'ThrottleJobProperty',
-      categories: [],
-      limitOneJobWithMatchingParams: true,
-      maxConcurrentPerNode: 1,
-      maxConcurrentTotal: 0,
-      paramsToUseForLimit: 'govuk-content-schemas',
-      throttleEnabled: false,
-      throttleOption: 'category'],
   ])
 
   try {
