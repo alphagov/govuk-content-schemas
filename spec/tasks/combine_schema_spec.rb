@@ -85,7 +85,17 @@ RSpec.describe "combine_schemas" do
 
         specify "the schema.json file contains the combined schemas" do
           expected = GovukContentSchemas::SchemaCombiner.new(
-            slice_hash(schemas, :definitions, :metadata, :v2_metadata, :details, :base_edition_links),
+            slice_hash(
+              schemas,
+              :definitions,
+              :metadata,
+              :v2_metadata,
+              :details,
+              :links_metadata,
+              :links,
+              :base_links,
+              :base_edition_links,
+            ),
             format_name
           ).combined
 
@@ -128,7 +138,16 @@ RSpec.describe "combine_schemas" do
 
         specify "the schema.json file contains the combined schemas" do
           expected = GovukContentSchemas::SchemaCombiner.new(
-            slice_hash(schemas, :definitions, :metadata, :details, :base_edition_links),
+            slice_hash(
+              schemas,
+              :definitions,
+              :metadata,
+              :details,
+              :links_metadata,
+              :links,
+              :base_links,
+              :base_edition_links,
+            ),
             format_name
           ).combined
 

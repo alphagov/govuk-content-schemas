@@ -30,9 +30,9 @@ end
 
 def sources_for_v2_schema(filename)
   Rake::FileList.new(
-    "formats/{definitions,base_edition_links}.json",
+    "formats/{definitions,links_metadata,base_links,base_edition_links}.json",
     metadata_sources(filename),
-    filename.pathmap("%{^dist/,}p").pathmap("%{_v2,}d/{details,edition_links}.json")
+    filename.pathmap("%{^dist/,}p").pathmap("%{_v2,}d/{details,edition_links,links}.json")
   )
 end
 
