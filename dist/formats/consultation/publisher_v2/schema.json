@@ -383,6 +383,9 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "policy_areas": {
+          "$ref": "#/definitions/guid_list"
+        }
       }
     },
     "absolute_path": {
