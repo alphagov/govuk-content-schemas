@@ -3,8 +3,10 @@
   "type": "object",
   "additionalProperties": false,
   "required": [
+    "document_type",
     "publishing_app",
-    "routes"
+    "routes",
+    "schema_name"
   ],
   "properties": {
     "base_path": {

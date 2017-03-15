@@ -3,9 +3,11 @@
   "type": "object",
   "additionalProperties": false,
   "required": [
+    "document_type",
     "publishing_app",
-    "update_type",
-    "routes"
+    "routes",
+    "schema_name",
+    "update_type"
   ],
   "properties": {
     "base_path": {
