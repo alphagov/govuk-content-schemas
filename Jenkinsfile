@@ -4,14 +4,15 @@ REPOSITORY = 'govuk-content-schemas'
 
 def dependentApplications = [
   'businesssupportfinder',
-  'contacts',
-  'contacts-frontend',
   'collections',
   'collections-publisher',
+  'contacts',
+  'contacts-frontend',
   'content-tagger',
   'email-alert-frontend',
   'email-alert-service',
   'finder-frontend',
+  'frontend',
   'hmrc-manuals-api',
   'licencefinder',
   'manuals-frontend',
