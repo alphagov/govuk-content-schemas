@@ -1301,6 +1301,10 @@
           }
         }
       }
+    },
+    "will_continue_on": {
+      "description": "Description of the website the adjoining external link will be taking the user to",
+      "type": "string"
     }
   }
 }
