@@ -329,6 +329,9 @@
           "description": "The finder for this specialist document.",
           "$ref": "#/definitions/guid_list",
           "maxItems": 1
+        },
+        "policy_areas": {
+          "$ref": "#/definitions/guid_list"
         }
       }
     },
