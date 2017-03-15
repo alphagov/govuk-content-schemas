@@ -7,8 +7,7 @@
       "$ref": "#/definitions/body_html_and_govspeak"
     },
     "will_continue_on": {
-      "description": "Name of the website the Start button will lead the user to.",
-      "type": "string"
+      "$ref": "#/definitions/will_continue_on"
     },
     "transaction_start_link": {
       "description": "Link the Start button will lead the user to.",
