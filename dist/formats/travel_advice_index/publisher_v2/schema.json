@@ -299,45 +299,6 @@
         "email_signup_link": {
           "$ref": "#/definitions/email_signup_link"
         },
-        "countries": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "additionalProperties": false,
-            "required": [
-              "name",
-              "base_path",
-              "updated_at",
-              "public_updated_at",
-              "change_description",
-              "synonyms"
-            ],
-            "properties": {
-              "name": {
-                "type": "string"
-              },
-              "base_path": {
-                "$ref": "#/definitions/absolute_path"
-              },
-              "updated_at": {
-                "type": "string",
-                "format": "date-time"
-              },
-              "public_updated_at": {
-                "$ref": "#/definitions/public_updated_at"
-              },
-              "change_description": {
-                "type": "string"
-              },
-              "synonyms": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        },
         "max_cache_time": {
           "$ref": "#/definitions/max_cache_time"
         },
