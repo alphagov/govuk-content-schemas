@@ -168,6 +168,7 @@
         "coming_soon",
         "complaints_procedure",
         "completed_transaction",
+        "consultation",
         "consultation_outcome",
         "contact",
         "corporate_report",
@@ -203,6 +204,7 @@
         "help_page",
         "hmrc_manual",
         "hmrc_manual_section",
+        "homepage",
         "html_publication",
         "impact_assessment",
         "independent_report",
@@ -262,6 +264,7 @@
         "redirect",
         "regulation",
         "research",
+        "search",
         "service_manual_guide",
         "service_manual_homepage",
         "service_manual_service_standard",
@@ -293,15 +296,14 @@
         "travel_advice_index",
         "unpublishing",
         "utaac_decision",
+        "vehicle_recalls_and_faults_alert",
         "video",
         "welsh_language_scheme",
         "working_group",
         "world_location",
         "world_location_news_article",
         "worldwide_organisation",
-        "written_statement",
-        "consultation",
-        "vehicle_recalls_and_faults_alert"
+        "written_statement"
       ]
     },
     "schema_name": {
