@@ -139,9 +139,10 @@ RSpec.describe "combine_schemas" do
   end
 
   context "frontend schema" do
-    let(:publisher_schema_dir) { project_root.join("dist", "formats", format_name, "publisher") }
-    let(:publisher_schema) { build_publisher_schema(%w{body details}, %{related}) }
-    let(:publisher_schema_filename) { File.join("dist/formats", format_name, "publisher/schema.json") }
+    let(:publisher_schema_dir) { project_root.join("dist", "formats", format_name, "publisher_v2") }
+    let(:publisher_schema) { build_publisher_schema(%w{body details}) }
+    let(:publisher_links) { nil }
+    let(:publisher_schema_filename) { File.join("dist/formats", format_name, "publisher_v2/schema.json") }
     let(:output_filename) { File.join("dist/formats", format_name, "frontend/schema.json") }
     let(:frontend_links_definition) { reader.read("formats/frontend_links_definition.json") }
     let(:format) {}
@@ -167,6 +168,7 @@ RSpec.describe "combine_schemas" do
       actual = reader.read(output_filename)
       expected = GovukContentSchemas::FrontendSchemaGenerator.new(
         publisher_schema,
+        publisher_links,
         frontend_links_definition,
         format
       ).generate
