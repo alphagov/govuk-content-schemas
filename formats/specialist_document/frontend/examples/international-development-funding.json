@@ -109,5 +109,313 @@
   "schema_name": "specialist_document",
   "document_type": "international_development_fund",
   "links": {
+    "finder": [
+      {
+        "analytics_identifier": null,
+        "api_path": "/api/content/international-development-funding",
+        "base_path": "/international-development-funding",
+        "content_id": "5583057c-7c57-4cfe-b70d-dad6f4762831",
+        "description": "Find and apply for funds to run international development projects",
+        "document_type": "finder",
+        "locale": "en",
+        "public_updated_at": "2017-03-15T14:44:21Z",
+        "schema_name": "finder",
+        "title": "International development funding",
+        "withdrawn": false,
+        "details": {
+          "document_noun": "fund",
+          "filter": {
+            "document_type": "international_development_fund"
+          },
+          "format_name": "International development funding",
+          "show_summaries": true,
+          "facets": [
+            {
+              "key": "fund_state",
+              "name": "Funds",
+              "type": "text",
+              "preposition": "which are",
+              "display_as_result_metadata": true,
+              "filterable": true,
+              "allowed_values": [
+                {
+                  "label": "Open",
+                  "value": "open"
+                },
+                {
+                  "label": "Closed",
+                  "value": "closed"
+                }
+              ]
+            },
+            {
+              "key": "location",
+              "name": "Countries",
+              "type": "text",
+              "preposition": "for",
+              "display_as_result_metadata": true,
+              "filterable": true,
+              "allowed_values": [
+                {
+                  "label": "Afghanistan",
+                  "value": "afghanistan"
+                },
+                {
+                  "label": "Bangladesh",
+                  "value": "bangladesh"
+                },
+                {
+                  "label": "Burma",
+                  "value": "burma"
+                },
+                {
+                  "label": "Democratic Republic of the Congo",
+                  "value": "democratic-republic-of-congo"
+                },
+                {
+                  "label": "Ethiopia",
+                  "value": "ethiopia"
+                },
+                {
+                  "label": "Ghana",
+                  "value": "ghana"
+                },
+                {
+                  "label": "India",
+                  "value": "india"
+                },
+                {
+                  "label": "Kenya",
+                  "value": "kenya"
+                },
+                {
+                  "label": "Kyrgyzstan",
+                  "value": "kyrgyzstan"
+                },
+                {
+                  "label": "Liberia",
+                  "value": "liberia"
+                },
+                {
+                  "label": "Malawi",
+                  "value": "malawi"
+                },
+                {
+                  "label": "Mozambique",
+                  "value": "mozambique"
+                },
+                {
+                  "label": "Nepal",
+                  "value": "nepal"
+                },
+                {
+                  "label": "Nigeria",
+                  "value": "nigeria"
+                },
+                {
+                  "label": "The Occupied Palestinian Territories",
+                  "value": "the-occupied-palestinian-territories"
+                },
+                {
+                  "label": "Pakistan",
+                  "value": "pakistan"
+                },
+                {
+                  "label": "Rwanda",
+                  "value": "rwanda"
+                },
+                {
+                  "label": "Sierra Leone",
+                  "value": "sierra-leone"
+                },
+                {
+                  "label": "Somalia",
+                  "value": "somalia"
+                },
+                {
+                  "label": "South Africa",
+                  "value": "south-africa"
+                },
+                {
+                  "label": "Sudan",
+                  "value": "sudan"
+                },
+                {
+                  "label": "South Sudan",
+                  "value": "south-sudan"
+                },
+                {
+                  "label": "Tajikistan",
+                  "value": "tajikistan"
+                },
+                {
+                  "label": "Tanzania",
+                  "value": "tanzania"
+                },
+                {
+                  "label": "Uganda",
+                  "value": "uganda"
+                },
+                {
+                  "label": "Yemen",
+                  "value": "yemen"
+                },
+                {
+                  "label": "Zambia",
+                  "value": "zambia"
+                },
+                {
+                  "label": "Zimbabwe",
+                  "value": "zimbabwe"
+                }
+              ]
+            },
+            {
+              "key": "development_sector",
+              "name": "Sector",
+              "type": "text",
+              "preposition": "for",
+              "display_as_result_metadata": false,
+              "filterable": true,
+              "allowed_values": [
+                {
+                  "label": "Agriculture",
+                  "value": "agriculture"
+                },
+                {
+                  "label": "Climate change",
+                  "value": "climate-change"
+                },
+                {
+                  "label": "Disabilities",
+                  "value": "disabilities"
+                },
+                {
+                  "label": "Education",
+                  "value": "education"
+                },
+                {
+                  "label": "Empowerment and accountability",
+                  "value": "empowerment-and-accountability"
+                },
+                {
+                  "label": "Environment",
+                  "value": "environment"
+                },
+                {
+                  "label": "Girls and women",
+                  "value": "girls-and-women"
+                },
+                {
+                  "label": "Health",
+                  "value": "health"
+                },
+                {
+                  "label": "Humanitarian emergencies/disasters",
+                  "value": "humanitarian-emergencies-disasters"
+                },
+                {
+                  "label": "Livelihoods",
+                  "value": "livelihoods"
+                },
+                {
+                  "label": "Peace and access to justice",
+                  "value": "peace-and-access-to-justice"
+                },
+                {
+                  "label": "Private sector/business",
+                  "value": "private-sector-business"
+                },
+                {
+                  "label": "Technology",
+                  "value": "technology"
+                },
+                {
+                  "label": "Trade",
+                  "value": "trade"
+                },
+                {
+                  "label": "Water and sanitation",
+                  "value": "water-and-sanitation"
+                }
+              ]
+            },
+            {
+              "key": "eligible_entities",
+              "name": "Eligible organisations",
+              "type": "text",
+              "preposition": "open to",
+              "filterable": true,
+              "display_as_result_metadata": false,
+              "allowed_values": [
+                {
+                  "label": "Non-governmental organisations (NGOs)",
+                  "value": "non-governmental-organisations"
+                },
+                {
+                  "label": "UK-based non-profit organisations",
+                  "value": "uk-based-non-profit-organisations"
+                },
+                {
+                  "label": "UK-based small and diaspora organisations",
+                  "value": "uk-based-small-and-diaspora-organisations"
+                },
+                {
+                  "label": "Companies",
+                  "value": "companies"
+                },
+                {
+                  "label": "Local government",
+                  "value": "local-government"
+                },
+                {
+                  "label": "Educational institutions",
+                  "value": "educational-institutions"
+                },
+                {
+                  "label": "Individuals",
+                  "value": "individuals"
+                },
+                {
+                  "label": "Humanitarian relief organisations",
+                  "value": "humanitarian-relief-organisations"
+                }
+              ]
+            },
+            {
+              "key": "value_of_funding",
+              "name": "Value of funding",
+              "type": "text",
+              "preposition": "with value",
+              "display_as_result_metadata": false,
+              "filterable": true,
+              "allowed_values": [
+                {
+                  "label": "Up to £100,000",
+                  "value": "up-to-100000"
+                },
+                {
+                  "label": "£100,001 to £500,000",
+                  "value": "100001-500000"
+                },
+                {
+                  "label": "£500,001 to £1,000,000",
+                  "value": "500001-to-1000000"
+                },
+                {
+                  "label": "More than £1,000,000",
+                  "value": "more-than-1000000"
+                }
+              ]
+            }
+          ],
+          "default_documents_per_page": 50
+        },
+        "links": {
+        },
+        "api_url": "https://www.gov.uk/api/content/international-development-funding",
+        "web_url": "https://www.gov.uk/international-development-funding"
+      }
+    ]
   }
 }

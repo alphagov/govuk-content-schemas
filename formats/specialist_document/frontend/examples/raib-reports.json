@@ -43,5 +43,100 @@
   "schema_name": "specialist_document",
   "document_type": "raib_report",
   "links": {
+    "finder": [
+      {
+        "analytics_identifier": null,
+        "api_path": "/api/content/raib-reports",
+        "base_path": "/raib-reports",
+        "content_id": "e3ff7fc5-6788-45de-83f0-cbf34e9fe8bd",
+        "description": "Find reports of RAIB investigations into rail accidents and incidents",
+        "document_type": "finder",
+        "locale": "en",
+        "public_updated_at": "2017-03-15T14:44:21Z",
+        "schema_name": "finder",
+        "title": "Rail Accident Investigation Branch reports",
+        "withdrawn": false,
+        "details": {
+          "document_noun": "report",
+          "filter": {
+            "document_type": "raib_report"
+          },
+          "format_name": "Rail Accident Investigation Branch report",
+          "show_summaries": false,
+          "facets": [
+            {
+              "key": "railway_type",
+              "name": "Railway type",
+              "type": "text",
+              "preposition": "of type",
+              "display_as_result_metadata": true,
+              "filterable": true,
+              "allowed_values": [
+                {
+                  "label": "Heavy rail",
+                  "value": "heavy-rail"
+                },
+                {
+                  "label": "Light rail",
+                  "value": "light-rail"
+                },
+                {
+                  "label": "Metros",
+                  "value": "metros"
+                },
+                {
+                  "label": "Heritage railways",
+                  "value": "heritage-railways"
+                }
+              ]
+            },
+            {
+              "key": "report_type",
+              "name": "Report type",
+              "type": "text",
+              "preposition": "of type",
+              "display_as_result_metadata": true,
+              "filterable": true,
+              "allowed_values": [
+                {
+                  "label": "Investigation report",
+                  "value": "investigation-report"
+                },
+                {
+                  "label": "Bulletin",
+                  "value": "bulletin"
+                },
+                {
+                  "label": "Interim report",
+                  "value": "interim-report"
+                },
+                {
+                  "label": "Discontinuation report",
+                  "value": "discontinuation-report"
+                },
+                {
+                  "label": "Safety digest",
+                  "value": "safety-digest"
+                }
+              ]
+            },
+            {
+              "key": "date_of_occurrence",
+              "name": "Date of occurrence",
+              "short_name": "Occurred",
+              "type": "date",
+              "preposition": "occurred",
+              "display_as_result_metadata": true,
+              "filterable": true
+            }
+          ],
+          "default_documents_per_page": 50
+        },
+        "links": {
+        },
+        "api_url": "https://www.gov.uk/api/content/raib-reports",
+        "web_url": "https://www.gov.uk/raib-reports"
+      }
+    ]
   }
 }

@@ -63,5 +63,104 @@
   "schema_name": "specialist_document",
   "document_type": "maib_report",
   "links": {
+    "finder": [
+      {
+        "analytics_identifier": null,
+        "api_path": "/api/content/maib-reports",
+        "base_path": "/maib-reports",
+        "content_id": "33eb214a-9291-49d3-8789-445c1e97b586",
+        "description": "Find reports of MAIB investigations into marine accidents and incidents",
+        "document_type": "finder",
+        "locale": "en",
+        "public_updated_at": "2017-03-15T14:44:21Z",
+        "schema_name": "finder",
+        "title": "Marine Accident Investigation Branch reports",
+        "withdrawn": false,
+        "details": {
+          "document_noun": "report",
+          "filter": {
+            "document_type": "maib_report"
+          },
+          "format_name": "Marine Accident Investigation Branch report",
+          "show_summaries": true,
+          "facets": [
+            {
+              "key": "vessel_type",
+              "name": "Vessel type",
+              "type": "text",
+              "preposition": "of type",
+              "display_as_result_metadata": true,
+              "filterable": true,
+              "allowed_values": [
+                {
+                  "label": "Merchant vessel 100 gross tons or over",
+                  "value": "merchant-vessel-100-gross-tons-or-over"
+                },
+                {
+                  "label": "Merchant vessel under 100 gross tons",
+                  "value": "merchant-vessel-under-100-gross-tons"
+                },
+                {
+                  "label": "Fishing vessel",
+                  "value": "fishing-vessel"
+                },
+                {
+                  "label": "Recreational craft - sail",
+                  "value": "recreational-craft-sail"
+                },
+                {
+                  "label": "Recreational craft - power",
+                  "value": "recreational-craft-power"
+                }
+              ]
+            },
+            {
+              "key": "report_type",
+              "name": "Report type",
+              "type": "text",
+              "preposition": "of type",
+              "display_as_result_metadata": true,
+              "filterable": true,
+              "allowed_values": [
+                {
+                  "label": "Investigation report",
+                  "value": "investigation-report"
+                },
+                {
+                  "label": "Safety bulletin",
+                  "value": "safety-bulletin"
+                },
+                {
+                  "label": "Completed preliminary examination",
+                  "value": "completed-preliminary-examination"
+                },
+                {
+                  "label": "Overseas report",
+                  "value": "overseas-report"
+                },
+                {
+                  "label": "Discontinued investigation",
+                  "value": "discontinued-investigation"
+                }
+              ]
+            },
+            {
+              "key": "date_of_occurrence",
+              "name": "Date of occurrence",
+              "short_name": "Occurred",
+              "type": "date",
+              "preposition": "occurred",
+              "display_as_result_metadata": true,
+              "filterable": true
+            }
+          ],
+          "default_documents_per_page": 50
+        },
+        "links": {
+        },
+        "api_url": "https://www.gov.uk/api/content/maib-reports",
+        "web_url": "https://www.gov.uk/maib-reports"
+      }
+    ]
   }
 }

@@ -124,5 +124,192 @@
   "schema_name": "specialist_document",
   "document_type": "esi_fund",
   "links": {
+    "finder": [
+      {
+        "analytics_identifier": null,
+        "api_path": "/api/content/european-structural-investment-funds",
+        "base_path": "/european-structural-investment-funds",
+        "content_id": "78cedbfe-d3aa-41c3-b8c0-aeb5d9035d6a",
+        "description": "Find and apply to run projects backed by ESIF",
+        "document_type": "finder",
+        "locale": "en",
+        "public_updated_at": "2017-03-15T14:44:21Z",
+        "schema_name": "finder",
+        "title": "European Structural and Investment Funds (ESIF)",
+        "withdrawn": false,
+        "details": {
+          "document_noun": "call",
+          "filter": {
+            "document_type": "european_structural_investment_fund"
+          },
+          "format_name": "ESIF call for proposals",
+          "show_summaries": false,
+          "summary": "<p>Applies to: England (see guidance for <a rel=\"external\" href=\"http://www.scotland.gov.uk/Topics/Business-Industry/support/17404\">Scotland</a>, <a rel=\"external\" href=\"http://wefo.wales.gov.uk/programmes/post2013/?skip=1&amp;lang=en\">Wales</a> and <a rel=\"external\" href=\"https://www.dfpni.gov.uk/topics/finance/european-funding-2014-2020\">Northern Ireland</a>)</p><p>Apply to run projects backed by the European Structural and Investment Fund (ESIF). ESIF includes money from the European Social Fund (ESF), European Regional Development Fund (ERDF) and European Agricultural Fund for Rural Development (EAFRD).</p>",
+          "facets": [
+            {
+              "key": "fund_state",
+              "name": "Fund state",
+              "type": "text",
+              "preposition": "which are",
+              "display_as_result_metadata": true,
+              "filterable": true,
+              "allowed_values": [
+                {
+                  "label": "Open",
+                  "value": "open"
+                },
+                {
+                  "label": "Closed",
+                  "value": "closed"
+                }
+              ]
+            },
+            {
+              "key": "fund_type",
+              "name": "Type",
+              "type": "text",
+              "preposition": "of type",
+              "display_as_result_metadata": false,
+              "filterable": true,
+              "allowed_values": [
+                {
+                  "label": "Access to employment",
+                  "value": "access-to-work"
+                },
+                {
+                  "label": "Business support",
+                  "value": "business-support"
+                },
+                {
+                  "label": "Climate change",
+                  "value": "climate-change"
+                },
+                {
+                  "label": "Environment",
+                  "value": "environment"
+                },
+                {
+                  "label": "IT and broadband",
+                  "value": "it-and-broadband"
+                },
+                {
+                  "label": "Learning and skills",
+                  "value": "learning-and-skills"
+                },
+                {
+                  "label": "Low carbon",
+                  "value": "low-carbon"
+                },
+                {
+                  "label": "Renewable energy",
+                  "value": "renewable-energy"
+                },
+                {
+                  "label": "Research and innovation",
+                  "value": "research-and-innovation"
+                },
+                {
+                  "label": "Social inclusion",
+                  "value": "social-inclusion"
+                },
+                {
+                  "label": "Transport",
+                  "value": "transport"
+                },
+                {
+                  "label": "Technical assistance",
+                  "value": "techincal-assistance"
+                },
+                {
+                  "label": "Tourism",
+                  "value": "tourism"
+                }
+              ]
+            },
+            {
+              "key": "location",
+              "name": "Location",
+              "type": "text",
+              "preposition": "in",
+              "display_as_result_metadata": true,
+              "filterable": true,
+              "allowed_values": [
+                {
+                  "label": "North East",
+                  "value": "north-east"
+                },
+                {
+                  "label": "North West",
+                  "value": "north-west"
+                },
+                {
+                  "label": "Yorkshire and Humber",
+                  "value": "yorkshire-and-humber"
+                },
+                {
+                  "label": "East Midlands",
+                  "value": "east-midlands"
+                },
+                {
+                  "label": "West Midlands",
+                  "value": "west-midlands"
+                },
+                {
+                  "label": "East of England",
+                  "value": "east-of-england"
+                },
+                {
+                  "label": "South East",
+                  "value": "south-east"
+                },
+                {
+                  "label": "South West",
+                  "value": "south-west"
+                },
+                {
+                  "label": "London",
+                  "value": "london"
+                }
+              ]
+            },
+            {
+              "key": "funding_source",
+              "name": "Funding source",
+              "type": "text",
+              "preposition": "from",
+              "display_as_result_metadata": false,
+              "filterable": true,
+              "allowed_values": [
+                {
+                  "label": "European Social Fund",
+                  "value": "european-social-fund"
+                },
+                {
+                  "label": "European Regional Development Fund",
+                  "value": "european-regional-development-fund"
+                },
+                {
+                  "label": "European Agricultural Fund for Rural Development",
+                  "value": "european-agricoltural-fund-for-rural"
+                }
+              ]
+            },
+            {
+              "key": "closing_date",
+              "name": "Closing date",
+              "type": "date",
+              "display_as_result_metadata": true,
+              "filterable": false
+            }
+          ],
+          "default_order": "-closing_date",
+          "default_documents_per_page": 50
+        },
+        "links": {
+        },
+        "api_url": "https://www.gov.uk/api/content/european-structural-investment-funds",
+        "web_url": "https://www.gov.uk/european-structural-investment-funds"
+      }
+    ]
   }
 }

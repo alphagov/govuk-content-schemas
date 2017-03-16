@@ -87,6 +87,147 @@
         "web_url": "https://www.gov.uk/government/organisations/medicines-and-healthcare-products-regulatory-agency"
       }
     ],
+    "finder": [
+      {
+        "analytics_identifier": null,
+        "api_path": "/api/content/drug-safety-update",
+        "base_path": "/drug-safety-update",
+        "content_id": "602be505-4cf4-4f8c-8bfc-7bc4b63a7f47",
+        "description": "Find drug safety updates issued by MHRA",
+        "document_type": "finder",
+        "locale": "en",
+        "public_updated_at": "2017-03-15T14:44:21Z",
+        "schema_name": "finder",
+        "title": "Drug Safety Update",
+        "withdrawn": false,
+        "details": {
+          "document_noun": "update",
+          "filter": {
+            "document_type": "drug_safety_update"
+          },
+          "format_name": "Drug Safety Update",
+          "show_summaries": true,
+          "facets": [
+            {
+              "key": "therapeutic_area",
+              "name": "Therapeutic area",
+              "type": "text",
+              "preposition": "about",
+              "display_as_result_metadata": true,
+              "filterable": true,
+              "allowed_values": [
+                {
+                  "label": "Anaesthesia and intensive care",
+                  "value": "anaesthesia-intensive-care"
+                },
+                {
+                  "label": "Cancer",
+                  "value": "cancer"
+                },
+                {
+                  "label": "Cardiovascular disease and lipidology",
+                  "value": "cardiovascular-disease-lipidology"
+                },
+                {
+                  "label": "Dentistry",
+                  "value": "dentistry"
+                },
+                {
+                  "label": "Dermatology",
+                  "value": "dermatology"
+                },
+                {
+                  "label": "Ear, nose and throat",
+                  "value": "ear-nose-throat"
+                },
+                {
+                  "label": "Endocrinology, diabetology and metabolism",
+                  "value": "endocrinology-diabetology-metabolism"
+                },
+                {
+                  "label": "GI, hepatology and pancreatic disorders",
+                  "value": "gi-hepatology-pancreatic-disorders"
+                },
+                {
+                  "label": "Haematology",
+                  "value": "haematology"
+                },
+                {
+                  "label": "Immunology and vaccination",
+                  "value": "immunology-vaccination"
+                },
+                {
+                  "label": "Immunosuppression and transplantation",
+                  "value": "immunosuppression-transplantation"
+                },
+                {
+                  "label": "Infectious disease",
+                  "value": "infectious-disease"
+                },
+                {
+                  "label": "Neurology",
+                  "value": "neurology"
+                },
+                {
+                  "label": "Nutrition and dietetics",
+                  "value": "nutrition-dietetics"
+                },
+                {
+                  "label": "Obstetrics, gynaecology and fertility",
+                  "value": "obstetrics-gynaecology-fertility"
+                },
+                {
+                  "label": "Ophthalmology",
+                  "value": "ophthalmology"
+                },
+                {
+                  "label": "Paediatrics and neonatology",
+                  "value": "paediatrics-neonatology"
+                },
+                {
+                  "label": "Pain management and palliation",
+                  "value": "pain-management-palliation"
+                },
+                {
+                  "label": "Psychiatry",
+                  "value": "psychiatry"
+                },
+                {
+                  "label": "Radiology and imaging",
+                  "value": "radiology-imaging"
+                },
+                {
+                  "label": "Respiratory disease and allergy",
+                  "value": "respiratory-disease-allergy"
+                },
+                {
+                  "label": "Rheumatology",
+                  "value": "rheumatology"
+                },
+                {
+                  "label": "Urology and nephrology",
+                  "value": "urology-nephrology"
+                }
+              ]
+            },
+            {
+              "key": "first_published_at",
+              "name": "Published",
+              "short_name": "Published",
+              "type": "date",
+              "preposition": "published",
+              "display_as_result_metadata": true,
+              "filterable": true
+            }
+          ],
+          "default_documents_per_page": 50
+        },
+        "links": {
+        },
+        "api_url": "https://www.gov.uk/api/content/drug-safety-update",
+        "web_url": "https://www.gov.uk/drug-safety-update"
+      }
+    ],
     "available_translations": [
       {
         "analytics_identifier": null,
