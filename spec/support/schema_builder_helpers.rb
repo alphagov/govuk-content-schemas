@@ -31,27 +31,41 @@ module SchemaBuilderHelpers
     end
   end
 
-  def build_publisher_schema(properties, link_names = nil, required_properties = nil)
+  def build_publisher_schema(properties, required_properties: nil, link_names: [], required_link_names: [])
     properties = build_string_properties(*properties)
-    properties["links"] = build_publisher_links_schema(*link_names) if link_names
-    definitions = build_string_properties("guid_list")
+    properties["links"] = { "$ref" => "#/definitions/links" }
+    definitions = { "links" => build_publisher_links_properties(link_names, required_link_names) }
     build_schema("schema.json", properties: properties, required: required_properties, definitions: definitions)
   end
 
-  def build_publisher_links_schema(*link_names)
-    {
+  def build_publisher_links_schema(link_names)
+    properties = build_string_properties(%w[previous_version])
+    properties["links"] = build_publisher_links_properties(link_names)
+    definitions = build_string_properties("guid_list")
+    build_schema("links.json", properties: properties, definitions: definitions)
+  end
+
+  def build_publisher_links_properties(link_names, required_link_names = [])
+    properties = {
       "type" => "object",
       "additionalProperties" => false,
       "properties" => build_ref_properties(link_names, "guid_list"),
     }
+    properties["required"] = required_link_names unless required_link_names.empty?
+    properties
   end
 
-  def build_frontend_links_schema(*link_names)
-    {
+  def build_frontend_links_properties(link_names, required_link_names = [])
+    definitions = link_names.each_with_object({}) do |name, memo|
+      memo[name] = a_hash_including("$ref" => "#/definitions/frontend_links")
+    end
+    properties = {
       "type" => "object",
       "additionalProperties" => false,
-      "properties" => build_ref_properties(link_names, "frontend_links"),
+      "properties" => definitions,
     }
+    properties["required"] = required_link_names unless required_link_names.empty?
+    properties
   end
 
   def build_base_links_schema(*link_names)
