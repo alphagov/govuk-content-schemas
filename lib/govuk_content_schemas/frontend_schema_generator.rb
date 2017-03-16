@@ -81,7 +81,7 @@ private
     if required.empty?
       []
     else
-      %w[base_path links] + (required - INTERNAL_PROPERTIES - OPTIONAL_PROPERTIES)
+      (%w[content_id base_path links] + (required - INTERNAL_PROPERTIES - OPTIONAL_PROPERTIES)).uniq
     end
   end
 
@@ -116,7 +116,8 @@ private
         "description" => "Document type grouping intended to power the Whitehall finders and email subscriptions",
       },
       "updated_at" => updated_at,
-      "base_path" => { "$ref" => "#/definitions/absolute_path" }
+      "base_path" => { "$ref" => "#/definitions/absolute_path" },
+      "content_id" => { "$ref" => "#/definitions/guid" },
     )
 
     properties

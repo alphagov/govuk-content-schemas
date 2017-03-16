@@ -5,7 +5,7 @@ RSpec.describe GovukContentSchemas::FrontendSchemaGenerator do
 
   let(:publisher_properties) {
     %w{
-      content_id
+      base_path
       description
       details
       format
@@ -87,6 +87,17 @@ RSpec.describe GovukContentSchemas::FrontendSchemaGenerator do
     )
     expect(generated.schema["required"]).to include(
       "base_path"
+    )
+  end
+
+  it "adds content_id as a required guid property" do
+    expect(generated.schema["properties"]).to include(
+      "content_id" => {
+        "$ref" => "#/definitions/guid"
+      }
+    )
+    expect(generated.schema["required"]).to include(
+      "content_id"
     )
   end
 
