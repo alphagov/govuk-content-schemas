@@ -24,5 +24,45 @@
   "schema_name": "specialist_document",
   "document_type": "service_standard_report",
   "links": {
+    "finder": [
+      {
+        "analytics_identifier": null,
+        "api_path": "/api/content/service-standard-reports",
+        "base_path": "/service-standard-reports",
+        "content_id": "da025a9f-8293-4fef-869c-12445d364696",
+        "description": "A list of service assessments and self certifications",
+        "document_type": "finder",
+        "locale": "en",
+        "public_updated_at": "2017-03-15T14:44:21Z",
+        "schema_name": "finder",
+        "title": "Service Standard Reports",
+        "withdrawn": false,
+        "details": {
+          "document_noun": "report",
+          "filter": {
+            "document_type": "service_standard_report"
+          },
+          "format_name": "Service Assessment and Self Certification",
+          "show_summaries": true,
+          "facets": [
+            {
+              "key": "assessment_date",
+              "name": "Assessment date",
+              "short_name": "Assessed",
+              "type": "date",
+              "preposition": "assessed",
+              "display_as_result_metadata": true,
+              "filterable": true
+            }
+          ],
+          "default_order": "-assessment_date",
+          "default_documents_per_page": 50
+        },
+        "links": {
+        },
+        "api_url": "https://www.gov.uk/api/content/service-standard-reports",
+        "web_url": "https://www.gov.uk/service-standard-reports"
+      }
+    ]
   }
 }

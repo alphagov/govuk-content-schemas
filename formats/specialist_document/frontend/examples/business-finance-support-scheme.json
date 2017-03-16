@@ -48,5 +48,26 @@
   "schema_name": "specialist_document",
   "document_type": "business_finance_support_scheme",
   "links": {
+    "finder": [
+      {
+        "analytics_identifier": null,
+        "api_path": "/api/content/business-finance-support",
+        "base_path": "/business-finance-support",
+        "content_id": "68ed7218-d561-44db-903b-be15f1976e31",
+        "description": "Business Finance Support",
+        "document_type": "finder",
+        "locale": "en",
+        "public_updated_at": "2017-03-15T14:44:21Z",
+        "schema_name": "finder",
+        "title": "Business Finance Support",
+        "withdrawn": false,
+        "details": {
+        },
+        "links": {
+        },
+        "api_url": "https://www.gov.uk/api/content/business-finance-support",
+        "web_url": "https://www.gov.uk/business-finance-support"
+      }
+    ]
   }
 }

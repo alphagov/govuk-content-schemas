@@ -85,6 +85,138 @@
         "api_path": "/api/content/government/organisations/air-accidents-investigation-branch"
       }
     ],
+    "finder": [
+      {
+        "analytics_identifier": null,
+        "api_path": "/api/content/aaib-reports",
+        "base_path": "/aaib-reports",
+        "content_id": "b7574bba-969f-4c49-855a-ae1586258ff6",
+        "description": "Find reports of AAIB investigations into air accidents and incidents",
+        "document_type": "finder",
+        "locale": "en",
+        "public_updated_at": "2017-03-15T14:44:21Z",
+        "schema_name": "finder",
+        "title": "Air Accidents Investigation Branch reports",
+        "withdrawn": false,
+        "details": {
+          "document_noun": "report",
+          "filter": {
+            "document_type": "aaib_report"
+          },
+          "format_name": "Air Accidents Investigation Branch report",
+          "show_summaries": true,
+          "facets": [
+            {
+              "key": "aircraft_category",
+              "name": "Aircraft category",
+              "type": "text",
+              "preposition": "in aircraft category",
+              "display_as_result_metadata": true,
+              "filterable": true,
+              "allowed_values": [
+                {
+                  "label": "Commercial - fixed wing",
+                  "value": "commercial-fixed-wing"
+                },
+                {
+                  "label": "Commercial - rotorcraft",
+                  "value": "commercial-rotorcraft"
+                },
+                {
+                  "label": "General aviation - fixed wing",
+                  "value": "general-aviation-fixed-wing"
+                },
+                {
+                  "label": "General aviation - rotorcraft",
+                  "value": "general-aviation-rotorcraft"
+                },
+                {
+                  "label": "Sport aviation and balloons",
+                  "value": "sport-aviation-and-balloons"
+                }
+              ]
+            },
+            {
+              "key": "report_type",
+              "name": "Report type",
+              "type": "text",
+              "preposition": "of type",
+              "display_as_result_metadata": true,
+              "filterable": true,
+              "allowed_values": [
+                {
+                  "label": "Annual safety report",
+                  "value": "annual-safety-report"
+                },
+                {
+                  "label": "Bulletin - Correspondence investigation",
+                  "value": "correspondence-investigation"
+                },
+                {
+                  "label": "Bulletin - Field investigation",
+                  "value": "field-investigation"
+                },
+                {
+                  "label": "Bulletin - Pre-1997 uncategorised monthly report",
+                  "value": "pre-1997-monthly-report"
+                },
+                {
+                  "label": "Foreign report",
+                  "value": "foreign-report"
+                },
+                {
+                  "label": "Formal report",
+                  "value": "formal-report"
+                },
+                {
+                  "label": "Special bulletin",
+                  "value": "special-bulletin"
+                },
+                {
+                  "label": "Safety study",
+                  "value": "safety-study"
+                }
+              ]
+            },
+            {
+              "key": "date_of_occurrence",
+              "name": "Date of occurrence",
+              "short_name": "Occurred",
+              "type": "date",
+              "preposition": "occurred",
+              "display_as_result_metadata": true,
+              "filterable": true
+            },
+            {
+              "key": "aircraft_type",
+              "name": "Aircraft type",
+              "type": "text",
+              "display_as_result_metadata": false,
+              "filterable": false
+            },
+            {
+              "key": "location",
+              "name": "Location",
+              "type": "text",
+              "display_as_result_metadata": false,
+              "filterable": false
+            },
+            {
+              "key": "registration",
+              "name": "Registration",
+              "type": "text",
+              "display_as_result_metadata": false,
+              "filterable": false
+            }
+          ],
+          "default_documents_per_page": 50
+        },
+        "links": {
+        },
+        "api_url": "https://www.gov.uk/api/content/aaib-reports",
+        "web_url": "https://www.gov.uk/aaib-reports"
+      }
+    ],
     "available_translations": [
       {
         "analytics_identifier": null,
