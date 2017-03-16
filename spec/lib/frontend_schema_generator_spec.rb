@@ -21,7 +21,9 @@ RSpec.describe GovukContentSchemas::FrontendSchemaGenerator do
     }
   }
 
-  let(:link_names) { ["organisations"] }
+  let(:links_schema_link_names) { ["organisations"] }
+  let(:publisher_schema_link_names) { [] }
+  let(:required_publisher_schema_link_names) { [] }
 
   let(:required_properties) {
     %w{
@@ -33,8 +35,15 @@ RSpec.describe GovukContentSchemas::FrontendSchemaGenerator do
   }
 
   let(:publisher_schema) {
-    build_publisher_schema(publisher_properties, link_names, required_properties)
+    build_publisher_schema(
+      publisher_properties,
+      required_properties: required_properties,
+      link_names: publisher_schema_link_names,
+      required_link_names: required_publisher_schema_link_names,
+    )
   }
+
+  let(:publisher_links) { build_publisher_links_schema(links_schema_link_names) }
 
   let(:frontend_links_definition) {
     build_schema("frontend_links.json", properties: build_string_properties("test"))
@@ -43,11 +52,18 @@ RSpec.describe GovukContentSchemas::FrontendSchemaGenerator do
   let(:format) {}
 
   subject(:generated) {
-    described_class.new(publisher_schema, frontend_links_definition, format).generate
+    described_class.new(publisher_schema, publisher_links, frontend_links_definition, format).generate
   }
 
   let(:internal_properties) {
     GovukContentSchemas::FrontendSchemaGenerator::INTERNAL_PROPERTIES
+  }
+
+  let(:frontend_links) {
+    build_frontend_links_properties(
+      publisher_schema_link_names + links_schema_link_names +
+      GovukContentSchemas::FrontendSchemaGenerator::LINK_NAMES_ADDED_BY_PUBLISHING_API
+    )
   }
 
   it "does not modify its input" do
@@ -108,7 +124,7 @@ RSpec.describe GovukContentSchemas::FrontendSchemaGenerator do
   end
 
   it "transforms the links specification to allow expanded links and links added by the publishing-api" do
-    expect(generated.schema["properties"]["links"]).to eq(build_frontend_links_schema(*(link_names + GovukContentSchemas::FrontendSchemaGenerator::LINK_NAMES_ADDED_BY_PUBLISHING_API)))
+    expect(generated.schema["properties"]["links"]).to match(frontend_links)
   end
 
   context "format requires change history" do
@@ -125,27 +141,43 @@ RSpec.describe GovukContentSchemas::FrontendSchemaGenerator do
     end
   end
 
-  context "publisher schema specifies a required link" do
-    let(:publisher_schema_with_required_link) {
-      clone_schema(publisher_schema).tap do |cloned|
-        cloned.schema["properties"]["links"]["required"] = link_names
-      end
-    }
+  context "publisher schema specifies links" do
+    let(:publisher_schema_link_names) { %w[topics consultations] }
 
-    subject(:generated) {
-      described_class.new(publisher_schema_with_required_link, frontend_links_definition, format).generate
-    }
-
-    it "preserves list of required items" do
-      expect(generated.schema["properties"]["links"]["required"]).to eq(link_names)
+    it "includes the links" do
+      expect(generated.schema["properties"]["links"]["properties"]).to match(
+        a_hash_including("topics", "consultations")
+      )
     end
   end
 
-  context "no links in publisher schema" do
-    let(:link_names) { nil }
+
+  context "publisher schema specifies a required link" do
+    let(:publisher_schema_link_names) { %w[topics] }
+    let(:required_publisher_schema_link_names) { %w[topics] }
+
+    it "preserves list of required items" do
+      expect(generated.schema["properties"]["links"]["required"]).to eq(required_publisher_schema_link_names)
+    end
+  end
+
+  context "a link schema does not exist" do
+    let(:publisher_links) { nil }
+
+    it "doesn't error" do
+      expect { generated }.not_to raise_error
+    end
+  end
+
+  context "no links in publisher or links schemas" do
+    let(:publisher_schema_link_names) { [] }
+    let(:links_schema_link_names) { [] }
+    let(:expected) {
+      build_frontend_links_properties(GovukContentSchemas::FrontendSchemaGenerator::LINK_NAMES_ADDED_BY_PUBLISHING_API)
+    }
 
     it "transforms the links specification to allow for links added by publishing-api" do
-      expect(generated.schema["properties"]["links"]).to eq(build_frontend_links_schema(*GovukContentSchemas::FrontendSchemaGenerator::LINK_NAMES_ADDED_BY_PUBLISHING_API))
+      expect(generated.schema["properties"]["links"]).to match(expected)
     end
   end
 
@@ -195,9 +227,8 @@ RSpec.describe GovukContentSchemas::FrontendSchemaGenerator do
       }
     end
 
-    let(:generated) do
-      schema = build_schema("schema.json", properties: properties, definitions: {})
-      described_class.new(schema, frontend_links_definition, format).generate
+    let(:publisher_schema) do
+      build_schema("schema.json", properties: properties, definitions: {})
     end
 
     it "replaces the field's 'ref' with a 'type' of 'string'" do
