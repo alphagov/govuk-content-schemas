@@ -53,8 +53,8 @@ def metadata_sources(filename)
   end
 end
 
-def sources_for_frontend_schema(filename)
-  Rake::FileList.new(filename.pathmap("%{frontend,publisher}p"))
+def source_for_frontend_schema(filename)
+  Rake::FileList.new(filename.pathmap("%{frontend,publisher_v2}p"))
 end
 
 combine_publisher_schemas = ->(task) do
@@ -71,11 +71,16 @@ end
 
 combine_frontend_schemas = ->(task) do
   publisher_schema = schema_reader.read(task.sources.first)
+  publisher_links_path = task.name.pathmap("%{frontend,publisher_v2}p").pathmap("%d/links.json")
+  publisher_links = File.exists?(publisher_links_path) ? schema_reader.read(publisher_links_path) : nil
+
   frontend_links_definition = schema_reader.read("formats/frontend_links_definition.json")
 
   FileUtils.mkdir_p(task.name.pathmap("%d"))
   format_name = task.name.pathmap("%{dist/formats/,}d").pathmap("%d")
-  frontend_generator = GovukContentSchemas::FrontendSchemaGenerator.new(publisher_schema, frontend_links_definition, format_name)
+  frontend_generator = GovukContentSchemas::FrontendSchemaGenerator.new(
+    publisher_schema, publisher_links, frontend_links_definition, format_name
+  )
   frontend_schema = frontend_generator.generate.schema
 
   File.open(task.name, "w") do |file|
@@ -99,7 +104,7 @@ rule %r{^dist/formats/.*/publisher/schema.json} => ->(f) { sources_for_v1_schema
 rule %r{^dist/formats/.*/publisher_v2/schema.json} => ->(f) { sources_for_v2_schema(f) }, &combine_publisher_schemas
 rule %r{^dist/formats/.*/publisher_v2/links.json} => ->(f) { sources_for_v2_links(f) }, &combine_publisher_schemas
 
-rule %r{^dist/formats/.*/frontend/schema.json} => ->(f) { sources_for_frontend_schema(f) }, &combine_frontend_schemas
+rule %r{^dist/formats/.*/frontend/schema.json} => ->(f) { source_for_frontend_schema(f) }, &combine_frontend_schemas
 
 generated_publisher_formats = FileList.new("formats/*/publisher").exclude(*hand_made_publisher_schemas.pathmap("%d"))
 generated_frontend_formats = FileList.new("formats/*/frontend")
