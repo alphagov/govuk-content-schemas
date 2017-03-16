@@ -5,7 +5,7 @@ require "json-schema"
 class GovukContentSchemas::FrontendSchemaGenerator
   include ::GovukContentSchemas::Utils
 
-  attr_reader :publisher_schema, :frontend_links_definition, :format_name
+  attr_reader :publisher_schema, :publisher_links_schema, :frontend_links_definition, :format_name
 
   INTERNAL_PROPERTIES = %w{
     access_limited
@@ -52,8 +52,9 @@ class GovukContentSchemas::FrontendSchemaGenerator
 
   CHANGE_HISTORY_REQUIRED = ['specialist_document'].freeze
 
-  def initialize(publisher_schema, frontend_links_definition, format_name)
+  def initialize(publisher_schema, publisher_links_schema, frontend_links_definition, format_name)
     @publisher_schema = publisher_schema
+    @publisher_links_schema = publisher_links_schema
     @frontend_links_definition = frontend_links_definition
     @format_name = format_name
   end
@@ -89,10 +90,6 @@ private
     @pub_properties ||= publisher_schema.schema["properties"] || {}
   end
 
-  def publisher_links
-    publisher_schema.schema["definitions"]["links"] || publisher_properties["links"] || { "properties" => {} }
-  end
-
   def frontend_properties
     properties = publisher_properties.reject { |property_name| internal?(property_name) }
     properties = resolve_multiple_content_types(properties)
@@ -123,22 +120,39 @@ private
     properties
   end
 
-  def frontend_link_names
-    publisher_links.fetch("properties", {}).keys + LINK_NAMES_ADDED_BY_PUBLISHING_API
+  def publisher_links
+    from_publisher = publisher_schema.schema.dig("definitions", "links", "properties") || {}
+    from_links = publisher_links_schema&.schema&.dig("properties", "links", "properties") || {}
+    from_links.merge(from_publisher)
+  end
+
+  def required_links
+    publisher_schema.schema.dig("definitions", "links", "required") || []
+  end
+
+  def publishing_api_links
+    LINK_NAMES_ADDED_BY_PUBLISHING_API.each_with_object({}) do |link_name, memo|
+      memo[link_name] = {
+        "description" => "An automatic link added by the Publising API"
+      }
+    end
   end
 
   def frontend_link_properties
-    frontend_link_names.inject({}) do |hash, link_name|
-      hash.merge(link_name => frontend_links_ref)
+    links = publisher_links.merge(publishing_api_links)
+    links.each_with_object({}) do |(link_name, link_hash), memo|
+      memo[link_name] = link_hash.merge(frontend_links_ref)
     end
   end
 
   def frontend_links
-    clone_hash(publisher_links || {}).merge(
+    properties = {
       "additionalProperties" => false,
       "type" => "object",
       "properties" => frontend_link_properties
-    )
+    }
+    properties["required"] = required_links unless required_links.empty?
+    properties
   end
 
   def publisher_definitions
