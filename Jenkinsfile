@@ -3,33 +3,33 @@
 REPOSITORY = 'govuk-content-schemas'
 
 def dependentApplications = [
-  'businesssupportfinder',
-  'collections',
-  'collections-publisher',
-  'contacts',
-  'contacts-frontend',
-  'content-tagger',
-  'email-alert-frontend',
-  'email-alert-service',
-  'finder-frontend',
+  //'businesssupportfinder',
+  //'collections',
+  //'collections-publisher',
+  //'contacts',
+  //'contacts-frontend',
+  //'content-tagger',
+  //'email-alert-frontend',
+  //'email-alert-service',
+  //'finder-frontend',
   'frontend',
-  'hmrc-manuals-api',
-  'licencefinder',
-  'manuals-frontend',
-  'manuals-publisher',
-  'policy-publisher',
-  'publisher',
-  'publishing-api',
-  'short-url-manager',
-  'service-manual-frontend',
-  'service-manual-publisher',
-  'specialist-frontend',
-  'smartanswers',
-  'calendars',
-  'calculators',
-  'specialist-publisher',
-  'static',
-  'whitehall',
+  //'hmrc-manuals-api',
+  //'licencefinder',
+  //'manuals-frontend',
+  //'manuals-publisher',
+  //'policy-publisher',
+  //'publisher',
+  //'publishing-api',
+  //'short-url-manager',
+  //'service-manual-frontend',
+  //'service-manual-publisher',
+  //'specialist-frontend',
+  //'smartanswers',
+  //'calendars',
+  //'calculators',
+  //'specialist-publisher',
+  //'static',
+  //'whitehall',
 ]
 
 node {
@@ -54,6 +54,12 @@ node {
   try {
     stage("Checkout") {
       checkout scm
+      echo "Before: GIT_COMMIT is ${env.GIT_COMMIT}"
+      env.GIT_COMMIT = sh(
+        script: 'git rev-parse HEAD',
+        returnStdout: true
+      ).trim()
+      echo "After: GIT_COMMIT is ${env.GIT_COMMIT}"
     }
 
     stage("Merge master") {
@@ -111,7 +117,7 @@ stage("Check dependent projects against updated schema") {
     dependentBuilds[app] = {
       start = System.currentTimeMillis()
 
-      build job: "${app}/deployed-to-production",
+      build job: "${app}/downstream-build-status",
         parameters: [
           [$class: 'BooleanParameterValue',
             name: 'IS_SCHEMA_TEST',
@@ -119,7 +125,10 @@ stage("Check dependent projects against updated schema") {
           [$class: 'StringParameterValue',
             name: 'SCHEMA_BRANCH',
             value: env.BRANCH_NAME],
-        ]
+          [$class: 'StringParameterValue',
+            name: 'SCHEMA_COMMIT',
+            value: env.GIT_COMMIT]
+        ], wait: false
 
       now = System.currentTimeMillis()
       runtime = now - start
