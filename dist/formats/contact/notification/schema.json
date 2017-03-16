@@ -35,19 +35,21 @@
       ]
     },
     "public_updated_at": {
-      "$ref": "#/definitions/public_updated_at"
+      "type": "string",
+      "format": "date-time"
     },
     "first_published_at": {
-      "$ref": "#/definitions/first_published_at"
+      "type": "string",
+      "format": "date-time"
     },
     "publishing_app": {
-      "$ref": "#/definitions/application_name"
+      "type": "string"
     },
     "rendering_app": {
-      "$ref": "#/definitions/application_name"
+      "type": "string"
     },
     "locale": {
-      "$ref": "#/definitions/locale"
+      "type": "string"
     },
     "need_ids": {
       "type": "array",
@@ -72,22 +74,6 @@
     },
     "withdrawn_notice": {
       "$ref": "#/definitions/withdrawn_notice"
-    },
-    "content_id": {
-      "$ref": "#/definitions/guid"
-    },
-    "last_edited_at": {
-      "type": "string",
-      "format": "date-time",
-      "description": "Last time when the content received a major or minor update."
-    },
-    "links": {
-      "type": "object",
-      "patternProperties": {
-        "^[a-z_]+$": {
-          "$ref": "#/definitions/guid_list"
-        }
-      }
     },
     "document_type": {
       "type": "string",
@@ -256,6 +242,14 @@
         "contact"
       ]
     },
+    "links": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-z_]+$": {
+          "$ref": "#/definitions/guid_list"
+        }
+      }
+    },
     "format": {
       "type": "string",
       "description": "DEPRECATED: use `document_type` instead. This field will be removed."
@@ -275,6 +269,9 @@
     "updated_at": {
       "type": "string",
       "format": "date-time"
+    },
+    "content_id": {
+      "$ref": "#/definitions/guid"
     },
     "routes": {
       "type": "array",
@@ -599,9 +596,6 @@
         },
         "language": {
           "type": "string"
-        },
-        "change_history": {
-          "$ref": "#/definitions/change_history"
         }
       }
     },

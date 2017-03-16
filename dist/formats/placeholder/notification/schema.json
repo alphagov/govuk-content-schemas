@@ -73,13 +73,13 @@
     "withdrawn_notice": {
       "$ref": "#/definitions/withdrawn_notice"
     },
-    "content_id": {
-      "$ref": "#/definitions/guid"
-    },
     "last_edited_at": {
       "type": "string",
       "format": "date-time",
       "description": "Last time when the content received a major or minor update."
+    },
+    "previous_version": {
+      "type": "string"
     },
     "links": {
       "type": "object",
@@ -274,6 +274,9 @@
     "updated_at": {
       "type": "string",
       "format": "date-time"
+    },
+    "content_id": {
+      "$ref": "#/definitions/guid"
     },
     "routes": {
       "type": "array",

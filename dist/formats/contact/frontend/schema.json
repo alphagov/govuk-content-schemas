@@ -3,12 +3,12 @@
   "type": "object",
   "additionalProperties": false,
   "required": [
+    "content_id",
     "base_path",
     "links",
     "title",
     "details",
     "locale",
-    "content_id",
     "document_type",
     "schema_name"
   ],
@@ -30,19 +30,21 @@
       ]
     },
     "public_updated_at": {
-      "$ref": "#/definitions/public_updated_at"
+      "type": "string",
+      "format": "date-time"
     },
     "first_published_at": {
-      "$ref": "#/definitions/first_published_at"
+      "type": "string",
+      "format": "date-time"
     },
     "publishing_app": {
-      "$ref": "#/definitions/application_name"
+      "type": "string"
     },
     "rendering_app": {
-      "$ref": "#/definitions/application_name"
+      "type": "string"
     },
     "locale": {
-      "$ref": "#/definitions/locale"
+      "type": "string"
     },
     "need_ids": {
       "type": "array",
@@ -67,71 +69,6 @@
     },
     "withdrawn_notice": {
       "$ref": "#/definitions/withdrawn_notice"
-    },
-    "content_id": {
-      "$ref": "#/definitions/guid"
-    },
-    "last_edited_at": {
-      "type": "string",
-      "format": "date-time",
-      "description": "Last time when the content received a major or minor update."
-    },
-    "links": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "related": {
-          "$ref": "#/definitions/frontend_links"
-        },
-        "taxons": {
-          "$ref": "#/definitions/frontend_links"
-        },
-        "ordered_related_items": {
-          "$ref": "#/definitions/frontend_links"
-        },
-        "ordered_related_items_overrides": {
-          "$ref": "#/definitions/frontend_links"
-        },
-        "mainstream_browse_pages": {
-          "$ref": "#/definitions/frontend_links"
-        },
-        "meets_user_needs": {
-          "$ref": "#/definitions/frontend_links"
-        },
-        "topics": {
-          "$ref": "#/definitions/frontend_links"
-        },
-        "organisations": {
-          "$ref": "#/definitions/frontend_links"
-        },
-        "parent": {
-          "$ref": "#/definitions/frontend_links"
-        },
-        "policy_areas": {
-          "$ref": "#/definitions/frontend_links"
-        },
-        "available_translations": {
-          "$ref": "#/definitions/frontend_links"
-        },
-        "children": {
-          "$ref": "#/definitions/frontend_links"
-        },
-        "policies": {
-          "$ref": "#/definitions/frontend_links"
-        },
-        "document_collections": {
-          "$ref": "#/definitions/frontend_links"
-        },
-        "child_taxons": {
-          "$ref": "#/definitions/frontend_links"
-        },
-        "topic_content": {
-          "$ref": "#/definitions/frontend_links"
-        },
-        "mainstream_browse_content": {
-          "$ref": "#/definitions/frontend_links"
-        }
-      }
     },
     "document_type": {
       "type": "string",
@@ -300,6 +237,79 @@
         "contact"
       ]
     },
+    "links": {
+      "additionalProperties": false,
+      "type": "object",
+      "properties": {
+        "related": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "taxons": {
+          "description": "Prototype-stage taxonomy label for this content item",
+          "$ref": "#/definitions/frontend_links"
+        },
+        "ordered_related_items": {
+          "description": "Related items, can be any page on GOV.UK. Mostly used for mainstream content to power the sidebar. Ordering of the links is determined by the editor in Content Tagger.",
+          "$ref": "#/definitions/frontend_links"
+        },
+        "ordered_related_items_overrides": {
+          "description": "Related items, can be any page on GOV.UK. Overrides 'more like this' automatically generated links in the beta navigation.",
+          "$ref": "#/definitions/frontend_links"
+        },
+        "mainstream_browse_pages": {
+          "description": "Powers the /browse section of the site. These are known as sections in some legacy apps.",
+          "$ref": "#/definitions/frontend_links"
+        },
+        "meets_user_needs": {
+          "description": "The user needs this piece of content meets.",
+          "$ref": "#/definitions/frontend_links"
+        },
+        "topics": {
+          "description": "Powers the /topic section of the site. These are known as specialist sectors in some legacy apps.",
+          "$ref": "#/definitions/frontend_links"
+        },
+        "organisations": {
+          "description": "All organisations linked to this content item. This should include lead organisations.",
+          "$ref": "#/definitions/frontend_links"
+        },
+        "parent": {
+          "description": "The parent content item.",
+          "$ref": "#/definitions/frontend_links",
+          "maxItems": 1
+        },
+        "policy_areas": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "available_translations": {
+          "description": "An automatic link added by the Publising API",
+          "$ref": "#/definitions/frontend_links"
+        },
+        "children": {
+          "description": "An automatic link added by the Publising API",
+          "$ref": "#/definitions/frontend_links"
+        },
+        "policies": {
+          "description": "An automatic link added by the Publising API",
+          "$ref": "#/definitions/frontend_links"
+        },
+        "document_collections": {
+          "description": "An automatic link added by the Publising API",
+          "$ref": "#/definitions/frontend_links"
+        },
+        "child_taxons": {
+          "description": "An automatic link added by the Publising API",
+          "$ref": "#/definitions/frontend_links"
+        },
+        "topic_content": {
+          "description": "An automatic link added by the Publising API",
+          "$ref": "#/definitions/frontend_links"
+        },
+        "mainstream_browse_content": {
+          "description": "An automatic link added by the Publising API",
+          "$ref": "#/definitions/frontend_links"
+        }
+      }
+    },
     "format": {
       "type": "string",
       "description": "DEPRECATED: use `document_type` instead. This field will be removed."
@@ -319,6 +329,9 @@
     "updated_at": {
       "type": "string",
       "format": "date-time"
+    },
+    "content_id": {
+      "$ref": "#/definitions/guid"
     }
   },
   "definitions": {
@@ -609,9 +622,6 @@
         },
         "language": {
           "type": "string"
-        },
-        "change_history": {
-          "$ref": "#/definitions/change_history"
         }
       }
     },
