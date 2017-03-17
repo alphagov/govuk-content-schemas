@@ -31,13 +31,6 @@ def validate_schemas(schema_file_list)
   abort "\nThe following schemas aren't valid:\n" + validation_errors.join("\n") if validation_errors.any?
 end
 
-desc 'Validate that source schemas are valid schemas'
-task :validate_source_schemas do
-  print "Validating source schemas... "
-  validate_schemas(Rake::FileList.new("formats/**/*.json"))
-  puts "✔︎"
-end
-
 desc 'Validate that generated schemas are valid schemas'
 task :validate_dist_schemas do
   print "Validating generated schemas... "
