@@ -8,7 +8,8 @@
     "publishing_app",
     "rendering_app",
     "locale",
-    "routes"
+    "routes",
+    "base_path"
   ],
   "properties": {
     "base_path": {
@@ -99,6 +100,21 @@
       "type": [
         "null",
         "string"
+      ]
+    },
+    "last_edited_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Last time when the content received a major or minor update."
+    },
+    "previous_version": {
+      "type": "string"
+    },
+    "update_type": {
+      "enum": [
+        "major",
+        "minor",
+        "republish"
       ]
     }
   },

@@ -20,7 +20,7 @@ module SchemaGenerator
     attr_reader :schema_name
 
     def required
-      required_properties = base_content_item["required"] + other_base_content_item["required"] + %w[document_type schema_name]
+      required_properties = base_content_item["required"] + %w[document_type schema_name]
 
       # TODO: `contact` is a content item that is can be base path less.
       if schema_name == "contact"
@@ -32,7 +32,6 @@ module SchemaGenerator
 
     def properties
       base_content_item["properties"]
-        .merge(other_base_content_item["properties"])
         .merge("links" => { "$ref" => "#/definitions/links" })
         .merge("document_type" => document_type_definition)
         .merge("schema_name" => schema_name_definition)
@@ -89,11 +88,6 @@ module SchemaGenerator
     def edition_links
       path  = "formats/#{schema_name}/publisher/edition_links.json"
       File.exists?(path) ? Schema.read(path) : {}
-    end
-
-    def other_base_content_item
-      # TODO: once the v1 schemas are gone, we can merge this with `metadata.json`
-      Schema.read("formats/v2_metadata.json")
     end
 
     def definitions_schema
