@@ -1,20 +1,87 @@
 module SchemaGenerator
-  class PublisherDownstreamSchemaGenerator
+  class PublisherDownstreamSchema
     def initialize(schema_name, publisher_content_schema, publisher_links_schema)
       @schema_name = schema_name
       @publisher_content_schema = publisher_content_schema
       @publisher_links_schema = publisher_links_schema
     end
 
-    def generate
+    def required
+      (REQUIRED_ATTRIBUTES + publisher_content_schema.fetch("required", [])).sort.uniq
+    end
+
+    def properties
+      props = publisher_content_schema["properties"].merge(
+        "content_id" => {
+          "$ref" => "#/definitions/guid"
+        },
+        "format" => {
+          "type" => "string",
+          "description" => "DEPRECATED: use `document_type` instead. This field will be removed."
+        },
+        "navigation_document_supertype" => {
+          "type" => "string",
+          "description" => "Document type grouping powering the new taxonomy-based navigation pages",
+        },
+        "user_journey_document_supertype" => {
+          "type" => "string",
+          "description" => "Document type grouping powering analytics of user journeys",
+        },
+        "whitehall_document_supertype" => {
+          "type" => "string",
+          "description" => "Document type grouping intended to power the Whitehall finders and email subscriptions",
+        },
+        "updated_at" => {
+          "type" => "string",
+          "format" => "date-time"
+        },
+      )
+
+      props.slice(*(props.keys - %w(change_note)))
+    end
+
+    def expanded_links_properties
+      link_properties = expanded_links(
+        publisher_content_schema, publisher_links_schema
+      )
+
       {
-        "$schema" => "http://json-schema.org/draft-04/schema#",
         "type" => "object",
         "additionalProperties" => false,
-        "required" => required,
-        "properties" => properties,
-        "definitions" => definitions,
+        "properties" => link_properties,
       }
+    end
+
+    def unexpanded_links_properties
+      link_properties = unexpanded_links(
+        publisher_content_schema, publisher_links_schema
+      )
+
+      {
+        "type" => "object",
+        "additionalProperties" => false,
+        "properties" => link_properties,
+      }
+    end
+
+    def definitions
+      the_definitions = publisher_content_schema["definitions"].dup
+
+      the_definitions.delete("links")
+
+      replace_multiple_content_types(the_definitions).tap do |converted|
+        if schema_name == "specialist_document"
+          converted["details"]["required"] << "change_history"
+        end
+
+        if details_should_contain_change_history?(converted)
+          converted["details"]["properties"]["change_history"] = { "$ref"=>"#/definitions/change_history" }
+        end
+      end
+    end
+
+    def expanded_links_definition
+      Schema.read("formats/expanded_links_definition.json").slice("type", "items")
     end
 
   private
@@ -59,76 +126,6 @@ module SchemaGenerator
       locale
       schema_name
     ).freeze
-
-    def required
-      (REQUIRED_ATTRIBUTES + publisher_content_schema.fetch("required", [])).sort.uniq
-    end
-
-    def properties
-      props = publisher_content_schema["properties"].merge(
-        "content_id" => {
-          "$ref" => "#/definitions/guid"
-        },
-        "links" => {
-          "type" => "object",
-          "additionalProperties" => false,
-          "properties" => unexpanded_links(publisher_content_schema, publisher_links_schema),
-        },
-        "expanded_links" => {
-          "type" => "object",
-          "additionalProperties" => false,
-          "properties" => expanded_links(publisher_content_schema, publisher_links_schema)
-        },
-        "format" => {
-          "type" => "string",
-          "description" => "DEPRECATED: use `document_type` instead. This field will be removed."
-        },
-        "navigation_document_supertype" => {
-          "type" => "string",
-          "description" => "Document type grouping powering the new taxonomy-based navigation pages",
-        },
-        "user_journey_document_supertype" => {
-          "type" => "string",
-          "description" => "Document type grouping powering analytics of user journeys",
-        },
-        "whitehall_document_supertype" => {
-          "type" => "string",
-          "description" => "Document type grouping intended to power the Whitehall finders and email subscriptions",
-        },
-        "updated_at" => {
-          "type" => "string",
-          "format" => "date-time"
-        },
-      )
-
-      # TODO: This is done to make sure that this rewrite produces the exact same
-      # JSON as before. After this is merged we can simplify this by just removing
-      # the fields from the publisher_content_schema we don't want.
-      props.slice(*%w[
-        base_path title description public_updated_at first_published_at
-        publishing_app rendering_app locale need_ids analytics_identifier phase
-        details withdrawn_notice content_id last_edited_at links document_type
-        schema_name format navigation_document_supertype user_journey_document_supertype whitehall_document_supertype updated_at
-      ])
-    end
-
-    def definitions
-      the_definitions = {
-        "expanded_links" => Schema.read("formats/expanded_links_definition.json").slice("type", "items")
-      }.merge(publisher_content_schema["definitions"])
-
-      the_definitions.delete("links")
-
-      replace_multiple_content_types(the_definitions).tap do |converted|
-        if schema_name == "specialist_document"
-          converted["details"]["required"] << "change_history"
-        end
-
-        if details_should_contain_change_history?(converted)
-          converted["details"]["properties"]["change_history"] = { "$ref"=>"#/definitions/change_history" }
-        end
-      end
-    end
 
     def publishing_api_expanded_links
       LINK_TYPES_ADDED_BY_PUBLISHING_API.each_with_object({}) do |link_type, memo|
