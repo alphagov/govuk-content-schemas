@@ -75,7 +75,7 @@ module SchemaGenerator
         "links" => {
           "type" => "object",
           "additionalProperties" => false,
-          "properties" => frontend_links(publisher_links_schema)
+          "properties" => frontend_links(publisher_content_schema, publisher_links_schema)
         },
         "format" => {
           "type" => "string",
@@ -132,14 +132,24 @@ module SchemaGenerator
       end
     end
 
-    def frontend_links(publisher_links_schema)
-      link_types_sent_by_publishing_apps = publisher_links_schema["properties"]["links"]["properties"].keys
-
-      frontend_link_names = link_types_sent_by_publishing_apps + LINK_TYPES_ADDED_BY_PUBLISHING_API
-
-      frontend_link_names.reduce({}) do |hash, link_name|
-        hash.merge(link_name => { "$ref" => "#/definitions/frontend_links" })
+    def publishing_api_expanded_links
+      LINK_TYPES_ADDED_BY_PUBLISHING_API.each_with_object({}) do |link_type, memo|
+        memo[link_type] = { "description" => "Link type automatically added by Publishing API" }
       end
+    end
+
+    def frontend_links(publisher_content_schema, publisher_links_schema)
+      edition_links = publisher_content_schema.dig("definitions", "links", "properties") || {}
+      link_set_links = publisher_links_schema.dig("properties", "links", "properties") || {}
+
+      link_set_links.merge(edition_links)
+        .merge(publishing_api_expanded_links)
+        .each_with_object({}) do |(type, properties), memo|
+          # We can't know of the presence of any items due to reliance on when
+          # they're published, so at best we can know the maxItems
+          memo[type] = properties.slice("description", "maxItems")
+            .merge("$ref" => "#/definitions/frontend_links")
+        end
     end
 
     def replace_multiple_content_types(object)
