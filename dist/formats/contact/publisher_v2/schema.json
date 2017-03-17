@@ -82,6 +82,30 @@
     "withdrawn_notice": {
       "$ref": "#/definitions/withdrawn_notice"
     },
+    "change_note": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "last_edited_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Last time when the content received a major or minor update."
+    },
+    "previous_version": {
+      "type": "string"
+    },
+    "update_type": {
+      "enum": [
+        "major",
+        "minor",
+        "republish"
+      ]
+    },
+    "links": {
+      "$ref": "#/definitions/links"
+    },
     "document_type": {
       "type": "string",
       "enum": [
