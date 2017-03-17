@@ -62,20 +62,7 @@
       }
     },
     "access_limited": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "users": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "fact_check_ids": {
-          "$ref": "#/definitions/guid_list",
-          "description": "A list of ids that will allow access to this item for fact checking."
-        }
-      }
+      "$ref": "#/definitions/access_limited"
     },
     "analytics_identifier": {
       "$ref": "#/definitions/analytics_identifier"
