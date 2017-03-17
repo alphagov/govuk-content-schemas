@@ -10,11 +10,13 @@ task build: [
               :reformat_authored_json,
               :validate_shared_details_definitions,
               :validate_source_schemas,
-              :clean, :combine_schemas,
+              :clean,
+              :combine_schemas,
               :validate_dist_schemas,
               :validate_uniqueness_of_frontend_example_base_paths,
               :validate_links,
-              :validate_examples
+              :validate_examples,
+              :remove_v1_schemas,
             ]
 
 desc "creates the folders and files for adding a new format"
@@ -35,6 +37,11 @@ task :new_format, [:format_name] do |_task, args|
       FileUtils.cp("templates/#{file}", destination)
     end
   end
+end
+
+# V1 schemas are used to generate V2 schemas, but are itself no longer necessary
+task :remove_v1_schemas do
+  sh "rm -rf dist/formats/*/publisher"
 end
 
 task default: [:build]
