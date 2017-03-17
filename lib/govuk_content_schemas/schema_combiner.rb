@@ -107,14 +107,10 @@ private
   end
 
   def document_type
-    if schemas.key?(:document_types)
-      schemas[:document_types].schema["properties"]["document_type"]
-    else
-      {
-        "type" => "string",
-        "enum" => YAML.load_file("lib/govuk_content_schemas/allowed_document_types.yml"),
-      }
-    end
+    {
+      "type" => "string",
+      "enum" => YAML.load_file("lib/govuk_content_schemas/allowed_document_types.yml"),
+    }
   end
 
   def add_combined_definitions(schema)
