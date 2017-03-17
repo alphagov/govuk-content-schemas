@@ -47,7 +47,7 @@ module SchemaGenerator
 
       base
         .merge(base_content_item["definitions"])
-        .merge("links" => base_edition_links.slice("type", "additionalProperties", "required", "properties"))
+        .merge(links_schema)
         .merge(definitions_schema)
         .merge(details["definitions"].to_h)
     end
@@ -86,6 +86,11 @@ module SchemaGenerator
       Schema.read("formats/base_edition_links.json")
     end
 
+    def edition_links
+      path  = "formats/#{schema_name}/publisher/edition_links.json"
+      File.exists?(path) ? Schema.read(path) : {}
+    end
+
     def other_base_content_item
       # TODO: once the v1 schemas are gone, we can merge this with `metadata.json`
       Schema.read("formats/v2_metadata.json")
@@ -93,6 +98,31 @@ module SchemaGenerator
 
     def definitions_schema
       Schema.read("formats/definitions.json").dig("definitions")
+    end
+
+    def links_schema
+      fields = %w[additionalProperties required properties]
+      edition_fields = edition_links.slice(*fields)
+      base_fields = base_edition_links.slice(*fields)
+
+      additional_properties = edition_fields.fetch("additionalProperties", false) ||
+        base_fields.fetch("additionalProperties", false)
+      required = edition_fields.fetch("required", []) + base_fields.fetch("required", [])
+      # TODO swap this so edition links prioritise base ones, it's the wrong way to avoid rewriting diffs
+      # properties = base_fields.fetch("properties", {}).merge(edition_fields.fetch("properties", {}))
+      properties = edition_fields.fetch("properties", {}).merge(base_fields.fetch("properties", {}))
+
+      links = {
+        "links" => {
+          "type" => "object",
+          "additionalProperties" => additional_properties,
+          "properties" => properties,
+        }
+      }
+
+      # TODO: this can be moved into above hash, not currently to avoid a diff in rewriting
+      links["links"]["required"] = required unless required.empty?
+      links
     end
   end
 end
