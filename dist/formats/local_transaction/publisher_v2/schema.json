@@ -65,20 +65,7 @@
       }
     },
     "access_limited": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "users": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "fact_check_ids": {
-          "$ref": "#/definitions/guid_list",
-          "description": "A list of ids that will allow access to this item for fact checking."
-        }
-      }
+      "$ref": "#/definitions/access_limited"
     },
     "analytics_identifier": {
       "$ref": "#/definitions/analytics_identifier"
@@ -353,6 +340,22 @@
       "type": "string",
       "pattern": "^/(([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})+(/([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)*)?(\\?([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)?(#([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)?$",
       "description": "A path with optional query string and/or fragment."
+    },
+    "access_limited": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "users": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "fact_check_ids": {
+          "$ref": "#/definitions/guid_list",
+          "description": "A list of ids that will allow access to this item for fact checking."
+        }
+      }
     },
     "analytics_identifier": {
       "anyOf": [

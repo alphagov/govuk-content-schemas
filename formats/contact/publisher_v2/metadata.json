@@ -26,21 +26,19 @@
       ]
     },
     "public_updated_at": {
-      "type": "string",
-      "format": "date-time"
+      "$ref": "#/definitions/public_updated_at"
     },
     "first_published_at": {
-      "type": "string",
-      "format": "date-time"
+      "$ref": "#/definitions/first_published_at"
     },
     "publishing_app": {
-      "type": "string"
+      "$ref": "#/definitions/application_name"
     },
     "rendering_app": {
-      "type": "string"
+      "$ref": "#/definitions/application_name"
     },
     "locale": {
-      "type": "string"
+      "$ref": "#/definitions/locale"
     },
     "need_ids": {
       "type": "array",
@@ -62,19 +60,7 @@
       }
     },
     "access_limited": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "users"
-      ],
-      "properties": {
-        "users": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        }
-      }
+      "$ref": "#/definitions/access_limited"
     },
     "analytics_identifier": {
       "$ref": "#/definitions/analytics_identifier"
