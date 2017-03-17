@@ -2,7 +2,7 @@ require "schema_generator/schema"
 require "schema_generator/handmade_schema_copier"
 require "schema_generator/publisher_content_schema_generator"
 require "schema_generator/publisher_links_schema_generator"
-require "schema_generator/downstream_schema_generator"
+require "schema_generator/publisher_downstream_schema_generator"
 require "schema_generator/notification_schema_generator"
 
 module SchemaGenerator

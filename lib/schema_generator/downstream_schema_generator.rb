@@ -1,5 +1,5 @@
 module SchemaGenerator
-  class DownstreamSchemaGenerator
+  class PublisherDownstreamSchemaGenerator
     def initialize(schema_name, publisher_content_schema, publisher_links_schema)
       @schema_name = schema_name
       @publisher_content_schema = publisher_content_schema
