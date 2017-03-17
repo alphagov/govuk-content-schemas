@@ -300,8 +300,7 @@
       ],
       "properties": {
         "will_continue_on": {
-          "description": "Text to follow the statement 'This will continue on'.",
-          "type": "string"
+          "$ref": "#/definitions/will_continue_on"
         },
         "continuation_link": {
           "description": "Link to licence competent authority.",
@@ -1347,6 +1346,10 @@
           }
         }
       }
+    },
+    "will_continue_on": {
+      "description": "Description of the website the adjoining external link will be taking the user to",
+      "type": "string"
     }
   }
 }
