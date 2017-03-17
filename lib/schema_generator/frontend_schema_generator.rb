@@ -119,7 +119,7 @@ module SchemaGenerator
 
       replace_multiple_content_types(the_definitions).tap do |converted|
         if schema_name == "specialist_document"
-          the_definitions["details"]["required"] << "change_history"
+          converted["details"]["required"] << "change_history"
         end
 
         if details_should_contain_change_history?(converted)
