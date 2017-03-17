@@ -3,9 +3,6 @@
   "type": "object",
   "additionalProperties": false,
   "required": [
-    "routes",
-    "redirects",
-    "update_type",
     "links",
     "expanded_links",
     "govuk_request_id"

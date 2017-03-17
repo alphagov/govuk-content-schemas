@@ -1,26 +1,23 @@
 module SchemaGenerator
   class NotificationSchemaGenerator
-    def initialize(frontend_schema)
-      @frontend_schema = frontend_schema
+    def initialize(downstream_schema)
+      @downstream_schema = downstream_schema
     end
 
     def generate
-      {
-        "$schema" => "http://json-schema.org/draft-04/schema#",
-        "type" => "object",
-        "additionalProperties" => false,
-        "required" => required,
-        "properties" => properties,
-        "definitions" => definitions,
-      }
+      Schema.generate(
+        required: required,
+        properties: properties,
+        definitions: definitions,
+      )
     end
 
   private
 
-    attr_reader :frontend_schema
+    attr_reader :downstream_schema
 
     def required
-      (frontend_schema["required"] + notification_base["required"]).uniq.sort
+      downstream_schema.required + n
     end
 
     def properties
@@ -28,7 +25,7 @@ module SchemaGenerator
     end
 
     def definitions
-      frontend_schema["definitions"]
+      downstream_schema.definitions
     end
 
     def notification_base

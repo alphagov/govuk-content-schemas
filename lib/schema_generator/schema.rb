@@ -19,7 +19,7 @@ module SchemaGenerator
         "$schema" => "http://json-schema.org/draft-04/schema#",
         "type" => "object",
         "additionalProperties" => additional_properties,
-        "required" => required.sort,
+        "required" => required.uniq.sort,
         "properties" => properties.sort.to_h,
         "definitions" => definitions.sort.to_h,
       }
