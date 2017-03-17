@@ -115,6 +115,8 @@ module SchemaGenerator
         "frontend_links" => Schema.read("formats/frontend_links_definition.json").slice("type", "items")
       }.merge(publisher_content_schema["definitions"])
 
+      the_definitions.delete("links")
+
       if schema_name == "specialist_document"
         the_definitions["details"]["required"] << "change_history"
       end
