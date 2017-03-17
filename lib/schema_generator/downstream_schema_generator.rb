@@ -1,5 +1,5 @@
 module SchemaGenerator
-  class FrontendSchema
+  class DownstreamSchemaGenerator
     def initialize(schema_name, publisher_content_schema, publisher_links_schema)
       @schema_name = schema_name
       @publisher_content_schema = publisher_content_schema
@@ -51,20 +51,17 @@ module SchemaGenerator
       "mainstream_browse_content",
     ].freeze
 
-    # TODO: Add all attributes that the content-store is currently sending.
-    REQUIRED_FRONTEND_ATTRIBUTES = %w(
-      base_path
-      links
-      title
-      details
-      locale
+    REQUIRED_ATTRIBUTES = %w(
       content_id
       document_type
+      expanded_links
+      links
+      locale
       schema_name
     ).freeze
 
     def required
-      REQUIRED_FRONTEND_ATTRIBUTES
+      (REQUIRED_ATTRIBUTES + publisher_content_schema.fetch("required", [])).sort.uniq
     end
 
     def properties
@@ -75,7 +72,12 @@ module SchemaGenerator
         "links" => {
           "type" => "object",
           "additionalProperties" => false,
-          "properties" => frontend_links(publisher_links_schema)
+          "properties" => unexpanded_links(publisher_content_schema, publisher_links_schema),
+        },
+        "expanded_links" => {
+          "type" => "object",
+          "additionalProperties" => false,
+          "properties" => expanded_links(publisher_content_schema, publisher_links_schema)
         },
         "format" => {
           "type" => "string",
@@ -112,7 +114,7 @@ module SchemaGenerator
 
     def definitions
       the_definitions = {
-        "frontend_links" => Schema.read("formats/frontend_links_definition.json").slice("type", "items")
+        "expanded_links" => Schema.read("formats/expanded_links_definition.json").slice("type", "items")
       }.merge(publisher_content_schema["definitions"])
 
       the_definitions.delete("links")
@@ -128,14 +130,29 @@ module SchemaGenerator
       end
     end
 
-    def frontend_links(publisher_links_schema)
-      link_types_sent_by_publishing_apps = publisher_links_schema["properties"]["links"]["properties"].keys
-
-      frontend_link_names = link_types_sent_by_publishing_apps + LINK_TYPES_ADDED_BY_PUBLISHING_API
-
-      frontend_link_names.reduce({}) do |hash, link_name|
-        hash.merge(link_name => { "$ref" => "#/definitions/frontend_links" })
+    def publishing_api_expanded_links
+      LINK_TYPES_ADDED_BY_PUBLISHING_API.each_with_object({}) do |link_type, memo|
+        memo[link_type] = { "description" => "Link type automatically added by Publishing API" }
       end
+    end
+
+    def expanded_links(publisher_content_schema, publisher_links_schema)
+      edition_links = publisher_content_schema.dig("definitions", "links", "properties") || {}
+      link_set_links = publisher_links_schema.dig("properties", "links", "properties") || {}
+
+      link_set_links.merge(edition_links)
+        .merge(publishing_api_expanded_links)
+        .each_with_object({}) do |(type, properties), memo|
+          memo[type] = properties.slice("description", "maxItems")
+            .merge("$ref" => "#/definitions/expanded_links")
+        end
+    end
+
+    def unexpanded_links(publisher_content_schema, publisher_links_schema)
+      expanded_links(publisher_content_schema, publisher_links_schema)
+        .each_with_object({}) do |(type, properties), memo|
+          memo[type] = properties.merge("$ref" => "#/definitions/guid_list")
+        end
     end
 
     def replace_multiple_content_types(object)

@@ -2,7 +2,7 @@ require "schema_generator/schema"
 require "schema_generator/handmade_schema_copier"
 require "schema_generator/publisher_content_schema_generator"
 require "schema_generator/publisher_links_schema_generator"
-require "schema_generator/frontend_schema_generator"
+require "schema_generator/downstream_schema_generator"
 require "schema_generator/notification_schema_generator"
 
 module SchemaGenerator
@@ -21,7 +21,7 @@ module SchemaGenerator
       publisher_links_schema = PublisherLinksSchemaGenerator.new(schema_name).generate
       Schema.write("dist/formats/#{schema_name}/publisher_v2/links.json", publisher_links_schema)
 
-      frontend_schema = FrontendSchema.new(schema_name, publisher_content_schema, publisher_links_schema).generate
+      frontend_schema = DownstreamSchemaGenerator.new(schema_name, publisher_content_schema, publisher_links_schema).generate
       Schema.write("dist/formats/#{schema_name}/frontend/schema.json", frontend_schema)
 
       notification_schema = NotificationSchemaGenerator.new(frontend_schema).generate
