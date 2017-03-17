@@ -1,8 +1,9 @@
 require "rake/clean"
 require "govuk_content_schemas/schema_combiner"
-require "govuk_content_schemas/frontend_schema_generator"
+require "govuk_content_schemas/downstream_schema_generator"
 require "json-schema"
 require "json"
+require "byebug"
 
 CLEAN << "dist/formats"
 
@@ -53,66 +54,72 @@ def metadata_sources(filename)
   end
 end
 
-def source_for_frontend_schema(filename)
-  Rake::FileList.new(filename.pathmap("%{frontend,publisher_v2}p"))
+def source_for_downstream_schema(filename)
+  Rake::FileList.new(filename.pathmap("%d/schema.json"))
+end
+
+def notification_schema(downstream_schema)
+  downstream_schema
+end
+
+def frontend_schema(downstream_schema)
+  downstream_schema
+end
+
+def write_schema(schema, path)
+  FileUtils.mkdir_p(path.pathmap("%d"))
+
+  File.open(path, "w") do |file|
+     file.puts JSON.pretty_generate(schema)
+  end
 end
 
 combine_publisher_schemas = ->(task) do
   source_schemas = Hash[task.sources.map { |s| [s.pathmap("%n").to_sym, schema_reader.read(s)] }]
-  FileUtils.mkdir_p task.name.pathmap("%d")
   format_name = task.name.pathmap("%{dist/formats/,}d").pathmap("%d")
 
   combiner = GovukContentSchemas::SchemaCombiner.new(source_schemas, format_name)
 
-  File.open(task.name, "w") do |file|
-    file.puts JSON.pretty_generate(combiner.combined.schema)
-  end
+  write_schema(combiner.combined.schema, task.name)
 end
 
-combine_frontend_schemas = ->(task) do
-  publisher_schema = schema_reader.read(task.sources.first)
-  publisher_links_path = task.name.pathmap("%{frontend,publisher_v2}p").pathmap("%d/links.json")
+combine_downstream_schemas = ->(task) do
+  source = task.sources.first
+  publisher_schema = schema_reader.read(source)
+  publisher_links_path = source.pathmap("%d/links.json")
   publisher_links = File.exists?(publisher_links_path) ? schema_reader.read(publisher_links_path) : nil
 
-  frontend_links_definition = schema_reader.read("formats/frontend_links_definition.json")
-
-  FileUtils.mkdir_p(task.name.pathmap("%d"))
-  format_name = task.name.pathmap("%{dist/formats/,}d").pathmap("%d")
-  frontend_generator = GovukContentSchemas::FrontendSchemaGenerator.new(
-    publisher_schema, publisher_links, frontend_links_definition, format_name
+  format_name = source.pathmap("%{dist/formats/,}d").pathmap("%d")
+  expanded_links_definition = schema_reader.read("formats/expanded_links_definition.json")
+  downstream_generator = GovukContentSchemas::DownstreamSchemaGenerator.new(
+    publisher_schema, publisher_links, expanded_links_definition, format_name
   )
-  frontend_schema = frontend_generator.generate.schema
+  downstream_schema = downstream_generator.generate.schema
 
-  File.open(task.name, "w") do |file|
-    file.puts JSON.pretty_generate(frontend_schema)
-  end
-
-  notification_schema_filename = task.name.gsub("frontend", "notification")
-  FileUtils.mkdir_p(notification_schema_filename.pathmap("%d"))
-
-  notification_schema = frontend_schema
-  notification_base = schema_reader.read("formats/notification_base.json").schema
-  notification_schema["properties"].merge!(notification_base["properties"])
-  notification_schema["required"] = (notification_schema["required"] + notification_base["required"]).uniq.sort
-
-  File.open(notification_schema_filename, "w") do |file|
-    file.puts JSON.pretty_generate(notification_schema)
-  end
+  notification_path = task.name.pathmap("%{publisher_v2,notification}p").pathmap("%d/schema.json")
+  write_schema(notification_schema(downstream_schema), notification_path)
+  frontend_path = task.name.pathmap("%{publisher_v2,frontend}p").pathmap("%d/schema.json")
+  write_schema(frontend_schema(downstream_schema), frontend_path)
 end
 
 rule %r{^dist/formats/.*/publisher/schema.json} => ->(f) { sources_for_v1_schema(f) }, &combine_publisher_schemas
 rule %r{^dist/formats/.*/publisher_v2/schema.json} => ->(f) { sources_for_v2_schema(f) }, &combine_publisher_schemas
 rule %r{^dist/formats/.*/publisher_v2/links.json} => ->(f) { sources_for_v2_links(f) }, &combine_publisher_schemas
 
-rule %r{^dist/formats/.*/frontend/schema.json} => ->(f) { source_for_frontend_schema(f) }, &combine_frontend_schemas
+rule %r{^dist/formats/.*/publisher_v2/downstream.json} => ->(f) { source_for_downstream_schema(f) }, &combine_downstream_schemas
 
 generated_publisher_formats = FileList.new("formats/*/publisher").exclude(*hand_made_publisher_schemas.pathmap("%d"))
-generated_frontend_formats = FileList.new("formats/*/frontend")
+generated_frontend_formats = FileList.new("formats/*/publisher_v2/downstream")
 
 task combine_publisher_v1_schemas: generated_publisher_formats.pathmap("dist/%p/schema.json")
 task combine_publisher_v2_schemas: generated_publisher_formats.pathmap("dist/%p_v2/schema.json")
 task combine_publisher_v2_links: generated_publisher_formats.pathmap("dist/%p_v2/links.json")
-task combine_frontend_schemas: generated_frontend_formats.pathmap("dist/%p/schema.json")
+task combine_downstream_schemas: %i{
+  combine_publisher_downstream_schemas
+  combine_hand_made_downstream_schemas
+}
+
+task combine_publisher_downstream_schemas: FileList.new("formats/*/publisher").pathmap("dist/%p_v2/downstream.json")
 
 task combine_publisher_schemas: %i{
   hand_made_publisher_schemas

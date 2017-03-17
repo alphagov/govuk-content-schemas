@@ -3,19 +3,14 @@
   "type": "object",
   "additionalProperties": false,
   "required": [
-    "base_path",
     "content_id",
-    "details",
-    "document_type",
-    "expanded_links",
-    "govuk_request_id",
     "links",
-    "locale",
-    "redirects",
-    "routes",
-    "schema_name",
     "title",
-    "update_type"
+    "details",
+    "locale",
+    "base_path",
+    "document_type",
+    "schema_name"
   ],
   "properties": {
     "base_path": {
@@ -82,10 +77,84 @@
       "type": "string"
     },
     "links": {
+      "additionalProperties": false,
       "type": "object",
-      "patternProperties": {
-        "^[a-z_]+$": {
-          "$ref": "#/definitions/guid_list"
+      "properties": {
+        "linked_items": {
+          "description": "Includes all content ids referenced in 'details'. This is a temporary measure to expand content ids for frontends which is planned to be replaced by a dependency resolution service.",
+          "$ref": "#/definitions/expanded_links"
+        },
+        "content_owners": {
+          "description": "References a page of a GDS community responsible for maintaining the guide e.g. Agile delivery community, Design community",
+          "$ref": "#/definitions/expanded_links"
+        },
+        "email_alert_signup": {
+          "description": "References an email alert signup page for this topic",
+          "$ref": "#/definitions/expanded_links"
+        },
+        "taxons": {
+          "description": "Prototype-stage taxonomy label for this content item",
+          "$ref": "#/definitions/expanded_links"
+        },
+        "ordered_related_items": {
+          "description": "Related items, can be any page on GOV.UK. Mostly used for mainstream content to power the sidebar. Ordering of the links is determined by the editor in Content Tagger.",
+          "$ref": "#/definitions/expanded_links"
+        },
+        "ordered_related_items_overrides": {
+          "description": "Related items, can be any page on GOV.UK. Overrides 'more like this' automatically generated links in the beta navigation.",
+          "$ref": "#/definitions/expanded_links"
+        },
+        "mainstream_browse_pages": {
+          "description": "Powers the /browse section of the site. These are known as sections in some legacy apps.",
+          "$ref": "#/definitions/expanded_links"
+        },
+        "meets_user_needs": {
+          "description": "The user needs this piece of content meets.",
+          "$ref": "#/definitions/expanded_links"
+        },
+        "topics": {
+          "description": "Powers the /topic section of the site. These are known as specialist sectors in some legacy apps.",
+          "$ref": "#/definitions/expanded_links"
+        },
+        "organisations": {
+          "description": "All organisations linked to this content item. This should include lead organisations.",
+          "$ref": "#/definitions/expanded_links"
+        },
+        "parent": {
+          "description": "The parent content item.",
+          "$ref": "#/definitions/expanded_links",
+          "maxItems": 1
+        },
+        "policy_areas": {
+          "$ref": "#/definitions/expanded_links"
+        },
+        "available_translations": {
+          "description": "An automatic link added by the Publising API",
+          "$ref": "#/definitions/expanded_links"
+        },
+        "children": {
+          "description": "An automatic link added by the Publising API",
+          "$ref": "#/definitions/expanded_links"
+        },
+        "policies": {
+          "description": "An automatic link added by the Publising API",
+          "$ref": "#/definitions/expanded_links"
+        },
+        "document_collections": {
+          "description": "An automatic link added by the Publising API",
+          "$ref": "#/definitions/expanded_links"
+        },
+        "child_taxons": {
+          "description": "An automatic link added by the Publising API",
+          "$ref": "#/definitions/expanded_links"
+        },
+        "topic_content": {
+          "description": "An automatic link added by the Publising API",
+          "$ref": "#/definitions/expanded_links"
+        },
+        "mainstream_browse_content": {
+          "description": "An automatic link added by the Publising API",
+          "$ref": "#/definitions/expanded_links"
         }
       }
     },
@@ -278,44 +347,10 @@
     },
     "content_id": {
       "$ref": "#/definitions/guid"
-    },
-    "routes": {
-      "type": "array",
-      "minItems": 1,
-      "items": {
-        "$ref": "#/definitions/route"
-      }
-    },
-    "redirects": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/redirect_route"
-      }
-    },
-    "update_type": {
-      "enum": [
-        "major",
-        "minor",
-        "republish"
-      ]
-    },
-    "govuk_request_id": {
-      "type": [
-        "string",
-        "null"
-      ]
-    },
-    "expanded_links": {
-      "type": "object",
-      "patternProperties": {
-        "^[a-z_]+$": {
-          "$ref": "#/definitions/frontend_links"
-        }
-      }
     }
   },
   "definitions": {
-    "frontend_links": {
+    "expanded_links": {
       "type": "array",
       "items": {
         "type": "object",
@@ -362,16 +397,6 @@
           "api_path": {
             "$ref": "#/definitions/absolute_path"
           },
-          "api_url": {
-            "description": "DEPRECATED: api_path should be used instead of api_url. This is due to values of api_url being tied to an environment which can cause problems when data is synced between environments. In time this field will be removed by the Publishing Platform team.",
-            "type": "string",
-            "format": "uri"
-          },
-          "web_url": {
-            "description": "DEPRECATED: base_path should be used instead of web_url. This is due to values of web_url being tied to an environment which can cause problems when data is synced between environments. In time this field will be removed by the Publishing Platform team.",
-            "type": "string",
-            "format": "uri"
-          },
           "locale": {
             "$ref": "#/definitions/locale"
           },
@@ -392,7 +417,7 @@
             "type": "object",
             "patternProperties": {
               "^[a-z_]+$": {
-                "$ref": "#/definitions/frontend_links"
+                "$ref": "#/definitions/expanded_links"
               }
             }
           }

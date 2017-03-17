@@ -2,10 +2,10 @@ require "govuk_content_schemas"
 require "govuk_content_schemas/utils"
 require "json-schema"
 
-class GovukContentSchemas::FrontendSchemaGenerator
+class GovukContentSchemas::DownstreamSchemaGenerator
   include ::GovukContentSchemas::Utils
 
-  attr_reader :publisher_schema, :publisher_links_schema, :frontend_links_definition, :format_name
+  attr_reader :publisher_schema, :publisher_links_schema, :expanded_links_definition, :format_name
 
   INTERNAL_PROPERTIES = %w{
     access_limited
@@ -52,10 +52,10 @@ class GovukContentSchemas::FrontendSchemaGenerator
 
   CHANGE_HISTORY_REQUIRED = ['specialist_document'].freeze
 
-  def initialize(publisher_schema, publisher_links_schema, frontend_links_definition, format_name)
+  def initialize(publisher_schema, publisher_links_schema, expanded_links_definition, format_name)
     @publisher_schema = publisher_schema
     @publisher_links_schema = publisher_links_schema
-    @frontend_links_definition = frontend_links_definition
+    @expanded_links_definition = expanded_links_definition
     @format_name = format_name
   end
 
@@ -65,8 +65,8 @@ class GovukContentSchemas::FrontendSchemaGenerator
       "type" => "object",
       "additionalProperties" => false,
       "required" => required_properties,
-      "properties" => frontend_properties,
-      "definitions" => frontend_definitions
+      "properties" => downstream_properties,
+      "definitions" => downstream_definitions
     }, publisher_schema.uri)
   end
 
@@ -82,7 +82,7 @@ private
     if required.empty?
       []
     else
-      (%w[content_id base_path links] + (required - INTERNAL_PROPERTIES - OPTIONAL_PROPERTIES)).uniq
+      %w[content_id links] + (required - INTERNAL_PROPERTIES - OPTIONAL_PROPERTIES)
     end
   end
 
@@ -90,12 +90,12 @@ private
     @pub_properties ||= publisher_schema.schema["properties"] || {}
   end
 
-  def frontend_properties
+  def downstream_properties
     properties = publisher_properties.reject { |property_name| internal?(property_name) }
     properties = resolve_multiple_content_types(properties)
 
     properties = properties.merge(
-      "links" => frontend_links,
+      "links" => expanded_links,
       "format" => {
         "type" => "string",
         "description" => "DEPRECATED: use `document_type` instead. This field will be removed."
@@ -138,18 +138,18 @@ private
     end
   end
 
-  def frontend_link_properties
+  def expanded_link_properties
     links = publisher_links.merge(publishing_api_links)
     links.each_with_object({}) do |(link_name, link_hash), memo|
-      memo[link_name] = link_hash.merge(frontend_links_ref)
+      memo[link_name] = link_hash.merge(expanded_links_ref)
     end
   end
 
-  def frontend_links
+  def expanded_links
     properties = {
       "additionalProperties" => false,
       "type" => "object",
-      "properties" => frontend_link_properties
+      "properties" => expanded_link_properties
     }
     properties["required"] = required_links unless required_links.empty?
     properties
@@ -180,9 +180,9 @@ private
     publisher_properties.has_key?("change_note")
   end
 
-  def frontend_definitions
+  def downstream_definitions
     {
-      "frontend_links" => frontend_links_definition.schema.reject { |k| k == "$schema" }
+      "expanded_links" => expanded_links_definition.schema.reject { |k| k == "$schema" }
     }.merge(converted_definitions)
   end
 
@@ -193,8 +193,8 @@ private
     }
   end
 
-  def frontend_links_ref
-    { "$ref" => "#/definitions/frontend_links" }
+  def expanded_links_ref
+    { "$ref" => "#/definitions/expanded_links" }
   end
 
   def multiple_content_types_ref

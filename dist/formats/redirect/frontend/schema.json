@@ -4,7 +4,10 @@
   "additionalProperties": false,
   "required": [
     "content_id",
-    "links"
+    "links",
+    "document_type",
+    "schema_name",
+    "base_path"
   ],
   "properties": {
     "base_path": {
@@ -14,13 +17,15 @@
       "$ref": "#/definitions/guid"
     },
     "document_type": {
+      "type": "string",
       "enum": [
-        "gone"
+        "redirect"
       ]
     },
     "schema_name": {
+      "type": "string",
       "enum": [
-        "gone"
+        "redirect"
       ]
     },
     "publishing_app": {
@@ -29,25 +34,6 @@
     "public_updated_at": {
       "type": "string",
       "format": "date-time"
-    },
-    "details": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "explanation": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "alternative_path": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "format": "uri"
-        }
-      }
     },
     "links": {
       "additionalProperties": false,
@@ -181,16 +167,59 @@
     },
     "absolute_path": {
       "type": "string",
-      "pattern": "^/(([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})+(/([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)*)?$"
+      "pattern": "^/(([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})+(/([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)*)?$",
+      "description": "A path only. Query string and/or fragment are not allowed."
+    },
+    "absolute_fullpath": {
+      "type": "string",
+      "pattern": "^/(([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})+(/([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)*)?(\\?([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)?(#([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)?$",
+      "description": "A path with optional query string and/or fragment."
+    },
+    "govuk_campaign_url": {
+      "type": "string",
+      "pattern": "^https://([a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[A-Za-z0-9])?\\.)+campaign\\.gov\\.uk(/(([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})+(/([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)*)?(\\?([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)?(#([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)?)?$",
+      "description": "A gov.uk campaign URL with optional query string and/or fragment."
     },
     "guid": {
       "type": "string",
       "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-[1-5][a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$"
     },
-    "guid_list": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/guid"
+    "redirect_route": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "type",
+        "destination"
+      ],
+      "properties": {
+        "path": {
+          "$ref": "#/definitions/absolute_path"
+        },
+        "type": {
+          "enum": [
+            "prefix",
+            "exact"
+          ]
+        },
+        "destination": {
+          "type": "string",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/absolute_fullpath"
+            },
+            {
+              "$ref": "#/definitions/govuk_campaign_url"
+            }
+          ]
+        },
+        "segments_mode": {
+          "enum": [
+            "preserve",
+            "ignore"
+          ],
+          "description": "For prefix redirects, preserve or ignore the rest of the fullpath. For exact, preserve or ignore the querystring."
+        }
       }
     }
   }
