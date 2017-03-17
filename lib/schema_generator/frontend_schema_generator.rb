@@ -7,14 +7,11 @@ module SchemaGenerator
     end
 
     def generate
-      {
-        "$schema" => "http://json-schema.org/draft-04/schema#",
-        "type" => "object",
-        "additionalProperties" => false,
-        "required" => required,
-        "properties" => properties,
-        "definitions" => definitions,
-      }
+      Schema.generate(
+        required: required,
+        properties: properties,
+        definitions: definitions,
+      )
     end
 
   private

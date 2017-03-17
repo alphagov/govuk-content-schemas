@@ -11,5 +11,18 @@ module SchemaGenerator
       FileUtils.mkdir_p(File.dirname(full_filename))
       File.write(full_filename, schema_json)
     end
+
+    def self.generate(
+      additional_properties: false, definitions:, properties:, required: []
+    )
+      {
+        "$schema" => "http://json-schema.org/draft-04/schema#",
+        "type" => "object",
+        "additionalProperties" => additional_properties,
+        "required" => required.sort,
+        "properties" => properties.sort.to_h,
+        "definitions" => definitions.sort.to_h,
+      }
+    end
   end
 end
