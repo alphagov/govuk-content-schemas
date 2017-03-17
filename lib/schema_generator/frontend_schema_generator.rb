@@ -117,11 +117,15 @@ module SchemaGenerator
 
       the_definitions.delete("links")
 
-      if schema_name == "specialist_document"
-        the_definitions["details"]["required"] << "change_history"
-      end
+      replace_multiple_content_types(the_definitions).tap do |converted|
+        if schema_name == "specialist_document"
+          the_definitions["details"]["required"] << "change_history"
+        end
 
-      replace_multiple_content_types(the_definitions)
+        if details_should_contain_change_history?(converted)
+          converted["details"]["properties"]["change_history"] = { "$ref"=>"#/definitions/change_history" }
+        end
+      end
     end
 
     def frontend_links(publisher_links_schema)
@@ -146,6 +150,11 @@ module SchemaGenerator
       else
         object
       end
+    end
+
+    def details_should_contain_change_history?(definition)
+      return if !definition.dig("details", "properties") || definition["details"]["properties"]["change_history"]
+      publisher_content_schema["properties"].has_key?("change_note")
     end
   end
 end
