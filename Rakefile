@@ -1,20 +1,21 @@
 $LOAD_PATH << File.expand_path("../lib", __FILE__)
 
-if defined?(RSpec)
+begin
   require "rspec/core/rake_task"
   RSpec::Core::RakeTask.new(:spec)
+rescue LoadError
 end
 
 task build: [
-  :regenerate_schemas,
-  :validate_dist_schemas,
-  :validate_uniqueness_of_frontend_example_base_paths,
-  :validate_links,
-  :validate_examples,
-  :reformat_authored_json,
-  :validate_shared_details_definitions,
-  :validate_source_schemas,
-]
+              :regenerate_schemas,
+              :validate_dist_schemas,
+              :validate_uniqueness_of_frontend_example_base_paths,
+              :validate_links,
+              :validate_examples,
+              :reformat_authored_json,
+              :validate_shared_details_definitions,
+              :validate_source_schemas,
+            ]
 
 desc "creates the folders and files for adding a new format"
 task :new_format, [:format_name] do |_task, args|
