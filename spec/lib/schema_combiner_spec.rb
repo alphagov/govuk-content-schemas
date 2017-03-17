@@ -42,30 +42,6 @@ RSpec.describe GovukContentSchemas::SchemaCombiner do
     it "uses the original uri for the combined schema" do
       expect(combined.uri).to eq(metadata_schema.uri)
     end
-
-    context "with a document_types schema" do
-      let(:document_types) {
-        {
-          "document_type" => {
-            "type" => "string",
-            "enum" => %w[aaib_report asylum_support_decision cma_case],
-          }
-        }
-      }
-
-      let(:schemas) {
-        {
-          definitions: definitions,
-          metadata: metadata_schema,
-          details: details_schema,
-          document_types: build_schema("document_types.json", properties: document_types)
-        }
-      }
-
-      it "sets the allowed values for the document_type field" do
-        expect(combined.schema["properties"]["document_type"]).to eq(document_types["document_type"])
-      end
-    end
   end
 
   context "combining v1 metadata with common metadata and details" do
