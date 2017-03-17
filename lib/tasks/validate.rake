@@ -1,6 +1,9 @@
+require "json-schema"
+
 def schema_path_for(example)
   schema_filename = example.end_with?("_links.json") ? "links.json" : "schema.json"
-  (File.dirname(File.dirname(example)) + "/" + schema_filename).gsub(%r[formats/], "dist/formats/")
+  dirname = File.dirname(example).gsub("publisher/", "publisher_v2/")
+  (File.dirname(dirname) + "/" + schema_filename).gsub(%r[formats/], "dist/formats/")
 end
 
 def valid?(example)
