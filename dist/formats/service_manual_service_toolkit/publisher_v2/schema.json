@@ -37,10 +37,10 @@
       "$ref": "#/definitions/first_published_at"
     },
     "publishing_app": {
-      "$ref": "#/definitions/application_name"
+      "$ref": "#/definitions/publishing_app_name"
     },
     "rendering_app": {
-      "$ref": "#/definitions/application_name"
+      "$ref": "#/definitions/rendering_app_name"
     },
     "locale": {
       "$ref": "#/definitions/locale"
@@ -466,10 +466,82 @@
         "$ref": "#/definitions/guid"
       }
     },
-    "application_name": {
-      "description": "Applications on GOV.UK only use lowercase letters and dashes",
+    "publishing_app_name": {
+      "description": "The application that published this item.",
       "type": "string",
-      "pattern": "[a-z-]"
+      "enum": [
+        "businesssupportfinder",
+        "calculators",
+        "calendars",
+        "collections-publisher",
+        "contacts",
+        "content-tagger",
+        "design-principles",
+        "external-link-tracker",
+        "feedback",
+        "frontend",
+        "govuk_content_api",
+        "hmrc-manuals-api",
+        "info-frontend",
+        "licencefinder",
+        "manuals-frontend",
+        "manuals-publisher",
+        "maslow",
+        "need-api",
+        "performanceplatform-big-screen-view",
+        "policy-publisher",
+        "publisher",
+        "rummager",
+        "service-manual-publisher",
+        "share-sale-publisher",
+        "short-url-manager",
+        "smartanswers",
+        "specialist-publisher",
+        "spotlight",
+        "static",
+        "tariff",
+        "travel-advice-publisher",
+        "whitehall"
+      ]
+    },
+    "rendering_app_name": {
+      "description": "The application that renders this item.",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "businesssupportfinder",
+            "calculators",
+            "calendars",
+            "collections",
+            "contacts-frontend",
+            "designprinciples",
+            "email-alert-frontend",
+            "email-campaign-frontend",
+            "feedback",
+            "finder-frontend",
+            "frontend",
+            "government-frontend",
+            "info-frontend",
+            "licencefinder",
+            "manuals-frontend",
+            "performanceplatform-big-screen-view",
+            "publicapi",
+            "rummager",
+            "service-manual-frontend",
+            "smartanswers",
+            "specialist-frontend",
+            "spotlight",
+            "static",
+            "tariff",
+            "whitehall-frontend"
+          ]
+        },
+        {
+          "type": "null",
+          "description": "Items like 'gone' and 'redirect' do not have a rendering_app"
+        }
+      ]
     },
     "image": {
       "type": "object",
