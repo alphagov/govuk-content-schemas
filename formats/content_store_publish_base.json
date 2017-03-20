@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "routes",
+    "redirects",
+    "payload_version",
+    "expanded_links"
+  ],
+  "properties": {
+    "routes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/definitions/route"
+      }
+    },
+    "redirects": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/redirect_route"
+      }
+    },
+    "payload_version": {
+      "type": "number"
+    },
+    "govuk_request_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "expanded_links": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-z_]+$": {
+          "$ref": "#/definitions/frontend_links"
+        }
+      }
+    },
+    "links": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-z_]+$": {
+          "$ref": "#/definitions/guid_list"
+        }
+      }
+    }
+  }
+}
