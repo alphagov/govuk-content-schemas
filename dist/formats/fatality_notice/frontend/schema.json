@@ -315,9 +315,13 @@
       "type": "string",
       "description": "Document type grouping powering analytics of user journeys"
     },
-    "whitehall_document_supertype": {
+    "email_document_supertype": {
       "type": "string",
-      "description": "Document type grouping intended to power the Whitehall finders and email subscriptions"
+      "description": "Document supertype grouping intended to power the Whitehall finders and email subscriptions"
+    },
+    "government_document_supertype": {
+      "type": "string",
+      "description": "Document supertype grouping intended to power the Whitehall finders and email subscriptions"
     },
     "updated_at": {
       "type": "string",
