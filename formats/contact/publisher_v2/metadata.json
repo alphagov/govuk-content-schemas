@@ -32,10 +32,10 @@
       "$ref": "#/definitions/first_published_at"
     },
     "publishing_app": {
-      "$ref": "#/definitions/application_name"
+      "$ref": "#/definitions/publishing_app_name"
     },
     "rendering_app": {
-      "$ref": "#/definitions/application_name"
+      "$ref": "#/definitions/rendering_app_name"
     },
     "locale": {
       "$ref": "#/definitions/locale"
