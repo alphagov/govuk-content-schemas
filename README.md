@@ -120,17 +120,4 @@ A `Rakefile` exists which combines these scripts. It
 automatically re-generates the intermediate schema files and validates all the
 examples.
 
-To invoke the default task just invoke `rake` on its own. You can delete all of
-the derived files and force a re-run by using `rake clean build`:
-
-### Magic fields
-
-Not all fields for the frontend examples are defined in the schema, instead they're added by [GovukContentSchemas::FrontendSchemaGenerator](lib/govuk_content_schemas/frontend_schema_generator.rb). For example:
-
-- `base_path`
-- `updated_at`
-
-[GovukContentSchemas::SchemaCombiner](lib/govuk_content_schemas/schema_combiner.rb) also adds a few:
-
-- `schema_name`
-- `document_type`
+To invoke the default task just invoke `rake` on its own.

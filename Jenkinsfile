@@ -67,14 +67,13 @@ node {
     }
 
     stage("Check generated schemas are up-to-date") {
-      govuk.runRakeTask("clean build")
+      govuk.runRakeTask("build")
       schemasAreUpToDate = sh(script: "git diff --exit-code", returnStatus: true) == 0
 
       if (!schemasAreUpToDate) {
-        error("Changes to checked-in files detected after running 'rake clean' "
-          + "and 'rake build'. If these are generated files, you might need to "
-          + "'rake clean build' to ensure they are regenerated and push the "
-          + "changes.")
+        error("Changes to checked-in files detected after running 'rake build'. "
+          + "If these are generated files, you might need to run 'rake build' "
+          + "to ensure they are regenerated and push the changes.")
       }
     }
 
