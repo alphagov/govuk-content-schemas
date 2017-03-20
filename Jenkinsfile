@@ -2,33 +2,36 @@
 
 REPOSITORY = 'govuk-content-schemas'
 
+// second boolean parameter describes whether the app is using the central
+// buildProject script - if so it will report its success individually, so this
+// job does not need to wait for it.
 def dependentApplications = [
-  'businesssupportfinder',
-  'collections',
-  'collections-publisher',
-  'contacts',
-  'content-tagger',
-  'email-alert-frontend',
-  'email-alert-service',
-  'finder-frontend',
-  'frontend',
-  'hmrc-manuals-api',
-  'licencefinder',
-  'manuals-frontend',
-  'manuals-publisher',
-  'policy-publisher',
-  'publisher',
-  'publishing-api',
-  'short-url-manager',
-  'service-manual-frontend',
-  'service-manual-publisher',
-  'specialist-frontend',
-  'smartanswers',
-  'calendars',
-  'calculators',
-  'specialist-publisher',
-  'static',
-  'whitehall',
+  ['businesssupportfinder', false],
+  ['calendars', false],
+  ['calculators', false],
+  ['collections', true],
+  ['collections-publisher', true],
+  ['contacts', false],
+  ['content-tagger', true],
+  ['email-alert-frontend', true],
+  ['email-alert-service', true],
+  ['finder-frontend', true],
+  ['frontend', false],
+  ['hmrc-manuals-api', false],
+  ['licencefinder', false],
+  ['manuals-frontend', false],
+  ['manuals-publisher', false],
+  ['policy-publisher', true],
+  ['publisher', true],
+  ['publishing-api', false],
+  ['short-url-manager', false],
+  ['service-manual-frontend', false],
+  ['service-manual-publisher', false],
+  ['specialist-frontend', false],
+  ['smartanswers', false],
+  ['specialist-publisher', true],
+  ['static', false],
+  ['whitehall', false],
 ]
 
 node {
@@ -45,6 +48,10 @@ node {
   try {
     stage("Checkout") {
       checkout scm
+      env.GIT_COMMIT = sh(
+        script: 'git rev-parse HEAD',
+        returnStdout: true
+      ).trim()
     }
 
     stage("Merge master") {
@@ -94,10 +101,11 @@ stage("Check dependent projects against updated schema") {
   def dependentBuilds = [:]
 
   for (dependentApp in dependentApplications) {
-    // Dummy parameter to prevent mutation of the parameter used inside the
+    // Dummy parameters to prevent mutation of the parameter used inside the
     // closure below. If this is not defined, all of the builds will be for the
     // last application in the array.
-    def app = dependentApp
+    def app = dependentApp[0]
+    def wait = !dependentApp[1]
 
     dependentBuilds[app] = {
       start = System.currentTimeMillis()
@@ -110,25 +118,13 @@ stage("Check dependent projects against updated schema") {
           [$class: 'StringParameterValue',
             name: 'SCHEMA_BRANCH',
             value: env.BRANCH_NAME],
-        ]
-
-      now = System.currentTimeMillis()
-      runtime = now - start
-
-      node {
-        sh 'echo "ci.' + REPOSITORY + '.dependent_build.' + app + '.runtime:' + runtime + '|ms" | nc -w 1 -u localhost 8125'
-      }
+          [$class: 'StringParameterValue',
+            name: 'SCHEMA_COMMIT',
+            value: env.GIT_COMMIT]
+        ], wait: wait
     }
   }
 
-  start = System.currentTimeMillis()
-
   parallel dependentBuilds
 
-  now = System.currentTimeMillis()
-  runtime = now - start
-
-  node {
-    sh 'echo "ci.' + REPOSITORY + '.dependent_builds_total_runtime:' + runtime + '|ms" | nc -w 1 -u localhost 8125'
-  }
 }
