@@ -11,7 +11,7 @@
       "additionalProperties": false,
       "properties": {
         "parent_taxons": {
-          "description": "The list of taxon parents.",
+          "description": "The list of taxon parents (DEPRECATED: use the edition links instead)",
           "$ref": "#/definitions/guid_list"
         },
         "taxons": {
