@@ -1,6 +1,9 @@
+require "json-schema"
+
 def schema_path_for(example)
   schema_filename = example.end_with?("_links.json") ? "links.json" : "schema.json"
-  (File.dirname(File.dirname(example)) + "/" + schema_filename).gsub(%r[formats/], "dist/formats/")
+  dirname = File.dirname(example).gsub("publisher/", "publisher_v2/")
+  (File.dirname(dirname) + "/" + schema_filename).gsub(%r[formats/], "dist/formats/")
 end
 
 def valid?(example)
@@ -26,13 +29,6 @@ def validate_schemas(schema_file_list)
     end
   end
   abort "\nThe following schemas aren't valid:\n" + validation_errors.join("\n") if validation_errors.any?
-end
-
-desc 'Validate that source schemas are valid schemas'
-task :validate_source_schemas do
-  print "Validating source schemas... "
-  validate_schemas(Rake::FileList.new("formats/**/*.json"))
-  puts "✔︎"
 end
 
 desc 'Validate that generated schemas are valid schemas'
