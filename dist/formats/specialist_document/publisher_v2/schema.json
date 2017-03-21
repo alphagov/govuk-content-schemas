@@ -317,12 +317,16 @@
         "finder": {
           "description": "The finder for this specialist document.",
           "$ref": "#/definitions/guid_list",
+          "minItems": 1,
           "maxItems": 1
         },
         "policy_areas": {
           "$ref": "#/definitions/guid_list"
         }
-      }
+      },
+      "required": [
+        "finder"
+      ]
     },
     "absolute_path": {
       "type": "string",
