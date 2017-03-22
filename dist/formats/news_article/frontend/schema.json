@@ -96,6 +96,14 @@
         "world_locations": {
           "$ref": "#/definitions/frontend_links"
         },
+        "roles": {
+          "description": "Used to power Email Alert Api subscriptions for Whitehall content",
+          "$ref": "#/definitions/frontend_links"
+        },
+        "people": {
+          "description": "Used to power Email Alert Api subscriptions for Whitehall content",
+          "$ref": "#/definitions/frontend_links"
+        },
         "taxons": {
           "description": "Prototype-stage taxonomy label for this content item",
           "$ref": "#/definitions/frontend_links"

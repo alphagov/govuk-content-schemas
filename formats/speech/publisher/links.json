@@ -23,6 +23,14 @@
     },
     "world_locations": {
       "$ref": "#/definitions/guid_list"
+    },
+    "roles": {
+      "$ref": "#/definitions/guid_list",
+      "description": "Used to power Email Alert Api subscriptions for Whitehall content"
+    },
+    "people": {
+      "$ref": "#/definitions/guid_list",
+      "description": "Used to power Email Alert Api subscriptions for Whitehall content"
     }
   }
 }
