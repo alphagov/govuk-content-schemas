@@ -25,7 +25,9 @@
     },
     "document_type": {
       "enum": [
-        "special_route"
+        "special_route",
+        "homepage",
+        "search"
       ]
     },
     "publishing_app": {
