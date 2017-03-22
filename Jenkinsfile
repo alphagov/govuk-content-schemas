@@ -16,6 +16,7 @@ def dependentApplications = [
   ['email-alert-service', true],
   ['finder-frontend', true],
   ['frontend', false],
+  ['government-frontend', true],
   ['hmrc-manuals-api', false],
   ['licencefinder', false],
   ['manuals-frontend', false],
