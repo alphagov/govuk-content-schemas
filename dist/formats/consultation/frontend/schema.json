@@ -84,6 +84,7 @@
           "$ref": "#/definitions/frontend_links"
         },
         "policies": {
+          "description": "Link type automatically added by Publishing API",
           "$ref": "#/definitions/frontend_links"
         },
         "ministers": {
@@ -93,48 +94,63 @@
           "$ref": "#/definitions/frontend_links"
         },
         "taxons": {
+          "description": "Prototype-stage taxonomy label for this content item",
           "$ref": "#/definitions/frontend_links"
         },
         "ordered_related_items": {
+          "description": "Related items, can be any page on GOV.UK. Mostly used for mainstream content to power the sidebar. Ordering of the links is determined by the editor in Content Tagger.",
           "$ref": "#/definitions/frontend_links"
         },
         "ordered_related_items_overrides": {
+          "description": "Related items, can be any page on GOV.UK. Overrides 'more like this' automatically generated links in the beta navigation.",
           "$ref": "#/definitions/frontend_links"
         },
         "mainstream_browse_pages": {
+          "description": "Powers the /browse section of the site. These are known as sections in some legacy apps.",
           "$ref": "#/definitions/frontend_links"
         },
         "meets_user_needs": {
+          "description": "The user needs this piece of content meets.",
           "$ref": "#/definitions/frontend_links"
         },
         "topics": {
+          "description": "Powers the /topic section of the site. These are known as specialist sectors in some legacy apps.",
           "$ref": "#/definitions/frontend_links"
         },
         "organisations": {
+          "description": "All organisations linked to this content item. This should include lead organisations.",
           "$ref": "#/definitions/frontend_links"
         },
         "parent": {
+          "description": "The parent content item.",
+          "maxItems": 1,
           "$ref": "#/definitions/frontend_links"
         },
         "policy_areas": {
           "$ref": "#/definitions/frontend_links"
         },
         "available_translations": {
+          "description": "Link type automatically added by Publishing API",
           "$ref": "#/definitions/frontend_links"
         },
         "children": {
+          "description": "Link type automatically added by Publishing API",
           "$ref": "#/definitions/frontend_links"
         },
         "document_collections": {
+          "description": "Link type automatically added by Publishing API",
           "$ref": "#/definitions/frontend_links"
         },
         "child_taxons": {
+          "description": "Link type automatically added by Publishing API",
           "$ref": "#/definitions/frontend_links"
         },
         "topic_content": {
+          "description": "Link type automatically added by Publishing API",
           "$ref": "#/definitions/frontend_links"
         },
         "mainstream_browse_content": {
+          "description": "Link type automatically added by Publishing API",
           "$ref": "#/definitions/frontend_links"
         }
       }

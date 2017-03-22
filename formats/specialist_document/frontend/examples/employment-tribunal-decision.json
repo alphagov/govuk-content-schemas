@@ -47,6 +47,299 @@
     ]
   },
   "links": {
+    "finder": [
+      {
+        "analytics_identifier": null,
+        "api_path": "/api/content/employment-tribunal-decisions",
+        "base_path": "/employment-tribunal-decisions",
+        "content_id": "1b5e08c8-ddde-4637-9375-f79e085ba6d5",
+        "description": "Find decisions on Employment Tribunal cases in England, Wales and Scotland.",
+        "document_type": "finder",
+        "locale": "en",
+        "public_updated_at": "2017-03-15T14:44:21Z",
+        "schema_name": "finder",
+        "title": "Employment tribunal decisions",
+        "withdrawn": false,
+        "details": {
+          "document_noun": "decision",
+          "filter": {
+            "document_type": "employment_tribunal_decision"
+          },
+          "format_name": "Employment tribunal decision",
+          "show_summaries": true,
+          "summary": "<p>Find decisions on Employment Tribunal cases in England, Wales and Scotland.</p>",
+          "facets": [
+            {
+              "key": "tribunal_decision_country",
+              "name": "Country",
+              "type": "text",
+              "preposition": "by country",
+              "display_as_result_metadata": false,
+              "filterable": true,
+              "allowed_values": [
+                {
+                  "label": "England and Wales",
+                  "value": "england-and-wales"
+                },
+                {
+                  "label": "Scotland",
+                  "value": "scotland"
+                }
+              ]
+            },
+            {
+              "key": "tribunal_decision_country_name",
+              "name": "Country name",
+              "type": "text",
+              "display_as_result_metadata": true,
+              "filterable": false
+            },
+            {
+              "key": "tribunal_decision_categories",
+              "name": "Jurisdiction code",
+              "type": "text",
+              "preposition": "by jurisdiction",
+              "display_as_result_metadata": false,
+              "filterable": true,
+              "allowed_values": [
+                {
+                  "label": "Age Discrimination",
+                  "value": "age-discrimination"
+                },
+                {
+                  "label": "Agency Workers",
+                  "value": "agency-workers"
+                },
+                {
+                  "label": "Blacklisting Regulations",
+                  "value": "blacklisting-regulations"
+                },
+                {
+                  "label": "Breach of Contract",
+                  "value": "breach-of-contract"
+                },
+                {
+                  "label": "Central Arbitration Committee (CAC)",
+                  "value": "central-arbitration-committee-cac"
+                },
+                {
+                  "label": "Certification Officer",
+                  "value": "certification-officer"
+                },
+                {
+                  "label": "Contract of Employment",
+                  "value": "contract-of-employment"
+                },
+                {
+                  "label": "Disability Discrimination",
+                  "value": "disability-discrimination"
+                },
+                {
+                  "label": "Employment Agencies Act 1973",
+                  "value": "employment-agencies-act-1973"
+                },
+                {
+                  "label": "Equal Pay Act",
+                  "value": "equal-pay-act"
+                },
+                {
+                  "label": "European Material",
+                  "value": "european-material"
+                },
+                {
+                  "label": "Fixed Term Regulations",
+                  "value": "fixed-term-regulations"
+                },
+                {
+                  "label": "Flexible Working",
+                  "value": "flexible-working"
+                },
+                {
+                  "label": "Harassment",
+                  "value": "harassment"
+                },
+                {
+                  "label": "Health & Safety",
+                  "value": "health-safety"
+                },
+                {
+                  "label": "Human Rights",
+                  "value": "human-rights"
+                },
+                {
+                  "label": "Improvement Notice",
+                  "value": "improvement-notice"
+                },
+                {
+                  "label": "Interim Relief",
+                  "value": "interim-relief"
+                },
+                {
+                  "label": "Jurisdictional Points",
+                  "value": "jurisdictional-points"
+                },
+                {
+                  "label": "Maternity and Pregnancy Rights",
+                  "value": "maternity-and-pregnancy-rights"
+                },
+                {
+                  "label": "National Minimum Wage",
+                  "value": "national-minimum-wage"
+                },
+                {
+                  "label": "National Security",
+                  "value": "national-security"
+                },
+                {
+                  "label": "Parental and Maternity Leave",
+                  "value": "parental-and-maternity-leave"
+                },
+                {
+                  "label": "Part Time Workers",
+                  "value": "part-time-workers"
+                },
+                {
+                  "label": "Pension",
+                  "value": "pension"
+                },
+                {
+                  "label": "Practice and Procedure Issues",
+                  "value": "practice-and-procedure-issues"
+                },
+                {
+                  "label": "Protective Award",
+                  "value": "protective-award"
+                },
+                {
+                  "label": "Public Interest Disclosure",
+                  "value": "public-interest-disclosure"
+                },
+                {
+                  "label": "Race Discrimination",
+                  "value": "race-discrimination"
+                },
+                {
+                  "label": "Redundancy",
+                  "value": "redundancy"
+                },
+                {
+                  "label": "Religion or Belief Discrimination",
+                  "value": "religion-or-belief-discrimination"
+                },
+                {
+                  "label": "Renumeration",
+                  "value": "renumeration"
+                },
+                {
+                  "label": "Reorganisation",
+                  "value": "reorganisation"
+                },
+                {
+                  "label": "Reserved Forces Act",
+                  "value": "reserved-forces-act"
+                },
+                {
+                  "label": "Right To Be Accompanied",
+                  "value": "right-to-be-accompanied"
+                },
+                {
+                  "label": "Rights on Insolvency",
+                  "value": "rights-on-insolvency"
+                },
+                {
+                  "label": "Sex Discrimination",
+                  "value": "sex-discrimination"
+                },
+                {
+                  "label": "Sexual Orientation Discrimination/Transexualism",
+                  "value": "sexual-orientation-discrimination-transexualism"
+                },
+                {
+                  "label": "Statutory Discipline and Grievance Procedures",
+                  "value": "statutory-discipline-and-grievance-procedures"
+                },
+                {
+                  "label": "Tax",
+                  "value": "tax"
+                },
+                {
+                  "label": "Temporary Employment",
+                  "value": "temporary-employment"
+                },
+                {
+                  "label": "Time Limits",
+                  "value": "time-limits"
+                },
+                {
+                  "label": "Time Off",
+                  "value": "time-off"
+                },
+                {
+                  "label": "Time to Train",
+                  "value": "time-to-train"
+                },
+                {
+                  "label": "Trade Union Membership",
+                  "value": "trade-union-membership"
+                },
+                {
+                  "label": "Trade Union Rights",
+                  "value": "trade-union-rights"
+                },
+                {
+                  "label": "Transfer of Undertakings",
+                  "value": "transfer-of-undertakings"
+                },
+                {
+                  "label": "Unfair Dismissal",
+                  "value": "unfair-dismissal"
+                },
+                {
+                  "label": "Unlawful Deduction from Wages",
+                  "value": "unlawful-deduction-from-wages"
+                },
+                {
+                  "label": "Victimisation Discrimination",
+                  "value": "victimisation-discrimination"
+                },
+                {
+                  "label": "Working Time Regulations",
+                  "value": "working-time-regulations"
+                },
+                {
+                  "label": "Written Pay Statement",
+                  "value": "written-pay-statement"
+                },
+                {
+                  "label": "Written Statements",
+                  "value": "written-statements"
+                }
+              ]
+            },
+            {
+              "key": "tribunal_decision_categories_name",
+              "name": "Jurisdiction code name",
+              "type": "text",
+              "display_as_result_metadata": true,
+              "filterable": false
+            },
+            {
+              "key": "tribunal_decision_decision_date",
+              "name": "Decision date",
+              "short_name": "Decided",
+              "type": "date",
+              "display_as_result_metadata": true,
+              "filterable": true
+            }
+          ],
+          "default_documents_per_page": 50
+        },
+        "links": {
+        },
+        "api_url": "https://www.gov.uk/api/content/employment-tribunal-decisions",
+        "web_url": "https://www.gov.uk/employment-tribunal-decisions"
+      }
+    ],
     "available_translations": [
       {
         "content_id": "a66a167f-081b-4b0c-bd8e-3bb1242507df",
