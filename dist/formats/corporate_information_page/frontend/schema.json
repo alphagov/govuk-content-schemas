@@ -585,7 +585,6 @@
       "description": "The application that published this item.",
       "type": "string",
       "enum": [
-        "businesssupportfinder",
         "calculators",
         "calendars",
         "collections-publisher",
@@ -625,7 +624,6 @@
         {
           "type": "string",
           "enum": [
-            "businesssupportfinder",
             "calculators",
             "calendars",
             "collections",
