@@ -6,7 +6,6 @@ REPOSITORY = 'govuk-content-schemas'
 // buildProject script - if so it will report its success individually, so this
 // job does not need to wait for it.
 def dependentApplications = [
-  ['businesssupportfinder', false],
   ['calendars', false],
   ['calculators', false],
   ['collections', true],
