@@ -58,6 +58,12 @@
       "items": {
         "$ref": "#/definitions/route"
       }
+    },
+    "details": {
+      "$ref": "#/definitions/details"
+    },
+    "locale": {
+      "$ref": "#/definitions/locale"
     }
   },
   "definitions": {
@@ -88,6 +94,67 @@
           ]
         }
       }
+    },
+    "details": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+      }
+    },
+    "locale": {
+      "type": "string",
+      "enum": [
+        "ar",
+        "az",
+        "be",
+        "bg",
+        "bn",
+        "cs",
+        "cy",
+        "de",
+        "dr",
+        "el",
+        "en",
+        "es",
+        "es-419",
+        "et",
+        "fa",
+        "fr",
+        "he",
+        "hi",
+        "hu",
+        "hy",
+        "id",
+        "it",
+        "ja",
+        "ka",
+        "ko",
+        "lt",
+        "lv",
+        "ms",
+        "pl",
+        "ps",
+        "pt",
+        "ro",
+        "ru",
+        "si",
+        "sk",
+        "so",
+        "sq",
+        "sr",
+        "sw",
+        "ta",
+        "th",
+        "tk",
+        "tr",
+        "uk",
+        "ur",
+        "uz",
+        "vi",
+        "zh",
+        "zh-hk",
+        "zh-tw"
+      ]
     }
   }
 }
