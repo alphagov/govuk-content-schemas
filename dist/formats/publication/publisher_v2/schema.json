@@ -331,11 +331,19 @@
         "parent": {
           "$ref": "#/definitions/guid_list"
         },
+        "people": {
+          "$ref": "#/definitions/guid_list",
+          "description": "Used to power Email Alert Api subscriptions for Whitehall content"
+        },
         "related_policies": {
           "$ref": "#/definitions/guid_list"
         },
         "related_statistical_data_sets": {
           "$ref": "#/definitions/guid_list"
+        },
+        "roles": {
+          "$ref": "#/definitions/guid_list",
+          "description": "Used to power Email Alert Api subscriptions for Whitehall content"
         },
         "topical_events": {
           "$ref": "#/definitions/guid_list"
