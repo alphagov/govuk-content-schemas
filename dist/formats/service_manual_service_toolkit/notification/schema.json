@@ -481,10 +481,6 @@
         "auth_bypass_ids": {
           "$ref": "#/definitions/guid_list",
           "description": "A list of ids that will allow access to this item for non-authenticated users"
-        },
-        "fact_check_ids": {
-          "$ref": "#/definitions/guid_list",
-          "description": "DEPRECATED - A list of ids that will allow access to this item for fact checking."
         }
       }
     },
