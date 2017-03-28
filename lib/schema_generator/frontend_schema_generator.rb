@@ -77,10 +77,6 @@ module SchemaGenerator
           "additionalProperties" => false,
           "properties" => frontend_links(publisher_content_schema, publisher_links_schema)
         },
-        "format" => {
-          "type" => "string",
-          "description" => "DEPRECATED: use `document_type` instead. This field will be removed."
-        },
         "navigation_document_supertype" => {
           "type" => "string",
           "description" => "Document type grouping powering the new taxonomy-based navigation pages",
