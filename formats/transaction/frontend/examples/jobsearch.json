@@ -740,7 +740,6 @@
   "user_journey_document_supertype": "thing",
   "navigation_document_supertype": "guidance",
   "locale": "en",
-  "format": "transaction",
   "first_published_at": "2016-02-29T09:24:10.000+00:00",
   "document_type": "transaction",
   "content_id": "a01fcb59-5dc8-4bf5-b06d-dd567a6d2f5f",
