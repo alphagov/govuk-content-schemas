@@ -17,6 +17,7 @@ def dependentApplications = [
   ['finder-frontend', true],
   ['frontend', false],
   ['hmrc-manuals-api', false],
+  ['info-frontend', true],
   ['licencefinder', false],
   ['manuals-frontend', false],
   ['manuals-publisher', false],
