@@ -109,7 +109,7 @@ stage("Check dependent projects against updated schema") {
     dependentBuilds[app] = {
       start = System.currentTimeMillis()
 
-      build job: "${app}/deployed-to-production",
+      build job: "/${app}/deployed-to-production",
         parameters: [
           [$class: 'BooleanParameterValue',
             name: 'IS_SCHEMA_TEST',
