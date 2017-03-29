@@ -306,6 +306,26 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "field_of_operation": {
+          "$ref": "#/definitions/guid_list",
+          "maxItems": 1,
+          "minItems": 1
+        },
+        "ministers": {
+          "$ref": "#/definitions/guid_list"
+        },
+        "organisations": {
+          "description": "All organisations linked to this content item. This should include lead organisations.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "people": {
+          "$ref": "#/definitions/guid_list",
+          "description": "Used to power Email Alert Api subscriptions for Whitehall content"
+        },
+        "roles": {
+          "$ref": "#/definitions/guid_list",
+          "description": "Used to power Email Alert Api subscriptions for Whitehall content"
+        },
         "policy_areas": {
           "$ref": "#/definitions/guid_list"
         }
