@@ -255,10 +255,6 @@
       "pattern": "^(placeholder|placeholder_.+)$",
       "description": "Should be of the form 'placeholder_my_format_name'. 'placeholder' is allowed for backwards compatibility."
     },
-    "format": {
-      "type": "string",
-      "description": "DEPRECATED: use `document_type` instead. This field will be removed."
-    },
     "navigation_document_supertype": {
       "type": "string",
       "description": "Document type grouping powering the new taxonomy-based navigation pages"

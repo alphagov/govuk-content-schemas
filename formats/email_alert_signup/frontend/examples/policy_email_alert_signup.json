@@ -3,7 +3,6 @@
   "base_path": "/government/policies/employment/email-signup",
   "title": "Employment",
   "description": "",
-  "format": "email_alert_signup",
   "need_ids": [
 
   ],

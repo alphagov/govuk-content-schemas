@@ -245,7 +245,6 @@
   "user_journey_document_supertype": "thing",
   "navigation_document_supertype": "guidance",
   "locale": "cy",
-  "format": "transaction",
   "first_published_at": "2016-02-29T09:24:10.000+00:00",
   "document_type": "transaction",
   "content_id": "2176cab5-7600-493d-9e54-06c7f27297c5",
