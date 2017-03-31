@@ -3,15 +3,19 @@
   "type": "object",
   "additionalProperties": false,
   "required": [
-    "title",
-    "details",
-    "publishing_app",
-    "rendering_app",
-    "locale",
-    "routes",
     "base_path",
+    "content_id",
+    "details",
     "document_type",
-    "schema_name"
+    "expanded_links",
+    "govuk_request_id",
+    "links",
+    "locale",
+    "redirects",
+    "routes",
+    "schema_name",
+    "title",
+    "update_type"
   ],
   "properties": {
     "base_path": {
@@ -51,22 +55,6 @@
         "type": "string"
       }
     },
-    "routes": {
-      "type": "array",
-      "minItems": 1,
-      "items": {
-        "$ref": "#/definitions/route"
-      }
-    },
-    "redirects": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/redirect_route"
-      }
-    },
-    "access_limited": {
-      "$ref": "#/definitions/access_limited"
-    },
     "analytics_identifier": {
       "$ref": "#/definitions/analytics_identifier"
     },
@@ -85,29 +73,21 @@
     "withdrawn_notice": {
       "$ref": "#/definitions/withdrawn_notice"
     },
-    "change_note": {
-      "type": [
-        "null",
-        "string"
-      ]
+    "content_id": {
+      "$ref": "#/definitions/guid"
     },
     "last_edited_at": {
       "type": "string",
       "format": "date-time",
       "description": "Last time when the content received a major or minor update."
     },
-    "previous_version": {
-      "type": "string"
-    },
-    "update_type": {
-      "enum": [
-        "major",
-        "minor",
-        "republish"
-      ]
-    },
     "links": {
-      "$ref": "#/definitions/links"
+      "type": "object",
+      "patternProperties": {
+        "^[a-z_]+$": {
+          "$ref": "#/definitions/guid_list"
+        }
+      }
     },
     "document_type": {
       "type": "string",
@@ -275,21 +255,157 @@
       "enum": [
         "special_route"
       ]
+    },
+    "format": {
+      "type": "string",
+      "description": "DEPRECATED: use `document_type` instead. This field will be removed."
+    },
+    "navigation_document_supertype": {
+      "type": "string",
+      "description": "Document type grouping powering the new taxonomy-based navigation pages"
+    },
+    "user_journey_document_supertype": {
+      "type": "string",
+      "description": "Document type grouping powering analytics of user journeys"
+    },
+    "email_document_supertype": {
+      "type": "string",
+      "description": "Document supertype grouping intended to power the Whitehall finders and email subscriptions"
+    },
+    "government_document_supertype": {
+      "type": "string",
+      "description": "Document supertype grouping intended to power the Whitehall finders and email subscriptions"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "routes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/definitions/route"
+      }
+    },
+    "redirects": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/redirect_route"
+      }
+    },
+    "update_type": {
+      "enum": [
+        "major",
+        "minor",
+        "republish"
+      ]
+    },
+    "govuk_request_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "expanded_links": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-z_]+$": {
+          "$ref": "#/definitions/frontend_links"
+        }
+      }
     }
   },
   "definitions": {
+    "frontend_links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "content_id",
+          "title",
+          "base_path",
+          "locale"
+        ],
+        "properties": {
+          "details": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "document_type": {
+            "type": "string"
+          },
+          "schema_name": {
+            "type": "string"
+          },
+          "public_updated_at": {
+            "type": "string"
+          },
+          "content_id": {
+            "$ref": "#/definitions/guid"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "base_path": {
+            "$ref": "#/definitions/absolute_path"
+          },
+          "api_path": {
+            "$ref": "#/definitions/absolute_path"
+          },
+          "api_url": {
+            "description": "DEPRECATED: api_path should be used instead of api_url. This is due to values of api_url being tied to an environment which can cause problems when data is synced between environments. In time this field will be removed by the Publishing Platform team.",
+            "type": "string",
+            "format": "uri"
+          },
+          "web_url": {
+            "description": "DEPRECATED: base_path should be used instead of web_url. This is due to values of web_url being tied to an environment which can cause problems when data is synced between environments. In time this field will be removed by the Publishing Platform team.",
+            "type": "string",
+            "format": "uri"
+          },
+          "locale": {
+            "$ref": "#/definitions/locale"
+          },
+          "analytics_identifier": {
+            "$ref": "#/definitions/analytics_identifier"
+          },
+          "withdrawn": {
+            "description": "Indicates whether the item has been unpublished as withdrawn, https://github.com/alphagov/publishing-api/blob/master/doc/model.md#workflow",
+            "type": "boolean"
+          },
+          "country": {
+            "$ref": "#/definitions/country"
+          },
+          "change_description": {
+            "type": "string"
+          },
+          "links": {
+            "type": "object",
+            "patternProperties": {
+              "^[a-z_]+$": {
+                "$ref": "#/definitions/frontend_links"
+              }
+            }
+          }
+        }
+      }
+    },
     "details": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
-      }
-    },
-    "links": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "policy_areas": {
-          "$ref": "#/definitions/guid_list"
+        "change_history": {
+          "$ref": "#/definitions/change_history"
         }
       }
     },
@@ -817,7 +933,7 @@
       "description": "The main content provided as HTML with the govspeak markdown it's rendered from",
       "anyOf": [
         {
-          "$ref": "#/definitions/multiple_content_types"
+          "type": "string"
         }
       ]
     },
