@@ -12,7 +12,18 @@
       "type": "integer"
     },
     "lgil_override": {
-      "description": "The Local Government Interaction List override code for the local transaction interaction",
+      "description": "[DEPRECATED]The Local Government Interaction List override code for the local transaction interaction",
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "lgil_code": {
+      "description": "The Local Government Interaction List code for the local transaction interaction",
       "anyOf": [
         {
           "type": "integer"

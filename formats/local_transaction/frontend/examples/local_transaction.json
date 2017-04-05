@@ -309,7 +309,7 @@
   "description": "If you find a stray dog and can't contact the owner, you must report it to the council",
   "details": {
     "lgsl_code": 432,
-    "lgil_override": null,
+    "lgil_code": 101,
     "service_tiers": [
       "county",
       "unitary"
