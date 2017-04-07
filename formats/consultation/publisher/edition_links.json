@@ -19,10 +19,6 @@
       "$ref": "#/definitions/guid_list",
       "description": "Used to power Email Alert Api subscriptions for Whitehall content"
     },
-    "policies": {
-      "$ref": "#/definitions/guid_list",
-      "description": "DEPRECATED in favour of `related_policies`. @gpeng will remove"
-    },
     "related_policies": {
       "$ref": "#/definitions/guid_list"
     },

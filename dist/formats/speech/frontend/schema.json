@@ -88,10 +88,6 @@
         "related_policies": {
           "$ref": "#/definitions/frontend_links"
         },
-        "policies": {
-          "description": "Link type automatically added by Publishing API",
-          "$ref": "#/definitions/frontend_links"
-        },
         "ministers": {
           "$ref": "#/definitions/frontend_links"
         },
@@ -150,6 +146,10 @@
           "$ref": "#/definitions/frontend_links"
         },
         "children": {
+          "description": "Link type automatically added by Publishing API",
+          "$ref": "#/definitions/frontend_links"
+        },
+        "policies": {
           "description": "Link type automatically added by Publishing API",
           "$ref": "#/definitions/frontend_links"
         },
