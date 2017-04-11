@@ -98,6 +98,14 @@
             }
           ]
         },
+        "redirect_type": {
+          "enum": [
+            "permanent",
+            "temporary"
+          ],
+          "default": "permanent",
+          "description": "A 301 Moved Permanently status code will be used if the redirect type is permanent, if it is temporary, a 302 Found status code will be used."
+        },
         "segments_mode": {
           "enum": [
             "preserve",
