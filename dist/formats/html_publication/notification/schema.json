@@ -431,6 +431,10 @@
           "type": "string",
           "description": "Identifies the contact address of the institution which has produced the HTML Publication. To be displayed when printing an HTML Publication"
         },
+        "pdf_asset_url": {
+          "type": "string",
+          "description": "The URL for the PDF rendered from this HTML Publication"
+        },
         "change_history": {
           "$ref": "#/definitions/change_history"
         }
