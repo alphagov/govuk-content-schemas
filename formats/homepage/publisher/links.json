@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "root_taxons": {
+      "description": "Defines a set of Taxonomy trees rooted in this node.",
+      "$ref": "#/definitions/guid_list"
+    }
+  }
+}
