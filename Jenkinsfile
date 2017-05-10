@@ -29,7 +29,6 @@ def dependentApplications = [
   ['short-url-manager', false],
   ['service-manual-frontend', false],
   ['service-manual-publisher', false],
-  ['specialist-frontend', false],
   ['smartanswers', false],
   ['specialist-publisher', true],
   ['static', false],
