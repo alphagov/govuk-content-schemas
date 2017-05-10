@@ -101,6 +101,9 @@ module SchemaGenerator
           "type" => "string",
           "format" => "date-time"
         },
+        "publishing_request_id" => {
+          "$ref" => "#/definitions/publishing_request_id",
+        },
       )
 
       # TODO: This is done to make sure that this rewrite produces the exact same
@@ -111,6 +114,7 @@ module SchemaGenerator
         publishing_app rendering_app locale need_ids analytics_identifier phase
         details withdrawn_notice content_id last_edited_at links document_type
         schema_name format navigation_document_supertype user_journey_document_supertype email_document_supertype government_document_supertype updated_at
+        publishing_request_id
       ])
     end
 
