@@ -860,17 +860,17 @@
       }
     },
     "first_public_at": {
-      "description": "The date the content was first published. Used in details. Will be deprecated in favour of top level first_published_at when publishing API allows it to be edited.",
+      "description": "DEPRECATED. The date the content was first published. Used in details. Will be deprecated in favour of top level first_published_at when publishing API allows it to be edited.",
       "type": "string",
       "format": "date-time"
     },
     "first_published_at": {
-      "description": "The date the content was first published",
+      "description": "The date the content was first published.  Automatically determined by the publishing-api, unless overridden by the publishing application.",
       "type": "string",
       "format": "date-time"
     },
     "public_updated_at": {
-      "description": "When the content was last significantly changed, date shown to users",
+      "description": "When the content was last significantly changed (a major update). Shown to users.  Automatically determined by the publishing-api, unless overridden by the publishing application.",
       "type": "string",
       "format": "date-time"
     },
