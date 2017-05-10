@@ -280,6 +280,9 @@
       "type": "string",
       "format": "date-time"
     },
+    "publishing_request_id": {
+      "$ref": "#/definitions/publishing_request_id"
+    },
     "routes": {
       "type": "array",
       "minItems": 1,

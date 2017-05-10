@@ -344,6 +344,9 @@
     "updated_at": {
       "type": "string",
       "format": "date-time"
+    },
+    "publishing_request_id": {
+      "$ref": "#/definitions/publishing_request_id"
     }
   },
   "definitions": {
