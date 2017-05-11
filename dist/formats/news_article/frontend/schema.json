@@ -92,6 +92,9 @@
         "world_locations": {
           "$ref": "#/definitions/frontend_links"
         },
+        "worldwide_organisations": {
+          "$ref": "#/definitions/frontend_links"
+        },
         "roles": {
           "description": "Used to power Email Alert Api subscriptions for Whitehall content",
           "$ref": "#/definitions/frontend_links"
@@ -323,6 +326,7 @@
         "working_group",
         "world_location",
         "world_location_news_article",
+        "world_news_story",
         "worldwide_organisation",
         "written_statement"
       ]
