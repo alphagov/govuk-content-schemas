@@ -14,6 +14,6 @@
       "description": "The parent content item.",
       "maxItems": 1,
       "$ref": "#/definitions/guid_list"
-		}
-	}
+    }
+  }
 }
