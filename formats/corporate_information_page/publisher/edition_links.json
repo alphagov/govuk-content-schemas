@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "corporate_information_pages": {
+      "$ref": "#/definitions/guid_list"
+    },
+    "organisations": {
+      "description": "All organisations linked to this content item. This should include lead organisations.",
+      "$ref": "#/definitions/guid_list"
+    },
+    "parent": {
+      "description": "The parent content item.",
+      "maxItems": 1,
+      "$ref": "#/definitions/guid_list"
+    }
+  }
+}
