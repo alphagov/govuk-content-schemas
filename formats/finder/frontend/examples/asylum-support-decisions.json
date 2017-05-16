@@ -3,7 +3,6 @@
   "base_path": "/asylum-support-decisions",
   "title": "First-tier Tribunal (Asylum Support) decisions",
   "description": "Find decisions by the First-tier Tribunal (Asylum Support)",
-  "format": "finder",
   "need_ids": [
 
   ],

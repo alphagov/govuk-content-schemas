@@ -3,7 +3,6 @@
   "base_path": "/maib-reports",
   "title": "Marine Accident Investigation Branch reports",
   "description": "",
-  "format": "finder",
   "need_ids": [
 
   ],
