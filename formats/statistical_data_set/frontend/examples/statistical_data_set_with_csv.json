@@ -3,7 +3,6 @@
   "content_id": "8f8d90e7-5289-4942-82f3-ed03b1a0ac10",
   "title": "MOT testing data for Great Britain",
   "description": "Statistical data sets about MOT testing including results by vehicle type, failures by type of defect, and MOT test stations and testers.",
-  "format": "statistical_data_set",
   "locale": "en",
   "updated_at": "2016-11-16T15:39:49.732Z",
   "public_updated_at": "2016-11-16T15:39:49.732+00:00",
