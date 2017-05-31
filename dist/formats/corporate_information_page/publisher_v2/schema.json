@@ -319,6 +319,11 @@
           "maxItems": 1,
           "$ref": "#/definitions/guid_list"
         },
+        "primary_publishing_organisation": {
+          "description": "The organisation that published the page. Corresponds to the first of the 'Lead organisations' in Whitehall, and is empty for all other publishing applications.",
+          "$ref": "#/definitions/guid_list",
+          "maxItems": 1
+        },
         "policy_areas": {
           "$ref": "#/definitions/guid_list"
         }
