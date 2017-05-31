@@ -136,6 +136,11 @@
         "policy_areas": {
           "$ref": "#/definitions/frontend_links"
         },
+        "primary_publishing_organisation": {
+          "description": "The organisation that published the page. Corresponds to the first of the 'Lead organisations' in Whitehall, and is empty for all other publishing applications.",
+          "maxItems": 1,
+          "$ref": "#/definitions/frontend_links"
+        },
         "children": {
           "description": "Link type automatically added by Publishing API",
           "$ref": "#/definitions/frontend_links"
