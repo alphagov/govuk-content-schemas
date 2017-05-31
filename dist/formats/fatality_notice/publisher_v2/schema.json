@@ -323,6 +323,11 @@
           "$ref": "#/definitions/guid_list",
           "description": "Used to power Email Alert Api subscriptions for Whitehall content"
         },
+        "primary_publishing_organisation": {
+          "description": "The organisation that published the page. Corresponds to the first of the 'Lead organisations' in Whitehall, and is empty for all other publishing applications.",
+          "$ref": "#/definitions/guid_list",
+          "maxItems": 1
+        },
         "roles": {
           "$ref": "#/definitions/guid_list",
           "description": "Used to power Email Alert Api subscriptions for Whitehall content"
