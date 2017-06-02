@@ -4,9 +4,11 @@ module SchemaGenerator
       FileUtils.mkdir_p("dist/formats/#{schema_name}/publisher_v2")
       FileUtils.cp("formats/#{schema_name}/publisher_v2/schema.json", "dist/formats/#{schema_name}/publisher_v2/schema.json")
 
-      if File.exist?("formats/#{schema_name}/frontend/schema.json")
-        FileUtils.mkdir_p("dist/formats/#{schema_name}/frontend")
-        FileUtils.cp("formats/#{schema_name}/frontend/schema.json", "dist/formats/#{schema_name}/frontend/schema.json")
+      %w(frontend notification).each do |schema_type|
+        if File.exist?("formats/#{schema_name}/#{schema_type}/schema.json")
+          FileUtils.mkdir_p("dist/formats/#{schema_name}/#{schema_type}")
+          FileUtils.cp("formats/#{schema_name}/#{schema_type}/schema.json", "dist/formats/#{schema_name}/#{schema_type}/schema.json")
+        end
       end
     end
   end

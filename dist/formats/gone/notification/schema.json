@@ -4,9 +4,7 @@
   "additionalProperties": false,
   "required": [
     "publishing_app",
-    "redirects",
-    "base_path",
-    "content_id"
+    "routes"
   ],
   "properties": {
     "base_path": {
@@ -17,12 +15,12 @@
     },
     "document_type": {
       "enum": [
-        "redirect"
+        "gone"
       ]
     },
     "schema_name": {
       "enum": [
-        "redirect"
+        "gone"
       ]
     },
     "publishing_app": {
@@ -35,36 +33,56 @@
         "republish"
       ]
     },
-    "redirects": {
+    "public_updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "routes": {
       "type": "array",
       "items": {
         "type": "object",
         "additionalProperties": false,
         "required": [
           "path",
-          "type",
-          "destination"
+          "type"
         ],
         "properties": {
           "path": {
-            "$ref": "#/definitions/absolute_path"
+            "type": "string"
           },
           "type": {
             "enum": [
-              "prefix",
-              "exact"
+              "exact",
+              "prefix"
             ]
-          },
-          "destination": {
-            "$ref": "#/definitions/absolute_fullpath"
-          },
-          "segments_mode": {
-            "enum": [
-              "preserve",
-              "ignore"
-            ],
-            "description": "For prefix redirects, preserve or ignore the rest of the fullpath. For exact, preserve or ignore the querystring."
           }
+        }
+      }
+    },
+    "details": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "explanation": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "alternative_path": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri"
+        }
+      }
+    },
+    "links": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-z_]+$": {
+          "$ref": "#/definitions/guid_list"
         }
       }
     }
@@ -72,13 +90,7 @@
   "definitions": {
     "absolute_path": {
       "type": "string",
-      "pattern": "^/(([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})+(/([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)*)?$",
-      "description": "A path only. Query string and/or fragment are not allowed."
-    },
-    "absolute_fullpath": {
-      "type": "string",
-      "pattern": "^/(([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})+(/([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)*)?(\\?([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)?(#([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)?$",
-      "description": "A path with optional query string and/or fragment."
+      "pattern": "^/(([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})+(/([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)*)?$"
     },
     "guid": {
       "type": "string",
