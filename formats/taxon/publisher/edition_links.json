@@ -6,6 +6,10 @@
     "parent_taxons": {
       "description": "The list of taxon parents.",
       "$ref": "#/definitions/guid_list"
+    },
+    "associated_taxons": {
+      "description": "A list of associated taxons whose children should be included as children of this taxon",
+      "$ref": "#/definitions/guid_list"
     }
   }
 }
