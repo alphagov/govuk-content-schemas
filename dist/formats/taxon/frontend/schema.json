@@ -125,6 +125,10 @@
           "maxItems": 1,
           "$ref": "#/definitions/frontend_links"
         },
+        "associated_taxons": {
+          "description": "A list of associated taxons whose children should be included as children of this taxon",
+          "$ref": "#/definitions/frontend_links"
+        },
         "available_translations": {
           "description": "Link type automatically added by Publishing API",
           "$ref": "#/definitions/frontend_links"
