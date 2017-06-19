@@ -22,8 +22,9 @@ module SchemaGenerator
     def required
       required_properties = base_content_item["required"] + %w[document_type schema_name]
 
-      # TODO: `contact` is a content item that is can be base path less.
-      if schema_name == "contact"
+      # TODO: `contact` and `world_location` are schema types that can be base path less.
+      base_path_less_schemas = %w(contact world_location)
+      if base_path_less_schemas.include?(schema_name)
         required_properties = required_properties - %w[rendering_app routes base_path]
       end
 
