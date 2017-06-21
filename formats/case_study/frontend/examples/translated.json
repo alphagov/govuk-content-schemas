@@ -76,12 +76,9 @@
     "world_locations": [
       {
         "content_id": "1a47d8eb-36e8-4a9e-8a05-ca33184c2f86",
-        "api_path": "/api/content/government/world/spain.es",
-        "api_url": "https://www.gov.uk/api/content/government/world/spain.es",
-        "base_path": "/government/world/spain.es",
-        "locale": "es",
-        "title": "España",
-        "web_url": "https://www.gov.uk/government/world/spain.es"
+        "locale": "en",
+        "title": "Spain",
+        "schema_name": "world_location"
       }
     ],
     "worldwide_organisations": [

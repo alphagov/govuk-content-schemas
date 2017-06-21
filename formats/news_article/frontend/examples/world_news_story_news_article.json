@@ -56,11 +56,8 @@
       {
         "content_id": "5e9ed112-7706-11e4-a3cb-005056011aef",
         "title": "Azerbaijan",
-        "base_path": "/government/world/azerbaijan",
-        "api_path": "/api/content/government/world/azerbaijan",
-        "api_url": "https://www.gov.uk/api/content/government/world/azerbaijan",
-        "web_url": "https://www.gov.uk/government/world/azerbaijan",
         "locale": "en",
+        "schema_name": "world_location",
         "analytics_identifier": "WL10"
       }
     ]

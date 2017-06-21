@@ -25,11 +25,8 @@
       {
         "content_id": "5e9f0880-7706-11e4-a3cb-005056011aef",
         "title": "Kenya",
-        "base_path": "/government/world/organisations/british-high-commission-nairobi",
-        "api_path": "/api/content/government/world/organisations/british-high-commission-nairobi",
-        "api_url": "https://www.gov.uk/api/content/government/world/organisations/british-high-commission-nairobi",
-        "web_url": "https://www.gov.uk/government/world/organisations/british-high-commission-nairobi",
         "locale": "en",
+        "schema_name": "world_location",
         "analytics_identifier": "WL73"
       }
     ],

@@ -25,11 +25,7 @@
       {
         "content_id": "5e9edfc1-7706-11e4-a3cb-005056011aef",
         "title": "Brasil",
-        "base_path": "/government/world/organisations/brazil.pt",
-        "api_path": "/api/content/government/world/organisations/brazil.pt",
-        "api_url": "https://www.gov.uk/api/content/government/world/organisations/brazil.pt",
-        "web_url": "https://www.gov.uk/government/world/organisations/brazil.pt",
-        "locale": "pt",
+        "locale": "en",
         "analytics_identifier": "WL20"
       }
     ],

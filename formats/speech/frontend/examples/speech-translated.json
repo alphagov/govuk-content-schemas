@@ -71,10 +71,10 @@
       {
         "content_id": "5e9f3bc0-7706-11e4-a3cb-005056011aef",
         "title": "UK Mission to the United Nations, New York",
-        "api_path": "/api/content/government/world/uk-mission-to-the-united-nations-new-york",
-        "base_path": "/government/world/uk-mission-to-the-united-nations-new-york",
-        "api_url": "https://www.gov.uk/api/content/government/world/uk-mission-to-the-united-nations-new-york",
-        "web_url": "https://www.gov.uk/government/world/uk-mission-to-the-united-nations-new-york",
+        "api_path": "/api/content/world/uk-mission-to-the-united-nations-new-york",
+        "base_path": "/world/uk-mission-to-the-united-nations-new-york",
+        "api_url": "https://www.gov.uk/api/content/world/uk-mission-to-the-united-nations-new-york",
+        "web_url": "https://www.gov.uk/world/uk-mission-to-the-united-nations-new-york",
         "locale": "en"
       }
     ],
