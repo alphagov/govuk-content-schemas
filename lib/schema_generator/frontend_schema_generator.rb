@@ -116,7 +116,8 @@ module SchemaGenerator
 
     def definitions
       the_definitions = {
-        "frontend_links" => Schema.read("formats/frontend_links_definition.json").slice("type", "items")
+        "frontend_links" => Schema.read("formats/frontend_links_definition.json").slice("type", "items"),
+        "base_path_less_frontend_links" => Schema.read("formats/base_path_less_frontend_links_definition.json").slice("type", "items"),
       }.merge(publisher_content_schema["definitions"])
 
       the_definitions.delete("links")
@@ -148,8 +149,13 @@ module SchemaGenerator
           # We can't know of the presence of any items due to reliance on when
           # they're published, so at best we can know the maxItems
           memo[type] = properties.slice("description", "maxItems")
-            .merge("$ref" => "#/definitions/frontend_links")
+            .merge("$ref" => links_schema_for_type(type))
         end
+    end
+
+    def links_schema_for_type(type)
+      return "#/definitions/base_path_less_frontend_links" if type == "world_locations"
+      "#/definitions/frontend_links"
     end
 
     def replace_multiple_content_types(object)
