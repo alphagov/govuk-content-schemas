@@ -25,11 +25,8 @@
       {
         "content_id": "5e9f07b7-7706-11e4-a3cb-005056011aef",
         "title": "Japan",
-        "base_path": "/government/world/organisations/british-embassy-tokyo",
-        "api_path": "/api/content/government/world/organisations/british-embassy-tokyo",
-        "api_url": "https://www.gov.uk/api/content/government/world/organisations/british-embassy-tokyo",
-        "web_url": "https://www.gov.uk/government/world/organisations/british-embassy-tokyo",
         "locale": "en",
+        "schema_name": "world_location",
         "analytics_identifier": "WL69"
       }
     ],

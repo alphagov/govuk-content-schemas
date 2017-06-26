@@ -46,11 +46,8 @@
       {
         "content_id": "456af51f-5fd3-4855-8a33-52cb32ff9985",
         "title": "Pakistan",
-        "base_path": "/government/world/pakistan",
-        "api_path": "/api/content/government/world/pakistan",
-        "api_url": "https://www.gov.uk/api/content/government/world/pakistan",
-        "web_url": "https://www.gov.uk/government/world/pakistan",
         "locale": "en",
+        "schema_name": "world_location",
         "analytics_identifier": "WL3"
       }
     ],

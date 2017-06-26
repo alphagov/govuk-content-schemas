@@ -7,38 +7,14 @@
     "required": [
       "content_id",
       "title",
-      "base_path",
       "locale"
     ],
     "properties": {
-      "details": {
-        "type": "object",
-        "additionalProperties": true
-      },
       "document_type": {
         "type": "string"
       },
       "schema_name": {
         "type": "string"
-      },
-      "public_updated_at": {
-        "type": "string"
-      },
-      "content_id": {
-        "$ref": "#/definitions/guid"
-      },
-      "title": {
-        "type": "string"
-      },
-      "description": {
-        "anyOf": [
-          {
-            "type": "string"
-          },
-          {
-            "type": "null"
-          }
-        ]
       },
       "base_path": {
         "$ref": "#/definitions/absolute_path"
@@ -56,29 +32,20 @@
         "type": "string",
         "format": "uri"
       },
-      "locale": {
-        "$ref": "#/definitions/locale"
-      },
       "analytics_identifier": {
         "$ref": "#/definitions/analytics_identifier"
       },
-      "withdrawn": {
-        "description": "Indicates whether the item has been unpublished as withdrawn, https://github.com/alphagov/publishing-api/blob/master/doc/model.md#workflow",
-        "type": "boolean"
-      },
-      "country": {
-        "$ref": "#/definitions/country"
-      },
-      "change_description": {
+      "public_updated_at": {
         "type": "string"
       },
-      "links": {
-        "type": "object",
-        "patternProperties": {
-          "^[a-z_]+$": {
-            "$ref": "#/definitions/frontend_links"
-          }
-        }
+      "content_id": {
+        "$ref": "#/definitions/guid"
+      },
+      "title": {
+        "type": "string"
+      },
+      "locale": {
+        "$ref": "#/definitions/locale"
       }
     }
   }

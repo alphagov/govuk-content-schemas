@@ -25,11 +25,8 @@
       {
         "content_id": "5e9ee834-7706-11e4-a3cb-005056011aef",
         "title": "Cameroon",
-        "base_path": "/government/world/cameroon",
-        "api_path": "/api/content/government/world/cameroon",
-        "api_url": "https://www.gov.uk/api/content/government/world/cameroon",
-        "web_url": "https://www.gov.uk/government/world/cameroon",
         "locale": "en",
+        "schema_name": "world_location",
         "analytics_identifier": "WL27"
       }
     ],
