@@ -4,6 +4,7 @@ require "schema_generator/publisher_content_schema_generator"
 require "schema_generator/publisher_links_schema_generator"
 require "schema_generator/frontend_schema_generator"
 require "schema_generator/notification_schema_generator"
+require "schema_generator/format"
 
 module SchemaGenerator
   module Generator
@@ -26,6 +27,12 @@ module SchemaGenerator
 
       notification_schema = NotificationSchemaGenerator.new(frontend_schema).generate
       Schema.write("dist/formats/#{schema_name}/notification/schema.json", notification_schema)
+    end
+
+    def self.generate_jsonnet(schema_name, data)
+      format = Format.new(schema_name, data)
+
+      Schema.write("dist/formats/#{schema_name}/publisher_v2/schema.json", format.publisher_content_schema)
     end
   end
 end
