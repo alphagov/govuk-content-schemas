@@ -8,9 +8,6 @@
   "publishing_app": {
     "$ref": "#/definitions/publishing_app_name"
   },
-  "rendering_app": {
-    "$ref": "#/definitions/rendering_app_name"
-  },
   "locale": {
     "$ref": "#/definitions/locale"
   },
@@ -34,9 +31,6 @@
       "beta",
       "live"
     ]
-  },
-  "details": {
-    "$ref": "#/definitions/details"
   },
   "withdrawn_notice": {
     "$ref": "#/definitions/withdrawn_notice"

@@ -20,7 +20,7 @@ module SchemaGenerator
       )
       schema[:definitions] = DefinitionsResolver.new(
         schema[:properties],
-        Jsonnet.load("jsonnet_formats/_shared_definitions.jsonnet").merge(data["definitions"])
+        Jsonnet.load("jsonnet_formats/shared/shared_definitions.jsonnet").merge(data["definitions"])
       ).call
       schema
     end
@@ -52,7 +52,7 @@ module SchemaGenerator
     end
 
     def consistent_schema_properties
-      Jsonnet.load("jsonnet_formats/_consistent_schema_properties.jsonnet")
+      Jsonnet.load("jsonnet_formats/shared/consistent_schema_properties.jsonnet")
     end
 
     def schema_property(definition, default)
@@ -61,7 +61,7 @@ module SchemaGenerator
 
       type = definition_or_default(definition_hash["definition"], default)
 
-      definition["required"] ? type : { anyOf: [type, { type: nil }] }
+      definition["required"] ? type : { anyOf: [type, { type: "null" }] }
     end
 
     def routes_property(property)
@@ -79,7 +79,7 @@ module SchemaGenerator
     end
 
     def build_definitions(definitions)
-      shared_definitions = Jsonnet.load("jsonnet_formats/_shared_definitions.jsonnet")
+      shared_definitions = Jsonnet.load("jsonnet_formats/shared/shared_definitions.jsonnet")
       shared_definitions.merge(data["definitions"]).delete_if do |k, v|
         !definitions.include?(k)
       end
@@ -149,12 +149,13 @@ module SchemaGenerator
       end
 
       def call
-        {
+        properties = {
           type: "object",
           additionalProperties: false,
-          required: required,
           properties: links
         }
+        properties[:required] = required unless required.empty?
+        properties
       end
 
     private

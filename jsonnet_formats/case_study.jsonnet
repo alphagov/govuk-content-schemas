@@ -1,4 +1,4 @@
-(import "_default_format.jsonnet") + {
+(import "shared/default_format.jsonnet") + {
   document_type: "case_study",
   definitions: {
     details: {
@@ -48,7 +48,7 @@
       }
     }
   },
-  links: (import "_base_links.jsonnet") + {
+  links: (import "shared/base_links.jsonnet") + {
     related_policies: "",
     world_locations: "",
     worldwide_organisations: ""

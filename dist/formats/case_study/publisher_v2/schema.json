@@ -25,7 +25,7 @@
           "type": "string"
         },
         {
-          "type": null
+          "type": "null"
         }
       ]
     },
@@ -48,9 +48,6 @@
     "links": {
       "type": "object",
       "additionalProperties": false,
-      "required": [
-
-      ],
       "properties": {
         "policy_areas": {
           "description": "A largely deprecated tag currently only used to power email alerts.",
@@ -72,9 +69,6 @@
         "null",
         "string"
       ]
-    },
-    "details": {
-      "$ref": "#/definitions/details"
     },
     "first_published_at": {
       "$ref": "#/definitions/first_published_at"
@@ -110,9 +104,6 @@
     },
     "publishing_app": {
       "$ref": "#/definitions/publishing_app_name"
-    },
-    "rendering_app": {
-      "$ref": "#/definitions/rendering_app_name"
     },
     "update_type": {
       "enum": [

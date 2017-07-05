@@ -13,6 +13,6 @@
   definitions: {
 
   },
-  edition_links: import "_base_edition_links.jsonnet",
-  links: import "_base_links.jsonnet"
+  edition_links: import "base_edition_links.jsonnet",
+  links: import "base_links.jsonnet"
 }

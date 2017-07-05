@@ -1,0 +1,1276 @@
+{
+  any_metadata: {
+    type: "object",
+    anyOf: [
+      {
+        "$ref": "#/definitions/aaib_report_metadata"
+      },
+      {
+        "$ref": "#/definitions/asylum_support_decision_metadata"
+      },
+      {
+        "$ref": "#/definitions/business_finance_support_scheme_metadata"
+      },
+      {
+        "$ref": "#/definitions/cma_case_metadata"
+      },
+      {
+        "$ref": "#/definitions/countryside_stewardship_grant_metadata"
+      },
+      {
+        "$ref": "#/definitions/dfid_research_output_metadata"
+      },
+      {
+        "$ref": "#/definitions/drug_safety_update_metadata"
+      },
+      {
+        "$ref": "#/definitions/employment_appeal_tribunal_decision_metadata"
+      },
+      {
+        "$ref": "#/definitions/employment_tribunal_decision_metadata"
+      },
+      {
+        "$ref": "#/definitions/european_structural_investment_fund_metadata"
+      },
+      {
+        "$ref": "#/definitions/international_development_fund_metadata"
+      },
+      {
+        "$ref": "#/definitions/maib_report_metadata"
+      },
+      {
+        "$ref": "#/definitions/medical_safety_alert_metadata"
+      },
+      {
+        "$ref": "#/definitions/raib_report_metadata"
+      },
+      {
+        "$ref": "#/definitions/service_standard_report_metadata"
+      },
+      {
+        "$ref": "#/definitions/tax_tribunal_decision_metadata"
+      },
+      {
+        "$ref": "#/definitions/utaac_decision_metadata"
+      },
+      {
+        "$ref": "#/definitions/vehicle_recalls_and_faults_alert_metadata"
+      }
+    ]
+  },
+  nested_headers: {
+    type: "array",
+    minItems: 1,
+    items: {
+      type: "object",
+      additionalProperties: false,
+      required: [
+        "text",
+        "level",
+        "id"
+      ],
+      properties: {
+        text: {
+          "type": "string"
+        },
+        level: {
+          type: "integer"
+        },
+        id: {
+          type: "string"
+        },
+        headers: {
+          "$ref": "#/definitions/nested_headers"
+        }
+      }
+    }
+  },
+  aaib_report_metadata: {
+    type: "object",
+    additionalProperties: false,
+    properties: {
+      bulk_published: {
+        type: "boolean"
+      },
+      aircraft_category: {
+        type: "array",
+        items: {
+          type: "string",
+          enum: [
+            "commercial-fixed-wing",
+            "commercial-rotorcraft",
+            "general-aviation-fixed-wing",
+            "general-aviation-rotorcraft",
+            "sport-aviation-and-balloons"
+          ]
+        }
+      },
+      report_type: {
+        type: "string",
+        enum: [
+          "annual-safety-report",
+          "correspondence-investigation",
+          "field-investigation",
+          "pre-1997-monthly-report",
+          "foreign-report",
+          "formal-report",
+          "special-bulletin",
+          "safety-study"
+        ]
+      },
+      date_of_occurrence: {
+        type: "string",
+        pattern: "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+      },
+      aircraft_type: {
+        type: "string"
+      },
+      location: {
+        type: "string"
+      },
+      registration: {
+        type: "string"
+      }
+    }
+  },
+  asylum_support_decision_metadata: {
+    type: "object",
+    additionalProperties: false,
+    properties: {
+      bulk_published: {
+        type: "boolean"
+      },
+      tribunal_decision_judges: {
+        type: "array",
+        items: {
+          type: "string"
+        }
+      },
+      tribunal_decision_category: {
+        type: "string",
+        enum: [
+          "section-4-1-support-for-persons-who-are-neither-an-asylum-seeker-nor-a-failed-asylum-seeker",
+          "section-4-2-support-for-failed-asylum-seekers",
+          "section-95-support-for-asylum-seekers"
+        ]
+      },
+      tribunal_decision_categories: {
+        type: "array",
+        items: {
+          type: "string",
+          enum: [
+            "section-4-1-support-for-persons-who-are-neither-an-asylum-seeker-nor-a-failed-asylum-seeker",
+            "section-4-2-support-for-failed-asylum-seekers",
+            "section-95-support-for-asylum-seekers"
+          ]
+        }
+      },
+      tribunal_decision_sub_category: {
+        type: "string"
+      },
+      tribunal_decision_sub_categories: {
+        type: "array",
+        items: {
+          type: "string"
+        }
+      },
+      tribunal_decision_landmark: {
+        type: "string",
+        enum: [
+          "not-landmark",
+          "landmark"
+        ]
+      },
+      tribunal_decision_reference_number: {
+        type: "string"
+      },
+      tribunal_decision_decision_date: {
+        type: "string",
+        pattern: "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+      },
+      hidden_indexable_content: {
+        type: "string"
+      }
+    }
+  },
+  business_finance_support_scheme_metadata: {
+    type: "object",
+    additionalProperties: false,
+    properties: {
+      bulk_published: {
+        type: "boolean"
+      },
+      business_sizes: {
+        type: "array",
+        items: {
+          type: "string",
+          enum: [
+            "between-10-and-249",
+            "between-250-and-500",
+            "over-500",
+            "under-10"
+          ]
+        }
+      },
+      business_stages: {
+        type: "array",
+        items: {
+          type: "string",
+          enum: [
+            "established",
+            "not-yet-trading",
+            "start-up"
+          ]
+        }
+      },
+      continuation_link: {
+        type: "string"
+      },
+      industries: {
+        type: "array",
+        items: {
+          type: "string",
+          enum: [
+            "agriculture-and-food",
+            "business-and-finance",
+            "construction",
+            "education",
+            "health",
+            "hospitality-and-catering",
+            "information-technology-digital-and-creative",
+            "manufacturing",
+            "mining",
+            "real-estate-and-property",
+            "science-and-technology",
+            "service-industries",
+            "transport-and-distribution",
+            "travel-and-leisure",
+            "utilities-providers",
+            "wholesale-and-retail"
+          ]
+        }
+      },
+      types_of_support: {
+        type: "array",
+        items: {
+          type: "string",
+          enum: [
+            "equity",
+            "expertise-and-advice",
+            "finance",
+            "grant",
+            "loan",
+            "recognition-award"
+          ]
+        }
+      },
+      will_continue_on: {
+        oneOf: [
+          {
+            type: "string"
+          },
+          {
+            type: "null"
+          }
+        ]
+      }
+    }
+  },
+  cma_case_metadata: {
+    type: "object",
+    additionalProperties: false,
+    properties: {
+      bulk_published: {
+        type: "boolean"
+      },
+      case_type: {
+        type: "string",
+        enum: [
+          "ca98-and-civil-cartels",
+          "competition-disqualification",
+          "criminal-cartels",
+          "markets",
+          "mergers",
+          "consumer-enforcement",
+          "regulatory-references-and-appeals",
+          "review-of-orders-and-undertakings"
+        ]
+      },
+      case_state: {
+        type: "string",
+        enum: [
+          "open",
+          "closed"
+        ]
+      },
+      market_sector: {
+        type: "array",
+        items: {
+          type: "string",
+          enum: [
+            "aerospace",
+            "agriculture-environment-and-natural-resources",
+            "building-and-construction",
+            "chemicals",
+            "clothing-footwear-and-fashion",
+            "communications",
+            "defence",
+            "distribution-and-service-industries",
+            "electronics-industry",
+            "energy",
+            "engineering",
+            "financial-services",
+            "fire-police-and-security",
+            "food-manufacturing",
+            "giftware-jewellery-and-tableware",
+            "healthcare-and-medical-equipment",
+            "household-goods-furniture-and-furnishings",
+            "mineral-extraction-mining-and-quarrying",
+            "motor-industry",
+            "oil-and-gas-refining-and-petrochemicals",
+            "paper-printing-and-packaging",
+            "pharmaceuticals",
+            "public-markets",
+            "recreation-and-leisure",
+            "retail-and-wholesale",
+            "telecommunications",
+            "textiles",
+            "transport",
+            "utilities"
+          ]
+        }
+      },
+      outcome_type: {
+        type: "string",
+        enum: [
+          "ca98-no-grounds-for-action-non-infringement",
+          "ca98-infringement-chapter-i",
+          "ca98-infringement-chapter-ii",
+          "ca98-administrative-priorities",
+          "ca98-commitment",
+          "competition-disqualification-order-granted",
+          "competition-disqualification-undertaking-given",
+          "competition-disqualification-no-order-granted-or-undertaking-given",
+          "criminal-cartels-verdict",
+          "markets-phase-1-no-enforcement-action",
+          "markets-phase-1-undertakings-in-lieu-of-reference",
+          "markets-phase-1-referral",
+          "mergers-phase-1-clearance",
+          "mergers-phase-1-clearance-with-undertakings-in-lieu",
+          "mergers-phase-1-referral",
+          "mergers-phase-1-found-not-to-qualify",
+          "mergers-phase-1-public-interest-interventions",
+          "markets-phase-2-clearance-no-adverse-effect-on-competition",
+          "markets-phase-2-adverse-effect-on-competition-leading-to-remedies",
+          "markets-phase-2-decision-to-dispense-with-procedural-obligations",
+          "mergers-phase-2-clearance",
+          "mergers-phase-2-clearance-with-remedies",
+          "mergers-phase-2-prohibition",
+          "mergers-phase-2-cancellation",
+          "consumer-enforcement-no-action",
+          "consumer-enforcement-court-order",
+          "consumer-enforcement-undertakings",
+          "consumer-enforcement-changes-to-business-practices-agreed",
+          "regulatory-references-and-appeals-final-determination"
+        ]
+      },
+      opened_date: {
+        type: "string",
+        pattern: "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+      },
+      closed_date: {
+        type: "string",
+        pattern: "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+      }
+    }
+  },
+  dfid_research_output_metadata: {
+    type: "object",
+    additionalProperties: false,
+    properties: {
+      bulk_published: {
+        type: "boolean"
+      },
+      dfid_review_status: {
+        type: "string",
+        enum: [
+          "unreviewed",
+          "peer_reviewed"
+        ]
+      },
+      country: {
+        type: "array",
+        items: {
+          type: "string",
+          enum: [
+            "AF",
+            "AL",
+            "DZ",
+            "AD",
+            "AO",
+            "AG",
+            "AR",
+            "AM",
+            "AU",
+            "AT",
+            "AZ",
+            "BS",
+            "BH",
+            "BD",
+            "BB",
+            "BY",
+            "BE",
+            "BZ",
+            "BJ",
+            "BT",
+            "BO",
+            "BA",
+            "BW",
+            "BR",
+            "BN",
+            "BG",
+            "BF",
+            "MM",
+            "BI",
+            "KH",
+            "CM",
+            "CA",
+            "CV",
+            "CF",
+            "TD",
+            "CL",
+            "CN",
+            "CO",
+            "KM",
+            "CG",
+            "CD",
+            "CK",
+            "CR",
+            "HR",
+            "CU",
+            "CY",
+            "CZ",
+            "DK",
+            "DJ",
+            "DM",
+            "DO",
+            "TL",
+            "EC",
+            "EG",
+            "SV",
+            "GQ",
+            "ER",
+            "EE",
+            "ET",
+            "FJ",
+            "FI",
+            "FR",
+            "GA",
+            "GM",
+            "GE",
+            "DE",
+            "GH",
+            "GR",
+            "GD",
+            "GT",
+            "GN",
+            "GW",
+            "GY",
+            "HT",
+            "HN",
+            "HU",
+            "IS",
+            "IN",
+            "ID",
+            "IR",
+            "IQ",
+            "IE",
+            "IL",
+            "IT",
+            "CI",
+            "JM",
+            "JP",
+            "JO",
+            "KZ",
+            "KE",
+            "KI",
+            "XK",
+            "KW",
+            "KG",
+            "LA",
+            "LV",
+            "LB",
+            "LS",
+            "LR",
+            "LY",
+            "LI",
+            "LT",
+            "LU",
+            "MK",
+            "MG",
+            "MW",
+            "MY",
+            "MV",
+            "ML",
+            "MT",
+            "MH",
+            "MR",
+            "MU",
+            "MX",
+            "FM",
+            "MD",
+            "MC",
+            "MN",
+            "ME",
+            "MA",
+            "MZ",
+            "NA",
+            "NR",
+            "NP",
+            "NL",
+            "NZ",
+            "NI",
+            "NE",
+            "NG",
+            "KP",
+            "NO",
+            "OM",
+            "PK",
+            "PW",
+            "PA",
+            "PG",
+            "PY",
+            "PE",
+            "PH",
+            "PL",
+            "PT",
+            "QA",
+            "RO",
+            "RU",
+            "RW",
+            "WS",
+            "SM",
+            "ST",
+            "SA",
+            "SN",
+            "RS",
+            "SC",
+            "SL",
+            "SG",
+            "SK",
+            "SI",
+            "SB",
+            "SO",
+            "ZA",
+            "KR",
+            "SS",
+            "ES",
+            "LK",
+            "KN",
+            "LC",
+            "VC",
+            "SD",
+            "SR",
+            "SZ",
+            "SE",
+            "CH",
+            "SY",
+            "TJ",
+            "TZ",
+            "TH",
+            "TG",
+            "TO",
+            "TT",
+            "TN",
+            "TR",
+            "TM",
+            "TV",
+            "UG",
+            "UA",
+            "AE",
+            "GB",
+            "US",
+            "UY",
+            "UZ",
+            "VU",
+            "VA",
+            "VE",
+            "VN",
+            "YE",
+            "ZM",
+            "ZW"
+          ]
+        }
+      },
+      dfid_authors: {
+        type: "array",
+        items: {
+          type: "string"
+        }
+      },
+      first_published_at: {
+        type: "string",
+        pattern: "^[1-9][0-9]{3}[-/](0[1-9]|1[0-2])[-/](0[1-9]|[12][0-9]|3[0-1])$"
+      },
+      dfid_theme: {
+        type: "array",
+        items: {
+          type: "string",
+          enum: [
+            "agriculture",
+            "climate_and_environment",
+            "economic_growth",
+            "education",
+            "food_and_nutrition",
+            "governance_and_conflict",
+            "health",
+            "humanitarian_disasters_and_emergencies",
+            "infrastructure",
+            "research_communication_and_uptake",
+            "social_change",
+            "water_and_sanitation"
+          ]
+        }
+      },
+      dfid_document_type: {
+        type: "string",
+        items: {
+          type: "string",
+          enum: [
+            "book",
+            "book_chapter",
+            "briefing",
+            "case_study",
+            "conference_paper",
+            "country_report",
+            "dataset",
+            "discussion_paper",
+            "evaluation_report",
+            "journal_article",
+            "journal_issue",
+            "lessons_learned",
+            "literature_review",
+            "manual",
+            "protocol",
+            "research_paper",
+            "systematic_review",
+            "technical_report",
+            "thematic_summary",
+            "tool_kit",
+            "training_materials",
+            "working_paper"
+          ]
+        }
+      }
+    }
+  },
+  countryside_stewardship_grant_metadata: {
+    type: "object",
+    additionalProperties: false,
+    properties: {
+      bulk_published: {
+        type: "boolean"
+      },
+      grant_type: {
+        type: "string",
+        enum: [
+          "option",
+          "capital-item",
+          "supplement"
+        ]
+      },
+      land_use: {
+        type: "array",
+        items: {
+          type: "string",
+          enum: [
+            "arable-land",
+            "boundaries",
+            "coast",
+            "educational-access",
+            "flood-risk",
+            "grassland",
+            "historic-environment",
+            "livestock-management",
+            "organic-land",
+            "priority-habitats",
+            "trees-non-woodland",
+            "uplands",
+            "vegetation-control",
+            "water-quality",
+            "wildlife-package",
+            "woodland"
+          ]
+        }
+      },
+      tiers_or_standalone_items: {
+        type: "array",
+        items: {
+          type: "string",
+          enum: [
+            "higher-tier",
+            "mid-tier",
+            "standalone-capital-items"
+          ]
+        }
+      },
+      funding_amount: {
+        type: "array",
+        items: {
+          type: "string",
+          enum: [
+            "up-to-100",
+            "101-to-200",
+            "201-to-300",
+            "301-to-400",
+            "401-to-500",
+            "more-than-500",
+            "up-to-50-actual-costs",
+            "more-than-50-actual-costs"
+          ]
+        }
+      }
+    }
+  },
+  drug_safety_update_metadata: {
+    type: "object",
+    additionalProperties: false,
+    properties: {
+      bulk_published: {
+        type: "boolean"
+      },
+      therapeutic_area: {
+        type: "array",
+        items: {
+          type: "string",
+          enum: [
+            "anaesthesia-intensive-care",
+            "cancer",
+            "cardiovascular-disease-lipidology",
+            "dentistry",
+            "dermatology",
+            "ear-nose-throat",
+            "endocrinology-diabetology-metabolism",
+            "gi-hepatology-pancreatic-disorders",
+            "haematology",
+            "immunology-vaccination",
+            "immunosuppression-transplantation",
+            "infectious-disease",
+            "neurology",
+            "nutrition-dietetics",
+            "obstetrics-gynaecology-fertility",
+            "ophthalmology",
+            "paediatrics-neonatology",
+            "pain-management-palliation",
+            "psychiatry",
+            "radiology-imaging",
+            "respiratory-disease-allergy",
+            "rheumatology",
+            "urology-nephrology"
+          ]
+        }
+      },
+      first_published_at: {
+        type: "string",
+        pattern: "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+      }
+    }
+  },
+  employment_appeal_tribunal_decision_metadata: {
+    type: "object",
+    additionalProperties: false,
+    properties: {
+      bulk_published: {
+        type: "boolean"
+      },
+      hidden_indexable_content: {
+        type: "string"
+      },
+      tribunal_decision_categories: {
+        type: "array",
+        items: {
+          type: "string"
+        }
+      },
+      tribunal_decision_sub_categories: {
+        type: "array",
+        items: {
+          type: "string"
+        }
+      },
+      tribunal_decision_landmark: {
+        type: "string",
+        enum: [
+          "landmark",
+          "not-landmark"
+        ]
+      },
+      tribunal_decision_decision_date: {
+        type: "string",
+        pattern: "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+      }
+    }
+  },
+  employment_tribunal_decision_metadata: {
+    type: "object",
+    additionalProperties: false,
+    properties: {
+      bulk_published: {
+        type: "boolean"
+      },
+      tribunal_decision_country: {
+        type: "string",
+        enum: [
+          "england-and-wales",
+          "scotland"
+        ]
+      },
+      tribunal_decision_categories: {
+        type: "array",
+        items: {
+          "type": "string"
+        }
+      },
+      tribunal_decision_decision_date: {
+        type: "string",
+        pattern: "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+      },
+      hidden_indexable_content: {
+        type: "string"
+      }
+    }
+  },
+  european_structural_investment_fund_metadata: {
+    type: "object",
+    additionalProperties: false,
+    properties: {
+      bulk_published: {
+        type: "boolean"
+      },
+      fund_state: {
+        type: "string",
+        enum: [
+          "open",
+          "closed"
+        ]
+      },
+      fund_type: {
+        type: "array",
+        items: {
+          type: "string",
+          enum: [
+            "access-to-work",
+            "business-support",
+            "climate-change",
+            "environment",
+            "it-and-broadband",
+            "learning-and-skills",
+            "low-carbon",
+            "renewable-energy",
+            "research-and-innovation",
+            "social-inclusion",
+            "transport",
+            "techincal-assistance",
+            "tourism"
+          ]
+        }
+      },
+      location: {
+        type: "array",
+        items: {
+          type: "string",
+          enum: [
+            "north-east",
+            "north-west",
+            "yorkshire-and-humber",
+            "east-midlands",
+            "west-midlands",
+            "east-of-england",
+            "south-east",
+            "south-west",
+            "london"
+          ]
+        }
+      },
+      funding_source: {
+        type: "array",
+        items: {
+          type: "string",
+          enum: [
+            "european-social-fund",
+            "european-regional-development-fund",
+            "european-agricoltural-fund-for-rural"
+          ]
+        }
+      },
+      closing_date: {
+        type: "string",
+        pattern: "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+      }
+    }
+  },
+  international_development_fund_metadata: {
+    type: "object",
+    additionalProperties: false,
+    properties: {
+      bulk_published: {
+        type: "boolean"
+      },
+      fund_state: {
+        type: "string",
+        enum: [
+          "open",
+          "closed"
+        ]
+      },
+      location: {
+        type: "array",
+        items: {
+          type: "string",
+          enum: [
+            "afghanistan",
+            "bangladesh",
+            "burma",
+            "democratic-republic-of-congo",
+            "ethiopia",
+            "ghana",
+            "india",
+            "kenya",
+            "kyrgyzstan",
+            "liberia",
+            "malawi",
+            "mozambique",
+            "nepal",
+            "nigeria",
+            "the-occupied-palestinian-territories",
+            "pakistan",
+            "rwanda",
+            "sierra-leone",
+            "somalia",
+            "south-africa",
+            "sudan",
+            "south-sudan",
+            "tajikistan",
+            "tanzania",
+            "uganda",
+            "yemen",
+            "zambia",
+            "zimbabwe"
+          ]
+        }
+      },
+      development_sector: {
+        type: "array",
+        items: {
+          type: "string",
+          enum: [
+            "agriculture",
+            "climate-change",
+            "disabilities",
+            "education",
+            "empowerment-and-accountability",
+            "environment",
+            "girls-and-women",
+            "health",
+            "humanitarian-emergencies-disasters",
+            "livelihoods",
+            "peace-and-access-to-justice",
+            "private-sector-business",
+            "technology",
+            "trade",
+            "water-and-sanitation"
+          ]
+        }
+      },
+      eligible_entities: {
+        type: "array",
+        items: {
+          type: "string",
+          enum: [
+            "non-governmental-organisations",
+            "uk-based-non-profit-organisations",
+            "uk-based-small-and-diaspora-organisations",
+            "companies",
+            "local-government",
+            "educational-institutions",
+            "individuals",
+            "humanitarian-relief-organisations"
+          ]
+        }
+      },
+      value_of_funding: {
+        type: "array",
+        items: {
+          type: "string",
+          enum: [
+            "up-to-100000",
+            "100001-500000",
+            "500001-to-1000000",
+            "more-than-1000000"
+          ]
+        }
+      }
+    }
+  },
+  maib_report_metadata: {
+    type: "object",
+    additionalProperties: false,
+    properties: {
+      bulk_published: {
+        type: "boolean"
+      },
+      vessel_type: {
+        type: "array",
+        items: {
+          type: "string",
+          enum: [
+            "merchant-vessel-100-gross-tons-or-over",
+            "merchant-vessel-under-100-gross-tons",
+            "fishing-vessel",
+            "recreational-craft-sail",
+            "recreational-craft-power"
+          ]
+        }
+      },
+      report_type: {
+        type: "string",
+        enum: [
+          "investigation-report",
+          "safety-bulletin",
+          "completed-preliminary-examination",
+          "overseas-report",
+          "discontinued-investigation"
+        ]
+      },
+      date_of_occurrence: {
+        type: "string",
+        pattern: "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+      }
+    }
+  },
+  medical_safety_alert_metadata: {
+    type: "object",
+    additionalProperties: false,
+    properties: {
+      bulk_published: {
+        type: "boolean"
+      },
+      alert_type: {
+        type: "string",
+        enum: [
+          "drugs",
+          "devices",
+          "field-safety-notices",
+          "company-led-drugs"
+        ]
+      },
+      medical_specialism: {
+        type: "array",
+        items: {
+          type: "string",
+          enum: [
+            "anaesthetics",
+            "cardiology",
+            "care-home-staff",
+            "cosmetic-surgery",
+            "critical-care",
+            "dentistry",
+            "general-practice",
+            "general-surgery",
+            "haematology-oncology",
+            "infection-prevention",
+            "obstetrics-gynaecology",
+            "ophthalmology",
+            "orthopaedics",
+            "paediatrics",
+            "pathology",
+            "pharmacy",
+            "physiotherapy-occupational-therapy",
+            "radiology",
+            "renal-medicine",
+            "theatre-practitioners",
+            "urology",
+            "vascular-cardiac-surgery"
+          ]
+        }
+      },
+      issued_date: {
+        type: "string",
+        pattern: "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+      }
+    }
+  },
+  raib_report_metadata: {
+    type: "object",
+    additionalProperties: false,
+    properties: {
+      bulk_published: {
+        type: "boolean"
+      },
+      railway_type: {
+        type: "array",
+        items: {
+          type: "string",
+          enum: [
+            "heavy-rail",
+            "light-rail",
+            "metros",
+            "heritage-railways"
+          ]
+        }
+      },
+      report_type: {
+        type: "string",
+        enum: [
+          "investigation-report",
+          "bulletin",
+          "interim-report",
+          "discontinuation-report",
+          "safety-digest"
+        ]
+      },
+      date_of_occurrence: {
+        type: "string",
+        pattern: "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+      }
+    }
+  },
+  service_standard_report_metadata: {
+    type: "object",
+    additionalProperties: false,
+    properties: {
+      bulk_published: {
+        type: "boolean"
+      },
+      assessment_date: {
+        type: "string",
+        pattern: "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+      }
+    }
+  },
+  tax_tribunal_decision_metadata: {
+    type: "object",
+    additionalProperties: false,
+    properties: {
+      bulk_published: {
+        type: "boolean"
+      },
+      tribunal_decision_category: {
+        type: "string",
+        enum: [
+          "banking",
+          "charity",
+          "financial-services",
+          "land-registration",
+          "pensions",
+          "tax"
+        ]
+      },
+      tribunal_decision_decision_date: {
+        type: "string",
+        pattern: "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+      },
+      hidden_indexable_content: {
+        type: "string"
+      }
+    }
+  },
+  utaac_decision_metadata: {
+    type: "object",
+    additionalProperties: false,
+    properties: {
+      bulk_published: {
+        type: "boolean"
+      },
+      tribunal_decision_judges: {
+        type: "array",
+        items: {
+          type: "string"
+        }
+      },
+      tribunal_decision_categories: {
+        type: "array",
+        items: {
+          type: "string"
+        }
+      },
+      tribunal_decision_sub_categories: {
+        type: "array",
+        items: {
+          type: "string"
+        }
+      },
+      tribunal_decision_decision_date: {
+        type: "string",
+        pattern: "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+      },
+      hidden_indexable_content: {
+        type: "string"
+      }
+    }
+  },
+  vehicle_recalls_and_faults_alert_metadata: {
+    type: "object",
+    additionalProperties: false,
+    properties: {
+      bulk_published: {
+        type: "boolean"
+      },
+      fault_type: {
+        type: "string",
+        enum: [
+          "recall",
+          "non_urgent_fault"
+        ]
+      },
+      faulty_item_type: {
+        type: "string",
+        enum: [
+          "vehicle",
+          "baby-seat",
+          "tyres",
+          "parts",
+          "agricultural-equipment",
+          "other-accessories"
+        ]
+      },
+      manufacturer: {
+        type: "string",
+        enum: [
+          "alfa-romeo",
+          "audi",
+          "balco",
+          "bmw",
+          "bridgestone",
+          "britax",
+          "citroen",
+          "ferrari",
+          "mccormick-tractors-ltd",
+          "michelin",
+          "mitas-tyres-ltd",
+          "mothercare",
+          "nim-engineering-ltd",
+          "other-manufacturer"
+        ]
+      },
+      faulty_item_model: {
+        type: "string"
+      },
+      serial_number: {
+        type: "string"
+      },
+      alert_issue_date: {
+        type: "string",
+        pattern: "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+      },
+      build_start_date: {
+        type: "string",
+        pattern: "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+      },
+      build_end_date: {
+        type: "string",
+        pattern: "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+      }
+    }
+  }
+}

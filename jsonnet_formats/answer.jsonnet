@@ -1,4 +1,4 @@
-(import "_default_format.jsonnet") + {
+(import "shared/default_format.jsonnet") + {
   document_type: "answer",
   definitions: {
     details: {
