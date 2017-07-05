@@ -7,7 +7,7 @@
   ],
   "properties": {
     "start_button_text": {
-      "type": "string"
+      "$ref": "#/definitions/start_button_text"
     },
     "body": {
       "$ref": "#/definitions/body_html_and_govspeak"
