@@ -33,6 +33,7 @@ module SchemaGenerator
       format = Format.new(schema_name, data)
 
       Schema.write("dist/formats/#{schema_name}/publisher_v2/schema.json", format.publisher_content_schema)
+      Schema.write("dist/formats/#{schema_name}/publisher_v2/links.json", format.publisher_links_schema)
     end
   end
 end

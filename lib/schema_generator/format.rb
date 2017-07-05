@@ -25,6 +25,17 @@ module SchemaGenerator
       schema
     end
 
+    def publisher_links_schema
+      schema = base_schema.merge(
+        properties: links_schema_properties
+      )
+      schema[:definitions] = DefinitionsResolver.new(
+        schema[:properties],
+        Jsonnet.load("jsonnet_formats/shared/shared_definitions.jsonnet").merge(data["definitions"])
+      ).call
+      schema
+    end
+
   private
     attr_reader :data
 
@@ -44,11 +55,18 @@ module SchemaGenerator
         redirects: redirects_property(data["redirects"]),
         details: schema_property(data["details"], "$ref": "#/definitions/details"),
         document_type: document_type_property(data["document_type"]),
-        links: edition_links_in(data["edition_links"]),
+        links: LinksIn.call(data["edition_links"]),
         rendering_app: schema_property(data["rendering_app"], "$ref": "#/definitions/rendering_app_name"),
       }.delete_if { |_, v| v.nil? }
 
       customisable.merge(consistent_schema_properties)
+    end
+
+    def links_schema_properties
+      {
+        previous_version: { type: "string" },
+        links: LinksIn.call(data["links"])
+      }
     end
 
     def consistent_schema_properties
@@ -124,10 +142,6 @@ module SchemaGenerator
       else
         { "$ref" => "#/definitions/#{definition}" }
       end
-    end
-
-    def edition_links_in(edition_links)
-      LinksIn.call(edition_links)
     end
 
     def base_schema
