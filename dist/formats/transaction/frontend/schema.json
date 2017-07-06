@@ -515,6 +515,9 @@
           "description": "Text of the message alerting the user of service downtime",
           "type": "string"
         },
+        "start_button_text": {
+          "$ref": "#/definitions/start_button_text"
+        },
         "change_history": {
           "$ref": "#/definitions/change_history"
         }
@@ -1586,6 +1589,10 @@
     },
     "will_continue_on": {
       "description": "Description of the website the adjoining external link will be taking the user to",
+      "type": "string"
+    },
+    "start_button_text": {
+      "description": "Custom text to be displayed on the green button that takes you to another page",
       "type": "string"
     }
   }

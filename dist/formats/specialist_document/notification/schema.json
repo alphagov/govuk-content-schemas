@@ -1553,6 +1553,10 @@
       "description": "Description of the website the adjoining external link will be taking the user to",
       "type": "string"
     },
+    "start_button_text": {
+      "description": "Custom text to be displayed on the green button that takes you to another page",
+      "type": "string"
+    },
     "any_metadata": {
       "type": "object",
       "anyOf": [
