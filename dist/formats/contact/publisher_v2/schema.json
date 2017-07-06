@@ -5,40 +5,29 @@
   "required": [
     "details",
     "document_type",
-    "locale",
     "publishing_app",
+    "rendering_app",
     "schema_name",
     "title"
   ],
   "properties": {
-    "base_path": {
-      "anyOf": [
-        {
-          "$ref": "#/definitions/absolute_path"
-        },
-        {
-          "type": "null"
-        }
-      ]
+    "access_limited": {
+      "$ref": "#/definitions/access_limited"
     },
-    "title": {
-      "type": "string"
+    "analytics_identifier": {
+      "$ref": "#/definitions/analytics_identifier"
+    },
+    "base_path": {
+      "$ref": "#/definitions/absolute_path_optional"
+    },
+    "change_note": {
+      "type": [
+        "null",
+        "string"
+      ]
     },
     "description": {
-      "anyOf": [
-        {
-          "type": "string"
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
-    "routes": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/route"
-      }
+      "$ref": "#/definitions/description_optional"
     },
     "details": {
       "$ref": "#/definitions/details"
@@ -49,35 +38,6 @@
       ],
       "type": "string"
     },
-    "links": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "policy_areas": {
-          "description": "A largely deprecated tag currently only used to power email alerts.",
-          "$ref": "#/definitions/guid_list"
-        },
-        "related": {
-          "description": "",
-          "$ref": "#/definitions/guid_list"
-        }
-      }
-    },
-    "rendering_app": {
-      "$ref": "#/definitions/rendering_app_name"
-    },
-    "access_limited": {
-      "$ref": "#/definitions/access_limited"
-    },
-    "analytics_identifier": {
-      "$ref": "#/definitions/analytics_identifier"
-    },
-    "change_note": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
     "first_published_at": {
       "$ref": "#/definitions/first_published_at"
     },
@@ -85,6 +45,15 @@
       "description": "Last time when the content received a major or minor update.",
       "format": "date-time",
       "type": "string"
+    },
+    "links": {
+      "policy_areas": {
+        "description": "A largely deprecated tag currently only used to power email alerts.",
+        "$ref": "#/definitions/guid_list"
+      },
+      "related": {
+        "$ref": "#/definitions/guid_list"
+      }
     },
     "locale": {
       "$ref": "#/definitions/locale"
@@ -113,15 +82,29 @@
     "publishing_app": {
       "$ref": "#/definitions/publishing_app_name"
     },
-    "update_type": {
-      "enum": [
-        "major",
-        "minor",
-        "republish"
-      ]
+    "redirects": {
+      "type": "array",
+      "items": {
+      },
+      "additionalItems": false
     },
-    "withdrawn_notice": {
-      "$ref": "#/definitions/withdrawn_notice"
+    "rendering_app": {
+      "$ref": "#/definitions/rendering_app"
+    },
+    "routes": {
+      "$ref": "#/definitions/routes_optional"
+    },
+    "schema_name": {
+      "enum": [
+        "contact"
+      ],
+      "type": "string"
+    },
+    "title": {
+      "$ref": "#/definitions/title"
+    },
+    "update_type": {
+      "$ref": "#/definitions/update_type"
     }
   },
   "definitions": {
@@ -129,6 +112,16 @@
       "description": "A path only. Query string and/or fragment are not allowed.",
       "pattern": "^/(([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})+(/([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)*)?$",
       "type": "string"
+    },
+    "absolute_path_optional": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/absolute_path"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "access_limited": {
       "additionalProperties": false,
@@ -157,176 +150,18 @@
       ],
       "description": "A short identifier we send to Google Analytics for multi-valued fields. This means we avoid the truncated values we would get if we sent the path or slug of eg organisations."
     },
-    "first_published_at": {
-      "description": "The date the content was first published.  Automatically determined by the publishing-api, unless overridden by the publishing application.",
-      "format": "date-time",
+    "description": {
       "type": "string"
     },
-    "guid": {
-      "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-[1-5][a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$",
-      "type": "string"
-    },
-    "guid_list": {
-      "items": {
-        "$ref": "#/definitions/guid"
-      },
-      "type": "array",
-      "uniqueItems": true
-    },
-    "locale": {
-      "enum": [
-        "ar",
-        "az",
-        "be",
-        "bg",
-        "bn",
-        "cs",
-        "cy",
-        "de",
-        "dr",
-        "el",
-        "en",
-        "es",
-        "es-419",
-        "et",
-        "fa",
-        "fr",
-        "he",
-        "hi",
-        "hu",
-        "hy",
-        "id",
-        "it",
-        "ja",
-        "ka",
-        "ko",
-        "lt",
-        "lv",
-        "ms",
-        "pl",
-        "ps",
-        "pt",
-        "ro",
-        "ru",
-        "si",
-        "sk",
-        "so",
-        "sq",
-        "sr",
-        "sw",
-        "ta",
-        "th",
-        "tk",
-        "tr",
-        "uk",
-        "ur",
-        "uz",
-        "vi",
-        "zh",
-        "zh-hk",
-        "zh-tw"
-      ],
-      "type": "string"
-    },
-    "public_updated_at": {
-      "description": "When the content was last significantly changed (a major update). Shown to users.  Automatically determined by the publishing-api, unless overridden by the publishing application.",
-      "format": "date-time",
-      "type": "string"
-    },
-    "publishing_app_name": {
-      "description": "The application that published this item.",
-      "enum": [
-        "calculators",
-        "calendars",
-        "collections-publisher",
-        "contacts",
-        "content-tagger",
-        "design-principles",
-        "external-link-tracker",
-        "feedback",
-        "frontend",
-        "hmrc-manuals-api",
-        "info-frontend",
-        "licencefinder",
-        "manuals-frontend",
-        "manuals-publisher",
-        "maslow",
-        "need-api",
-        "performanceplatform-big-screen-view",
-        "policy-publisher",
-        "publisher",
-        "rummager",
-        "service-manual-publisher",
-        "share-sale-publisher",
-        "short-url-manager",
-        "smartanswers",
-        "specialist-publisher",
-        "spotlight",
-        "static",
-        "tariff",
-        "travel-advice-publisher",
-        "whitehall"
-      ],
-      "type": "string"
-    },
-    "rendering_app_name": {
-      "description": "The application that renders this item.",
-      "enum": [
-        "calculators",
-        "calendars",
-        "collections",
-        "designprinciples",
-        "email-alert-frontend",
-        "email-campaign-frontend",
-        "feedback",
-        "finder-frontend",
-        "frontend",
-        "government-frontend",
-        "info-frontend",
-        "licencefinder",
-        "manuals-frontend",
-        "performanceplatform-big-screen-view",
-        "publicapi",
-        "rummager",
-        "service-manual-frontend",
-        "smartanswers",
-        "spotlight",
-        "static",
-        "tariff",
-        "whitehall-frontend"
-      ],
-      "type": "string"
-    },
-    "route": {
-      "additionalProperties": false,
-      "properties": {
-        "path": {
-          "type": "string"
+    "description_optional": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/description"
         },
-        "type": {
-          "enum": [
-            "prefix",
-            "exact"
-          ]
+        {
+          "type": "null"
         }
-      },
-      "required": [
-        "path",
-        "type"
-      ],
-      "type": "object"
-    },
-    "withdrawn_notice": {
-      "additionalProperties": false,
-      "properties": {
-        "explanation": {
-          "type": "string"
-        },
-        "withdrawn_at": {
-          "format": "date-time"
-        }
-      },
-      "type": "object"
+      ]
     },
     "details": {
       "additionalProperties": false,
@@ -533,6 +368,162 @@
         "title"
       ],
       "type": "object"
+    },
+    "first_published_at": {
+      "description": "The date the content was first published.  Automatically determined by the publishing-api, unless overridden by the publishing application.",
+      "format": "date-time",
+      "type": "string"
+    },
+    "guid": {
+      "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-[1-5][a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$",
+      "type": "string"
+    },
+    "guid_list": {
+      "items": {
+        "$ref": "#/definitions/guid"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "locale": {
+      "enum": [
+        "ar",
+        "az",
+        "be",
+        "bg",
+        "bn",
+        "cs",
+        "cy",
+        "de",
+        "dr",
+        "el",
+        "en",
+        "es",
+        "es-419",
+        "et",
+        "fa",
+        "fr",
+        "he",
+        "hi",
+        "hu",
+        "hy",
+        "id",
+        "it",
+        "ja",
+        "ka",
+        "ko",
+        "lt",
+        "lv",
+        "ms",
+        "pl",
+        "ps",
+        "pt",
+        "ro",
+        "ru",
+        "si",
+        "sk",
+        "so",
+        "sq",
+        "sr",
+        "sw",
+        "ta",
+        "th",
+        "tk",
+        "tr",
+        "uk",
+        "ur",
+        "uz",
+        "vi",
+        "zh",
+        "zh-hk",
+        "zh-tw"
+      ],
+      "type": "string"
+    },
+    "public_updated_at": {
+      "description": "When the content was last significantly changed (a major update). Shown to users.  Automatically determined by the publishing-api, unless overridden by the publishing application.",
+      "format": "date-time",
+      "type": "string"
+    },
+    "publishing_app_name": {
+      "description": "The application that published this item.",
+      "enum": [
+        "calculators",
+        "calendars",
+        "collections-publisher",
+        "contacts",
+        "content-tagger",
+        "design-principles",
+        "external-link-tracker",
+        "feedback",
+        "frontend",
+        "hmrc-manuals-api",
+        "info-frontend",
+        "licencefinder",
+        "manuals-frontend",
+        "manuals-publisher",
+        "maslow",
+        "need-api",
+        "performanceplatform-big-screen-view",
+        "policy-publisher",
+        "publisher",
+        "rummager",
+        "service-manual-publisher",
+        "share-sale-publisher",
+        "short-url-manager",
+        "smartanswers",
+        "specialist-publisher",
+        "spotlight",
+        "static",
+        "tariff",
+        "travel-advice-publisher",
+        "whitehall"
+      ],
+      "type": "string"
+    },
+    "rendering_app": {
+      "description": "The application that renders this item.",
+      "enum": [
+        "calculators",
+        "calendars",
+        "collections",
+        "designprinciples",
+        "email-alert-frontend",
+        "email-campaign-frontend",
+        "feedback",
+        "finder-frontend",
+        "frontend",
+        "government-frontend",
+        "info-frontend",
+        "licencefinder",
+        "manuals-frontend",
+        "performanceplatform-big-screen-view",
+        "publicapi",
+        "rummager",
+        "service-manual-frontend",
+        "smartanswers",
+        "spotlight",
+        "static",
+        "tariff",
+        "whitehall-frontend"
+      ],
+      "type": "string"
+    },
+    "routes_optional": {
+      "items": {
+        "ref": "#/definitions/route"
+      },
+      "type": "array"
+    },
+    "title": {
+      "type": "string"
+    },
+    "update_type": {
+      "enum": [
+        "major",
+        "minor",
+        "republish"
+      ]
     }
   }
 }

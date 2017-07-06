@@ -6,35 +6,30 @@
     "base_path",
     "details",
     "document_type",
-    "locale",
     "publishing_app",
+    "rendering_app",
     "routes",
     "schema_name",
     "title"
   ],
   "properties": {
+    "access_limited": {
+      "$ref": "#/definitions/access_limited"
+    },
+    "analytics_identifier": {
+      "$ref": "#/definitions/analytics_identifier"
+    },
     "base_path": {
       "$ref": "#/definitions/absolute_path"
     },
-    "title": {
-      "type": "string"
-    },
-    "description": {
-      "anyOf": [
-        {
-          "type": "string"
-        },
-        {
-          "type": "null"
-        }
+    "change_note": {
+      "type": [
+        "null",
+        "string"
       ]
     },
-    "routes": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/route"
-      },
-      "minItems": 1
+    "description": {
+      "$ref": "#/definitions/description_optional"
     },
     "details": {
       "$ref": "#/definitions/details"
@@ -45,31 +40,6 @@
       ],
       "type": "string"
     },
-    "links": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "policy_areas": {
-          "description": "A largely deprecated tag currently only used to power email alerts.",
-          "$ref": "#/definitions/guid_list"
-        }
-      }
-    },
-    "rendering_app": {
-      "$ref": "#/definitions/rendering_app_name"
-    },
-    "access_limited": {
-      "$ref": "#/definitions/access_limited"
-    },
-    "analytics_identifier": {
-      "$ref": "#/definitions/analytics_identifier"
-    },
-    "change_note": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
     "first_published_at": {
       "$ref": "#/definitions/first_published_at"
     },
@@ -77,6 +47,12 @@
       "description": "Last time when the content received a major or minor update.",
       "format": "date-time",
       "type": "string"
+    },
+    "links": {
+      "policy_areas": {
+        "description": "A largely deprecated tag currently only used to power email alerts.",
+        "$ref": "#/definitions/guid_list"
+      }
     },
     "locale": {
       "$ref": "#/definitions/locale"
@@ -105,15 +81,29 @@
     "publishing_app": {
       "$ref": "#/definitions/publishing_app_name"
     },
-    "update_type": {
-      "enum": [
-        "major",
-        "minor",
-        "republish"
-      ]
+    "redirects": {
+      "type": "array",
+      "items": {
+      },
+      "additionalItems": false
     },
-    "withdrawn_notice": {
-      "$ref": "#/definitions/withdrawn_notice"
+    "rendering_app": {
+      "$ref": "#/definitions/rendering_app"
+    },
+    "routes": {
+      "$ref": "#/definitions/routes"
+    },
+    "schema_name": {
+      "enum": [
+        "travel_advice"
+      ],
+      "type": "string"
+    },
+    "title": {
+      "$ref": "#/definitions/title"
+    },
+    "update_type": {
+      "$ref": "#/definitions/update_type"
     }
   },
   "definitions": {
@@ -205,6 +195,76 @@
       "required": [
         "slug",
         "name"
+      ],
+      "type": "object"
+    },
+    "description": {
+      "type": "string"
+    },
+    "description_optional": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/description"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "details": {
+      "additionalProperties": false,
+      "properties": {
+        "alert_status": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "change_description": {
+          "type": "string"
+        },
+        "country": {
+          "$ref": "#/definitions/country"
+        },
+        "document": {
+          "$ref": "#/definitions/asset_link"
+        },
+        "email_signup_link": {
+          "$ref": "#/definitions/email_signup_link"
+        },
+        "image": {
+          "$ref": "#/definitions/asset_link"
+        },
+        "max_cache_time": {
+          "$ref": "#/definitions/max_cache_time"
+        },
+        "parts": {
+          "$ref": "#/definitions/parts"
+        },
+        "publishing_request_id": {
+          "$ref": "#/definitions/publishing_request_id"
+        },
+        "reviewed_at": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "summary": {
+          "$ref": "#/definitions/multiple_content_types"
+        },
+        "updated_at": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "required": [
+        "summary",
+        "country",
+        "updated_at",
+        "reviewed_at",
+        "change_description",
+        "alert_status",
+        "email_signup_link",
+        "parts"
       ],
       "type": "object"
     },
@@ -376,7 +436,7 @@
       "description": "A unique identifier used to track publishing requests to rendered content",
       "type": "string"
     },
-    "rendering_app_name": {
+    "rendering_app": {
       "description": "The application that renders this item.",
       "enum": [
         "calculators",
@@ -423,74 +483,22 @@
       ],
       "type": "object"
     },
-    "withdrawn_notice": {
-      "additionalProperties": false,
-      "properties": {
-        "explanation": {
-          "type": "string"
-        },
-        "withdrawn_at": {
-          "format": "date-time"
-        }
+    "routes": {
+      "items": {
+        "$ref": "#/definitions/route"
       },
-      "type": "object"
+      "minItems": 1,
+      "type": "array"
     },
-    "details": {
-      "additionalProperties": false,
-      "properties": {
-        "alert_status": {
-          "items": {
-            "type": "string"
-          },
-          "type": "array"
-        },
-        "change_description": {
-          "type": "string"
-        },
-        "country": {
-          "$ref": "#/definitions/country"
-        },
-        "document": {
-          "$ref": "#/definitions/asset_link"
-        },
-        "email_signup_link": {
-          "$ref": "#/definitions/email_signup_link"
-        },
-        "image": {
-          "$ref": "#/definitions/asset_link"
-        },
-        "max_cache_time": {
-          "$ref": "#/definitions/max_cache_time"
-        },
-        "parts": {
-          "$ref": "#/definitions/parts"
-        },
-        "publishing_request_id": {
-          "$ref": "#/definitions/publishing_request_id"
-        },
-        "reviewed_at": {
-          "format": "date-time",
-          "type": "string"
-        },
-        "summary": {
-          "$ref": "#/definitions/multiple_content_types"
-        },
-        "updated_at": {
-          "format": "date-time",
-          "type": "string"
-        }
-      },
-      "required": [
-        "summary",
-        "country",
-        "updated_at",
-        "reviewed_at",
-        "change_description",
-        "alert_status",
-        "email_signup_link",
-        "parts"
-      ],
-      "type": "object"
+    "title": {
+      "type": "string"
+    },
+    "update_type": {
+      "enum": [
+        "major",
+        "minor",
+        "republish"
+      ]
     }
   }
 }

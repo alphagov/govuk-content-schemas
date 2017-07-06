@@ -5,45 +5,37 @@
   "required": [
     "base_path",
     "document_type",
-    "locale",
     "publishing_app",
     "routes",
     "schema_name"
   ],
   "properties": {
-    "base_path": {
-      "$ref": "#/definitions/absolute_path"
-    },
-    "routes": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/route"
-      },
-      "minItems": 1
-    },
-    "document_type": {
-      "enum": [
-        "gone"
-      ],
-      "type": "string"
-    },
-    "links": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-      }
-    },
     "access_limited": {
       "$ref": "#/definitions/access_limited"
     },
     "analytics_identifier": {
       "$ref": "#/definitions/analytics_identifier"
     },
+    "base_path": {
+      "$ref": "#/definitions/absolute_path"
+    },
     "change_note": {
       "type": [
         "null",
         "string"
       ]
+    },
+    "description": {
+      "type": "null"
+    },
+    "details": {
+      "$ref": "#/definitions/details"
+    },
+    "document_type": {
+      "enum": [
+        "gone"
+      ],
+      "type": "string"
     },
     "first_published_at": {
       "$ref": "#/definitions/first_published_at"
@@ -52,6 +44,8 @@
       "description": "Last time when the content received a major or minor update.",
       "format": "date-time",
       "type": "string"
+    },
+    "links": {
     },
     "locale": {
       "$ref": "#/definitions/locale"
@@ -80,15 +74,29 @@
     "publishing_app": {
       "$ref": "#/definitions/publishing_app_name"
     },
-    "update_type": {
-      "enum": [
-        "major",
-        "minor",
-        "republish"
-      ]
+    "redirects": {
+      "type": "array",
+      "items": {
+      },
+      "additionalItems": false
     },
-    "withdrawn_notice": {
-      "$ref": "#/definitions/withdrawn_notice"
+    "rendering_app": {
+      "type": "null"
+    },
+    "routes": {
+      "$ref": "#/definitions/routes"
+    },
+    "schema_name": {
+      "enum": [
+        "gone"
+      ],
+      "type": "string"
+    },
+    "title": {
+      "type": "null"
+    },
+    "update_type": {
+      "$ref": "#/definitions/update_type"
     }
   },
   "definitions": {
@@ -123,6 +131,25 @@
         }
       ],
       "description": "A short identifier we send to Google Analytics for multi-valued fields. This means we avoid the truncated values we would get if we sent the path or slug of eg organisations."
+    },
+    "details": {
+      "additionalProperties": false,
+      "properties": {
+        "alternative_path": {
+          "format": "uri",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "explanation": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "type": "object"
     },
     "first_published_at": {
       "description": "The date the content was first published.  Automatically determined by the publishing-api, unless overridden by the publishing application.",
@@ -255,17 +282,19 @@
       ],
       "type": "object"
     },
-    "withdrawn_notice": {
-      "additionalProperties": false,
-      "properties": {
-        "explanation": {
-          "type": "string"
-        },
-        "withdrawn_at": {
-          "format": "date-time"
-        }
+    "routes": {
+      "items": {
+        "$ref": "#/definitions/route"
       },
-      "type": "object"
+      "minItems": 1,
+      "type": "array"
+    },
+    "update_type": {
+      "enum": [
+        "major",
+        "minor",
+        "republish"
+      ]
     }
   }
 }

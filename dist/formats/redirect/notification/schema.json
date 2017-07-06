@@ -3,23 +3,49 @@
   "type": "object",
   "additionalProperties": false,
   "required": [
+    "analytics_identifier",
     "base_path",
+    "content_id",
+    "description",
+    "details",
     "document_type",
+    "email_document_supertype",
+    "expanded_links",
+    "first_published_at",
+    "government_document_supertype",
+    "links",
     "locale",
+    "navigation_document_supertype",
+    "need_ids",
+    "phase",
+    "public_updated_at",
     "publishing_app",
     "redirects",
-    "schema_name"
+    "rendering_app",
+    "routes",
+    "schema_name",
+    "title",
+    "update_type",
+    "user_journey_document_supertype"
   ],
   "properties": {
+    "analytics_identifier": {
+      "$ref": "#/definitions/analytics_identifier"
+    },
     "base_path": {
       "$ref": "#/definitions/absolute_path"
     },
-    "redirects": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/redirect_route"
+    "content_id": {
+      "$ref": "#/definitions/guid"
+    },
+    "description": {
+      "type": "null"
+    },
+    "details": {
+      "type": "object",
+      "properties": {
       },
-      "minItems": 1
+      "additionalProperties": false
     },
     "document_type": {
       "enum": [
@@ -27,34 +53,59 @@
       ],
       "type": "string"
     },
-    "links": {
+    "email_document_supertype": {
+      "description": "Document supertype grouping intended to power the Whitehall finders and email subscriptions",
+      "type": "string"
+    },
+    "expanded_links": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "available_translations": {
+          "description": "Link type automatically added by Publishing API",
+          "$ref": "#/definitions/frontend_links"
+        },
+        "child_taxons": {
+          "description": "Link type automatically added by Publishing API",
+          "$ref": "#/definitions/frontend_links"
+        },
+        "children": {
+          "description": "Link type automatically added by Publishing API",
+          "$ref": "#/definitions/frontend_links"
+        },
+        "document_collections": {
+          "description": "Link type automatically added by Publishing API",
+          "$ref": "#/definitions/frontend_links"
+        },
+        "mainstream_browse_content": {
+          "description": "Link type automatically added by Publishing API",
+          "$ref": "#/definitions/frontend_links"
+        },
+        "policies": {
+          "description": "Link type automatically added by Publishing API",
+          "$ref": "#/definitions/frontend_links"
+        },
+        "topic_content": {
+          "description": "Link type automatically added by Publishing API",
+          "$ref": "#/definitions/frontend_links"
+        }
       }
-    },
-    "access_limited": {
-      "$ref": "#/definitions/access_limited"
-    },
-    "analytics_identifier": {
-      "$ref": "#/definitions/analytics_identifier"
-    },
-    "change_note": {
-      "type": [
-        "null",
-        "string"
-      ]
     },
     "first_published_at": {
       "$ref": "#/definitions/first_published_at"
     },
-    "last_edited_at": {
-      "description": "Last time when the content received a major or minor update.",
-      "format": "date-time",
+    "government_document_supertype": {
+      "description": "Document supertype grouping intended to power the Whitehall finders and email subscriptions",
       "type": "string"
+    },
+    "links": {
     },
     "locale": {
       "$ref": "#/definitions/locale"
+    },
+    "navigation_document_supertype": {
+      "description": "Document type grouping powering the new taxonomy-based navigation pages",
+      "type": "string"
     },
     "need_ids": {
       "items": {
@@ -71,24 +122,42 @@
       ],
       "type": "string"
     },
-    "previous_version": {
-      "type": "string"
-    },
     "public_updated_at": {
       "$ref": "#/definitions/public_updated_at"
     },
     "publishing_app": {
       "$ref": "#/definitions/publishing_app_name"
     },
-    "update_type": {
-      "enum": [
-        "major",
-        "minor",
-        "republish"
-      ]
+    "publishing_request_id": {
+      "$ref": "#/definitions/publishing_request_id"
     },
-    "withdrawn_notice": {
-      "$ref": "#/definitions/withdrawn_notice"
+    "redirects": {
+      "$ref": "#/definitions/redirects"
+    },
+    "rendering_app": {
+      "type": "null"
+    },
+    "routes": {
+      "type": "array",
+      "items": {
+      },
+      "additionalItems": false
+    },
+    "schema_name": {
+      "enum": [
+        "redirect"
+      ],
+      "type": "string"
+    },
+    "title": {
+      "type": "null"
+    },
+    "update_type": {
+      "$ref": "#/definitions/update_type"
+    },
+    "user_journey_document_supertype": {
+      "description": "Document type grouping powering analytics of user journeys",
+      "type": "string"
     }
   },
   "definitions": {
@@ -101,22 +170,6 @@
       "description": "A path only. Query string and/or fragment are not allowed.",
       "pattern": "^/(([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})+(/([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)*)?$",
       "type": "string"
-    },
-    "access_limited": {
-      "additionalProperties": false,
-      "properties": {
-        "auth_bypass_ids": {
-          "$ref": "#/definitions/guid_list",
-          "description": "A list of ids that will allow access to this item for non-authenticated users"
-        },
-        "users": {
-          "items": {
-            "type": "string"
-          },
-          "type": "array"
-        }
-      },
-      "type": "object"
     },
     "analytics_identifier": {
       "anyOf": [
@@ -134,16 +187,65 @@
       "format": "date-time",
       "type": "string"
     },
+    "frontend_links": {
+      "items": {
+        "additionalProperties": true,
+        "properties": {
+          "analytics_identifier": {
+            "$ref": "#/definitions/analytics_identifier"
+          },
+          "api_path": {
+            "$ref": "#/definitions/absolute_path"
+          },
+          "api_url": {
+            "description": "DEPRECATED: api_path should be used instead of api_url. This is due to values of api_url being tied to an environment which can cause problems when data is synced between environments. In time this field will be removed by the Publishing Platform team.",
+            "format": "uri",
+            "type": "string"
+          },
+          "base_path": {
+            "$ref": "#/definitions/absolute_path"
+          },
+          "content_id": {
+            "$ref": "#/definitions/guid"
+          },
+          "document_type": {
+            "type": "string"
+          },
+          "locale": {
+            "$ref": "#/definitions/locale"
+          },
+          "public_updated_at": {
+            "type": "string"
+          },
+          "schema_name": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "web_url": {
+            "description": "DEPRECATED: base_path should be used instead of web_url. This is due to values of web_url being tied to an environment which can cause problems when data is synced between environments. In time this field will be removed by the Publishing Platform team.",
+            "format": "uri",
+            "type": "string"
+          }
+        },
+        "required": [
+          "content_id",
+          "title",
+          "locale"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "govuk_subdomain_url": {
+      "description": "A URL under the gov.uk domain with optional query string and/or fragment.",
+      "pattern": "^https://([a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[A-Za-z0-9])?\\.)*gov\\.uk(/(([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})+(/([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)*)?(\\?([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)?(#([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)?)?$",
+      "type": "string"
+    },
     "guid": {
       "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-[1-5][a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$",
       "type": "string"
-    },
-    "guid_list": {
-      "items": {
-        "$ref": "#/definitions/guid"
-      },
-      "type": "array",
-      "uniqueItems": true
     },
     "locale": {
       "enum": [
@@ -241,11 +343,23 @@
       ],
       "type": "string"
     },
+    "publishing_request_id": {
+      "description": "A unique identifier used to track publishing requests to rendered content",
+      "type": "string"
+    },
     "redirect_route": {
       "additionalProperties": false,
       "properties": {
         "destination": {
-          "$ref": "#/definitions/absolute_fullpath"
+          "anyOf": [
+            {
+              "$ref": "#/definitions/absolute_fullpath"
+            },
+            {
+              "$ref": "#/definitions/govuk_subdomain_url"
+            }
+          ],
+          "type": "string"
         },
         "path": {
           "$ref": "#/definitions/absolute_path"
@@ -271,17 +385,19 @@
       ],
       "type": "object"
     },
-    "withdrawn_notice": {
-      "additionalProperties": false,
-      "properties": {
-        "explanation": {
-          "type": "string"
-        },
-        "withdrawn_at": {
-          "format": "date-time"
-        }
+    "redirects": {
+      "items": {
+        "$ref": "#/definitions/redirect_route"
       },
-      "type": "object"
+      "minItems": 1,
+      "type": "array"
+    },
+    "update_type": {
+      "enum": [
+        "major",
+        "minor",
+        "republish"
+      ]
     }
   }
 }

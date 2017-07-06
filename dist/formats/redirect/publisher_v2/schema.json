@@ -5,45 +5,40 @@
   "required": [
     "base_path",
     "document_type",
-    "locale",
     "publishing_app",
     "redirects",
     "schema_name"
   ],
   "properties": {
-    "base_path": {
-      "$ref": "#/definitions/absolute_path"
-    },
-    "redirects": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/redirect_route"
-      },
-      "minItems": 1
-    },
-    "document_type": {
-      "enum": [
-        "redirect"
-      ],
-      "type": "string"
-    },
-    "links": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-      }
-    },
     "access_limited": {
       "$ref": "#/definitions/access_limited"
     },
     "analytics_identifier": {
       "$ref": "#/definitions/analytics_identifier"
     },
+    "base_path": {
+      "$ref": "#/definitions/absolute_path"
+    },
     "change_note": {
       "type": [
         "null",
         "string"
       ]
+    },
+    "description": {
+      "type": "null"
+    },
+    "details": {
+      "type": "object",
+      "properties": {
+      },
+      "additionalProperties": false
+    },
+    "document_type": {
+      "enum": [
+        "redirect"
+      ],
+      "type": "string"
     },
     "first_published_at": {
       "$ref": "#/definitions/first_published_at"
@@ -52,6 +47,8 @@
       "description": "Last time when the content received a major or minor update.",
       "format": "date-time",
       "type": "string"
+    },
+    "links": {
     },
     "locale": {
       "$ref": "#/definitions/locale"
@@ -80,15 +77,29 @@
     "publishing_app": {
       "$ref": "#/definitions/publishing_app_name"
     },
-    "update_type": {
-      "enum": [
-        "major",
-        "minor",
-        "republish"
-      ]
+    "redirects": {
+      "$ref": "#/definitions/redirects"
     },
-    "withdrawn_notice": {
-      "$ref": "#/definitions/withdrawn_notice"
+    "rendering_app": {
+      "type": "null"
+    },
+    "routes": {
+      "type": "array",
+      "items": {
+      },
+      "additionalItems": false
+    },
+    "schema_name": {
+      "enum": [
+        "redirect"
+      ],
+      "type": "string"
+    },
+    "title": {
+      "type": "null"
+    },
+    "update_type": {
+      "$ref": "#/definitions/update_type"
     }
   },
   "definitions": {
@@ -132,6 +143,11 @@
     "first_published_at": {
       "description": "The date the content was first published.  Automatically determined by the publishing-api, unless overridden by the publishing application.",
       "format": "date-time",
+      "type": "string"
+    },
+    "govuk_subdomain_url": {
+      "description": "A URL under the gov.uk domain with optional query string and/or fragment.",
+      "pattern": "^https://([a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[A-Za-z0-9])?\\.)*gov\\.uk(/(([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})+(/([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)*)?(\\?([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)?(#([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)?)?$",
       "type": "string"
     },
     "guid": {
@@ -245,7 +261,15 @@
       "additionalProperties": false,
       "properties": {
         "destination": {
-          "$ref": "#/definitions/absolute_fullpath"
+          "anyOf": [
+            {
+              "$ref": "#/definitions/absolute_fullpath"
+            },
+            {
+              "$ref": "#/definitions/govuk_subdomain_url"
+            }
+          ],
+          "type": "string"
         },
         "path": {
           "$ref": "#/definitions/absolute_path"
@@ -271,17 +295,19 @@
       ],
       "type": "object"
     },
-    "withdrawn_notice": {
-      "additionalProperties": false,
-      "properties": {
-        "explanation": {
-          "type": "string"
-        },
-        "withdrawn_at": {
-          "format": "date-time"
-        }
+    "redirects": {
+      "items": {
+        "$ref": "#/definitions/redirect_route"
       },
-      "type": "object"
+      "minItems": 1,
+      "type": "array"
+    },
+    "update_type": {
+      "enum": [
+        "major",
+        "minor",
+        "republish"
+      ]
     }
   }
 }

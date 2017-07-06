@@ -3,60 +3,54 @@
   "type": "object",
   "additionalProperties": false,
   "properties": {
+    "links": {
+      "mainstream_browse_pages": {
+        "description": "Powers the /browse section of the site. These are known as sections in some legacy apps.",
+        "$ref": "#/definitions/guid_list"
+      },
+      "meets_user_needs": {
+        "description": "The user needs this piece of content meets.",
+        "$ref": "#/definitions/guid_list"
+      },
+      "ordered_related_items": {
+        "description": "Related items, can be any page on GOV.UK. Mostly used for mainstream content to power the sidebar. Ordering of the links is determined by the editor in Content Tagger.",
+        "$ref": "#/definitions/guid_list"
+      },
+      "ordered_related_items_overrides": {
+        "description": "Related items, can be any page on GOV.UK. Overrides 'more like this' automatically generated links in the beta navigation.",
+        "$ref": "#/definitions/guid_list"
+      },
+      "organisations": {
+        "$ref": "#/definitions/guid_list"
+      },
+      "parent": {
+        "description": "The parent content item.",
+        "maxItems": 1,
+        "$ref": "#/definitions/guid_list"
+      },
+      "policy_areas": {
+        "description": "A largely deprecated tag currently only used to power email alerts.",
+        "$ref": "#/definitions/guid_list"
+      },
+      "primary_publishing_organisation": {
+        "description": "The organisation that published the page. Corresponds to the first of the 'Lead organisations' in Whitehall, and is empty for all other publishing applications.",
+        "maxItems": 1,
+        "$ref": "#/definitions/guid_list"
+      },
+      "related": {
+        "$ref": "#/definitions/guid_list"
+      },
+      "taxons": {
+        "description": "Prototype-stage taxonomy label for this content item",
+        "$ref": "#/definitions/guid_list"
+      },
+      "topics": {
+        "description": "Powers the /topic section of the site. These are known as specialist sectors in some legacy apps.",
+        "$ref": "#/definitions/guid_list"
+      }
+    },
     "previous_version": {
       "type": "string"
-    },
-    "links": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "mainstream_browse_pages": {
-          "description": "Powers the /browse section of the site. These are known as sections in some legacy apps.",
-          "$ref": "#/definitions/guid_list"
-        },
-        "meets_user_needs": {
-          "description": "The user needs this piece of content meets.",
-          "$ref": "#/definitions/guid_list"
-        },
-        "ordered_related_items": {
-          "description": "Related items, can be any page on GOV.UK. Mostly used for mainstream content to power the sidebar. Ordering of the links is determined by the editor in Content Tagger.",
-          "$ref": "#/definitions/guid_list"
-        },
-        "ordered_related_items_overrides": {
-          "description": "Related items, can be any page on GOV.UK. Overrides 'more like this' automatically generated links in the beta navigation.",
-          "$ref": "#/definitions/guid_list"
-        },
-        "organisations": {
-          "description": "",
-          "$ref": "#/definitions/guid_list"
-        },
-        "parent": {
-          "description": "The parent content item.",
-          "maxItems": 1,
-          "$ref": "#/definitions/guid_list"
-        },
-        "policy_areas": {
-          "description": "A largely deprecated tag currently only used to power email alerts.",
-          "$ref": "#/definitions/guid_list"
-        },
-        "primary_publishing_organisation": {
-          "description": "The organisation that published the page. Corresponds to the first of the 'Lead organisations' in Whitehall, and is empty for all other publishing applications.",
-          "maxItems": 1,
-          "$ref": "#/definitions/guid_list"
-        },
-        "related": {
-          "description": "",
-          "$ref": "#/definitions/guid_list"
-        },
-        "taxons": {
-          "description": "Prototype-stage taxonomy label for this content item",
-          "$ref": "#/definitions/guid_list"
-        },
-        "topics": {
-          "description": "Powers the /topic section of the site. These are known as specialist sectors in some legacy apps.",
-          "$ref": "#/definitions/guid_list"
-        }
-      }
     }
   },
   "definitions": {

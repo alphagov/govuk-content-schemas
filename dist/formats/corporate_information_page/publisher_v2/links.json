@@ -3,18 +3,13 @@
   "type": "object",
   "additionalProperties": false,
   "properties": {
+    "links": {
+      "corporate_information_pages": {
+        "$ref": "#/definitions/guid_list"
+      }
+    },
     "previous_version": {
       "type": "string"
-    },
-    "links": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "corporate_information_pages": {
-          "description": "",
-          "$ref": "#/definitions/guid_list"
-        }
-      }
     }
   },
   "definitions": {

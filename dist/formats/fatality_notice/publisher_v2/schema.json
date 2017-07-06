@@ -6,35 +6,30 @@
     "base_path",
     "details",
     "document_type",
-    "locale",
     "publishing_app",
+    "rendering_app",
     "routes",
     "schema_name",
     "title"
   ],
   "properties": {
+    "access_limited": {
+      "$ref": "#/definitions/access_limited"
+    },
+    "analytics_identifier": {
+      "$ref": "#/definitions/analytics_identifier"
+    },
     "base_path": {
       "$ref": "#/definitions/absolute_path"
     },
-    "title": {
-      "type": "string"
-    },
-    "description": {
-      "anyOf": [
-        {
-          "type": "string"
-        },
-        {
-          "type": "null"
-        }
+    "change_note": {
+      "type": [
+        "null",
+        "string"
       ]
     },
-    "routes": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/route"
-      },
-      "minItems": 1
+    "description": {
+      "$ref": "#/definitions/description_optional"
     },
     "details": {
       "$ref": "#/definitions/details"
@@ -45,57 +40,6 @@
       ],
       "type": "string"
     },
-    "links": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "field_of_operation": {
-          "maxItems": 1,
-          "minItems": 1,
-          "$ref": "#/definitions/guid_list"
-        },
-        "ministers": {
-          "description": "",
-          "$ref": "#/definitions/guid_list"
-        },
-        "organisations": {
-          "description": "All organisations linked to this content item. This should include lead organisations.",
-          "$ref": "#/definitions/guid_list"
-        },
-        "people": {
-          "description": "Used to power Email Alert Api subscriptions for Whitehall content",
-          "$ref": "#/definitions/guid_list"
-        },
-        "policy_areas": {
-          "description": "A largely deprecated tag currently only used to power email alerts.",
-          "$ref": "#/definitions/guid_list"
-        },
-        "primary_publishing_organisation": {
-          "description": "The organisation that published the page. Corresponds to the first of the 'Lead organisations' in Whitehall, and is empty for all other publishing applications.",
-          "maxItems": 1,
-          "$ref": "#/definitions/guid_list"
-        },
-        "roles": {
-          "description": "Used to power Email Alert Api subscriptions for Whitehall content",
-          "$ref": "#/definitions/guid_list"
-        }
-      }
-    },
-    "rendering_app": {
-      "$ref": "#/definitions/rendering_app_name"
-    },
-    "access_limited": {
-      "$ref": "#/definitions/access_limited"
-    },
-    "analytics_identifier": {
-      "$ref": "#/definitions/analytics_identifier"
-    },
-    "change_note": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
     "first_published_at": {
       "$ref": "#/definitions/first_published_at"
     },
@@ -103,6 +47,36 @@
       "description": "Last time when the content received a major or minor update.",
       "format": "date-time",
       "type": "string"
+    },
+    "links": {
+      "field_of_operation": {
+        "maxItems": 1,
+        "$ref": "#/definitions/guid_list"
+      },
+      "ministers": {
+        "$ref": "#/definitions/guid_list"
+      },
+      "organisations": {
+        "description": "All organisations linked to this content item. This should include lead organisations.",
+        "$ref": "#/definitions/guid_list"
+      },
+      "people": {
+        "description": "Used to power Email Alert Api subscriptions for Whitehall content",
+        "$ref": "#/definitions/guid_list"
+      },
+      "policy_areas": {
+        "description": "A largely deprecated tag currently only used to power email alerts.",
+        "$ref": "#/definitions/guid_list"
+      },
+      "primary_publishing_organisation": {
+        "description": "The organisation that published the page. Corresponds to the first of the 'Lead organisations' in Whitehall, and is empty for all other publishing applications.",
+        "maxItems": 1,
+        "$ref": "#/definitions/guid_list"
+      },
+      "roles": {
+        "description": "Used to power Email Alert Api subscriptions for Whitehall content",
+        "$ref": "#/definitions/guid_list"
+      }
     },
     "locale": {
       "$ref": "#/definitions/locale"
@@ -131,15 +105,29 @@
     "publishing_app": {
       "$ref": "#/definitions/publishing_app_name"
     },
-    "update_type": {
-      "enum": [
-        "major",
-        "minor",
-        "republish"
-      ]
+    "redirects": {
+      "type": "array",
+      "items": {
+      },
+      "additionalItems": false
     },
-    "withdrawn_notice": {
-      "$ref": "#/definitions/withdrawn_notice"
+    "rendering_app": {
+      "$ref": "#/definitions/rendering_app"
+    },
+    "routes": {
+      "$ref": "#/definitions/routes"
+    },
+    "schema_name": {
+      "enum": [
+        "fatality_notice"
+      ],
+      "type": "string"
+    },
+    "title": {
+      "$ref": "#/definitions/title"
+    },
+    "update_type": {
+      "$ref": "#/definitions/update_type"
     }
   },
   "definitions": {
@@ -199,6 +187,43 @@
         "type": "object"
       },
       "type": "array"
+    },
+    "description": {
+      "type": "string"
+    },
+    "description_optional": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/description"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "details": {
+      "additionalProperties": false,
+      "properties": {
+        "body": {
+          "$ref": "#/definitions/body"
+        },
+        "change_history": {
+          "$ref": "#/definitions/change_history"
+        },
+        "emphasised_organisations": {
+          "$ref": "#/definitions/emphasised_organisations"
+        },
+        "first_public_at": {
+          "$ref": "#/definitions/first_public_at"
+        }
+      },
+      "required": [
+        "body",
+        "first_public_at",
+        "change_history",
+        "emphasised_organisations"
+      ],
+      "type": "object"
     },
     "emphasised_organisations": {
       "description": "The content ids of the organisations that should be displayed first in the list of organisations related to the item, these content ids must be present in the item organisation links hash.",
@@ -324,7 +349,7 @@
       ],
       "type": "string"
     },
-    "rendering_app_name": {
+    "rendering_app": {
       "description": "The application that renders this item.",
       "enum": [
         "calculators",
@@ -371,41 +396,22 @@
       ],
       "type": "object"
     },
-    "withdrawn_notice": {
-      "additionalProperties": false,
-      "properties": {
-        "explanation": {
-          "type": "string"
-        },
-        "withdrawn_at": {
-          "format": "date-time"
-        }
+    "routes": {
+      "items": {
+        "$ref": "#/definitions/route"
       },
-      "type": "object"
+      "minItems": 1,
+      "type": "array"
     },
-    "details": {
-      "additionalProperties": false,
-      "properties": {
-        "body": {
-          "$ref": "#/definitions/body"
-        },
-        "change_history": {
-          "$ref": "#/definitions/change_history"
-        },
-        "emphasised_organisations": {
-          "$ref": "#/definitions/emphasised_organisations"
-        },
-        "first_public_at": {
-          "$ref": "#/definitions/first_public_at"
-        }
-      },
-      "required": [
-        "body",
-        "first_public_at",
-        "change_history",
-        "emphasised_organisations"
-      ],
-      "type": "object"
+    "title": {
+      "type": "string"
+    },
+    "update_type": {
+      "enum": [
+        "major",
+        "minor",
+        "republish"
+      ]
     }
   }
 }

@@ -6,35 +6,30 @@
     "base_path",
     "details",
     "document_type",
-    "locale",
     "publishing_app",
+    "rendering_app",
     "routes",
     "schema_name",
     "title"
   ],
   "properties": {
+    "access_limited": {
+      "$ref": "#/definitions/access_limited"
+    },
+    "analytics_identifier": {
+      "$ref": "#/definitions/analytics_identifier"
+    },
     "base_path": {
       "$ref": "#/definitions/absolute_path"
     },
-    "title": {
-      "type": "string"
-    },
-    "description": {
-      "anyOf": [
-        {
-          "type": "string"
-        },
-        {
-          "type": "null"
-        }
+    "change_note": {
+      "type": [
+        "null",
+        "string"
       ]
     },
-    "routes": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/route"
-      },
-      "minItems": 1
+    "description": {
+      "$ref": "#/definitions/description_optional"
     },
     "details": {
       "$ref": "#/definitions/details"
@@ -45,31 +40,6 @@
       ],
       "type": "string"
     },
-    "links": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "policy_areas": {
-          "description": "A largely deprecated tag currently only used to power email alerts.",
-          "$ref": "#/definitions/guid_list"
-        }
-      }
-    },
-    "rendering_app": {
-      "$ref": "#/definitions/rendering_app_name"
-    },
-    "access_limited": {
-      "$ref": "#/definitions/access_limited"
-    },
-    "analytics_identifier": {
-      "$ref": "#/definitions/analytics_identifier"
-    },
-    "change_note": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
     "first_published_at": {
       "$ref": "#/definitions/first_published_at"
     },
@@ -77,6 +47,12 @@
       "description": "Last time when the content received a major or minor update.",
       "format": "date-time",
       "type": "string"
+    },
+    "links": {
+      "policy_areas": {
+        "description": "A largely deprecated tag currently only used to power email alerts.",
+        "$ref": "#/definitions/guid_list"
+      }
     },
     "locale": {
       "$ref": "#/definitions/locale"
@@ -105,15 +81,29 @@
     "publishing_app": {
       "$ref": "#/definitions/publishing_app_name"
     },
-    "update_type": {
-      "enum": [
-        "major",
-        "minor",
-        "republish"
-      ]
+    "redirects": {
+      "type": "array",
+      "items": {
+      },
+      "additionalItems": false
     },
-    "withdrawn_notice": {
-      "$ref": "#/definitions/withdrawn_notice"
+    "rendering_app": {
+      "$ref": "#/definitions/rendering_app"
+    },
+    "routes": {
+      "$ref": "#/definitions/routes"
+    },
+    "schema_name": {
+      "enum": [
+        "need"
+      ],
+      "type": "string"
+    },
+    "title": {
+      "$ref": "#/definitions/title"
+    },
+    "update_type": {
+      "$ref": "#/definitions/update_type"
     }
   },
   "definitions": {
@@ -148,6 +138,92 @@
         }
       ],
       "description": "A short identifier we send to Google Analytics for multi-valued fields. This means we avoid the truncated values we would get if we sent the path or slug of eg organisations."
+    },
+    "description": {
+      "type": "string"
+    },
+    "description_optional": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/description"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "details": {
+      "additionalProperties": false,
+      "properties": {
+        "applies_to_all_organisations": {
+          "description": "Whether all linked organisations meet this need",
+          "type": "boolean"
+        },
+        "benefit": {
+          "description": "Why the user wants to do it",
+          "type": "string"
+        },
+        "goal": {
+          "description": "What the user wants to do",
+          "type": "string"
+        },
+        "impact": {
+          "description": "Impact of GOV.UK not doing this",
+          "type": "string"
+        },
+        "justifications": {
+          "description": "How this need fits in the proposition for GOV.UK",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "legislation": {
+          "description": "Legislation that underpins this need",
+          "type": "string"
+        },
+        "met_when": {
+          "description": "Provides criteria that define when this user need has been met",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "need_id": {
+          "description": "Six digit id which used to be the primary id for Needs. Still being displayed in Maslow and Info-Frontend, but likely to be deprecated in the future.",
+          "type": "string"
+        },
+        "other_evidence": {
+          "description": "Any other evidence to support this need, ie. user research, campaigns, user demand",
+          "type": "string"
+        },
+        "role": {
+          "description": "The type of user, such as a small business, a tax agent, a healthcare practitioner",
+          "type": "string"
+        },
+        "yearly_need_views": {
+          "description": "Number of pageviews specific to this need generated each year",
+          "type": "integer"
+        },
+        "yearly_searches": {
+          "description": "Number of searches specific to this need carried out each year",
+          "type": "integer"
+        },
+        "yearly_site_views": {
+          "description": "Number of yearly pageviews of the whole site of the requester",
+          "type": "integer"
+        },
+        "yearly_user_contacts": {
+          "description": "Number of user contacts received about this need each year. Includes calls to contact centres, emails, customer service tickets",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "role",
+        "goal",
+        "benefit"
+      ],
+      "type": "object"
     },
     "first_published_at": {
       "description": "The date the content was first published.  Automatically determined by the publishing-api, unless overridden by the publishing application.",
@@ -261,7 +337,7 @@
       ],
       "type": "string"
     },
-    "rendering_app_name": {
+    "rendering_app": {
       "description": "The application that renders this item.",
       "enum": [
         "calculators",
@@ -308,90 +384,22 @@
       ],
       "type": "object"
     },
-    "withdrawn_notice": {
-      "additionalProperties": false,
-      "properties": {
-        "explanation": {
-          "type": "string"
-        },
-        "withdrawn_at": {
-          "format": "date-time"
-        }
+    "routes": {
+      "items": {
+        "$ref": "#/definitions/route"
       },
-      "type": "object"
+      "minItems": 1,
+      "type": "array"
     },
-    "details": {
-      "additionalProperties": false,
-      "properties": {
-        "applies_to_all_organisations": {
-          "description": "Whether all linked organisations meet this need",
-          "type": "boolean"
-        },
-        "benefit": {
-          "description": "Why the user wants to do it",
-          "type": "string"
-        },
-        "goal": {
-          "description": "What the user wants to do",
-          "type": "string"
-        },
-        "impact": {
-          "description": "Impact of GOV.UK not doing this",
-          "type": "string"
-        },
-        "justifications": {
-          "description": "How this need fits in the proposition for GOV.UK",
-          "items": {
-            "type": "string"
-          },
-          "type": "array"
-        },
-        "legislation": {
-          "description": "Legislation that underpins this need",
-          "type": "string"
-        },
-        "met_when": {
-          "description": "Provides criteria that define when this user need has been met",
-          "items": {
-            "type": "string"
-          },
-          "type": "array"
-        },
-        "need_id": {
-          "description": "Six digit id which used to be the primary id for Needs. Still being displayed in Maslow and Info-Frontend, but likely to be deprecated in the future.",
-          "type": "string"
-        },
-        "other_evidence": {
-          "description": "Any other evidence to support this need, ie. user research, campaigns, user demand",
-          "type": "string"
-        },
-        "role": {
-          "description": "The type of user, such as a small business, a tax agent, a healthcare practitioner",
-          "type": "string"
-        },
-        "yearly_need_views": {
-          "description": "Number of pageviews specific to this need generated each year",
-          "type": "integer"
-        },
-        "yearly_searches": {
-          "description": "Number of searches specific to this need carried out each year",
-          "type": "integer"
-        },
-        "yearly_site_views": {
-          "description": "Number of yearly pageviews of the whole site of the requester",
-          "type": "integer"
-        },
-        "yearly_user_contacts": {
-          "description": "Number of user contacts received about this need each year. Includes calls to contact centres, emails, customer service tickets",
-          "type": "integer"
-        }
-      },
-      "required": [
-        "role",
-        "goal",
-        "benefit"
-      ],
-      "type": "object"
+    "title": {
+      "type": "string"
+    },
+    "update_type": {
+      "enum": [
+        "major",
+        "minor",
+        "republish"
+      ]
     }
   }
 }

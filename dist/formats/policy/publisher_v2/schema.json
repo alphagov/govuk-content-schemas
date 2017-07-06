@@ -6,35 +6,30 @@
     "base_path",
     "details",
     "document_type",
-    "locale",
     "publishing_app",
+    "rendering_app",
     "routes",
     "schema_name",
     "title"
   ],
   "properties": {
+    "access_limited": {
+      "$ref": "#/definitions/access_limited"
+    },
+    "analytics_identifier": {
+      "$ref": "#/definitions/analytics_identifier"
+    },
     "base_path": {
       "$ref": "#/definitions/absolute_path"
     },
-    "title": {
-      "type": "string"
-    },
-    "description": {
-      "anyOf": [
-        {
-          "type": "string"
-        },
-        {
-          "type": "null"
-        }
+    "change_note": {
+      "type": [
+        "null",
+        "string"
       ]
     },
-    "routes": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/route"
-      },
-      "minItems": 1
+    "description": {
+      "$ref": "#/definitions/description_optional"
     },
     "details": {
       "$ref": "#/definitions/details"
@@ -45,31 +40,6 @@
       ],
       "type": "string"
     },
-    "links": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "policy_areas": {
-          "description": "A largely deprecated tag currently only used to power email alerts.",
-          "$ref": "#/definitions/guid_list"
-        }
-      }
-    },
-    "rendering_app": {
-      "$ref": "#/definitions/rendering_app_name"
-    },
-    "access_limited": {
-      "$ref": "#/definitions/access_limited"
-    },
-    "analytics_identifier": {
-      "$ref": "#/definitions/analytics_identifier"
-    },
-    "change_note": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
     "first_published_at": {
       "$ref": "#/definitions/first_published_at"
     },
@@ -77,6 +47,12 @@
       "description": "Last time when the content received a major or minor update.",
       "format": "date-time",
       "type": "string"
+    },
+    "links": {
+      "policy_areas": {
+        "description": "A largely deprecated tag currently only used to power email alerts.",
+        "$ref": "#/definitions/guid_list"
+      }
     },
     "locale": {
       "$ref": "#/definitions/locale"
@@ -105,15 +81,29 @@
     "publishing_app": {
       "$ref": "#/definitions/publishing_app_name"
     },
-    "update_type": {
-      "enum": [
-        "major",
-        "minor",
-        "republish"
-      ]
+    "redirects": {
+      "type": "array",
+      "items": {
+      },
+      "additionalItems": false
     },
-    "withdrawn_notice": {
-      "$ref": "#/definitions/withdrawn_notice"
+    "rendering_app": {
+      "$ref": "#/definitions/rendering_app"
+    },
+    "routes": {
+      "$ref": "#/definitions/routes"
+    },
+    "schema_name": {
+      "enum": [
+        "policy"
+      ],
+      "type": "string"
+    },
+    "title": {
+      "$ref": "#/definitions/title"
+    },
+    "update_type": {
+      "$ref": "#/definitions/update_type"
     }
   },
   "definitions": {
@@ -148,6 +138,97 @@
         }
       ],
       "description": "A short identifier we send to Google Analytics for multi-valued fields. This means we avoid the truncated values we would get if we sent the path or slug of eg organisations."
+    },
+    "description": {
+      "type": "string"
+    },
+    "description_optional": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/description"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "details": {
+      "additionalProperties": false,
+      "properties": {
+        "default_documents_per_page": {
+          "$ref": "#/definitions/finder_default_documents_per_page"
+        },
+        "default_order": {
+          "$ref": "#/definitions/finder_default_order"
+        },
+        "document_noun": {
+          "$ref": "#/definitions/finder_document_noun"
+        },
+        "email_signup_enabled": {
+          "type": "boolean"
+        },
+        "emphasised_organisations": {
+          "$ref": "#/definitions/emphasised_organisations"
+        },
+        "facets": {
+          "$ref": "#/definitions/finder_facets"
+        },
+        "filter": {
+          "$ref": "#/definitions/finder_filter"
+        },
+        "human_readable_finder_format": {
+          "type": "string"
+        },
+        "internal_name": {
+          "$ref": "#/definitions/taxonomy_internal_name"
+        },
+        "nation_applicability": {
+          "additionalProperties": false,
+          "description": "TODO: Switch to using national_applicability pattern",
+          "properties": {
+            "alternative_policies": {
+              "items": {
+                "properties": {
+                  "alt_policy_url": {
+                    "type": "string"
+                  },
+                  "nation": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "nation",
+                  "alt_policy_url"
+                ],
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "applies_to": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "applies_to",
+            "alternative_policies"
+          ],
+          "type": "object"
+        },
+        "show_summaries": {
+          "$ref": "#/definitions/finder_show_summaries"
+        },
+        "summary": {
+          "$ref": "#/definitions/finder_summary"
+        }
+      },
+      "required": [
+        "document_noun",
+        "facets"
+      ],
+      "type": "object"
     },
     "emphasised_organisations": {
       "description": "The content ids of the organisations that should be displayed first in the list of organisations related to the item, these content ids must be present in the item organisation links hash.",
@@ -399,7 +480,7 @@
       ],
       "type": "string"
     },
-    "rendering_app_name": {
+    "rendering_app": {
       "description": "The application that renders this item.",
       "enum": [
         "calculators",
@@ -446,99 +527,26 @@
       ],
       "type": "object"
     },
+    "routes": {
+      "items": {
+        "$ref": "#/definitions/route"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
     "taxonomy_internal_name": {
       "description": "An internal name for taxonomy admin interfaces. Includes parent.",
       "type": "string"
     },
-    "withdrawn_notice": {
-      "additionalProperties": false,
-      "properties": {
-        "explanation": {
-          "type": "string"
-        },
-        "withdrawn_at": {
-          "format": "date-time"
-        }
-      },
-      "type": "object"
+    "title": {
+      "type": "string"
     },
-    "details": {
-      "additionalProperties": false,
-      "properties": {
-        "default_documents_per_page": {
-          "$ref": "#/definitions/finder_default_documents_per_page"
-        },
-        "default_order": {
-          "$ref": "#/definitions/finder_default_order"
-        },
-        "document_noun": {
-          "$ref": "#/definitions/finder_document_noun"
-        },
-        "email_signup_enabled": {
-          "type": "boolean"
-        },
-        "emphasised_organisations": {
-          "$ref": "#/definitions/emphasised_organisations"
-        },
-        "facets": {
-          "$ref": "#/definitions/finder_facets"
-        },
-        "filter": {
-          "$ref": "#/definitions/finder_filter"
-        },
-        "human_readable_finder_format": {
-          "type": "string"
-        },
-        "internal_name": {
-          "$ref": "#/definitions/taxonomy_internal_name"
-        },
-        "nation_applicability": {
-          "additionalProperties": false,
-          "description": "TODO: Switch to using national_applicability pattern",
-          "properties": {
-            "alternative_policies": {
-              "items": {
-                "properties": {
-                  "alt_policy_url": {
-                    "type": "string"
-                  },
-                  "nation": {
-                    "type": "string"
-                  }
-                },
-                "required": [
-                  "nation",
-                  "alt_policy_url"
-                ],
-                "type": "object"
-              },
-              "type": "array"
-            },
-            "applies_to": {
-              "items": {
-                "type": "string"
-              },
-              "type": "array"
-            }
-          },
-          "required": [
-            "applies_to",
-            "alternative_policies"
-          ],
-          "type": "object"
-        },
-        "show_summaries": {
-          "$ref": "#/definitions/finder_show_summaries"
-        },
-        "summary": {
-          "$ref": "#/definitions/finder_summary"
-        }
-      },
-      "required": [
-        "document_noun",
-        "facets"
-      ],
-      "type": "object"
+    "update_type": {
+      "enum": [
+        "major",
+        "minor",
+        "republish"
+      ]
     }
   }
 }

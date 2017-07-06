@@ -3,18 +3,14 @@
   "type": "object",
   "additionalProperties": false,
   "properties": {
+    "links": {
+      "root_taxons": {
+        "description": "Defines a set of Taxonomy trees rooted in this node.",
+        "$ref": "#/definitions/guid_list"
+      }
+    },
     "previous_version": {
       "type": "string"
-    },
-    "links": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "root_taxons": {
-          "description": "Defines a set of Taxonomy trees rooted in this node.",
-          "$ref": "#/definitions/guid_list"
-        }
-      }
     }
   },
   "definitions": {

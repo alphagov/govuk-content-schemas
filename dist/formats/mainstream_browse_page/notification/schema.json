@@ -3,38 +3,43 @@
   "type": "object",
   "additionalProperties": false,
   "required": [
+    "analytics_identifier",
     "base_path",
+    "content_id",
+    "description",
     "details",
     "document_type",
+    "email_document_supertype",
+    "expanded_links",
+    "first_published_at",
+    "government_document_supertype",
+    "links",
     "locale",
+    "navigation_document_supertype",
+    "need_ids",
+    "phase",
+    "public_updated_at",
     "publishing_app",
+    "redirects",
+    "rendering_app",
     "routes",
     "schema_name",
-    "title"
+    "title",
+    "update_type",
+    "user_journey_document_supertype"
   ],
   "properties": {
+    "analytics_identifier": {
+      "$ref": "#/definitions/analytics_identifier"
+    },
     "base_path": {
       "$ref": "#/definitions/absolute_path"
     },
-    "title": {
-      "type": "string"
+    "content_id": {
+      "$ref": "#/definitions/guid"
     },
     "description": {
-      "anyOf": [
-        {
-          "type": "string"
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
-    "routes": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/route"
-      },
-      "minItems": 1
+      "$ref": "#/definitions/description_optional"
     },
     "details": {
       "$ref": "#/definitions/details"
@@ -45,41 +50,99 @@
       ],
       "type": "string"
     },
-    "links": {
+    "email_document_supertype": {
+      "description": "Document supertype grouping intended to power the Whitehall finders and email subscriptions",
+      "type": "string"
+    },
+    "expanded_links": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "active_top_level_browse_page": {
+          "description": "The top-level browse page which is active",
+          "maxItems": 1,
+          "$ref": "#/definitions/frontend_links"
+        },
+        "available_translations": {
+          "description": "Link type automatically added by Publishing API",
+          "$ref": "#/definitions/frontend_links"
+        },
+        "child_taxons": {
+          "description": "Link type automatically added by Publishing API",
+          "$ref": "#/definitions/frontend_links"
+        },
+        "children": {
+          "description": "Link type automatically added by Publishing API",
+          "$ref": "#/definitions/frontend_links"
+        },
+        "document_collections": {
+          "description": "Link type automatically added by Publishing API",
+          "$ref": "#/definitions/frontend_links"
+        },
+        "mainstream_browse_content": {
+          "description": "Link type automatically added by Publishing API",
+          "$ref": "#/definitions/frontend_links"
+        },
+        "policies": {
+          "description": "Link type automatically added by Publishing API",
+          "$ref": "#/definitions/frontend_links"
+        },
         "policy_areas": {
           "description": "A largely deprecated tag currently only used to power email alerts.",
-          "$ref": "#/definitions/guid_list"
+          "$ref": "#/definitions/frontend_links"
+        },
+        "related_topics": {
+          "$ref": "#/definitions/frontend_links"
+        },
+        "second_level_browse_pages": {
+          "description": "All 2nd level browse pages under active_top_level_browse_page",
+          "$ref": "#/definitions/frontend_links"
+        },
+        "top_level_browse_pages": {
+          "description": "All top-level browse pages",
+          "$ref": "#/definitions/frontend_links"
+        },
+        "topic_content": {
+          "description": "Link type automatically added by Publishing API",
+          "$ref": "#/definitions/frontend_links"
         }
       }
-    },
-    "rendering_app": {
-      "$ref": "#/definitions/rendering_app_name"
-    },
-    "access_limited": {
-      "$ref": "#/definitions/access_limited"
-    },
-    "analytics_identifier": {
-      "$ref": "#/definitions/analytics_identifier"
-    },
-    "change_note": {
-      "type": [
-        "null",
-        "string"
-      ]
     },
     "first_published_at": {
       "$ref": "#/definitions/first_published_at"
     },
-    "last_edited_at": {
-      "description": "Last time when the content received a major or minor update.",
-      "format": "date-time",
+    "government_document_supertype": {
+      "description": "Document supertype grouping intended to power the Whitehall finders and email subscriptions",
       "type": "string"
+    },
+    "links": {
+      "active_top_level_browse_page": {
+        "description": "The top-level browse page which is active",
+        "maxItems": 1,
+        "$ref": "#/definitions/guid_list"
+      },
+      "related_topics": {
+        "$ref": "#/definitions/guid_list"
+      },
+      "second_level_browse_pages": {
+        "description": "All 2nd level browse pages under active_top_level_browse_page",
+        "$ref": "#/definitions/guid_list"
+      },
+      "top_level_browse_pages": {
+        "description": "All top-level browse pages",
+        "$ref": "#/definitions/guid_list"
+      },
+      "policy_areas": {
+        "description": "A largely deprecated tag currently only used to power email alerts.",
+        "$ref": "#/definitions/guid_list"
+      }
     },
     "locale": {
       "$ref": "#/definitions/locale"
+    },
+    "navigation_document_supertype": {
+      "description": "Document type grouping powering the new taxonomy-based navigation pages",
+      "type": "string"
     },
     "need_ids": {
       "items": {
@@ -96,24 +159,42 @@
       ],
       "type": "string"
     },
-    "previous_version": {
-      "type": "string"
-    },
     "public_updated_at": {
       "$ref": "#/definitions/public_updated_at"
     },
     "publishing_app": {
       "$ref": "#/definitions/publishing_app_name"
     },
-    "update_type": {
-      "enum": [
-        "major",
-        "minor",
-        "republish"
-      ]
+    "publishing_request_id": {
+      "$ref": "#/definitions/publishing_request_id"
     },
-    "withdrawn_notice": {
-      "$ref": "#/definitions/withdrawn_notice"
+    "redirects": {
+      "type": "array",
+      "items": {
+      },
+      "additionalItems": false
+    },
+    "rendering_app": {
+      "$ref": "#/definitions/rendering_app"
+    },
+    "routes": {
+      "$ref": "#/definitions/routes"
+    },
+    "schema_name": {
+      "enum": [
+        "mainstream_browse_page"
+      ],
+      "type": "string"
+    },
+    "title": {
+      "$ref": "#/definitions/title"
+    },
+    "update_type": {
+      "$ref": "#/definitions/update_type"
+    },
+    "user_journey_document_supertype": {
+      "description": "Document type grouping powering analytics of user journeys",
+      "type": "string"
     }
   },
   "definitions": {
@@ -121,22 +202,6 @@
       "description": "A path only. Query string and/or fragment are not allowed.",
       "pattern": "^/(([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})+(/([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)*)?$",
       "type": "string"
-    },
-    "access_limited": {
-      "additionalProperties": false,
-      "properties": {
-        "auth_bypass_ids": {
-          "$ref": "#/definitions/guid_list",
-          "description": "A list of ids that will allow access to this item for non-authenticated users"
-        },
-        "users": {
-          "items": {
-            "type": "string"
-          },
-          "type": "array"
-        }
-      },
-      "type": "object"
     },
     "analytics_identifier": {
       "anyOf": [
@@ -149,10 +214,99 @@
       ],
       "description": "A short identifier we send to Google Analytics for multi-valued fields. This means we avoid the truncated values we would get if we sent the path or slug of eg organisations."
     },
+    "description": {
+      "type": "string"
+    },
+    "description_optional": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/description"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "details": {
+      "additionalProperties": false,
+      "properties": {
+        "groups": {
+          "$ref": "#/definitions/topic_groups"
+        },
+        "internal_name": {
+          "$ref": "#/definitions/taxonomy_internal_name"
+        },
+        "ordered_second_level_browse_pages": {
+          "$ref": "#/definitions/guid_list",
+          "description": "All 2nd level browse pages under active_top_level_browse_page, with ordering preserved"
+        },
+        "second_level_ordering": {
+          "enum": [
+            "alphabetical",
+            "curated"
+          ]
+        },
+        "change_history": {
+          "$ref": "#/definitions/change_history"
+        }
+      },
+      "type": "object"
+    },
     "first_published_at": {
       "description": "The date the content was first published.  Automatically determined by the publishing-api, unless overridden by the publishing application.",
       "format": "date-time",
       "type": "string"
+    },
+    "frontend_links": {
+      "items": {
+        "additionalProperties": true,
+        "properties": {
+          "analytics_identifier": {
+            "$ref": "#/definitions/analytics_identifier"
+          },
+          "api_path": {
+            "$ref": "#/definitions/absolute_path"
+          },
+          "api_url": {
+            "description": "DEPRECATED: api_path should be used instead of api_url. This is due to values of api_url being tied to an environment which can cause problems when data is synced between environments. In time this field will be removed by the Publishing Platform team.",
+            "format": "uri",
+            "type": "string"
+          },
+          "base_path": {
+            "$ref": "#/definitions/absolute_path"
+          },
+          "content_id": {
+            "$ref": "#/definitions/guid"
+          },
+          "document_type": {
+            "type": "string"
+          },
+          "locale": {
+            "$ref": "#/definitions/locale"
+          },
+          "public_updated_at": {
+            "type": "string"
+          },
+          "schema_name": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "web_url": {
+            "description": "DEPRECATED: base_path should be used instead of web_url. This is due to values of web_url being tied to an environment which can cause problems when data is synced between environments. In time this field will be removed by the Publishing Platform team.",
+            "format": "uri",
+            "type": "string"
+          }
+        },
+        "required": [
+          "content_id",
+          "title",
+          "locale"
+        ],
+        "type": "object"
+      },
+      "type": "array"
     },
     "guid": {
       "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-[1-5][a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$",
@@ -261,7 +415,11 @@
       ],
       "type": "string"
     },
-    "rendering_app_name": {
+    "publishing_request_id": {
+      "description": "A unique identifier used to track publishing requests to rendered content",
+      "type": "string"
+    },
+    "rendering_app": {
       "description": "The application that renders this item.",
       "enum": [
         "calculators",
@@ -308,8 +466,18 @@
       ],
       "type": "object"
     },
+    "routes": {
+      "items": {
+        "$ref": "#/definitions/route"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
     "taxonomy_internal_name": {
       "description": "An internal name for taxonomy admin interfaces. Includes parent.",
+      "type": "string"
+    },
+    "title": {
       "type": "string"
     },
     "topic_groups": {
@@ -343,39 +511,12 @@
       },
       "type": "array"
     },
-    "withdrawn_notice": {
-      "additionalProperties": false,
-      "properties": {
-        "explanation": {
-          "type": "string"
-        },
-        "withdrawn_at": {
-          "format": "date-time"
-        }
-      },
-      "type": "object"
-    },
-    "details": {
-      "additionalProperties": false,
-      "properties": {
-        "groups": {
-          "$ref": "#/definitions/topic_groups"
-        },
-        "internal_name": {
-          "$ref": "#/definitions/taxonomy_internal_name"
-        },
-        "ordered_second_level_browse_pages": {
-          "$ref": "#/definitions/guid_list",
-          "description": "All 2nd level browse pages under active_top_level_browse_page, with ordering preserved"
-        },
-        "second_level_ordering": {
-          "enum": [
-            "alphabetical",
-            "curated"
-          ]
-        }
-      },
-      "type": "object"
+    "update_type": {
+      "enum": [
+        "major",
+        "minor",
+        "republish"
+      ]
     }
   }
 }

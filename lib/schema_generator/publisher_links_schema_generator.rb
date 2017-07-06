@@ -1,7 +1,7 @@
 module SchemaGenerator
   class PublisherLinksSchemaGenerator
-    def initialize(schema_name)
-      @schema_name = schema_name
+    def initialize(format)
+      @format = format
     end
 
     def generate
@@ -18,31 +18,45 @@ module SchemaGenerator
 
   private
 
-    attr_reader :schema_name
+    attr_reader :format
 
     def properties
-      links = Schema.read("formats/base_links.json").slice("type", "additionalProperties", "properties")
-
-      custom_links_filename = "formats/#{schema_name}/publisher/links.json"
-      if File.exist?(custom_links_filename)
-        custom_links_schema = Schema.read(custom_links_filename)
-
-        links["properties"] = custom_links_schema["properties"].merge(
-          links["properties"]
-        )
-      end
-
-      props = Schema.read("formats/links_metadata.json")["properties"]
-      props["links"] = links
-      props
+      {
+        "links" => format.content_links.guid_definition,
+        "previous_version" => { "type" => "string" }
+      }
     end
 
     def definitions
-      Schema.read("formats/definitions.json")["definitions"]
+      all_definitions = Jsonnet
+        .load("jsonnet_formats/shared/definitions/all.jsonnet")
+        .merge(format.definitions)
+      DefinitionsResolver.new(properties, all_definitions).call
     end
 
-    def links_metadata
-      Schema.read("formats/links_metadata.json")
-    end
+  #   def properties
+  #     links = Schema.read("formats/base_links.json").slice("type", "additionalProperties", "properties")
+  #
+  #     custom_links_filename = "formats/#{schema_name}/publisher/links.json"
+  #     if File.exist?(custom_links_filename)
+  #       custom_links_schema = Schema.read(custom_links_filename)
+  #
+  #       links["properties"] = custom_links_schema["properties"].merge(
+  #         links["properties"]
+  #       )
+  #     end
+  #
+  #     props = Schema.read("formats/links_metadata.json")["properties"]
+  #     props["links"] = links
+  #     props
+  #   end
+  #
+  #   def definitions
+  #     Schema.read("formats/definitions.json")["definitions"]
+  #   end
+  #
+  #   def links_metadata
+  #     Schema.read("formats/links_metadata.json")
+  #   end
   end
 end

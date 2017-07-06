@@ -1,4 +1,5 @@
-{
+(import "routes_redirects.jsonnet") + {
+  "frontend_links": (import "frontend_links.jsonnet"),
   "absolute_path": {
     "type": "string",
     "pattern": "^/(([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})+(/([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)*)?$",
@@ -8,6 +9,11 @@
     "type": "string",
     "pattern": "^/(([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})+(/([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)*)?(\\?([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)?(#([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)?$",
     "description": "A path with optional query string and/or fragment."
+  },
+  "govuk_subdomain_url": {
+    "type": "string",
+    "pattern": "^https://([a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[A-Za-z0-9])?\\.)*gov\\.uk(/(([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})+(/([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)*)?(\\?([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)?(#([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)?)?$",
+    "description": "A URL under the gov.uk domain with optional query string and/or fragment."
   },
   "access_limited": {
     "type": "object",
@@ -35,6 +41,34 @@
       }
     ],
     "description": "A short identifier we send to Google Analytics for multi-valued fields. This means we avoid the truncated values we would get if we sent the path or slug of eg organisations."
+  },
+  "absolute_path_optional": {
+    "anyOf": [
+      {
+        "$ref": "#/definitions/absolute_path"
+      },
+      {
+        "type": "null"
+      }
+    ],
+  },
+  "description": {
+    "type": "string"
+  },
+  "description_optional": {
+    "anyOf": [
+      {
+        "$ref": "#/definitions/description",
+      },
+      {
+        "type": "null"
+      }
+    ]
+  },
+  "details": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
   },
   "document_type": {
     "type": "string",
@@ -322,7 +356,7 @@
       "whitehall"
     ]
   },
-  "rendering_app_name": {
+  "rendering_app": {
     "description": "The application that renders this item.",
     "type": "string",
     "enum": [
@@ -350,6 +384,16 @@
       "whitehall-frontend"
     ]
   },
+  "rendering_app_optional": {
+    "anyOf": [
+      {
+        "$ref": "#/definitions/rendering_app"
+      },
+      {
+        "type": "null"
+      }
+    ]
+  },
   "image": {
     "type": "object",
     "additionalProperties": false,
@@ -375,6 +419,13 @@
         ]
       }
     }
+  },
+  "update_type": {
+    "enum": [
+      "major",
+      "minor",
+      "republish"
+    ]
   },
   "parts": {
     "type": "array",
@@ -404,54 +455,11 @@
     "type": "boolean",
     "description": "If the content is considered political in nature, reflecting views of the government it was published under."
   },
-  "route": {
-    "type": "object",
-    "additionalProperties": false,
-    "required": [
-      "path",
-      "type"
-    ],
-    "properties": {
-      "path": {
-        "type": "string"
-      },
-      "type": {
-        "enum": [
-          "prefix",
-          "exact"
-        ]
-      }
-    }
+  "title": {
+    "type": "string"
   },
-  "redirect_route": {
-    "type": "object",
-    "additionalProperties": false,
-    "required": [
-      "path",
-      "type",
-      "destination"
-    ],
-    "properties": {
-      "path": {
-        "$ref": "#/definitions/absolute_path"
-      },
-      "type": {
-        "enum": [
-          "prefix",
-          "exact"
-        ]
-      },
-      "destination": {
-        "$ref": "#/definitions/absolute_fullpath"
-      },
-      "segments_mode": {
-        "enum": [
-          "preserve",
-          "ignore"
-        ],
-        "description": "For prefix redirects, preserve or ignore the rest of the fullpath. For exact, preserve or ignore the querystring."
-      }
-    }
+  "title_optional": {
+    "type": "string"
   },
   "locale": {
     "type": "string",

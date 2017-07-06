@@ -1,0 +1,1828 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "base_path",
+    "content_id",
+    "description",
+    "details",
+    "document_type",
+    "links",
+    "locale",
+    "public_updated_at",
+    "schema_name",
+    "title",
+    "updated_at"
+  ],
+  "properties": {
+    "analytics_identifier": {
+      "$ref": "#/definitions/analytics_identifier"
+    },
+    "base_path": {
+      "$ref": "#/definitions/absolute_path"
+    },
+    "content_id": {
+      "$ref": "#/definitions/guid"
+    },
+    "description": {
+      "$ref": "#/definitions/description_optional"
+    },
+    "details": {
+      "$ref": "#/definitions/details"
+    },
+    "document_type": {
+      "enum": [
+        "cma_case",
+        "employment_appeal_tribunal_decision",
+        "dfid_research_output",
+        "employment_tribunal_decision",
+        "service_standard_report",
+        "utaac_decision",
+        "aaib_report",
+        "international_development_fund",
+        "countryside_stewardship_grant",
+        "medical_safety_alert",
+        "maib_report",
+        "esi_fund",
+        "tax_tribunal_decision",
+        "raib_report",
+        "drug_safety_update",
+        "specialist_document",
+        "business_finance_support_scheme",
+        "vehicle_recalls_and_faults_alert",
+        "asylum_support_decision"
+      ],
+      "type": "string"
+    },
+    "email_document_supertype": {
+      "description": "Document supertype grouping intended to power the Whitehall finders and email subscriptions",
+      "type": "string"
+    },
+    "first_published_at": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/first_published_at"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "government_document_supertype": {
+      "description": "Document supertype grouping intended to power the Whitehall finders and email subscriptions",
+      "type": "string"
+    },
+    "links": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "available_translations": {
+          "description": "Link type automatically added by Publishing API",
+          "$ref": "#/definitions/frontend_links"
+        },
+        "child_taxons": {
+          "description": "Link type automatically added by Publishing API",
+          "$ref": "#/definitions/frontend_links"
+        },
+        "children": {
+          "description": "Link type automatically added by Publishing API",
+          "$ref": "#/definitions/frontend_links"
+        },
+        "document_collections": {
+          "description": "Link type automatically added by Publishing API",
+          "$ref": "#/definitions/frontend_links"
+        },
+        "finder": {
+          "description": "The finder for this specialist document.",
+          "maxItems": 1,
+          "$ref": "#/definitions/frontend_links"
+        },
+        "mainstream_browse_content": {
+          "description": "Link type automatically added by Publishing API",
+          "$ref": "#/definitions/frontend_links"
+        },
+        "mainstream_browse_pages": {
+          "description": "Powers the /browse section of the site. These are known as sections in some legacy apps.",
+          "$ref": "#/definitions/frontend_links"
+        },
+        "meets_user_needs": {
+          "description": "The user needs this piece of content meets.",
+          "$ref": "#/definitions/frontend_links"
+        },
+        "ordered_related_items": {
+          "description": "Related items, can be any page on GOV.UK. Mostly used for mainstream content to power the sidebar. Ordering of the links is determined by the editor in Content Tagger.",
+          "$ref": "#/definitions/frontend_links"
+        },
+        "ordered_related_items_overrides": {
+          "description": "Related items, can be any page on GOV.UK. Overrides 'more like this' automatically generated links in the beta navigation.",
+          "$ref": "#/definitions/frontend_links"
+        },
+        "organisations": {
+          "description": "All organisations linked to this content item. This should include lead organisations.",
+          "$ref": "#/definitions/frontend_links"
+        },
+        "parent": {
+          "description": "The parent content item.",
+          "maxItems": 1,
+          "$ref": "#/definitions/frontend_links"
+        },
+        "policies": {
+          "description": "Link type automatically added by Publishing API",
+          "$ref": "#/definitions/frontend_links"
+        },
+        "policy_areas": {
+          "description": "A largely deprecated tag currently only used to power email alerts.",
+          "$ref": "#/definitions/frontend_links"
+        },
+        "primary_publishing_organisation": {
+          "description": "The organisation that published the page. Corresponds to the first of the 'Lead organisations' in Whitehall, and is empty for all other publishing applications.",
+          "maxItems": 1,
+          "$ref": "#/definitions/frontend_links"
+        },
+        "taxons": {
+          "description": "Prototype-stage taxonomy label for this content item",
+          "$ref": "#/definitions/frontend_links"
+        },
+        "topic_content": {
+          "description": "Link type automatically added by Publishing API",
+          "$ref": "#/definitions/frontend_links"
+        },
+        "topics": {
+          "description": "Powers the /topic section of the site. These are known as specialist sectors in some legacy apps.",
+          "$ref": "#/definitions/frontend_links"
+        }
+      }
+    },
+    "locale": {
+      "$ref": "#/definitions/locale"
+    },
+    "navigation_document_supertype": {
+      "description": "Document type grouping powering the new taxonomy-based navigation pages",
+      "type": "string"
+    },
+    "need_ids": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "phase": {
+      "description": "The service design phase of this content item - https://www.gov.uk/service-manual/phases",
+      "enum": [
+        "alpha",
+        "beta",
+        "live"
+      ],
+      "type": "string"
+    },
+    "public_updated_at": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/public_updated_at"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "publishing_app": {
+      "$ref": "#/definitions/publishing_app_name"
+    },
+    "publishing_request_id": {
+      "$ref": "#/definitions/publishing_request_id"
+    },
+    "rendering_app": {
+      "$ref": "#/definitions/rendering_app"
+    },
+    "schema_name": {
+      "enum": [
+        "specialist_document"
+      ],
+      "type": "string"
+    },
+    "title": {
+      "$ref": "#/definitions/title"
+    },
+    "updated_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "user_journey_document_supertype": {
+      "description": "Document type grouping powering analytics of user journeys",
+      "type": "string"
+    },
+    "withdrawn_notice": {
+      "$ref": "#/definitions/withdrawn_notice"
+    }
+  },
+  "definitions": {
+    "aaib_report_metadata": {
+      "additionalProperties": false,
+      "properties": {
+        "aircraft_category": {
+          "items": {
+            "enum": [
+              "commercial-fixed-wing",
+              "commercial-rotorcraft",
+              "general-aviation-fixed-wing",
+              "general-aviation-rotorcraft",
+              "sport-aviation-and-balloons"
+            ],
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "aircraft_type": {
+          "type": "string"
+        },
+        "bulk_published": {
+          "type": "boolean"
+        },
+        "date_of_occurrence": {
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$",
+          "type": "string"
+        },
+        "location": {
+          "type": "string"
+        },
+        "registration": {
+          "type": "string"
+        },
+        "report_type": {
+          "enum": [
+            "annual-safety-report",
+            "correspondence-investigation",
+            "field-investigation",
+            "pre-1997-monthly-report",
+            "foreign-report",
+            "formal-report",
+            "special-bulletin",
+            "safety-study"
+          ],
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "absolute_path": {
+      "description": "A path only. Query string and/or fragment are not allowed.",
+      "pattern": "^/(([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})+(/([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)*)?$",
+      "type": "string"
+    },
+    "analytics_identifier": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "A short identifier we send to Google Analytics for multi-valued fields. This means we avoid the truncated values we would get if we sent the path or slug of eg organisations."
+    },
+    "any_metadata": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/aaib_report_metadata"
+        },
+        {
+          "$ref": "#/definitions/asylum_support_decision_metadata"
+        },
+        {
+          "$ref": "#/definitions/business_finance_support_scheme_metadata"
+        },
+        {
+          "$ref": "#/definitions/cma_case_metadata"
+        },
+        {
+          "$ref": "#/definitions/countryside_stewardship_grant_metadata"
+        },
+        {
+          "$ref": "#/definitions/dfid_research_output_metadata"
+        },
+        {
+          "$ref": "#/definitions/drug_safety_update_metadata"
+        },
+        {
+          "$ref": "#/definitions/employment_appeal_tribunal_decision_metadata"
+        },
+        {
+          "$ref": "#/definitions/employment_tribunal_decision_metadata"
+        },
+        {
+          "$ref": "#/definitions/european_structural_investment_fund_metadata"
+        },
+        {
+          "$ref": "#/definitions/international_development_fund_metadata"
+        },
+        {
+          "$ref": "#/definitions/maib_report_metadata"
+        },
+        {
+          "$ref": "#/definitions/medical_safety_alert_metadata"
+        },
+        {
+          "$ref": "#/definitions/raib_report_metadata"
+        },
+        {
+          "$ref": "#/definitions/service_standard_report_metadata"
+        },
+        {
+          "$ref": "#/definitions/tax_tribunal_decision_metadata"
+        },
+        {
+          "$ref": "#/definitions/utaac_decision_metadata"
+        },
+        {
+          "$ref": "#/definitions/vehicle_recalls_and_faults_alert_metadata"
+        }
+      ],
+      "type": "object"
+    },
+    "asset_link": {
+      "additionalProperties": false,
+      "properties": {
+        "content_id": {
+          "$ref": "#/definitions/guid"
+        },
+        "content_type": {
+          "type": "string"
+        },
+        "created_at": {
+          "format": "date-time"
+        },
+        "title": {
+          "type": "string"
+        },
+        "updated_at": {
+          "format": "date-time"
+        },
+        "url": {
+          "format": "uri",
+          "type": "string"
+        }
+      },
+      "required": [
+        "url",
+        "content_type"
+      ],
+      "type": "object"
+    },
+    "asset_link_list": {
+      "description": "An ordered list of asset links",
+      "items": {
+        "$ref": "#/definitions/asset_link"
+      },
+      "type": "array"
+    },
+    "asylum_support_decision_metadata": {
+      "additionalProperties": false,
+      "properties": {
+        "bulk_published": {
+          "type": "boolean"
+        },
+        "hidden_indexable_content": {
+          "type": "string"
+        },
+        "tribunal_decision_categories": {
+          "items": {
+            "enum": [
+              "section-4-1-support-for-persons-who-are-neither-an-asylum-seeker-nor-a-failed-asylum-seeker",
+              "section-4-2-support-for-failed-asylum-seekers",
+              "section-95-support-for-asylum-seekers"
+            ],
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "tribunal_decision_category": {
+          "enum": [
+            "section-4-1-support-for-persons-who-are-neither-an-asylum-seeker-nor-a-failed-asylum-seeker",
+            "section-4-2-support-for-failed-asylum-seekers",
+            "section-95-support-for-asylum-seekers"
+          ],
+          "type": "string"
+        },
+        "tribunal_decision_decision_date": {
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$",
+          "type": "string"
+        },
+        "tribunal_decision_judges": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "tribunal_decision_landmark": {
+          "enum": [
+            "not-landmark",
+            "landmark"
+          ],
+          "type": "string"
+        },
+        "tribunal_decision_reference_number": {
+          "type": "string"
+        },
+        "tribunal_decision_sub_categories": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "tribunal_decision_sub_category": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "body_html_and_govspeak": {
+      "anyOf": [
+        {
+          "type": "string"
+        }
+      ],
+      "description": "The main content provided as HTML with the govspeak markdown it's rendered from"
+    },
+    "business_finance_support_scheme_metadata": {
+      "additionalProperties": false,
+      "properties": {
+        "bulk_published": {
+          "type": "boolean"
+        },
+        "business_sizes": {
+          "items": {
+            "enum": [
+              "between-10-and-249",
+              "between-250-and-500",
+              "over-500",
+              "under-10"
+            ],
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "business_stages": {
+          "items": {
+            "enum": [
+              "established",
+              "not-yet-trading",
+              "start-up"
+            ],
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "continuation_link": {
+          "type": "string"
+        },
+        "industries": {
+          "items": {
+            "enum": [
+              "agriculture-and-food",
+              "business-and-finance",
+              "construction",
+              "education",
+              "health",
+              "hospitality-and-catering",
+              "information-technology-digital-and-creative",
+              "manufacturing",
+              "mining",
+              "real-estate-and-property",
+              "science-and-technology",
+              "service-industries",
+              "transport-and-distribution",
+              "travel-and-leisure",
+              "utilities-providers",
+              "wholesale-and-retail"
+            ],
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "types_of_support": {
+          "items": {
+            "enum": [
+              "equity",
+              "expertise-and-advice",
+              "finance",
+              "grant",
+              "loan",
+              "recognition-award"
+            ],
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "will_continue_on": {
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "change_history": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "note": {
+            "description": "A summary of the change",
+            "type": "string"
+          },
+          "public_timestamp": {
+            "format": "date-time",
+            "type": "string"
+          }
+        },
+        "required": [
+          "public_timestamp",
+          "note"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "cma_case_metadata": {
+      "additionalProperties": false,
+      "properties": {
+        "bulk_published": {
+          "type": "boolean"
+        },
+        "case_state": {
+          "enum": [
+            "open",
+            "closed"
+          ],
+          "type": "string"
+        },
+        "case_type": {
+          "enum": [
+            "ca98-and-civil-cartels",
+            "competition-disqualification",
+            "criminal-cartels",
+            "markets",
+            "mergers",
+            "consumer-enforcement",
+            "regulatory-references-and-appeals",
+            "review-of-orders-and-undertakings"
+          ],
+          "type": "string"
+        },
+        "closed_date": {
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$",
+          "type": "string"
+        },
+        "market_sector": {
+          "items": {
+            "enum": [
+              "aerospace",
+              "agriculture-environment-and-natural-resources",
+              "building-and-construction",
+              "chemicals",
+              "clothing-footwear-and-fashion",
+              "communications",
+              "defence",
+              "distribution-and-service-industries",
+              "electronics-industry",
+              "energy",
+              "engineering",
+              "financial-services",
+              "fire-police-and-security",
+              "food-manufacturing",
+              "giftware-jewellery-and-tableware",
+              "healthcare-and-medical-equipment",
+              "household-goods-furniture-and-furnishings",
+              "mineral-extraction-mining-and-quarrying",
+              "motor-industry",
+              "oil-and-gas-refining-and-petrochemicals",
+              "paper-printing-and-packaging",
+              "pharmaceuticals",
+              "public-markets",
+              "recreation-and-leisure",
+              "retail-and-wholesale",
+              "telecommunications",
+              "textiles",
+              "transport",
+              "utilities"
+            ],
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "opened_date": {
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$",
+          "type": "string"
+        },
+        "outcome_type": {
+          "enum": [
+            "ca98-no-grounds-for-action-non-infringement",
+            "ca98-infringement-chapter-i",
+            "ca98-infringement-chapter-ii",
+            "ca98-administrative-priorities",
+            "ca98-commitment",
+            "competition-disqualification-order-granted",
+            "competition-disqualification-undertaking-given",
+            "competition-disqualification-no-order-granted-or-undertaking-given",
+            "criminal-cartels-verdict",
+            "markets-phase-1-no-enforcement-action",
+            "markets-phase-1-undertakings-in-lieu-of-reference",
+            "markets-phase-1-referral",
+            "mergers-phase-1-clearance",
+            "mergers-phase-1-clearance-with-undertakings-in-lieu",
+            "mergers-phase-1-referral",
+            "mergers-phase-1-found-not-to-qualify",
+            "mergers-phase-1-public-interest-interventions",
+            "markets-phase-2-clearance-no-adverse-effect-on-competition",
+            "markets-phase-2-adverse-effect-on-competition-leading-to-remedies",
+            "markets-phase-2-decision-to-dispense-with-procedural-obligations",
+            "mergers-phase-2-clearance",
+            "mergers-phase-2-clearance-with-remedies",
+            "mergers-phase-2-prohibition",
+            "mergers-phase-2-cancellation",
+            "consumer-enforcement-no-action",
+            "consumer-enforcement-court-order",
+            "consumer-enforcement-undertakings",
+            "consumer-enforcement-changes-to-business-practices-agreed",
+            "regulatory-references-and-appeals-final-determination"
+          ],
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "countryside_stewardship_grant_metadata": {
+      "additionalProperties": false,
+      "properties": {
+        "bulk_published": {
+          "type": "boolean"
+        },
+        "funding_amount": {
+          "items": {
+            "enum": [
+              "up-to-100",
+              "101-to-200",
+              "201-to-300",
+              "301-to-400",
+              "401-to-500",
+              "more-than-500",
+              "up-to-50-actual-costs",
+              "more-than-50-actual-costs"
+            ],
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "grant_type": {
+          "enum": [
+            "option",
+            "capital-item",
+            "supplement"
+          ],
+          "type": "string"
+        },
+        "land_use": {
+          "items": {
+            "enum": [
+              "arable-land",
+              "boundaries",
+              "coast",
+              "educational-access",
+              "flood-risk",
+              "grassland",
+              "historic-environment",
+              "livestock-management",
+              "organic-land",
+              "priority-habitats",
+              "trees-non-woodland",
+              "uplands",
+              "vegetation-control",
+              "water-quality",
+              "wildlife-package",
+              "woodland"
+            ],
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "tiers_or_standalone_items": {
+          "items": {
+            "enum": [
+              "higher-tier",
+              "mid-tier",
+              "standalone-capital-items"
+            ],
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "description": {
+      "type": "string"
+    },
+    "description_optional": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/description"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "details": {
+      "additionalProperties": false,
+      "properties": {
+        "attachments": {
+          "$ref": "#/definitions/asset_link_list"
+        },
+        "body": {
+          "$ref": "#/definitions/body_html_and_govspeak"
+        },
+        "change_history": {
+          "$ref": "#/definitions/change_history"
+        },
+        "headers": {
+          "$ref": "#/definitions/nested_headers"
+        },
+        "max_cache_time": {
+          "$ref": "#/definitions/max_cache_time"
+        },
+        "metadata": {
+          "$ref": "#/definitions/any_metadata"
+        },
+        "temporary_update_type": {
+          "description": "Indicates that the user should choose a new update type on the next save.",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "body",
+        "metadata"
+      ],
+      "type": "object"
+    },
+    "dfid_research_output_metadata": {
+      "additionalProperties": false,
+      "properties": {
+        "bulk_published": {
+          "type": "boolean"
+        },
+        "country": {
+          "items": {
+            "enum": [
+              "AF",
+              "AL",
+              "DZ",
+              "AD",
+              "AO",
+              "AG",
+              "AR",
+              "AM",
+              "AU",
+              "AT",
+              "AZ",
+              "BS",
+              "BH",
+              "BD",
+              "BB",
+              "BY",
+              "BE",
+              "BZ",
+              "BJ",
+              "BT",
+              "BO",
+              "BA",
+              "BW",
+              "BR",
+              "BN",
+              "BG",
+              "BF",
+              "MM",
+              "BI",
+              "KH",
+              "CM",
+              "CA",
+              "CV",
+              "CF",
+              "TD",
+              "CL",
+              "CN",
+              "CO",
+              "KM",
+              "CG",
+              "CD",
+              "CK",
+              "CR",
+              "HR",
+              "CU",
+              "CY",
+              "CZ",
+              "DK",
+              "DJ",
+              "DM",
+              "DO",
+              "TL",
+              "EC",
+              "EG",
+              "SV",
+              "GQ",
+              "ER",
+              "EE",
+              "ET",
+              "FJ",
+              "FI",
+              "FR",
+              "GA",
+              "GM",
+              "GE",
+              "DE",
+              "GH",
+              "GR",
+              "GD",
+              "GT",
+              "GN",
+              "GW",
+              "GY",
+              "HT",
+              "HN",
+              "HU",
+              "IS",
+              "IN",
+              "ID",
+              "IR",
+              "IQ",
+              "IE",
+              "IL",
+              "IT",
+              "CI",
+              "JM",
+              "JP",
+              "JO",
+              "KZ",
+              "KE",
+              "KI",
+              "XK",
+              "KW",
+              "KG",
+              "LA",
+              "LV",
+              "LB",
+              "LS",
+              "LR",
+              "LY",
+              "LI",
+              "LT",
+              "LU",
+              "MK",
+              "MG",
+              "MW",
+              "MY",
+              "MV",
+              "ML",
+              "MT",
+              "MH",
+              "MR",
+              "MU",
+              "MX",
+              "FM",
+              "MD",
+              "MC",
+              "MN",
+              "ME",
+              "MA",
+              "MZ",
+              "NA",
+              "NR",
+              "NP",
+              "NL",
+              "NZ",
+              "NI",
+              "NE",
+              "NG",
+              "KP",
+              "NO",
+              "OM",
+              "PK",
+              "PW",
+              "PA",
+              "PG",
+              "PY",
+              "PE",
+              "PH",
+              "PL",
+              "PT",
+              "QA",
+              "RO",
+              "RU",
+              "RW",
+              "WS",
+              "SM",
+              "ST",
+              "SA",
+              "SN",
+              "RS",
+              "SC",
+              "SL",
+              "SG",
+              "SK",
+              "SI",
+              "SB",
+              "SO",
+              "ZA",
+              "KR",
+              "SS",
+              "ES",
+              "LK",
+              "KN",
+              "LC",
+              "VC",
+              "SD",
+              "SR",
+              "SZ",
+              "SE",
+              "CH",
+              "SY",
+              "TJ",
+              "TZ",
+              "TH",
+              "TG",
+              "TO",
+              "TT",
+              "TN",
+              "TR",
+              "TM",
+              "TV",
+              "UG",
+              "UA",
+              "AE",
+              "GB",
+              "US",
+              "UY",
+              "UZ",
+              "VU",
+              "VA",
+              "VE",
+              "VN",
+              "YE",
+              "ZM",
+              "ZW"
+            ],
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "dfid_authors": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "dfid_document_type": {
+          "items": {
+            "enum": [
+              "book",
+              "book_chapter",
+              "briefing",
+              "case_study",
+              "conference_paper",
+              "country_report",
+              "dataset",
+              "discussion_paper",
+              "evaluation_report",
+              "journal_article",
+              "journal_issue",
+              "lessons_learned",
+              "literature_review",
+              "manual",
+              "protocol",
+              "research_paper",
+              "systematic_review",
+              "technical_report",
+              "thematic_summary",
+              "tool_kit",
+              "training_materials",
+              "working_paper"
+            ],
+            "type": "string"
+          },
+          "type": "string"
+        },
+        "dfid_review_status": {
+          "enum": [
+            "unreviewed",
+            "peer_reviewed"
+          ],
+          "type": "string"
+        },
+        "dfid_theme": {
+          "items": {
+            "enum": [
+              "agriculture",
+              "climate_and_environment",
+              "economic_growth",
+              "education",
+              "food_and_nutrition",
+              "governance_and_conflict",
+              "health",
+              "humanitarian_disasters_and_emergencies",
+              "infrastructure",
+              "research_communication_and_uptake",
+              "social_change",
+              "water_and_sanitation"
+            ],
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "first_published_at": {
+          "pattern": "^[1-9][0-9]{3}[-/](0[1-9]|1[0-2])[-/](0[1-9]|[12][0-9]|3[0-1])$",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "drug_safety_update_metadata": {
+      "additionalProperties": false,
+      "properties": {
+        "bulk_published": {
+          "type": "boolean"
+        },
+        "first_published_at": {
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$",
+          "type": "string"
+        },
+        "therapeutic_area": {
+          "items": {
+            "enum": [
+              "anaesthesia-intensive-care",
+              "cancer",
+              "cardiovascular-disease-lipidology",
+              "dentistry",
+              "dermatology",
+              "ear-nose-throat",
+              "endocrinology-diabetology-metabolism",
+              "gi-hepatology-pancreatic-disorders",
+              "haematology",
+              "immunology-vaccination",
+              "immunosuppression-transplantation",
+              "infectious-disease",
+              "neurology",
+              "nutrition-dietetics",
+              "obstetrics-gynaecology-fertility",
+              "ophthalmology",
+              "paediatrics-neonatology",
+              "pain-management-palliation",
+              "psychiatry",
+              "radiology-imaging",
+              "respiratory-disease-allergy",
+              "rheumatology",
+              "urology-nephrology"
+            ],
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "employment_appeal_tribunal_decision_metadata": {
+      "additionalProperties": false,
+      "properties": {
+        "bulk_published": {
+          "type": "boolean"
+        },
+        "hidden_indexable_content": {
+          "type": "string"
+        },
+        "tribunal_decision_categories": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "tribunal_decision_decision_date": {
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$",
+          "type": "string"
+        },
+        "tribunal_decision_landmark": {
+          "enum": [
+            "landmark",
+            "not-landmark"
+          ],
+          "type": "string"
+        },
+        "tribunal_decision_sub_categories": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "employment_tribunal_decision_metadata": {
+      "additionalProperties": false,
+      "properties": {
+        "bulk_published": {
+          "type": "boolean"
+        },
+        "hidden_indexable_content": {
+          "type": "string"
+        },
+        "tribunal_decision_categories": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "tribunal_decision_country": {
+          "enum": [
+            "england-and-wales",
+            "scotland"
+          ],
+          "type": "string"
+        },
+        "tribunal_decision_decision_date": {
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "european_structural_investment_fund_metadata": {
+      "additionalProperties": false,
+      "properties": {
+        "bulk_published": {
+          "type": "boolean"
+        },
+        "closing_date": {
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$",
+          "type": "string"
+        },
+        "fund_state": {
+          "enum": [
+            "open",
+            "closed"
+          ],
+          "type": "string"
+        },
+        "fund_type": {
+          "items": {
+            "enum": [
+              "access-to-work",
+              "business-support",
+              "climate-change",
+              "environment",
+              "it-and-broadband",
+              "learning-and-skills",
+              "low-carbon",
+              "renewable-energy",
+              "research-and-innovation",
+              "social-inclusion",
+              "transport",
+              "techincal-assistance",
+              "tourism"
+            ],
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "funding_source": {
+          "items": {
+            "enum": [
+              "european-social-fund",
+              "european-regional-development-fund",
+              "european-agricoltural-fund-for-rural"
+            ],
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "location": {
+          "items": {
+            "enum": [
+              "north-east",
+              "north-west",
+              "yorkshire-and-humber",
+              "east-midlands",
+              "west-midlands",
+              "east-of-england",
+              "south-east",
+              "south-west",
+              "london"
+            ],
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "first_published_at": {
+      "description": "The date the content was first published.  Automatically determined by the publishing-api, unless overridden by the publishing application.",
+      "format": "date-time",
+      "type": "string"
+    },
+    "frontend_links": {
+      "items": {
+        "additionalProperties": true,
+        "properties": {
+          "analytics_identifier": {
+            "$ref": "#/definitions/analytics_identifier"
+          },
+          "api_path": {
+            "$ref": "#/definitions/absolute_path"
+          },
+          "api_url": {
+            "description": "DEPRECATED: api_path should be used instead of api_url. This is due to values of api_url being tied to an environment which can cause problems when data is synced between environments. In time this field will be removed by the Publishing Platform team.",
+            "format": "uri",
+            "type": "string"
+          },
+          "base_path": {
+            "$ref": "#/definitions/absolute_path"
+          },
+          "content_id": {
+            "$ref": "#/definitions/guid"
+          },
+          "document_type": {
+            "type": "string"
+          },
+          "locale": {
+            "$ref": "#/definitions/locale"
+          },
+          "public_updated_at": {
+            "type": "string"
+          },
+          "schema_name": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "web_url": {
+            "description": "DEPRECATED: base_path should be used instead of web_url. This is due to values of web_url being tied to an environment which can cause problems when data is synced between environments. In time this field will be removed by the Publishing Platform team.",
+            "format": "uri",
+            "type": "string"
+          }
+        },
+        "required": [
+          "content_id",
+          "title",
+          "locale"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "guid": {
+      "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-[1-5][a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$",
+      "type": "string"
+    },
+    "international_development_fund_metadata": {
+      "additionalProperties": false,
+      "properties": {
+        "bulk_published": {
+          "type": "boolean"
+        },
+        "development_sector": {
+          "items": {
+            "enum": [
+              "agriculture",
+              "climate-change",
+              "disabilities",
+              "education",
+              "empowerment-and-accountability",
+              "environment",
+              "girls-and-women",
+              "health",
+              "humanitarian-emergencies-disasters",
+              "livelihoods",
+              "peace-and-access-to-justice",
+              "private-sector-business",
+              "technology",
+              "trade",
+              "water-and-sanitation"
+            ],
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "eligible_entities": {
+          "items": {
+            "enum": [
+              "non-governmental-organisations",
+              "uk-based-non-profit-organisations",
+              "uk-based-small-and-diaspora-organisations",
+              "companies",
+              "local-government",
+              "educational-institutions",
+              "individuals",
+              "humanitarian-relief-organisations"
+            ],
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "fund_state": {
+          "enum": [
+            "open",
+            "closed"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "items": {
+            "enum": [
+              "afghanistan",
+              "bangladesh",
+              "burma",
+              "democratic-republic-of-congo",
+              "ethiopia",
+              "ghana",
+              "india",
+              "kenya",
+              "kyrgyzstan",
+              "liberia",
+              "malawi",
+              "mozambique",
+              "nepal",
+              "nigeria",
+              "the-occupied-palestinian-territories",
+              "pakistan",
+              "rwanda",
+              "sierra-leone",
+              "somalia",
+              "south-africa",
+              "sudan",
+              "south-sudan",
+              "tajikistan",
+              "tanzania",
+              "uganda",
+              "yemen",
+              "zambia",
+              "zimbabwe"
+            ],
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "value_of_funding": {
+          "items": {
+            "enum": [
+              "up-to-100000",
+              "100001-500000",
+              "500001-to-1000000",
+              "more-than-1000000"
+            ],
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "locale": {
+      "enum": [
+        "ar",
+        "az",
+        "be",
+        "bg",
+        "bn",
+        "cs",
+        "cy",
+        "de",
+        "dr",
+        "el",
+        "en",
+        "es",
+        "es-419",
+        "et",
+        "fa",
+        "fr",
+        "he",
+        "hi",
+        "hu",
+        "hy",
+        "id",
+        "it",
+        "ja",
+        "ka",
+        "ko",
+        "lt",
+        "lv",
+        "ms",
+        "pl",
+        "ps",
+        "pt",
+        "ro",
+        "ru",
+        "si",
+        "sk",
+        "so",
+        "sq",
+        "sr",
+        "sw",
+        "ta",
+        "th",
+        "tk",
+        "tr",
+        "uk",
+        "ur",
+        "uz",
+        "vi",
+        "zh",
+        "zh-hk",
+        "zh-tw"
+      ],
+      "type": "string"
+    },
+    "maib_report_metadata": {
+      "additionalProperties": false,
+      "properties": {
+        "bulk_published": {
+          "type": "boolean"
+        },
+        "date_of_occurrence": {
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$",
+          "type": "string"
+        },
+        "report_type": {
+          "enum": [
+            "investigation-report",
+            "safety-bulletin",
+            "completed-preliminary-examination",
+            "overseas-report",
+            "discontinued-investigation"
+          ],
+          "type": "string"
+        },
+        "vessel_type": {
+          "items": {
+            "enum": [
+              "merchant-vessel-100-gross-tons-or-over",
+              "merchant-vessel-under-100-gross-tons",
+              "fishing-vessel",
+              "recreational-craft-sail",
+              "recreational-craft-power"
+            ],
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "max_cache_time": {
+      "description": "The maximum length of time the content should be cached, in seconds",
+      "type": "integer"
+    },
+    "medical_safety_alert_metadata": {
+      "additionalProperties": false,
+      "properties": {
+        "alert_type": {
+          "enum": [
+            "drugs",
+            "devices",
+            "field-safety-notices",
+            "company-led-drugs"
+          ],
+          "type": "string"
+        },
+        "bulk_published": {
+          "type": "boolean"
+        },
+        "issued_date": {
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$",
+          "type": "string"
+        },
+        "medical_specialism": {
+          "items": {
+            "enum": [
+              "anaesthetics",
+              "cardiology",
+              "care-home-staff",
+              "cosmetic-surgery",
+              "critical-care",
+              "dentistry",
+              "general-practice",
+              "general-surgery",
+              "haematology-oncology",
+              "infection-prevention",
+              "obstetrics-gynaecology",
+              "ophthalmology",
+              "orthopaedics",
+              "paediatrics",
+              "pathology",
+              "pharmacy",
+              "physiotherapy-occupational-therapy",
+              "radiology",
+              "renal-medicine",
+              "theatre-practitioners",
+              "urology",
+              "vascular-cardiac-surgery"
+            ],
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "nested_headers": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "headers": {
+            "$ref": "#/definitions/nested_headers"
+          },
+          "id": {
+            "type": "string"
+          },
+          "level": {
+            "type": "integer"
+          },
+          "text": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "text",
+          "level",
+          "id"
+        ],
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "public_updated_at": {
+      "description": "When the content was last significantly changed (a major update). Shown to users.  Automatically determined by the publishing-api, unless overridden by the publishing application.",
+      "format": "date-time",
+      "type": "string"
+    },
+    "publishing_app_name": {
+      "description": "The application that published this item.",
+      "enum": [
+        "calculators",
+        "calendars",
+        "collections-publisher",
+        "contacts",
+        "content-tagger",
+        "design-principles",
+        "external-link-tracker",
+        "feedback",
+        "frontend",
+        "hmrc-manuals-api",
+        "info-frontend",
+        "licencefinder",
+        "manuals-frontend",
+        "manuals-publisher",
+        "maslow",
+        "need-api",
+        "performanceplatform-big-screen-view",
+        "policy-publisher",
+        "publisher",
+        "rummager",
+        "service-manual-publisher",
+        "share-sale-publisher",
+        "short-url-manager",
+        "smartanswers",
+        "specialist-publisher",
+        "spotlight",
+        "static",
+        "tariff",
+        "travel-advice-publisher",
+        "whitehall"
+      ],
+      "type": "string"
+    },
+    "publishing_request_id": {
+      "description": "A unique identifier used to track publishing requests to rendered content",
+      "type": "string"
+    },
+    "raib_report_metadata": {
+      "additionalProperties": false,
+      "properties": {
+        "bulk_published": {
+          "type": "boolean"
+        },
+        "date_of_occurrence": {
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$",
+          "type": "string"
+        },
+        "railway_type": {
+          "items": {
+            "enum": [
+              "heavy-rail",
+              "light-rail",
+              "metros",
+              "heritage-railways"
+            ],
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "report_type": {
+          "enum": [
+            "investigation-report",
+            "bulletin",
+            "interim-report",
+            "discontinuation-report",
+            "safety-digest"
+          ],
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "rendering_app": {
+      "description": "The application that renders this item.",
+      "enum": [
+        "calculators",
+        "calendars",
+        "collections",
+        "designprinciples",
+        "email-alert-frontend",
+        "email-campaign-frontend",
+        "feedback",
+        "finder-frontend",
+        "frontend",
+        "government-frontend",
+        "info-frontend",
+        "licencefinder",
+        "manuals-frontend",
+        "performanceplatform-big-screen-view",
+        "publicapi",
+        "rummager",
+        "service-manual-frontend",
+        "smartanswers",
+        "spotlight",
+        "static",
+        "tariff",
+        "whitehall-frontend"
+      ],
+      "type": "string"
+    },
+    "service_standard_report_metadata": {
+      "additionalProperties": false,
+      "properties": {
+        "assessment_date": {
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$",
+          "type": "string"
+        },
+        "bulk_published": {
+          "type": "boolean"
+        }
+      },
+      "type": "object"
+    },
+    "tax_tribunal_decision_metadata": {
+      "additionalProperties": false,
+      "properties": {
+        "bulk_published": {
+          "type": "boolean"
+        },
+        "hidden_indexable_content": {
+          "type": "string"
+        },
+        "tribunal_decision_category": {
+          "enum": [
+            "banking",
+            "charity",
+            "financial-services",
+            "land-registration",
+            "pensions",
+            "tax"
+          ],
+          "type": "string"
+        },
+        "tribunal_decision_decision_date": {
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "title": {
+      "type": "string"
+    },
+    "utaac_decision_metadata": {
+      "additionalProperties": false,
+      "properties": {
+        "bulk_published": {
+          "type": "boolean"
+        },
+        "hidden_indexable_content": {
+          "type": "string"
+        },
+        "tribunal_decision_categories": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "tribunal_decision_decision_date": {
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$",
+          "type": "string"
+        },
+        "tribunal_decision_judges": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "tribunal_decision_sub_categories": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "vehicle_recalls_and_faults_alert_metadata": {
+      "additionalProperties": false,
+      "properties": {
+        "alert_issue_date": {
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$",
+          "type": "string"
+        },
+        "build_end_date": {
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$",
+          "type": "string"
+        },
+        "build_start_date": {
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$",
+          "type": "string"
+        },
+        "bulk_published": {
+          "type": "boolean"
+        },
+        "fault_type": {
+          "enum": [
+            "recall",
+            "non_urgent_fault"
+          ],
+          "type": "string"
+        },
+        "faulty_item_model": {
+          "type": "string"
+        },
+        "faulty_item_type": {
+          "enum": [
+            "vehicle",
+            "baby-seat",
+            "tyres",
+            "parts",
+            "agricultural-equipment",
+            "other-accessories"
+          ],
+          "type": "string"
+        },
+        "manufacturer": {
+          "enum": [
+            "alfa-romeo",
+            "audi",
+            "balco",
+            "bmw",
+            "bridgestone",
+            "britax",
+            "citroen",
+            "ferrari",
+            "mccormick-tractors-ltd",
+            "michelin",
+            "mitas-tyres-ltd",
+            "mothercare",
+            "nim-engineering-ltd",
+            "other-manufacturer"
+          ],
+          "type": "string"
+        },
+        "serial_number": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "withdrawn_notice": {
+      "additionalProperties": false,
+      "properties": {
+        "explanation": {
+          "type": "string"
+        },
+        "withdrawn_at": {
+          "format": "date-time"
+        }
+      },
+      "type": "object"
+    }
+  }
+}

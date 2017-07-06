@@ -1,262 +1,272 @@
-require "yaml"
-
 module SchemaGenerator
   class Format
-
-    ALWAYS_REQUIRED = %w(publishing_app locale document_type schema_name)
-    SOURCE_PROPERTIES = %w(base_path routes redirects title description details)
-
     attr_reader :schema_name
 
-    def initialize(schema_name, data)
+    def initialize(schema_name, format_data)
       @schema_name = schema_name
-      @data = data
+      @format_data = format_data
     end
 
-    def publisher_content_schema
-      schema = base_schema.merge(
-        required: content_schema_required_fields,
-        properties: content_schema_properties
+    def document_type
+      @document_type ||= DocumentType.new(format_data["document_type"])
+    end
+
+    def base_path
+      @base_path ||= OptionalProperty.new(
+        property: "base_path",
+        status: format_data["base_path"] || "required",
+        required_definition: "absolute_path",
+        optional_definition: "absolute_path_optional",
+        forbidden_definition: "null"
       )
-      schema[:definitions] = DefinitionsResolver.new(
-        schema[:properties],
-        Jsonnet.load("jsonnet_formats/shared/shared_definitions.jsonnet").merge(data["definitions"])
-      ).call
-      schema
     end
 
-    def publisher_links_schema
-      schema = base_schema.merge(
-        properties: links_schema_properties
+    def description
+      @description ||= OptionalProperty.new(
+        property: "description",
+        status: format_data["description"] || "optional",
+        required_definition: "description",
+        optional_definition: "description_optional",
+        forbidden_definition: "null"
       )
-      schema[:definitions] = DefinitionsResolver.new(
-        schema[:properties],
-        Jsonnet.load("jsonnet_formats/shared/shared_definitions.jsonnet").merge(data["definitions"])
-      ).call
-      schema
     end
 
-    def notification_schema
-      convert_to_notifcation(publisher_content_schema)
+    def details
+      @details ||= OptionalProperty.new(
+        property: "details",
+        status: format_data["details"] || "required",
+        required_definition: "details",
+        optional_definition: "details",
+        forbidden_definition: "empty_object"
+      )
+    end
+
+    def redirects
+      @redirects ||= OptionalProperty.new(
+        property: "redirects",
+        status: format_data["redirects"] || "required",
+        required_definition: "redirects",
+        optional_definition: "redirects_optional",
+        forbidden_definition: "empty_array"
+      )
+    end
+
+    def rendering_app
+      @rendering_app ||= OptionalProperty.new(
+        property: "base_path",
+        status: format_data["rendering_app"] || "required",
+        required_definition: "rendering_app",
+        optional_definition: "rendering_app_optional",
+        forbidden_definition: "null"
+      )
+    end
+
+    def routes
+      @routes ||= OptionalProperty.new(
+        property: "routes",
+        status: format_data["routes"] || "required",
+        required_definition: "routes",
+        optional_definition: "routes_optional",
+        forbidden_definition: "empty_array"
+      )
+    end
+
+    def title
+      @title ||= OptionalProperty.new(
+        property: "title",
+        status: format_data["title"] || "required",
+        required_definition: "title",
+        optional_definition: "title_optional",
+        forbidden_definition: "null"
+      )
+    end
+
+    def frontend?
+      format_data.fetch("frontend", true) && !base_path.forbidden?
+    end
+
+    def definitions
+      format_data["definitions"] || {}
+    end
+
+    def edition_links
+      @edition_links ||= create_edition_links
+    end
+
+    def content_links
+      @content_links ||= create_content_links
+    end
+
+    def schema_name_definition
+      if schema_name == "placeholder"
+        {
+          "type" => "string",
+          "pattern" => "^(placeholder|placeholder_.+)$",
+          "description" => "Should be of the form 'placeholder_my_format_name'. 'placeholder' is allowed for backwards compatibility."
+        }
+      else
+        {
+          "enum" => [schema_name],
+          "type" => "string"
+        }
+      end
+    end
+
+    def publisher_required
+      %w(base_path description details redirects rendering_app routes title)
+        .select { |property| public_send(property.to_sym).required? }
     end
 
   private
 
-    attr_reader :data
+    attr_reader :format_data
 
-    def content_schema_required_fields
-      required_source_properties = SOURCE_PROPERTIES.select do |property|
-        data[property] == "required" || data[property]["required"]
+    def create_edition_links
+      links_data = format_data.fetch("edition_links", {})
+      Links.new(links_data)
+    end
+
+    def create_content_links
+      links_data = format_data.fetch("links", {})
+      links = Links.new(links_data)
+      if links.required_links.any?
+        raise "Can't require links that aren't edition links - as patch link set allows varying amounts of links"
       end
-      (ALWAYS_REQUIRED + required_source_properties).sort
+      links
     end
 
-    def content_schema_properties
-      customisable = {
-        base_path: schema_property(data["base_path"], "$ref": "#/definitions/absolute_path"),
-        title: schema_property(data["title"], type: "string"),
-        description: schema_property(data["description"], type: "string"),
-        routes: routes_property(data["routes"]),
-        redirects: redirects_property(data["redirects"]),
-        details: schema_property(data["details"], "$ref": "#/definitions/details"),
-        document_type: document_type_property(data["document_type"]),
-        links: LinksIn.call(data["edition_links"]),
-        rendering_app: schema_property(data["rendering_app"], "$ref": "#/definitions/rendering_app_name"),
-      }.delete_if { |_, v| v.nil? }
+    class DocumentType
+      attr_reader :document_types
 
-      customisable.merge(consistent_schema_properties)
-    end
+      def initialize(document_types)
+        @document_types = document_types
+      end
 
-    def links_schema_properties
-      {
-        previous_version: { type: "string" },
-        links: LinksIn.call(data["links"])
-      }
-    end
-
-    def consistent_schema_properties
-      Jsonnet.load("jsonnet_formats/shared/consistent_schema_properties.jsonnet")
-    end
-
-    def schema_property(definition, default)
-      definition_hash = definition_as_hash(definition)
-      return if definition_hash["forbidden"]
-
-      type = definition_or_default(definition_hash["definition"], default)
-
-      definition["required"] ? type : { anyOf: [type, { type: "null" }] }
-    end
-
-    def routes_property(property)
-      return if property == "forbidden"
-
-      definition = {
-        type: "array",
-        items: {
-          "$ref": "#/definitions/route"
-        }
-      }
-
-      definition[:minItems] = 1 if property == "required"
-      definition
-    end
-
-    def build_definitions(definitions)
-      shared_definitions = Jsonnet.load("jsonnet_formats/shared/shared_definitions.jsonnet")
-      shared_definitions.merge(data["definitions"]).delete_if do |k, v|
-        !definitions.include?(k)
+      def definition
+        if !document_types || document_types.empty?
+          { "$ref": "#/definitions/document_type" }
+        else
+          { "enum": Array(document_types), "type": "string" }
+        end
       end
     end
 
-    def extract_definitions(properties)
-      definitions = properties.inject([]) do |memo, (k, v)|
-        next memo + extract_definitions(v) if v.is_a?(Hash)
-        k.to_s == "$ref" ? memo << v.sub("#/definitions/", "") : memo
-      end
-      definitions.uniq
-    end
+    class OptionalProperty
+      VALID_STATUSES = %w(required optional forbidden)
 
-    def redirects_property(property)
-      return if property == "forbidden"
+      def initialize(
+        property:,
+        status:,
+        required_definition:,
+        optional_definition:,
+        forbidden_definition:
+      )
+        @property = property
+        @status = status
+        @required_definition = required_definition
+        @optional_definition = optional_definition
+        @forbidden_definition = forbidden_definition
 
-      definition = {
-        type: "array",
-        items: {
-          "$ref": "#/definitions/redirect_route"
-        }
-      }
-
-      definition[:minItems] = 1 if property == "required"
-      definition
-    end
-
-    def document_type_property(property)
-      return { "$ref": "#/definitions/document_type" } unless property
-      { enum: Array(property), type: "string" }
-    end
-
-    def definition_as_hash(definition)
-      definition.is_a?(Hash) ? definition : { definition => true }
-    end
-
-    def definition_or_default(definition, default)
-      return default unless definition
-
-      if definition.is_a?(Hash)
-        definition
-      else
-        { "$ref" => "#/definitions/#{definition}" }
-      end
-    end
-
-    def base_schema
-      {
-        "$schema": "http://json-schema.org/draft-04/schema#",
-        type: "object",
-        additionalProperties: false
-      }
-    end
-
-    def convert_to_notifcation(schema)
-      schema
-    end
-
-    class LinksIn
-      def self.call(defined_links)
-        self.new(defined_links).call
+        unless VALID_STATUSES.include?(status)
+          raise "Invalid value for #{property}: #{status}. Expected #{VALID_STATUSES.join(', ')}"
+        end
       end
 
-      def initialize(defined_links)
-        @links = normalise_links(defined_links)
-        @required = determine_required(defined_links)
+      def optional?
+        !required? && !forbidden?
       end
 
-      def call
-        properties = {
-          type: "object",
-          additionalProperties: false,
-          properties: links
-        }
-        properties[:required] = required unless required.empty?
-        properties
+      def required?
+        status == "required"
+      end
+
+      def forbidden?
+        status == "forbidden"
+      end
+
+      def definition
+        determined = determined_definition
+        case determined
+        when "null"
+          { "type" => "null" }
+        when "empty_array"
+          {
+            "type" => "array",
+            "items" => {},
+            "additionalItems" => false
+          }
+        when "empty_object"
+          {
+            "type" => "object",
+            "properties" => {},
+            "additionalProperties" => false
+          }
+        else
+          { "$ref" => "#/definitions/#{determined}" }
+        end
       end
 
     private
-      attr_reader :links, :required
 
-      def determine_required(defined_links)
-        defined_links.select { |link| link["required"] }.keys
+      attr_reader :property, :status, :required_definition,
+        :optional_definition, :forbidden_definition
+
+      def determined_definition
+        return forbidden_definition if forbidden?
+        return required_definition if required?
+        optional_definition
+      end
+    end
+
+    class Links
+      ALLOWED_KEYS = %w(description required minItems maxItems).freeze
+
+      attr_reader :links
+
+      def initialize(links_data)
+        @links = normalise_links(links_data)
       end
 
-      def normalise_links(defined_links)
-        defined_links.each_with_object({}) do |(k, v), hash|
+      def guid_definition
+        links.each_with_object({}) do |(k, v), hash|
+          link = v.merge({ "$ref" => "#/definitions/guid_list" })
+            .delete_if { |k| %w(minItems).include?(k) }
+          hash[k] = link
+        end
+      end
+
+      def required_links
+        links.each_with_object([]) do |(k, v), memo|
+          memo << k if v["required"]
+        end
+      end
+
+      def frontend_definition
+        links.each_with_object({}) do |(k, v), hash|
+          link = v.merge({ "$ref" => "#/definitions/frontend_links" })
+            .delete_if { |k| %w(required minItems).include?(k) }
+          hash[k] = link
+        end
+      end
+
+    private
+
+      def normalise_links(links_data)
+        links_data.each_with_object({}) do |(k, v), hash|
+          next unless v
           if v.is_a?(Hash)
-            definition = v.clone.delete_if { |k| k == "required" }
-              .merge("$ref": "#/definitions/guid_list")
+            extra_keys = v.keys - ALLOWED_KEYS
+            if extra_keys.any?
+              raise "Unexpected keys #{extra_keys.join(', ')} for link - only #{ALLOWED_KEYS.join(', ')} are allowed"
+            end
+            definition = v
           else
-            definition = {
-              description: v,
-              "$ref": "#/definitions/guid_list"
-            }
+            definition = {}
+            definition["description"] = v unless v.empty?
           end
 
           hash[k] = definition
         end
-      end
-    end
-
-    class DefinitionsResolver
-      def initialize(properties, definitions)
-        @properties = properties
-        @definitions = definitions
-      end
-
-      def call
-        definitions_from_properties = extract_definitions(properties)
-        definitions_with_dependencies = resolve_depenencies(
-          definitions_from_properties, definitions_from_properties
-        )
-
-        definitions.clone.delete_if { |k, _| !definitions_with_dependencies.include?(k) }
-
-      end
-
-    private
-
-      attr_reader :properties, :definitions
-
-      def definition_dependencies
-        @definition_dependencies ||= calculate_definition_dependencies
-      end
-
-      def calculate_definition_dependencies
-        definitions.each_with_object({}) do |(k, v), memo|
-          memo[k] = extract_definitions(v)
-        end
-      end
-
-      def extract_definitions(properties)
-        definitions = properties.inject([]) do |memo, (key, value)|
-          if value.is_a?(Hash)
-            memo + extract_definitions(value)
-          elsif value.respond_to?(:map)
-            memo + value.flat_map { |item| item.is_a?(Hash) ? extract_definitions(item) : nil }
-          else
-            key.to_s == "$ref" ? memo << value.sub("#/definitions/", "") : memo
-          end
-        end
-        definitions.compact.uniq
-      end
-
-      def resolve_depenencies(definition_names, dependencies_found = [])
-        names = definition_names.flat_map do |name|
-          dependencies = definition_dependencies[name]
-          raise "Undefined definition: #{name}" unless dependencies
-          new_dependencies = dependencies - dependencies_found
-          current_dependencies = dependencies_found + new_dependencies
-          current_dependencies + resolve_depenencies(new_dependencies, current_dependencies)
-        end
-        names.uniq
       end
     end
   end

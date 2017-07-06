@@ -6,35 +6,30 @@
     "base_path",
     "details",
     "document_type",
-    "locale",
     "publishing_app",
+    "rendering_app",
     "routes",
     "schema_name",
     "title"
   ],
   "properties": {
+    "access_limited": {
+      "$ref": "#/definitions/access_limited"
+    },
+    "analytics_identifier": {
+      "$ref": "#/definitions/analytics_identifier"
+    },
     "base_path": {
       "$ref": "#/definitions/absolute_path"
     },
-    "title": {
-      "type": "string"
-    },
-    "description": {
-      "anyOf": [
-        {
-          "type": "string"
-        },
-        {
-          "type": "null"
-        }
+    "change_note": {
+      "type": [
+        "null",
+        "string"
       ]
     },
-    "routes": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/route"
-      },
-      "minItems": 1
+    "description": {
+      "$ref": "#/definitions/description_optional"
     },
     "details": {
       "$ref": "#/definitions/details"
@@ -45,31 +40,6 @@
       ],
       "type": "string"
     },
-    "links": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "policy_areas": {
-          "description": "A largely deprecated tag currently only used to power email alerts.",
-          "$ref": "#/definitions/guid_list"
-        }
-      }
-    },
-    "rendering_app": {
-      "$ref": "#/definitions/rendering_app_name"
-    },
-    "access_limited": {
-      "$ref": "#/definitions/access_limited"
-    },
-    "analytics_identifier": {
-      "$ref": "#/definitions/analytics_identifier"
-    },
-    "change_note": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
     "first_published_at": {
       "$ref": "#/definitions/first_published_at"
     },
@@ -77,6 +47,12 @@
       "description": "Last time when the content received a major or minor update.",
       "format": "date-time",
       "type": "string"
+    },
+    "links": {
+      "policy_areas": {
+        "description": "A largely deprecated tag currently only used to power email alerts.",
+        "$ref": "#/definitions/guid_list"
+      }
     },
     "locale": {
       "$ref": "#/definitions/locale"
@@ -105,15 +81,29 @@
     "publishing_app": {
       "$ref": "#/definitions/publishing_app_name"
     },
-    "update_type": {
-      "enum": [
-        "major",
-        "minor",
-        "republish"
-      ]
+    "redirects": {
+      "type": "array",
+      "items": {
+      },
+      "additionalItems": false
     },
-    "withdrawn_notice": {
-      "$ref": "#/definitions/withdrawn_notice"
+    "rendering_app": {
+      "$ref": "#/definitions/rendering_app"
+    },
+    "routes": {
+      "$ref": "#/definitions/routes"
+    },
+    "schema_name": {
+      "enum": [
+        "finder_email_signup"
+      ],
+      "type": "string"
+    },
+    "title": {
+      "$ref": "#/definitions/title"
+    },
+    "update_type": {
+      "$ref": "#/definitions/update_type"
     }
   },
   "definitions": {
@@ -148,6 +138,111 @@
         }
       ],
       "description": "A short identifier we send to Google Analytics for multi-valued fields. This means we avoid the truncated values we would get if we sent the path or slug of eg organisations."
+    },
+    "description": {
+      "type": "string"
+    },
+    "description_optional": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/description"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "details": {
+      "additionalProperties": false,
+      "properties": {
+        "beta": {
+          "$ref": "#/definitions/finder_beta"
+        },
+        "email_filter_by": {
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "email_filter_name": {
+          "oneOf": [
+            {
+              "properties": {
+                "plural": {
+                  "type": "string"
+                },
+                "singular": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "email_signup_choice": {
+          "items": {
+            "properties": {
+              "key": {
+                "type": "string"
+              },
+              "prechecked": {
+                "type": "boolean"
+              },
+              "radio_button_name": {
+                "type": "string"
+              },
+              "topic_name": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "key",
+              "radio_button_name",
+              "topic_name",
+              "prechecked"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "subscription_list_title_prefix": {
+          "oneOf": [
+            {
+              "properties": {
+                "many": {
+                  "type": "string"
+                },
+                "plural": {
+                  "type": "string"
+                },
+                "singular": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            {
+              "type": "string"
+            }
+          ]
+        }
+      },
+      "required": [
+        "email_signup_choice",
+        "email_filter_by",
+        "subscription_list_title_prefix"
+      ],
+      "type": "object"
     },
     "finder_beta": {
       "anyOf": [
@@ -272,7 +367,7 @@
       ],
       "type": "string"
     },
-    "rendering_app_name": {
+    "rendering_app": {
       "description": "The application that renders this item.",
       "enum": [
         "calculators",
@@ -319,109 +414,22 @@
       ],
       "type": "object"
     },
-    "withdrawn_notice": {
-      "additionalProperties": false,
-      "properties": {
-        "explanation": {
-          "type": "string"
-        },
-        "withdrawn_at": {
-          "format": "date-time"
-        }
+    "routes": {
+      "items": {
+        "$ref": "#/definitions/route"
       },
-      "type": "object"
+      "minItems": 1,
+      "type": "array"
     },
-    "details": {
-      "additionalProperties": false,
-      "properties": {
-        "beta": {
-          "$ref": "#/definitions/finder_beta"
-        },
-        "email_filter_by": {
-          "oneOf": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "null"
-            }
-          ]
-        },
-        "email_filter_name": {
-          "oneOf": [
-            {
-              "properties": {
-                "plural": {
-                  "type": "string"
-                },
-                "singular": {
-                  "type": "string"
-                }
-              },
-              "type": "object"
-            },
-            {
-              "type": "string"
-            },
-            {
-              "type": "null"
-            }
-          ]
-        },
-        "email_signup_choice": {
-          "items": {
-            "properties": {
-              "key": {
-                "type": "string"
-              },
-              "prechecked": {
-                "type": "boolean"
-              },
-              "radio_button_name": {
-                "type": "string"
-              },
-              "topic_name": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "key",
-              "radio_button_name",
-              "topic_name",
-              "prechecked"
-            ],
-            "type": "object"
-          },
-          "type": "array"
-        },
-        "subscription_list_title_prefix": {
-          "oneOf": [
-            {
-              "properties": {
-                "many": {
-                  "type": "string"
-                },
-                "plural": {
-                  "type": "string"
-                },
-                "singular": {
-                  "type": "string"
-                }
-              },
-              "type": "object"
-            },
-            {
-              "type": "string"
-            }
-          ]
-        }
-      },
-      "required": [
-        "email_signup_choice",
-        "email_filter_by",
-        "subscription_list_title_prefix"
-      ],
-      "type": "object"
+    "title": {
+      "type": "string"
+    },
+    "update_type": {
+      "enum": [
+        "major",
+        "minor",
+        "republish"
+      ]
     }
   }
 }

@@ -3,30 +3,23 @@
   "type": "object",
   "additionalProperties": false,
   "properties": {
+    "links": {
+      "available_translations": {
+        "$ref": "#/definitions/guid_list"
+      },
+      "organisations": {
+        "$ref": "#/definitions/guid_list"
+      },
+      "policy_areas": {
+        "description": "A largely deprecated tag currently only used to power email alerts.",
+        "$ref": "#/definitions/guid_list"
+      },
+      "sections": {
+        "$ref": "#/definitions/guid_list"
+      }
+    },
     "previous_version": {
       "type": "string"
-    },
-    "links": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "available_translations": {
-          "description": "",
-          "$ref": "#/definitions/guid_list"
-        },
-        "organisations": {
-          "description": "",
-          "$ref": "#/definitions/guid_list"
-        },
-        "policy_areas": {
-          "description": "A largely deprecated tag currently only used to power email alerts.",
-          "$ref": "#/definitions/guid_list"
-        },
-        "sections": {
-          "description": "",
-          "$ref": "#/definitions/guid_list"
-        }
-      }
     }
   },
   "definitions": {

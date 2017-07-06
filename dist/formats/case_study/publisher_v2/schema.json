@@ -6,35 +6,30 @@
     "base_path",
     "details",
     "document_type",
-    "locale",
     "publishing_app",
+    "rendering_app",
     "routes",
     "schema_name",
     "title"
   ],
   "properties": {
+    "access_limited": {
+      "$ref": "#/definitions/access_limited"
+    },
+    "analytics_identifier": {
+      "$ref": "#/definitions/analytics_identifier"
+    },
     "base_path": {
       "$ref": "#/definitions/absolute_path"
     },
-    "title": {
-      "type": "string"
-    },
-    "description": {
-      "anyOf": [
-        {
-          "type": "string"
-        },
-        {
-          "type": "null"
-        }
+    "change_note": {
+      "type": [
+        "null",
+        "string"
       ]
     },
-    "routes": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/route"
-      },
-      "minItems": 1
+    "description": {
+      "$ref": "#/definitions/description_optional"
     },
     "details": {
       "$ref": "#/definitions/details"
@@ -45,31 +40,6 @@
       ],
       "type": "string"
     },
-    "links": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "policy_areas": {
-          "description": "A largely deprecated tag currently only used to power email alerts.",
-          "$ref": "#/definitions/guid_list"
-        }
-      }
-    },
-    "rendering_app": {
-      "$ref": "#/definitions/rendering_app_name"
-    },
-    "access_limited": {
-      "$ref": "#/definitions/access_limited"
-    },
-    "analytics_identifier": {
-      "$ref": "#/definitions/analytics_identifier"
-    },
-    "change_note": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
     "first_published_at": {
       "$ref": "#/definitions/first_published_at"
     },
@@ -77,6 +47,12 @@
       "description": "Last time when the content received a major or minor update.",
       "format": "date-time",
       "type": "string"
+    },
+    "links": {
+      "policy_areas": {
+        "description": "A largely deprecated tag currently only used to power email alerts.",
+        "$ref": "#/definitions/guid_list"
+      }
     },
     "locale": {
       "$ref": "#/definitions/locale"
@@ -105,15 +81,29 @@
     "publishing_app": {
       "$ref": "#/definitions/publishing_app_name"
     },
-    "update_type": {
-      "enum": [
-        "major",
-        "minor",
-        "republish"
-      ]
+    "redirects": {
+      "type": "array",
+      "items": {
+      },
+      "additionalItems": false
     },
-    "withdrawn_notice": {
-      "$ref": "#/definitions/withdrawn_notice"
+    "rendering_app": {
+      "$ref": "#/definitions/rendering_app"
+    },
+    "routes": {
+      "$ref": "#/definitions/routes"
+    },
+    "schema_name": {
+      "enum": [
+        "case_study"
+      ],
+      "type": "string"
+    },
+    "title": {
+      "$ref": "#/definitions/title"
+    },
+    "update_type": {
+      "$ref": "#/definitions/update_type"
     }
   },
   "definitions": {
@@ -173,6 +163,65 @@
         "type": "object"
       },
       "type": "array"
+    },
+    "description": {
+      "type": "string"
+    },
+    "description_optional": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/description"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "details": {
+      "additionalProperties": false,
+      "properties": {
+        "archive_notice": {
+          "additionalProperties": false,
+          "properties": {
+            "archived_at": {
+              "format": "date-time"
+            },
+            "explanation": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "body": {
+          "$ref": "#/definitions/body"
+        },
+        "change_history": {
+          "$ref": "#/definitions/change_history"
+        },
+        "emphasised_organisations": {
+          "$ref": "#/definitions/emphasised_organisations"
+        },
+        "first_public_at": {
+          "$ref": "#/definitions/first_public_at"
+        },
+        "format_display_type": {
+          "enum": [
+            "case_study"
+          ],
+          "type": "string"
+        },
+        "image": {
+          "$ref": "#/definitions/image"
+        },
+        "tags": {
+          "$ref": "#/definitions/tags"
+        }
+      },
+      "required": [
+        "body",
+        "first_public_at"
+      ],
+      "type": "object"
     },
     "emphasised_organisations": {
       "description": "The content ids of the organisations that should be displayed first in the list of organisations related to the item, these content ids must be present in the item organisation links hash.",
@@ -324,7 +373,7 @@
       ],
       "type": "string"
     },
-    "rendering_app_name": {
+    "rendering_app": {
       "description": "The application that renders this item.",
       "enum": [
         "calculators",
@@ -371,6 +420,13 @@
       ],
       "type": "object"
     },
+    "routes": {
+      "items": {
+        "$ref": "#/definitions/route"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
     "tags": {
       "additionalProperties": false,
       "description": "Field used by email-alert-api to trigger email alerts for subscriptions to topics (gov.uk/topic) and policies (gov.uk/policies).",
@@ -408,63 +464,15 @@
       },
       "type": "object"
     },
-    "withdrawn_notice": {
-      "additionalProperties": false,
-      "properties": {
-        "explanation": {
-          "type": "string"
-        },
-        "withdrawn_at": {
-          "format": "date-time"
-        }
-      },
-      "type": "object"
+    "title": {
+      "type": "string"
     },
-    "details": {
-      "additionalProperties": false,
-      "properties": {
-        "archive_notice": {
-          "additionalProperties": false,
-          "properties": {
-            "archived_at": {
-              "format": "date-time"
-            },
-            "explanation": {
-              "type": "string"
-            }
-          },
-          "type": "object"
-        },
-        "body": {
-          "$ref": "#/definitions/body"
-        },
-        "change_history": {
-          "$ref": "#/definitions/change_history"
-        },
-        "emphasised_organisations": {
-          "$ref": "#/definitions/emphasised_organisations"
-        },
-        "first_public_at": {
-          "$ref": "#/definitions/first_public_at"
-        },
-        "format_display_type": {
-          "enum": [
-            "case_study"
-          ],
-          "type": "string"
-        },
-        "image": {
-          "$ref": "#/definitions/image"
-        },
-        "tags": {
-          "$ref": "#/definitions/tags"
-        }
-      },
-      "required": [
-        "body",
-        "first_public_at"
-      ],
-      "type": "object"
+    "update_type": {
+      "enum": [
+        "major",
+        "minor",
+        "republish"
+      ]
     }
   }
 }

@@ -6,70 +6,36 @@
     "base_path",
     "details",
     "document_type",
-    "locale",
     "publishing_app",
+    "rendering_app",
     "routes",
     "schema_name",
     "title"
   ],
   "properties": {
-    "base_path": {
-      "$ref": "#/definitions/absolute_path"
-    },
-    "title": {
-      "type": "string"
-    },
-    "description": {
-      "anyOf": [
-        {
-          "type": "string"
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
-    "routes": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/route"
-      },
-      "minItems": 1
-    },
-    "details": {
-      "$ref": "#/definitions/details"
-    },
-    "document_type": {
-      "$ref": "#/definitions/document_type"
-    },
-    "links": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "featured_policies": {
-          "description": "Featured policies primarily for use with Whitehall organisations",
-          "$ref": "#/definitions/guid_list"
-        },
-        "policy_areas": {
-          "description": "A largely deprecated tag currently only used to power email alerts.",
-          "$ref": "#/definitions/guid_list"
-        }
-      }
-    },
-    "rendering_app": {
-      "$ref": "#/definitions/rendering_app_name"
-    },
     "access_limited": {
       "$ref": "#/definitions/access_limited"
     },
     "analytics_identifier": {
       "$ref": "#/definitions/analytics_identifier"
     },
+    "base_path": {
+      "$ref": "#/definitions/absolute_path"
+    },
     "change_note": {
       "type": [
         "null",
         "string"
       ]
+    },
+    "description": {
+      "$ref": "#/definitions/description_optional"
+    },
+    "details": {
+      "$ref": "#/definitions/details"
+    },
+    "document_type": {
+      "$ref": "#/definitions/document_type"
     },
     "first_published_at": {
       "$ref": "#/definitions/first_published_at"
@@ -78,6 +44,16 @@
       "description": "Last time when the content received a major or minor update.",
       "format": "date-time",
       "type": "string"
+    },
+    "links": {
+      "featured_policies": {
+        "description": "Featured policies primarily for use with Whitehall organisations",
+        "$ref": "#/definitions/guid_list"
+      },
+      "policy_areas": {
+        "description": "A largely deprecated tag currently only used to power email alerts.",
+        "$ref": "#/definitions/guid_list"
+      }
     },
     "locale": {
       "$ref": "#/definitions/locale"
@@ -106,15 +82,28 @@
     "publishing_app": {
       "$ref": "#/definitions/publishing_app_name"
     },
-    "update_type": {
-      "enum": [
-        "major",
-        "minor",
-        "republish"
-      ]
+    "redirects": {
+      "type": "array",
+      "items": {
+      },
+      "additionalItems": false
     },
-    "withdrawn_notice": {
-      "$ref": "#/definitions/withdrawn_notice"
+    "rendering_app": {
+      "$ref": "#/definitions/rendering_app"
+    },
+    "routes": {
+      "$ref": "#/definitions/routes"
+    },
+    "schema_name": {
+      "type": "string",
+      "pattern": "^(placeholder|placeholder_.+)$",
+      "description": "Should be of the form 'placeholder_my_format_name'. 'placeholder' is allowed for backwards compatibility."
+    },
+    "title": {
+      "$ref": "#/definitions/title"
+    },
+    "update_type": {
+      "$ref": "#/definitions/update_type"
     }
   },
   "definitions": {
@@ -156,6 +145,87 @@
         "string",
         "null"
       ]
+    },
+    "description": {
+      "type": "string"
+    },
+    "description_optional": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/description"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "details": {
+      "additionalProperties": false,
+      "properties": {
+        "analytics_identifier": {
+          "$ref": "#/definitions/analytics_identifier"
+        },
+        "brand": {
+          "description": "Used for organisations, to allow us to publish branding / logo information. Remove when organisations are migrated.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "change_note": {
+          "$ref": "#/definitions/change_note"
+        },
+        "end_date": {
+          "description": "Used for topical events, so that related documents can get the date. Remove when topical events are migrated.",
+          "format": "date-time",
+          "type": "string"
+        },
+        "external_related_links": {
+          "$ref": "#/definitions/external_related_links"
+        },
+        "logo": {
+          "properties": {
+            "crest": {
+              "description": "Used for organisations, to allow us to publish branding / logo information. Remove when organisations are migrated.",
+              "enum": [
+                "bis",
+                "eo",
+                "hmrc",
+                "ho",
+                "mod",
+                "portcullis",
+                "single-identity",
+                "so",
+                "ukaea",
+                "wales",
+                null
+              ],
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "formatted_title": {
+              "description": "Used for organisations, to allow us to publish branding / logo information. Remove when organisations are migrated.",
+              "type": "string"
+            },
+            "image": {
+              "$ref": "#/definitions/image",
+              "description": "An image for organisations that use a custom logo"
+            }
+          },
+          "type": "object"
+        },
+        "start_date": {
+          "description": "Used for topical events, so that related documents can get the date. Remove when topical events are migrated.",
+          "format": "date-time",
+          "type": "string"
+        },
+        "tags": {
+          "$ref": "#/definitions/tags"
+        }
+      },
+      "type": "object"
     },
     "document_type": {
       "enum": [
@@ -481,7 +551,7 @@
       ],
       "type": "string"
     },
-    "rendering_app_name": {
+    "rendering_app": {
       "description": "The application that renders this item.",
       "enum": [
         "calculators",
@@ -528,6 +598,13 @@
       ],
       "type": "object"
     },
+    "routes": {
+      "items": {
+        "$ref": "#/definitions/route"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
     "tags": {
       "additionalProperties": false,
       "description": "Field used by email-alert-api to trigger email alerts for subscriptions to topics (gov.uk/topic) and policies (gov.uk/policies).",
@@ -565,85 +642,15 @@
       },
       "type": "object"
     },
-    "withdrawn_notice": {
-      "additionalProperties": false,
-      "properties": {
-        "explanation": {
-          "type": "string"
-        },
-        "withdrawn_at": {
-          "format": "date-time"
-        }
-      },
-      "type": "object"
+    "title": {
+      "type": "string"
     },
-    "details": {
-      "additionalProperties": false,
-      "properties": {
-        "analytics_identifier": {
-          "$ref": "#/definitions/analytics_identifier"
-        },
-        "brand": {
-          "description": "Used for organisations, to allow us to publish branding / logo information. Remove when organisations are migrated.",
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "change_note": {
-          "$ref": "#/definitions/change_note"
-        },
-        "end_date": {
-          "description": "Used for topical events, so that related documents can get the date. Remove when topical events are migrated.",
-          "format": "date-time",
-          "type": "string"
-        },
-        "external_related_links": {
-          "$ref": "#/definitions/external_related_links"
-        },
-        "logo": {
-          "properties": {
-            "crest": {
-              "description": "Used for organisations, to allow us to publish branding / logo information. Remove when organisations are migrated.",
-              "enum": [
-                "bis",
-                "eo",
-                "hmrc",
-                "ho",
-                "mod",
-                "portcullis",
-                "single-identity",
-                "so",
-                "ukaea",
-                "wales",
-                null
-              ],
-              "type": [
-                "string",
-                "null"
-              ]
-            },
-            "formatted_title": {
-              "description": "Used for organisations, to allow us to publish branding / logo information. Remove when organisations are migrated.",
-              "type": "string"
-            },
-            "image": {
-              "$ref": "#/definitions/image",
-              "description": "An image for organisations that use a custom logo"
-            }
-          },
-          "type": "object"
-        },
-        "start_date": {
-          "description": "Used for topical events, so that related documents can get the date. Remove when topical events are migrated.",
-          "format": "date-time",
-          "type": "string"
-        },
-        "tags": {
-          "$ref": "#/definitions/tags"
-        }
-      },
-      "type": "object"
+    "update_type": {
+      "enum": [
+        "major",
+        "minor",
+        "republish"
+      ]
     }
   }
 }

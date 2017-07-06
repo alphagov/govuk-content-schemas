@@ -6,13 +6,8 @@
   title: "required",
   description: "optional",
   rendering_app: "required",
-  details: {
-    required: true,
-    definition: "details"
-  },
-  definitions: {
-
-  },
+  details: "required",
+  definitions: {},
   edition_links: import "base_edition_links.jsonnet",
   links: import "base_links.jsonnet"
 }
