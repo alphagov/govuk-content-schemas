@@ -9,7 +9,7 @@ end
 task build: [
               :reformat_authored_json,
               :validate_shared_details_definitions,
-              :regenerate_schemas,
+              :regenerate_jsonnet_schemas,
               :validate_dist_schemas,
               :validate_uniqueness_of_frontend_example_base_paths,
               :validate_links,
