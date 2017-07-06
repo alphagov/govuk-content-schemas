@@ -1,0 +1,438 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "base_path",
+    "details",
+    "document_type",
+    "locale",
+    "publishing_app",
+    "routes",
+    "schema_name",
+    "title"
+  ],
+  "properties": {
+    "base_path": {
+      "$ref": "#/definitions/absolute_path"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "routes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/route"
+      },
+      "minItems": 1
+    },
+    "details": {
+      "$ref": "#/definitions/details"
+    },
+    "document_type": {
+      "enum": [
+        "email_alert_signup"
+      ],
+      "type": "string"
+    },
+    "links": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "policy_areas": {
+          "description": "A largely deprecated tag currently only used to power email alerts.",
+          "$ref": "#/definitions/guid_list"
+        }
+      }
+    },
+    "rendering_app": {
+      "$ref": "#/definitions/rendering_app_name"
+    },
+    "access_limited": {
+      "$ref": "#/definitions/access_limited"
+    },
+    "analytics_identifier": {
+      "$ref": "#/definitions/analytics_identifier"
+    },
+    "change_note": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "first_published_at": {
+      "$ref": "#/definitions/first_published_at"
+    },
+    "last_edited_at": {
+      "description": "Last time when the content received a major or minor update.",
+      "format": "date-time",
+      "type": "string"
+    },
+    "locale": {
+      "$ref": "#/definitions/locale"
+    },
+    "need_ids": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "phase": {
+      "description": "The service design phase of this content item - https://www.gov.uk/service-manual/phases",
+      "enum": [
+        "alpha",
+        "beta",
+        "live"
+      ],
+      "type": "string"
+    },
+    "previous_version": {
+      "type": "string"
+    },
+    "public_updated_at": {
+      "$ref": "#/definitions/public_updated_at"
+    },
+    "publishing_app": {
+      "$ref": "#/definitions/publishing_app_name"
+    },
+    "update_type": {
+      "enum": [
+        "major",
+        "minor",
+        "republish"
+      ]
+    },
+    "withdrawn_notice": {
+      "$ref": "#/definitions/withdrawn_notice"
+    }
+  },
+  "definitions": {
+    "absolute_path": {
+      "description": "A path only. Query string and/or fragment are not allowed.",
+      "pattern": "^/(([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})+(/([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)*)?$",
+      "type": "string"
+    },
+    "access_limited": {
+      "additionalProperties": false,
+      "properties": {
+        "auth_bypass_ids": {
+          "$ref": "#/definitions/guid_list",
+          "description": "A list of ids that will allow access to this item for non-authenticated users"
+        },
+        "users": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "analytics_identifier": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "A short identifier we send to Google Analytics for multi-valued fields. This means we avoid the truncated values we would get if we sent the path or slug of eg organisations."
+    },
+    "email_alert_signup_breadcrumbs": {
+      "description": "DEPRECATED. Breadcrumbs for email alert signup. Should use parent in links as other formats do.",
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "link": {
+            "format": "uri",
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "link",
+          "title"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "email_alert_signup_summary": {
+      "description": "TODO: Use top-level description instead",
+      "type": "string"
+    },
+    "first_published_at": {
+      "description": "The date the content was first published.  Automatically determined by the publishing-api, unless overridden by the publishing application.",
+      "format": "date-time",
+      "type": "string"
+    },
+    "guid": {
+      "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-[1-5][a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$",
+      "type": "string"
+    },
+    "guid_list": {
+      "items": {
+        "$ref": "#/definitions/guid"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "locale": {
+      "enum": [
+        "ar",
+        "az",
+        "be",
+        "bg",
+        "bn",
+        "cs",
+        "cy",
+        "de",
+        "dr",
+        "el",
+        "en",
+        "es",
+        "es-419",
+        "et",
+        "fa",
+        "fr",
+        "he",
+        "hi",
+        "hu",
+        "hy",
+        "id",
+        "it",
+        "ja",
+        "ka",
+        "ko",
+        "lt",
+        "lv",
+        "ms",
+        "pl",
+        "ps",
+        "pt",
+        "ro",
+        "ru",
+        "si",
+        "sk",
+        "so",
+        "sq",
+        "sr",
+        "sw",
+        "ta",
+        "th",
+        "tk",
+        "tr",
+        "uk",
+        "ur",
+        "uz",
+        "vi",
+        "zh",
+        "zh-hk",
+        "zh-tw"
+      ],
+      "type": "string"
+    },
+    "public_updated_at": {
+      "description": "When the content was last significantly changed (a major update). Shown to users.  Automatically determined by the publishing-api, unless overridden by the publishing application.",
+      "format": "date-time",
+      "type": "string"
+    },
+    "publishing_app_name": {
+      "description": "The application that published this item.",
+      "enum": [
+        "calculators",
+        "calendars",
+        "collections-publisher",
+        "contacts",
+        "content-tagger",
+        "design-principles",
+        "external-link-tracker",
+        "feedback",
+        "frontend",
+        "hmrc-manuals-api",
+        "info-frontend",
+        "licencefinder",
+        "manuals-frontend",
+        "manuals-publisher",
+        "maslow",
+        "need-api",
+        "performanceplatform-big-screen-view",
+        "policy-publisher",
+        "publisher",
+        "rummager",
+        "service-manual-publisher",
+        "share-sale-publisher",
+        "short-url-manager",
+        "smartanswers",
+        "specialist-publisher",
+        "spotlight",
+        "static",
+        "tariff",
+        "travel-advice-publisher",
+        "whitehall"
+      ],
+      "type": "string"
+    },
+    "rendering_app_name": {
+      "description": "The application that renders this item.",
+      "enum": [
+        "calculators",
+        "calendars",
+        "collections",
+        "designprinciples",
+        "email-alert-frontend",
+        "email-campaign-frontend",
+        "feedback",
+        "finder-frontend",
+        "frontend",
+        "government-frontend",
+        "info-frontend",
+        "licencefinder",
+        "manuals-frontend",
+        "performanceplatform-big-screen-view",
+        "publicapi",
+        "rummager",
+        "service-manual-frontend",
+        "smartanswers",
+        "spotlight",
+        "static",
+        "tariff",
+        "whitehall-frontend"
+      ],
+      "type": "string"
+    },
+    "route": {
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "type": {
+          "enum": [
+            "prefix",
+            "exact"
+          ]
+        }
+      },
+      "required": [
+        "path",
+        "type"
+      ],
+      "type": "object"
+    },
+    "tags": {
+      "additionalProperties": false,
+      "description": "Field used by email-alert-api to trigger email alerts for subscriptions to topics (gov.uk/topic) and policies (gov.uk/policies).",
+      "properties": {
+        "additional_topics": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "browse_pages": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "policies": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "primary_topic": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "topics": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "withdrawn_notice": {
+      "additionalProperties": false,
+      "properties": {
+        "explanation": {
+          "type": "string"
+        },
+        "withdrawn_at": {
+          "format": "date-time"
+        }
+      },
+      "type": "object"
+    },
+    "details": {
+      "additionalProperties": false,
+      "properties": {
+        "breadcrumbs": {
+          "$ref": "#/definitions/email_alert_signup_breadcrumbs"
+        },
+        "email_alert_type": {
+          "enum": [
+            "topics",
+            "policies",
+            "countries"
+          ],
+          "type": "string"
+        },
+        "govdelivery_title": {
+          "type": "string"
+        },
+        "subscriber_list": {
+          "description": "The attributes used to match subscriber lists in email-alert-api",
+          "minProperties": 1,
+          "properties": {
+            "document_type": {
+              "description": "The document_type used to match subscribers lists",
+              "type": "string"
+            },
+            "links": {
+              "additionalProperties": false,
+              "description": "The links used to match subscribers lists",
+              "maxProperties": 1,
+              "patternProperties": {
+                "^[a-z_]+$": {
+                  "type": "array"
+                }
+              },
+              "type": "object"
+            },
+            "tags": {
+              "$ref": "#/definitions/tags"
+            }
+          },
+          "type": "object"
+        },
+        "summary": {
+          "$ref": "#/definitions/email_alert_signup_summary"
+        }
+      },
+      "required": [
+        "subscriber_list",
+        "summary"
+      ],
+      "type": "object"
+    }
+  }
+}

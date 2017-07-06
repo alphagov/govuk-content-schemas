@@ -34,6 +34,8 @@ module SchemaGenerator
 
       Schema.write("dist/formats/#{schema_name}/publisher_v2/schema.json", format.publisher_content_schema)
       Schema.write("dist/formats/#{schema_name}/publisher_v2/links.json", format.publisher_links_schema)
+      Schema.write("dist/formats/#{schema_name}/notification/schema.json", format.notification_schema)
+      # Schema.write("dist/formats/#{schema_name}/frontend/schema.json", format.format_schema)
     end
   end
 end

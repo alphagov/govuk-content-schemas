@@ -36,7 +36,12 @@ module SchemaGenerator
       schema
     end
 
+    def notification_schema
+      convert_to_notifcation(publisher_content_schema)
+    end
+
   private
+
     attr_reader :data
 
     def content_schema_required_fields
@@ -150,6 +155,10 @@ module SchemaGenerator
         type: "object",
         additionalProperties: false
       }
+    end
+
+    def convert_to_notifcation(schema)
+      schema
     end
 
     class LinksIn

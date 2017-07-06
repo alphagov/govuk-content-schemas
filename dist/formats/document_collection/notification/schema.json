@@ -1,0 +1,515 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "base_path",
+    "details",
+    "document_type",
+    "locale",
+    "publishing_app",
+    "routes",
+    "schema_name",
+    "title"
+  ],
+  "properties": {
+    "base_path": {
+      "$ref": "#/definitions/absolute_path"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "routes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/route"
+      },
+      "minItems": 1
+    },
+    "details": {
+      "$ref": "#/definitions/details"
+    },
+    "document_type": {
+      "enum": [
+        "document_collection"
+      ],
+      "type": "string"
+    },
+    "links": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "documents": {
+          "description": "",
+          "$ref": "#/definitions/guid_list"
+        },
+        "organisations": {
+          "description": "",
+          "$ref": "#/definitions/guid_list"
+        },
+        "parent": {
+          "description": "",
+          "$ref": "#/definitions/guid_list"
+        },
+        "policy_areas": {
+          "description": "A largely deprecated tag currently only used to power email alerts.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "primary_publishing_organisation": {
+          "description": "The organisation that published the page. Corresponds to the first of the 'Lead organisations' in Whitehall, and is empty for all other publishing applications.",
+          "maxItems": 1,
+          "$ref": "#/definitions/guid_list"
+        },
+        "related_policies": {
+          "description": "",
+          "$ref": "#/definitions/guid_list"
+        },
+        "topical_events": {
+          "description": "",
+          "$ref": "#/definitions/guid_list"
+        },
+        "topics": {
+          "description": "",
+          "$ref": "#/definitions/guid_list"
+        }
+      }
+    },
+    "rendering_app": {
+      "$ref": "#/definitions/rendering_app_name"
+    },
+    "access_limited": {
+      "$ref": "#/definitions/access_limited"
+    },
+    "analytics_identifier": {
+      "$ref": "#/definitions/analytics_identifier"
+    },
+    "change_note": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "first_published_at": {
+      "$ref": "#/definitions/first_published_at"
+    },
+    "last_edited_at": {
+      "description": "Last time when the content received a major or minor update.",
+      "format": "date-time",
+      "type": "string"
+    },
+    "locale": {
+      "$ref": "#/definitions/locale"
+    },
+    "need_ids": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "phase": {
+      "description": "The service design phase of this content item - https://www.gov.uk/service-manual/phases",
+      "enum": [
+        "alpha",
+        "beta",
+        "live"
+      ],
+      "type": "string"
+    },
+    "previous_version": {
+      "type": "string"
+    },
+    "public_updated_at": {
+      "$ref": "#/definitions/public_updated_at"
+    },
+    "publishing_app": {
+      "$ref": "#/definitions/publishing_app_name"
+    },
+    "update_type": {
+      "enum": [
+        "major",
+        "minor",
+        "republish"
+      ]
+    },
+    "withdrawn_notice": {
+      "$ref": "#/definitions/withdrawn_notice"
+    }
+  },
+  "definitions": {
+    "absolute_path": {
+      "description": "A path only. Query string and/or fragment are not allowed.",
+      "pattern": "^/(([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})+(/([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)*)?$",
+      "type": "string"
+    },
+    "access_limited": {
+      "additionalProperties": false,
+      "properties": {
+        "auth_bypass_ids": {
+          "$ref": "#/definitions/guid_list",
+          "description": "A list of ids that will allow access to this item for non-authenticated users"
+        },
+        "users": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "analytics_identifier": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "A short identifier we send to Google Analytics for multi-valued fields. This means we avoid the truncated values we would get if we sent the path or slug of eg organisations."
+    },
+    "body": {
+      "description": "The main content provided as HTML rendered from govspeak",
+      "type": "string"
+    },
+    "change_history": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "note": {
+            "description": "A summary of the change",
+            "type": "string"
+          },
+          "public_timestamp": {
+            "format": "date-time",
+            "type": "string"
+          }
+        },
+        "required": [
+          "public_timestamp",
+          "note"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "emphasised_organisations": {
+      "description": "The content ids of the organisations that should be displayed first in the list of organisations related to the item, these content ids must be present in the item organisation links hash.",
+      "items": {
+        "$ref": "#/definitions/guid"
+      },
+      "type": "array"
+    },
+    "first_public_at": {
+      "description": "DEPRECATED. The date the content was first published. Used in details. Will be deprecated in favour of top level first_published_at when publishing API allows it to be edited.",
+      "format": "date-time",
+      "type": "string"
+    },
+    "first_published_at": {
+      "description": "The date the content was first published.  Automatically determined by the publishing-api, unless overridden by the publishing application.",
+      "format": "date-time",
+      "type": "string"
+    },
+    "government": {
+      "additionalProperties": false,
+      "properties": {
+        "current": {
+          "description": "Is the government that published this document still the current government.",
+          "type": "boolean"
+        },
+        "slug": {
+          "description": "Government slug, used for analytics, eg '1970-to-1974-conservative-government'.",
+          "type": "string"
+        },
+        "title": {
+          "description": "Name of the government that first published this document, eg '1970 to 1974 Conservative government'.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "slug",
+        "current"
+      ],
+      "type": "object"
+    },
+    "guid": {
+      "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-[1-5][a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$",
+      "type": "string"
+    },
+    "guid_list": {
+      "items": {
+        "$ref": "#/definitions/guid"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "locale": {
+      "enum": [
+        "ar",
+        "az",
+        "be",
+        "bg",
+        "bn",
+        "cs",
+        "cy",
+        "de",
+        "dr",
+        "el",
+        "en",
+        "es",
+        "es-419",
+        "et",
+        "fa",
+        "fr",
+        "he",
+        "hi",
+        "hu",
+        "hy",
+        "id",
+        "it",
+        "ja",
+        "ka",
+        "ko",
+        "lt",
+        "lv",
+        "ms",
+        "pl",
+        "ps",
+        "pt",
+        "ro",
+        "ru",
+        "si",
+        "sk",
+        "so",
+        "sq",
+        "sr",
+        "sw",
+        "ta",
+        "th",
+        "tk",
+        "tr",
+        "uk",
+        "ur",
+        "uz",
+        "vi",
+        "zh",
+        "zh-hk",
+        "zh-tw"
+      ],
+      "type": "string"
+    },
+    "political": {
+      "description": "If the content is considered political in nature, reflecting views of the government it was published under.",
+      "type": "boolean"
+    },
+    "public_updated_at": {
+      "description": "When the content was last significantly changed (a major update). Shown to users.  Automatically determined by the publishing-api, unless overridden by the publishing application.",
+      "format": "date-time",
+      "type": "string"
+    },
+    "publishing_app_name": {
+      "description": "The application that published this item.",
+      "enum": [
+        "calculators",
+        "calendars",
+        "collections-publisher",
+        "contacts",
+        "content-tagger",
+        "design-principles",
+        "external-link-tracker",
+        "feedback",
+        "frontend",
+        "hmrc-manuals-api",
+        "info-frontend",
+        "licencefinder",
+        "manuals-frontend",
+        "manuals-publisher",
+        "maslow",
+        "need-api",
+        "performanceplatform-big-screen-view",
+        "policy-publisher",
+        "publisher",
+        "rummager",
+        "service-manual-publisher",
+        "share-sale-publisher",
+        "short-url-manager",
+        "smartanswers",
+        "specialist-publisher",
+        "spotlight",
+        "static",
+        "tariff",
+        "travel-advice-publisher",
+        "whitehall"
+      ],
+      "type": "string"
+    },
+    "rendering_app_name": {
+      "description": "The application that renders this item.",
+      "enum": [
+        "calculators",
+        "calendars",
+        "collections",
+        "designprinciples",
+        "email-alert-frontend",
+        "email-campaign-frontend",
+        "feedback",
+        "finder-frontend",
+        "frontend",
+        "government-frontend",
+        "info-frontend",
+        "licencefinder",
+        "manuals-frontend",
+        "performanceplatform-big-screen-view",
+        "publicapi",
+        "rummager",
+        "service-manual-frontend",
+        "smartanswers",
+        "spotlight",
+        "static",
+        "tariff",
+        "whitehall-frontend"
+      ],
+      "type": "string"
+    },
+    "route": {
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "type": {
+          "enum": [
+            "prefix",
+            "exact"
+          ]
+        }
+      },
+      "required": [
+        "path",
+        "type"
+      ],
+      "type": "object"
+    },
+    "tags": {
+      "additionalProperties": false,
+      "description": "Field used by email-alert-api to trigger email alerts for subscriptions to topics (gov.uk/topic) and policies (gov.uk/policies).",
+      "properties": {
+        "additional_topics": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "browse_pages": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "policies": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "primary_topic": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "topics": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "withdrawn_notice": {
+      "additionalProperties": false,
+      "properties": {
+        "explanation": {
+          "type": "string"
+        },
+        "withdrawn_at": {
+          "format": "date-time"
+        }
+      },
+      "type": "object"
+    },
+    "details": {
+      "additionalProperties": false,
+      "properties": {
+        "body": {
+          "$ref": "#/definitions/body"
+        },
+        "change_history": {
+          "$ref": "#/definitions/change_history"
+        },
+        "collection_groups": {
+          "description": "The ordered list of collection groups",
+          "items": {
+            "additionalProperties": false,
+            "description": "Collection group",
+            "properties": {
+              "body": {
+                "$ref": "#/definitions/body"
+              },
+              "documents": {
+                "description": "An ordered list of documents in this collection group",
+                "items": {
+                  "$ref": "#/definitions/guid"
+                },
+                "type": "array"
+              },
+              "title": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "title",
+              "documents"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "emphasised_organisations": {
+          "$ref": "#/definitions/emphasised_organisations"
+        },
+        "first_public_at": {
+          "$ref": "#/definitions/first_public_at"
+        },
+        "government": {
+          "$ref": "#/definitions/government"
+        },
+        "political": {
+          "$ref": "#/definitions/political"
+        },
+        "tags": {
+          "$ref": "#/definitions/tags"
+        }
+      },
+      "required": [
+        "first_public_at",
+        "collection_groups",
+        "government",
+        "political"
+      ],
+      "type": "object"
+    }
+  }
+}
