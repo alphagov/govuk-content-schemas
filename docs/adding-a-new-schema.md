@@ -1,41 +1,24 @@
 # Adding a new content schema
 
-There is a rake task that will help get you started:
+Create a file in `formats` named after your schema with a jsonnet extension.
+Eg for a case_study you'd create formats/case_study.jsonnet
 
+With the following contents:
 ```
-  $ rake new_format[SCHEMA_NAME]
-```
-
-This will create the basic folder structure and files needed for a new schema:
-
-```
-  formats/FORMAT_NAME/frontend
-  formats/FORMAT_NAME/frontend/examples
-  formats/FORMAT_NAME/publisher
-  formats/FORMAT_NAME/publisher/details.json
-  formats/FORMAT_NAME/publisher/links.json
+(import "shared/default_format.jsonnet") + {
+}
 ```
 
-The schema will be generated from the `details.json` and `links.json` files.
-Complete these files with the necessary fields for your new schema. Once you
-have completed these files, you can generate the corresponding frontend and
-publisher `schema.json` with the [`rake` task](../README.md#Rakefile).
+You can then use the contents of the `formats/_example.jsonnet` as the basis
+of what to put into the file.
+
+Once you have completed these file, you can generate the corresponding schemas
+with the [`rake` task](../README.md#Rakefile).
 
 ## Examples
 
 Any new schema should also ship with a set of curated examples. These examples
 will be validated against the schema and can also be used by the corresponding
 frontend applications to verify that it can render examples of the schema. These
-examples should be added to the `formats/FORMAT_NAME/frontend/examples` folder.
+examples should be added to the `examples/FORMAT_NAME/frontend` folder.
 
-## Validating the contents of content-store
-
-You can test your new (frontend) schema against the contents of content-store
-using the rake task in content-store:
-
-```
-  bundle exec rake check_content_items_against_schema[my_schema_name]
-```
-
-If there are examples which are invalid, you may want to change your publisher
-and republish the documents.
