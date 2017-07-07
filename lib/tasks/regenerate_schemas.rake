@@ -1,13 +1,14 @@
 require "schema_generator/generator"
+require "jsonnet"
 
 task :regenerate_schemas do
   print "Generating schemas: "
   FileUtils.rm_rf("dist/formats")
 
-  Dir.glob("formats/*").each do |schema_filename|
-    next unless File.directory?(schema_filename)
-    schema_name = File.basename(schema_filename)
-    SchemaGenerator::Generator.generate(schema_name)
+  # Ignore files prefixed with an underscore
+  Dir.glob("formats/{[!_]*}.jsonnet").each do |schema_filename|
+    schema_name = File.basename(schema_filename, ".*")
+    SchemaGenerator::Generator.generate(schema_name, Jsonnet.load(schema_filename))
     print "."
   end
 
