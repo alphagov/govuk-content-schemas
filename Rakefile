@@ -7,7 +7,6 @@ rescue LoadError
 end
 
 task build: [
-              :validate_shared_details_definitions,
               :regenerate_schemas,
               :validate_dist_schemas,
               :validate_uniqueness_of_frontend_example_base_paths,
