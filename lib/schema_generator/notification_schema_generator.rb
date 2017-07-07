@@ -38,6 +38,7 @@ module SchemaGenerator
         locale
         navigation_document_supertype
         need_ids
+        payload_version
         phase
         public_updated_at
         publishing_app
