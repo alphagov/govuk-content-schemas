@@ -1,0 +1,46 @@
+{
+  "base_path": "/government/organisations/bona-vacantia",
+  "content_id": "c9109663-0128-4db4-b513-a9cdfb691034",
+  "title": "Bona Vacantia",
+  "description": null,
+  "document_type": "organisation",
+  "schema_name": "placeholder",
+  "need_ids": [
+
+  ],
+  "locale": "en",
+  "updated_at": "2016-03-09T15:42:28.867Z",
+  "public_updated_at": "2015-03-31T18:33:12.000+00:00",
+  "phase": "live",
+  "analytics_identifier": "OT564",
+  "links": {
+    "available_translations": [
+      {
+        "content_id": "c9109663-0128-4db4-b513-a9cdfb691034",
+        "title": "Bona Vacantia",
+        "api_path": "/api/content/government/organisations/bona-vacantia",
+        "base_path": "/government/organisations/bona-vacantia",
+        "description": null,
+        "api_url": "https://www.gov.uk/api/content/government/organisations/bona-vacantia",
+        "web_url": "https://www.gov.uk/government/organisations/bona-vacantia",
+        "locale": "en",
+        "analytics_identifier": "OT564",
+        "links": {
+        }
+      }
+    ]
+  },
+  "details": {
+    "brand": "attorney-generals-office",
+    "logo": {
+      "formatted_title": "Bona Vacantia",
+      "crest": "single-identity"
+    },
+    "external_related_links": [
+      {
+        "title": "Definition",
+        "url": "http://www.dictionary.com/browse/bona-vacantia"
+      }
+    ]
+  }
+}

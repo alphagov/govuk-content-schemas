@@ -2,8 +2,7 @@ require "json-schema"
 
 def schema_path_for(example)
   schema_filename = example.end_with?("_links.json") ? "links.json" : "schema.json"
-  dirname = File.dirname(example).gsub("publisher/", "publisher_v2/")
-  (File.dirname(dirname) + "/" + schema_filename).gsub(%r[formats/], "dist/formats/")
+  (File.dirname(example) + "/" + schema_filename).gsub(%r[examples/], "dist/formats/")
 end
 
 def valid?(example)
@@ -41,7 +40,7 @@ end
 desc 'Validate examples against generated schemas'
 task :validate_examples do
   print "Validating examples... "
-  examples = Rake::FileList.new("formats/**/examples/*.json")
+  examples = Rake::FileList.new("examples/**/*.json")
   failed_examples = examples.reject { |example| valid?(example) }
   abort "\nThe following examples don't validate against their schemas:\n" + failed_examples.join("\n") if failed_examples.any?
   puts "✔︎"
@@ -50,7 +49,7 @@ end
 desc 'Validate uniqueness of frontend example base paths'
 task :validate_uniqueness_of_frontend_example_base_paths, :files do |_, args|
   print "Checking that all frontend examples have unique base paths... "
-  frontend_examples = args[:files] || Rake::FileList.new("formats/*/frontend/examples/*.json")
+  frontend_examples = args[:files] || Rake::FileList.new("/examples/*/frontend/*.json")
   grouped = frontend_examples.group_by { |file| base_path(file) }
   duplicates = grouped.select { |_, group| group.count > 1 }
 
