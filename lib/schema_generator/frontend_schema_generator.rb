@@ -93,17 +93,6 @@ module SchemaGenerator
           "$ref" => "#/definitions/publishing_request_id",
         },
       )
-
-      # TODO: This is done to make sure that this rewrite produces the exact same
-      # JSON as before. After this is merged we can simplify this by just removing
-      # the fields from the publisher_content_schema we don't want.
-      props.slice(*%w[
-        base_path title description public_updated_at first_published_at
-        publishing_app rendering_app locale need_ids analytics_identifier phase
-        details withdrawn_notice content_id last_edited_at links document_type
-        schema_name format navigation_document_supertype user_journey_document_supertype email_document_supertype government_document_supertype updated_at
-        publishing_request_id
-      ])
     end
 
     def definitions
