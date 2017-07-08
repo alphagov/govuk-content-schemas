@@ -1,7 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
-  "additionalProperties": false,
   "required": [
     "base_path",
     "content_id",
@@ -17,12 +16,16 @@
     "title",
     "update_type"
   ],
+  "additionalProperties": false,
   "properties": {
+    "analytics_identifier": {
+      "$ref": "#/definitions/analytics_identifier"
+    },
     "base_path": {
       "$ref": "#/definitions/absolute_path"
     },
-    "title": {
-      "type": "string"
+    "content_id": {
+      "$ref": "#/definitions/guid"
     },
     "description": {
       "anyOf": [
@@ -34,60 +37,8 @@
         }
       ]
     },
-    "public_updated_at": {
-      "$ref": "#/definitions/public_updated_at"
-    },
-    "first_published_at": {
-      "$ref": "#/definitions/first_published_at"
-    },
-    "publishing_app": {
-      "$ref": "#/definitions/publishing_app_name"
-    },
-    "rendering_app": {
-      "$ref": "#/definitions/rendering_app_name"
-    },
-    "locale": {
-      "$ref": "#/definitions/locale"
-    },
-    "need_ids": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
-    },
-    "analytics_identifier": {
-      "$ref": "#/definitions/analytics_identifier"
-    },
-    "phase": {
-      "description": "The service design phase of this content item - https://www.gov.uk/service-manual/phases",
-      "type": "string",
-      "enum": [
-        "alpha",
-        "beta",
-        "live"
-      ]
-    },
     "details": {
       "$ref": "#/definitions/details"
-    },
-    "withdrawn_notice": {
-      "$ref": "#/definitions/withdrawn_notice"
-    },
-    "content_id": {
-      "$ref": "#/definitions/guid"
-    },
-    "last_edited_at": {
-      "type": "string",
-      "format": "date-time",
-      "description": "Last time when the content received a major or minor update."
-    },
-    "links": {
-      "type": "object",
-      "patternProperties": {
-        "^[a-z_]+$": {
-          "$ref": "#/definitions/guid_list"
-        }
-      }
     },
     "document_type": {
       "type": "string",
@@ -252,60 +203,9 @@
         "written_statement"
       ]
     },
-    "schema_name": {
-      "type": "string",
-      "enum": [
-        "specialist_document"
-      ]
-    },
-    "navigation_document_supertype": {
-      "type": "string",
-      "description": "Document type grouping powering the new taxonomy-based navigation pages"
-    },
-    "user_journey_document_supertype": {
-      "type": "string",
-      "description": "Document type grouping powering analytics of user journeys"
-    },
     "email_document_supertype": {
-      "type": "string",
-      "description": "Document supertype grouping intended to power the Whitehall finders and email subscriptions"
-    },
-    "government_document_supertype": {
-      "type": "string",
-      "description": "Document supertype grouping intended to power the Whitehall finders and email subscriptions"
-    },
-    "updated_at": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "publishing_request_id": {
-      "$ref": "#/definitions/publishing_request_id"
-    },
-    "routes": {
-      "type": "array",
-      "minItems": 1,
-      "items": {
-        "$ref": "#/definitions/route"
-      }
-    },
-    "redirects": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/redirect_route"
-      }
-    },
-    "update_type": {
-      "enum": [
-        "major",
-        "minor",
-        "republish"
-      ]
-    },
-    "govuk_request_id": {
-      "type": [
-        "string",
-        "null"
-      ]
+      "description": "Document supertype grouping intended to power the Whitehall finders and email subscriptions",
+      "type": "string"
     },
     "expanded_links": {
       "type": "object",
@@ -314,1234 +214,176 @@
           "$ref": "#/definitions/frontend_links"
         }
       }
-    }
-  },
-  "definitions": {
-    "frontend_links": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "additionalProperties": true,
-        "required": [
-          "content_id",
-          "title",
-          "base_path",
-          "locale"
-        ],
-        "properties": {
-          "details": {
-            "type": "object",
-            "additionalProperties": true
-          },
-          "document_type": {
-            "type": "string"
-          },
-          "schema_name": {
-            "type": "string"
-          },
-          "public_updated_at": {
-            "type": "string"
-          },
-          "content_id": {
-            "$ref": "#/definitions/guid"
-          },
-          "title": {
-            "type": "string"
-          },
-          "description": {
-            "anyOf": [
-              {
-                "type": "string"
-              },
-              {
-                "type": "null"
-              }
-            ]
-          },
-          "base_path": {
-            "$ref": "#/definitions/absolute_path"
-          },
-          "api_path": {
-            "$ref": "#/definitions/absolute_path"
-          },
-          "api_url": {
-            "description": "DEPRECATED: api_path should be used instead of api_url. This is due to values of api_url being tied to an environment which can cause problems when data is synced between environments. In time this field will be removed by the Publishing Platform team.",
-            "type": "string",
-            "format": "uri"
-          },
-          "web_url": {
-            "description": "DEPRECATED: base_path should be used instead of web_url. This is due to values of web_url being tied to an environment which can cause problems when data is synced between environments. In time this field will be removed by the Publishing Platform team.",
-            "type": "string",
-            "format": "uri"
-          },
-          "locale": {
-            "$ref": "#/definitions/locale"
-          },
-          "analytics_identifier": {
-            "$ref": "#/definitions/analytics_identifier"
-          },
-          "withdrawn": {
-            "description": "Indicates whether the item has been unpublished as withdrawn, https://github.com/alphagov/publishing-api/blob/master/doc/model.md#workflow",
-            "type": "boolean"
-          },
-          "country": {
-            "$ref": "#/definitions/country"
-          },
-          "change_description": {
-            "type": "string"
-          },
-          "links": {
-            "type": "object",
-            "patternProperties": {
-              "^[a-z_]+$": {
-                "$ref": "#/definitions/frontend_links"
-              }
-            }
-          }
-        }
-      }
     },
-    "base_path_less_frontend_links": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "additionalProperties": true,
-        "required": [
-          "content_id",
-          "title",
-          "locale"
-        ],
-        "properties": {
-          "document_type": {
-            "type": "string"
-          },
-          "schema_name": {
-            "type": "string"
-          },
-          "base_path": {
-            "$ref": "#/definitions/absolute_path"
-          },
-          "api_path": {
-            "$ref": "#/definitions/absolute_path"
-          },
-          "api_url": {
-            "description": "DEPRECATED: api_path should be used instead of api_url. This is due to values of api_url being tied to an environment which can cause problems when data is synced between environments. In time this field will be removed by the Publishing Platform team.",
-            "type": "string",
-            "format": "uri"
-          },
-          "web_url": {
-            "description": "DEPRECATED: base_path should be used instead of web_url. This is due to values of web_url being tied to an environment which can cause problems when data is synced between environments. In time this field will be removed by the Publishing Platform team.",
-            "type": "string",
-            "format": "uri"
-          },
-          "analytics_identifier": {
-            "$ref": "#/definitions/analytics_identifier"
-          },
-          "public_updated_at": {
-            "type": "string"
-          },
-          "content_id": {
-            "$ref": "#/definitions/guid"
-          },
-          "title": {
-            "type": "string"
-          },
-          "locale": {
-            "$ref": "#/definitions/locale"
-          }
-        }
-      }
+    "first_published_at": {
+      "$ref": "#/definitions/first_published_at"
     },
-    "details": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "body",
-        "metadata",
-        "change_history"
-      ],
-      "properties": {
-        "body": {
-          "$ref": "#/definitions/body_html_and_govspeak"
-        },
-        "attachments": {
-          "$ref": "#/definitions/asset_link_list"
-        },
-        "metadata": {
-          "$ref": "#/definitions/any_metadata"
-        },
-        "max_cache_time": {
-          "$ref": "#/definitions/max_cache_time"
-        },
-        "headers": {
-          "$ref": "#/definitions/nested_headers"
-        },
-        "change_history": {
-          "$ref": "#/definitions/change_history"
-        },
-        "temporary_update_type": {
-          "type": "boolean",
-          "description": "Indicates that the user should choose a new update type on the next save."
-        }
-      }
+    "government_document_supertype": {
+      "description": "Document supertype grouping intended to power the Whitehall finders and email subscriptions",
+      "type": "string"
     },
-    "absolute_path": {
-      "type": "string",
-      "pattern": "^/(([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})+(/([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)*)?$",
-      "description": "A path only. Query string and/or fragment are not allowed."
-    },
-    "absolute_fullpath": {
-      "type": "string",
-      "pattern": "^/(([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})+(/([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)*)?(\\?([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)?(#([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)?$",
-      "description": "A path with optional query string and/or fragment."
-    },
-    "access_limited": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "users": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "auth_bypass_ids": {
-          "$ref": "#/definitions/guid_list",
-          "description": "A list of ids that will allow access to this item for non-authenticated users"
-        }
-      }
-    },
-    "analytics_identifier": {
-      "anyOf": [
-        {
-          "type": "string"
-        },
-        {
-          "type": "null"
-        }
-      ],
-      "description": "A short identifier we send to Google Analytics for multi-valued fields. This means we avoid the truncated values we would get if we sent the path or slug of eg organisations."
-    },
-    "external_related_links": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/external_link"
-      }
-    },
-    "external_link": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "title",
-        "url"
-      ],
-      "properties": {
-        "title": {
-          "type": "string"
-        },
-        "url": {
-          "type": "string",
-          "format": "uri"
-        }
-      }
-    },
-    "internal_link_without_guid": {
-      "description": "Links to pages on GOV.UK without a corresponding GUID. eg A filtered list of publications",
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "title",
-        "path"
-      ],
-      "properties": {
-        "title": {
-          "type": "string"
-        },
-        "path": {
-          "$ref": "#/definitions/absolute_fullpath"
-        }
-      }
-    },
-    "internal_or_external_link": {
-      "anyOf": [
-        {
-          "$ref": "#/definitions/external_link"
-        },
-        {
-          "$ref": "#/definitions/internal_link_without_guid"
-        },
-        {
-          "$ref": "#/definitions/guid"
-        }
-      ]
-    },
-    "government": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "title",
-        "slug",
-        "current"
-      ],
-      "properties": {
-        "title": {
-          "type": "string",
-          "description": "Name of the government that first published this document, eg '1970 to 1974 Conservative government'."
-        },
-        "slug": {
-          "type": "string",
-          "description": "Government slug, used for analytics, eg '1970-to-1974-conservative-government'."
-        },
-        "current": {
-          "type": "boolean",
-          "description": "Is the government that published this document still the current government."
-        }
-      }
-    },
-    "guid": {
-      "type": "string",
-      "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-[1-5][a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$"
-    },
-    "guid_list": {
-      "type": "array",
-      "uniqueItems": true,
-      "items": {
-        "$ref": "#/definitions/guid"
-      }
-    },
-    "publishing_app_name": {
-      "description": "The application that published this item.",
-      "type": "string",
-      "enum": [
-        "calculators",
-        "calendars",
-        "collections-publisher",
-        "contacts",
-        "content-tagger",
-        "design-principles",
-        "external-link-tracker",
-        "feedback",
-        "frontend",
-        "hmrc-manuals-api",
-        "info-frontend",
-        "licencefinder",
-        "manuals-frontend",
-        "manuals-publisher",
-        "maslow",
-        "need-api",
-        "performanceplatform-big-screen-view",
-        "policy-publisher",
-        "publisher",
-        "rummager",
-        "service-manual-publisher",
-        "share-sale-publisher",
-        "short-url-manager",
-        "smartanswers",
-        "specialist-publisher",
-        "spotlight",
-        "static",
-        "tariff",
-        "travel-advice-publisher",
-        "whitehall"
-      ]
-    },
-    "rendering_app_name": {
-      "description": "The application that renders this item.",
-      "anyOf": [
-        {
-          "type": "string",
-          "enum": [
-            "calculators",
-            "calendars",
-            "collections",
-            "designprinciples",
-            "email-alert-frontend",
-            "email-campaign-frontend",
-            "feedback",
-            "finder-frontend",
-            "frontend",
-            "government-frontend",
-            "info-frontend",
-            "licencefinder",
-            "manuals-frontend",
-            "performanceplatform-big-screen-view",
-            "publicapi",
-            "rummager",
-            "service-manual-frontend",
-            "smartanswers",
-            "spotlight",
-            "static",
-            "tariff",
-            "whitehall-frontend"
-          ]
-        },
-        {
-          "type": "null",
-          "description": "Items like 'gone' and 'redirect' do not have a rendering_app"
-        }
-      ]
-    },
-    "image": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "url"
-      ],
-      "properties": {
-        "url": {
-          "type": "string",
-          "format": "uri"
-        },
-        "alt_text": {
-          "type": "string"
-        },
-        "caption": {
-          "anyOf": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "null"
-            }
-          ]
-        }
-      }
-    },
-    "parts": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "additionalProperties": false,
-        "required": [
-          "title",
-          "slug",
-          "body"
-        ],
-        "properties": {
-          "title": {
-            "type": "string"
-          },
-          "slug": {
-            "type": "string",
-            "format": "uri"
-          },
-          "body": {
-            "$ref": "#/definitions/body_html_and_govspeak"
-          }
-        }
-      }
-    },
-    "political": {
-      "type": "boolean",
-      "description": "If the content is considered political in nature, reflecting views of the government it was published under."
-    },
-    "route": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "path",
-        "type"
-      ],
-      "properties": {
-        "path": {
-          "type": "string"
-        },
-        "type": {
-          "enum": [
-            "prefix",
-            "exact"
-          ]
-        }
-      }
-    },
-    "redirect_route": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "path",
-        "type",
-        "destination"
-      ],
-      "properties": {
-        "path": {
-          "$ref": "#/definitions/absolute_path"
-        },
-        "type": {
-          "enum": [
-            "prefix",
-            "exact"
-          ]
-        },
-        "destination": {
-          "$ref": "#/definitions/absolute_fullpath"
-        },
-        "segments_mode": {
-          "enum": [
-            "preserve",
-            "ignore"
-          ],
-          "description": "For prefix redirects, preserve or ignore the rest of the fullpath. For exact, preserve or ignore the querystring."
-        }
-      }
-    },
-    "locale": {
-      "type": "string",
-      "enum": [
-        "ar",
-        "az",
-        "be",
-        "bg",
-        "bn",
-        "cs",
-        "cy",
-        "de",
-        "dr",
-        "el",
-        "en",
-        "es",
-        "es-419",
-        "et",
-        "fa",
-        "fr",
-        "he",
-        "hi",
-        "hu",
-        "hy",
-        "id",
-        "it",
-        "ja",
-        "ka",
-        "ko",
-        "lt",
-        "lv",
-        "ms",
-        "pl",
-        "ps",
-        "pt",
-        "ro",
-        "ru",
-        "si",
-        "sk",
-        "so",
-        "sq",
-        "sr",
-        "sw",
-        "ta",
-        "th",
-        "tk",
-        "tr",
-        "uk",
-        "ur",
-        "uz",
-        "vi",
-        "zh",
-        "zh-hk",
-        "zh-tw"
-      ]
-    },
-    "multiple_content_types": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "additionalProperties": false,
-        "required": [
-          "content_type",
-          "content"
-        ],
-        "properties": {
-          "content_type": {
-            "type": "string"
-          },
-          "content": {
-            "type": "string"
-          }
-        }
-      }
-    },
-    "asset_link": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "url",
-        "content_type"
-      ],
-      "properties": {
-        "content_id": {
-          "$ref": "#/definitions/guid"
-        },
-        "url": {
-          "type": "string",
-          "format": "uri"
-        },
-        "content_type": {
-          "type": "string"
-        },
-        "title": {
-          "type": "string"
-        },
-        "created_at": {
-          "format": "date-time"
-        },
-        "updated_at": {
-          "format": "date-time"
-        }
-      }
-    },
-    "asset_link_list": {
-      "description": "An ordered list of asset links",
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/asset_link"
-      }
-    },
-    "change_note": {
-      "description": "Change note for the most recent update",
+    "govuk_request_id": {
       "type": [
         "string",
         "null"
       ]
     },
-    "change_history": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "additionalProperties": false,
-        "properties": {
-          "public_timestamp": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "note": {
-            "type": "string",
-            "description": "A summary of the change"
-          }
-        },
-        "required": [
-          "public_timestamp",
-          "note"
-        ]
-      }
+    "last_edited_at": {
+      "description": "Last time when the content received a major or minor update.",
+      "type": "string",
+      "format": "date-time"
     },
-    "withdrawn_notice": {
+    "links": {
       "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "explanation": {
-          "type": "string"
-        },
-        "withdrawn_at": {
-          "format": "date-time"
+      "patternProperties": {
+        "^[a-z_]+$": {
+          "$ref": "#/definitions/guid_list"
         }
       }
     },
-    "nation_applicability": {
-      "description": "An object specifying the applicability of a particular nation.",
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "label": {
-          "description": "The pretty-printed, translated label for this nation.",
-          "type": "string"
-        },
-        "alternative_url": {
-          "description": "An optional alternative URL to link to for more information on this content item pertaining to this nation.",
-          "type": "string"
-        },
-        "applicable": {
-          "description": "Whether the content applies to this nation or not.",
-          "type": "boolean"
-        }
-      }
+    "locale": {
+      "$ref": "#/definitions/locale"
     },
-    "national_applicability": {
-      "description": "An object specifying the applicable nations for this content item. If it applies to all nations, it should be omitted.",
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "england": {
-          "$ref": "#/definitions/nation_applicability"
-        },
-        "northern_ireland": {
-          "$ref": "#/definitions/nation_applicability"
-        },
-        "scotland": {
-          "$ref": "#/definitions/nation_applicability"
-        },
-        "wales": {
-          "$ref": "#/definitions/nation_applicability"
-        }
-      }
-    },
-    "label_value_pair": {
-      "description": "One of many possible values a user can select from",
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "label",
-        "value"
-      ],
-      "properties": {
-        "label": {
-          "description": "A human readable label",
-          "type": "string"
-        },
-        "value": {
-          "description": "A value to use for form controls",
-          "type": "string"
-        }
-      }
-    },
-    "emphasised_organisations": {
-      "description": "The content ids of the organisations that should be displayed first in the list of organisations related to the item, these content ids must be present in the item organisation links hash.",
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/guid"
-      }
-    },
-    "body": {
-      "description": "The main content provided as HTML rendered from govspeak",
+    "navigation_document_supertype": {
+      "description": "Document type grouping powering the new taxonomy-based navigation pages",
       "type": "string"
     },
-    "body_html_and_govspeak": {
-      "description": "The main content provided as HTML with the govspeak markdown it's rendered from",
-      "anyOf": [
-        {
-          "type": "string"
-        }
-      ]
-    },
-    "attachments_with_thumbnails": {
-      "description": "An ordered list of attachments",
+    "need_ids": {
       "type": "array",
       "items": {
-        "description": "Generated HTML for each attachment including thumbnail and download link",
         "type": "string"
       }
     },
-    "first_public_at": {
-      "description": "DEPRECATED. The date the content was first published. Used in details. Will be deprecated in favour of top level first_published_at when publishing API allows it to be edited.",
+    "phase": {
+      "description": "The service design phase of this content item - https://www.gov.uk/service-manual/phases",
       "type": "string",
-      "format": "date-time"
-    },
-    "first_published_at": {
-      "description": "The date the content was first published.  Automatically determined by the publishing-api, unless overridden by the publishing application.",
-      "type": "string",
-      "format": "date-time"
+      "enum": [
+        "alpha",
+        "beta",
+        "live"
+      ]
     },
     "public_updated_at": {
-      "description": "When the content was last significantly changed (a major update). Shown to users.  Automatically determined by the publishing-api, unless overridden by the publishing application.",
+      "$ref": "#/definitions/public_updated_at"
+    },
+    "publishing_app": {
+      "$ref": "#/definitions/publishing_app_name"
+    },
+    "publishing_request_id": {
+      "$ref": "#/definitions/publishing_request_id"
+    },
+    "redirects": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/redirect_route"
+      }
+    },
+    "rendering_app": {
+      "$ref": "#/definitions/rendering_app_name"
+    },
+    "routes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/route"
+      },
+      "minItems": 1
+    },
+    "schema_name": {
+      "type": "string",
+      "enum": [
+        "specialist_document"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "update_type": {
+      "enum": [
+        "major",
+        "minor",
+        "republish"
+      ]
+    },
+    "updated_at": {
       "type": "string",
       "format": "date-time"
     },
-    "tags": {
-      "type": "object",
-      "description": "Field used by email-alert-api to trigger email alerts for subscriptions to topics (gov.uk/topic) and policies (gov.uk/policies).",
-      "additionalProperties": false,
-      "properties": {
-        "browse_pages": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "topics": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "primary_topic": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "additional_topics": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "policies": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        }
-      }
-    },
-    "email_signup_link": {
-      "description": "Path to email signup form. TODO: Check if can be switched to use links instead",
-      "type": "string",
-      "format": "uri"
-    },
-    "publishing_request_id": {
-      "description": "A unique identifier used to track publishing requests to rendered content",
+    "user_journey_document_supertype": {
+      "description": "Document type grouping powering analytics of user journeys",
       "type": "string"
     },
-    "max_cache_time": {
-      "description": "The maximum length of time the content should be cached, in seconds",
-      "type": "integer"
-    },
-    "grouped_lists_of_links": {
-      "description": "Lists of links with titles in named groups",
-      "type": "array",
-      "items": {
-        "type": "object",
-        "additionalProperties": false,
-        "required": [
-          "name",
-          "contents"
-        ],
-        "properties": {
-          "name": {
-            "description": "Title of the group",
-            "type": "string"
-          },
-          "contents": {
-            "description": "An ordered list of links, either internal with GUID or external with URL and title",
-            "type": "array",
-            "items": {
-              "$ref": "#/definitions/internal_or_external_link"
-            }
-          }
-        }
-      }
-    },
-    "topic_groups": {
-      "description": "Lists of items with titles & paths in named groups, used for showing curated links on browse pages and topics",
-      "type": "array",
-      "items": {
-        "type": "object",
-        "additionalProperties": false,
-        "required": [
-          "name",
-          "contents"
-        ],
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "description": {
-            "description": "DEPRECATED",
-            "type": "string"
-          },
-          "contents": {
-            "type": "array",
-            "items": {
-              "$ref": "#/definitions/absolute_path"
-            }
-          },
-          "content_ids": {
-            "description": "DEPRECATED",
-            "$ref": "#/definitions/guid_list"
-          }
-        }
-      }
-    },
-    "service_manual_topic_groups": {
-      "description": "Lists of items with titles & content IDs in named groups, used for service manual topic pages",
-      "type": "array",
-      "items": {
-        "type": "object",
-        "additionalProperties": false,
-        "required": [
-          "name"
-        ],
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "content_ids": {
-            "$ref": "#/definitions/guid_list"
-          }
-        }
-      }
-    },
-    "taxonomy_internal_name": {
-      "type": "string",
-      "description": "An internal name for taxonomy admin interfaces. Includes parent."
-    },
-    "manual_section_parent": {
-      "description": "The parent manual for a manual section",
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "base_path"
-      ],
-      "properties": {
-        "base_path": {
-          "$ref": "#/definitions/absolute_path"
-        }
-      }
-    },
-    "manual_organisations": {
-      "description": "A manual’s organisations. TODO: Switch to use organisations in links",
-      "type": "array",
-      "items": {
-        "type": "object",
-        "additionalProperties": false,
-        "required": [
-          "title",
-          "abbreviation",
-          "web_url"
-        ],
-        "properties": {
-          "title": {
-            "type": "string"
-          },
-          "abbreviation": {
-            "type": "string"
-          },
-          "web_url": {
-            "type": "string"
-          }
-        }
-      }
-    },
-    "hmrc_manual_change_notes": {
-      "description": "A history of changes to HMRC manuals and the associated section. section_id is included and required making it different to manual_change_notes",
-      "type": "array",
-      "items": {
-        "type": "object",
-        "additionalProperties": false,
-        "required": [
-          "section_id",
-          "base_path",
-          "title",
-          "change_note",
-          "published_at"
-        ],
-        "properties": {
-          "section_id": {
-            "type": "string"
-          },
-          "base_path": {
-            "$ref": "#/definitions/absolute_path"
-          },
-          "title": {
-            "type": "string"
-          },
-          "change_note": {
-            "type": "string"
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
-          }
-        }
-      }
-    },
-    "manual_change_notes": {
-      "description": "A history of changes to manuals and the associated section",
-      "items": {
-        "type": "object",
-        "additionalProperties": false,
-        "required": [
-          "base_path",
-          "title",
-          "change_note",
-          "published_at"
-        ],
-        "properties": {
-          "base_path": {
-            "$ref": "#/definitions/absolute_path"
-          },
-          "title": {
-            "type": "string"
-          },
-          "change_note": {
-            "type": "string"
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
-          }
-        }
-      }
-    },
-    "manual_child_section_groups": {
-      "description": "Grouped sections of a manual",
-      "type": "array",
-      "items": {
-        "type": "object",
-        "additionalProperties": false,
-        "required": [
-          "title",
-          "child_sections"
-        ],
-        "properties": {
-          "title": {
-            "type": "string"
-          },
-          "child_sections": {
-            "type": "array",
-            "items": {
-              "required": [
-                "title",
-                "description",
-                "base_path"
-              ],
-              "additionalProperties": false,
-              "type": "object",
-              "properties": {
-                "title": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "base_path": {
-                  "$ref": "#/definitions/absolute_path"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "hmrc_manual_child_section_groups": {
-      "description": "Grouped sections of an HMRC manual. Differs from manuals as section_id is required and group titles are optional.",
-      "type": "array",
-      "items": {
-        "type": "object",
-        "additionalProperties": false,
-        "required": [
-          "child_sections"
-        ],
-        "properties": {
-          "title": {
-            "type": "string"
-          },
-          "child_sections": {
-            "type": "array",
-            "items": {
-              "required": [
-                "section_id",
-                "title",
-                "description",
-                "base_path"
-              ],
-              "additionalProperties": false,
-              "type": "object",
-              "properties": {
-                "section_id": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "base_path": {
-                  "$ref": "#/definitions/absolute_path"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "hmrc_manual_breadcrumbs": {
-      "description": "Breadcrumbs for HMRC manuals based on section",
-      "type": "array",
-      "items": {
-        "type": "object",
-        "additionalProperties": false,
-        "required": [
-          "base_path",
-          "section_id"
-        ],
-        "properties": {
-          "base_path": {
-            "$ref": "#/definitions/absolute_path"
-          },
-          "section_id": {
-            "type": "string"
-          }
-        }
-      }
-    },
-    "email_alert_signup_breadcrumbs": {
-      "description": "DEPRECATED. Breadcrumbs for email alert signup. Should use parent in links as other formats do.",
-      "type": "array",
-      "items": {
-        "type": "object",
-        "additionalProperties": false,
-        "required": [
-          "link",
-          "title"
-        ],
-        "properties": {
-          "link": {
-            "type": "string",
-            "format": "uri"
-          },
-          "title": {
-            "type": "string"
-          }
-        }
-      }
-    },
-    "finder_document_noun": {
-      "description": "How to refer to documents when presenting the search results",
-      "type": "string"
-    },
-    "finder_default_documents_per_page": {
-      "description": "Specify this to paginate results",
-      "type": "integer"
-    },
-    "finder_default_order": {
-      "description": "Rummager fields to order the results by",
-      "type": "string"
-    },
-    "finder_filter": {
-      "description": "This is the fixed filter that scopes the finder",
+    "withdrawn_notice": {
+      "$ref": "#/definitions/withdrawn_notice"
+    }
+  },
+  "definitions": {
+    "aaib_report_metadata": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "document_type": {
-          "type": "string"
-        },
-        "organisations": {
+        "aircraft_category": {
           "type": "array",
           "items": {
-            "type": "string"
-          }
-        },
-        "policies": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "format": {
-          "type": "string"
-        }
-      }
-    },
-    "finder_reject_filter": {
-      "description": "A fixed filter that rejects documents which match the conditions",
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "policies": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        }
-      }
-    },
-    "finder_facets": {
-      "description": "The facets shown to the user to refine their search.",
-      "type": "array",
-      "items": {
-        "type": "object",
-        "additionalProperties": false,
-        "required": [
-          "key",
-          "filterable",
-          "display_as_result_metadata"
-        ],
-        "properties": {
-          "key": {
-            "description": "The rummager field name used for this facet.",
-            "type": "string"
-          },
-          "filterable": {
-            "description": "This must be true to show the facet to users.",
-            "type": "boolean"
-          },
-          "display_as_result_metadata": {
-            "description": "Include this in search result metadata. Can be set for non-filterable facets.",
-            "type": "boolean"
-          },
-          "name": {
-            "description": "Label for the facet.",
-            "type": "string"
-          },
-          "preposition": {
-            "description": "Text used to augment the description of the search when the facet is used.",
-            "type": "string"
-          },
-          "short_name": {
-            "type": "string"
-          },
-          "type": {
-            "description": "Defines the UI component and how the facet is queried from the search API",
             "type": "string",
             "enum": [
-              "text",
-              "date",
-              "topical"
+              "commercial-fixed-wing",
+              "commercial-rotorcraft",
+              "general-aviation-fixed-wing",
+              "general-aviation-rotorcraft",
+              "sport-aviation-and-balloons"
             ]
-          },
-          "allowed_values": {
-            "description": "Possible values to show for non-dynamic select facets. All values are shown regardless of the search.",
-            "type": "array",
-            "items": {
-              "$ref": "#/definitions/label_value_pair"
-            }
-          },
-          "open_value": {
-            "description": "Value that determines the open state (the key field is in the future) of a topical facet.",
-            "$ref": "#/definitions/label_value_pair"
-          },
-          "closed_value": {
-            "description": "Value that determines the closed state (the key field is in the past) of a topical facet.",
-            "$ref": "#/definitions/label_value_pair"
           }
+        },
+        "aircraft_type": {
+          "type": "string"
+        },
+        "bulk_published": {
+          "type": "boolean"
+        },
+        "date_of_occurrence": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+        },
+        "location": {
+          "type": "string"
+        },
+        "registration": {
+          "type": "string"
+        },
+        "report_type": {
+          "type": "string",
+          "enum": [
+            "annual-safety-report",
+            "correspondence-investigation",
+            "field-investigation",
+            "pre-1997-monthly-report",
+            "foreign-report",
+            "formal-report",
+            "special-bulletin",
+            "safety-study"
+          ]
         }
       }
     },
-    "finder_show_summaries": {
-      "type": "boolean"
+    "absolute_fullpath": {
+      "description": "A path with optional query string and/or fragment.",
+      "type": "string",
+      "pattern": "^/(([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})+(/([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)*)?(\\?([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)?(#([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)?$"
     },
-    "finder_summary": {
-      "anyOf": [
-        {
-          "type": "string"
-        },
-        {
-          "type": "null"
-        }
-      ]
+    "absolute_path": {
+      "description": "A path only. Query string and/or fragment are not allowed.",
+      "type": "string",
+      "pattern": "^/(([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})+(/([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)*)?$"
     },
-    "finder_beta": {
-      "description": "Indicates if finder is in beta. TODO: Switch to top-level phase label",
-      "anyOf": [
-        {
-          "type": "boolean"
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
-    "email_alert_signup_summary": {
-      "description": "TODO: Use top-level description instead",
-      "type": "string"
-    },
-    "country": {
+    "access_limited": {
       "type": "object",
       "additionalProperties": false,
-      "required": [
-        "slug",
-        "name"
-      ],
       "properties": {
-        "name": {
-          "type": "string"
+        "auth_bypass_ids": {
+          "description": "A list of ids that will allow access to this item for non-authenticated users",
+          "$ref": "#/definitions/guid_list"
         },
-        "slug": {
-          "type": "string"
-        },
-        "synonyms": {
+        "users": {
           "type": "array",
           "items": {
             "type": "string"
@@ -1549,9 +391,16 @@
         }
       }
     },
-    "will_continue_on": {
-      "description": "Description of the website the adjoining external link will be taking the user to",
-      "type": "string"
+    "analytics_identifier": {
+      "description": "A short identifier we send to Google Analytics for multi-valued fields. This means we avoid the truncated values we would get if we sent the path or slug of eg organisations.",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "any_metadata": {
       "type": "object",
@@ -1612,79 +461,40 @@
         }
       ]
     },
-    "nested_headers": {
-      "type": "array",
-      "minItems": 1,
-      "items": {
-        "type": "object",
-        "additionalProperties": false,
-        "required": [
-          "text",
-          "level",
-          "id"
-        ],
-        "properties": {
-          "text": {
-            "type": "string"
-          },
-          "level": {
-            "type": "integer"
-          },
-          "id": {
-            "type": "string"
-          },
-          "headers": {
-            "$ref": "#/definitions/nested_headers"
-          }
+    "asset_link": {
+      "type": "object",
+      "required": [
+        "url",
+        "content_type"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "content_id": {
+          "$ref": "#/definitions/guid"
+        },
+        "content_type": {
+          "type": "string"
+        },
+        "created_at": {
+          "format": "date-time"
+        },
+        "title": {
+          "type": "string"
+        },
+        "updated_at": {
+          "format": "date-time"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
         }
       }
     },
-    "aaib_report_metadata": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "bulk_published": {
-          "type": "boolean"
-        },
-        "aircraft_category": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "enum": [
-              "commercial-fixed-wing",
-              "commercial-rotorcraft",
-              "general-aviation-fixed-wing",
-              "general-aviation-rotorcraft",
-              "sport-aviation-and-balloons"
-            ]
-          }
-        },
-        "report_type": {
-          "type": "string",
-          "enum": [
-            "annual-safety-report",
-            "correspondence-investigation",
-            "field-investigation",
-            "pre-1997-monthly-report",
-            "foreign-report",
-            "formal-report",
-            "special-bulletin",
-            "safety-study"
-          ]
-        },
-        "date_of_occurrence": {
-          "type": "string",
-          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
-        },
-        "aircraft_type": {
-          "type": "string"
-        },
-        "location": {
-          "type": "string"
-        },
-        "registration": {
-          "type": "string"
-        }
+    "asset_link_list": {
+      "description": "An ordered list of asset links",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/asset_link"
       }
     },
     "asylum_support_decision_metadata": {
@@ -1694,19 +504,8 @@
         "bulk_published": {
           "type": "boolean"
         },
-        "tribunal_decision_judges": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "tribunal_decision_category": {
-          "type": "string",
-          "enum": [
-            "section-4-1-support-for-persons-who-are-neither-an-asylum-seeker-nor-a-failed-asylum-seeker",
-            "section-4-2-support-for-failed-asylum-seekers",
-            "section-95-support-for-asylum-seekers"
-          ]
+        "hidden_indexable_content": {
+          "type": "string"
         },
         "tribunal_decision_categories": {
           "type": "array",
@@ -1719,10 +518,19 @@
             ]
           }
         },
-        "tribunal_decision_sub_category": {
-          "type": "string"
+        "tribunal_decision_category": {
+          "type": "string",
+          "enum": [
+            "section-4-1-support-for-persons-who-are-neither-an-asylum-seeker-nor-a-failed-asylum-seeker",
+            "section-4-2-support-for-failed-asylum-seekers",
+            "section-95-support-for-asylum-seekers"
+          ]
         },
-        "tribunal_decision_sub_categories": {
+        "tribunal_decision_decision_date": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+        },
+        "tribunal_decision_judges": {
           "type": "array",
           "items": {
             "type": "string"
@@ -1738,14 +546,87 @@
         "tribunal_decision_reference_number": {
           "type": "string"
         },
-        "tribunal_decision_decision_date": {
-          "type": "string",
-          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+        "tribunal_decision_sub_categories": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         },
-        "hidden_indexable_content": {
+        "tribunal_decision_sub_category": {
           "type": "string"
         }
       }
+    },
+    "attachments_with_thumbnails": {
+      "description": "An ordered list of attachments",
+      "type": "array",
+      "items": {
+        "description": "Generated HTML for each attachment including thumbnail and download link",
+        "type": "string"
+      }
+    },
+    "base_path_less_frontend_links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "content_id",
+          "title",
+          "locale"
+        ],
+        "additionalProperties": true,
+        "properties": {
+          "analytics_identifier": {
+            "$ref": "#/definitions/analytics_identifier"
+          },
+          "api_path": {
+            "$ref": "#/definitions/absolute_path"
+          },
+          "api_url": {
+            "description": "DEPRECATED: api_path should be used instead of api_url. This is due to values of api_url being tied to an environment which can cause problems when data is synced between environments. In time this field will be removed by the Publishing Platform team.",
+            "type": "string",
+            "format": "uri"
+          },
+          "base_path": {
+            "$ref": "#/definitions/absolute_path"
+          },
+          "content_id": {
+            "$ref": "#/definitions/guid"
+          },
+          "document_type": {
+            "type": "string"
+          },
+          "locale": {
+            "$ref": "#/definitions/locale"
+          },
+          "public_updated_at": {
+            "type": "string"
+          },
+          "schema_name": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "web_url": {
+            "description": "DEPRECATED: base_path should be used instead of web_url. This is due to values of web_url being tied to an environment which can cause problems when data is synced between environments. In time this field will be removed by the Publishing Platform team.",
+            "type": "string",
+            "format": "uri"
+          }
+        }
+      }
+    },
+    "body": {
+      "description": "The main content provided as HTML rendered from govspeak",
+      "type": "string"
+    },
+    "body_html_and_govspeak": {
+      "description": "The main content provided as HTML with the govspeak markdown it's rendered from",
+      "anyOf": [
+        {
+          "type": "string"
+        }
+      ]
     },
     "business_finance_support_scheme_metadata": {
       "type": "object",
@@ -1830,12 +711,47 @@
         }
       }
     },
+    "change_history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "public_timestamp",
+          "note"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "note": {
+            "description": "A summary of the change",
+            "type": "string"
+          },
+          "public_timestamp": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      }
+    },
+    "change_note": {
+      "description": "Change note for the most recent update",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
     "cma_case_metadata": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
         "bulk_published": {
           "type": "boolean"
+        },
+        "case_state": {
+          "type": "string",
+          "enum": [
+            "open",
+            "closed"
+          ]
         },
         "case_type": {
           "type": "string",
@@ -1850,12 +766,9 @@
             "review-of-orders-and-undertakings"
           ]
         },
-        "case_state": {
+        "closed_date": {
           "type": "string",
-          "enum": [
-            "open",
-            "closed"
-          ]
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
         },
         "market_sector": {
           "type": "array",
@@ -1894,6 +807,10 @@
             ]
           }
         },
+        "opened_date": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+        },
         "outcome_type": {
           "type": "string",
           "enum": [
@@ -1927,14 +844,129 @@
             "consumer-enforcement-changes-to-business-practices-agreed",
             "regulatory-references-and-appeals-final-determination"
           ]
+        }
+      }
+    },
+    "country": {
+      "type": "object",
+      "required": [
+        "slug",
+        "name"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string"
         },
-        "opened_date": {
-          "type": "string",
-          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+        "slug": {
+          "type": "string"
         },
-        "closed_date": {
+        "synonyms": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "countryside_stewardship_grant_metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "bulk_published": {
+          "type": "boolean"
+        },
+        "funding_amount": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "up-to-100",
+              "101-to-200",
+              "201-to-300",
+              "301-to-400",
+              "401-to-500",
+              "more-than-500",
+              "up-to-50-actual-costs",
+              "more-than-50-actual-costs"
+            ]
+          }
+        },
+        "grant_type": {
           "type": "string",
-          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+          "enum": [
+            "option",
+            "capital-item",
+            "supplement"
+          ]
+        },
+        "land_use": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "arable-land",
+              "boundaries",
+              "coast",
+              "educational-access",
+              "flood-risk",
+              "grassland",
+              "historic-environment",
+              "livestock-management",
+              "organic-land",
+              "priority-habitats",
+              "trees-non-woodland",
+              "uplands",
+              "vegetation-control",
+              "water-quality",
+              "wildlife-package",
+              "woodland"
+            ]
+          }
+        },
+        "tiers_or_standalone_items": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "higher-tier",
+              "mid-tier",
+              "standalone-capital-items"
+            ]
+          }
+        }
+      }
+    },
+    "details": {
+      "type": "object",
+      "required": [
+        "body",
+        "metadata",
+        "change_history"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "attachments": {
+          "$ref": "#/definitions/asset_link_list"
+        },
+        "body": {
+          "$ref": "#/definitions/body_html_and_govspeak"
+        },
+        "change_history": {
+          "$ref": "#/definitions/change_history"
+        },
+        "headers": {
+          "$ref": "#/definitions/nested_headers"
+        },
+        "max_cache_time": {
+          "$ref": "#/definitions/max_cache_time"
+        },
+        "metadata": {
+          "$ref": "#/definitions/any_metadata"
+        },
+        "temporary_update_type": {
+          "description": "Indicates that the user should choose a new update type on the next save.",
+          "type": "boolean"
         }
       }
     },
@@ -1944,13 +976,6 @@
       "properties": {
         "bulk_published": {
           "type": "boolean"
-        },
-        "dfid_review_status": {
-          "type": "string",
-          "enum": [
-            "unreviewed",
-            "peer_reviewed"
-          ]
         },
         "country": {
           "type": "array",
@@ -2162,30 +1187,6 @@
             "type": "string"
           }
         },
-        "first_published_at": {
-          "type": "string",
-          "pattern": "^[1-9][0-9]{3}[-/](0[1-9]|1[0-2])[-/](0[1-9]|[12][0-9]|3[0-1])$"
-        },
-        "dfid_theme": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "enum": [
-              "agriculture",
-              "climate_and_environment",
-              "economic_growth",
-              "education",
-              "food_and_nutrition",
-              "governance_and_conflict",
-              "health",
-              "humanitarian_disasters_and_emergencies",
-              "infrastructure",
-              "research_communication_and_uptake",
-              "social_change",
-              "water_and_sanitation"
-            ]
-          }
-        },
         "dfid_document_type": {
           "type": "string",
           "items": {
@@ -2215,74 +1216,37 @@
               "working_paper"
             ]
           }
-        }
-      }
-    },
-    "countryside_stewardship_grant_metadata": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "bulk_published": {
-          "type": "boolean"
         },
-        "grant_type": {
+        "dfid_review_status": {
           "type": "string",
           "enum": [
-            "option",
-            "capital-item",
-            "supplement"
+            "unreviewed",
+            "peer_reviewed"
           ]
         },
-        "land_use": {
+        "dfid_theme": {
           "type": "array",
           "items": {
             "type": "string",
             "enum": [
-              "arable-land",
-              "boundaries",
-              "coast",
-              "educational-access",
-              "flood-risk",
-              "grassland",
-              "historic-environment",
-              "livestock-management",
-              "organic-land",
-              "priority-habitats",
-              "trees-non-woodland",
-              "uplands",
-              "vegetation-control",
-              "water-quality",
-              "wildlife-package",
-              "woodland"
+              "agriculture",
+              "climate_and_environment",
+              "economic_growth",
+              "education",
+              "food_and_nutrition",
+              "governance_and_conflict",
+              "health",
+              "humanitarian_disasters_and_emergencies",
+              "infrastructure",
+              "research_communication_and_uptake",
+              "social_change",
+              "water_and_sanitation"
             ]
           }
         },
-        "tiers_or_standalone_items": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "enum": [
-              "higher-tier",
-              "mid-tier",
-              "standalone-capital-items"
-            ]
-          }
-        },
-        "funding_amount": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "enum": [
-              "up-to-100",
-              "101-to-200",
-              "201-to-300",
-              "301-to-400",
-              "401-to-500",
-              "more-than-500",
-              "up-to-50-actual-costs",
-              "more-than-50-actual-costs"
-            ]
-          }
+        "first_published_at": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]{3}[-/](0[1-9]|1[0-2])[-/](0[1-9]|[12][0-9]|3[0-1])$"
         }
       }
     },
@@ -2292,6 +1256,10 @@
       "properties": {
         "bulk_published": {
           "type": "boolean"
+        },
+        "first_published_at": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
         },
         "therapeutic_area": {
           "type": "array",
@@ -2323,11 +1291,44 @@
               "urology-nephrology"
             ]
           }
-        },
-        "first_published_at": {
-          "type": "string",
-          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
         }
+      }
+    },
+    "email_alert_signup_breadcrumbs": {
+      "description": "DEPRECATED. Breadcrumbs for email alert signup. Should use parent in links as other formats do.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "link",
+          "title"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "link": {
+            "type": "string",
+            "format": "uri"
+          },
+          "title": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "email_alert_signup_summary": {
+      "description": "TODO: Use top-level description instead",
+      "type": "string"
+    },
+    "email_signup_link": {
+      "description": "Path to email signup form. TODO: Check if can be switched to use links instead",
+      "type": "string",
+      "format": "uri"
+    },
+    "emphasised_organisations": {
+      "description": "The content ids of the organisations that should be displayed first in the list of organisations related to the item, these content ids must be present in the item organisation links hash.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/guid"
       }
     },
     "employment_appeal_tribunal_decision_metadata": {
@@ -2346,11 +1347,9 @@
             "type": "string"
           }
         },
-        "tribunal_decision_sub_categories": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
+        "tribunal_decision_decision_date": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
         },
         "tribunal_decision_landmark": {
           "type": "string",
@@ -2359,9 +1358,11 @@
             "not-landmark"
           ]
         },
-        "tribunal_decision_decision_date": {
-          "type": "string",
-          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+        "tribunal_decision_sub_categories": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         }
       }
     },
@@ -2372,12 +1373,8 @@
         "bulk_published": {
           "type": "boolean"
         },
-        "tribunal_decision_country": {
-          "type": "string",
-          "enum": [
-            "england-and-wales",
-            "scotland"
-          ]
+        "hidden_indexable_content": {
+          "type": "string"
         },
         "tribunal_decision_categories": {
           "type": "array",
@@ -2385,12 +1382,16 @@
             "type": "string"
           }
         },
+        "tribunal_decision_country": {
+          "type": "string",
+          "enum": [
+            "england-and-wales",
+            "scotland"
+          ]
+        },
         "tribunal_decision_decision_date": {
           "type": "string",
           "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
-        },
-        "hidden_indexable_content": {
-          "type": "string"
         }
       }
     },
@@ -2400,6 +1401,10 @@
       "properties": {
         "bulk_published": {
           "type": "boolean"
+        },
+        "closing_date": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
         },
         "fund_state": {
           "type": "string",
@@ -2429,6 +1434,17 @@
             ]
           }
         },
+        "funding_source": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "european-social-fund",
+              "european-regional-development-fund",
+              "european-agricoltural-fund-for-rural"
+            ]
+          }
+        },
         "location": {
           "type": "array",
           "items": {
@@ -2445,23 +1461,472 @@
               "london"
             ]
           }
-        },
-        "funding_source": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "enum": [
-              "european-social-fund",
-              "european-regional-development-fund",
-              "european-agricoltural-fund-for-rural"
-            ]
-          }
-        },
-        "closing_date": {
-          "type": "string",
-          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
         }
       }
+    },
+    "external_link": {
+      "type": "object",
+      "required": [
+        "title",
+        "url"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "external_related_links": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/external_link"
+      }
+    },
+    "finder_beta": {
+      "description": "Indicates if finder is in beta. TODO: Switch to top-level phase label",
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "finder_default_documents_per_page": {
+      "description": "Specify this to paginate results",
+      "type": "integer"
+    },
+    "finder_default_order": {
+      "description": "Rummager fields to order the results by",
+      "type": "string"
+    },
+    "finder_document_noun": {
+      "description": "How to refer to documents when presenting the search results",
+      "type": "string"
+    },
+    "finder_facets": {
+      "description": "The facets shown to the user to refine their search.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "key",
+          "filterable",
+          "display_as_result_metadata"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "allowed_values": {
+            "description": "Possible values to show for non-dynamic select facets. All values are shown regardless of the search.",
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/label_value_pair"
+            }
+          },
+          "closed_value": {
+            "description": "Value that determines the closed state (the key field is in the past) of a topical facet.",
+            "$ref": "#/definitions/label_value_pair"
+          },
+          "display_as_result_metadata": {
+            "description": "Include this in search result metadata. Can be set for non-filterable facets.",
+            "type": "boolean"
+          },
+          "filterable": {
+            "description": "This must be true to show the facet to users.",
+            "type": "boolean"
+          },
+          "key": {
+            "description": "The rummager field name used for this facet.",
+            "type": "string"
+          },
+          "name": {
+            "description": "Label for the facet.",
+            "type": "string"
+          },
+          "open_value": {
+            "description": "Value that determines the open state (the key field is in the future) of a topical facet.",
+            "$ref": "#/definitions/label_value_pair"
+          },
+          "preposition": {
+            "description": "Text used to augment the description of the search when the facet is used.",
+            "type": "string"
+          },
+          "short_name": {
+            "type": "string"
+          },
+          "type": {
+            "description": "Defines the UI component and how the facet is queried from the search API",
+            "type": "string",
+            "enum": [
+              "text",
+              "date",
+              "topical"
+            ]
+          }
+        }
+      }
+    },
+    "finder_filter": {
+      "description": "This is the fixed filter that scopes the finder",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "document_type": {
+          "type": "string"
+        },
+        "format": {
+          "type": "string"
+        },
+        "organisations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "policies": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "finder_reject_filter": {
+      "description": "A fixed filter that rejects documents which match the conditions",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "policies": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "finder_show_summaries": {
+      "type": "boolean"
+    },
+    "finder_summary": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "first_public_at": {
+      "description": "DEPRECATED. The date the content was first published. Used in details. Will be deprecated in favour of top level first_published_at when publishing API allows it to be edited.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "first_published_at": {
+      "description": "The date the content was first published.  Automatically determined by the publishing-api, unless overridden by the publishing application.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "frontend_links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "content_id",
+          "title",
+          "base_path",
+          "locale"
+        ],
+        "additionalProperties": true,
+        "properties": {
+          "analytics_identifier": {
+            "$ref": "#/definitions/analytics_identifier"
+          },
+          "api_path": {
+            "$ref": "#/definitions/absolute_path"
+          },
+          "api_url": {
+            "description": "DEPRECATED: api_path should be used instead of api_url. This is due to values of api_url being tied to an environment which can cause problems when data is synced between environments. In time this field will be removed by the Publishing Platform team.",
+            "type": "string",
+            "format": "uri"
+          },
+          "base_path": {
+            "$ref": "#/definitions/absolute_path"
+          },
+          "change_description": {
+            "type": "string"
+          },
+          "content_id": {
+            "$ref": "#/definitions/guid"
+          },
+          "country": {
+            "$ref": "#/definitions/country"
+          },
+          "description": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "details": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "document_type": {
+            "type": "string"
+          },
+          "links": {
+            "type": "object",
+            "patternProperties": {
+              "^[a-z_]+$": {
+                "$ref": "#/definitions/frontend_links"
+              }
+            }
+          },
+          "locale": {
+            "$ref": "#/definitions/locale"
+          },
+          "public_updated_at": {
+            "type": "string"
+          },
+          "schema_name": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "web_url": {
+            "description": "DEPRECATED: base_path should be used instead of web_url. This is due to values of web_url being tied to an environment which can cause problems when data is synced between environments. In time this field will be removed by the Publishing Platform team.",
+            "type": "string",
+            "format": "uri"
+          },
+          "withdrawn": {
+            "description": "Indicates whether the item has been unpublished as withdrawn, https://github.com/alphagov/publishing-api/blob/master/doc/model.md#workflow",
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "government": {
+      "type": "object",
+      "required": [
+        "title",
+        "slug",
+        "current"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "current": {
+          "description": "Is the government that published this document still the current government.",
+          "type": "boolean"
+        },
+        "slug": {
+          "description": "Government slug, used for analytics, eg '1970-to-1974-conservative-government'.",
+          "type": "string"
+        },
+        "title": {
+          "description": "Name of the government that first published this document, eg '1970 to 1974 Conservative government'.",
+          "type": "string"
+        }
+      }
+    },
+    "grouped_lists_of_links": {
+      "description": "Lists of links with titles in named groups",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "contents"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "contents": {
+            "description": "An ordered list of links, either internal with GUID or external with URL and title",
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/internal_or_external_link"
+            }
+          },
+          "name": {
+            "description": "Title of the group",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "guid": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-[1-5][a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$"
+    },
+    "guid_list": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/guid"
+      },
+      "uniqueItems": true
+    },
+    "hmrc_manual_breadcrumbs": {
+      "description": "Breadcrumbs for HMRC manuals based on section",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "base_path",
+          "section_id"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "base_path": {
+            "$ref": "#/definitions/absolute_path"
+          },
+          "section_id": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "hmrc_manual_change_notes": {
+      "description": "A history of changes to HMRC manuals and the associated section. section_id is included and required making it different to manual_change_notes",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "section_id",
+          "base_path",
+          "title",
+          "change_note",
+          "published_at"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "base_path": {
+            "$ref": "#/definitions/absolute_path"
+          },
+          "change_note": {
+            "type": "string"
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "section_id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "hmrc_manual_child_section_groups": {
+      "description": "Grouped sections of an HMRC manual. Differs from manuals as section_id is required and group titles are optional.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "child_sections"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "child_sections": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "section_id",
+                "title",
+                "description",
+                "base_path"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "base_path": {
+                  "$ref": "#/definitions/absolute_path"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "section_id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "title": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "image": {
+      "type": "object",
+      "required": [
+        "url"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "alt_text": {
+          "type": "string"
+        },
+        "caption": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "internal_link_without_guid": {
+      "description": "Links to pages on GOV.UK without a corresponding GUID. eg A filtered list of publications",
+      "type": "object",
+      "required": [
+        "title",
+        "path"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "$ref": "#/definitions/absolute_fullpath"
+        },
+        "title": {
+          "type": "string"
+        }
+      }
+    },
+    "internal_or_external_link": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/external_link"
+        },
+        {
+          "$ref": "#/definitions/internal_link_without_guid"
+        },
+        {
+          "$ref": "#/definitions/guid"
+        }
+      ]
     },
     "international_development_fund_metadata": {
       "type": "object",
@@ -2469,6 +1934,45 @@
       "properties": {
         "bulk_published": {
           "type": "boolean"
+        },
+        "development_sector": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "agriculture",
+              "climate-change",
+              "disabilities",
+              "education",
+              "empowerment-and-accountability",
+              "environment",
+              "girls-and-women",
+              "health",
+              "humanitarian-emergencies-disasters",
+              "livelihoods",
+              "peace-and-access-to-justice",
+              "private-sector-business",
+              "technology",
+              "trade",
+              "water-and-sanitation"
+            ]
+          }
+        },
+        "eligible_entities": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "non-governmental-organisations",
+              "uk-based-non-profit-organisations",
+              "uk-based-small-and-diaspora-organisations",
+              "companies",
+              "local-government",
+              "educational-institutions",
+              "individuals",
+              "humanitarian-relief-organisations"
+            ]
+          }
         },
         "fund_state": {
           "type": "string",
@@ -2513,45 +2017,6 @@
             ]
           }
         },
-        "development_sector": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "enum": [
-              "agriculture",
-              "climate-change",
-              "disabilities",
-              "education",
-              "empowerment-and-accountability",
-              "environment",
-              "girls-and-women",
-              "health",
-              "humanitarian-emergencies-disasters",
-              "livelihoods",
-              "peace-and-access-to-justice",
-              "private-sector-business",
-              "technology",
-              "trade",
-              "water-and-sanitation"
-            ]
-          }
-        },
-        "eligible_entities": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "enum": [
-              "non-governmental-organisations",
-              "uk-based-non-profit-organisations",
-              "uk-based-small-and-diaspora-organisations",
-              "companies",
-              "local-government",
-              "educational-institutions",
-              "individuals",
-              "humanitarian-relief-organisations"
-            ]
-          }
-        },
         "value_of_funding": {
           "type": "array",
           "items": {
@@ -2566,12 +2031,100 @@
         }
       }
     },
+    "label_value_pair": {
+      "description": "One of many possible values a user can select from",
+      "type": "object",
+      "required": [
+        "label",
+        "value"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "label": {
+          "description": "A human readable label",
+          "type": "string"
+        },
+        "value": {
+          "description": "A value to use for form controls",
+          "type": "string"
+        }
+      }
+    },
+    "locale": {
+      "type": "string",
+      "enum": [
+        "ar",
+        "az",
+        "be",
+        "bg",
+        "bn",
+        "cs",
+        "cy",
+        "de",
+        "dr",
+        "el",
+        "en",
+        "es",
+        "es-419",
+        "et",
+        "fa",
+        "fr",
+        "he",
+        "hi",
+        "hu",
+        "hy",
+        "id",
+        "it",
+        "ja",
+        "ka",
+        "ko",
+        "lt",
+        "lv",
+        "ms",
+        "pl",
+        "ps",
+        "pt",
+        "ro",
+        "ru",
+        "si",
+        "sk",
+        "so",
+        "sq",
+        "sr",
+        "sw",
+        "ta",
+        "th",
+        "tk",
+        "tr",
+        "uk",
+        "ur",
+        "uz",
+        "vi",
+        "zh",
+        "zh-hk",
+        "zh-tw"
+      ]
+    },
     "maib_report_metadata": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
         "bulk_published": {
           "type": "boolean"
+        },
+        "date_of_occurrence": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+        },
+        "report_type": {
+          "type": "string",
+          "enum": [
+            "investigation-report",
+            "safety-bulletin",
+            "completed-preliminary-examination",
+            "overseas-report",
+            "discontinued-investigation"
+          ]
         },
         "vessel_type": {
           "type": "array",
@@ -2585,30 +2138,122 @@
               "recreational-craft-power"
             ]
           }
-        },
-        "report_type": {
-          "type": "string",
-          "enum": [
-            "investigation-report",
-            "safety-bulletin",
-            "completed-preliminary-examination",
-            "overseas-report",
-            "discontinued-investigation"
-          ]
-        },
-        "date_of_occurrence": {
-          "type": "string",
-          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
         }
       }
+    },
+    "manual_change_notes": {
+      "description": "A history of changes to manuals and the associated section",
+      "items": {
+        "type": "object",
+        "required": [
+          "base_path",
+          "title",
+          "change_note",
+          "published_at"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "base_path": {
+            "$ref": "#/definitions/absolute_path"
+          },
+          "change_note": {
+            "type": "string"
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "title": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "manual_child_section_groups": {
+      "description": "Grouped sections of a manual",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "title",
+          "child_sections"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "child_sections": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "title",
+                "description",
+                "base_path"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "base_path": {
+                  "$ref": "#/definitions/absolute_path"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "title": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "manual_organisations": {
+      "description": "A manual’s organisations. TODO: Switch to use organisations in links",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "title",
+          "abbreviation",
+          "web_url"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "abbreviation": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "web_url": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "manual_section_parent": {
+      "description": "The parent manual for a manual section",
+      "type": "object",
+      "required": [
+        "base_path"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "base_path": {
+          "$ref": "#/definitions/absolute_path"
+        }
+      }
+    },
+    "max_cache_time": {
+      "description": "The maximum length of time the content should be cached, in seconds",
+      "type": "integer"
     },
     "medical_safety_alert_metadata": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "bulk_published": {
-          "type": "boolean"
-        },
         "alert_type": {
           "type": "string",
           "enum": [
@@ -2617,6 +2262,13 @@
             "field-safety-notices",
             "company-led-drugs"
           ]
+        },
+        "bulk_published": {
+          "type": "boolean"
+        },
+        "issued_date": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
         },
         "medical_specialism": {
           "type": "array",
@@ -2647,12 +2299,165 @@
               "vascular-cardiac-surgery"
             ]
           }
-        },
-        "issued_date": {
-          "type": "string",
-          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
         }
       }
+    },
+    "multiple_content_types": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "content_type",
+          "content"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "content": {
+            "type": "string"
+          },
+          "content_type": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "nation_applicability": {
+      "description": "An object specifying the applicability of a particular nation.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "alternative_url": {
+          "description": "An optional alternative URL to link to for more information on this content item pertaining to this nation.",
+          "type": "string"
+        },
+        "applicable": {
+          "description": "Whether the content applies to this nation or not.",
+          "type": "boolean"
+        },
+        "label": {
+          "description": "The pretty-printed, translated label for this nation.",
+          "type": "string"
+        }
+      }
+    },
+    "national_applicability": {
+      "description": "An object specifying the applicable nations for this content item. If it applies to all nations, it should be omitted.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "england": {
+          "$ref": "#/definitions/nation_applicability"
+        },
+        "northern_ireland": {
+          "$ref": "#/definitions/nation_applicability"
+        },
+        "scotland": {
+          "$ref": "#/definitions/nation_applicability"
+        },
+        "wales": {
+          "$ref": "#/definitions/nation_applicability"
+        }
+      }
+    },
+    "nested_headers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "text",
+          "level",
+          "id"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "headers": {
+            "$ref": "#/definitions/nested_headers"
+          },
+          "id": {
+            "type": "string"
+          },
+          "level": {
+            "type": "integer"
+          },
+          "text": {
+            "type": "string"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "parts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "title",
+          "slug",
+          "body"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "body": {
+            "$ref": "#/definitions/body_html_and_govspeak"
+          },
+          "slug": {
+            "type": "string",
+            "format": "uri"
+          },
+          "title": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "political": {
+      "description": "If the content is considered political in nature, reflecting views of the government it was published under.",
+      "type": "boolean"
+    },
+    "public_updated_at": {
+      "description": "When the content was last significantly changed (a major update). Shown to users.  Automatically determined by the publishing-api, unless overridden by the publishing application.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "publishing_app_name": {
+      "description": "The application that published this item.",
+      "type": "string",
+      "enum": [
+        "calculators",
+        "calendars",
+        "collections-publisher",
+        "contacts",
+        "content-tagger",
+        "design-principles",
+        "external-link-tracker",
+        "feedback",
+        "frontend",
+        "hmrc-manuals-api",
+        "info-frontend",
+        "licencefinder",
+        "manuals-frontend",
+        "manuals-publisher",
+        "maslow",
+        "need-api",
+        "performanceplatform-big-screen-view",
+        "policy-publisher",
+        "publisher",
+        "rummager",
+        "service-manual-publisher",
+        "share-sale-publisher",
+        "short-url-manager",
+        "smartanswers",
+        "specialist-publisher",
+        "spotlight",
+        "static",
+        "tariff",
+        "travel-advice-publisher",
+        "whitehall"
+      ]
+    },
+    "publishing_request_id": {
+      "description": "A unique identifier used to track publishing requests to rendered content",
+      "type": "string"
     },
     "raib_report_metadata": {
       "type": "object",
@@ -2660,6 +2465,10 @@
       "properties": {
         "bulk_published": {
           "type": "boolean"
+        },
+        "date_of_occurrence": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
         },
         "railway_type": {
           "type": "array",
@@ -2682,10 +2491,113 @@
             "discontinuation-report",
             "safety-digest"
           ]
+        }
+      }
+    },
+    "redirect_route": {
+      "type": "object",
+      "required": [
+        "path",
+        "type",
+        "destination"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "destination": {
+          "$ref": "#/definitions/absolute_fullpath"
         },
-        "date_of_occurrence": {
+        "path": {
+          "$ref": "#/definitions/absolute_path"
+        },
+        "segments_mode": {
+          "description": "For prefix redirects, preserve or ignore the rest of the fullpath. For exact, preserve or ignore the querystring.",
+          "enum": [
+            "preserve",
+            "ignore"
+          ]
+        },
+        "type": {
+          "enum": [
+            "prefix",
+            "exact"
+          ]
+        }
+      }
+    },
+    "rendering_app_name": {
+      "description": "The application that renders this item.",
+      "anyOf": [
+        {
           "type": "string",
-          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+          "enum": [
+            "calculators",
+            "calendars",
+            "collections",
+            "designprinciples",
+            "email-alert-frontend",
+            "email-campaign-frontend",
+            "feedback",
+            "finder-frontend",
+            "frontend",
+            "government-frontend",
+            "info-frontend",
+            "licencefinder",
+            "manuals-frontend",
+            "performanceplatform-big-screen-view",
+            "publicapi",
+            "rummager",
+            "service-manual-frontend",
+            "smartanswers",
+            "spotlight",
+            "static",
+            "tariff",
+            "whitehall-frontend"
+          ]
+        },
+        {
+          "description": "Items like 'gone' and 'redirect' do not have a rendering_app",
+          "type": "null"
+        }
+      ]
+    },
+    "route": {
+      "type": "object",
+      "required": [
+        "path",
+        "type"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "type": {
+          "enum": [
+            "prefix",
+            "exact"
+          ]
+        }
+      }
+    },
+    "service_manual_topic_groups": {
+      "description": "Lists of items with titles & content IDs in named groups, used for service manual topic pages",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "content_ids": {
+            "$ref": "#/definitions/guid_list"
+          },
+          "description": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          }
         }
       }
     },
@@ -2693,12 +2605,49 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "bulk_published": {
-          "type": "boolean"
-        },
         "assessment_date": {
           "type": "string",
           "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+        },
+        "bulk_published": {
+          "type": "boolean"
+        }
+      }
+    },
+    "tags": {
+      "description": "Field used by email-alert-api to trigger email alerts for subscriptions to topics (gov.uk/topic) and policies (gov.uk/policies).",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "additional_topics": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "browse_pages": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "policies": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "primary_topic": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "topics": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         }
       }
     },
@@ -2708,6 +2657,9 @@
       "properties": {
         "bulk_published": {
           "type": "boolean"
+        },
+        "hidden_indexable_content": {
+          "type": "string"
         },
         "tribunal_decision_category": {
           "type": "string",
@@ -2723,9 +2675,41 @@
         "tribunal_decision_decision_date": {
           "type": "string",
           "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
-        },
-        "hidden_indexable_content": {
-          "type": "string"
+        }
+      }
+    },
+    "taxonomy_internal_name": {
+      "description": "An internal name for taxonomy admin interfaces. Includes parent.",
+      "type": "string"
+    },
+    "topic_groups": {
+      "description": "Lists of items with titles & paths in named groups, used for showing curated links on browse pages and topics",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "contents"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "content_ids": {
+            "description": "DEPRECATED",
+            "$ref": "#/definitions/guid_list"
+          },
+          "contents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/absolute_path"
+            }
+          },
+          "description": {
+            "description": "DEPRECATED",
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          }
         }
       }
     },
@@ -2736,13 +2720,20 @@
         "bulk_published": {
           "type": "boolean"
         },
-        "tribunal_decision_judges": {
+        "hidden_indexable_content": {
+          "type": "string"
+        },
+        "tribunal_decision_categories": {
           "type": "array",
           "items": {
             "type": "string"
           }
         },
-        "tribunal_decision_categories": {
+        "tribunal_decision_decision_date": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+        },
+        "tribunal_decision_judges": {
           "type": "array",
           "items": {
             "type": "string"
@@ -2753,13 +2744,6 @@
           "items": {
             "type": "string"
           }
-        },
-        "tribunal_decision_decision_date": {
-          "type": "string",
-          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
-        },
-        "hidden_indexable_content": {
-          "type": "string"
         }
       }
     },
@@ -2767,6 +2751,18 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "alert_issue_date": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+        },
+        "build_end_date": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+        },
+        "build_start_date": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+        },
         "bulk_published": {
           "type": "boolean"
         },
@@ -2776,6 +2772,9 @@
             "recall",
             "non_urgent_fault"
           ]
+        },
+        "faulty_item_model": {
+          "type": "string"
         },
         "faulty_item_type": {
           "type": "string",
@@ -2807,23 +2806,24 @@
             "other-manufacturer"
           ]
         },
-        "faulty_item_model": {
-          "type": "string"
-        },
         "serial_number": {
           "type": "string"
+        }
+      }
+    },
+    "will_continue_on": {
+      "description": "Description of the website the adjoining external link will be taking the user to",
+      "type": "string"
+    },
+    "withdrawn_notice": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "explanation": {
+          "type": "string"
         },
-        "alert_issue_date": {
-          "type": "string",
-          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
-        },
-        "build_start_date": {
-          "type": "string",
-          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
-        },
-        "build_end_date": {
-          "type": "string",
-          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+        "withdrawn_at": {
+          "format": "date-time"
         }
       }
     }
