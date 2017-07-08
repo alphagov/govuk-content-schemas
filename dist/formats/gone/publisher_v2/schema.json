@@ -1,88 +1,164 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
-  "additionalProperties": false,
   "required": [
+    "base_path",
+    "document_type",
     "publishing_app",
-    "routes"
+    "routes",
+    "schema_name"
   ],
+  "additionalProperties": false,
   "properties": {
+    "access_limited": {
+      "$ref": "#/definitions/access_limited"
+    },
+    "analytics_identifier": {
+      "$ref": "#/definitions/analytics_identifier"
+    },
     "base_path": {
       "$ref": "#/definitions/absolute_path"
     },
-    "content_id": {
-      "$ref": "#/definitions/guid"
+    "change_note": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "description": {
+      "type": "null"
+    },
+    "details": {
+      "$ref": "#/definitions/details"
     },
     "document_type": {
+      "type": "string",
       "enum": [
         "gone"
       ]
     },
-    "schema_name": {
-      "enum": [
-        "gone"
-      ]
+    "first_published_at": {
+      "$ref": "#/definitions/first_published_at"
     },
-    "publishing_app": {
-      "type": "string"
-    },
-    "update_type": {
-      "enum": [
-        "major",
-        "minor",
-        "republish"
-      ]
-    },
-    "public_updated_at": {
+    "last_edited_at": {
+      "description": "Last time when the content received a major or minor update.",
       "type": "string",
       "format": "date-time"
     },
-    "routes": {
+    "links": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+      }
+    },
+    "locale": {
+      "$ref": "#/definitions/locale"
+    },
+    "need_ids": {
       "type": "array",
       "items": {
-        "type": "object",
-        "additionalProperties": false,
-        "required": [
-          "path",
-          "type"
-        ],
-        "properties": {
-          "path": {
+        "type": "string"
+      }
+    },
+    "phase": {
+      "description": "The service design phase of this content item - https://www.gov.uk/service-manual/phases",
+      "type": "string",
+      "enum": [
+        "alpha",
+        "beta",
+        "live"
+      ]
+    },
+    "previous_version": {
+      "type": "string"
+    },
+    "public_updated_at": {
+      "$ref": "#/definitions/public_updated_at"
+    },
+    "publishing_app": {
+      "$ref": "#/definitions/publishing_app_name"
+    },
+    "redirects": {
+      "type": "array",
+      "additionalItems": false,
+      "items": {
+      }
+    },
+    "rendering_app": {
+      "type": "null"
+    },
+    "routes": {
+      "$ref": "#/definitions/routes"
+    },
+    "schema_name": {
+      "type": "string",
+      "enum": [
+        "gone"
+      ]
+    },
+    "title": {
+      "type": "null"
+    },
+    "update_type": {
+      "$ref": "#/definitions/update_type"
+    }
+  },
+  "definitions": {
+    "absolute_path": {
+      "description": "A path only. Query string and/or fragment are not allowed.",
+      "type": "string",
+      "pattern": "^/(([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})+(/([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)*)?$"
+    },
+    "access_limited": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "auth_bypass_ids": {
+          "description": "A list of ids that will allow access to this item for non-authenticated users",
+          "$ref": "#/definitions/guid_list"
+        },
+        "users": {
+          "type": "array",
+          "items": {
             "type": "string"
-          },
-          "type": {
-            "enum": [
-              "exact",
-              "prefix"
-            ]
           }
         }
       }
+    },
+    "analytics_identifier": {
+      "description": "A short identifier we send to Google Analytics for multi-valued fields. This means we avoid the truncated values we would get if we sent the path or slug of eg organisations.",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "details": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "explanation": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
         "alternative_path": {
           "type": [
             "string",
             "null"
           ],
           "format": "uri"
+        },
+        "explanation": {
+          "type": [
+            "string",
+            "null"
+          ]
         }
       }
-    }
-  },
-  "definitions": {
-    "absolute_path": {
+    },
+    "first_published_at": {
+      "description": "The date the content was first published.  Automatically determined by the publishing-api, unless overridden by the publishing application.",
       "type": "string",
-      "pattern": "^/(([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})+(/([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)*)?$"
+      "format": "date-time"
     },
     "guid": {
       "type": "string",
@@ -92,7 +168,137 @@
       "type": "array",
       "items": {
         "$ref": "#/definitions/guid"
+      },
+      "uniqueItems": true
+    },
+    "locale": {
+      "type": "string",
+      "enum": [
+        "ar",
+        "az",
+        "be",
+        "bg",
+        "bn",
+        "cs",
+        "cy",
+        "de",
+        "dr",
+        "el",
+        "en",
+        "es",
+        "es-419",
+        "et",
+        "fa",
+        "fr",
+        "he",
+        "hi",
+        "hu",
+        "hy",
+        "id",
+        "it",
+        "ja",
+        "ka",
+        "ko",
+        "lt",
+        "lv",
+        "ms",
+        "pl",
+        "ps",
+        "pt",
+        "ro",
+        "ru",
+        "si",
+        "sk",
+        "so",
+        "sq",
+        "sr",
+        "sw",
+        "ta",
+        "th",
+        "tk",
+        "tr",
+        "uk",
+        "ur",
+        "uz",
+        "vi",
+        "zh",
+        "zh-hk",
+        "zh-tw"
+      ]
+    },
+    "public_updated_at": {
+      "description": "When the content was last significantly changed (a major update). Shown to users.  Automatically determined by the publishing-api, unless overridden by the publishing application.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "publishing_app_name": {
+      "description": "The application that published this item.",
+      "type": "string",
+      "enum": [
+        "calculators",
+        "calendars",
+        "collections-publisher",
+        "contacts",
+        "content-tagger",
+        "design-principles",
+        "external-link-tracker",
+        "feedback",
+        "frontend",
+        "hmrc-manuals-api",
+        "info-frontend",
+        "licencefinder",
+        "manuals-frontend",
+        "manuals-publisher",
+        "maslow",
+        "need-api",
+        "performanceplatform-big-screen-view",
+        "policy-publisher",
+        "publisher",
+        "rummager",
+        "service-manual-publisher",
+        "share-sale-publisher",
+        "short-url-manager",
+        "smartanswers",
+        "specialist-publisher",
+        "spotlight",
+        "static",
+        "tariff",
+        "travel-advice-publisher",
+        "whitehall"
+      ]
+    },
+    "route": {
+      "type": "object",
+      "required": [
+        "path",
+        "type"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "type": {
+          "enum": [
+            "prefix",
+            "exact"
+          ]
+        }
       }
+    },
+    "routes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/route"
+      },
+      "minItems": 1
+    },
+    "update_type": {
+      "enum": [
+        "major",
+        "minor",
+        "republish"
+      ]
     }
   }
 }
