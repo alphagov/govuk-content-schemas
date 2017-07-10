@@ -4,7 +4,6 @@
   "additionalProperties": false,
   "required": [
     "body",
-    "headings",
     "public_timestamp",
     "first_published_version"
   ],
@@ -13,6 +12,7 @@
       "$ref": "#/definitions/body"
     },
     "headings": {
+      "description": "DEPRECATED. A list of headings used to display a contents list. Superceded in https://github.com/alphagov/government-frontend/pull/384",
       "type": "string"
     },
     "public_timestamp": {
