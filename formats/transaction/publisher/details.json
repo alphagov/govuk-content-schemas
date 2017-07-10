@@ -33,6 +33,9 @@
     "downtime_message": {
       "description": "Text of the message alerting the user of service downtime",
       "type": "string"
+    },
+    "start_button_text": {
+      "$ref": "#/definitions/start_button_text"
     }
   }
 }
