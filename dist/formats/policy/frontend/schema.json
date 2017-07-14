@@ -156,14 +156,6 @@
         "child_taxons": {
           "description": "Link type automatically added by Publishing API",
           "$ref": "#/definitions/frontend_links"
-        },
-        "topic_content": {
-          "description": "Link type automatically added by Publishing API",
-          "$ref": "#/definitions/frontend_links"
-        },
-        "mainstream_browse_content": {
-          "description": "Link type automatically added by Publishing API",
-          "$ref": "#/definitions/frontend_links"
         }
       }
     },
