@@ -19,7 +19,6 @@ def dependentApplications = [
   ['government-frontend', true],
   ['hmrc-manuals-api', true],
   ['info-frontend', true],
-  ['licencefinder', false],
   ['manuals-frontend', true],
   ['manuals-publisher', true],
   ['policy-publisher', true],
@@ -30,6 +29,7 @@ def dependentApplications = [
   ['static', true],
 
   ['contacts', false],
+  ['licencefinder', false],
   ['publishing-api', false],
   ['service-manual-frontend', false],
   ['smartanswers', false],
