@@ -490,7 +490,8 @@
             "category": {
               "enum": [
                 "organ_donor",
-                "register_to_vote"
+                "register_to_vote",
+                "mot_reminders"
               ]
             },
             "url": {
