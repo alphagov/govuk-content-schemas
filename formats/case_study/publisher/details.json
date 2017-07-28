@@ -42,6 +42,10 @@
     },
     "emphasised_organisations": {
       "$ref": "#/definitions/emphasised_organisations"
+    },
+    "publishing_state": {
+      "description": "Identifies the state of the publication: published, withdrawn, draft. To be sent to Google Analytics on pageview events.",
+      "type": "string"
     }
   }
 }
