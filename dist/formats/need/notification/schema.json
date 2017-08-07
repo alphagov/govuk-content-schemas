@@ -263,6 +263,10 @@
         "type": "string"
       }
     },
+    "payload_version": {
+      "description": "Counter to indicate when the payload was generated",
+      "type": "integer"
+    },
     "phase": {
       "description": "The service design phase of this content item - https://www.gov.uk/service-manual/phases",
       "type": "string",
