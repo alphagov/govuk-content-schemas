@@ -47,6 +47,10 @@
       "items": {
         "$ref": "#/definitions/redirect_route"
       }
+    },
+    "payload_version": {
+      "description": "Counter to indicate when the payload was generated",
+      "type": "integer"
     }
   },
   "definitions": {
