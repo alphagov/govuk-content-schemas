@@ -210,7 +210,7 @@
             },
             {
               "key": "medical_specialism",
-              "name": "Medical specialism",
+              "name": "Medical speciality",
               "type": "text",
               "preposition": "about",
               "display_as_result_metadata": true,
