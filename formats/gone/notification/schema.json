@@ -4,7 +4,8 @@
   "additionalProperties": false,
   "required": [
     "publishing_app",
-    "routes"
+    "routes",
+    "payload_version"
   ],
   "properties": {
     "base_path": {

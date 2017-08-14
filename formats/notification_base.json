@@ -8,7 +8,8 @@
     "update_type",
     "links",
     "expanded_links",
-    "govuk_request_id"
+    "govuk_request_id",
+    "payload_version"
   ],
   "properties": {
     "routes": {

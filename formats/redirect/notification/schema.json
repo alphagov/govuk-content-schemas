@@ -7,7 +7,8 @@
     "schema_name",
     "publishing_app",
     "redirects",
-    "base_path"
+    "base_path",
+    "payload_version"
   ],
   "properties": {
     "base_path": {
