@@ -25,6 +25,10 @@
     },
     "publishing_app": {
       "type": "string"
+    },
+    "payload_version": {
+      "description": "Counter to indicate when the payload was generated",
+      "type": "integer"
     }
   },
   "definitions": {
