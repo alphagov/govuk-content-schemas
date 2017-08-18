@@ -1587,7 +1587,14 @@
     },
     "publishing_request_id": {
       "description": "A unique identifier used to track publishing requests to rendered content",
-      "type": "string"
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "redirect_route": {
       "type": "object",
