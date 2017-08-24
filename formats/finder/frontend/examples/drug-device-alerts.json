@@ -125,7 +125,7 @@
         "display_as_result_metadata": true,
         "filterable": true,
         "key": "medical_specialism",
-        "name": "Medical speciality",
+        "name": "Medical specialty",
         "preposition": "about",
         "type": "text"
       },
