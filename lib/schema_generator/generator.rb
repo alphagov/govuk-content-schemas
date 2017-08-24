@@ -16,16 +16,20 @@ module SchemaGenerator
     def self.generate(schema_name, data)
       format = Format.new(schema_name, data)
 
-      publisher_content_schema = PublisherContentSchemaGenerator.new(format).generate
-      Schema.write("dist/formats/#{schema_name}/publisher_v2/schema.json", publisher_content_schema)
+      if format.generate_publisher?
+        publisher_content_schema = PublisherContentSchemaGenerator.new(format).generate
+        Schema.write("dist/formats/#{schema_name}/publisher_v2/schema.json", publisher_content_schema)
 
-      publisher_links_schema = PublisherLinksSchemaGenerator.new(format).generate
-      Schema.write("dist/formats/#{schema_name}/publisher_v2/links.json", publisher_links_schema)
+        publisher_links_schema = PublisherLinksSchemaGenerator.new(format).generate
+        Schema.write("dist/formats/#{schema_name}/publisher_v2/links.json", publisher_links_schema)
+      end
 
-      notification_schema = NotificationSchemaGenerator.new(format).generate
-      Schema.write("dist/formats/#{schema_name}/notification/schema.json", notification_schema)
+      if format.generate_nofitication?
+        notification_schema = NotificationSchemaGenerator.new(format).generate
+        Schema.write("dist/formats/#{schema_name}/notification/schema.json", notification_schema)
+      end
 
-      if format.frontend?
+      if format.generate_frontend?
         frontend_schema = FrontendSchemaGenerator.new(format).generate
         Schema.write("dist/formats/#{schema_name}/frontend/schema.json", frontend_schema)
       end

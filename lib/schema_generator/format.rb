@@ -81,8 +81,20 @@ module SchemaGenerator
       )
     end
 
-    def frontend?
-      format_data.fetch("frontend", true) && !base_path.forbidden?
+    def generate_publisher?
+      generate_publisher = format_data.dig("generate", "publisher")
+      generate_publisher.nil? ? true : generate_publisher
+    end
+
+    def generate_nofitication?
+      generate_notification = format_data.dig("generate", "notification")
+      generate_notification.nil? ? true : generate_notification
+    end
+
+    def generate_frontend?
+      generate = format_data.dig("generate", "frontend")
+      generate = true if generate.nil?
+      generate && !base_path.forbidden?
     end
 
     def definitions
