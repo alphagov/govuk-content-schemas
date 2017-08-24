@@ -6,6 +6,7 @@ gem 'rake'
 gem 'rspec'
 gem 'govuk-dummy_content_store', '0.0.5'
 gem 'foreman', '0.78.0'
+gem 'jsonnet', '~> 0.2'
 
 group :test do
   gem 'pry-byebug'
