@@ -4,6 +4,9 @@
     type: "object",
     additionalProperties: true,
     required: [
+      # base_path isn't actually a required field but too many apps break without
+      # it
+      "base_path",
       "content_id",
       "title",
       "locale",
