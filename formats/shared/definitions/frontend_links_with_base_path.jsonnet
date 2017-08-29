@@ -36,7 +36,10 @@
         "$ref": "#/definitions/analytics_identifier",
       },
       public_updated_at: {
-        "$ref": "#/definitions/public_updated_at",
+        oneOf: [
+          { "$ref": "#/definitions/public_updated_at" },
+          { type: "null" },
+        ],
       },
       content_id: {
         "$ref": "#/definitions/guid",
