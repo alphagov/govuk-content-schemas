@@ -55,5 +55,6 @@
   },
   "locale": "en",
   "schema_name": "finder",
-  "document_type": "finder"
+  "document_type": "finder",
+  "updated_at": "2016-09-26T09:50:56.078Z"
 }

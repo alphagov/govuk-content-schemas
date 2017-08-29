@@ -390,5 +390,6 @@
     ]
   },
   "schema_name": "finder",
-  "document_type": "finder"
+  "document_type": "finder",
+  "updated_at": "2017-06-30T15:44:11.073Z"
 }
