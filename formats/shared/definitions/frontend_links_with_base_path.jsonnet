@@ -47,6 +47,14 @@
       locale: {
         "$ref": "#/definitions/locale",
       },
+      links: {
+        type: "object",
+        patternProperties: {
+          "^[a-z_]+$": {
+            "$ref": "#/definitions/frontend_links_with_base_path",
+          }
+        }
+      },
     },
   },
 }
