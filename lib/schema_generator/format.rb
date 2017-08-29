@@ -255,7 +255,12 @@ module SchemaGenerator
 
       def frontend_properties
         links.each_with_object({}) do |(k, v), hash|
-          link = v.merge({ "$ref" => "#/definitions/frontend_links" })
+          # It's possible for all link types to contain items without base_paths
+          # however apps aren't coded for this so fail on this, therefore
+          # this legacy fix is included.
+          # @FIXME remove need for this check
+          definition = k == "world_locations" ? "frontend_links" : "frontend_links_with_base_path"
+          link = v.merge({ "$ref" => "#/definitions/#{definition}" })
             .delete_if { |field| %w(required minItems).include?(field) }
           hash[k] = link
         end

@@ -47,7 +47,7 @@ module SchemaGenerator
       LINK_TYPES_ADDED_BY_PUBLISHING_API.each_with_object({}) do |type, memo|
         memo[type] = {
           "description" => "Link type automatically added by Publishing API",
-          "$ref": "#/definitions/frontend_links"
+          "$ref": "#/definitions/frontend_links_with_base_path"
         }
       end
     end

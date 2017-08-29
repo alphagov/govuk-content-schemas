@@ -4,6 +4,7 @@
     type: "object",
     additionalProperties: true,
     required: [
+      "base_path",
       "content_id",
       "locale",
       "title",

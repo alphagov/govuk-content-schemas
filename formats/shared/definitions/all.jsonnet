@@ -1,5 +1,6 @@
 (import "routes_redirects.jsonnet") + {
   frontend_links: (import "frontend_links.jsonnet"),
+  frontend_links_with_base_path: (import "frontend_links_with_base_path.jsonnet"),
   absolute_path: {
     type: "string",
     pattern: "^/(([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})+(/([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)*)?$",
