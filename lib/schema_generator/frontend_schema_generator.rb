@@ -5,7 +5,7 @@ module SchemaGenerator
     end
 
     def generate
-      schema = {
+      {
         "$schema" => "http://json-schema.org/draft-04/schema#",
         "type" => "object",
         "additionalProperties" => false,
@@ -13,7 +13,6 @@ module SchemaGenerator
         "properties" => properties,
         "definitions" => change_multiple_content_types(definitions),
       }
-      ApplyChangeHistory.call(schema)
     end
 
   private
@@ -58,6 +57,7 @@ module SchemaGenerator
       all_definitions = Jsonnet
         .load("formats/shared/definitions/all.jsonnet")
         .merge(format.definitions)
+      ApplyChangeHistoryDefinitions.call(all_definitions)
       DefinitionsResolver.new(properties, all_definitions).call
     end
 

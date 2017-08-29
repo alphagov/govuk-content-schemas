@@ -7,7 +7,7 @@ require "schema_generator/notification_schema_generator"
 require "schema_generator/format"
 require "schema_generator/definitions_resolver"
 require "schema_generator/expanded_links"
-require "schema_generator/apply_change_history"
+require "schema_generator/apply_change_history_definitions"
 
 module SchemaGenerator
   module Generator
