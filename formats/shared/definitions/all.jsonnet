@@ -388,6 +388,7 @@
       "spotlight",
       "static",
       "tariff",
+      "whitehall-admin",
       "whitehall-frontend",
     ],
   },
