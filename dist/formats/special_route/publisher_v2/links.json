@@ -993,7 +993,8 @@
             "spotlight",
             "static",
             "tariff",
-            "whitehall-frontend"
+            "whitehall-frontend",
+            "whitehall-admin"
           ]
         },
         {
