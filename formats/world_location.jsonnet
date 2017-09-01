@@ -1,5 +1,7 @@
 (import "shared/default_format.jsonnet") + {
   document_type: "world_location",
+  base_path: "optional",
+  routes: "optional",
   definitions: {
     details: {
       type: "object",
