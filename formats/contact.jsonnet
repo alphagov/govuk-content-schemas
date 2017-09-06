@@ -208,7 +208,7 @@
       },
     },
   },
-  edition_links: (import "shared/base_edition_links.jsonnet") + {
+  links: (import "shared/base_links.jsonnet") + {
     related: "",
   },
 }
