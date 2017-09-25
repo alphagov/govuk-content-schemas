@@ -346,7 +346,6 @@
       "manuals-frontend",
       "manuals-publisher",
       "maslow",
-      "need-api",
       "performanceplatform-big-screen-view",
       "policy-publisher",
       "publisher",
