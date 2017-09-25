@@ -5,7 +5,7 @@
     "consultation",
     "consultation_outcome",
   ],
-  definitions: {
+  definitions: (import "shared/definitions/_whitehall.jsonnet") + {
     details: {
       type: "object",
       additionalProperties: false,

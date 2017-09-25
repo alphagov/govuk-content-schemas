@@ -1,7 +1,8 @@
 module SchemaGenerator
   class PublisherLinksSchemaGenerator
-    def initialize(format)
+    def initialize(format, global_definitions)
       @format = format
+      @global_definitions = global_definitions
     end
 
     def generate
@@ -18,7 +19,7 @@ module SchemaGenerator
 
   private
 
-    attr_reader :format
+    attr_reader :format, :global_definitions
 
     def properties
       {
@@ -28,9 +29,7 @@ module SchemaGenerator
     end
 
     def definitions
-      all_definitions = Jsonnet
-        .load("formats/shared/definitions/all.jsonnet")
-        .merge(format.definitions)
+      all_definitions = global_definitions.merge(format.definitions)
       DefinitionsResolver.new(properties, all_definitions).call
     end
 

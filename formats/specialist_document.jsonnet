@@ -20,7 +20,7 @@
     "vehicle_recalls_and_faults_alert",
     "asylum_support_decision",
   ],
-  definitions: (import "shared/definitions/specialist_document.jsonnet") + {
+  definitions: (import "shared/definitions/_specialist_document.jsonnet") + {
     details: {
       type: "object",
       additionalProperties: false,

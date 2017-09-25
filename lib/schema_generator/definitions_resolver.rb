@@ -48,12 +48,22 @@ module SchemaGenerator
     def resolve_depenencies(definition_names, dependencies_found = [])
       names = definition_names.flat_map do |name|
         dependencies = definition_dependencies[name]
-        raise "Undefined definition: #{name}" unless dependencies
+        raise UnresolvedDefinition.new(name) unless dependencies
         new_dependencies = dependencies - dependencies_found
         current_dependencies = dependencies_found + new_dependencies
         current_dependencies + resolve_depenencies(new_dependencies, current_dependencies)
       end
       names.uniq
     end
+
+    class UnresolvedDefinition < RuntimeError
+      attr_reader :definition
+
+      def initialize(definition)
+        @definition = definition
+        super("Unresolved defintion: #{definition}")
+      end
+    end
+
   end
 end

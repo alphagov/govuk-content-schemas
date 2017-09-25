@@ -6,7 +6,7 @@
     "government_response",
     "world_news_story",
   ],
-  definitions: {
+  definitions: (import "shared/definitions/_whitehall.jsonnet") + {
     details: {
       type: "object",
       additionalProperties: false,

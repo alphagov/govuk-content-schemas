@@ -5,7 +5,7 @@
     "written_statement",
     "oral_statement",
   ],
-  definitions: {
+  definitions: (import "shared/definitions/_whitehall.jsonnet") + {
     details: {
       type: "object",
       additionalProperties: false,

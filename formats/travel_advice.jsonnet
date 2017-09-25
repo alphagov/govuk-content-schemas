@@ -58,6 +58,28 @@
         },
       },
     },
+    country: {
+      type: "object",
+      additionalProperties: false,
+      required: [
+        "slug",
+        "name",
+      ],
+      properties: {
+        name: {
+          type: "string",
+        },
+        slug: {
+          type: "string",
+        },
+        synonyms: {
+          type: "array",
+          items: {
+            type: "string",
+          },
+        },
+      },
+    },
   },
   links: (import "shared/base_links.jsonnet") + {
     related: "",

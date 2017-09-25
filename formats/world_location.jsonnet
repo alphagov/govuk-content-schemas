@@ -2,7 +2,7 @@
   document_type: "world_location",
   base_path: "optional",
   routes: "optional",
-  definitions: {
+  definitions: (import "shared/definitions/_whitehall.jsonnet") + {
     details: {
       type: "object",
       additionalProperties: false,

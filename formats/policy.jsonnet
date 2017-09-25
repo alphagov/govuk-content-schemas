@@ -1,6 +1,6 @@
 (import "shared/default_format.jsonnet") + {
   document_type: "policy",
-  definitions: {
+  definitions: (import "shared/definitions/_whitehall.jsonnet") + {
     details: {
       type: "object",
       additionalProperties: false,
