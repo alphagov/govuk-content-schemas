@@ -556,6 +556,25 @@
             }
           }
         },
+        "contact_groups": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "slug",
+              "title"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "slug": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              }
+            }
+          }
+        },
         "contact_type": {
           "type": "string"
         },
