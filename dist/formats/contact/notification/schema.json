@@ -531,7 +531,8 @@
     "details": {
       "type": "object",
       "required": [
-        "title"
+        "title",
+        "contact_groups"
       ],
       "additionalProperties": false,
       "properties": {
