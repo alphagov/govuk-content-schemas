@@ -154,7 +154,13 @@
       }
     ],
     "more_info_post_address": "\n",
-    "language": "en"
+    "language": "en",
+    "contact_groups": [
+      {
+        "slug": "customs-excise",
+        "title": "Customs and Excise"
+      }
+    ]
   },
   "schema_name": "contact",
   "document_type": "contact"

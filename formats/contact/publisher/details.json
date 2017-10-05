@@ -202,6 +202,25 @@
     },
     "language": {
       "type": "string"
+    },
+    "contact_groups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "slug",
+          "title"
+        ],
+        "properties": {
+          "slug": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          }
+        }
+      }
     }
   }
 }
