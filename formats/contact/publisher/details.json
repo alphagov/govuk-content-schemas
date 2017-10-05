@@ -3,7 +3,8 @@
   "type": "object",
   "additionalProperties": false,
   "required": [
-    "title"
+    "title",
+    "contact_groups"
   ],
   "properties": {
     "slug": {
