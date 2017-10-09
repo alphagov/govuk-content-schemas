@@ -6,7 +6,7 @@
     details: {
       type: "object",
       additionalProperties: false,
-      required: ["title"],
+      required: ["title", "contact_groups"],
       properties: {
         slug: {
           type: "string",
@@ -60,6 +60,25 @@
               },
             },
           },
+        },
+        contact_groups: {
+          type: "array",
+          items: {
+            type: "object",
+            additionalProperties: false,
+            required: [
+              "slug",
+              "title"
+            ],
+            properties: {
+              slug: {
+                type: "string"
+              },
+              title: {
+                type: "string"
+              }
+            }
+          }
         },
         more_info_contact_form: {
           anyOf: [

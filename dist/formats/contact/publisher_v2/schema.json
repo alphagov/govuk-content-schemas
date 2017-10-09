@@ -423,7 +423,8 @@
     "details": {
       "type": "object",
       "required": [
-        "title"
+        "title",
+        "contact_groups"
       ],
       "additionalProperties": false,
       "properties": {
@@ -437,6 +438,25 @@
                 "type": "string"
               },
               "link": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "contact_groups": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "slug",
+              "title"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "slug": {
                 "type": "string"
               },
               "title": {
