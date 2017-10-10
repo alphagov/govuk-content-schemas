@@ -1,0 +1,39 @@
+{
+  "content_id": "e01e924b-9c7c-4c71-8241-66a575c2f61f",
+  "base_path": "/learn-to-drive-a-car",
+  "publishing_app": "collections-publisher",
+  "rendering_app": "collections",
+  "public_updated_at": "2017-10-10T15:15:39Z",
+  "update_type": "major",
+  "schema_name": "task_list",
+  "document_type": "task_list",
+  "title": "Learn to drive a car: step by step",
+  "description": "Check what you need to do to learn to drive.",
+  "details": {
+  },
+  "locale": "en",
+  "links": {
+    "children": [
+      {
+        "api_path": "/api/vehicles-can-drive",
+        "base_path": "/vehicles-can-drive",
+        "content_id": "d6b1901d-b925-47c5-b1ca-1e52197097e2",
+        "description": "Check if you're old enough, or have the right kind of driving licence, to drive different kinds of vehicle",
+        "document_type": "simple_smart_answer",
+        "locale": "en",
+        "public_updated_at": "2017-07-15T21:08:04Z",
+        "schema_name": "simple_smart_answer",
+        "title": "Vehicles you can drive",
+        "withdrawn": false,
+        "links": {
+        }
+      }
+    ]
+  },
+  "routes": [
+    {
+      "path": "/learn-to-drive-a-car",
+      "type": "exact"
+    }
+  ]
+}
