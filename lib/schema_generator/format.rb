@@ -1,3 +1,5 @@
+require "yaml"
+
 module SchemaGenerator
   class Format
     attr_reader :schema_name
@@ -142,7 +144,7 @@ module SchemaGenerator
       links_data = format_data.fetch("links", {})
       links = Links.new(links_data)
       if links.required_links.any?
-        raise "Can't require links that aren't edition links - as patch link set allows varying amounts of links"
+        raise InvalidFormat, "Can only require edition links"
       end
       links
     end
@@ -156,10 +158,32 @@ module SchemaGenerator
 
       def definition
         if !document_types || document_types.empty?
-          { "$ref": "#/definitions/document_type" }
-        else
-          { "enum": Array(document_types), "type": "string" }
+          return build_definition(allowed_document_types)
         end
+
+        specified_document_types = Array(document_types)
+        disallowed = specified_document_types - allowed_document_types
+        if disallowed.any?
+          raise InvalidFormat, "Encountered link types which are not allowed: #{disallowed.join(', ')}"
+        end
+        build_definition(specified_document_types)
+      end
+
+    private
+
+      def build_definition(document_types)
+        { "enum" => document_types, "type" => "string" }
+      end
+
+      def allowed_document_types
+        @allowed_document_types ||= YAML.load_file(allowed_document_types_path)
+      end
+
+      def allowed_document_types_path
+        File.expand_path(
+          "../govuk_content_schemas/allowed_document_types.yml",
+          __dir__
+        )
       end
     end
 
@@ -180,7 +204,7 @@ module SchemaGenerator
         @forbidden_definition = forbidden_definition
 
         unless VALID_STATUSES.include?(status)
-          raise "Invalid value for #{property}: #{status}. Expected #{VALID_STATUSES.join(', ')}"
+          raise InvalidFormat, "Invalid value for #{property}: #{status}. Expected #{VALID_STATUSES.join(', ')}"
         end
       end
 
@@ -274,7 +298,7 @@ module SchemaGenerator
           if v.is_a?(Hash)
             extra_keys = v.keys - ALLOWED_KEYS
             if extra_keys.any?
-              raise "Unexpected keys #{extra_keys.join(', ')} for link - only #{ALLOWED_KEYS.join(', ')} are allowed"
+              raise InvalidFormat, "Unexpected keys #{extra_keys.join(', ')} for link - only #{ALLOWED_KEYS.join(', ')} are allowed"
             end
             definition = v
           else
@@ -287,4 +311,6 @@ module SchemaGenerator
       end
     end
   end
+
+  class InvalidFormat < RuntimeError; end
 end

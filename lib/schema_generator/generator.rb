@@ -42,6 +42,8 @@ module SchemaGenerator
         ).generate
         Schema.write("dist/formats/#{schema_name}/frontend/schema.json", frontend_schema)
       end
+    rescue InvalidFormat => e
+      raise "Could not generate #{schema_name} as the format file is invalid. #{e.message}"
     rescue DefinitionsResolver::UnresolvedDefinition => e
       raise "Could not generate #{schema_name} as a definition for `#{e.definition}` was not found"
     end
