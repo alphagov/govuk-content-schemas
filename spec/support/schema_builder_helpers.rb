@@ -64,8 +64,4 @@ module SchemaBuilderHelpers
 
     schema
   end
-
-  def slice_hash(hash, *keys)
-    keys.each_with_object({}) { |k, h| h[k] = hash[k] if hash.has_key?(k) }
-  end
 end

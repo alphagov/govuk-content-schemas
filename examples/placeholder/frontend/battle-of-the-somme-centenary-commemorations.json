@@ -1,0 +1,28 @@
+{
+  "content_id": "8b19c222-54e3-4e27-b0d7-67f8e2a677c9",
+  "base_path": "/government/topical-events/battle-of-the-somme-centenary-commemorations",
+  "title": "Battle of the Somme Centenary",
+  "description": "",
+  "locale": "en",
+  "need_ids": [
+
+  ],
+  "public_updated_at": "2015-07-04T11:32:28.000+01:00",
+  "details": {
+    "external_related_links": [
+      {
+        "title": "Somme EN",
+        "url": "http://somme2016.org/en/"
+      },
+      {
+        "title": "Somme FR",
+        "url": "http://somme2016.org/fr/"
+      }
+    ]
+  },
+  "schema_name": "placeholder_topical_event",
+  "document_type": "placeholder_topical_event",
+  "links": {
+  },
+  "updated_at": "2017-06-30T15:44:11.073Z"
+}

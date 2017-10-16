@@ -1,7 +1,8 @@
 module SchemaGenerator
   class PublisherLinksSchemaGenerator
-    def initialize(schema_name)
-      @schema_name = schema_name
+    def initialize(format, global_definitions)
+      @format = format
+      @global_definitions = global_definitions
     end
 
     def generate
@@ -18,31 +19,26 @@ module SchemaGenerator
 
   private
 
-    attr_reader :schema_name
+    attr_reader :format, :global_definitions
 
     def properties
-      links = Schema.read("formats/base_links.json").slice("type", "additionalProperties", "properties")
-
-      custom_links_filename = "formats/#{schema_name}/publisher/links.json"
-      if File.exist?(custom_links_filename)
-        custom_links_schema = Schema.read(custom_links_filename)
-
-        links["properties"] = custom_links_schema["properties"].merge(
-          links["properties"]
-        )
-      end
-
-      props = Schema.read("formats/links_metadata.json")["properties"]
-      props["links"] = links
-      props
+      {
+        "links" => links,
+        "previous_version" => { "type" => "string" }
+      }
     end
 
     def definitions
-      Schema.read("formats/definitions.json")["definitions"]
+      all_definitions = global_definitions.merge(format.definitions)
+      DefinitionsResolver.new(properties, all_definitions).call
     end
 
-    def links_metadata
-      Schema.read("formats/links_metadata.json")
+    def links
+      {
+        "type" => "object",
+        "additionalProperties" => false,
+        "properties" => format.content_links.guid_properties,
+      }
     end
   end
 end

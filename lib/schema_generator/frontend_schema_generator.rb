@@ -1,9 +1,8 @@
 module SchemaGenerator
-  class FrontendSchema
-    def initialize(schema_name, publisher_content_schema, publisher_links_schema)
-      @schema_name = schema_name
-      @publisher_content_schema = publisher_content_schema
-      @publisher_links_schema = publisher_links_schema
+  class FrontendSchemaGenerator
+    def initialize(format, global_definitions)
+      @format = format
+      @global_definitions = global_definitions
     end
 
     def generate
@@ -13,130 +12,74 @@ module SchemaGenerator
         "additionalProperties" => false,
         "required" => required,
         "properties" => properties,
-        "definitions" => definitions,
+        "definitions" => change_multiple_content_types(definitions),
       }
     end
 
   private
 
-    attr_reader :schema_name, :publisher_content_schema, :publisher_links_schema
-
-    LINK_TYPES_ADDED_BY_PUBLISHING_API = [
-      # The Publishing API will automatically link to any translations (content
-      # with the same content_id but a different locale).
-      "available_translations",
-
-      # Content items that are linked to with a `parent` link type will automatically
-      # have a `children` link type with those items.
-      "children",
-
-      # Working groups have a `policies` link type containing the policies it is
-      # tagged to.
-      "policies",
-
-      # Content items that are members of a collection will have a `document_collections`
-      # link type
-      "document_collections",
-
-      # Content items that are linked to with a `parent_taxon` link type will automatically
-      # have a `child_taxon` link type with those items.
-      "child_taxons",
-    ].freeze
-
-    # TODO: Add all attributes that the content-store is currently sending.
-    REQUIRED_FRONTEND_ATTRIBUTES = %w(
-      base_path
-      links
-      title
-      details
-      locale
-      content_id
-      document_type
-      schema_name
-    ).freeze
+    attr_reader :format, :global_definitions
 
     def required
-      REQUIRED_FRONTEND_ATTRIBUTES
+      # These properties are always returned from content store but there are
+      # lots of examples in this repo to fix before able to use them:
+      # - analytics_identifier
+      # - email_document_supertype
+      # - first_published_at
+      # - government_document_supertype
+      # - navigation_document_supertype
+      # - need_ids
+      # - phase
+      # - publishing_app
+      # - publishing_request_id
+      # - rendering_app
+      # - user_journey_document_supertype
+      # - withdrawn_notice
+      %w(
+        base_path
+        content_id
+        description
+        document_type
+        details
+        links
+        locale
+        public_updated_at
+        schema_name
+        title
+        updated_at
+      ).sort
     end
 
     def properties
-      props = publisher_content_schema["properties"].merge(
-        "content_id" => {
-          "$ref" => "#/definitions/guid"
-        },
-        "links" => {
-          "type" => "object",
-          "additionalProperties" => false,
-          "properties" => frontend_links(publisher_content_schema, publisher_links_schema)
-        },
-        "navigation_document_supertype" => {
-          "type" => "string",
-          "description" => "Document type grouping powering the new taxonomy-based navigation pages",
-        },
-        "user_journey_document_supertype" => {
-          "type" => "string",
-          "description" => "Document type grouping powering analytics of user journeys",
-        },
-        "email_document_supertype" => {
-          "type" => "string",
-          "description" => "Document supertype grouping intended to power the Whitehall finders and email subscriptions",
-        },
-        "government_document_supertype" => {
-          "type" => "string",
-          "description" => "Document supertype grouping intended to power the Whitehall finders and email subscriptions",
-        },
-        "updated_at" => {
-          "type" => "string",
-          "format" => "date-time"
-        },
-        "publishing_request_id" => {
-          "$ref" => "#/definitions/publishing_request_id",
-        },
-      )
+      all_properties = default_properties.merge(derived_properties)
     end
 
     def definitions
-      the_definitions = {
-        "frontend_links" => Schema.read("formats/frontend_links_definition.json").slice("type", "items"),
-        "base_path_less_frontend_links" => Schema.read("formats/base_path_less_frontend_links_definition.json").slice("type", "items"),
-      }.merge(publisher_content_schema["definitions"])
+      all_definitions = global_definitions.merge(format.definitions)
+      ApplyChangeHistoryDefinitions.call(all_definitions)
+      DefinitionsResolver.new(properties, all_definitions).call
+    end
 
-      the_definitions.delete("links")
+    def default_properties
+      Jsonnet.load("formats/shared/default_properties/frontend.jsonnet")
+    end
 
-      replace_multiple_content_types(the_definitions).tap do |converted|
-        if schema_name == "specialist_document"
-          converted["details"]["required"] << "change_history"
-        end
+    def derived_properties
+      properties = {
+        "document_type" => format.document_type.definition,
+        "description" => format.description.definition,
+        "details" => format.details.definition,
+        "links" => ExpandedLinks.new(format).generate,
+        "rendering_app" => format.rendering_app.definition,
+        "schema_name" => format.schema_name_definition,
+        "title" => format.title.definition,
+      }
+    end
 
-        if details_should_contain_change_history?(converted)
-          converted["details"]["properties"]["change_history"] = { "$ref"=>"#/definitions/change_history" }
-        end
+    def change_multiple_content_types(definitions)
+      replace_multiple_content_types(definitions).delete_if do |k|
+        k == "multiple_content_types"
       end
-    end
-
-    def publishing_api_expanded_links
-      LINK_TYPES_ADDED_BY_PUBLISHING_API.each_with_object({}) do |link_type, memo|
-        memo[link_type] = { "description" => "Link type automatically added by Publishing API" }
-      end
-    end
-
-    def frontend_links(publisher_content_schema, publisher_links_schema)
-      edition_links = publisher_content_schema.dig("definitions", "links", "properties") || {}
-      link_set_links = publisher_links_schema.dig("properties", "links", "properties") || {}
-
-      link_set_links.merge(edition_links)
-        .merge(publishing_api_expanded_links)
-        .each_with_object({}) do |(type, properties), memo|
-          # We can't know of the presence of any items due to reliance on when
-          # they're published, so at best we can know the maxItems
-          memo[type] = properties.slice("description", "maxItems")
-            .merge("$ref" => links_schema_for_type(type))
-        end
-    end
-
-    def links_schema_for_type(type)
-      return "#/definitions/base_path_less_frontend_links" if type == "world_locations"
-      "#/definitions/frontend_links"
     end
 
     def replace_multiple_content_types(object)
@@ -151,11 +94,6 @@ module SchemaGenerator
       else
         object
       end
-    end
-
-    def details_should_contain_change_history?(definition)
-      return if !definition.dig("details", "properties") || definition["details"]["properties"]["change_history"]
-      publisher_content_schema["properties"].has_key?("change_note")
     end
   end
 end

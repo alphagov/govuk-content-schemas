@@ -3,10 +3,9 @@
 ## General workflow
 
 * create a branch
-* make changes to the relevant schema fragment under `formats/<format name>/publisher/(details.json or links.json)`
+* make changes to the relevant schema fragment under `formats/<format name>.jsonnet`
 * change the relevant frontend examples (or add a new example)
 * run `rake` to compile a new schema.json and test the example against the schema
-* optional: run the rake task in content-store to validate the items in the database against the schema: `bundle exec rake check_content_items_against_schema[my_format_name]`
 * commit and push
 * open a PR
 * watch the multi-build status to see if all apps are compatible with the change
