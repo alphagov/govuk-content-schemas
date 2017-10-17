@@ -29,8 +29,7 @@
           "$ref": "#/definitions/external_related_links",
         },
         department_analytics_profile: {
-          description: "Analytics identifier with which to record views",
-          type: "string",
+          "$ref": "#/definitions/department_analytics_profile",
         },
         downtime_message: {
           description: "Text of the message alerting the user of service downtime",
