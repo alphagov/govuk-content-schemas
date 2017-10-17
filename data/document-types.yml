@@ -1,0 +1,483 @@
+---
+- name: aaib_report
+  human_name: AAIB report
+
+- name: about
+  human_name: About
+
+- name: about_our_services
+  human_name: About our services
+
+- name: access_and_opening
+  human_name: Access and opening
+
+- name: announcement
+  human_name: Announcement
+
+- name: answer
+  human_name: Answer
+
+- name: asylum_support_decision
+  human_name: Asylum support decision
+
+- name: authored_article
+  human_name: Authored article
+
+- name: business_finance_support_scheme
+  human_name: Business finance support scheme
+
+- name: business_support
+  human_name: Business support
+
+- name: business_support_finder
+  human_name: Business support finder
+
+- name: calculator
+  human_name: Calculator
+
+- name: calendar
+  human_name: Calendar
+
+- name: campaign
+  human_name: Campaign
+
+- name: case_study
+  human_name: Case study
+
+- name: closed_consultation
+  human_name: Closed consultation
+
+- name: cma_case
+  human_name: CMA case
+
+- name: coming_soon
+  human_name: Coming soon
+
+- name: complaints_procedure
+  human_name: Complaints procedure
+
+- name: completed_transaction
+  human_name: Completed transaction
+
+- name: consultation
+  human_name: Consultation
+
+- name: consultation_outcome
+  human_name: Consultation outcome
+
+- name: contact
+  human_name: Contact
+
+- name: corporate_report
+  human_name: Corporate report
+
+- name: correspondence
+  human_name: Correspondence
+
+- name: countryside_stewardship_grant
+  human_name: Countryside stewardship grant
+
+- name: decision
+  human_name: Decision
+
+- name: detailed_guidance
+  human_name: Detailed guidance
+
+- name: detailed_guide
+  human_name: Detailed guide
+
+- name: dfid_research_output
+  human_name: DFID research output
+
+- name: document_collection
+  human_name: Document collection
+
+- name: drug_safety_update
+  human_name: Drug safety update
+
+- name: email_alert_signup
+  human_name: Email alert signup
+
+- name: employment_appeal_tribunal_decision
+  human_name: Employment appeal tribunal decision
+
+- name: employment_tribunal_decision
+  human_name: Employment tribunal decision
+
+- name: equality_and_diversity
+  human_name: Equality and diversity
+
+- name: esi_fund
+  human_name: European Structural Investment Fund (ESI)
+
+- name: fatality_notice
+  human_name: Fatality notice
+
+- name: field_of_operation
+  human_name: Field of Operation
+
+- name: financial_release
+  human_name: Financial release
+
+- name: financial_releases_campaign
+  human_name: Financial releases campaign
+
+- name: financial_releases_geoblocker
+  human_name: Financial releases geoblocker
+
+- name: financial_releases_index
+  human_name: Financial releases index
+
+- name: financial_releases_success
+  human_name: Financial releases success
+
+- name: finder
+  human_name: Finder
+
+- name: finder_email_signup
+  human_name: Finder email signup
+
+- name: foi_release
+  human_name: Foi release
+
+- name: form
+  human_name: Form
+
+- name: generic_with_external_related_links
+  human_name: Generic with external related links
+
+- name: gone
+  human_name: Gone
+
+- name: government_response
+  human_name: Government response
+
+- name: guidance
+  human_name: Guidance
+
+- name: guide
+  human_name: Guide
+
+- name: help_page
+  human_name: Help page
+
+- name: hmrc_manual
+  human_name: HMRC manual
+
+- name: hmrc_manual_section
+  human_name: HMRC manual section
+
+- name: homepage
+  human_name: Homepage
+
+- name: html_publication
+  human_name: HTML publication
+
+- name: impact_assessment
+  human_name: Impact assessment
+
+- name: imported
+  human_name: Imported
+
+- name: independent_report
+  human_name: Independent report
+
+- name: international_development_fund
+  human_name: International development fund
+
+- name: international_treaty
+  human_name: International treaty
+
+- name: licence
+  human_name: Licence
+
+- name: license_finder
+  human_name: License finder
+
+- name: local_transaction
+  human_name: Local transaction
+
+- name: maib_report
+  human_name: MAIB report
+
+- name: mainstream_browse_page
+  human_name: Mainstream browse page
+
+- name: manual
+  human_name: Manual
+
+- name: manual_section
+  human_name: Manual section
+
+- name: map
+  human_name: Map
+
+- name: media_enquiries
+  human_name: Media enquiries
+
+- name: medical_safety_alert
+  human_name: Medical safety alert
+
+- name: membership
+  human_name: Membership
+
+- name: ministerial_role
+  human_name: Ministerial role
+
+- name: national
+  human_name: National
+
+- name: national_statistics
+  human_name: National statistics
+
+- name: national_statistics_announcement
+  human_name: National statistics announcement
+
+- name: need
+  human_name: User need
+
+- name: news_article
+  human_name: News article
+
+- name: news_story
+  human_name: News story
+
+- name: notice
+  human_name: Notice
+
+- name: official
+  human_name: Official
+
+- name: official_statistics
+  human_name: Official statistics
+
+- name: official_statistics_announcement
+  human_name: Official statistics announcement
+
+- name: open_consultation
+  human_name: Open consultation
+
+- name: oral_statement
+  human_name: Oral statement
+
+- name: organisation
+  human_name: Organisation
+
+- name: our_energy_use
+  human_name: Our energy use
+
+- name: our_governance
+  human_name: Our governance
+
+- name: person
+  human_name: Person
+
+- name: personal_information_charter
+  human_name: Personal information charter
+
+- name: petitions_and_campaigns
+  human_name: Petitions and campaigns
+
+- name: place
+  human_name: Place
+
+- name: placeholder
+  human_name: Placeholder
+
+- name: placeholder_ministerial_role
+  human_name: Placeholder ministerial role
+
+- name: placeholder_organisation
+  human_name: Placeholder organisation
+
+- name: placeholder_person
+  human_name: Placeholder person
+
+- name: placeholder_policy
+  human_name: Placeholder policy
+
+- name: placeholder_policy_area
+  human_name: Placeholder policy area
+
+- name: placeholder_topical_event
+  human_name: Placeholder topical event
+
+- name: placeholder_working_group
+  human_name: Placeholder working group
+
+- name: placeholder_world_location
+  human_name: Placeholder world location
+
+- name: placeholder_world_location_news_page
+  human_name: Placeholder world location news page
+
+- name: placeholder_worldwide_organisation
+  human_name: Placeholder worldwide organisation
+
+- name: policy
+  human_name: Policy
+
+- name: policy_area
+  human_name: Policy area
+
+- name: policy_paper
+  human_name: Policy paper
+
+- name: press_release
+  human_name: Press release
+
+- name: procurement
+  human_name: Procurement
+
+- name: programme
+  human_name: Programme
+
+- name: promotional
+  human_name: Promotional
+
+- name: publication
+  human_name: Publication
+
+- name: publication_scheme
+  human_name: Publication scheme
+
+- name: raib_report
+  human_name: Raib report
+
+- name: recruitment
+  human_name: Recruitment
+
+- name: redirect
+  human_name: Redirect
+
+- name: regulation
+  human_name: Regulation
+
+- name: research
+  human_name: Research
+
+- name: search
+  human_name: Search
+
+- name: service_manual_guide
+  human_name: Service manual guide
+
+- name: service_manual_homepage
+  human_name: Service manual homepage
+
+- name: service_manual_service_standard
+  human_name: Service manual service standard
+
+- name: service_manual_service_toolkit
+  human_name: Service manual service toolkit
+
+- name: service_manual_topic
+  human_name: Service manual topic
+
+- name: service_standard_report
+  human_name: Service standard report
+
+- name: services_and_information
+  human_name: Services and information
+
+- name: simple_smart_answer
+  human_name: Simple smart answer
+
+- name: smart_answer
+  human_name: Smart answer
+
+- name: social_media_use
+  human_name: Social media use
+
+- name: special_route
+  human_name: Special route
+
+- name: specialist_document
+  human_name: Specialist document
+
+- name: speech
+  human_name: Speech
+
+- name: staff_update
+  human_name: Staff update
+
+- name: statistical_data_set
+  human_name: Statistical data set
+
+- name: statistics
+  human_name: Statistics
+
+- name: statistics_announcement
+  human_name: Statistics announcement
+
+- name: statutory_guidance
+  human_name: Statutory guidance
+
+- name: take_part
+  human_name: Take part
+
+- name: tax_tribunal_decision
+  human_name: Tax tribunal decision
+
+- name: taxon
+  human_name: Taxon
+
+- name: terms_of_reference
+  human_name: Terms of reference
+
+- name: topic
+  human_name: Topic
+
+- name: topical_event
+  human_name: Topical event
+
+- name: topical_event_about_page
+  human_name: Topical event about page
+
+- name: transaction
+  human_name: Transaction
+
+- name: transparency
+  human_name: Transparency
+
+- name: travel_advice
+  human_name: Travel advice
+
+- name: travel_advice_index
+  human_name: Travel advice index
+
+- name: unpublishing
+  human_name: Unpublishing
+
+- name: utaac_decision
+  human_name: Utaac decision
+
+- name: vanish
+  human_name: Vanish
+
+- name: vehicle_recalls_and_faults_alert
+  human_name: Vehicle recalls and faults alert
+
+- name: video
+  human_name: Video
+
+- name: welsh_language_scheme
+  human_name: Welsh language scheme
+
+- name: working_group
+  human_name: Working group
+
+- name: world_location
+  human_name: World location
+
+- name: world_location_news_article
+  human_name: World location news article
+
+- name: world_news_story
+  human_name: World news story
+
+- name: worldwide_organisation
+  human_name: Worldwide organisation
+
+- name: written_statement
+  human_name: Written statement

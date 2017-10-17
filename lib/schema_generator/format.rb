@@ -176,12 +176,14 @@ module SchemaGenerator
       end
 
       def allowed_document_types
-        @allowed_document_types ||= YAML.load_file(allowed_document_types_path)
+        @allowed_document_types ||= YAML.load_file(allowed_document_types_path).map do |type|
+          type["name"]
+        end
       end
 
       def allowed_document_types_path
         File.expand_path(
-          "../govuk_content_schemas/allowed_document_types.yml",
+          "../../data/document-types.yml",
           __dir__
         )
       end
