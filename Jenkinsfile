@@ -23,6 +23,7 @@ def dependentApplications = [
   ['manuals-publisher', true],
   ['policy-publisher', true],
   ['publisher', true],
+  ['rummager', true],
   ['service-manual-publisher', true],
   ['short-url-manager', true],
   ['specialist-publisher', true],
