@@ -21,4 +21,7 @@
     type: "string",
     description: "Document type grouping powering analytics of user journeys",
   },
+  withdrawn_notice: {
+    "$ref": "#/definitions/withdrawn_notice",
+  },
 }

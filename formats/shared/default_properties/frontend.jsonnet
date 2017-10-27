@@ -26,7 +26,4 @@
     type: "string",
     format: "date-time",
   },
-  withdrawn_notice: {
-    "$ref": "#/definitions/withdrawn_notice",
-  },
 }

@@ -251,6 +251,9 @@
     "user_journey_document_supertype": {
       "description": "Document type grouping powering analytics of user journeys",
       "type": "string"
+    },
+    "withdrawn_notice": {
+      "$ref": "#/definitions/withdrawn_notice"
     }
   },
   "definitions": {
@@ -645,6 +648,18 @@
         "minor",
         "republish"
       ]
+    },
+    "withdrawn_notice": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "explanation": {
+          "type": "string"
+        },
+        "withdrawn_at": {
+          "format": "date-time"
+        }
+      }
     }
   }
 }
