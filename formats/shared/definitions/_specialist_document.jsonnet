@@ -238,6 +238,7 @@
             "health",
             "hospitality-and-catering",
             "information-technology-digital-and-creative",
+            "life-sciences",
             "manufacturing",
             "mining",
             "real-estate-and-property",
