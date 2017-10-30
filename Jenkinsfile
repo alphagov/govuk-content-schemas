@@ -14,6 +14,7 @@ def dependentApplications = [
   ['content-tagger', true],
   ['email-alert-frontend', true],
   ['email-alert-service', true],
+  ['feedback', true],
   ['finder-frontend', true],
   ['frontend', true],
   ['government-frontend', true],
