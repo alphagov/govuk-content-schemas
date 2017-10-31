@@ -238,6 +238,10 @@
         "finder_email_signup"
       ]
     },
+    "search_user_need_document_supertype": {
+      "description": "Document supertype grouping core and government documents",
+      "type": "string"
+    },
     "title": {
       "$ref": "#/definitions/title"
     },
