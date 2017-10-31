@@ -33,6 +33,7 @@ module SchemaGenerator
       # - publishing_app
       # - publishing_request_id
       # - rendering_app
+      # - search_user_need_document_supertype
       # - user_journey_document_supertype
       # - withdrawn_notice
       %w(
