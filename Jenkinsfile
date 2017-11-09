@@ -10,6 +10,7 @@ def dependentApplications = [
   ['calendars', true],
   ['collections-publisher', true],
   ['collections', true],
+  ['contacts', true],
   ['content-store', true],
   ['content-tagger', true],
   ['email-alert-frontend', true],
@@ -30,7 +31,6 @@ def dependentApplications = [
   ['specialist-publisher', true],
   ['static', true],
 
-  ['contacts', false],
   ['licencefinder', false],
   ['publishing-api', false],
   ['service-manual-frontend', false],
