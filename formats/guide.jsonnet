@@ -12,9 +12,6 @@
         external_related_links: {
           "$ref": "#/definitions/external_related_links",
         },
-        department_analytics_profile: {
-          "$ref": "#/definitions/department_analytics_profile",
-        },
       },
     },
   },

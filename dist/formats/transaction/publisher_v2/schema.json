@@ -154,10 +154,6 @@
         }
       ]
     },
-    "department_analytics_profile": {
-      "description": "Analytics identifier with which to record views",
-      "type": "string"
-    },
     "description_optional": {
       "anyOf": [
         {
@@ -173,7 +169,8 @@
       "additionalProperties": false,
       "properties": {
         "department_analytics_profile": {
-          "$ref": "#/definitions/department_analytics_profile"
+          "description": "Analytics identifier with which to record views",
+          "type": "string"
         },
         "downtime_message": {
           "description": "Text of the message alerting the user of service downtime",
