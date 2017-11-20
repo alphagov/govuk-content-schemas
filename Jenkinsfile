@@ -30,11 +30,11 @@ def dependentApplications = [
   ['rummager', true],
   ['service-manual-publisher', true],
   ['short-url-manager', true],
+  ['smartanswers', true],
   ['specialist-publisher', true],
   ['static', true],
 
   ['service-manual-frontend', false],
-  ['smartanswers', false],
   ['whitehall', false],
 ]
 
