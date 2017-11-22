@@ -4,9 +4,13 @@ ruby File.read(".ruby-version").strip
 gem 'json-schema'
 gem 'rake'
 gem 'rspec'
-gem 'govuk-dummy_content_store', '0.0.5'
-gem 'foreman', '0.78.0'
 gem 'jsonnet', '~> 0.2'
+
+# Preview app for examples
+gem 'foreman', '~> 0.84.0'
+gem 'sinatra', '~> 2.0'
+gem 'govuk_schemas', '~> 3.0.1'
+gem 'rack-test', '~> 0.8.2'
 
 group :test do
   gem 'pry-byebug'

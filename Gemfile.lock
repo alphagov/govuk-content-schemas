@@ -5,18 +5,17 @@ GEM
     byebug (9.0.6)
     coderay (1.1.1)
     diff-lcs (1.2.5)
-    foreman (0.78.0)
+    foreman (0.84.0)
       thor (~> 0.19.1)
-    git-version-bump (0.15.1)
-    govuk-dummy_content_store (0.0.5)
-      rack
-      rack-contrib
+    govuk_schemas (3.0.1)
+      json-schema (~> 2.5.0)
     json-schema (2.5.0)
       addressable (~> 2.3)
     jsonnet (0.2.0)
       mini_portile2 (~> 2.2.0)
     method_source (0.8.2)
     mini_portile2 (2.2.0)
+    mustermann (1.0.1)
     pry (0.10.4)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -24,10 +23,11 @@ GEM
     pry-byebug (3.4.0)
       byebug (~> 9.0)
       pry (~> 0.10)
-    rack (1.6.4)
-    rack-contrib (1.4.0)
-      git-version-bump (~> 0.15)
-      rack (~> 1.4)
+    rack (2.0.3)
+    rack-protection (2.0.0)
+      rack
+    rack-test (0.8.2)
+      rack (>= 1.0, < 3)
     rake (10.4.2)
     rspec (3.1.0)
       rspec-core (~> 3.1.0)
@@ -41,20 +41,28 @@ GEM
     rspec-mocks (3.1.3)
       rspec-support (~> 3.1.0)
     rspec-support (3.1.2)
+    sinatra (2.0.0)
+      mustermann (~> 1.0)
+      rack (~> 2.0)
+      rack-protection (= 2.0.0)
+      tilt (~> 2.0)
     slop (3.6.0)
-    thor (0.19.1)
+    thor (0.19.4)
+    tilt (2.0.8)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  foreman (= 0.78.0)
-  govuk-dummy_content_store (= 0.0.5)
+  foreman (~> 0.84.0)
+  govuk_schemas (~> 3.0.1)
   json-schema
   jsonnet (~> 0.2)
   pry-byebug
+  rack-test (~> 0.8.2)
   rake
   rspec
+  sinatra (~> 2.0)
 
 RUBY VERSION
    ruby 2.3.1p112

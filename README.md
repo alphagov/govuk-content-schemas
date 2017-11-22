@@ -24,7 +24,7 @@ For each schema, there are three possible representations:
 * [Adding contract tests to your app](docs/contract-testing-howto.md)
 * [Suggested workflows](docs/suggested-workflows.md)
 * [Why do contract testing?](docs/why-contract-testing.md)
-* [Running your frontend against the examples (content-store not needed)](docs/running-frontend-against-examples.md)
+* [Running your frontend against the examples and random content (content-store not needed)](docs/running-frontend-against-examples.md)
 * [Deployment](docs/deployment.md)
 
 ## Background
