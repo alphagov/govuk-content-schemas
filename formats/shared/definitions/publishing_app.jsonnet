@@ -27,7 +27,6 @@
       "short-url-manager",
       "smartanswers",
       "specialist-publisher",
-      "spotlight",
       "static",
       "tariff",
       "travel-advice-publisher",
