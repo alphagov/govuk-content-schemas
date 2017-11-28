@@ -1,0 +1,44 @@
+{
+  "base_path": "/log-in-file-self-assessment-tax-return/sign-in",
+  "content_id": "2b4de3cf-cb13-4e9f-ae37-07090ab1a6e6",
+  "document_type": "service_sign_in",
+  "first_published_at": "2016-02-29T09:24:10.000+00:00",
+  "locale": "en",
+  "phase": "live",
+  "public_updated_at": "2015-05-28T15:46:51.000+00:00",
+  "publishing_app": "publisher",
+  "rendering_app": "government-frontend",
+  "schema_name": "service_sign_in",
+  "title": "Self Assessment",
+  "description": "Sign-in pages for Self Assessment",
+  "updated_at": "2017-02-09T14:34:06.890Z",
+  "links": {},
+  "details": {
+    "choose_sign_in": {
+      "title": "Prove your identity to continue",
+      "slug": "choose-sign-in",
+      "description": "You can't file online until you've activated Government Gateway account using your Unique Taxpayer Reference(UTR).",
+      "options": [
+        {
+          "text": "Use Government Gateway",
+          "url": "https://www.tax.service.gov.uk/account",
+          "hint_text": "You'll have a user ID if you've registered to file your Self Assessment tax return online before."
+        },
+        {
+          "text": "Use GOV.UK Verify",
+          "hint_text": "You'll have an account if you've proved your identity with a certified company, such as the Post Office.",
+          "url": "https://www.tax.service.gov.uk/ida/sa/login"
+        },
+        {
+          "text": "Create an account",
+          "url": "/log-in-file-self-assessment-tax-return/sign-in/create-new-account"
+        }
+      ]
+    },
+    "create_new_account": {
+      "title": "Create an account",
+      "slug": "create-new-account",
+      "body": "<p>To use this service, you need to create either a Government Gateway or GOV.UK Verify account. These are used to help fight identity theft.</p><p>Once you have an account, you can use it to access other government services online. </p><h2>Choose a way to prove your identity</h2><h3>Government Gateway</h3><p>Registering with Government Gateway usually takes about 10 minutes. It works best if you have:</p><ul><li>your National Insurance number</li><li>a recent payslip or a P60 or valid UK passport</li></ul><a href='#'>Create a Government Gateway account</a>"
+    }
+  }
+}
