@@ -1,1 +1,1 @@
-web: bundle exec dummy_content_store
+web: bundle exec ruby app.rb

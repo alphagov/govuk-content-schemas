@@ -1,8 +1,8 @@
 # Running your frontend against the examples
 
-The [dummy content store](https://github.com/alphagov/govuk-dummy_content_store) allows you to run an instance of content store, serving the examples in this repo, without having to the run the [content-store](https://github.com/alphagov/content-store) application itself.
+This repo contains a Sinatra app that allows you to run an instance of content store, serving the examples in this repo, without having to the run the [content-store](https://github.com/alphagov/content-store) application itself.
 
-It has the same API as the real [content-store](https://github.com/alphagov/content-store.) and can be used interchangably in your app. The only difference will be the content items available.
+It has the same API as the real [content-store](https://github.com/alphagov/content-store) and can be used interchangably in your app. The only difference will be the content items available.
 
 Note: The dummy content store also has an index page which lists all the example content items available, you can find this at the root path: `/`.
 
