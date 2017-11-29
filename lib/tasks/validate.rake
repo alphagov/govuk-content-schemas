@@ -1,20 +1,5 @@
 require "json-schema"
 
-def schema_path_for(example)
-  schema_filename = example.end_with?("_links.json") ? "links.json" : "schema.json"
-  dirname = File.dirname(example).gsub("publisher/", "publisher_v2/")
-  (File.dirname(dirname) + "/" + schema_filename).gsub(%r[formats/], "dist/formats/")
-end
-
-def valid?(example)
-  errors = JSON::Validator.fully_validate(schema_path_for(example), example, validate_schema: true)
-  if errors.any?
-    $stderr.puts "#{example}: had #{errors.count} error(s):"
-    errors.each { |error| $stderr.puts "  #{error}" }
-  end
-  errors.none?
-end
-
 def base_path(example_file)
   JSON.parse(File.read(example_file))["base_path"]
 end
@@ -40,10 +25,22 @@ end
 
 desc 'Validate examples against generated schemas'
 task :validate_examples do
-  print "Validating examples... "
-  examples = Rake::FileList.new("formats/**/examples/*.json")
-  failed_examples = examples.reject { |example| valid?(example) }
-  abort "\nThe following examples don't validate against their schemas:\n" + failed_examples.join("\n") if failed_examples.any?
+  print "Validating examples: "
+
+  Dir.glob("examples/**/*.json").each do |example_path|
+    example = File.read(example_path)
+    _, schema_name, type, example_filename = example_path.split('/')
+    schema_filename = example_filename.end_with?('_links.json') ? 'links.json' : 'schema.json'
+    schema = File.read("dist/formats/#{schema_name}/#{type}/#{schema_filename}")
+
+    begin
+      JSON::Validator.validate!(schema, example)
+      print "."
+    rescue JSON::Schema::ValidationError => e
+      abort "\n Error validating example #{example_path}: #{e.message}"
+    end
+  end
+
   puts "✔︎"
 end
 
