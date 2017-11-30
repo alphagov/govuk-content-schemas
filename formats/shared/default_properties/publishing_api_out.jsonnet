@@ -25,6 +25,10 @@
     type: "string",
     description: "Document type grouping powering analytics of user journeys",
   },
+  user_need_document_supertype: {
+    type: "string",
+    description: "Document supertype grouping documents by user need",
+  },
   withdrawn_notice: {
     "$ref": "#/definitions/withdrawn_notice",
   },

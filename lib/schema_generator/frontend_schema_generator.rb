@@ -35,6 +35,7 @@ module SchemaGenerator
       # - rendering_app
       # - search_user_need_document_supertype
       # - user_journey_document_supertype
+      # - user_need_document_supertype
       # - withdrawn_notice
       %w(
         base_path
