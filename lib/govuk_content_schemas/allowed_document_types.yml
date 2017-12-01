@@ -2,14 +2,12 @@
 - about
 - about_our_services
 - access_and_opening
-- announcement
 - answer
 - asylum_support_decision
 - authored_article
 - business_finance_support_scheme
 - calculator
 - calendar
-- campaign
 - case_study
 - closed_consultation
 - cma_case
@@ -35,16 +33,12 @@
 - esi_fund
 - fatality_notice
 - field_of_operation
-- financial_release
-- financial_releases_campaign
 - financial_releases_geoblocker
-- financial_releases_index
 - financial_releases_success
 - finder
 - finder_email_signup
 - foi_release
 - form
-- generic_with_external_related_links
 - gone
 - government_response
 - guidance
@@ -55,7 +49,7 @@
 - homepage
 - html_publication
 - impact_assessment
-- imported
+- imported # Not in content store
 - independent_report
 - international_development_fund
 - international_treaty
@@ -106,9 +100,7 @@
 - policy_paper
 - press_release
 - procurement
-- programme
 - promotional
-- publication
 - publication_scheme
 - raib_report
 - recruitment
@@ -128,7 +120,6 @@
 - smart_answer
 - social_media_use
 - special_route
-- specialist_document
 - speech
 - staff_update
 - statistical_data_set
@@ -149,9 +140,8 @@
 - travel_advice_index
 - unpublishing
 - utaac_decision
-- vanish
+- vanish # Not in the content store
 - vehicle_recalls_and_faults_alert
-- video
 - welsh_language_scheme
 - working_group
 - world_location

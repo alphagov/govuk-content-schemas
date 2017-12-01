@@ -15,7 +15,6 @@
     "tax_tribunal_decision",
     "raib_report",
     "drug_safety_update",
-    "specialist_document",
     "business_finance_support_scheme",
     "vehicle_recalls_and_faults_alert",
     "asylum_support_decision",

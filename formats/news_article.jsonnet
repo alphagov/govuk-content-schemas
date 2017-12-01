@@ -1,7 +1,6 @@
 (import "shared/default_format.jsonnet") + {
   document_type: [
     "press_release",
-    "announcement",
     "news_story",
     "government_response",
     "world_news_story",
