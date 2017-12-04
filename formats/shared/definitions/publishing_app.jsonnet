@@ -8,7 +8,6 @@
       "collections-publisher",
       "contacts",
       "content-tagger",
-      "design-principles",
       "email-alert-frontend",
       "external-link-tracker",
       "feedback",
