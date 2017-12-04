@@ -17,6 +17,9 @@
   publishing_request_id: {
     "$ref": "#/definitions/publishing_request_id",
   },
+  search_keywords: {
+   "$ref": "#/definitions/search_keywords",
+  },
   search_user_need_document_supertype: {
     type: "string",
     description: "Document supertype grouping core and government documents",

@@ -99,6 +99,9 @@
         "redirect"
       ]
     },
+    "search_keywords": {
+      "$ref": "#/definitions/search_keywords"
+    },
     "title": {
       "type": "null"
     },
@@ -303,6 +306,10 @@
         "$ref": "#/definitions/redirect_route"
       },
       "minItems": 1
+    },
+    "search_keywords": {
+      "description": "Used by Rummager for indexable content in Elasticsearch",
+      "type": "string"
     },
     "update_type": {
       "enum": [

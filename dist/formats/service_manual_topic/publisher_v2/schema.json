@@ -103,6 +103,9 @@
         "service_manual_topic"
       ]
     },
+    "search_keywords": {
+      "$ref": "#/definitions/search_keywords"
+    },
     "title": {
       "$ref": "#/definitions/title"
     },
@@ -335,6 +338,10 @@
         "$ref": "#/definitions/route"
       },
       "minItems": 1
+    },
+    "search_keywords": {
+      "description": "Used by Rummager for indexable content in Elasticsearch",
+      "type": "string"
     },
     "service_manual_topic_groups": {
       "description": "Lists of items with titles & content IDs in named groups, used for service manual topic pages",

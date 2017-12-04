@@ -192,6 +192,9 @@
         "specialist_document"
       ]
     },
+    "search_keywords": {
+      "$ref": "#/definitions/search_keywords"
+    },
     "search_user_need_document_supertype": {
       "description": "Document supertype grouping core and government documents",
       "type": "string"
@@ -1691,6 +1694,10 @@
         "whitehall-admin",
         "whitehall-frontend"
       ]
+    },
+    "search_keywords": {
+      "description": "Used by Rummager for indexable content in Elasticsearch",
+      "type": "string"
     },
     "service_standard_report_metadata": {
       "type": "object",

@@ -252,6 +252,9 @@
         "case_study"
       ]
     },
+    "search_keywords": {
+      "$ref": "#/definitions/search_keywords"
+    },
     "search_user_need_document_supertype": {
       "description": "Document supertype grouping core and government documents",
       "type": "string"
@@ -730,6 +733,10 @@
         "$ref": "#/definitions/route"
       },
       "minItems": 1
+    },
+    "search_keywords": {
+      "description": "Used by Rummager for indexable content in Elasticsearch",
+      "type": "string"
     },
     "tags": {
       "description": "Field used by email-alert-api to trigger email alerts for subscriptions to topics (gov.uk/topic) and policies (gov.uk/policies).",
