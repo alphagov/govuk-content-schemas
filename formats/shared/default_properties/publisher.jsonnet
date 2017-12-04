@@ -22,6 +22,9 @@
   public_updated_at: {
     "$ref": "#/definitions/public_updated_at",
   },
+  search_keywords: {
+   "$ref": "#/definitions/search_keywords",
+  },
   update_type: {
     "$ref": "#/definitions/update_type",
   },
