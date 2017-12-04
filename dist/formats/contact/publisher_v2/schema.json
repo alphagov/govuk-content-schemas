@@ -101,6 +101,9 @@
         "contact"
       ]
     },
+    "search_keywords": {
+      "$ref": "#/definitions/search_keywords"
+    },
     "title": {
       "$ref": "#/definitions/title"
     },
@@ -533,6 +536,10 @@
       "items": {
         "ref": "#/definitions/route"
       }
+    },
+    "search_keywords": {
+      "description": "Used by Rummager for indexable content in Elasticsearch",
+      "type": "string"
     },
     "title": {
       "type": "string"
