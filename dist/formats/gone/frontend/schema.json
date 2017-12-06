@@ -25,6 +25,10 @@
     "content_id": {
       "$ref": "#/definitions/guid"
     },
+    "content_purpose_document_supertype": {
+      "description": "Document supertype grouping documents by purpose",
+      "type": "string"
+    },
     "description": {
       "type": "null"
     },
@@ -144,7 +148,7 @@
       "type": "string"
     },
     "user_need_document_supertype": {
-      "description": "Document supertype grouping documents by user need",
+      "description": "DEPRECATED. Use `content_purpose_document_supertype`.",
       "type": "string"
     },
     "withdrawn_notice": {
