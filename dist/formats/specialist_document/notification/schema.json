@@ -65,7 +65,6 @@
         "raib_report",
         "drug_safety_update",
         "business_finance_support_scheme",
-        "vehicle_recalls_and_faults_alert",
         "asylum_support_decision"
       ]
     },
@@ -405,9 +404,6 @@
         },
         {
           "$ref": "#/definitions/utaac_decision_metadata"
-        },
-        {
-          "$ref": "#/definitions/vehicle_recalls_and_faults_alert_metadata"
         }
       ]
     },
@@ -1904,70 +1900,6 @@
           "items": {
             "type": "string"
           }
-        }
-      }
-    },
-    "vehicle_recalls_and_faults_alert_metadata": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "alert_issue_date": {
-          "type": "string",
-          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
-        },
-        "build_end_date": {
-          "type": "string",
-          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
-        },
-        "build_start_date": {
-          "type": "string",
-          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
-        },
-        "bulk_published": {
-          "type": "boolean"
-        },
-        "fault_type": {
-          "type": "string",
-          "enum": [
-            "recall",
-            "non_urgent_fault"
-          ]
-        },
-        "faulty_item_model": {
-          "type": "string"
-        },
-        "faulty_item_type": {
-          "type": "string",
-          "enum": [
-            "vehicle",
-            "baby-seat",
-            "tyres",
-            "parts",
-            "agricultural-equipment",
-            "other-accessories"
-          ]
-        },
-        "manufacturer": {
-          "type": "string",
-          "enum": [
-            "alfa-romeo",
-            "audi",
-            "balco",
-            "bmw",
-            "bridgestone",
-            "britax",
-            "citroen",
-            "ferrari",
-            "mccormick-tractors-ltd",
-            "michelin",
-            "mitas-tyres-ltd",
-            "mothercare",
-            "nim-engineering-ltd",
-            "other-manufacturer"
-          ]
-        },
-        "serial_number": {
-          "type": "string"
         }
       }
     },
