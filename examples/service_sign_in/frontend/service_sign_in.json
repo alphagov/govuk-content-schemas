@@ -12,7 +12,20 @@
   "title": "Self Assessment",
   "description": "Sign-in pages for Self Assessment",
   "updated_at": "2017-02-09T14:34:06.890Z",
-  "links": {},
+  "links": {
+    "parent": [
+      {
+        "content_id": "6a2bf66e-2313-4204-afd5-9940de5e1d66",
+        "base_path": "/log-in-file-self-assessment-tax-return",
+        "schema_name": "guide",
+        "description": "Register for Self Assessment, sign in and send your Self Assessment tax return online",
+        "document_type": "guide",
+        "locale": "en",
+        "public_updated_at": "2015-01-15T16:17:28.000+00:00",
+        "title": "Register for and file your Self Assessment tax return"
+      }
+    ]
+  },
   "details": {
     "choose_sign_in": {
       "title": "Prove your identity to continue",
