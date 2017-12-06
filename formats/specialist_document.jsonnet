@@ -16,7 +16,6 @@
     "raib_report",
     "drug_safety_update",
     "business_finance_support_scheme",
-    "vehicle_recalls_and_faults_alert",
     "asylum_support_decision",
   ],
   definitions: (import "shared/definitions/_specialist_document.jsonnet") + {
