@@ -24,6 +24,12 @@ RSpec.describe "Dummy content store rack application" do
     expect(last_response).to be_ok
   end
 
+  it "serves handwritten examples with prefix routes" do
+    get "/api/content/examples/guide/guide/key-stage-1-and-2"
+
+    expect(last_response.location).to eql "http://example.org/api/content/examples/guide/guide"
+  end
+
   it "redirects to the real content store for everything else" do
     get "/api/content/some/thing/else"
 
