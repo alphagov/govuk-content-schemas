@@ -30,7 +30,7 @@
     "choose_sign_in": {
       "title": "Prove your identity to continue",
       "slug": "choose-sign-in",
-      "description": "You can't file online until you've activated Government Gateway account using your Unique Taxpayer Reference(UTR).",
+      "description": "<p>You can't file online until you've activated Government Gateway account using your Unique Taxpayer Reference(UTR).</p>",
       "options": [
         {
           "text": "Use Government Gateway",
