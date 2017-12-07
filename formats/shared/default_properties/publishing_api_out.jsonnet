@@ -27,7 +27,11 @@
   },
   user_need_document_supertype: {
     type: "string",
-    description: "Document supertype grouping documents by user need",
+    description: "DEPRECATED. Use `content_purpose_document_supertype`.",
+  },
+  content_purpose_document_supertype: {
+    type: "string",
+    description: "Document supertype grouping documents by purpose",
   },
   withdrawn_notice: {
     "$ref": "#/definitions/withdrawn_notice",
