@@ -51,7 +51,8 @@
         "api_url": "https://www.gov.uk/api/content/government/organisations/prime-ministers-office-10-downing-street",
         "web_url": "https://www.gov.uk/government/organisations/prime-ministers-office-10-downing-street",
         "locale": "en",
-        "analytics_identifier": "OT532"
+        "analytics_identifier": "OT532",
+        "document_type": "organisation"
       }
     ],
     "speaker": [
@@ -62,7 +63,8 @@
         "base_path": "/government/people/david-cameron",
         "api_url": "https://www.gov.uk/api/content/government/people/david-cameron",
         "web_url": "https://www.gov.uk/government/people/david-cameron",
-        "locale": "en"
+        "locale": "en",
+        "document_type": "person"
       }
     ],
     "topical_events": [
@@ -84,7 +86,8 @@
         "base_path": "/government/policies/european-single-market",
         "api_url": "https://www.gov.uk/api/content/government/policies/european-single-market",
         "web_url": "https://www.gov.uk/government/policies/european-single-market",
-        "locale": "en"
+        "locale": "en",
+        "document_type": "policy"
       }
     ]
   }

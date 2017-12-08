@@ -70,7 +70,8 @@
         "base_path": "/government/organisations/uk-trade-investment",
         "locale": "en",
         "title": "UK Trade & Investment",
-        "web_url": "https://www.gov.uk/government/organisations/uk-trade-investment"
+        "web_url": "https://www.gov.uk/government/organisations/uk-trade-investment",
+        "document_type": "organisation"
       }
     ],
     "world_locations": [

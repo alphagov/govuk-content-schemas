@@ -18,7 +18,8 @@
         "api_url": "https://www.gov.uk/api/content/government/organisations/department-of-health",
         "web_url": "https://www.gov.uk/government/organisations/department-of-health",
         "locale": "en",
-        "analytics_identifier": "D12"
+        "analytics_identifier": "D12",
+        "document_type": "organisation"
       }
     ],
     "related_policies": [
@@ -29,7 +30,8 @@
         "base_path": "/government/policies/health-and-social-care-integration",
         "api_url": "https://www.gov.uk/api/content/government/policies/health-and-social-care-integration",
         "web_url": "https://www.gov.uk/government/policies/health-and-social-care-integration",
-        "locale": "en"
+        "locale": "en",
+        "document_type": "policy"
       },
       {
         "content_id": "5d635d59-7631-11e4-a3cb-005056011aef",
@@ -38,7 +40,8 @@
         "base_path": "/government/policies/choice-in-health-and-social-care",
         "api_url": "https://www.gov.uk/api/content/government/policies/choice-in-health-and-social-care",
         "web_url": "https://www.gov.uk/government/policies/choice-in-health-and-social-care",
-        "locale": "en"
+        "locale": "en",
+        "document_type": "policy"
       }
     ]
   },

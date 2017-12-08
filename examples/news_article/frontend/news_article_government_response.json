@@ -18,7 +18,8 @@
         "api_url": "https://www.gov.uk/api/content/government/organisations/marine-management-organisation",
         "web_url": "https://www.gov.uk/government/organisations/marine-management-organisation",
         "locale": "en",
-        "analytics_identifier": "PB57"
+        "analytics_identifier": "PB57",
+        "document_type": "organisation"
       }
     ],
     "related_policies": [
@@ -29,7 +30,8 @@
         "base_path": "/government/policies/marine-environment",
         "api_url": "https://www.gov.uk/api/content/government/policies/marine-environment",
         "web_url": "https://www.gov.uk/government/policies/marine-environment",
-        "locale": "en"
+        "locale": "en",
+        "document_type": "policy"
       }
     ]
   },

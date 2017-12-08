@@ -53,7 +53,8 @@
         "api_url": "https://www.gov.uk/api/content/government/organisations/department-of-energy-climate-change",
         "web_url": "https://www.gov.uk/government/organisations/department-of-energy-climate-change",
         "locale": "en",
-        "analytics_identifier": "D11"
+        "analytics_identifier": "D11",
+        "document_type": "organisation"
       }
     ],
     "speaker": [
@@ -64,7 +65,8 @@
         "base_path": "/government/people/andrea-leadsom",
         "api_url": "https://www.gov.uk/api/content/government/people/andrea-leadsom",
         "web_url": "https://www.gov.uk/government/people/andrea-leadsom",
-        "locale": "en"
+        "locale": "en",
+        "document_type": "person"
       }
     ]
   }

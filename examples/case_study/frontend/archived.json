@@ -53,7 +53,8 @@
         "base_path": "/government/organisations/department-for-work-pensions",
         "api_url": "https://www.gov.uk/api/content/government/organisations/department-for-work-pensions",
         "web_url": "https://www.gov.uk/government/organisations/department-for-work-pensions",
-        "locale": "en"
+        "locale": "en",
+        "document_type": "organisation"
       }
     ],
     "related_policies": [
@@ -64,7 +65,8 @@
         "base_path": "/government/policies/helping-people-to-find-and-stay-in-work",
         "api_url": "https://www.gov.uk/api/content/government/policies/helping-people-to-find-and-stay-in-work",
         "web_url": "https://www.gov.uk/government/policies/helping-people-to-find-and-stay-in-work",
-        "locale": "en"
+        "locale": "en",
+        "document_type": "policy"
       }
     ],
     "world_locations": [
@@ -92,7 +94,8 @@
         "base_path": "/government/collections/work-programme-real-life-stories",
         "api_url": "https://www.gov.uk/api/content/government/collections/work-programme-real-life-stories",
         "web_url": "https://www.gov.uk/government/collections/work-programme-real-life-stories",
-        "locale": "en"
+        "locale": "en",
+        "document_type": "document_collection"
       }
     ]
   },

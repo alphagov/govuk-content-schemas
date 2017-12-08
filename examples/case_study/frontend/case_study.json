@@ -36,7 +36,8 @@
         "api_url": "https://www.gov.uk/api/content/government/organisations/department-for-international-development",
         "web_url": "https://www.gov.uk/government/organisations/department-for-international-development",
         "locale": "en",
-        "analytics_identifier": "L2"
+        "analytics_identifier": "L2",
+        "document_type": "organisation"
       }
     ],
     "related_policies": [
@@ -91,7 +92,8 @@
         "base_path": "/government/collections/work-programme-real-life-stories",
         "api_url": "https://www.gov.uk/api/content/government/collections/work-programme-real-life-stories",
         "web_url": "https://www.gov.uk/government/collections/work-programme-real-life-stories",
-        "locale": "en"
+        "locale": "en",
+        "document_type": "document_collection"
       }
     ]
   },

@@ -52,7 +52,8 @@
         "api_url": "https://www.gov.uk/api/content/government/organisations/department-for-education",
         "web_url": "https://www.gov.uk/government/organisations/department-for-education",
         "locale": "en",
-        "analytics_identifier": "D6"
+        "analytics_identifier": "D6",
+        "document_type": "organisation"
       },
       {
         "content_id": "b9fc8528-81d1-419b-8748-6c00be71044b",
@@ -62,7 +63,9 @@
         "api_url": "https://www.gov.uk/api/content/government/organisations/education-funding-agency",
         "web_url": "https://www.gov.uk/government/organisations/education-funding-agency",
         "locale": "en",
-        "analytics_identifier": "EA242"
+        "analytics_identifier": "EA242",
+        "document_type": "organisation"
+
       }
     ],
     "speaker": [
@@ -73,7 +76,8 @@
         "base_path": "/government/people/nick-gibb",
         "api_url": "https://www.gov.uk/api/content/government/people/nick-gibb",
         "web_url": "https://www.gov.uk/government/people/nick-gibb",
-        "locale": "en"
+        "locale": "en",
+        "document_type": "person"
       }
     ],
     "related_policies": [
@@ -84,7 +88,8 @@
         "base_path": "/government/policies/school-and-college-funding",
         "api_url": "https://www.gov.uk/api/content/government/policies/school-and-college-funding",
         "web_url": "https://www.gov.uk/government/policies/school-and-college-funding",
-        "locale": "en"
+        "locale": "en",
+        "document_type": "policy"
       }
     ]
   }

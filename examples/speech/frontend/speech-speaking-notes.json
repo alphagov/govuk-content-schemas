@@ -52,7 +52,8 @@
         "api_url": "https://www.gov.uk/api/content/government/organisations/home-office",
         "web_url": "https://www.gov.uk/government/organisations/home-office",
         "locale": "en",
-        "analytics_identifier": "D16"
+        "analytics_identifier": "D16",
+        "document_type": "organisation"
       }
     ],
     "speaker": [
@@ -63,7 +64,8 @@
         "base_path": "/government/people/theresa-may",
         "api_url": "https://www.gov.uk/api/content/government/people/theresa-may",
         "web_url": "https://www.gov.uk/government/people/theresa-may",
-        "locale": "en"
+        "locale": "en",
+        "document_type": "person"
       }
     ],
     "related_policies": [
@@ -74,7 +76,8 @@
         "base_path": "/government/policies/policing",
         "api_url": "https://www.gov.uk/api/content/government/policies/policing",
         "web_url": "https://www.gov.uk/government/policies/policing",
-        "locale": "en"
+        "locale": "en",
+        "document_type": "policy"
       }
     ]
   }
