@@ -41,6 +41,10 @@ get "/api/content/examples/:schema_name/:example_name" do |schema_name, example_
   end
 end
 
+get "/api/content/examples/:schema_name/:example_name/:suffix" do |schema_name, example_name, suffix|
+  redirect "/api/content/examples/#{schema_name}/#{example_name}"
+end
+
 get "/api/content/*" do
   redirect "https://www.gov.uk/api/content/#{params[:splat].join("/")}"
 end
