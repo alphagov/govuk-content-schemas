@@ -6,7 +6,7 @@ The aim of it is to support 'contract testing' between the frontend and
 publisher apps by expressing the schema and examples in strict, machine
 processable form.
 
-We use [JSON Schema](http://json-schema.org/) to define the schemas.
+We use [Jsonnet](http://jsonnet.org/) to define the schemas.
 
 For each schema, there are three possible representations:
 
