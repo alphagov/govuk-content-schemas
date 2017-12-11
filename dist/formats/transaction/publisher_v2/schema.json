@@ -179,6 +179,9 @@
         "external_related_links": {
           "$ref": "#/definitions/external_related_links"
         },
+        "hidden_search_terms": {
+          "$ref": "#/definitions/hidden_search_terms"
+        },
         "introductory_paragraph": {
           "$ref": "#/definitions/body_html_and_govspeak"
         },
@@ -242,6 +245,12 @@
         "$ref": "#/definitions/guid"
       },
       "uniqueItems": true
+    },
+    "hidden_search_terms": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     },
     "locale": {
       "type": "string",

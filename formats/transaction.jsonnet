@@ -19,6 +19,9 @@
         more_information: {
           "$ref": "#/definitions/body_html_and_govspeak",
         },
+        hidden_search_terms: {
+          "$ref": "#/definitions/hidden_search_terms",
+        },
         other_ways_to_apply: {
           "$ref": "#/definitions/body_html_and_govspeak",
         },

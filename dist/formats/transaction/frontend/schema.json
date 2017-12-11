@@ -274,6 +274,9 @@
         "external_related_links": {
           "$ref": "#/definitions/external_related_links"
         },
+        "hidden_search_terms": {
+          "$ref": "#/definitions/hidden_search_terms"
+        },
         "introductory_paragraph": {
           "$ref": "#/definitions/body_html_and_govspeak"
         },
@@ -397,6 +400,12 @@
     "guid": {
       "type": "string",
       "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-[1-5][a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$"
+    },
+    "hidden_search_terms": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     },
     "locale": {
       "type": "string",
