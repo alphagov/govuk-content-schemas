@@ -6,6 +6,10 @@
     "parent_taxons": {
       "description": "The list of taxon parents (DEPRECATED: use the edition links instead)",
       "$ref": "#/definitions/guid_list"
-    }
+    },
+    "root_taxon": {
+      "description": "The content id of the root of the taxonomy if this is a level-one taxon.",
+      "$ref": "#/definitions/guid"
+    },
   }
 }

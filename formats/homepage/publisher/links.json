@@ -6,6 +6,10 @@
     "root_taxons": {
       "description": "Defines a set of Taxonomy trees rooted in this node.",
       "$ref": "#/definitions/guid_list"
-    }
+    },
+    "level_one_taxons": {
+      "description": "Defines a set of Taxonomy trees rooted in this node.",
+      "$ref": "#/definitions/guid_list"
+    },
   }
 }
