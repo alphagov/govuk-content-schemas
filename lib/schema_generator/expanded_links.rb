@@ -20,6 +20,11 @@ module SchemaGenerator
       # Content items that are linked to with a `parent_taxon` link type will automatically
       # have a `child_taxon` link type with those items.
       "child_taxons",
+
+      # Taxons with a 'root_taxon' link are considered level one taxons and are linked to
+      # the homepage. The homepage in turn has 'level_one_taxons' automatically added linking
+      # back to the taxon.
+      "level_one_taxons",
     ].freeze
 
     def initialize(format)

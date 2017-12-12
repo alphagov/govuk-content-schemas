@@ -24,6 +24,11 @@
     associated_taxons: "A list of associated taxons whose children should be included as children of this taxon",
   },
   links: (import "shared/base_links.jsonnet") + {
-    parent_taxons: "The list of taxon parents (DEPRECATED: use the edition links instead)",
+    parent_taxons: {
+      description: "The list of taxon parents (DEPRECATED: use the edition links instead)",
+    },
+    root_taxon: {
+      description: "Set to the root taxon (homepage) if this is a level one taxon.",
+    },
   },
 }

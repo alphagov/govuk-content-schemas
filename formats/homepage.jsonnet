@@ -7,6 +7,8 @@
     },
   },
   links: {
-    root_taxons: "Defines a set of Taxonomy trees rooted in this node.",
+    root_taxons: {
+      description: "Defines a set of Taxonomy trees rooted in this node. (Deprecated - use level_one_taxons instead)",
+    },
   },
 }
