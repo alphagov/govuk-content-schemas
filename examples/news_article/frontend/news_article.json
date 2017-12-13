@@ -18,7 +18,8 @@
         "api_url": "https://www.gov.uk/api/content/government/organisations/prime-ministers-office-10-downing-street",
         "web_url": "https://www.gov.uk/government/organisations/prime-ministers-office-10-downing-street",
         "locale": "en",
-        "analytics_identifier": "OT532"
+        "analytics_identifier": "OT532",
+        "document_type": "organisation"
       }
     ],
     "ministers": [
@@ -29,7 +30,8 @@
         "base_path": "/government/people/theresa-may",
         "api_url": "https://www.gov.uk/api/content/government/people/theresa-may",
         "web_url": "https://www.gov.uk/government/people/theresa-may",
-        "locale": "en"
+        "locale": "en",
+        "document_type": "person"
       }
     ],
     "available_translations": [

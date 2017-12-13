@@ -51,7 +51,8 @@
         "api_url": "https://www.gov.uk/api/content/government/organisations/ministry-of-justice",
         "web_url": "https://www.gov.uk/government/organisations/ministry-of-justice",
         "locale": "en",
-        "analytics_identifier": "D18"
+        "analytics_identifier": "D18",
+        "document_type": "organisation"
       }
     ],
     "speaker": [
@@ -62,7 +63,8 @@
         "base_path": "/government/people/elizabeth-truss",
         "api_url": "https://www.gov.uk/api/content/government/people/elizabeth-truss",
         "web_url": "https://www.gov.uk/government/people/elizabeth-truss",
-        "locale": "en"
+        "locale": "en",
+        "document_type": "person"
       }
     ]
   }

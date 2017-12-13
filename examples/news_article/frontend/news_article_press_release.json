@@ -18,7 +18,8 @@
         "api_url": "https://www.gov.uk/api/content/government/organisations/public-health-england",
         "web_url": "https://www.gov.uk/government/organisations/public-health-england",
         "locale": "en",
-        "analytics_identifier": "OT532"
+        "analytics_identifier": "OT532",
+        "document_type": "organisation"
       }
     ]
   },

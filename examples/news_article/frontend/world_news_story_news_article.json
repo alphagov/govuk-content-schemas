@@ -17,7 +17,8 @@
         "base_path": "/government/people/theresa-may",
         "api_url": "https://www.gov.uk/api/content/government/people/theresa-may",
         "web_url": "https://www.gov.uk/government/people/theresa-may",
-        "locale": "en"
+        "locale": "en",
+        "document_type": "person"
       }
     ],
     "available_translations": [
