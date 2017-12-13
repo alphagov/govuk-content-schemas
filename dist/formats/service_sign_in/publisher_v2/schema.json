@@ -232,8 +232,7 @@
     "details": {
       "type": "object",
       "required": [
-        "choose_sign_in",
-        "create_new_account"
+        "choose_sign_in"
       ],
       "additionalProperties": false,
       "properties": {
