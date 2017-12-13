@@ -6,7 +6,6 @@
       additionalProperties: false,
       required: [
         "choose_sign_in",
-        "create_new_account",
       ],
       properties: {
         choose_sign_in: {
