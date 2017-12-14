@@ -83,6 +83,10 @@
           "description": "Link type automatically added by Publishing API",
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
+        "level_one_taxons": {
+          "description": "Link type automatically added by Publishing API",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
         "mainstream_browse_pages": {
           "description": "Powers the /browse section of the site. These are known as sections in some legacy apps.",
           "$ref": "#/definitions/frontend_links_with_base_path"
@@ -124,6 +128,10 @@
           "description": "The organisation that published the page. Corresponds to the first of the 'Lead organisations' in Whitehall, and is empty for all other publishing applications.",
           "$ref": "#/definitions/frontend_links_with_base_path",
           "maxItems": 1
+        },
+        "root_taxon": {
+          "description": "Set to the root taxon (homepage) if this is a level one taxon.",
+          "$ref": "#/definitions/frontend_links_with_base_path"
         },
         "taxons": {
           "description": "Prototype-stage taxonomy label for this content item",

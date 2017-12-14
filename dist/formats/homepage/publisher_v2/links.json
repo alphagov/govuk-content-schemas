@@ -8,7 +8,7 @@
       "additionalProperties": false,
       "properties": {
         "root_taxons": {
-          "description": "Defines a set of Taxonomy trees rooted in this node.",
+          "description": "Defines a set of Taxonomy trees rooted in this node. (Deprecated - use level_one_taxons instead)",
           "$ref": "#/definitions/guid_list"
         }
       }

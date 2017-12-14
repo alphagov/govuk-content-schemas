@@ -80,6 +80,10 @@
           "description": "Link type automatically added by Publishing API",
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
+        "level_one_taxons": {
+          "description": "Link type automatically added by Publishing API",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
         "policies": {
           "description": "Link type automatically added by Publishing API",
           "$ref": "#/definitions/frontend_links_with_base_path"
@@ -89,7 +93,7 @@
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
         "root_taxons": {
-          "description": "Defines a set of Taxonomy trees rooted in this node.",
+          "description": "Defines a set of Taxonomy trees rooted in this node. (Deprecated - use level_one_taxons instead)",
           "$ref": "#/definitions/frontend_links_with_base_path"
         }
       }
