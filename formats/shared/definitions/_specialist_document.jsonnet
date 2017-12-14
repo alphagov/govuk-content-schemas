@@ -53,9 +53,6 @@
       {
         "$ref": "#/definitions/utaac_decision_metadata",
       },
-      {
-        "$ref": "#/definitions/vehicle_recalls_and_faults_alert_metadata",
-      },
     ],
   },
   nested_headers: {
@@ -1207,70 +1204,6 @@
       },
       hidden_indexable_content: {
         type: "string",
-      },
-    },
-  },
-  vehicle_recalls_and_faults_alert_metadata: {
-    type: "object",
-    additionalProperties: false,
-    properties: {
-      bulk_published: {
-        type: "boolean",
-      },
-      fault_type: {
-        type: "string",
-        enum: [
-          "recall",
-          "non_urgent_fault",
-        ],
-      },
-      faulty_item_type: {
-        type: "string",
-        enum: [
-          "vehicle",
-          "baby-seat",
-          "tyres",
-          "parts",
-          "agricultural-equipment",
-          "other-accessories",
-        ],
-      },
-      manufacturer: {
-        type: "string",
-        enum: [
-          "alfa-romeo",
-          "audi",
-          "balco",
-          "bmw",
-          "bridgestone",
-          "britax",
-          "citroen",
-          "ferrari",
-          "mccormick-tractors-ltd",
-          "michelin",
-          "mitas-tyres-ltd",
-          "mothercare",
-          "nim-engineering-ltd",
-          "other-manufacturer",
-        ],
-      },
-      faulty_item_model: {
-        type: "string",
-      },
-      serial_number: {
-        type: "string",
-      },
-      alert_issue_date: {
-        type: "string",
-        pattern: "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$",
-      },
-      build_start_date: {
-        type: "string",
-        pattern: "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$",
-      },
-      build_end_date: {
-        type: "string",
-        pattern: "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$",
       },
     },
   },
