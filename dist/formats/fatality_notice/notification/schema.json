@@ -84,6 +84,10 @@
           "$ref": "#/definitions/frontend_links_with_base_path",
           "maxItems": 1
         },
+        "level_one_taxons": {
+          "description": "Link type automatically added by Publishing API",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
         "mainstream_browse_pages": {
           "description": "Powers the /browse section of the site. These are known as sections in some legacy apps.",
           "$ref": "#/definitions/frontend_links_with_base_path"
