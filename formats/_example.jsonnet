@@ -7,9 +7,9 @@
   // You can define which document types can be used with this schema
   document_type: ["example", "different_one"],
 
-  // Most formats require a base_path, but there are some optional ones
-  // and there may be some that never have them. Without a base_path a
-  // format doesn't get represented in the content store.
+  // Most formats require a base_path, but they are optional in some and not
+  // present at all in others. Without a base_path a format doesn't get
+  // represented in the content store.
   base_path: "required",
 
   // A format with a base_path is most likely going to have routes. The
