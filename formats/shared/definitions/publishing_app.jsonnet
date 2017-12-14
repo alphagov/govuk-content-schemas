@@ -22,6 +22,7 @@
       "policy-publisher",
       "publisher",
       "rummager",
+      "search-admin",
       "service-manual-publisher",
       "share-sale-publisher",
       "short-url-manager",
