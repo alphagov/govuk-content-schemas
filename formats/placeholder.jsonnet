@@ -41,6 +41,7 @@
               ],
               enum: [
                 "bis",
+                "dit",
                 "eo",
                 "hmrc",
                 "ho",
