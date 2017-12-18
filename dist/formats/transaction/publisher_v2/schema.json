@@ -247,7 +247,7 @@
       "uniqueItems": true
     },
     "hidden_search_terms": {
-      "description": "List of words/phrases the user can saerch for that aren't present on the page.",
+      "description": "List of words/phrases the user can search for that aren't present on the page.",
       "type": "array",
       "items": {
         "type": "string"
@@ -355,6 +355,7 @@
         "policy-publisher",
         "publisher",
         "rummager",
+        "search-admin",
         "service-manual-publisher",
         "share-sale-publisher",
         "short-url-manager",
