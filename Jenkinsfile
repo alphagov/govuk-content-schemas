@@ -28,6 +28,7 @@ def dependentApplications = [
   ['publisher', true],
   ['publishing-api', true],
   ['rummager', true],
+  ['search-admin', true],
   ['service-manual-publisher', true],
   ['short-url-manager', true],
   ['smartanswers', true],
