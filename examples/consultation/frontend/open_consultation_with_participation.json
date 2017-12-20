@@ -56,6 +56,7 @@
         "api_url": "https://www.gov.uk/api/content/government/organisations/department-for-education",
         "web_url": "https://www.gov.uk/government/organisations/department-for-education",
         "locale": "en",
+        "document_type": "organisation",
         "analytics_identifier": "D25"
       },
       {
@@ -66,6 +67,7 @@
         "api_url": "https://www.gov.uk/api/content/government/organisations/department-for-business-energy-and-industrial-strategy",
         "web_url": "https://www.gov.uk/government/organisations/department-for-business-energy-and-industrial-strategy",
         "locale": "en",
+        "document_type": "organisation",
         "analytics_identifier": "D1198"
       }
     ]
