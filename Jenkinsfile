@@ -35,8 +35,7 @@ def dependentApplications = [
   ['smartanswers', true],
   ['specialist-publisher', true],
   ['static', true],
-
-  ['whitehall', false],
+  ['whitehall', true],
 ]
 
 node {
