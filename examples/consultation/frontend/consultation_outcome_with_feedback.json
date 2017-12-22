@@ -86,6 +86,7 @@
         "web_url": "https://www.gov.uk/government/organisations/ofqual",
         "locale": "en",
         "analytics_identifier": "D109",
+        "document_type": "organisation",
         "title": "Ofqual"
       }
     ]

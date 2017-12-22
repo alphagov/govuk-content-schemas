@@ -47,6 +47,7 @@
         "api_url": "https://www.gov.uk/api/content/government/organisations/department-for-culture-media-sport",
         "web_url": "https://www.gov.uk/government/organisations/department-for-culture-media-sport",
         "locale": "en",
+        "document_type": "organisation",
         "analytics_identifier": "D5"
       }
     ],

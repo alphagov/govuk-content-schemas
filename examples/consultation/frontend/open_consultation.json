@@ -51,6 +51,7 @@
         "api_url": "https://www.gov.uk/api/content/government/organisations/department-for-education",
         "web_url": "https://www.gov.uk/government/organisations/department-for-education",
         "locale": "en",
+        "document_type": "organisation",
         "analytics_identifier": "D25"
       }
     ],
@@ -73,7 +74,8 @@
         "api_path": "/api/content/topic/higher-education/administration",
         "api_url": "https://www.gov.uk/api/content/topic/higher-education/administration",
         "web_url": "https://www.gov.uk/topic/higher-education/administration",
-        "locale": "en"
+        "locale": "en",
+        "document_type": "topic"
       }
     ]
   }
