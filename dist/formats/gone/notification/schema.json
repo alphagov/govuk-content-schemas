@@ -35,7 +35,7 @@
       "$ref": "#/definitions/analytics_identifier"
     },
     "base_path": {
-      "$ref": "#/definitions/absolute_path"
+      "$ref": "#/definitions/absolute_path_optional"
     },
     "content_id": {
       "$ref": "#/definitions/guid"
@@ -150,7 +150,7 @@
       "type": "null"
     },
     "routes": {
-      "$ref": "#/definitions/routes"
+      "$ref": "#/definitions/routes_optional"
     },
     "schema_name": {
       "type": "string",
@@ -185,6 +185,16 @@
       "description": "A path only. Query string and/or fragment are not allowed.",
       "type": "string",
       "pattern": "^/(([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})+(/([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)*)?$"
+    },
+    "absolute_path_optional": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/absolute_path"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "analytics_identifier": {
       "description": "A short identifier we send to Google Analytics for multi-valued fields. This means we avoid the truncated values we would get if we sent the path or slug of eg organisations.",
@@ -432,31 +442,11 @@
         }
       ]
     },
-    "route": {
-      "type": "object",
-      "required": [
-        "path",
-        "type"
-      ],
-      "additionalProperties": false,
-      "properties": {
-        "path": {
-          "type": "string"
-        },
-        "type": {
-          "enum": [
-            "prefix",
-            "exact"
-          ]
-        }
-      }
-    },
-    "routes": {
+    "routes_optional": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/route"
-      },
-      "minItems": 1
+        "ref": "#/definitions/route"
+      }
     },
     "update_type": {
       "enum": [
