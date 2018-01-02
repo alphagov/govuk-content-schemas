@@ -1,5 +1,6 @@
 (import "shared/default_format.jsonnet") + {
   document_type: "gone",
+  base_path: "optional",
   rendering_app: "forbidden",
   title: "forbidden",
   description: "forbidden",
@@ -27,4 +28,5 @@
   },
   edition_links: {},
   links: {},
+  routes: "optional",
 }
