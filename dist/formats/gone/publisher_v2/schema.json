@@ -2,10 +2,8 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "required": [
-    "base_path",
     "document_type",
     "publishing_app",
-    "routes",
     "schema_name"
   ],
   "additionalProperties": false,
@@ -17,7 +15,7 @@
       "$ref": "#/definitions/analytics_identifier"
     },
     "base_path": {
-      "$ref": "#/definitions/absolute_path"
+      "$ref": "#/definitions/absolute_path_optional"
     },
     "change_note": {
       "type": [
@@ -88,7 +86,7 @@
       "type": "null"
     },
     "routes": {
-      "$ref": "#/definitions/routes"
+      "$ref": "#/definitions/routes_optional"
     },
     "schema_name": {
       "type": "string",
@@ -108,6 +106,16 @@
       "description": "A path only. Query string and/or fragment are not allowed.",
       "type": "string",
       "pattern": "^/(([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})+(/([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)*)?$"
+    },
+    "absolute_path_optional": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/absolute_path"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "access_limited": {
       "type": "object",
@@ -266,31 +274,11 @@
         "whitehall"
       ]
     },
-    "route": {
-      "type": "object",
-      "required": [
-        "path",
-        "type"
-      ],
-      "additionalProperties": false,
-      "properties": {
-        "path": {
-          "type": "string"
-        },
-        "type": {
-          "enum": [
-            "prefix",
-            "exact"
-          ]
-        }
-      }
-    },
-    "routes": {
+    "routes_optional": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/route"
-      },
-      "minItems": 1
+        "ref": "#/definitions/route"
+      }
     },
     "update_type": {
       "enum": [

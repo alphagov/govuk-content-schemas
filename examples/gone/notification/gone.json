@@ -1,0 +1,33 @@
+{
+  "analytics_identifier": null,
+  "base_path": "/some-base-path",
+  "content_id": "a4c02333-7dbf-4fc3-925a-87afc8aff73a",
+  "description": null,
+  "details": {},
+  "document_type": "gone",
+  "email_document_supertype": "other",
+  "expanded_links": {},
+  "first_published_at": "2017-05-01T19:32:04Z",
+  "government_document_supertype": "other",
+  "govuk_request_id": "abc",
+  "links": {},
+  "locale": "en",
+  "navigation_document_supertype": "other",
+  "need_ids": [],
+  "payload_version": 123,
+  "phase": "live",
+  "public_updated_at": "2017-12-14T09:50:00Z",
+  "publishing_app": "search-admin",
+  "redirects": [],
+  "rendering_app": null,
+  "routes": [
+    {
+      "path": "/some-base-path",
+      "type": "exact"
+    }
+  ],
+  "schema_name": "gone",
+  "title": null,
+  "update_type": "major",
+  "user_journey_document_supertype": "other"
+}
