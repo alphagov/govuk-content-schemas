@@ -29,14 +29,13 @@ def dependentApplications = [
   ['publishing-api', true],
   ['rummager', true],
   ['search-admin', true],
+  ['service-manual-frontend', true],
   ['service-manual-publisher', true],
   ['short-url-manager', true],
   ['smartanswers', true],
   ['specialist-publisher', true],
   ['static', true],
-
-  ['service-manual-frontend', false],
-  ['whitehall', false],
+  ['whitehall', true],
 ]
 
 node {
