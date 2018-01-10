@@ -218,7 +218,8 @@
         "api_url": "https://www.gov.uk/api/content/government/organisations/driver-and-vehicle-standards-agency",
         "web_url": "https://www.gov.uk/government/organisations/driver-and-vehicle-standards-agency",
         "locale": "en",
-        "analytics_identifier": "EA570"
+        "analytics_identifier": "EA570",
+        "document_type": "organisation"
       }
     ],
     "policy_areas": [
@@ -240,7 +241,8 @@
         "api_path": "/api/content/topic/business-tax/paye",
         "api_url": "https://www.gov.uk/api/content/topic/business-tax/paye",
         "web_url": "https://www.gov.uk/topic/business-tax/paye",
-        "locale": "en"
+        "locale": "en",
+        "document_type": "topic"
       },
       {
         "content_id": "a481832e-5f10-4d3b-8131-a064b36730ae",
