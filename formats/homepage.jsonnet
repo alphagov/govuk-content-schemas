@@ -6,9 +6,5 @@
       properties: {},
     },
   },
-  links: {
-    root_taxons: {
-      description: "Defines a set of Taxonomy trees rooted in this node. (Deprecated - use level_one_taxons instead)",
-    },
-  },
+  links: {},
 }
