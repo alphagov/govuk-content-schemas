@@ -91,10 +91,6 @@
         "policy_areas": {
           "description": "A largely deprecated tag currently only used to power email alerts.",
           "$ref": "#/definitions/frontend_links_with_base_path"
-        },
-        "root_taxons": {
-          "description": "Defines a set of Taxonomy trees rooted in this node. (Deprecated - use level_one_taxons instead)",
-          "$ref": "#/definitions/frontend_links_with_base_path"
         }
       }
     },
