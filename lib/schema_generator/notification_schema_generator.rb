@@ -21,38 +21,19 @@ module SchemaGenerator
     attr_reader :format, :global_definitions
 
     def required
-      %w(
-        analytics_identifier
-        base_path
-        content_id
-        description
-        details
-        document_type
-        email_document_supertype
-        expanded_links
-        first_published_at
-        government_document_supertype
-        govuk_request_id
-        links
-        locale
-        navigation_document_supertype
-        need_ids
-        payload_version
-        phase
-        public_updated_at
-        publishing_app
-        redirects
-        rendering_app
-        routes
-        schema_name
-        title
-        update_type
-        user_journey_document_supertype
-      ).sort
+      if unpublishing_format?
+        default_required_properties.sort
+      else
+        (default_required_properties + publishing_required_properties).sort
+      end
+    end
+
+    def unpublishing_format?
+      %w(gone redirect vanish).include?(format.schema_name)
     end
 
     def properties
-      all_properties = default_properties.merge(derived_properties)
+      default_properties.merge(derived_properties)
     end
 
     def default_properties
@@ -73,6 +54,42 @@ module SchemaGenerator
         "schema_name" => format.schema_name_definition,
         "title" => format.title.definition,
       }
+    end
+
+    def default_required_properties
+      %w(
+        base_path
+        content_id
+        document_type
+        govuk_request_id
+        payload_version
+        schema_name
+      )
+    end
+
+    def publishing_required_properties
+      %w(
+        analytics_identifier
+        description
+        details
+        email_document_supertype
+        expanded_links
+        first_published_at
+        government_document_supertype
+        links
+        locale
+        navigation_document_supertype
+        need_ids
+        phase
+        public_updated_at
+        publishing_app
+        redirects
+        rendering_app
+        routes
+        title
+        update_type
+        user_journey_document_supertype
+      )
     end
 
     def definitions
