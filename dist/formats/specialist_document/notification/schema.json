@@ -794,6 +794,10 @@
             "enum": [
               "higher-tier",
               "mid-tier",
+              "offer-lowland-grazing",
+              "offer-mixed-farming",
+              "offer-arable",
+              "offer-upland",
               "standalone-capital-items"
             ]
           }
