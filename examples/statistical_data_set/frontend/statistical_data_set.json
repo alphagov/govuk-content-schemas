@@ -40,7 +40,8 @@
         "locale": "en",
         "title": "Department for Transport",
         "api_url": "https://www.gov.uk/api/content/government/organisations/department-for-transport",
-        "web_url": "https://www.gov.uk/government/organisations/department-for-transport"
+        "web_url": "https://www.gov.uk/government/organisations/department-for-transport",
+        "document_type": "organisation"
       }
     ],
     "document_collections": [
@@ -51,7 +52,8 @@
         "base_path": "/government/collections/transport-statistics-great-britain",
         "api_url": "https://www.gov.uk/api/content/government/collections/transport-statistics-great-britain",
         "web_url": "https://www.gov.uk/government/collections/transport-statistics-great-britain",
-        "locale": "en"
+        "locale": "en",
+        "document_type": "document_collection"
       }
     ]
   },
