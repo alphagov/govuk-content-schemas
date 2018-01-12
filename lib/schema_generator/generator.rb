@@ -29,7 +29,7 @@ module SchemaGenerator
         Schema.write("dist/formats/#{schema_name}/publisher_v2/links.json", publisher_links_schema)
       end
 
-      if format.generate_nofitication?
+      if format.generate_notification?
         notification_schema = NotificationSchemaGenerator.new(
           format, global_definitions
         ).generate
