@@ -34,7 +34,7 @@
     ],
     properties: {
       path: {
-        type: "string",
+        "$ref": "#/definitions/absolute_path",
       },
       type: {
         enum: [
