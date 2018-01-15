@@ -99,6 +99,7 @@
             "general-aviation-fixed-wing",
             "general-aviation-rotorcraft",
             "sport-aviation-and-balloons",
+            "unmanned-aircraft-systems",
           ],
         },
       },
