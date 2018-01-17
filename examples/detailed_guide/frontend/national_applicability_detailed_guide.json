@@ -65,7 +65,8 @@
         "api_url": "https://www.gov.uk/api/conent/government/organisations/department-for-communities-and-local-government",
         "web_url": "https://www.gov.uk/government/organisations/department-for-communities-and-local-government",
         "locale": "en",
-        "analytics_identifier": "D4"
+        "analytics_identifier": "D4",
+        "document_type": "organisation"
       }
     ],
     "parent": [
