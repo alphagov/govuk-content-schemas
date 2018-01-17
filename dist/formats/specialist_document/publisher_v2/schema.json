@@ -53,7 +53,8 @@
         "raib_report",
         "drug_safety_update",
         "business_finance_support_scheme",
-        "asylum_support_decision"
+        "asylum_support_decision",
+        "residential_property_tribunal_decision"
       ]
     },
     "first_published_at": {
@@ -260,6 +261,9 @@
         },
         {
           "$ref": "#/definitions/raib_report_metadata"
+        },
+        {
+          "$ref": "#/definitions/residential_property_tribunal_decision_metadata"
         },
         {
           "$ref": "#/definitions/service_standard_report_metadata"
@@ -1574,6 +1578,83 @@
         "whitehall-admin",
         "whitehall-frontend"
       ]
+    },
+    "residential_property_tribunal_decision_metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "bulk_published": {
+          "type": "boolean"
+        },
+        "hidden_indexable_content": {
+          "type": "string"
+        },
+        "tribunal_decision_category": {
+          "type": "string",
+          "enum": [
+            "housing-act-2004-housing-and-planning-act-2016",
+            "leasehold-disputes-management",
+            "leasehold-enfranchisement-extension",
+            "park-homes",
+            "rents",
+            "right-to-buy",
+            "tenant-associations"
+          ]
+        },
+        "tribunal_decision_decision_date": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+        },
+        "tribunal_decision_sub_category": {
+          "type": "string",
+          "enum": [
+            "housing-act-2004-housing-and-planning-act-2016---rent-repayment-order",
+            "housing-act-2004-housing-and-planning-act-2016---improvement-notices",
+            "housing-act-2004-housing-and-planning-act-2016---prohibition-orders",
+            "housing-act-2004-housing-and-planning-act-2016---demolition-and-closing-orders",
+            "housing-act-2004-housing-and-planning-act-2016---emergency-notices-and-orders",
+            "housing-act-2004-housing-and-planning-act-2016---empty-dwelling-management-orders",
+            "housing-act-2004-housing-and-planning-act-2016---houses-in-multiple-occupation-licensing",
+            "housing-act-2004-housing-and-planning-act-2016---selective-licensing",
+            "housing-act-2004-housing-and-planning-act-2016---banning-orders",
+            "housing-act-2004-housing-and-planning-act-2016---civil-financial-penalties",
+            "housing-act-2004-housing-and-planning-act-2016---management-orders",
+            "housing-act-2004-housing-and-planning-act-2016---overcrowding-notices",
+            "leasehold-disputes-management---service-charges",
+            "leasehold-disputes-management---administration-charges",
+            "leasehold-disputes-management---appointment-of-manager",
+            "leasehold-disputes-management---right-to-manage",
+            "leasehold-disputes-management---variation-of-leases",
+            "leasehold-disputes-management---breach-of-lease-forfeiture",
+            "leasehold-disputes-management---estate-charges-estate-management-schemes",
+            "leasehold-enfranchisement-extension---flats-lease-extension-",
+            "leasehold-enfranchisement-extension---houses-enfranchisement",
+            "leasehold-enfranchisement-extension---flats-collective-enfranchisement",
+            "leasehold-enfranchisement-extension---right-of-first-refusal",
+            "park-homes---pitch-fee",
+            "park-homes---section-4-any-question-under-act-or-agreement",
+            "park-homes---local-authority-compliance-notice",
+            "park-homes---appeal-against-alteration-of-a-site-licence-condition",
+            "park-homes---local-authority-decision-emergency-action",
+            "park-homes---local-authority-site-licence-refusal-refusal-to-transfer",
+            "park-homes---site-owners-failure-to-deposit-site-rules with la",
+            "park-homes---site-rule-change-consultation-response",
+            "park-homes---park-home-having-a-detrimental-effect",
+            "park-homes---order-relating-to-implied-and-express-terms",
+            "park-homes---recognition-of-residents-association",
+            "park-homes---refusal-orders-against-giving-assigning-home",
+            "park-homes---site-licence-payment-of-annual-fee",
+            "park-homes---order-requiring-written-statement-of-terms",
+            "park-homes---temporary-re-siting-return-of-resited-park-home",
+            "park-homes---entitlement-to-terminate-an-agreement-for-occupation",
+            "rents---market-rent-assured-shorthold-tenancy",
+            "rents---fair-rent",
+            "right-to-buy---rtb-appeals-elderly-persons",
+            "tenant-associations---recognition-of-tenants-association",
+            "tenant-associations---request-for-information"
+          ]
+        }
+      }
     },
     "route": {
       "type": "object",
