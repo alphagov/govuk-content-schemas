@@ -1,0 +1,207 @@
+{
+  "analytics_identifier": null,
+  "base_path": "/government/publications/regulatory-article-ra-2135-medical-requirements",
+  "content_id": "5fecc60b-7631-11e4-a3cb-005056011aef",
+  "content_purpose_document_supertype": "guidance",
+  "document_type": "regulation",
+  "email_document_supertype": "publications",
+  "first_published_at": "2014-11-14T11:37:00.000+00:00",
+  "government_document_supertype": "regulations",
+  "locale": "en",
+  "navigation_document_supertype": "guidance",
+  "need_ids": [],
+  "phase": "live",
+  "public_updated_at": "2016-05-25T14:23:23.000+00:00",
+  "publishing_app": "whitehall",
+  "rendering_app": "government-frontend",
+  "schema_name": "publication",
+  "search_user_need_document_supertype": "government",
+  "title": "Regulatory Article (RA) 2135: aircrew medical requirements",
+  "updated_at": "2018-01-10T12:28:56.944Z",
+  "user_journey_document_supertype": "thing",
+  "withdrawn_notice": {},
+  "publishing_request_id": null,
+  "links": {
+    "document_collections": [
+      {
+        "api_path": "/api/content/government/collections/2000-series-flying-regulations-fly",
+        "base_path": "/government/collections/2000-series-flying-regulations-fly",
+        "content_id": "5fa831a5-7631-11e4-a3cb-005056011aef",
+        "description": "Individual Regulatory Articles (RA) relating to the 2000 series. ",
+        "document_type": "document_collection",
+        "locale": "en",
+        "public_updated_at": "2016-04-12T14:24:20Z",
+        "schema_name": "document_collection",
+        "title": "2000 series: flying regulations (FLY)",
+        "withdrawn": false,
+        "links": {
+          "documents": [
+            {
+              "api_path": "/api/content/government/publications/regulatory-article-ra-2135-medical-requirements",
+              "base_path": "/government/publications/regulatory-article-ra-2135-medical-requirements",
+              "content_id": "5fecc60b-7631-11e4-a3cb-005056011aef",
+              "description": "RA covering aircrew medical requirements required by the MAA regulatory publications in order to carry out duties as authorised.",
+              "document_type": "regulation",
+              "locale": "en",
+              "public_updated_at": "2016-05-25T14:23:23Z",
+              "schema_name": "publication",
+              "title": "Regulatory Article (RA) 2135: aircrew medical requirements",
+              "withdrawn": false,
+              "links": {},
+              "api_url": "https://www.gov.uk/api/content/government/publications/regulatory-article-ra-2135-medical-requirements",
+              "web_url": "https://www.gov.uk/government/publications/regulatory-article-ra-2135-medical-requirements"
+            }
+          ]
+        },
+        "api_url": "https://www.gov.uk/api/content/government/collections/2000-series-flying-regulations-fly",
+        "web_url": "https://www.gov.uk/government/collections/2000-series-flying-regulations-fly"
+      }
+    ],
+    "organisations": [
+      {
+        "analytics_identifier": "D17",
+        "api_path": "/api/content/government/organisations/ministry-of-defence",
+        "base_path": "/government/organisations/ministry-of-defence",
+        "content_id": "d994e55c-48c9-4795-b872-58d8ec98af12",
+        "document_type": "organisation",
+        "locale": "en",
+        "public_updated_at": "2018-01-09T10:07:59Z",
+        "schema_name": "placeholder",
+        "title": "Ministry of Defence",
+        "withdrawn": false,
+        "details": {
+          "brand": "ministry-of-defence",
+          "logo": {
+            "formatted_title": "Ministry<br/>of Defence",
+            "crest": "mod"
+          }
+        },
+        "links": {},
+        "api_url": "https://www.gov.uk/api/content/government/organisations/ministry-of-defence",
+        "web_url": "https://www.gov.uk/government/organisations/ministry-of-defence"
+      },
+      {
+        "analytics_identifier": "OT1071",
+        "api_path": "/api/content/government/organisations/military-aviation-authority",
+        "base_path": "/government/organisations/military-aviation-authority",
+        "content_id": "b9f31e72-291a-4cfd-927e-667a46279465",
+        "document_type": "organisation",
+        "locale": "en",
+        "public_updated_at": "2015-03-18T16:01:40Z",
+        "schema_name": "placeholder",
+        "title": "Military Aviation Authority",
+        "withdrawn": false,
+        "details": {
+          "brand": "ministry-of-defence",
+          "logo": {
+            "formatted_title": "Military<br/>Aviation<br/>Authority",
+            "image": {
+              "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/organisation/logo/1071/unnamed.jpg",
+              "alt_text": "Military Aviation Authority"
+            }
+          }
+        },
+        "links": {},
+        "api_url": "https://www.gov.uk/api/content/government/organisations/military-aviation-authority",
+        "web_url": "https://www.gov.uk/government/organisations/military-aviation-authority"
+      }
+    ],
+    "policy_areas": [
+      {
+        "api_path": "/api/content/government/topics/defence-and-armed-forces",
+        "base_path": "/government/topics/defence-and-armed-forces",
+        "content_id": "b360d7b0-664d-4030-93f9-ee8bff36ab53",
+        "document_type": "placeholder_policy_area",
+        "locale": "en",
+        "public_updated_at": "2016-02-04T11:25:07Z",
+        "schema_name": "placeholder_policy_area",
+        "title": "Defence and armed forces",
+        "withdrawn": false,
+        "links": {},
+        "api_url": "https://www.gov.uk/api/content/government/topics/defence-and-armed-forces",
+        "web_url": "https://www.gov.uk/government/topics/defence-and-armed-forces"
+      }
+    ],
+    "primary_publishing_organisation": [
+      {
+        "analytics_identifier": "D17",
+        "api_path": "/api/content/government/organisations/ministry-of-defence",
+        "base_path": "/government/organisations/ministry-of-defence",
+        "content_id": "d994e55c-48c9-4795-b872-58d8ec98af12",
+        "document_type": "organisation",
+        "locale": "en",
+        "public_updated_at": "2018-01-09T10:07:59Z",
+        "schema_name": "placeholder",
+        "title": "Ministry of Defence",
+        "withdrawn": false,
+        "details": {
+          "brand": "ministry-of-defence",
+          "logo": {
+            "formatted_title": "Ministry<br/>of Defence",
+            "crest": "mod"
+          }
+        },
+        "links": {},
+        "api_url": "https://www.gov.uk/api/content/government/organisations/ministry-of-defence",
+        "web_url": "https://www.gov.uk/government/organisations/ministry-of-defence"
+      }
+    ],
+    "available_translations": [
+      {
+        "title": "Regulatory Article (RA) 2135: aircrew medical requirements",
+        "public_updated_at": "2016-05-25T14:23:23Z",
+        "document_type": "regulation",
+        "schema_name": "publication",
+        "base_path": "/government/publications/regulatory-article-ra-2135-medical-requirements",
+        "description": "RA covering aircrew medical requirements required by the MAA regulatory publications in order to carry out duties as authorised.",
+        "api_path": "/api/content/government/publications/regulatory-article-ra-2135-medical-requirements",
+        "withdrawn": false,
+        "content_id": "5fecc60b-7631-11e4-a3cb-005056011aef",
+        "locale": "en",
+        "api_url": "https://www.gov.uk/api/content/government/publications/regulatory-article-ra-2135-medical-requirements",
+        "web_url": "https://www.gov.uk/government/publications/regulatory-article-ra-2135-medical-requirements",
+        "links": {}
+      }
+    ]
+  },
+  "description": "RA covering aircrew medical requirements required by the MAA regulatory publications in order to carry out duties as authorised.",
+  "details": {
+    "body": "<div class=\"govspeak\"><p>The purpose of Regulatory Articles (<abbr title=\"Regulatory Articles\">RA</abbr>) is to provide the framework of policy, rules, directives, standards, processes and the associated direction, advice and guidance, which governs military aviation activity and against which air safety is assessed. The regulator develops regulations in response to applicable UK law, <abbr title=\"Ministry of Defence\">MOD</abbr> needs, legal changes and recommendations resulting from both assurance or investigation functions.</p>\n\n<h3 id=\"related-information\">Related information:</h3>\n\n<ul>\n  <li><a href=\"https://www.gov.uk/government/collections/maa-regulatory-publications\"><abbr title=\"Military Aviation Authority\">MAA</abbr> regulatory publications</a></li>\n  <li><a href=\"https://www.gov.uk/government/collections/maa-regulatory-publications-overarching-documents\">Overarching documents</a></li>\n  <li>Regulatory Articles (<abbr title=\"Regulatory Articles\">RA</abbr>)\n    <ul>\n      <li><a href=\"https://www.gov.uk/government/collections/1000-series-general-regulations-gen\">1000 series (<abbr title=\"General Regulations\">GEN</abbr>)</a></li>\n      <li><a href=\"https://www.gov.uk/government/collections/2000-series-flying-regulations-fly\">2000 series (<abbr title=\"Flying Regulations\">FLY</abbr>)</a></li>\n      <li><a href=\"https://www.gov.uk/government/collections/3000-series-air-traffic-management-regulations-atm\">3000 series (<abbr title=\"Air Traffic Management Regulations\">ATM</abbr>)</a></li>\n      <li><a href=\"https://www.gov.uk/government/collections/4000-series-continuing-airworthiness-engineering-regulations-cae\">4000 series (<abbr title=\"Continuing Airworthiness Engineering Regulations\">CAE</abbr>)</a></li>\n      <li><a href=\"https://www.gov.uk/government/collections/5000-series-design-and-modification-engineering-regulations-dme\">5000 series (<abbr title=\"Type Airworthiness Engineering Regulations\">TAE</abbr>)</a></li>\n    </ul>\n  </li>\n  <li><a href=\"https://www.gov.uk/government/collections/maa-manuals\"><abbr title=\"Military Aviation Authority\">MAA</abbr> Manuals</a></li>\n</ul>\n\n</div>",
+    "change_history": [
+      {
+        "public_timestamp": "2016-05-25T15:23:23.000+01:00",
+        "note": "Issue 6 has been published under NAA 16/12."
+      },
+      {
+        "public_timestamp": "2015-06-30T11:00:09.000+01:00",
+        "note": "Issue 5 has been published under NAA 15/28. Title has also changed to aircrew medical requirements"
+      },
+      {
+        "public_timestamp": "2015-01-06T10:17:43.000+00:00",
+        "note": "Issue 4 has been published under NAA 15/01"
+      },
+      {
+        "public_timestamp": "2014-11-14T11:37:00.000+00:00",
+        "note": "First published."
+      }
+    ],
+    "documents": [
+      "<section class=\"attachment embedded\" id=\"attachment_1938898\">\n  <div class=\"attachment-thumb\">\n      <a aria-hidden=\"true\" class=\"thumbnail\" href=\"/government/uploads/system/uploads/attachment_data/file/525799/RA2135_Issue_6.pdf\"><img alt=\"\" src=\"/government/uploads/system/uploads/attachment_data/file/525799/thumbnail_RA2135_Issue_6.pdf.png\" /></a>\n  </div>\n  <div class=\"attachment-details\">\n    <h2 class=\"title\"><a href=\"/government/uploads/system/uploads/attachment_data/file/525799/RA2135_Issue_6.pdf\">RA 2135: aircrew medical requirements</a></h2>\n    <p class=\"metadata\">\n        <span class=\"references\">\n          Ref: <span class=\"unique_reference\">Issue 6</span>\n        </span>\n        <span class=\"type\"><abbr title=\"Portable Document Format\">PDF</abbr></span>, <span class=\"file-size\">131KB</span>, <span class=\"page-length\">8 pages</span>\n    </p>\n\n\n  </div>\n</section>"
+    ],
+    "emphasised_organisations": [
+      "d994e55c-48c9-4795-b872-58d8ec98af12"
+    ],
+    "political": false,
+    "government": {
+      "title": "2010 to 2015 Conservative and Liberal Democrat coalition government",
+      "slug": "2010-to-2015-conservative-and-liberal-democrat-coalition-government",
+      "current": false
+    },
+    "tags": {
+      "browse_pages": [],
+      "policies": [],
+      "topics": []
+    },
+    "first_public_at": "2014-11-14T11:37:00.000+00:00"
+  }
+}
