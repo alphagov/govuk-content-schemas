@@ -55,7 +55,8 @@
         "base_path": "/government/collections/overseas-living-in-guides",
         "api_url": "https://www.gov.uk/api/content/government/collections/overseas-living-in-guides",
         "web_url": "https://www.gov.uk/government/collections/overseas-living-in-guides",
-        "locale": "en"
+        "locale": "en",
+        "document_type": "document_collection"
       }
     ],
     "related_guides": [
@@ -66,7 +67,8 @@
         "base_path": "/guidance/living-in-fiji",
         "api_url": "https://www.gov.uk/api/content/guidance/living-in-fiji",
         "web_url": "https://www.gov.uk/guidance/living-in-fiji",
-        "locale": "en"
+        "locale": "en",
+        "document_type": "detailed_guide"
       }
     ],
     "organisations": [
@@ -78,7 +80,8 @@
         "api_url": "https://www.gov.uk/api/content/government/organisations/foreign-commonwealth-office",
         "web_url": "https://www.gov.uk/government/organisations/foreign-commonwealth-office",
         "locale": "en",
-        "analytics_identifier": "D13"
+        "analytics_identifier": "D13",
+        "document_type": "organisation"
       }
     ],
     "related_mainstream_content": [
@@ -89,7 +92,8 @@
         "base_path": "/overseas-passports",
         "api_url": "https://www.gov.uk/api/content/overseas-passports",
         "web_url": "https://www.gov.uk/overseas-passports",
-        "locale": "en"
+        "locale": "en",
+        "document_type": "answer"
       },
       {
         "content_id": "f02fc2c9-f5ff-4ea2-acc4-730bbda957bb",
@@ -98,7 +102,8 @@
         "base_path": "/report-a-lost-or-stolen-passport",
         "api_url": "https://www.gov.uk/api/content/report-a-lost-or-stolen-passport",
         "web_url": "https://www.gov.uk/report-a-lost-or-stolen-passport",
-        "locale": "en"
+        "locale": "en",
+        "document_type": "transaction"
       }
     ]
   }

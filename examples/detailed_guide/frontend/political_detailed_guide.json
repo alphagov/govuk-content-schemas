@@ -42,7 +42,8 @@
         "api_url": "https://www.gov.uk/api/content/government/organisations/department-of-energy-climate-change",
         "web_url": "https://www.gov.uk/government/organisations/department-of-energy-climate-change",
         "locale": "en",
-        "analytics_identifier": "D11"
+        "analytics_identifier": "D11",
+        "document_type": "organisation"
       }
     ],
     "parent": [
@@ -54,6 +55,7 @@
         "api_url": "https://www.gov.uk/api/content/topic/climate-change-energy/low-carbon-energy",
         "web_url": "https://www.gov.uk/topic/climate-change-energy/low-carbon-energy",
         "locale": "en",
+        "document_type": "topic",
         "links": {
           "parent": [
             {
@@ -63,7 +65,8 @@
               "base_path": "/topic/climate-change-energy",
               "api_url": "https://www.gov.uk/api/content/topic/climate-change-energy",
               "web_url": "https://www.gov.uk/topic/climate-change-energy",
-              "locale": "en"
+              "locale": "en",
+              "document_type": "topic"
             }
           ]
         }
@@ -77,7 +80,8 @@
         "base_path": "/guidance/offshore-wind-part-of-the-uks-energy-mix",
         "api_url": "https://www.gov.uk/api/content/guidance/offshore-wind-part-of-the-uks-energy-mix",
         "web_url": "https://www.gov.uk/guidance/offshore-wind-part-of-the-uks-energy-mix",
-        "locale": "en"
+        "locale": "en",
+        "document_type": "detailed_guide"
       }
     ],
     "topics": [
@@ -88,7 +92,8 @@
         "base_path": "/topic/climate-change-energy/low-carbon-energy",
         "api_url": "https://www.gov.uk/api/content/topic/climate-change-energy/low-carbon-energy",
         "web_url": "https://www.gov.uk/topic/climate-change-energy/low-carbon-energy",
-        "locale": "en"
+        "locale": "en",
+        "document_type": "topic"
       },
       {
         "content_id": "57c6699d-ceda-4168-9d23-3fed774ca776",
@@ -97,7 +102,8 @@
         "base_path": "/topic/climate-change-energy",
         "api_url": "https://www.gov.uk/api/content/topic/climate-change-energy",
         "web_url": "https://www.gov.uk/topic/climate-change-energy",
-        "locale": "en"
+        "locale": "en",
+        "document_type": "topic"
       }
     ]
   }
