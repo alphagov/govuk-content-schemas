@@ -4,63 +4,64 @@
   "publishing_app": "collections-publisher",
   "rendering_app": "collections",
   "locale": "en",
+  "updated_at": "2018-01-18T15:46:10.000+00:00",
   "public_updated_at": "2018-01-18T15:46:10.000+00:00",
   "document_type": "task_list",
   "schema_name": "task_list",
   "base_path": "/get-a-divorce",
   "description": "<p>How to file for divorce if you’re in England or Wales.</p><p>There is a different process if you’re <a href=\"/divorce/respond-to-a-divorce-petition\">responding to a divorce petition</a>, or if you’re in <a href=\"https://www.scotcourts.gov.uk/taking-action/divorce-and-dissolution-of-civil-partnership\">Scotland</a> or <a href=\"https://www.nidirect.gov.uk/articles/getting-divorcedissolution-civil-partnership\">Northern Ireland</a>.</p>",
-  "details": {
-    "links": {
-      "related_paths": [
-        {
-          "analytics_identifier": null,
-          "api_path": "/api/content/divorce",
-          "base_path": "/divorce",
-          "content_id": "e26e9b1-b5ec-451f-a235-87e9f323a921",
-          "description": "Check you can get a divorce, agree or disagree with a divorce petition, what to do if your husband or wife lacks mental capacity",
-          "document_type": "guide",
-          "locale": "en",
-          "public_updated_at": "2014-11-24T10:52:52.000+00:00",
-          "schema_name": "guide",
-          "title": "Get a divorce",
-          "withdrawn": false,
-          "details": {
-            "parts": [
-              {
-                "title": "Check you can get a divorce",
-                "slug": "overview",
-                "body": "<p>You can get a divorce in England or Wales if you’ve been married at least a year and your relationship has permanently broken down.</p>"
-              }
-            ]
-          },
-          "links": {
-          },
-          "api_url": "http://www.dev.gov.uk/api/content/divorce",
-          "web_url": "http://www.dev.gov.uk/government/divorce"
+  "links": {
+    "related_paths": [
+      {
+        "analytics_identifier": null,
+        "api_path": "/api/content/divorce",
+        "base_path": "/divorce",
+        "content_id": "e26e9b1-b5ec-451f-a235-87e9f323a921",
+        "description": "Check you can get a divorce, agree or disagree with a divorce petition, what to do if your husband or wife lacks mental capacity",
+        "document_type": "guide",
+        "locale": "en",
+        "public_updated_at": "2014-11-24T10:52:52.000+00:00",
+        "schema_name": "guide",
+        "title": "Get a divorce",
+        "withdrawn": false,
+        "details": {
+          "parts": [
+            {
+              "title": "Check you can get a divorce",
+              "slug": "overview",
+              "body": "<p>You can get a divorce in England or Wales if you’ve been married at least a year and your relationship has permanently broken down.</p>"
+            }
+          ]
         },
-        {
-          "analytics_identifier": null,
-          "api_path": "/api/content/benefits-calculators",
-          "base_path": "/benefits-calculators",
-          "content_id": "1a1bc147-c02b-4cad-a415-ccbcecec8cbf",
-          "description": "Find out what benefits you could get, how much you could get and how to claim",
-          "document_type": "answer",
-          "locale": "en",
-          "public_updated_at": "2014-11-24T10:52:52.000+00:00",
-          "schema_name": "answer",
-          "title": "Benefits calculators",
-          "withdrawn": false,
-          "details": {
-            "body": "<p>You can get a divorce in England or Wales if you’ve been married at least a year and your relationship has permanently broken down.</p>",
-            "external_related_links": []
-          },
-          "links": {
-          },
-          "api_url": "http://www.dev.gov.uk/api/content/benefits-calculators",
-          "web_url": "http://www.dev.gov.uk/benefits-calculators"
-        }
-      ]
-    },
+        "links": {
+        },
+        "api_url": "http://www.dev.gov.uk/api/content/divorce",
+        "web_url": "http://www.dev.gov.uk/government/divorce"
+      },
+      {
+        "analytics_identifier": null,
+        "api_path": "/api/content/benefits-calculators",
+        "base_path": "/benefits-calculators",
+        "content_id": "1a1bc147-c02b-4cad-a415-ccbcecec8cbf",
+        "description": "Find out what benefits you could get, how much you could get and how to claim",
+        "document_type": "answer",
+        "locale": "en",
+        "public_updated_at": "2014-11-24T10:52:52.000+00:00",
+        "schema_name": "answer",
+        "title": "Benefits calculators",
+        "withdrawn": false,
+        "details": {
+          "body": "<p>You can get a divorce in England or Wales if you’ve been married at least a year and your relationship has permanently broken down.</p>",
+          "external_related_links": []
+        },
+        "links": {
+        },
+        "api_url": "http://www.dev.gov.uk/api/content/benefits-calculators",
+        "web_url": "http://www.dev.gov.uk/benefits-calculators"
+      }
+    ]
+  },
+  "details": {
     "tasklist": {
       "groups": [
         [{

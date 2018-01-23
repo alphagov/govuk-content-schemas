@@ -1,10 +1,19 @@
-{
-  base_path: "required",
+(import "shared/default_format.jsonnet") + {
   document_type: "task_list",
   publishing_app: "required",
-  rendering_app: "required",
-  routes: "required",
-  redirects: "forbidden",
-  title: "required",
-  description: "optional",
+  definitions: {
+    details: {
+      type: "object",
+      additionalProperties: false,
+      required: [
+        "tasklist",
+      ],
+      properties: {
+        tasklist: {
+          description: "A tasklist object",
+          type: "object",
+        }
+      }
+    }
+  }
 }
