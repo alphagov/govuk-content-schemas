@@ -67,7 +67,7 @@ module SchemaGenerator
     end
 
     def derived_properties
-      properties = {
+      {
         "content_id" => format.content_id(frontend: true).definition,
         "document_type" => format.document_type.definition,
         "description" => format.description.definition,
@@ -76,7 +76,9 @@ module SchemaGenerator
         "rendering_app" => format.rendering_app.definition,
         "schema_name" => format.schema_name_definition,
         "title" => format.title.definition,
-      }
+      }.tap do |p|
+        p["redirects"] = format.redirects.definition if format.schema_name == "redirect"
+      end
     end
 
     def change_multiple_content_types(definitions)
