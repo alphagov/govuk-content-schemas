@@ -7,6 +7,7 @@
   "updated_at": "2016-11-16T15:33:24.545Z",
   "schema_name": "consultation",
   "document_type": "consultation",
+  "government_document_supertype": "consultations",
   "locale": "en",
   "details": {
     "body": "<div class=\"govspeak\"><p>The Environment Agency is proposing to consult with stakeholders on the generic design assessment (GDA) of Hitachi-GE Nuclear Energy Ltd’s (Hitachi-GE) UK Advanced Boiling Water Reactor (ABWR).</p><p>The consultation will be open from 12 December 2016 until 3 March 2017.</p></div>",

@@ -7,6 +7,7 @@
   "updated_at": "2016-10-18T09:30:00Z",
   "schema_name": "consultation",
   "document_type": "consultation_outcome",
+  "government_document_supertype": "consultations",
   "locale": "en",
   "details": {
     "body": "<div class=\"govspeak\"><p>A NIC election is the means of legally transferring to the employee the Employer’s Class 1 NIC obligation on the occasion of chargeable events in connection with employment-related securities options, and with restricted or convertible employment-related securities. This consultation is designed to gather views and evidence from companies with nontax-advantaged share schemes about whether there is a need for the continued availability of a NIC election. NIC agreements will continue to be available.</p>\n\n<p>The consultation is particularly relevant for accounting and legal advisers of companies which offer non tax-advantaged share schemes, particularly multinational companies with UK employees.</p>\n</div>",
