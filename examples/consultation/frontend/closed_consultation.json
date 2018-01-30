@@ -7,6 +7,7 @@
   "updated_at": "2016-09-05T15:00:00Z",
   "schema_name": "consultation",
   "document_type": "closed_consultation",
+  "government_document_supertype": "consultations",
   "locale": "en",
   "details": {
     "body": "<div class=\"govspeak\"><p>The Museums Review will consider how museums and galleries across England can thrive and become even more inclusive. The Review will look at how the sector operates, the challenges it faces and the role of government-sponsored museums.</p>\n\n<p>To help inform this review, DCMS would welcome your feedback through our online Calls for Evidence (see links in attached document).</p>\n\n<p>The Calls for Evidence are open until 31 October 2016.</p>\n\n<p>The full Terms of Reference for the review can be found in the above document.</p>\n\n<p>If you have any queries about the review, please contact DCMS at museums.review@culture.gov.uk</p>\n</div>",
