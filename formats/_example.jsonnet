@@ -39,11 +39,11 @@
       additionalProperties: false,
       required: ["foo"],
       properties: {
-        foo: { "$ref": "#/defintions/foo" },
+        foo: { "$ref": "#/definitions/foo" },
         bar: { type: "string" },
       },
     },
-    // This is the defintion referenced in details
+    // This is the definitions referenced in details
     foo: { type: "string" },
   },
 
