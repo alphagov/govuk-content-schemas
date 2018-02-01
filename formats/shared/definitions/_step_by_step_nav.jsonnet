@@ -26,6 +26,13 @@
       title: {
         type: "string"
       },
+      logic: {
+        type: "string",
+        enum: [
+          "and",
+          "or"
+        ]
+      },
       optional: {
         type: "boolean"
       },
