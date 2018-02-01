@@ -1,7 +1,4 @@
 (import "all.jsonnet") + {
-  content_id: {
-    "$ref": "#/definitions/guid",
-  },
   email_document_supertype: {
     type: "string",
     description: "Document supertype grouping intended to power the Whitehall finders and email subscriptions",

@@ -1,4 +1,5 @@
 (import "shared/default_format.jsonnet") + {
+  frontend_content_id: "optional",
   document_type: "gone",
   base_path: "optional",
   rendering_app: "forbidden",

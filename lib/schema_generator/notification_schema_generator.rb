@@ -43,6 +43,7 @@ module SchemaGenerator
     def derived_properties
       properties = {
         "base_path" => format.base_path.definition,
+        "content_id" => format.content_id(frontend: false).definition,
         "document_type" => format.document_type.definition,
         "description" => format.description.definition,
         "details" => format.details.definition,

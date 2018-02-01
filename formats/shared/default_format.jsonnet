@@ -1,4 +1,5 @@
 {
+  frontend_content_id: "required",
   document_type: null,
   base_path: "required",
   routes: "required",
