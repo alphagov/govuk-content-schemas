@@ -83,6 +83,17 @@ module SchemaGenerator
       )
     end
 
+    def content_id(frontend: false)
+      frontend_status = format_data["frontend_content_id"] || "required"
+      OptionalProperty.new(
+        property: "content_id",
+        status: frontend ? frontend_status : "required",
+        required_definition: "guid",
+        optional_definition: "guid_optional",
+        forbidden_definition: "null"
+      )
+    end
+
     def generate_publisher?
       generate_publisher = format_data.dig("generate", "publisher")
       generate_publisher.nil? ? true : generate_publisher

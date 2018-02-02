@@ -10,4 +10,14 @@
       "$ref": "#/definitions/guid",
     },
   },
+  guid_optional: {
+    anyOf: [
+      {
+        "$ref": "#/definitions/guid",
+      },
+      {
+        type: "null",
+      },
+    ],
+  },
 }
