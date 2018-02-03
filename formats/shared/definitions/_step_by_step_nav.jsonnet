@@ -71,7 +71,8 @@
         type: "string",
         enum: [
           "choice",
-          "required"
+          "required",
+          "optional"
         ]
       },
       contents: {
