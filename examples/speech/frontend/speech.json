@@ -3,6 +3,7 @@
   "content_id": "b22d5555-096a-4793-9f4d-779644191054",
   "schema_name": "speech",
   "document_type": "speech",
+  "government_document_supertype": "speeches",
   "first_published_at": "2016-03-08T10:31:22.000+00:00",
   "title": "Andrea Leadsom's speech at Women in Nuclear UK Conference",
   "description": "Addressing the Gender Imbalance in the Nuclear Industry.",
@@ -57,7 +58,7 @@
         "document_type": "organisation"
       }
     ],
-    "speaker": [
+    "people": [
       {
         "content_id": "853df7fd-c0f1-11e4-8223-005056011aef",
         "title": "The Rt Hon Andrea Leadsom MP",
@@ -67,6 +68,38 @@
         "web_url": "https://www.gov.uk/government/people/andrea-leadsom",
         "locale": "en",
         "document_type": "person"
+      }
+    ],
+    "policy_areas": [
+      {
+        "api_path": "/api/content/government/topics/energy",
+        "base_path": "/government/topics/energy",
+        "content_id": "c637a660-4903-404b-87cc-d50101822916",
+        "document_type": "placeholder_policy_area",
+        "locale": "en",
+        "public_updated_at": "2016-02-04T11:25:06Z",
+        "schema_name": "placeholder_policy_area",
+        "title": "Energy",
+        "withdrawn": false,
+        "links": {},
+        "api_url": "https://www.gov.uk/api/content/government/topics/energy",
+        "web_url": "https://www.gov.uk/government/topics/energy"
+      }
+    ],
+    "speaker": [
+      {
+        "api_path": "/api/content/government/people/andrea-leadsom",
+        "base_path": "/government/people/andrea-leadsom",
+        "content_id": "853df7fd-c0f1-11e4-8223-005056011aef",
+        "document_type": "person",
+        "locale": "en",
+        "public_updated_at": "2017-06-11T18:07:35Z",
+        "schema_name": "placeholder",
+        "title": "The Rt Hon Andrea Leadsom MP",
+        "withdrawn": false,
+        "links": {},
+        "api_url": "https://www.gov.uk/api/content/government/people/andrea-leadsom",
+        "web_url": "https://www.gov.uk/government/people/andrea-leadsom"
       }
     ]
   }
