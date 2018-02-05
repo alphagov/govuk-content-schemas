@@ -23,5 +23,18 @@
   "publishing_request_id": null,
   "links": {},
   "description": null,
-  "details": {}
+  "details": {},
+  "redirects": [
+    {
+      "path": "/406beacon",
+      "type": "exact",
+      "destination": "/maritime-safety-weather-and-navigation/register-406-mhz-beacons?query=answer#fragment"
+    },
+    {
+      "path": "/406beacon/prefix",
+      "type": "prefix",
+      "destination": "/new-406-beacons-destination",
+      "segments_mode": "preserve"
+    }
+  ]
 }

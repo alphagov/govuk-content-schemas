@@ -130,6 +130,9 @@
     "publishing_request_id": {
       "$ref": "#/definitions/publishing_request_id"
     },
+    "redirects": {
+      "$ref": "#/definitions/redirects"
+    },
     "rendering_app": {
       "type": "null"
     },
@@ -163,6 +166,11 @@
     }
   },
   "definitions": {
+    "absolute_fullpath": {
+      "description": "A path with optional query string and/or fragment.",
+      "type": "string",
+      "pattern": "^/(([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})+(/([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)*)?(\\?([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)?(#([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)?$"
+    },
     "absolute_path": {
       "description": "A path only. Query string and/or fragment are not allowed.",
       "type": "string",
@@ -250,6 +258,11 @@
           }
         }
       }
+    },
+    "govuk_subdomain_url": {
+      "description": "A URL under the gov.uk domain with optional query string and/or fragment.",
+      "type": "string",
+      "pattern": "^https://([a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[A-Za-z0-9])?\\.)*gov\\.uk(/(([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})+(/([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)*)?(\\?([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)?(#([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)?)?$"
     },
     "guid": {
       "type": "string",
@@ -370,6 +383,51 @@
           "type": "null"
         }
       ]
+    },
+    "redirect_route": {
+      "type": "object",
+      "required": [
+        "path",
+        "type",
+        "destination"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "destination": {
+          "type": "string",
+          "anyOf": [
+            {
+              "$ref": "#/definitions/absolute_fullpath"
+            },
+            {
+              "$ref": "#/definitions/govuk_subdomain_url"
+            }
+          ]
+        },
+        "path": {
+          "$ref": "#/definitions/absolute_path"
+        },
+        "segments_mode": {
+          "description": "For prefix redirects, preserve or ignore the rest of the fullpath. For exact, preserve or ignore the querystring.",
+          "enum": [
+            "preserve",
+            "ignore"
+          ]
+        },
+        "type": {
+          "enum": [
+            "prefix",
+            "exact"
+          ]
+        }
+      }
+    },
+    "redirects": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/redirect_route"
+      },
+      "minItems": 1
     },
     "withdrawn_notice": {
       "type": "object",
