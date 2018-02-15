@@ -6,6 +6,12 @@
       "steps",
     ],
     properties: {
+      title: {
+        type: "string"
+      },
+      introduction: {
+        "$ref": "#/definitions/body_html_and_govspeak",
+      },
       steps: {
         type: "array",
         minItems: 1,
