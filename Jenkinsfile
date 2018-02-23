@@ -81,6 +81,14 @@ node {
       }
     }
 
+    stage("Run publishing end-to-end tests") {
+      govuk.runPublishingE2ETests(
+        "GOVUK_CONTENT_SCHEMAS_COMMITISH",
+        "test-against",
+        "govuk-content-schemas",
+      )
+    }
+
     if (env.BRANCH_NAME == 'master') {
       stage("Push release tag") {
         govuk.pushTag(REPOSITORY, env.BRANCH_NAME, 'release_' + env.BUILD_NUMBER)
