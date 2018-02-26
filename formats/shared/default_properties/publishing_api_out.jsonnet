@@ -28,7 +28,15 @@
   },
   content_purpose_document_supertype: {
     type: "string",
-    description: "Document supertype grouping documents by purpose",
+    description: "DEPRECATED. Use `content_purpose_subgroup`.",
+  },
+  content_purpose_supergroup: {
+    type: "string",
+    description: "Document supergroup grouping documents by a purpose",
+  },
+  content_purpose_subgroup: {
+    type: "string",
+    description: "Document subgroup grouping documents by purpose. Narrows down the purpose defined in content_purpose_supergroup.",
   },
   withdrawn_notice: {
     "$ref": "#/definitions/withdrawn_notice",
