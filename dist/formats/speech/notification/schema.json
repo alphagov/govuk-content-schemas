@@ -115,6 +115,10 @@
           "$ref": "#/definitions/frontend_links_with_base_path",
           "maxItems": 1
         },
+        "part_of_step_navs": {
+          "description": "Link type automatically added by Publishing API",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
         "people": {
           "description": "Used to power Email Alert Api subscriptions for Whitehall content",
           "$ref": "#/definitions/frontend_links_with_base_path"

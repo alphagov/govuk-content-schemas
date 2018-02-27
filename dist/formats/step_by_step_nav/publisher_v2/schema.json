@@ -52,6 +52,10 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "pages_part_of_step_nav": {
+          "description": "A list of content that is related to this step by step navigation journey",
+          "$ref": "#/definitions/guid_list"
+        },
         "policy_areas": {
           "description": "A largely deprecated tag currently only used to power email alerts.",
           "$ref": "#/definitions/guid_list"
