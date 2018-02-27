@@ -25,6 +25,10 @@ module SchemaGenerator
       # the homepage. The homepage in turn has 'level_one_taxons' automatically added linking
       # back to the taxon.
       "level_one_taxons",
+
+      # Content items that are linked to with a `pages_part_of_step_nav` link type
+      # will automatically have a `part_of_step_navs` link type with those items
+      "part_of_step_navs",
     ].freeze
 
     def initialize(format)
