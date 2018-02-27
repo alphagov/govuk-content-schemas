@@ -26,7 +26,15 @@
       "$ref": "#/definitions/guid_optional"
     },
     "content_purpose_document_supertype": {
-      "description": "Document supertype grouping documents by purpose",
+      "description": "DEPRECATED. Use `content_purpose_subgroup`.",
+      "type": "string"
+    },
+    "content_purpose_subgroup": {
+      "description": "Document subgroup grouping documents by purpose. Narrows down the purpose defined in content_purpose_supergroup.",
+      "type": "string"
+    },
+    "content_purpose_supergroup": {
+      "description": "Document supergroup grouping documents by a purpose",
       "type": "string"
     },
     "description": {
