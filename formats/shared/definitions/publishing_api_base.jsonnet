@@ -144,6 +144,11 @@
     type: "string",
     format: "date-time",
   },
+  publishing_scheduled_at: {
+    description: "When this content was last scheduled for publishing. Determined by the publishing intent sent by the publishing API.",
+    type: "string",
+    format: "date-time",
+  },
   publishing_request_id: {
     description: "A unique identifier used to track publishing requests to rendered content",
     oneOf: [

@@ -159,6 +159,16 @@
     "publishing_request_id": {
       "$ref": "#/definitions/publishing_request_id"
     },
+    "publishing_scheduled_at": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/publishing_scheduled_at"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "rendering_app": {
       "$ref": "#/definitions/rendering_app"
     },
@@ -455,6 +465,11 @@
           "type": "null"
         }
       ]
+    },
+    "publishing_scheduled_at": {
+      "description": "When this content was last scheduled for publishing. Determined by the publishing intent sent by the publishing API.",
+      "type": "string",
+      "format": "date-time"
     },
     "rendering_app": {
       "description": "The application that renders this item.",

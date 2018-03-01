@@ -26,4 +26,14 @@
     type: "string",
     format: "date-time",
   },
+  publishing_scheduled_at: {
+    anyOf: [
+      {
+        "$ref": "#/definitions/publishing_scheduled_at",
+      },
+      {
+        type: "null",
+      },
+    ],
+  },
 }
