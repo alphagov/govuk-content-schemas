@@ -1,5 +1,7 @@
 #!/usr/bin/env groovy
 
+library("govuk")
+
 REPOSITORY = 'govuk-content-schemas'
 
 // second boolean parameter describes whether the app is using the central
@@ -39,7 +41,6 @@ def dependentApplications = [
 ]
 
 node {
-  def govuk = load '/var/lib/jenkins/groovy_scripts/govuk_jenkinslib.groovy'
 
   properties([
     buildDiscarder(
