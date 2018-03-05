@@ -149,6 +149,10 @@
     type: "string",
     format: "date-time",
   },
+  scheduled_publishing_delay_seconds: {
+    description: "The delay between the most recent scheduled and actual publishing times. Determined by the content store based on the publishing intent.",
+    type: "integer",
+  },
   publishing_request_id: {
     description: "A unique identifier used to track publishing requests to rendered content",
     oneOf: [

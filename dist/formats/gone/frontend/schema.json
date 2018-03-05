@@ -152,6 +152,16 @@
     "rendering_app": {
       "type": "null"
     },
+    "scheduled_publishing_delay_seconds": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/scheduled_publishing_delay_seconds"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "schema_name": {
       "type": "string",
       "enum": [
@@ -437,6 +447,10 @@
       "description": "When this content was last scheduled for publishing. Determined by the publishing intent sent by the publishing API.",
       "type": "string",
       "format": "date-time"
+    },
+    "scheduled_publishing_delay_seconds": {
+      "description": "The delay between the most recent scheduled and actual publishing times. Determined by the content store based on the publishing intent.",
+      "type": "integer"
     },
     "withdrawn_notice": {
       "type": "object",

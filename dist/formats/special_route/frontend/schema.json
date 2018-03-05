@@ -346,6 +346,16 @@
     "rendering_app": {
       "$ref": "#/definitions/rendering_app_optional"
     },
+    "scheduled_publishing_delay_seconds": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/scheduled_publishing_delay_seconds"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "schema_name": {
       "type": "string",
       "enum": [
@@ -629,6 +639,10 @@
           "type": "null"
         }
       ]
+    },
+    "scheduled_publishing_delay_seconds": {
+      "description": "The delay between the most recent scheduled and actual publishing times. Determined by the content store based on the publishing intent.",
+      "type": "integer"
     },
     "title_optional": {
       "type": "string"
