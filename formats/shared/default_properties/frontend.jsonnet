@@ -36,4 +36,14 @@
       },
     ],
   },
+  scheduled_publishing_delay_seconds: {
+    anyOf: [
+      {
+        "$ref": "#/definitions/scheduled_publishing_delay_seconds",
+      },
+      {
+        type: "null",
+      },
+    ],
+  },
 }
