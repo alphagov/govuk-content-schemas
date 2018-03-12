@@ -624,7 +624,6 @@
           "items": {
             "type": "object",
             "required": [
-              "href",
               "text"
             ],
             "additionalProperties": false,
