@@ -93,7 +93,6 @@
           type: "object",
           additionalProperties: false,
           required: [
-            "href",
             "text"
           ],
           properties: {
