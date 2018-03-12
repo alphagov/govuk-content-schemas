@@ -414,8 +414,7 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/individual_step"
-          },
-          "minItems": 1
+          }
         },
         "title": {
           "type": "string"
