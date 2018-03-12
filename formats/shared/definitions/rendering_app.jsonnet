@@ -6,6 +6,7 @@
       "calculators",
       "calendars",
       "collections",
+      "datagovuk-find",
       "email-alert-frontend",
       "email-campaign-frontend",
       "feedback",

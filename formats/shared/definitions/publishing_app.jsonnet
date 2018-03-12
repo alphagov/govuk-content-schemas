@@ -8,6 +8,7 @@
       "collections-publisher",
       "contacts",
       "content-tagger",
+      "datagovuk-publish",
       "email-alert-frontend",
       "external-link-tracker",
       "feedback",
