@@ -49,6 +49,9 @@
         show_summaries: {
           "$ref": "#/definitions/finder_show_summaries",
         },
+        signup_link: {
+          "$ref": "#/definitions/finder_signup_link",
+        },
         summary: {
           "$ref": "#/definitions/finder_summary",
         },
