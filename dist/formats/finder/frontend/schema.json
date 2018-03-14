@@ -340,6 +340,9 @@
         "show_summaries": {
           "$ref": "#/definitions/finder_show_summaries"
         },
+        "signup_link": {
+          "$ref": "#/definitions/finder_signup_link"
+        },
         "summary": {
           "$ref": "#/definitions/finder_summary"
         }
@@ -470,6 +473,16 @@
     },
     "finder_show_summaries": {
       "type": "boolean"
+    },
+    "finder_signup_link": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "finder_summary": {
       "anyOf": [
