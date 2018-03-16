@@ -91,6 +91,7 @@
             "text",
             "date",
             "topical",
+            "hidden",
           ],
         },
         allowed_values: {
