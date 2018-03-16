@@ -134,6 +134,10 @@
           "description": "The organisation that published the page. Corresponds to the first of the 'Lead organisations' in Whitehall, and is empty for all other publishing applications.",
           "$ref": "#/definitions/frontend_links_with_base_path",
           "maxItems": 1
+        },
+        "topic_taxonomy_taxons": {
+          "description": "Link type automatically added by Publishing API",
+          "$ref": "#/definitions/frontend_links_with_base_path"
         }
       }
     },
