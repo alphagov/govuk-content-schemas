@@ -29,6 +29,11 @@ module SchemaGenerator
       # Content items that are linked to with a `pages_part_of_step_nav` link type
       # will automatically have a `part_of_step_navs` link type with those items
       "part_of_step_navs",
+
+      # Taxons that have been created by merging old 'legacy' taxons will have
+      # a reverse link to determine where the replacement Topic Taxonomy taxon
+      # now resides
+      "topic_taxonomy_taxons",
     ].freeze
 
     def initialize(format)
