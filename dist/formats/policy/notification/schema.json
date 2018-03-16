@@ -521,7 +521,8 @@
             "enum": [
               "text",
               "date",
-              "topical"
+              "topical",
+              "hidden"
             ]
           }
         }
