@@ -108,6 +108,10 @@
           "description": "A largely deprecated tag currently only used to power email alerts.",
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
+        "related_to_step_navs": {
+          "description": "Link type automatically added by Publishing API",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
         "related_topics": {
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
