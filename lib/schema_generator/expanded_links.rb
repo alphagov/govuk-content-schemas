@@ -26,9 +26,19 @@ module SchemaGenerator
       # back to the taxon.
       "level_one_taxons",
 
-      # Content items that are linked to with a `pages_part_of_step_nav` link type
-      # will automatically have a `part_of_step_navs` link type with those items
+      # The are content items that can include step by step navigation.  They are linked
+      # to by the `pages_part_of_step_nav` link type on a step_by_step_navigation page.
       "part_of_step_navs",
+
+      # These are content items that are related to the step by step navigation
+      # journey, but should not have on page step by step navigation.  They are linked
+      # to by the `pages_related_to_step_nav` link type
+      "related_to_step_navs",
+
+      # Taxons that have been created by merging old 'legacy' taxons will have
+      # a reverse link to determine where the replacement Topic Taxonomy taxon
+      # now resides
+      "topic_taxonomy_taxons",
     ].freeze
 
     def initialize(format)

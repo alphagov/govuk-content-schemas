@@ -91,6 +91,7 @@
             "text",
             "date",
             "topical",
+            "hidden",
           ],
         },
         allowed_values: {
@@ -113,6 +114,16 @@
   },
   finder_show_summaries: {
     type: "boolean",
+  },
+  finder_signup_link: {
+    anyOf: [
+      {
+        type: "string",
+      },
+      {
+        type: "null",
+      },
+    ],
   },
   finder_summary: {
     anyOf: [

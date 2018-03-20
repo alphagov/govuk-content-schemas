@@ -144,12 +144,20 @@
         "related_policies": {
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
+        "related_to_step_navs": {
+          "description": "Link type automatically added by Publishing API",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
         "roles": {
           "description": "Used to power Email Alert Api subscriptions for Whitehall content",
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
         "taxons": {
           "description": "Prototype-stage taxonomy label for this content item",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
+        "topic_taxonomy_taxons": {
+          "description": "Link type automatically added by Publishing API",
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
         "topical_events": {

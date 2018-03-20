@@ -93,6 +93,10 @@
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
         "pages_part_of_step_nav": {
+          "description": "A list of content that should be navigable via this step by step journey",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
+        "pages_related_to_step_nav": {
           "description": "A list of content that is related to this step by step navigation journey",
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
@@ -106,6 +110,14 @@
         },
         "policy_areas": {
           "description": "A largely deprecated tag currently only used to power email alerts.",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
+        "related_to_step_navs": {
+          "description": "Link type automatically added by Publishing API",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
+        "topic_taxonomy_taxons": {
+          "description": "Link type automatically added by Publishing API",
           "$ref": "#/definitions/frontend_links_with_base_path"
         }
       }
@@ -125,6 +137,10 @@
       "additionalProperties": false,
       "properties": {
         "pages_part_of_step_nav": {
+          "description": "A list of content that should be navigable via this step by step journey",
+          "$ref": "#/definitions/guid_list"
+        },
+        "pages_related_to_step_nav": {
           "description": "A list of content that is related to this step by step navigation journey",
           "$ref": "#/definitions/guid_list"
         },
