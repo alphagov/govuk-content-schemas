@@ -1,5 +1,8 @@
 (import "shared/default_format.jsonnet") + {
-  document_type: "finder",
+  document_type: [
+    "finder",
+    "search"
+  ],
   definitions: {
     details: {
       type: "object",
