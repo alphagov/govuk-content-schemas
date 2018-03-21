@@ -406,6 +406,10 @@
             "description": "Include this in search result metadata. Can be set for non-filterable facets.",
             "type": "boolean"
           },
+          "filter_key": {
+            "description": "The exact rummager field name for this facet. Allows 'key' to be aliased to a rummager filter field",
+            "type": "string"
+          },
           "filterable": {
             "description": "This must be true to show the facet to users.",
             "type": "boolean"

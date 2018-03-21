@@ -61,6 +61,10 @@
         "display_as_result_metadata",
       ],
       properties: {
+        filter_key: {
+          description: "The exact rummager field name for this facet. Allows 'key' to be aliased to a rummager filter field",
+          type: "string",
+        },
         key: {
           description: "The rummager field name used for this facet.",
           type: "string",
