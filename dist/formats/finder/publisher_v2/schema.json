@@ -37,7 +37,8 @@
     "document_type": {
       "type": "string",
       "enum": [
-        "finder"
+        "finder",
+        "search"
       ]
     },
     "first_published_at": {

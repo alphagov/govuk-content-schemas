@@ -61,7 +61,8 @@
     "document_type": {
       "type": "string",
       "enum": [
-        "finder"
+        "finder",
+        "search"
       ]
     },
     "email_document_supertype": {
