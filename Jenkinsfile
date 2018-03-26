@@ -102,6 +102,12 @@ node {
 // Run schema tests outside of 'node' definition, so that they do not block the
 // original executor while the downstream tests are being run
 stage("Check dependent projects against updated schema") {
+  if (env.BRANCH_NAME == 'master') {
+    // Skip checking dependent projects if building the master branch,
+    // as this is only used for Pull Requests
+    return;
+  }
+
   def dependentBuilds = [:]
 
   for (dependentApp in dependentApplications) {
