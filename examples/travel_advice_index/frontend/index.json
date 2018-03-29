@@ -4,7 +4,7 @@
   "title": "Foreign travel advice",
   "description": "Latest travel advice by country including safety and security, entry requirements, travel warnings and health",
   "details": {
-    "email_signup_link": "https://public.govdelivery.com/accounts/UKGOVUK/subscriber/topics?qsp=TRAVEL",
+    "email_signup_link": "/foreign-travel-advice/email-signup",
     "max_cache_time": 10,
     "publishing_request_id": "2546-1460985144476-19268198-3242"
   },
