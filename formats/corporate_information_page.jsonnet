@@ -33,16 +33,19 @@
         body: {
           "$ref": "#/definitions/body",
         },
+        change_history: {
+          "$ref": "#/definitions/change_history",
+        },
+        corporate_information_groups: {
+          description: "Groups of corporate information to display on about pages",
+          "$ref": "#/definitions/grouped_lists_of_links",
+        },
         organisation: {
           description: "A single organisation that is the subject of this corporate information page",
           "$ref": "#/definitions/guid",
         },
         tags: {
           "$ref": "#/definitions/tags",
-        },
-        corporate_information_groups: {
-          description: "Groups of corporate information to display on about pages",
-          "$ref": "#/definitions/grouped_lists_of_links",
         },
       },
     },
