@@ -187,6 +187,27 @@
       "description": "The main content provided as HTML rendered from govspeak",
       "type": "string"
     },
+    "change_history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "public_timestamp",
+          "note"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "note": {
+            "description": "A summary of the change",
+            "type": "string"
+          },
+          "public_timestamp": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      }
+    },
     "description_optional": {
       "anyOf": [
         {
@@ -207,6 +228,9 @@
       "properties": {
         "body": {
           "$ref": "#/definitions/body"
+        },
+        "change_history": {
+          "$ref": "#/definitions/change_history"
         },
         "corporate_information_groups": {
           "description": "Groups of corporate information to display on about pages",
