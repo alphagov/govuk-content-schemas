@@ -18,6 +18,7 @@
           properties: {
             category: {
               enum: [
+                "mot_reminder",
                 "organ_donor",
                 "register_to_vote",
               ],
