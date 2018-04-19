@@ -201,8 +201,24 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "featured_policies": {
-          "description": "Featured policies primarily for use with Whitehall organisations. Deprecated in favour of ordered_featured_policies.",
+        "ordered_child_organisations": {
+          "description": "Child organisations primarily for use with Whitehall organisations.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "ordered_contacts": {
+          "description": "Contact details primarily for use with Whitehall orgaisations.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "ordered_featured_policies": {
+          "description": "Featured policies primarily for use with Whitehall organisations.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "ordered_parent_organisations": {
+          "description": "Parent organisations primarily for use with Whitehall organisations.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "ordered_successor_organisations": {
+          "description": "Successor organisations primarily for use with closed Whitehall organisations.",
           "$ref": "#/definitions/guid_list"
         },
         "policy_areas": {
@@ -251,9 +267,10 @@
       "$ref": "#/definitions/routes"
     },
     "schema_name": {
-      "description": "Should be of the form 'placeholder_my_format_name'. 'placeholder' is allowed for backwards compatibility.",
       "type": "string",
-      "pattern": "^(placeholder|placeholder_.+)$"
+      "enum": [
+        "organisation"
+      ]
     },
     "title": {
       "$ref": "#/definitions/title"
@@ -298,6 +315,10 @@
         }
       ]
     },
+    "body": {
+      "description": "The main content provided as HTML rendered from govspeak",
+      "type": "string"
+    },
     "change_note": {
       "description": "Change note for the most recent update",
       "type": [
@@ -322,26 +343,25 @@
         "analytics_identifier": {
           "$ref": "#/definitions/analytics_identifier"
         },
+        "body": {
+          "$ref": "#/definitions/body"
+        },
         "brand": {
-          "description": "Used for organisations, to allow us to publish branding / logo information. Remove when organisations are migrated.",
-          "type": [
-            "string",
-            "null"
-          ]
+          "description": "The organisation's brand class name, which is mapped to a colour in the frontend.",
+          "type": "string"
         },
         "change_note": {
           "$ref": "#/definitions/change_note"
         },
-        "end_date": {
-          "description": "Used for topical events, so that related documents can get the date. Remove when topical events are migrated.",
-          "type": "string",
-          "format": "date-time"
-        },
         "external_related_links": {
           "$ref": "#/definitions/external_related_links"
         },
+        "foi_exempt": {
+          "description": "Whether the organisation is exempt from Freedom of Information requests.",
+          "type": "boolean"
+        },
         "logo": {
-          "description": "Used for organisations, to allow us to publish branding / logo information. Remove when organisations are migrated.",
+          "description": "The organisation's logo, including the logo image and formatted name.",
           "type": "object",
           "properties": {
             "crest": {
@@ -372,13 +392,400 @@
             }
           }
         },
-        "start_date": {
-          "description": "Used for topical events, so that related documents can get the date. Remove when topical events are migrated.",
-          "type": "string",
-          "format": "date-time"
+        "ordered_board_members": {
+          "description": "A list of the organisation's board members, if appropriate. Turn into proper links once organisations are fully migrated.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "role",
+              "href"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "href": {
+                "type": "string"
+              },
+              "image": {
+                "$ref": "#/definitions/image"
+              },
+              "name": {
+                "type": "string"
+              },
+              "name_prefix": {
+                "type": "string"
+              },
+              "role": {
+                "type": "string"
+              },
+              "role_href": {
+                "type": "string"
+              },
+              "unpaid": {
+                "type": "boolean"
+              }
+            }
+          }
         },
-        "tags": {
-          "$ref": "#/definitions/tags"
+        "ordered_chief_professional_officers": {
+          "description": "A list of the organisation's chief professional officers, if appropriate. Turn into proper links once organisations are fully migrated.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "role",
+              "href"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "href": {
+                "type": "string"
+              },
+              "image": {
+                "$ref": "#/definitions/image"
+              },
+              "name": {
+                "type": "string"
+              },
+              "name_prefix": {
+                "type": "string"
+              },
+              "role": {
+                "type": "string"
+              },
+              "role_href": {
+                "type": "string"
+              },
+              "unpaid": {
+                "type": "boolean"
+              }
+            }
+          }
+        },
+        "ordered_corporate_information_pages": {
+          "description": "A set of links to corporate information pages to display for the organisation.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "title",
+              "href"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "href": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "ordered_featured_documents": {
+          "description": "A set of featured documents to display for the organisation. Turn into proper links once organisations are fully migrated.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "title",
+              "href",
+              "image",
+              "summary",
+              "public_updated_at",
+              "document_type"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "document_type": {
+                "type": "string"
+              },
+              "href": {
+                "type": "string"
+              },
+              "image": {
+                "$ref": "#/definitions/image"
+              },
+              "public_updated_at": {
+                "type": "string"
+              },
+              "summary": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "ordered_featured_links": {
+          "description": "A set of featured links to display for the organisation.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "title",
+              "href"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "href": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "ordered_military_personnel": {
+          "description": "A list of the organisation's military personnel, if appropriate. Turn into proper links once organisations are fully migrated.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "role",
+              "href"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "href": {
+                "type": "string"
+              },
+              "image": {
+                "$ref": "#/definitions/image"
+              },
+              "name": {
+                "type": "string"
+              },
+              "name_prefix": {
+                "type": "string"
+              },
+              "role": {
+                "type": "string"
+              },
+              "role_href": {
+                "type": "string"
+              },
+              "unpaid": {
+                "type": "boolean"
+              }
+            }
+          }
+        },
+        "ordered_ministers": {
+          "description": "A list of the organisation's ministers, if appropriate. Turn into proper links once organisations are fully migrated.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "role",
+              "href"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "href": {
+                "type": "string"
+              },
+              "image": {
+                "$ref": "#/definitions/image"
+              },
+              "name": {
+                "type": "string"
+              },
+              "name_prefix": {
+                "type": "string"
+              },
+              "role": {
+                "type": "string"
+              },
+              "role_href": {
+                "type": "string"
+              },
+              "unpaid": {
+                "type": "boolean"
+              }
+            }
+          }
+        },
+        "ordered_special_representatives": {
+          "description": "A list of the organisation's special representatives, if appropriate. Turn into proper links once organisations are fully migrated.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "role",
+              "href"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "href": {
+                "type": "string"
+              },
+              "image": {
+                "$ref": "#/definitions/image"
+              },
+              "name": {
+                "type": "string"
+              },
+              "name_prefix": {
+                "type": "string"
+              },
+              "role": {
+                "type": "string"
+              },
+              "role_href": {
+                "type": "string"
+              },
+              "unpaid": {
+                "type": "boolean"
+              }
+            }
+          }
+        },
+        "ordered_traffic_commissioners": {
+          "description": "A list of the organisation's traffic commissioners, if appropriate. Turn into proper links once organisations are fully migrated.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "role",
+              "href"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "href": {
+                "type": "string"
+              },
+              "image": {
+                "$ref": "#/definitions/image"
+              },
+              "name": {
+                "type": "string"
+              },
+              "name_prefix": {
+                "type": "string"
+              },
+              "role": {
+                "type": "string"
+              },
+              "role_href": {
+                "type": "string"
+              },
+              "unpaid": {
+                "type": "boolean"
+              }
+            }
+          }
+        },
+        "organisation_featuring_priority": {
+          "description": "Whether to prioritise news or services on the organisation's home page.",
+          "type": "string",
+          "enum": [
+            "news",
+            "services"
+          ]
+        },
+        "organisation_govuk_status": {
+          "description": "The status of the organisation on GOV.UK.",
+          "type": "object",
+          "required": [
+            "status"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "changed_name",
+                "devolved",
+                "exempt",
+                "joining",
+                "left_gov",
+                "live",
+                "merged",
+                "no_longer_exists",
+                "replaced",
+                "split",
+                "superseded_by_devolved_administration",
+                "transitioning"
+              ]
+            },
+            "updated_at": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "organisation_type": {
+          "description": "The type of organisation.",
+          "type": "string",
+          "enum": [
+            "adhoc_advisory_group",
+            "advisory_ndpb",
+            "civil_service",
+            "court",
+            "devolved_administration",
+            "executive_agency",
+            "executive_ndpb",
+            "executive_office",
+            "independent_monitoring_body",
+            "ministerial_department",
+            "non_ministerial_department",
+            "other",
+            "public_corporation",
+            "sub_organisation",
+            "tribunal_ndpb"
+          ]
+        },
+        "social_media_links": {
+          "description": "A set of links to social media profiles for the organisation.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "service_type",
+              "title",
+              "href",
+              "image"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "href": {
+                "type": "string",
+                "format": "uri"
+              },
+              "image": {
+                "$ref": "#/definitions/image"
+              },
+              "service_type": {
+                "type": "string",
+                "enum": [
+                  "blog",
+                  "email",
+                  "facebook",
+                  "flickr",
+                  "foursquare",
+                  "google-plus",
+                  "instagram",
+                  "linkedin",
+                  "other",
+                  "pinterest",
+                  "twitter",
+                  "youtube"
+                ]
+              },
+              "title": {
+                "type": "string"
+              }
+            }
+          }
         }
       }
     },
@@ -595,43 +1002,6 @@
         "$ref": "#/definitions/route"
       },
       "minItems": 1
-    },
-    "tags": {
-      "description": "Field used by email-alert-api to trigger email alerts for subscriptions to topics (gov.uk/topic) and policies (gov.uk/policies).",
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "additional_topics": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "browse_pages": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "policies": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "primary_topic": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "topics": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        }
-      }
     },
     "title": {
       "type": "string"
