@@ -1,0 +1,157 @@
+{
+  "analytics_identifier": "D1197",
+  "base_path": "/government/organisations/department-for-exiting-the-european-union",
+  "content_id": "f323e83c-868b-4bcb-b6e2-a8f9bb40397e",
+  "document_type": "organisation",
+  "first_published_at": "2016-07-14T18:15:21.000+00:00",
+  "locale": "en",
+  "need_ids": [
+
+  ],
+  "phase": "live",
+  "public_updated_at": "2018-01-09T10:07:59.000+00:00",
+  "publishing_app": "whitehall",
+  "rendering_app": "whitehall-frontend",
+  "schema_name": "organisation",
+  "title": "Department for Exiting the European Union",
+  "updated_at": "2018-03-27T18:42:06.661Z",
+  "links": {
+    "available_translations": [
+      {
+        "title": "Department for Exiting the European Union",
+        "public_updated_at": "2018-01-09T10:07:59Z",
+        "analytics_identifier": "D1197",
+        "document_type": "organisation",
+        "schema_name": "organisation",
+        "base_path": "/government/organisations/department-for-exiting-the-european-union",
+        "api_path": "/api/content/government/organisations/department-for-exiting-the-european-union",
+        "content_id": "f323e83c-868b-4bcb-b6e2-a8f9bb40397e",
+        "locale": "en",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/department-for-exiting-the-european-union",
+        "web_url": "https://www.gov.uk/government/organisations/department-for-exiting-the-european-union",
+        "links": {
+
+        }
+      }
+    ],
+    "ordered_contacts": [
+
+    ],
+    "ordered_featured_policies": [
+
+    ]
+  },
+  "description": null,
+  "details": {
+    "brand": "department-of-energy-climate-change",
+    "foi_exempt": false,
+    "logo": {
+      "formatted_title": "Department<br/>for Exiting the<br/>European Union",
+      "crest": "single-identity"
+    },
+    "external_related_links": [
+      {
+        "title": "Definition",
+        "url": "http://www.dictionary.com/browse/brexit"
+      }
+    ],
+    "ordered_corporate_information_pages": [
+      {
+        "title": "Corporate reports",
+        "href": "/government/publications?departments%5B%5D=department-for-exiting-the-european-union&publication_type=corporate-reports"
+      },
+      {
+        "title": "Transparency data",
+        "href": "/government/publications?departments%5B%5D=department-for-exiting-the-european-union&publication_type=transparency-data"
+      },
+      {
+        "title": "Jobs",
+        "href": "https://www.civilservicejobs.service.gov.uk/csr"
+      }
+    ],
+    "ordered_featured_links": [
+
+    ],
+    "ordered_featured_documents": [
+      {
+        "title": "Article 50 and negotiations with the EU",
+        "href": "/government/collections/article-50-and-negotiations-with-the-eu",
+        "image": {
+          "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/feature/image/54253/s630_ukeuflags.jpeg",
+          "alt_text": "Read the Article 50 and negotiations with the EU article"
+        },
+        "summary": "Information about the Article 50 process and our negotiations for a new partnership with the European Union.",
+        "public_updated_at": "2018-03-12T10:59:16.000+00:00",
+        "document_type": "Collection"
+      }
+    ],
+    "ordered_ministers": [
+      {
+        "name_prefix": "The Rt Hon",
+        "name": "David Davis MP",
+        "role": "Secretary of State for Exiting the European Union",
+        "href": "/government/people/david-davis",
+        "role_href": "/government/ministers/secretary-of-state-for-exiting-the-european-union",
+        "image": {
+          "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/person/image/2793/s216_DavidDavid960.jpg",
+          "alt_text": "The Rt Hon David Davis MP"
+        }
+      },
+      {
+        "name": "Lord Callanan",
+        "role": "Minister of State",
+        "href": "/government/people/lord-callanan",
+        "role_href": "/government/ministers/minister-of-state--54",
+        "image": {
+          "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/person/image/3124/s216_gov.uk-Lord_Callanan.jpg",
+          "alt_text": "Lord Callanan"
+        }
+      }
+    ],
+    "ordered_board_members": [
+      {
+        "name": "Philip Rycroft",
+        "role": "Permanent Secretary (Department for Exiting the European Union)",
+        "href": "/government/people/philip-rycroft",
+        "image": {
+          "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/person/image/544/s216_Philip_Rycroft_Govuk_2.jpg",
+          "alt_text": "Philip Rycroft"
+        }
+      },
+      {
+        "name": "Sarah Healey",
+        "role": "Director General",
+        "href": "/government/people/sarah-healey"
+      }
+    ],
+    "ordered_military_personnel": [
+
+    ],
+    "ordered_traffic_commissioners": [
+
+    ],
+    "ordered_chief_professional_officers": [
+
+    ],
+    "ordered_special_representatives": [
+
+    ],
+    "organisation_featuring_priority": "news",
+    "organisation_govuk_status": {
+      "status": "live"
+    },
+    "organisation_type": "ministerial_department",
+    "social_media_links": [
+      {
+        "service_type": "twitter",
+        "title": "Twitter - @DExEUgov",
+        "href": "https://twitter.com/DExEUgov",
+        "image": {
+          "url": "https://assets.publishing.service.gov.uk/government/assets/social-icons-white-e159ffee9ba2dc13b92eed98fbf9fc5696f5fab245ac41a217e3665ef28a7c9a.png",
+          "alt_text": "Twitter"
+        }
+      }
+    ],
+    "body": "We are responsible for overseeing negotiations to leave the EU and establishing the future relationship between the UK and EU."
+  }
+}
