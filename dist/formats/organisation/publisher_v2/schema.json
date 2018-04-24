@@ -407,6 +407,12 @@
             ],
             "additionalProperties": false,
             "properties": {
+              "attends_cabinet_type": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
               "href": {
                 "type": "string"
               },
@@ -419,14 +425,17 @@
               "name_prefix": {
                 "type": "string"
               },
+              "payment_type": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
               "role": {
                 "type": "string"
               },
               "role_href": {
                 "type": "string"
-              },
-              "unpaid": {
-                "type": "boolean"
               }
             }
           }
@@ -443,6 +452,12 @@
             ],
             "additionalProperties": false,
             "properties": {
+              "attends_cabinet_type": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
               "href": {
                 "type": "string"
               },
@@ -455,14 +470,17 @@
               "name_prefix": {
                 "type": "string"
               },
+              "payment_type": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
               "role": {
                 "type": "string"
               },
               "role_href": {
                 "type": "string"
-              },
-              "unpaid": {
-                "type": "boolean"
               }
             }
           }
@@ -555,6 +573,12 @@
             ],
             "additionalProperties": false,
             "properties": {
+              "attends_cabinet_type": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
               "href": {
                 "type": "string"
               },
@@ -567,14 +591,17 @@
               "name_prefix": {
                 "type": "string"
               },
+              "payment_type": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
               "role": {
                 "type": "string"
               },
               "role_href": {
                 "type": "string"
-              },
-              "unpaid": {
-                "type": "boolean"
               }
             }
           }
@@ -591,6 +618,12 @@
             ],
             "additionalProperties": false,
             "properties": {
+              "attends_cabinet_type": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
               "href": {
                 "type": "string"
               },
@@ -603,14 +636,17 @@
               "name_prefix": {
                 "type": "string"
               },
+              "payment_type": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
               "role": {
                 "type": "string"
               },
               "role_href": {
                 "type": "string"
-              },
-              "unpaid": {
-                "type": "boolean"
               }
             }
           }
@@ -627,6 +663,12 @@
             ],
             "additionalProperties": false,
             "properties": {
+              "attends_cabinet_type": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
               "href": {
                 "type": "string"
               },
@@ -639,14 +681,17 @@
               "name_prefix": {
                 "type": "string"
               },
+              "payment_type": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
               "role": {
                 "type": "string"
               },
               "role_href": {
                 "type": "string"
-              },
-              "unpaid": {
-                "type": "boolean"
               }
             }
           }
@@ -663,6 +708,12 @@
             ],
             "additionalProperties": false,
             "properties": {
+              "attends_cabinet_type": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
               "href": {
                 "type": "string"
               },
@@ -675,14 +726,17 @@
               "name_prefix": {
                 "type": "string"
               },
+              "payment_type": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
               "role": {
                 "type": "string"
               },
               "role_href": {
                 "type": "string"
-              },
-              "unpaid": {
-                "type": "boolean"
               }
             }
           }
