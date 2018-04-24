@@ -348,7 +348,10 @@
         },
         "brand": {
           "description": "The organisation's brand class name, which is mapped to a colour in the frontend.",
-          "type": "string"
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "change_note": {
           "$ref": "#/definitions/change_note"
@@ -718,7 +721,10 @@
               ]
             },
             "updated_at": {
-              "type": "string",
+              "type": [
+                "string",
+                "null"
+              ],
               "format": "date-time"
             }
           }

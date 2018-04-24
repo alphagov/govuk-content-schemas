@@ -14,7 +14,10 @@
           "$ref": "#/definitions/change_note",
         },
         brand: {
-          type: "string",
+          type: [
+            "string",
+            "null",
+          ],
           description: "The organisation's brand class name, which is mapped to a colour in the frontend.",
         },
         foi_exempt: {
@@ -378,7 +381,10 @@
               ],
             },
             updated_at: {
-              type: "string",
+              type: [
+                "string",
+                "null",
+              ],
               format: "date-time",
             },
           },
