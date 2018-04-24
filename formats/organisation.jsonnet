@@ -349,7 +349,7 @@
           type: "string",
           enum: [
             "news",
-            "services",
+            "service",
           ],
           description: "Whether to prioritise news or services on the organisation's home page.",
         },
@@ -414,7 +414,6 @@
               "service_type",
               "title",
               "href",
-              "image",
             ],
             properties: {
               service_type: {
@@ -440,9 +439,6 @@
               href: {
                 type: "string",
                 format: "uri",
-              },
-              image: {
-                "$ref": "#/definitions/image",
               },
             },
           },
