@@ -145,11 +145,7 @@
       {
         "service_type": "twitter",
         "title": "Twitter - @DExEUgov",
-        "href": "https://twitter.com/DExEUgov",
-        "image": {
-          "url": "https://assets.publishing.service.gov.uk/government/assets/social-icons-white-e159ffee9ba2dc13b92eed98fbf9fc5696f5fab245ac41a217e3665ef28a7c9a.png",
-          "alt_text": "Twitter"
-        }
+        "href": "https://twitter.com/DExEUgov"
       }
     ],
     "body": "We are responsible for overseeing negotiations to leave the EU and establishing the future relationship between the UK and EU."
