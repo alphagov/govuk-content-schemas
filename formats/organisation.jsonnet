@@ -161,8 +161,17 @@
               image: {
                 "$ref": "#/definitions/image",
               },
-              unpaid: {
-                type: "boolean",
+              payment_type: {
+                type: [
+                  "string",
+                  "null",
+                ],
+              },
+              attends_cabinet_type: {
+                type: [
+                  "string",
+                  "null",
+                ],
               },
             },
           },
@@ -197,8 +206,17 @@
               image: {
                 "$ref": "#/definitions/image",
               },
-              unpaid: {
-                type: "boolean",
+              payment_type: {
+                type: [
+                  "string",
+                  "null",
+                ],
+              },
+              attends_cabinet_type: {
+                type: [
+                  "string",
+                  "null",
+                ],
               },
             },
           },
@@ -233,8 +251,17 @@
               image: {
                 "$ref": "#/definitions/image",
               },
-              unpaid: {
-                type: "boolean",
+              payment_type: {
+                type: [
+                  "string",
+                  "null",
+                ],
+              },
+              attends_cabinet_type: {
+                type: [
+                  "string",
+                  "null",
+                ],
               },
             },
           },
@@ -269,8 +296,17 @@
               image: {
                 "$ref": "#/definitions/image",
               },
-              unpaid: {
-                type: "boolean",
+              payment_type: {
+                type: [
+                  "string",
+                  "null",
+                ],
+              },
+              attends_cabinet_type: {
+                type: [
+                  "string",
+                  "null",
+                ],
               },
             },
           },
@@ -305,8 +341,17 @@
               image: {
                 "$ref": "#/definitions/image",
               },
-              unpaid: {
-                type: "boolean",
+              payment_type: {
+                type: [
+                  "string",
+                  "null",
+                ],
+              },
+              attends_cabinet_type: {
+                type: [
+                  "string",
+                  "null",
+                ],
               },
             },
           },
@@ -341,8 +386,17 @@
               image: {
                 "$ref": "#/definitions/image",
               },
-              unpaid: {
-                type: "boolean",
+              payment_type: {
+                type: [
+                  "string",
+                  "null",
+                ],
+              },
+              attends_cabinet_type: {
+                type: [
+                  "string",
+                  "null",
+                ],
               },
             },
           },
