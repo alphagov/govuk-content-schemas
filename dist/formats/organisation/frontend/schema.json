@@ -828,7 +828,7 @@
           "type": "string",
           "enum": [
             "news",
-            "services"
+            "service"
           ]
         },
         "organisation_govuk_status": {
@@ -891,17 +891,13 @@
             "required": [
               "service_type",
               "title",
-              "href",
-              "image"
+              "href"
             ],
             "additionalProperties": false,
             "properties": {
               "href": {
                 "type": "string",
                 "format": "uri"
-              },
-              "image": {
-                "$ref": "#/definitions/image"
               },
               "service_type": {
                 "type": "string",
