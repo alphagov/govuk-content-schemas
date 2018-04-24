@@ -2,17 +2,32 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "required": [
+    "analytics_identifier",
     "base_path",
     "content_id",
     "description",
     "details",
     "document_type",
+    "email_document_supertype",
+    "expanded_links",
+    "first_published_at",
+    "government_document_supertype",
+    "govuk_request_id",
     "links",
     "locale",
+    "navigation_document_supertype",
+    "need_ids",
+    "payload_version",
+    "phase",
     "public_updated_at",
+    "publishing_app",
+    "redirects",
+    "rendering_app",
+    "routes",
     "schema_name",
     "title",
-    "updated_at"
+    "update_type",
+    "user_journey_document_supertype"
   ],
   "additionalProperties": false,
   "properties": {
@@ -202,21 +217,7 @@
       "description": "Document supertype grouping intended to power the Whitehall finders and email subscriptions",
       "type": "string"
     },
-    "first_published_at": {
-      "anyOf": [
-        {
-          "$ref": "#/definitions/first_published_at"
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
-    "government_document_supertype": {
-      "description": "Document supertype grouping intended to power the Whitehall finders and email subscriptions",
-      "type": "string"
-    },
-    "links": {
+    "expanded_links": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
@@ -236,10 +237,6 @@
           "description": "Link type automatically added by Publishing API",
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
-        "featured_policies": {
-          "description": "Featured policies primarily for use with Whitehall organisations. Deprecated in favour of ordered_featured_policies.",
-          "$ref": "#/definitions/frontend_links_with_base_path"
-        },
         "level_one_taxons": {
           "description": "Link type automatically added by Publishing API",
           "$ref": "#/definitions/frontend_links_with_base_path"
@@ -252,12 +249,32 @@
           "description": "The user needs this piece of content meets.",
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
+        "ordered_child_organisations": {
+          "description": "Child organisations primarily for use with Whitehall organisations.",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
+        "ordered_contacts": {
+          "description": "Contact details primarily for use with Whitehall orgaisations.",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
+        "ordered_featured_policies": {
+          "description": "Featured policies primarily for use with Whitehall organisations.",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
+        "ordered_parent_organisations": {
+          "description": "Parent organisations primarily for use with Whitehall organisations.",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
         "ordered_related_items": {
           "description": "Related items, can be any page on GOV.UK. Mostly used for mainstream content to power the sidebar. Ordering of the links is determined by the editor in Content Tagger.",
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
         "ordered_related_items_overrides": {
           "description": "Related items, can be any page on GOV.UK. Overrides 'more like this' automatically generated links in the beta navigation.",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
+        "ordered_successor_organisations": {
+          "description": "Successor organisations primarily for use with closed Whitehall organisations.",
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
         "organisations": {
@@ -304,6 +321,84 @@
         }
       }
     },
+    "first_published_at": {
+      "$ref": "#/definitions/first_published_at"
+    },
+    "government_document_supertype": {
+      "description": "Document supertype grouping intended to power the Whitehall finders and email subscriptions",
+      "type": "string"
+    },
+    "govuk_request_id": {
+      "$ref": "#/definitions/govuk_request_id"
+    },
+    "links": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "mainstream_browse_pages": {
+          "description": "Powers the /browse section of the site. These are known as sections in some legacy apps.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "meets_user_needs": {
+          "description": "The user needs this piece of content meets.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "ordered_child_organisations": {
+          "description": "Child organisations primarily for use with Whitehall organisations.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "ordered_contacts": {
+          "description": "Contact details primarily for use with Whitehall orgaisations.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "ordered_featured_policies": {
+          "description": "Featured policies primarily for use with Whitehall organisations.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "ordered_parent_organisations": {
+          "description": "Parent organisations primarily for use with Whitehall organisations.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "ordered_related_items": {
+          "description": "Related items, can be any page on GOV.UK. Mostly used for mainstream content to power the sidebar. Ordering of the links is determined by the editor in Content Tagger.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "ordered_related_items_overrides": {
+          "description": "Related items, can be any page on GOV.UK. Overrides 'more like this' automatically generated links in the beta navigation.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "ordered_successor_organisations": {
+          "description": "Successor organisations primarily for use with closed Whitehall organisations.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "organisations": {
+          "description": "All organisations linked to this content item. This should include lead organisations.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "parent": {
+          "description": "The parent content item.",
+          "$ref": "#/definitions/guid_list",
+          "maxItems": 1
+        },
+        "policy_areas": {
+          "description": "A largely deprecated tag currently only used to power email alerts.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "primary_publishing_organisation": {
+          "description": "The organisation that published the page. Corresponds to the first of the 'Lead organisations' in Whitehall, and is empty for all other publishing applications.",
+          "$ref": "#/definitions/guid_list",
+          "maxItems": 1
+        },
+        "taxons": {
+          "description": "Prototype-stage taxonomy label for this content item",
+          "$ref": "#/definitions/guid_list"
+        },
+        "topics": {
+          "description": "Powers the /topic section of the site. These are known as specialist sectors in some legacy apps.",
+          "$ref": "#/definitions/guid_list"
+        }
+      }
+    },
     "locale": {
       "$ref": "#/definitions/locale"
     },
@@ -317,6 +412,9 @@
         "type": "string"
       }
     },
+    "payload_version": {
+      "$ref": "#/definitions/payload_version"
+    },
     "phase": {
       "description": "The service design phase of this content item - https://www.gov.uk/service-manual/phases",
       "type": "string",
@@ -327,14 +425,7 @@
       ]
     },
     "public_updated_at": {
-      "anyOf": [
-        {
-          "$ref": "#/definitions/public_updated_at"
-        },
-        {
-          "type": "null"
-        }
-      ]
+      "$ref": "#/definitions/public_updated_at"
     },
     "publishing_app": {
       "$ref": "#/definitions/publishing_app_name"
@@ -342,33 +433,23 @@
     "publishing_request_id": {
       "$ref": "#/definitions/publishing_request_id"
     },
-    "publishing_scheduled_at": {
-      "anyOf": [
-        {
-          "$ref": "#/definitions/publishing_scheduled_at"
-        },
-        {
-          "type": "null"
-        }
-      ]
+    "redirects": {
+      "type": "array",
+      "additionalItems": false,
+      "items": {
+      }
     },
     "rendering_app": {
       "$ref": "#/definitions/rendering_app"
     },
-    "scheduled_publishing_delay_seconds": {
-      "anyOf": [
-        {
-          "$ref": "#/definitions/scheduled_publishing_delay_seconds"
-        },
-        {
-          "type": "null"
-        }
-      ]
+    "routes": {
+      "$ref": "#/definitions/routes"
     },
     "schema_name": {
-      "description": "Should be of the form 'placeholder_my_format_name'. 'placeholder' is allowed for backwards compatibility.",
       "type": "string",
-      "pattern": "^(placeholder|placeholder_.+)$"
+      "enum": [
+        "organisation"
+      ]
     },
     "search_user_need_document_supertype": {
       "description": "Document supertype grouping core and government documents",
@@ -377,9 +458,8 @@
     "title": {
       "$ref": "#/definitions/title"
     },
-    "updated_at": {
-      "type": "string",
-      "format": "date-time"
+    "update_type": {
+      "$ref": "#/definitions/update_type"
     },
     "user_journey_document_supertype": {
       "description": "Document type grouping powering analytics of user journeys",
@@ -412,6 +492,10 @@
           "type": "null"
         }
       ]
+    },
+    "body": {
+      "description": "The main content provided as HTML rendered from govspeak",
+      "type": "string"
     },
     "change_history": {
       "type": "array",
@@ -458,12 +542,12 @@
         "analytics_identifier": {
           "$ref": "#/definitions/analytics_identifier"
         },
+        "body": {
+          "$ref": "#/definitions/body"
+        },
         "brand": {
-          "description": "Used for organisations, to allow us to publish branding / logo information. Remove when organisations are migrated.",
-          "type": [
-            "string",
-            "null"
-          ]
+          "description": "The organisation's brand class name, which is mapped to a colour in the frontend.",
+          "type": "string"
         },
         "change_history": {
           "$ref": "#/definitions/change_history"
@@ -471,16 +555,15 @@
         "change_note": {
           "$ref": "#/definitions/change_note"
         },
-        "end_date": {
-          "description": "Used for topical events, so that related documents can get the date. Remove when topical events are migrated.",
-          "type": "string",
-          "format": "date-time"
-        },
         "external_related_links": {
           "$ref": "#/definitions/external_related_links"
         },
+        "foi_exempt": {
+          "description": "Whether the organisation is exempt from Freedom of Information requests.",
+          "type": "boolean"
+        },
         "logo": {
-          "description": "Used for organisations, to allow us to publish branding / logo information. Remove when organisations are migrated.",
+          "description": "The organisation's logo, including the logo image and formatted name.",
           "type": "object",
           "properties": {
             "crest": {
@@ -511,13 +594,400 @@
             }
           }
         },
-        "start_date": {
-          "description": "Used for topical events, so that related documents can get the date. Remove when topical events are migrated.",
-          "type": "string",
-          "format": "date-time"
+        "ordered_board_members": {
+          "description": "A list of the organisation's board members, if appropriate. Turn into proper links once organisations are fully migrated.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "role",
+              "href"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "href": {
+                "type": "string"
+              },
+              "image": {
+                "$ref": "#/definitions/image"
+              },
+              "name": {
+                "type": "string"
+              },
+              "name_prefix": {
+                "type": "string"
+              },
+              "role": {
+                "type": "string"
+              },
+              "role_href": {
+                "type": "string"
+              },
+              "unpaid": {
+                "type": "boolean"
+              }
+            }
+          }
         },
-        "tags": {
-          "$ref": "#/definitions/tags"
+        "ordered_chief_professional_officers": {
+          "description": "A list of the organisation's chief professional officers, if appropriate. Turn into proper links once organisations are fully migrated.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "role",
+              "href"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "href": {
+                "type": "string"
+              },
+              "image": {
+                "$ref": "#/definitions/image"
+              },
+              "name": {
+                "type": "string"
+              },
+              "name_prefix": {
+                "type": "string"
+              },
+              "role": {
+                "type": "string"
+              },
+              "role_href": {
+                "type": "string"
+              },
+              "unpaid": {
+                "type": "boolean"
+              }
+            }
+          }
+        },
+        "ordered_corporate_information_pages": {
+          "description": "A set of links to corporate information pages to display for the organisation.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "title",
+              "href"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "href": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "ordered_featured_documents": {
+          "description": "A set of featured documents to display for the organisation. Turn into proper links once organisations are fully migrated.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "title",
+              "href",
+              "image",
+              "summary",
+              "public_updated_at",
+              "document_type"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "document_type": {
+                "type": "string"
+              },
+              "href": {
+                "type": "string"
+              },
+              "image": {
+                "$ref": "#/definitions/image"
+              },
+              "public_updated_at": {
+                "type": "string"
+              },
+              "summary": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "ordered_featured_links": {
+          "description": "A set of featured links to display for the organisation.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "title",
+              "href"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "href": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "ordered_military_personnel": {
+          "description": "A list of the organisation's military personnel, if appropriate. Turn into proper links once organisations are fully migrated.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "role",
+              "href"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "href": {
+                "type": "string"
+              },
+              "image": {
+                "$ref": "#/definitions/image"
+              },
+              "name": {
+                "type": "string"
+              },
+              "name_prefix": {
+                "type": "string"
+              },
+              "role": {
+                "type": "string"
+              },
+              "role_href": {
+                "type": "string"
+              },
+              "unpaid": {
+                "type": "boolean"
+              }
+            }
+          }
+        },
+        "ordered_ministers": {
+          "description": "A list of the organisation's ministers, if appropriate. Turn into proper links once organisations are fully migrated.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "role",
+              "href"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "href": {
+                "type": "string"
+              },
+              "image": {
+                "$ref": "#/definitions/image"
+              },
+              "name": {
+                "type": "string"
+              },
+              "name_prefix": {
+                "type": "string"
+              },
+              "role": {
+                "type": "string"
+              },
+              "role_href": {
+                "type": "string"
+              },
+              "unpaid": {
+                "type": "boolean"
+              }
+            }
+          }
+        },
+        "ordered_special_representatives": {
+          "description": "A list of the organisation's special representatives, if appropriate. Turn into proper links once organisations are fully migrated.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "role",
+              "href"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "href": {
+                "type": "string"
+              },
+              "image": {
+                "$ref": "#/definitions/image"
+              },
+              "name": {
+                "type": "string"
+              },
+              "name_prefix": {
+                "type": "string"
+              },
+              "role": {
+                "type": "string"
+              },
+              "role_href": {
+                "type": "string"
+              },
+              "unpaid": {
+                "type": "boolean"
+              }
+            }
+          }
+        },
+        "ordered_traffic_commissioners": {
+          "description": "A list of the organisation's traffic commissioners, if appropriate. Turn into proper links once organisations are fully migrated.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "role",
+              "href"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "href": {
+                "type": "string"
+              },
+              "image": {
+                "$ref": "#/definitions/image"
+              },
+              "name": {
+                "type": "string"
+              },
+              "name_prefix": {
+                "type": "string"
+              },
+              "role": {
+                "type": "string"
+              },
+              "role_href": {
+                "type": "string"
+              },
+              "unpaid": {
+                "type": "boolean"
+              }
+            }
+          }
+        },
+        "organisation_featuring_priority": {
+          "description": "Whether to prioritise news or services on the organisation's home page.",
+          "type": "string",
+          "enum": [
+            "news",
+            "services"
+          ]
+        },
+        "organisation_govuk_status": {
+          "description": "The status of the organisation on GOV.UK.",
+          "type": "object",
+          "required": [
+            "status"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "changed_name",
+                "devolved",
+                "exempt",
+                "joining",
+                "left_gov",
+                "live",
+                "merged",
+                "no_longer_exists",
+                "replaced",
+                "split",
+                "superseded_by_devolved_administration",
+                "transitioning"
+              ]
+            },
+            "updated_at": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "organisation_type": {
+          "description": "The type of organisation.",
+          "type": "string",
+          "enum": [
+            "adhoc_advisory_group",
+            "advisory_ndpb",
+            "civil_service",
+            "court",
+            "devolved_administration",
+            "executive_agency",
+            "executive_ndpb",
+            "executive_office",
+            "independent_monitoring_body",
+            "ministerial_department",
+            "non_ministerial_department",
+            "other",
+            "public_corporation",
+            "sub_organisation",
+            "tribunal_ndpb"
+          ]
+        },
+        "social_media_links": {
+          "description": "A set of links to social media profiles for the organisation.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "service_type",
+              "title",
+              "href",
+              "image"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "href": {
+                "type": "string",
+                "format": "uri"
+              },
+              "image": {
+                "$ref": "#/definitions/image"
+              },
+              "service_type": {
+                "type": "string",
+                "enum": [
+                  "blog",
+                  "email",
+                  "facebook",
+                  "flickr",
+                  "foursquare",
+                  "google-plus",
+                  "instagram",
+                  "linkedin",
+                  "other",
+                  "pinterest",
+                  "twitter",
+                  "youtube"
+                ]
+              },
+              "title": {
+                "type": "string"
+              }
+            }
+          }
         }
       }
     },
@@ -616,9 +1086,22 @@
         }
       }
     },
+    "govuk_request_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
     "guid": {
       "type": "string",
       "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-[1-5][a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$"
+    },
+    "guid_list": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/guid"
+      },
+      "uniqueItems": true
     },
     "image": {
       "type": "object",
@@ -701,6 +1184,10 @@
         "zh-tw"
       ]
     },
+    "payload_version": {
+      "description": "Counter to indicate when the payload was generated",
+      "type": "integer"
+    },
     "public_updated_at": {
       "description": "When the content was last significantly changed (a major update). Shown to users.  Automatically determined by the publishing-api, unless overridden by the publishing application.",
       "type": "string",
@@ -752,11 +1239,6 @@
         }
       ]
     },
-    "publishing_scheduled_at": {
-      "description": "When this content was last scheduled for publishing. Determined by the publishing intent sent by the publishing API.",
-      "type": "string",
-      "format": "date-time"
-    },
     "rendering_app": {
       "description": "The application that renders this item.",
       "type": "string",
@@ -785,49 +1267,41 @@
         "whitehall-frontend"
       ]
     },
-    "scheduled_publishing_delay_seconds": {
-      "description": "The delay between the most recent scheduled and actual publishing times. Determined by the content store based on the publishing intent.",
-      "type": "integer"
-    },
-    "tags": {
-      "description": "Field used by email-alert-api to trigger email alerts for subscriptions to topics (gov.uk/topic) and policies (gov.uk/policies).",
+    "route": {
       "type": "object",
+      "required": [
+        "path",
+        "type"
+      ],
       "additionalProperties": false,
       "properties": {
-        "additional_topics": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
+        "path": {
+          "type": "string"
         },
-        "browse_pages": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "policies": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "primary_topic": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "topics": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
+        "type": {
+          "enum": [
+            "prefix",
+            "exact"
+          ]
         }
       }
     },
+    "routes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/route"
+      },
+      "minItems": 1
+    },
     "title": {
       "type": "string"
+    },
+    "update_type": {
+      "enum": [
+        "major",
+        "minor",
+        "republish"
+      ]
     },
     "withdrawn_notice": {
       "type": "object",

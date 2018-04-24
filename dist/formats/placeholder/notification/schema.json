@@ -238,7 +238,7 @@
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
         "featured_policies": {
-          "description": "Featured policies primarily for use with Whitehall organisations",
+          "description": "Featured policies primarily for use with Whitehall organisations. Deprecated in favour of ordered_featured_policies.",
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
         "level_one_taxons": {
@@ -320,7 +320,7 @@
       "additionalProperties": false,
       "properties": {
         "featured_policies": {
-          "description": "Featured policies primarily for use with Whitehall organisations",
+          "description": "Featured policies primarily for use with Whitehall organisations. Deprecated in favour of ordered_featured_policies.",
           "$ref": "#/definitions/guid_list"
         },
         "mainstream_browse_pages": {
@@ -527,10 +527,10 @@
           "$ref": "#/definitions/external_related_links"
         },
         "logo": {
+          "description": "Used for organisations, to allow us to publish branding / logo information. Remove when organisations are migrated.",
           "type": "object",
           "properties": {
             "crest": {
-              "description": "Used for organisations, to allow us to publish branding / logo information. Remove when organisations are migrated.",
               "type": [
                 "string",
                 "null"
@@ -551,11 +551,9 @@
               ]
             },
             "formatted_title": {
-              "description": "Used for organisations, to allow us to publish branding / logo information. Remove when organisations are migrated.",
               "type": "string"
             },
             "image": {
-              "description": "An image for organisations that use a custom logo",
               "$ref": "#/definitions/image"
             }
           }

@@ -32,7 +32,6 @@
           properties: {
             formatted_title: {
               type: "string",
-              description: "Used for organisations, to allow us to publish branding / logo information. Remove when organisations are migrated.",
             },
             crest: {
               type: [
@@ -53,13 +52,12 @@
                 "wales",
                 null,
               ],
-              description: "Used for organisations, to allow us to publish branding / logo information. Remove when organisations are migrated.",
             },
             image: {
-              description: "An image for organisations that use a custom logo",
               "$ref": "#/definitions/image",
             },
           },
+          description: "Used for organisations, to allow us to publish branding / logo information. Remove when organisations are migrated.",
         },
         external_related_links: {
           "$ref": "#/definitions/external_related_links",
@@ -71,6 +69,6 @@
     },
   },
   edition_links: (import "shared/base_edition_links.jsonnet") + {
-    featured_policies: "Featured policies primarily for use with Whitehall organisations",
+    featured_policies: "Featured policies primarily for use with Whitehall organisations. Deprecated in favour of ordered_featured_policies.",
   },
 }
