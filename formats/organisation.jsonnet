@@ -123,284 +123,38 @@
                 type: "string",
               },
               public_updated_at: {
-                type: "string",
+                type: [
+                  "string",
+                  "null",
+                ],
               },
               document_type: {
-                type: "string",
+                type: [
+                  "string",
+                  "null",
+                ],
               },
             },
           },
           description: "A set of featured documents to display for the organisation. Turn into proper links once organisations are fully migrated.",
         },
         ordered_ministers: {
-          type: "array",
-          items: {
-            type: "object",
-            additionalProperties: false,
-            required: [
-              "name",
-              "role",
-              "href",
-            ],
-            properties: {
-              name_prefix: {
-                type: "string",
-              },
-              name: {
-                type: "string",
-              },
-              role: {
-                type: "string",
-              },
-              href: {
-                type: "string",
-              },
-              role_href: {
-                type: "string",
-              },
-              image: {
-                "$ref": "#/definitions/image",
-              },
-              payment_type: {
-                type: [
-                  "string",
-                  "null",
-                ],
-              },
-              attends_cabinet_type: {
-                type: [
-                  "string",
-                  "null",
-                ],
-              },
-            },
-          },
-          description: "A list of the organisation's ministers, if appropriate. Turn into proper links once organisations are fully migrated.",
+          "$ref": "#/definitions/people",
         },
         ordered_board_members: {
-          type: "array",
-          items: {
-            type: "object",
-            additionalProperties: false,
-            required: [
-              "name",
-              "role",
-              "href",
-            ],
-            properties: {
-              name_prefix: {
-                type: "string",
-              },
-              name: {
-                type: "string",
-              },
-              role: {
-                type: "string",
-              },
-              href: {
-                type: "string",
-              },
-              role_href: {
-                type: "string",
-              },
-              image: {
-                "$ref": "#/definitions/image",
-              },
-              payment_type: {
-                type: [
-                  "string",
-                  "null",
-                ],
-              },
-              attends_cabinet_type: {
-                type: [
-                  "string",
-                  "null",
-                ],
-              },
-            },
-          },
-          description: "A list of the organisation's board members, if appropriate. Turn into proper links once organisations are fully migrated.",
+          "$ref": "#/definitions/people",
         },
         ordered_military_personnel: {
-          type: "array",
-          items: {
-            type: "object",
-            additionalProperties: false,
-            required: [
-              "name",
-              "role",
-              "href",
-            ],
-            properties: {
-              name_prefix: {
-                type: "string",
-              },
-              name: {
-                type: "string",
-              },
-              role: {
-                type: "string",
-              },
-              href: {
-                type: "string",
-              },
-              role_href: {
-                type: "string",
-              },
-              image: {
-                "$ref": "#/definitions/image",
-              },
-              payment_type: {
-                type: [
-                  "string",
-                  "null",
-                ],
-              },
-              attends_cabinet_type: {
-                type: [
-                  "string",
-                  "null",
-                ],
-              },
-            },
-          },
-          description: "A list of the organisation's military personnel, if appropriate. Turn into proper links once organisations are fully migrated.",
+          "$ref": "#/definitions/people",
         },
         ordered_traffic_commissioners: {
-          type: "array",
-          items: {
-            type: "object",
-            additionalProperties: false,
-            required: [
-              "name",
-              "role",
-              "href",
-            ],
-            properties: {
-              name_prefix: {
-                type: "string",
-              },
-              name: {
-                type: "string",
-              },
-              role: {
-                type: "string",
-              },
-              href: {
-                type: "string",
-              },
-              role_href: {
-                type: "string",
-              },
-              image: {
-                "$ref": "#/definitions/image",
-              },
-              payment_type: {
-                type: [
-                  "string",
-                  "null",
-                ],
-              },
-              attends_cabinet_type: {
-                type: [
-                  "string",
-                  "null",
-                ],
-              },
-            },
-          },
-          description: "A list of the organisation's traffic commissioners, if appropriate. Turn into proper links once organisations are fully migrated.",
+          "$ref": "#/definitions/people",
         },
         ordered_chief_professional_officers: {
-          type: "array",
-          items: {
-            type: "object",
-            additionalProperties: false,
-            required: [
-              "name",
-              "role",
-              "href",
-            ],
-            properties: {
-              name_prefix: {
-                type: "string",
-              },
-              name: {
-                type: "string",
-              },
-              role: {
-                type: "string",
-              },
-              href: {
-                type: "string",
-              },
-              role_href: {
-                type: "string",
-              },
-              image: {
-                "$ref": "#/definitions/image",
-              },
-              payment_type: {
-                type: [
-                  "string",
-                  "null",
-                ],
-              },
-              attends_cabinet_type: {
-                type: [
-                  "string",
-                  "null",
-                ],
-              },
-            },
-          },
-          description: "A list of the organisation's chief professional officers, if appropriate. Turn into proper links once organisations are fully migrated.",
+          "$ref": "#/definitions/people",
         },
         ordered_special_representatives: {
-          type: "array",
-          items: {
-            type: "object",
-            additionalProperties: false,
-            required: [
-              "name",
-              "role",
-              "href",
-            ],
-            properties: {
-              name_prefix: {
-                type: "string",
-              },
-              name: {
-                type: "string",
-              },
-              role: {
-                type: "string",
-              },
-              href: {
-                type: "string",
-              },
-              role_href: {
-                type: "string",
-              },
-              image: {
-                "$ref": "#/definitions/image",
-              },
-              payment_type: {
-                type: [
-                  "string",
-                  "null",
-                ],
-              },
-              attends_cabinet_type: {
-                type: [
-                  "string",
-                  "null",
-                ],
-              },
-            },
-          },
-          description: "A list of the organisation's special representatives, if appropriate. Turn into proper links once organisations are fully migrated.",
+          "$ref": "#/definitions/people",
         },
         organisation_featuring_priority: {
           type: "string",

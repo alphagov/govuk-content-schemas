@@ -535,94 +535,10 @@
           }
         },
         "ordered_board_members": {
-          "description": "A list of the organisation's board members, if appropriate. Turn into proper links once organisations are fully migrated.",
-          "type": "array",
-          "items": {
-            "type": "object",
-            "required": [
-              "name",
-              "role",
-              "href"
-            ],
-            "additionalProperties": false,
-            "properties": {
-              "attends_cabinet_type": {
-                "type": [
-                  "string",
-                  "null"
-                ]
-              },
-              "href": {
-                "type": "string"
-              },
-              "image": {
-                "$ref": "#/definitions/image"
-              },
-              "name": {
-                "type": "string"
-              },
-              "name_prefix": {
-                "type": "string"
-              },
-              "payment_type": {
-                "type": [
-                  "string",
-                  "null"
-                ]
-              },
-              "role": {
-                "type": "string"
-              },
-              "role_href": {
-                "type": "string"
-              }
-            }
-          }
+          "$ref": "#/definitions/people"
         },
         "ordered_chief_professional_officers": {
-          "description": "A list of the organisation's chief professional officers, if appropriate. Turn into proper links once organisations are fully migrated.",
-          "type": "array",
-          "items": {
-            "type": "object",
-            "required": [
-              "name",
-              "role",
-              "href"
-            ],
-            "additionalProperties": false,
-            "properties": {
-              "attends_cabinet_type": {
-                "type": [
-                  "string",
-                  "null"
-                ]
-              },
-              "href": {
-                "type": "string"
-              },
-              "image": {
-                "$ref": "#/definitions/image"
-              },
-              "name": {
-                "type": "string"
-              },
-              "name_prefix": {
-                "type": "string"
-              },
-              "payment_type": {
-                "type": [
-                  "string",
-                  "null"
-                ]
-              },
-              "role": {
-                "type": "string"
-              },
-              "role_href": {
-                "type": "string"
-              }
-            }
-          }
+          "$ref": "#/definitions/people"
         },
         "ordered_corporate_information_pages": {
           "description": "A set of links to corporate information pages to display for the organisation.",
@@ -660,7 +576,10 @@
             "additionalProperties": false,
             "properties": {
               "document_type": {
-                "type": "string"
+                "type": [
+                  "string",
+                  "null"
+                ]
               },
               "href": {
                 "type": "string"
@@ -669,7 +588,10 @@
                 "$ref": "#/definitions/image"
               },
               "public_updated_at": {
-                "type": "string"
+                "type": [
+                  "string",
+                  "null"
+                ]
               },
               "summary": {
                 "type": "string"
@@ -701,184 +623,16 @@
           }
         },
         "ordered_military_personnel": {
-          "description": "A list of the organisation's military personnel, if appropriate. Turn into proper links once organisations are fully migrated.",
-          "type": "array",
-          "items": {
-            "type": "object",
-            "required": [
-              "name",
-              "role",
-              "href"
-            ],
-            "additionalProperties": false,
-            "properties": {
-              "attends_cabinet_type": {
-                "type": [
-                  "string",
-                  "null"
-                ]
-              },
-              "href": {
-                "type": "string"
-              },
-              "image": {
-                "$ref": "#/definitions/image"
-              },
-              "name": {
-                "type": "string"
-              },
-              "name_prefix": {
-                "type": "string"
-              },
-              "payment_type": {
-                "type": [
-                  "string",
-                  "null"
-                ]
-              },
-              "role": {
-                "type": "string"
-              },
-              "role_href": {
-                "type": "string"
-              }
-            }
-          }
+          "$ref": "#/definitions/people"
         },
         "ordered_ministers": {
-          "description": "A list of the organisation's ministers, if appropriate. Turn into proper links once organisations are fully migrated.",
-          "type": "array",
-          "items": {
-            "type": "object",
-            "required": [
-              "name",
-              "role",
-              "href"
-            ],
-            "additionalProperties": false,
-            "properties": {
-              "attends_cabinet_type": {
-                "type": [
-                  "string",
-                  "null"
-                ]
-              },
-              "href": {
-                "type": "string"
-              },
-              "image": {
-                "$ref": "#/definitions/image"
-              },
-              "name": {
-                "type": "string"
-              },
-              "name_prefix": {
-                "type": "string"
-              },
-              "payment_type": {
-                "type": [
-                  "string",
-                  "null"
-                ]
-              },
-              "role": {
-                "type": "string"
-              },
-              "role_href": {
-                "type": "string"
-              }
-            }
-          }
+          "$ref": "#/definitions/people"
         },
         "ordered_special_representatives": {
-          "description": "A list of the organisation's special representatives, if appropriate. Turn into proper links once organisations are fully migrated.",
-          "type": "array",
-          "items": {
-            "type": "object",
-            "required": [
-              "name",
-              "role",
-              "href"
-            ],
-            "additionalProperties": false,
-            "properties": {
-              "attends_cabinet_type": {
-                "type": [
-                  "string",
-                  "null"
-                ]
-              },
-              "href": {
-                "type": "string"
-              },
-              "image": {
-                "$ref": "#/definitions/image"
-              },
-              "name": {
-                "type": "string"
-              },
-              "name_prefix": {
-                "type": "string"
-              },
-              "payment_type": {
-                "type": [
-                  "string",
-                  "null"
-                ]
-              },
-              "role": {
-                "type": "string"
-              },
-              "role_href": {
-                "type": "string"
-              }
-            }
-          }
+          "$ref": "#/definitions/people"
         },
         "ordered_traffic_commissioners": {
-          "description": "A list of the organisation's traffic commissioners, if appropriate. Turn into proper links once organisations are fully migrated.",
-          "type": "array",
-          "items": {
-            "type": "object",
-            "required": [
-              "name",
-              "role",
-              "href"
-            ],
-            "additionalProperties": false,
-            "properties": {
-              "attends_cabinet_type": {
-                "type": [
-                  "string",
-                  "null"
-                ]
-              },
-              "href": {
-                "type": "string"
-              },
-              "image": {
-                "$ref": "#/definitions/image"
-              },
-              "name": {
-                "type": "string"
-              },
-              "name_prefix": {
-                "type": "string"
-              },
-              "payment_type": {
-                "type": [
-                  "string",
-                  "null"
-                ]
-              },
-              "role": {
-                "type": "string"
-              },
-              "role_href": {
-                "type": "string"
-              }
-            }
-          }
+          "$ref": "#/definitions/people"
         },
         "organisation_featuring_priority": {
           "description": "Whether to prioritise news or services on the organisation's home page.",
@@ -1163,6 +917,57 @@
         "zh-hk",
         "zh-tw"
       ]
+    },
+    "people": {
+      "description": "A list of people. Turn into proper links once organisations, people and roles are fully migrated.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "role",
+          "href"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "attends_cabinet_type": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "href": {
+            "type": "string"
+          },
+          "image": {
+            "$ref": "#/definitions/image"
+          },
+          "name": {
+            "type": "string"
+          },
+          "name_prefix": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "payment_type": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "role": {
+            "type": "string"
+          },
+          "role_href": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
     },
     "public_updated_at": {
       "description": "When the content was last significantly changed (a major update). Shown to users.  Automatically determined by the publishing-api, unless overridden by the publishing application.",
