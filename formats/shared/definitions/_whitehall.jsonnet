@@ -48,6 +48,57 @@
       },
     },
   },
+  people: {
+    type: "array",
+    items: {
+      type: "object",
+      additionalProperties: false,
+      required: [
+        "name",
+        "role",
+        "href",
+      ],
+      properties: {
+        name_prefix: {
+          type: [
+            "string",
+            "null",
+          ],
+        },
+        name: {
+          type: "string",
+        },
+        role: {
+          type: "string",
+        },
+        href: {
+          type: "string",
+        },
+        role_href: {
+          type: [
+            "string",
+            "null",
+          ],
+        },
+        image: {
+          "$ref": "#/definitions/image",
+        },
+        payment_type: {
+          type: [
+            "string",
+            "null",
+          ],
+        },
+        attends_cabinet_type: {
+          type: [
+            "string",
+            "null",
+          ],
+        },
+      },
+    },
+    description: "A list of people. Turn into proper links once organisations, people and roles are fully migrated.",
+  },
   political: {
     type: "boolean",
     description: "If the content is considered political in nature, reflecting views of the government it was published under.",
