@@ -80,7 +80,6 @@ module SchemaGenerator
         links
         locale
         navigation_document_supertype
-        need_ids
         phase
         public_updated_at
         publishing_app
