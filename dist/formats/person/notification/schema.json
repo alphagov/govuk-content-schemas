@@ -488,11 +488,24 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "analytics_identifier": {
+          "$ref": "#/definitions/analytics_identifier"
+        },
         "change_history": {
           "$ref": "#/definitions/change_history"
         },
+        "full_name": {
+          "description": "Name of the person, including titles and any letters, eg: 'Sir Lord Snoopy DOG'",
+          "type": "string"
+        },
         "image": {
           "$ref": "#/definitions/image"
+        },
+        "minister": {
+          "type": "boolean"
+        },
+        "privy_counsellor": {
+          "type": "boolean"
         }
       }
     },
