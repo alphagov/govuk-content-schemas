@@ -15,34 +15,6 @@
           "description": "The user needs this piece of content meets.",
           "$ref": "#/definitions/guid_list"
         },
-        "ordered_agencies_and_other_public_bodies": {
-          "description": "All organisations of the type 'agency' and other public bodies, ordered alphabetically ignoring any prefixes.",
-          "$ref": "#/definitions/guid_list"
-        },
-        "ordered_devolved_administrations": {
-          "description": "All organisations of the type 'devolved administration', ordered alphabetically ignoring any prefixes.",
-          "$ref": "#/definitions/guid_list"
-        },
-        "ordered_executive_offices": {
-          "description": "All organisations of the type 'executive office', ordered alphabetically ignoring any prefixes.",
-          "$ref": "#/definitions/guid_list"
-        },
-        "ordered_high_profile_groups": {
-          "description": "All organisations that have a parent organisation, ordered alphabetically ignoring any prefixes.",
-          "$ref": "#/definitions/guid_list"
-        },
-        "ordered_ministerial_departments": {
-          "description": "All organisations of the type 'ministerial department', ordered alphabetically ignoring any prefixes.",
-          "$ref": "#/definitions/guid_list"
-        },
-        "ordered_non_ministerial_departments": {
-          "description": "All organisations of the type 'non-ministerial department', ordered alphabetically ignoring any prefixes.",
-          "$ref": "#/definitions/guid_list"
-        },
-        "ordered_public_corporations": {
-          "description": "All organisations of the type 'public corporation', ordered alphabetically ignoring any prefixes.",
-          "$ref": "#/definitions/guid_list"
-        },
         "ordered_related_items": {
           "description": "Related items, can be any page on GOV.UK. Mostly used for mainstream content to power the sidebar. Ordering of the links is determined by the editor in Content Tagger.",
           "$ref": "#/definitions/guid_list"
