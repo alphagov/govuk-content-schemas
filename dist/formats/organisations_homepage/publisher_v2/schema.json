@@ -309,6 +309,27 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "ordered_agencies_and_other_public_bodies": {
+          "$ref": "#/definitions/summary_organisations"
+        },
+        "ordered_devolved_administrations": {
+          "$ref": "#/definitions/summary_organisations"
+        },
+        "ordered_executive_offices": {
+          "$ref": "#/definitions/summary_organisations"
+        },
+        "ordered_high_profile_groups": {
+          "$ref": "#/definitions/summary_organisations"
+        },
+        "ordered_ministerial_departments": {
+          "$ref": "#/definitions/summary_organisations"
+        },
+        "ordered_non_ministerial_departments": {
+          "$ref": "#/definitions/summary_organisations"
+        },
+        "ordered_public_corporations": {
+          "$ref": "#/definitions/summary_organisations"
+        }
       }
     },
     "first_published_at": {
@@ -326,6 +347,52 @@
         "$ref": "#/definitions/guid"
       },
       "uniqueItems": true
+    },
+    "image": {
+      "type": "object",
+      "required": [
+        "url"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "alt_text": {
+          "type": "string"
+        },
+        "caption": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "list_of_sub_organisations": {
+      "description": "A list of all sub-organisations of a particular type for a parent organisation. Turn into proper links once details for organisations no longer need to be expanded.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "title",
+          "href"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "href": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          }
+        }
+      }
     },
     "locale": {
       "type": "string",
@@ -475,6 +542,115 @@
         "$ref": "#/definitions/route"
       },
       "minItems": 1
+    },
+    "summary_organisations": {
+      "description": "A list of all organisations of a particular type. Turn into proper links once details for organisations no longer need to be expanded.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "title",
+          "href",
+          "separate_website"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "brand": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "href": {
+            "type": "string"
+          },
+          "logo": {
+            "type": "object",
+            "properties": {
+              "crest": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "enum": [
+                  "bis",
+                  "dit",
+                  "eo",
+                  "hmrc",
+                  "ho",
+                  "mod",
+                  "portcullis",
+                  "single-identity",
+                  "so",
+                  "ukaea",
+                  "wales",
+                  null
+                ]
+              },
+              "formatted_title": {
+                "type": "string"
+              },
+              "image": {
+                "$ref": "#/definitions/image"
+              }
+            }
+          },
+          "separate_website": {
+            "type": "boolean"
+          },
+          "title": {
+            "type": "string"
+          },
+          "works_with": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "adhoc_advisory_group": {
+                "$ref": "#/definitions/list_of_sub_organisations"
+              },
+              "advisory_ndpb": {
+                "$ref": "#/definitions/list_of_sub_organisations"
+              },
+              "civil_service": {
+                "$ref": "#/definitions/list_of_sub_organisations"
+              },
+              "devolved_administration": {
+                "$ref": "#/definitions/list_of_sub_organisations"
+              },
+              "executive_agency": {
+                "$ref": "#/definitions/list_of_sub_organisations"
+              },
+              "executive_ndpb": {
+                "$ref": "#/definitions/list_of_sub_organisations"
+              },
+              "executive_office": {
+                "$ref": "#/definitions/list_of_sub_organisations"
+              },
+              "independent_monitoring_body": {
+                "$ref": "#/definitions/list_of_sub_organisations"
+              },
+              "ministerial_department": {
+                "$ref": "#/definitions/list_of_sub_organisations"
+              },
+              "non_ministerial_department": {
+                "$ref": "#/definitions/list_of_sub_organisations"
+              },
+              "other": {
+                "$ref": "#/definitions/list_of_sub_organisations"
+              },
+              "public_corporation": {
+                "$ref": "#/definitions/list_of_sub_organisations"
+              },
+              "sub_organisation": {
+                "$ref": "#/definitions/list_of_sub_organisations"
+              },
+              "tribunal_ndpb": {
+                "$ref": "#/definitions/list_of_sub_organisations"
+              }
+            }
+          }
+        }
+      }
     },
     "title": {
       "type": "string"

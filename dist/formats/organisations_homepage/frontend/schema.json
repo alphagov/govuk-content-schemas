@@ -248,34 +248,6 @@
           "description": "The user needs this piece of content meets.",
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
-        "ordered_agencies_and_other_public_bodies": {
-          "description": "All organisations of the type 'agency' and other public bodies, ordered alphabetically ignoring any prefixes.",
-          "$ref": "#/definitions/frontend_links_with_base_path"
-        },
-        "ordered_devolved_administrations": {
-          "description": "All organisations of the type 'devolved administration', ordered alphabetically ignoring any prefixes.",
-          "$ref": "#/definitions/frontend_links_with_base_path"
-        },
-        "ordered_executive_offices": {
-          "description": "All organisations of the type 'executive office', ordered alphabetically ignoring any prefixes.",
-          "$ref": "#/definitions/frontend_links_with_base_path"
-        },
-        "ordered_high_profile_groups": {
-          "description": "All organisations that have a parent organisation, ordered alphabetically ignoring any prefixes.",
-          "$ref": "#/definitions/frontend_links_with_base_path"
-        },
-        "ordered_ministerial_departments": {
-          "description": "All organisations of the type 'ministerial department', ordered alphabetically ignoring any prefixes.",
-          "$ref": "#/definitions/frontend_links_with_base_path"
-        },
-        "ordered_non_ministerial_departments": {
-          "description": "All organisations of the type 'non-ministerial department', ordered alphabetically ignoring any prefixes.",
-          "$ref": "#/definitions/frontend_links_with_base_path"
-        },
-        "ordered_public_corporations": {
-          "description": "All organisations of the type 'public corporation', ordered alphabetically ignoring any prefixes.",
-          "$ref": "#/definitions/frontend_links_with_base_path"
-        },
         "ordered_related_items": {
           "description": "Related items, can be any page on GOV.UK. Mostly used for mainstream content to power the sidebar. Ordering of the links is determined by the editor in Content Tagger.",
           "$ref": "#/definitions/frontend_links_with_base_path"
@@ -475,6 +447,27 @@
       "properties": {
         "change_history": {
           "$ref": "#/definitions/change_history"
+        },
+        "ordered_agencies_and_other_public_bodies": {
+          "$ref": "#/definitions/summary_organisations"
+        },
+        "ordered_devolved_administrations": {
+          "$ref": "#/definitions/summary_organisations"
+        },
+        "ordered_executive_offices": {
+          "$ref": "#/definitions/summary_organisations"
+        },
+        "ordered_high_profile_groups": {
+          "$ref": "#/definitions/summary_organisations"
+        },
+        "ordered_ministerial_departments": {
+          "$ref": "#/definitions/summary_organisations"
+        },
+        "ordered_non_ministerial_departments": {
+          "$ref": "#/definitions/summary_organisations"
+        },
+        "ordered_public_corporations": {
+          "$ref": "#/definitions/summary_organisations"
         }
       }
     },
@@ -553,6 +546,52 @@
     "guid": {
       "type": "string",
       "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-[1-5][a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$"
+    },
+    "image": {
+      "type": "object",
+      "required": [
+        "url"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "alt_text": {
+          "type": "string"
+        },
+        "caption": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "list_of_sub_organisations": {
+      "description": "A list of all sub-organisations of a particular type for a parent organisation. Turn into proper links once details for organisations no longer need to be expanded.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "title",
+          "href"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "href": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          }
+        }
+      }
     },
     "locale": {
       "type": "string",
@@ -696,6 +735,115 @@
     "scheduled_publishing_delay_seconds": {
       "description": "The delay between the most recent scheduled and actual publishing times. Determined by the content store based on the publishing intent.",
       "type": "integer"
+    },
+    "summary_organisations": {
+      "description": "A list of all organisations of a particular type. Turn into proper links once details for organisations no longer need to be expanded.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "title",
+          "href",
+          "separate_website"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "brand": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "href": {
+            "type": "string"
+          },
+          "logo": {
+            "type": "object",
+            "properties": {
+              "crest": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "enum": [
+                  "bis",
+                  "dit",
+                  "eo",
+                  "hmrc",
+                  "ho",
+                  "mod",
+                  "portcullis",
+                  "single-identity",
+                  "so",
+                  "ukaea",
+                  "wales",
+                  null
+                ]
+              },
+              "formatted_title": {
+                "type": "string"
+              },
+              "image": {
+                "$ref": "#/definitions/image"
+              }
+            }
+          },
+          "separate_website": {
+            "type": "boolean"
+          },
+          "title": {
+            "type": "string"
+          },
+          "works_with": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "adhoc_advisory_group": {
+                "$ref": "#/definitions/list_of_sub_organisations"
+              },
+              "advisory_ndpb": {
+                "$ref": "#/definitions/list_of_sub_organisations"
+              },
+              "civil_service": {
+                "$ref": "#/definitions/list_of_sub_organisations"
+              },
+              "devolved_administration": {
+                "$ref": "#/definitions/list_of_sub_organisations"
+              },
+              "executive_agency": {
+                "$ref": "#/definitions/list_of_sub_organisations"
+              },
+              "executive_ndpb": {
+                "$ref": "#/definitions/list_of_sub_organisations"
+              },
+              "executive_office": {
+                "$ref": "#/definitions/list_of_sub_organisations"
+              },
+              "independent_monitoring_body": {
+                "$ref": "#/definitions/list_of_sub_organisations"
+              },
+              "ministerial_department": {
+                "$ref": "#/definitions/list_of_sub_organisations"
+              },
+              "non_ministerial_department": {
+                "$ref": "#/definitions/list_of_sub_organisations"
+              },
+              "other": {
+                "$ref": "#/definitions/list_of_sub_organisations"
+              },
+              "public_corporation": {
+                "$ref": "#/definitions/list_of_sub_organisations"
+              },
+              "sub_organisation": {
+                "$ref": "#/definitions/list_of_sub_organisations"
+              },
+              "tribunal_ndpb": {
+                "$ref": "#/definitions/list_of_sub_organisations"
+              }
+            }
+          }
+        }
+      }
     },
     "title": {
       "type": "string"

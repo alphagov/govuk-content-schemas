@@ -99,6 +99,135 @@
     },
     description: "A list of people. Turn into proper links once organisations, people and roles are fully migrated.",
   },
+  summary_organisations: {
+    type: "array",
+    items: {
+      type: "object",
+      additionalProperties: false,
+      required: [
+        "title",
+        "href",
+        "separate_website",
+      ],
+      properties: {
+        title: {
+          type: "string",
+        },
+        href: {
+          type: "string",
+        },
+        brand: {
+          type: [
+            "string",
+            "null",
+          ],
+        },
+        logo: {
+          type: "object",
+          properties: {
+            formatted_title: {
+              type: "string",
+            },
+            crest: {
+              type: [
+                "string",
+                "null",
+              ],
+              enum: [
+                "bis",
+                "dit",
+                "eo",
+                "hmrc",
+                "ho",
+                "mod",
+                "portcullis",
+                "single-identity",
+                "so",
+                "ukaea",
+                "wales",
+                null,
+              ],
+            },
+            image: {
+              "$ref": "#/definitions/image",
+            },
+          },
+        },
+        separate_website: {
+          type: "boolean",
+        },
+        works_with: {
+          type: "object",
+          additionalProperties: false,
+          properties: {
+            adhoc_advisory_group: {
+              "$ref": "#/definitions/list_of_sub_organisations",
+            },
+            advisory_ndpb: {
+              "$ref": "#/definitions/list_of_sub_organisations",
+            },
+            civil_service: {
+              "$ref": "#/definitions/list_of_sub_organisations",
+            },
+            devolved_administration: {
+              "$ref": "#/definitions/list_of_sub_organisations",
+            },
+            executive_agency: {
+              "$ref": "#/definitions/list_of_sub_organisations",
+            },
+            executive_ndpb: {
+              "$ref": "#/definitions/list_of_sub_organisations",
+            },
+            executive_office: {
+              "$ref": "#/definitions/list_of_sub_organisations",
+            },
+            independent_monitoring_body: {
+              "$ref": "#/definitions/list_of_sub_organisations",
+            },
+            ministerial_department: {
+              "$ref": "#/definitions/list_of_sub_organisations",
+            },
+            non_ministerial_department: {
+              "$ref": "#/definitions/list_of_sub_organisations",
+            },
+            other: {
+              "$ref": "#/definitions/list_of_sub_organisations",
+            },
+            public_corporation: {
+              "$ref": "#/definitions/list_of_sub_organisations",
+            },
+            sub_organisation: {
+              "$ref": "#/definitions/list_of_sub_organisations",
+            },
+            tribunal_ndpb: {
+              "$ref": "#/definitions/list_of_sub_organisations",
+            },
+          },
+        },
+      },
+    },
+    description: "A list of all organisations of a particular type. Turn into proper links once details for organisations no longer need to be expanded.",
+  },
+  list_of_sub_organisations: {
+    type: "array",
+    items: {
+      type: "object",
+      additionalProperties: false,
+      required: [
+        "title",
+        "href",
+      ],
+      properties: {
+        title: {
+          type: "string",
+        },
+        href: {
+          type: "string",
+        },
+      },
+    },
+    description: "A list of all sub-organisations of a particular type for a parent organisation. Turn into proper links once details for organisations no longer need to be expanded.",
+  },
   political: {
     type: "boolean",
     description: "If the content is considered political in nature, reflecting views of the government it was published under.",
