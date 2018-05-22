@@ -35,7 +35,7 @@
       "$ref": "#/definitions/analytics_identifier"
     },
     "base_path": {
-      "$ref": "#/definitions/absolute_path"
+      "$ref": "#/definitions/absolute_path_optional"
     },
     "content_id": {
       "$ref": "#/definitions/guid"
@@ -403,7 +403,7 @@
       "$ref": "#/definitions/rendering_app"
     },
     "routes": {
-      "$ref": "#/definitions/routes"
+      "$ref": "#/definitions/routes_optional"
     },
     "schema_name": {
       "type": "string",
@@ -442,6 +442,16 @@
       "type": "string",
       "pattern": "^/(([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})+(/([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)*)?$"
     },
+    "absolute_path_optional": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/absolute_path"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "analytics_identifier": {
       "description": "A short identifier we send to Google Analytics for multi-valued fields. This means we avoid the truncated values we would get if we sent the path or slug of eg organisations.",
       "anyOf": [
@@ -450,6 +460,14 @@
         },
         {
           "type": "null"
+        }
+      ]
+    },
+    "body_html_and_govspeak": {
+      "description": "The main content provided as HTML with the govspeak markdown it's rendered from",
+      "anyOf": [
+        {
+          "$ref": "#/definitions/multiple_content_types"
         }
       ]
     },
@@ -499,14 +517,11 @@
             null
           ]
         },
-        "cabinet_member": {
-          "type": "boolean"
+        "body": {
+          "$ref": "#/definitions/body_html_and_govspeak"
         },
         "change_history": {
           "$ref": "#/definitions/change_history"
-        },
-        "permanent_secretary": {
-          "type": "boolean"
         },
         "role_payment_type": {
           "type": [
@@ -514,8 +529,8 @@
             "null"
           ],
           "enum": [
-            "Attends Cabinet",
-            "Attends Cabinet when Ministerial responsibilities are on the agenda",
+            "Unpaid",
+            "Paid as a Parliamentary Secretary",
             null
           ]
         },
@@ -536,32 +551,8 @@
             "WorldwideOfficeStaff"
           ]
         },
-        "seniority": {
-          "type": "integer"
-        },
-        "slug": {
-          "description": "eg: 'prime-minister'.",
-          "type": "string"
-        },
         "supports_historical_accounts": {
           "type": "boolean"
-        },
-        "whip_ordering": {
-          "type": "integer"
-        },
-        "whip_organisation": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "enum": [
-            "Assistant Whips",
-            "Baronesses and Lords in Waiting",
-            "House of Commons",
-            "House of Lords",
-            "Junior Lords of the Treasury",
-            null
-          ]
         }
       }
     },
@@ -709,6 +700,25 @@
         "zh-tw"
       ]
     },
+    "multiple_content_types": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "content_type",
+          "content"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "content": {
+            "type": "string"
+          },
+          "content_type": {
+            "type": "string"
+          }
+        }
+      }
+    },
     "payload_version": {
       "description": "Counter to indicate when the payload was generated",
       "type": "integer"
@@ -792,31 +802,11 @@
         "whitehall-frontend"
       ]
     },
-    "route": {
-      "type": "object",
-      "required": [
-        "path",
-        "type"
-      ],
-      "additionalProperties": false,
-      "properties": {
-        "path": {
-          "type": "string"
-        },
-        "type": {
-          "enum": [
-            "prefix",
-            "exact"
-          ]
-        }
-      }
-    },
-    "routes": {
+    "routes_optional": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/route"
-      },
-      "minItems": 1
+        "ref": "#/definitions/route"
+      }
     },
     "title": {
       "type": "string"
