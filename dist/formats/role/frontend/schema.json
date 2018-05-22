@@ -410,6 +410,14 @@
         }
       ]
     },
+    "body_html_and_govspeak": {
+      "description": "The main content provided as HTML with the govspeak markdown it's rendered from",
+      "anyOf": [
+        {
+          "type": "string"
+        }
+      ]
+    },
     "change_history": {
       "type": "array",
       "items": {
@@ -456,14 +464,11 @@
             null
           ]
         },
-        "cabinet_member": {
-          "type": "boolean"
+        "body": {
+          "$ref": "#/definitions/body_html_and_govspeak"
         },
         "change_history": {
           "$ref": "#/definitions/change_history"
-        },
-        "permanent_secretary": {
-          "type": "boolean"
         },
         "role_payment_type": {
           "type": [
@@ -471,8 +476,8 @@
             "null"
           ],
           "enum": [
-            "Attends Cabinet",
-            "Attends Cabinet when Ministerial responsibilities are on the agenda",
+            "Unpaid",
+            "Paid as a Parliamentary Secretary",
             null
           ]
         },
@@ -493,32 +498,8 @@
             "WorldwideOfficeStaff"
           ]
         },
-        "seniority": {
-          "type": "integer"
-        },
-        "slug": {
-          "description": "eg: 'prime-minister'.",
-          "type": "string"
-        },
         "supports_historical_accounts": {
           "type": "boolean"
-        },
-        "whip_ordering": {
-          "type": "integer"
-        },
-        "whip_organisation": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "enum": [
-            "Assistant Whips",
-            "Baronesses and Lords in Waiting",
-            "House of Commons",
-            "House of Lords",
-            "Junior Lords of the Treasury",
-            null
-          ]
         }
       }
     },
