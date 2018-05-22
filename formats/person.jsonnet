@@ -7,6 +7,9 @@
         analytics_identifier: {
           "$ref": "#/definitions/analytics_identifier",
         },
+        body: {
+          "$ref": "#/definitions/body_html_and_govspeak",
+        },
         full_name: {
           type: "string",
           description: "Name of the person, including titles and any letters, eg: 'Sir Lord Snoopy DOG'",
