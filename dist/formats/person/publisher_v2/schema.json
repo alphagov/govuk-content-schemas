@@ -201,6 +201,14 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "ordered_current_appointments": {
+          "description": "Roles that are currently assigned to this person.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "ordered_previous_appointments": {
+          "description": "Roles that were previously assigned to this person.",
+          "$ref": "#/definitions/guid_list"
+        },
         "policy_areas": {
           "description": "A largely deprecated tag currently only used to power email alerts.",
           "$ref": "#/definitions/guid_list"

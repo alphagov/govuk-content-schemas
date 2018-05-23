@@ -254,7 +254,7 @@
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
         "ordered_contacts": {
-          "description": "Contact details primarily for use with Whitehall orgaisations.",
+          "description": "Contact details primarily for use with Whitehall organisations.",
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
         "ordered_featured_policies": {
@@ -271,6 +271,10 @@
         },
         "ordered_related_items_overrides": {
           "description": "Related items, can be any page on GOV.UK. Overrides 'more like this' automatically generated links in the beta navigation.",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
+        "ordered_roles": {
+          "description": "Organisational roles primarily for use with Whitehall organisations.",
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
         "ordered_successor_organisations": {
@@ -348,7 +352,7 @@
           "$ref": "#/definitions/guid_list"
         },
         "ordered_contacts": {
-          "description": "Contact details primarily for use with Whitehall orgaisations.",
+          "description": "Contact details primarily for use with Whitehall organisations.",
           "$ref": "#/definitions/guid_list"
         },
         "ordered_featured_policies": {
@@ -365,6 +369,10 @@
         },
         "ordered_related_items_overrides": {
           "description": "Related items, can be any page on GOV.UK. Overrides 'more like this' automatically generated links in the beta navigation.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "ordered_roles": {
+          "description": "Organisational roles primarily for use with Whitehall organisations.",
           "$ref": "#/definitions/guid_list"
         },
         "ordered_successor_organisations": {

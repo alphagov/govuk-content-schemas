@@ -249,6 +249,18 @@
           "description": "The user needs this piece of content meets.",
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
+        "ordered_current_appointments": {
+          "description": "People who are currently assigned to this role.",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
+        "ordered_parent_organisations": {
+          "description": "Organisations that own this role.",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
+        "ordered_previous_appointments": {
+          "description": "People who were previously assigned to this role.",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
         "ordered_related_items": {
           "description": "Related items, can be any page on GOV.UK. Mostly used for mainstream content to power the sidebar. Ordering of the links is determined by the editor in Content Tagger.",
           "$ref": "#/definitions/frontend_links_with_base_path"
@@ -321,6 +333,18 @@
         },
         "meets_user_needs": {
           "description": "The user needs this piece of content meets.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "ordered_current_appointments": {
+          "description": "People who are currently assigned to this role.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "ordered_parent_organisations": {
+          "description": "Organisations that own this role.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "ordered_previous_appointments": {
+          "description": "People who were previously assigned to this role.",
           "$ref": "#/definitions/guid_list"
         },
         "ordered_related_items": {

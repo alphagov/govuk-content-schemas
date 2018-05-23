@@ -206,7 +206,7 @@
           "$ref": "#/definitions/guid_list"
         },
         "ordered_contacts": {
-          "description": "Contact details primarily for use with Whitehall orgaisations.",
+          "description": "Contact details primarily for use with Whitehall organisations.",
           "$ref": "#/definitions/guid_list"
         },
         "ordered_featured_policies": {
@@ -215,6 +215,10 @@
         },
         "ordered_parent_organisations": {
           "description": "Parent organisations primarily for use with Whitehall organisations.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "ordered_roles": {
+          "description": "Organisational roles primarily for use with Whitehall organisations.",
           "$ref": "#/definitions/guid_list"
         },
         "ordered_successor_organisations": {
