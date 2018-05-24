@@ -534,23 +534,6 @@
             null
           ]
         },
-        "role_type": {
-          "type": "string",
-          "enum": [
-            "Ambassador",
-            "BoardMember",
-            "ChiefProfessionalOfficer",
-            "ChiefScientificAdvisor",
-            "DeputyHeadOfMission",
-            "Governor",
-            "HighCommissioner",
-            "Military",
-            "Ministerial",
-            "SpecialRepresentative",
-            "TrafficCommissioner",
-            "WorldwideOfficeStaff"
-          ]
-        },
         "supports_historical_accounts": {
           "type": "boolean"
         }

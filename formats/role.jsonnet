@@ -1,30 +1,13 @@
 (import "shared/default_format.jsonnet") + {
   base_path: "optional",
   routes: "optional",
-  definitions: (import "shared/definitions/_whitehall.jsonnet") + {
+  definitions: {
     details: {
       type: "object",
       additionalProperties: false,
       properties: {
         body: {
           "$ref": "#/definitions/body_html_and_govspeak",
-        },
-        role_type: {
-          type: "string",
-          enum: [
-            "Ambassador",
-            "BoardMember",
-            "ChiefProfessionalOfficer",
-            "ChiefScientificAdvisor",
-            "DeputyHeadOfMission",
-            "Governor",
-            "HighCommissioner",
-            "Military",
-            "Ministerial",
-            "SpecialRepresentative",
-            "TrafficCommissioner",
-            "WorldwideOfficeStaff",
-          ]
         },
         attends_cabinet_type: {
           type: [
@@ -53,5 +36,5 @@
         },
       },
     },
-  }
+  },
 }

@@ -18,7 +18,7 @@
       "$ref": "#/definitions/analytics_identifier"
     },
     "base_path": {
-      "$ref": "#/definitions/absolute_path_optional"
+      "type": "null"
     },
     "change_note": {
       "type": [
@@ -199,8 +199,16 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "person": {
+          "description": "The person that is currently appointed to the relevant role.",
+          "$ref": "#/definitions/guid_list"
+        },
         "policy_areas": {
           "description": "A largely deprecated tag currently only used to power email alerts.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "role": {
+          "description": "The role that the relevant person is currently appointed to.",
           "$ref": "#/definitions/guid_list"
         }
       }
@@ -242,12 +250,15 @@
       "$ref": "#/definitions/rendering_app"
     },
     "routes": {
-      "$ref": "#/definitions/routes_optional"
+      "type": "array",
+      "additionalItems": false,
+      "items": {
+      }
     },
     "schema_name": {
       "type": "string",
       "enum": [
-        "role"
+        "role_appointment"
       ]
     },
     "title": {
@@ -260,21 +271,6 @@
   "definitions": {
     "description": {
       "type": "string"
-    },
-    "absolute_path": {
-      "description": "A path only. Query string and/or fragment are not allowed.",
-      "type": "string",
-      "pattern": "^/(([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})+(/([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)*)?$"
-    },
-    "absolute_path_optional": {
-      "anyOf": [
-        {
-          "$ref": "#/definitions/absolute_path"
-        },
-        {
-          "type": "null"
-        }
-      ]
     },
     "access_limited": {
       "type": "object",
@@ -303,14 +299,6 @@
         }
       ]
     },
-    "body_html_and_govspeak": {
-      "description": "The main content provided as HTML with the govspeak markdown it's rendered from",
-      "anyOf": [
-        {
-          "$ref": "#/definitions/multiple_content_types"
-        }
-      ]
-    },
     "description_optional": {
       "anyOf": [
         {
@@ -325,33 +313,16 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "attends_cabinet_type": {
+        "ended_on": {
           "type": [
             "string",
             "null"
           ],
-          "enum": [
-            "Attends Cabinet",
-            "Attends Cabinet when Ministerial responsibilities are on the agenda",
-            null
-          ]
+          "format": "date-time"
         },
-        "body": {
-          "$ref": "#/definitions/body_html_and_govspeak"
-        },
-        "role_payment_type": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "enum": [
-            "Unpaid",
-            "Paid as a Parliamentary Secretary",
-            null
-          ]
-        },
-        "supports_historical_accounts": {
-          "type": "boolean"
+        "started_on": {
+          "type": "string",
+          "format": "date-time"
         }
       }
     },
@@ -426,25 +397,6 @@
         "zh-tw"
       ]
     },
-    "multiple_content_types": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "required": [
-          "content_type",
-          "content"
-        ],
-        "additionalProperties": false,
-        "properties": {
-          "content": {
-            "type": "string"
-          },
-          "content_type": {
-            "type": "string"
-          }
-        }
-      }
-    },
     "public_updated_at": {
       "description": "When the content was last significantly changed (a major update). Shown to users.  Automatically determined by the publishing-api, unless overridden by the publishing application.",
       "type": "string",
@@ -512,12 +464,6 @@
         "whitehall-admin",
         "whitehall-frontend"
       ]
-    },
-    "routes_optional": {
-      "type": "array",
-      "items": {
-        "ref": "#/definitions/route"
-      }
     },
     "title": {
       "type": "string"
