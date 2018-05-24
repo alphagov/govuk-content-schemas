@@ -26,4 +26,8 @@
       },
     },
   },
+  edition_links: (import "shared/base_edition_links.jsonnet") + {
+    ordered_current_appointments: "Roles that are currently assigned to this person.",
+    ordered_previous_appointments: "Roles that were previously assigned to this person.",
+  },
 }
