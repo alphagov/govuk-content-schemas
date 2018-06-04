@@ -266,10 +266,12 @@
   },
   edition_links: (import "shared/base_edition_links.jsonnet") + {
     ordered_contacts: "Contact details primarily for use with Whitehall organisations.",
+    ordered_foi_contacts: "FoI contact details primarily for use with Whitehall organisations.",
     ordered_featured_policies: "Featured policies primarily for use with Whitehall organisations.",
     ordered_parent_organisations: "Parent organisations primarily for use with Whitehall organisations.",
     ordered_child_organisations: "Child organisations primarily for use with Whitehall organisations.",
     ordered_successor_organisations: "Successor organisations primarily for use with closed Whitehall organisations.",
+    ordered_high_profile_groups: "High profile groups primarily for use with Whitehall organisations.",
     ordered_roles: "Organisational roles primarily for use with Whitehall organisations.",
   },
 }
