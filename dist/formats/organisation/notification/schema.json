@@ -273,6 +273,14 @@
           "description": "Featured policies primarily for use with Whitehall organisations.",
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
+        "ordered_foi_contacts": {
+          "description": "FoI contact details primarily for use with Whitehall organisations.",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
+        "ordered_high_profile_groups": {
+          "description": "High profile groups primarily for use with Whitehall organisations.",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
         "ordered_parent_organisations": {
           "description": "Parent organisations primarily for use with Whitehall organisations.",
           "$ref": "#/definitions/frontend_links_with_base_path"
@@ -369,6 +377,14 @@
         },
         "ordered_featured_policies": {
           "description": "Featured policies primarily for use with Whitehall organisations.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "ordered_foi_contacts": {
+          "description": "FoI contact details primarily for use with Whitehall organisations.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "ordered_high_profile_groups": {
+          "description": "High profile groups primarily for use with Whitehall organisations.",
           "$ref": "#/definitions/guid_list"
         },
         "ordered_parent_organisations": {
