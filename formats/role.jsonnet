@@ -1,4 +1,18 @@
 (import "shared/default_format.jsonnet") + {
+  document_type: [
+    "ambassador_role",
+    "board_member_role",
+    "chief_professional_officer_role",
+    "chief_scientific_officer_role",
+    "deputy_head_of_mission_role",
+    "governor_role",
+    "high_commissioner_role",
+    "military_role",
+    "ministerial_role",
+    "special_representative_role",
+    "traffic_commissioner_role",
+    "worldwide_office_staff_role",
+  ],
   base_path: "optional",
   routes: "optional",
   definitions: {
