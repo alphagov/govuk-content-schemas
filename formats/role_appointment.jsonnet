@@ -1,6 +1,7 @@
 (import "shared/default_format.jsonnet") + {
-  base_path: "forbidden",
-  routes: "forbidden",
+  document_type: "role_appointment",
+  base_path: "optional",
+  routes: "optional",
   definitions: {
     details: {
       type: "object",
