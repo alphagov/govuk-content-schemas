@@ -2,6 +2,7 @@
   document_type: "role_appointment",
   base_path: "optional",
   routes: "optional",
+  rendering_app: "optional",
   definitions: {
     details: {
       type: "object",
