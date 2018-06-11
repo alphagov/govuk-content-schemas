@@ -4,9 +4,6 @@
   "description": "The national curriculum means primary and secondary school children study the same subjects to similar standards. It's split into key stages with tests.",
   "schema_name": "guide",
   "document_type": "guide",
-  "need_ids": [
-
-  ],
   "public_updated_at": "2014-12-02T10:28:58.000+00:00",
   "publishing_app": "publisher",
   "rendering_app": "frontend",

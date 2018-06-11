@@ -30,9 +30,6 @@
   "description": "You've finished this transaction",
   "schema_name": "completed_transaction",
   "document_type": "completed_transaction",
-  "need_ids": [
-
-  ],
   "public_updated_at": "2016-06-28T14:40:56.058+01:00",
   "publishing_app": "publisher"
 }

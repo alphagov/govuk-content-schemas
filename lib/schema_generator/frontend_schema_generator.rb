@@ -28,7 +28,6 @@ module SchemaGenerator
       # - first_published_at
       # - government_document_supertype
       # - navigation_document_supertype
-      # - need_ids
       # - phase
       # - publishing_app
       # - publishing_request_id

@@ -45,9 +45,6 @@
   "description": "Find out the Council Tax band for a property in England, Scotland or Wales by looking up the property's postcode online",
   "schema_name": "transaction",
   "document_type": "transaction",
-  "need_ids": [
-
-  ],
   "public_updated_at": "2015-01-14T13:47:41.000+00:00",
   "publishing_app": "publisher"
 }

@@ -745,9 +745,6 @@
   "content_id": "a01fcb59-5dc8-4bf5-b06d-dd567a6d2f5f",
   "base_path": "/jobsearch",
   "analytics_identifier": null,
-  "need_ids": [
-
-  ],
   "phase": "live",
   "public_updated_at": "2014-11-26T11:26:56.000+00:00",
   "publishing_app": "publisher",

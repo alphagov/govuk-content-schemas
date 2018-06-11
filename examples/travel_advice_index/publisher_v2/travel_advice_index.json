@@ -9,9 +9,6 @@
     "publishing_request_id": "2546-1460985144476-19268198-3242"
   },
   "locale": "en",
-  "need_ids": [
-    "101191"
-  ],
   "publishing_app": "travel-advice-publisher",
   "rendering_app": "frontend",
   "routes": [

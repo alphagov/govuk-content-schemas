@@ -3,9 +3,6 @@
   "base_path": "/drug-device-alerts",
   "title": "Alerts and recalls for drugs and medical devices",
   "description": "",
-  "need_ids": [
-
-  ],
   "locale": "en",
   "updated_at": "2015-07-21T12:45:22.124Z",
   "public_updated_at": "2015-04-30T10:41:26.000+00:00",

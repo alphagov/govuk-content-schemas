@@ -3,9 +3,6 @@
   "base_path": "/administrative-appeals-tribunal-decisions",
   "title": "Administrative appeals tribunal decisions",
   "description": "Find decisions on appeals to the Upper Tribunal (Administrative Appeals Chamber), including social security and child support appeals.",
-  "need_ids": [
-
-  ],
   "locale": "en",
   "updated_at": "2016-04-06T11:04:06.312Z",
   "public_updated_at": "2016-04-05T08:20:40.000+00:00",
