@@ -571,9 +571,6 @@
   "content_id": "515c819e-34bd-421d-8261-eaa06c4786c5",
   "base_path": "/council-tax-bands",
   "analytics_identifier": null,
-  "need_ids": [
-
-  ],
   "phase": "live",
   "public_updated_at": "2015-01-14T13:47:41.000+00:00",
   "publishing_app": "publisher",

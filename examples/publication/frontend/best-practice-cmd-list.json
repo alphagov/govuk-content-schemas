@@ -11,9 +11,6 @@
   "government_document_supertype": "policy-papers",
   "locale": "en",
   "navigation_document_supertype": "other",
-  "need_ids": [
-
-  ],
   "phase": "live",
   "public_updated_at": "2017-11-29T07:05:00.000+00:00",
   "publishing_app": "whitehall",

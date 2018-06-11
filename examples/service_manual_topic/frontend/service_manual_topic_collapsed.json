@@ -2,9 +2,6 @@
   "base_path": "/service-manual/test-topic",
   "content_id": "cd02b82d-c706-435c-a2fc-2dcabd168ef4",
   "title": "Service Manual Test Topic",
-  "need_ids": [
-
-  ],
   "locale": "en",
   "updated_at": "2016-01-15T16:53:47.645Z",
   "public_updated_at": "2016-01-15T15:31:21.000+00:00",

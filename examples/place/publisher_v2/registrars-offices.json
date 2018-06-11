@@ -4,9 +4,6 @@
   "description": "Find local register offices to register births, marriages and deaths",
   "schema_name": "place",
   "document_type": "place",
-  "need_ids": [
-
-  ],
   "public_updated_at": "2016-03-10T09:57:08.000+00:00",
   "publishing_app": "publisher",
   "rendering_app": "frontend",

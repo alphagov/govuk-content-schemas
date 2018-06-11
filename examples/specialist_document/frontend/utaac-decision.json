@@ -3,9 +3,6 @@
   "base_path": "/administrative-appeals-tribunal-decisions/example-utaac-decision",
   "title": "Example UTAAC Decision",
   "description": "Example text.",
-  "need_ids": [
-
-  ],
   "locale": "en",
   "updated_at": "2016-04-05T14:41:08.625Z",
   "public_updated_at": "2016-04-05T14:41:08.000+00:00",

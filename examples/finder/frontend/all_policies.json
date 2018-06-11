@@ -3,9 +3,6 @@
   "base_path": "/government/policies/all",
   "title": "All policy content",
   "description": "",
-  "need_ids": [
-
-  ],
   "locale": "en",
   "updated_at": "2015-07-28T13:31:24.082Z",
   "public_updated_at": "2015-07-28T13:29:02.000+00:00",

@@ -4,9 +4,6 @@
   "description": "GOV.UK uses cookies to collect information about how users browse the site",
   "schema_name": "help_page",
   "document_type": "help_page",
-  "need_ids": [
-
-  ],
   "public_updated_at": "2014-12-16T12:49:50.000+00:00",
   "publishing_app": "publisher",
   "rendering_app": "frontend",

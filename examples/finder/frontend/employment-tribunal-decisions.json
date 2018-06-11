@@ -3,9 +3,6 @@
   "base_path": "/employment-tribunal-decisions",
   "title": "Employment tribunal decisions",
   "description": "Find decisions on Employment Tribunal cases in England, Wales and Scotland.",
-  "need_ids": [
-
-  ],
   "locale": "en",
   "updated_at": "2015-10-15T14:25:29.741Z",
   "public_updated_at": "2015-10-15T11:45:22.000+00:00",
