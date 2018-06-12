@@ -683,7 +683,55 @@
         ],
         "additionalProperties": false,
         "properties": {
+          "abbreviation": {
+            "type": "string"
+          },
+          "analytics_identifier": {
+            "$ref": "#/definitions/analytics_identifier"
+          },
           "brand": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "brand_colour_class": {
+            "type": "string"
+          },
+          "child_organisations": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+                "format": "uri"
+              },
+              "web_url": {
+                "description": "There are references that this field is DEPRECATED and base_path should be used, although we need to keep /api as is for consumers compatibility",
+                "type": "string",
+                "format": "uri"
+              }
+            }
+          },
+          "closed_at": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "content_id": {
+            "$ref": "#/definitions/guid"
+          },
+          "format": {
+            "type": "string"
+          },
+          "govuk_closed_status": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "govuk_status": {
             "type": [
               "string",
               "null"
@@ -720,14 +768,66 @@
               },
               "image": {
                 "$ref": "#/definitions/image"
+              },
+              "type_class_name": {
+                "type": "string"
+              }
+            }
+          },
+          "parent_organisations": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+                "format": "uri"
+              },
+              "web_url": {
+                "description": "There are references that this field is DEPRECATED and base_path should be used, although we need to keep /api as is for consumers compatibility",
+                "type": "string",
+                "format": "uri"
               }
             }
           },
           "separate_website": {
             "type": "boolean"
           },
+          "superseded_organisations": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+                "format": "uri"
+              },
+              "web_url": {
+                "description": "There are references that this field is DEPRECATED and base_path should be used, although we need to keep /api as is for consumers compatibility",
+                "type": "string",
+                "format": "uri"
+              }
+            }
+          },
+          "superseding_organisations": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+                "format": "uri"
+              },
+              "web_url": {
+                "description": "There are references that this field is DEPRECATED and base_path should be used, although we need to keep /api as is for consumers compatibility",
+                "type": "string",
+                "format": "uri"
+              }
+            }
+          },
           "title": {
             "type": "string"
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time"
           },
           "works_with": {
             "type": "object",
