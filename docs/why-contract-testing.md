@@ -6,7 +6,7 @@ We could do this by running all the systems at the same time and testing end-to-
 
 The idea of contract testing is to gain more confidence that the whole system works together properly, but without needing to run all the services at the same time. Instead we can test each service in isolation using a 'contract' which describes the expectations on each interacting service.
 
-The definition of the contracts are provided by `govuk-content-schemas`.
+The definition of the contracts are provided by [govuk-content-schemas](https://github.com/alphagov/govuk-content-schemas).
 
 For more information and background please read the [README.md](../README.md)
 
@@ -29,7 +29,7 @@ that it contains full details about links, wheras the publisher representation
 only contains content ids (for full info see [frontend_schema_generator_spec.rb](spec/lib/frontend_schema_generator_spec.rb)).
 
 The *contract* between the publishing application and the frontend application
-is defined by govuk-content-schemas.
+is defined by [govuk-content-schemas](https://github.com/alphagov/govuk-content-schemas).
 
 This comprises three things:
 
