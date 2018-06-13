@@ -135,8 +135,11 @@
         content_id: {
           "$ref": "#/definitions/guid",
         },
-        abbreviation: {
-          type: "string"
+        acronym: {
+          type: [
+            "string",
+            "null",
+          ],
         },
         brand_colour_class: {
           type: "string",
