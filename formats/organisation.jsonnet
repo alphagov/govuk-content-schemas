@@ -5,6 +5,13 @@
       type: "object",
       additionalProperties: false,
       properties: {
+        acronym: {
+          type: [
+            "string",
+            "null",
+          ],
+          description: "The organisation's acronym, if it has one.",
+        },
         analytics_identifier: {
           "$ref": "#/definitions/analytics_identifier",
         },

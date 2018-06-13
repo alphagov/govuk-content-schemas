@@ -406,8 +406,11 @@
         ],
         "additionalProperties": false,
         "properties": {
-          "abbreviation": {
-            "type": "string"
+          "acronym": {
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "analytics_identifier": {
             "$ref": "#/definitions/analytics_identifier"
