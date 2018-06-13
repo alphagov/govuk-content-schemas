@@ -1312,6 +1312,10 @@
           ],
         },
       },
+      organisations: {
+        "description": "Associated organisations",
+        "$ref": "#/definitions/guid_list",
+      },
     },
   },
   tax_tribunal_decision_metadata: {
