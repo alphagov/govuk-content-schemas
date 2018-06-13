@@ -203,6 +203,13 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "acronym": {
+          "description": "The organisation's acronym, if it has one.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
         "analytics_identifier": {
           "$ref": "#/definitions/analytics_identifier"
         },
