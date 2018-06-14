@@ -46,24 +46,25 @@
     "document_type": {
       "type": "string",
       "enum": [
-        "cma_case",
-        "employment_appeal_tribunal_decision",
-        "dfid_research_output",
-        "employment_tribunal_decision",
-        "service_standard_report",
-        "utaac_decision",
         "aaib_report",
-        "international_development_fund",
-        "countryside_stewardship_grant",
-        "medical_safety_alert",
-        "maib_report",
-        "esi_fund",
-        "tax_tribunal_decision",
-        "raib_report",
-        "drug_safety_update",
-        "business_finance_support_scheme",
         "asylum_support_decision",
-        "residential_property_tribunal_decision"
+        "business_finance_support_scheme",
+        "cma_case",
+        "countryside_stewardship_grant",
+        "dfid_research_output",
+        "drug_safety_update",
+        "employment_appeal_tribunal_decision",
+        "employment_tribunal_decision",
+        "esi_fund",
+        "international_development_fund",
+        "maib_report",
+        "medical_safety_alert",
+        "raib_report",
+        "residential_property_tribunal_decision",
+        "service_standard_report",
+        "statutory_instrument",
+        "tax_tribunal_decision",
+        "utaac_decision"
       ]
     },
     "email_document_supertype": {
@@ -386,6 +387,9 @@
         },
         {
           "$ref": "#/definitions/service_standard_report_metadata"
+        },
+        {
+          "$ref": "#/definitions/statutory_instrument_metadata"
         },
         {
           "$ref": "#/definitions/tax_tribunal_decision_metadata"
@@ -1846,6 +1850,86 @@
         },
         "bulk_published": {
           "type": "boolean"
+        }
+      }
+    },
+    "statutory_instrument_metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "laid_date": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+        },
+        "sift_end_date": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+        },
+        "sifting_status": {
+          "type": "string",
+          "enum": [
+            "open",
+            "closed",
+            "withdrawn"
+          ]
+        },
+        "subject": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "animal-welfare",
+              "benefits",
+              "business-and-enterprise",
+              "business-tax",
+              "climate-change-and-energy",
+              "coal",
+              "commercial-fishing-and-fisheries",
+              "community-organisations",
+              "company-registration-and-filing",
+              "competition",
+              "crime-and-policing",
+              "dealing-with-hmrc",
+              "death-and-wills",
+              "defence-and-armed-forces",
+              "driving-and-motorcycle-instructors",
+              "driving-tests-and-learning-to-drive",
+              "environmental-management",
+              "farming-and-food-grants-and-payments",
+              "further-education-and-skills",
+              "government",
+              "guidance-for-government-digital-publishing-and-services",
+              "health-protection",
+              "help-for-british-nationals-overseas",
+              "high-speed-2",
+              "higher-education",
+              "housing",
+              "intellectual-property",
+              "keeping-farmed-animals",
+              "land-registration",
+              "law-and-the-justice-system",
+              "legal-aid",
+              "local-communities",
+              "local-government",
+              "mot-and-vehicle-tests",
+              "medicines-medical-devices-and-blood-regulation-and-safety",
+              "oil-and-gas",
+              "outdoor-access-and-recreation",
+              "personal-tax",
+              "planning-and-development",
+              "population-screening-programmes",
+              "prisons-and-probation",
+              "producing-and-distributing-food",
+              "public-safety-and-emergencies",
+              "schools-colleges-and-childrens-services",
+              "setting-up-and-running-a-charity",
+              "ships-and-cargoes",
+              "transport",
+              "visas-and-immigration-operational-guidance",
+              "work-and-careers",
+              "working-at-sea"
+            ]
+          }
         }
       }
     },
