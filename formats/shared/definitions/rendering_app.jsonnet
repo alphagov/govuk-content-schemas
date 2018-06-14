@@ -6,6 +6,7 @@
       "calculators",
       "calendars",
       "collections",
+      "design-system",
       "email-alert-frontend",
       "email-campaign-frontend",
       "feedback",
