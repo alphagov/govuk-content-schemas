@@ -21,6 +21,7 @@
       "performanceplatform-big-screen-view",
       "policy-publisher",
       "publisher",
+      "publishing-api",
       "rummager",
       "search-admin",
       "service-manual-publisher",
