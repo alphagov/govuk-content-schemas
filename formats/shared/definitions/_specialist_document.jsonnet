@@ -1316,6 +1316,12 @@
         "description": "Associated organisations",
         "$ref": "#/definitions/guid_list",
       },
+      primary_publishing_organisation: {
+        "description": "Primary publishing organisation",
+        "$ref": "#/definitions/guid_list",
+        minItems: 1,
+        maxItems: 1,
+      },
     },
   },
   tax_tribunal_decision_metadata: {
