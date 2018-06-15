@@ -61,5 +61,11 @@
       minItems: 1,
       maxItems: 1,
     },
+    primary_publishing_organisation: {
+      description: "The primary organisation for this document",
+    },
+    organisations: {
+      description: "Associated organisations for this document",
+    },
   },
 }
