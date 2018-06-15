@@ -1966,6 +1966,16 @@
           "type": "string",
           "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
         },
+        "organisations": {
+          "description": "Associated organisations",
+          "$ref": "#/definitions/guid_list"
+        },
+        "primary_publishing_organisation": {
+          "description": "Primary publishing organisation",
+          "$ref": "#/definitions/guid_list",
+          "maxItems": 1,
+          "minItems": 1
+        },
         "sift_end_date": {
           "type": "string",
           "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
