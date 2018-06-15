@@ -46,6 +46,9 @@
           "formatted_title": "Prime Minister&#39;s Office, 10 Downing Street",
           "crest": "eo"
         },
+        "format": "Executive office",
+        "slug": "prime-ministers-office-10-downing-street",
+        "content_id": "705dbea4-8bd7-422e-ba9c-254557f77f81",
         "separate_website": false,
         "works_with": {}
       }
@@ -59,6 +62,9 @@
           "formatted_title": "Attorney <br/>General&#39;s <br/>Office",
           "crest": "single-identity"
         },
+        "format": "Ministerial department",
+        "slug": "attorney-generals-office",
+        "content_id": "25aacd68-dc0c-4041-9c3a-df59a5357c23",
         "separate_website": false,
         "works_with": {
           "non_ministerial_department": [
