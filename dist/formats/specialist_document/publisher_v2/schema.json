@@ -78,6 +78,14 @@
           "$ref": "#/definitions/guid_list",
           "maxItems": 1,
           "minItems": 1
+        },
+        "organisations": {
+          "description": "Associated organisations for this document",
+          "$ref": "#/definitions/guid_list"
+        },
+        "primary_publishing_organisation": {
+          "description": "The primary organisation for this document",
+          "$ref": "#/definitions/guid_list"
         }
       }
     },

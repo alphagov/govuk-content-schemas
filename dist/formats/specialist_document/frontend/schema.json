@@ -131,7 +131,7 @@
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
         "organisations": {
-          "description": "All organisations linked to this content item. This should include lead organisations.",
+          "description": "Associated organisations for this document",
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
         "original_primary_publishing_organisation": {
@@ -156,9 +156,8 @@
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
         "primary_publishing_organisation": {
-          "description": "The organisation that published the page. Corresponds to the first of the 'Lead organisations' in Whitehall, and is empty for all other publishing applications.",
-          "$ref": "#/definitions/frontend_links_with_base_path",
-          "maxItems": 1
+          "description": "The primary organisation for this document",
+          "$ref": "#/definitions/frontend_links_with_base_path"
         },
         "related_to_step_navs": {
           "description": "Link type automatically added by Publishing API",
