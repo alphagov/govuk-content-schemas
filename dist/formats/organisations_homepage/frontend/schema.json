@@ -599,7 +599,10 @@
         "required": [
           "title",
           "href",
-          "separate_website"
+          "separate_website",
+          "format",
+          "slug",
+          "content_id"
         ],
         "additionalProperties": false,
         "properties": {
@@ -622,19 +625,7 @@
             "type": "string"
           },
           "child_organisations": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-              "id": {
-                "type": "string",
-                "format": "uri"
-              },
-              "web_url": {
-                "description": "There are references that this field is DEPRECATED and base_path should be used, although we need to keep /api as is for consumers compatibility",
-                "type": "string",
-                "format": "uri"
-              }
-            }
+            "$ref": "#/definitions/list_of_sub_organisations"
           },
           "closed_at": {
             "type": [
@@ -698,52 +689,19 @@
             }
           },
           "parent_organisations": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-              "id": {
-                "type": "string",
-                "format": "uri"
-              },
-              "web_url": {
-                "description": "There are references that this field is DEPRECATED and base_path should be used, although we need to keep /api as is for consumers compatibility",
-                "type": "string",
-                "format": "uri"
-              }
-            }
+            "$ref": "#/definitions/list_of_sub_organisations"
           },
           "separate_website": {
             "type": "boolean"
           },
+          "slug": {
+            "type": "string"
+          },
           "superseded_organisations": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-              "id": {
-                "type": "string",
-                "format": "uri"
-              },
-              "web_url": {
-                "description": "There are references that this field is DEPRECATED and base_path should be used, although we need to keep /api as is for consumers compatibility",
-                "type": "string",
-                "format": "uri"
-              }
-            }
+            "$ref": "#/definitions/list_of_sub_organisations"
           },
           "superseding_organisations": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-              "id": {
-                "type": "string",
-                "format": "uri"
-              },
-              "web_url": {
-                "description": "There are references that this field is DEPRECATED and base_path should be used, although we need to keep /api as is for consumers compatibility",
-                "type": "string",
-                "format": "uri"
-              }
-            }
+            "$ref": "#/definitions/list_of_sub_organisations"
           },
           "title": {
             "type": "string"
