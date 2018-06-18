@@ -146,6 +146,76 @@
           },
           description: "A set of featured documents to display for the organisation. Turn into proper links once organisations are fully migrated.",
         },
+        ordered_promotional_features: {
+          type: "array",
+          items: {
+            type: "object",
+            additionalProperties: false,
+            required: [
+              "title",
+              "items",
+            ],
+            properties: {
+              title: {
+                type: "string",
+              },
+              items: {
+                type: "array",
+                items: {
+                  type: "object",
+                  additionalProperties: false,
+                  required: [
+                    "summary",
+                    "double_width",
+                  ],
+                  properties: {
+                    title: {
+                      type: [
+                        "string",
+                        "null",
+                      ],
+                    },
+                    href: {
+                      type: [
+                        "string",
+                        "null",
+                      ],
+                    },
+                    summary: {
+                      type: "string",
+                    },
+                    image: {
+                      "$ref": "#/definitions/image",
+                    },
+                    double_width: {
+                      type: "boolean",
+                    },
+                    links: {
+                      type: "array",
+                      items: {
+                        type: "object",
+                        additionalProperties: false,
+                        required: [
+                          "title",
+                          "href",
+                        ],
+                        properties: {
+                          title: {
+                            type: "string",
+                          },
+                          href: {
+                            type: "string",
+                          },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+          description: "A set of promotional features to display for the organisation. Turn into proper links once organisations are fully migrated.",
+        },
         ordered_ministers: {
           "$ref": "#/definitions/people",
         },
