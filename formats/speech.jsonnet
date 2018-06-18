@@ -63,6 +63,7 @@
       description: "A speaker that has a GOV.UK profile",
       maxItems: 1,
     },
+    policies: "",
     related_policies: "",
     ministers: "",
     topical_events: "",
