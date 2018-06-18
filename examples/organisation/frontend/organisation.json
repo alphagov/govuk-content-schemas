@@ -82,6 +82,37 @@
         "document_type": "Collection"
       }
     ],
+    "ordered_promotional_features":[
+      {
+        "title": "Transparency",
+        "items": [
+          {
+            "title": "",
+            "href": "https://www.gov.uk/government/policies?keywords=&topics%5B%5D=government-efficiency-transparency-and-accountability&departments%5B%5D=all",
+            "summary": "Greater transparency across government is at the heart of our commitment to let you hold politicians and public bodies to account.",
+            "image": {
+              "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/promotional_feature_item/image/1/s300_Transparency.jpg",
+              "alt_text": "Magnifying glass studying a graph"
+            },
+            "double_width": false,
+            "links": [
+              {
+                "title": "Single departmental plans",
+                "href": "https://www.gov.uk/government/collections/a-country-that-works-for-everyone-the-governments-plan"
+              },
+              {
+                "title": "Prime Minister's and Cabinet Office ministers' transparency publications",
+                "href": "https://www.gov.uk/government/collections/ministers-transparency-publications"
+              },
+              {
+                "title": "Government transparency data",
+                "href": "https://www.gov.uk/government/publications?keywords=&publication_filter_option=transparency-data&topics%5B%5D=all&departments%5B%5D=all&world_locations%5B%5D=all&direction=before&date=2013-05-01"
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "ordered_ministers": [
       {
         "name_prefix": "The Rt Hon",

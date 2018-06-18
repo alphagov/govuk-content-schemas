@@ -580,6 +580,76 @@
         "ordered_ministers": {
           "$ref": "#/definitions/people"
         },
+        "ordered_promotional_features": {
+          "description": "A set of promotional features to display for the organisation. Turn into proper links once organisations are fully migrated.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "title",
+              "items"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "summary",
+                    "double_width"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "double_width": {
+                      "type": "boolean"
+                    },
+                    "href": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "image": {
+                      "$ref": "#/definitions/image"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "title",
+                          "href"
+                        ],
+                        "additionalProperties": false,
+                        "properties": {
+                          "href": {
+                            "type": "string"
+                          },
+                          "title": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "summary": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    }
+                  }
+                }
+              },
+              "title": {
+                "type": "string"
+              }
+            }
+          }
+        },
         "ordered_special_representatives": {
           "$ref": "#/definitions/people"
         },
