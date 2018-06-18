@@ -92,9 +92,42 @@
           "description": "Link type automatically added by Publishing API",
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
+        "lead_organisations": {
+          "description": "DEPRECATED: A subset of organisations that should be emphasised in relation to this content item. All organisations specified here should also be part of the organisations array.",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
         "level_one_taxons": {
           "description": "Link type automatically added by Publishing API",
           "$ref": "#/definitions/frontend_links_with_base_path"
+        },
+        "mainstream_browse_pages": {
+          "description": "Powers the /browse section of the site. These are known as sections in some legacy apps.",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
+        "meets_user_needs": {
+          "description": "The user needs this piece of content meets.",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
+        "ordered_related_items": {
+          "description": "Related items, can be any page on GOV.UK. Mostly used for mainstream content to power the sidebar. Ordering of the links is determined by the editor in Content Tagger.",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
+        "ordered_related_items_overrides": {
+          "description": "Related items, can be any page on GOV.UK. Overrides 'more like this' automatically generated links in the beta navigation.",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
+        "organisations": {
+          "description": "All organisations linked to this content item. This should include lead organisations.",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
+        "original_primary_publishing_organisation": {
+          "description": "The organisation that published the original version of the page. Corresponds to the first of the 'Lead organisations' in Whitehall for the first edition, and is empty for all other publishing applications.",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
+        "parent": {
+          "description": "The parent content item.",
+          "$ref": "#/definitions/frontend_links_with_base_path",
+          "maxItems": 1
         },
         "part_of_step_navs": {
           "description": "Link type automatically added by Publishing API",
@@ -108,6 +141,11 @@
           "description": "A largely deprecated tag currently only used to power email alerts.",
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
+        "primary_publishing_organisation": {
+          "description": "The organisation that published the page. Corresponds to the first of the 'Lead organisations' in Whitehall, and is empty for all other publishing applications.",
+          "$ref": "#/definitions/frontend_links_with_base_path",
+          "maxItems": 1
+        },
         "related_to_step_navs": {
           "description": "Link type automatically added by Publishing API",
           "$ref": "#/definitions/frontend_links_with_base_path"
@@ -119,12 +157,20 @@
           "description": "All 2nd level browse pages under active_top_level_browse_page",
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
+        "taxons": {
+          "description": "Prototype-stage taxonomy label for this content item",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
         "top_level_browse_pages": {
           "description": "All top-level browse pages",
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
         "topic_taxonomy_taxons": {
           "description": "Link type automatically added by Publishing API",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
+        "topics": {
+          "description": "Powers the /topic section of the site. These are known as specialist sectors in some legacy apps.",
           "$ref": "#/definitions/frontend_links_with_base_path"
         }
       }
@@ -148,9 +194,47 @@
           "$ref": "#/definitions/guid_list",
           "maxItems": 1
         },
+        "lead_organisations": {
+          "description": "DEPRECATED: A subset of organisations that should be emphasised in relation to this content item. All organisations specified here should also be part of the organisations array.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "mainstream_browse_pages": {
+          "description": "Powers the /browse section of the site. These are known as sections in some legacy apps.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "meets_user_needs": {
+          "description": "The user needs this piece of content meets.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "ordered_related_items": {
+          "description": "Related items, can be any page on GOV.UK. Mostly used for mainstream content to power the sidebar. Ordering of the links is determined by the editor in Content Tagger.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "ordered_related_items_overrides": {
+          "description": "Related items, can be any page on GOV.UK. Overrides 'more like this' automatically generated links in the beta navigation.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "organisations": {
+          "description": "All organisations linked to this content item. This should include lead organisations.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "original_primary_publishing_organisation": {
+          "description": "The organisation that published the original version of the page. Corresponds to the first of the 'Lead organisations' in Whitehall for the first edition, and is empty for all other publishing applications.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "parent": {
+          "description": "The parent content item.",
+          "$ref": "#/definitions/guid_list",
+          "maxItems": 1
+        },
         "policy_areas": {
           "description": "A largely deprecated tag currently only used to power email alerts.",
           "$ref": "#/definitions/guid_list"
+        },
+        "primary_publishing_organisation": {
+          "description": "The organisation that published the page. Corresponds to the first of the 'Lead organisations' in Whitehall, and is empty for all other publishing applications.",
+          "$ref": "#/definitions/guid_list",
+          "maxItems": 1
         },
         "related_topics": {
           "$ref": "#/definitions/guid_list"
@@ -159,8 +243,16 @@
           "description": "All 2nd level browse pages under active_top_level_browse_page",
           "$ref": "#/definitions/guid_list"
         },
+        "taxons": {
+          "description": "Prototype-stage taxonomy label for this content item",
+          "$ref": "#/definitions/guid_list"
+        },
         "top_level_browse_pages": {
           "description": "All top-level browse pages",
+          "$ref": "#/definitions/guid_list"
+        },
+        "topics": {
+          "description": "Powers the /topic section of the site. These are known as specialist sectors in some legacy apps.",
           "$ref": "#/definitions/guid_list"
         }
       }
