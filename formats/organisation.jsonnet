@@ -266,6 +266,12 @@
                 "transitioning",
               ],
             },
+            url: {
+              type: [
+                "string",
+                "null",
+              ],
+            },
             updated_at: {
               type: [
                 "string",
