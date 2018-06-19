@@ -2,11 +2,14 @@
   document_type: "contact",
   base_path: "optional",
   routes: "optional",
+  rendering_app: "optional",
   definitions: {
     details: {
       type: "object",
       additionalProperties: false,
-      required: ["title", "contact_groups"],
+      required: [
+        "title"
+      ],
       properties: {
         slug: {
           type: "string",
@@ -15,7 +18,10 @@
           type: "string",
         },
         description: {
-          type: "string",
+          type: [
+            "string",
+            "null",
+          ],
         },
         quick_links: {
           type: "array",
