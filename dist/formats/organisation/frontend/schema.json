@@ -617,6 +617,12 @@
                 "null"
               ],
               "format": "date-time"
+            },
+            "url": {
+              "type": [
+                "string",
+                "null"
+              ]
             }
           }
         },
