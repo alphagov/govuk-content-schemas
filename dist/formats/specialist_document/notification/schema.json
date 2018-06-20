@@ -611,6 +611,25 @@
             ]
           }
         },
+        "regions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "east-midlands",
+              "eastern",
+              "london",
+              "north-east",
+              "north-west",
+              "northern-ireland",
+              "scotland",
+              "south-east",
+              "wales",
+              "west-midlands",
+              "yorkshire-and-the-humber"
+            ]
+          }
+        },
         "types_of_support": {
           "type": "array",
           "items": {
