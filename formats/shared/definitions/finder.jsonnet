@@ -19,6 +19,12 @@
       document_type: {
         type: "string",
       },
+      email_document_supertype: {
+        type: "array",
+        items: {
+          type: "string",
+        },
+      },
       organisations: {
         type: "array",
         items: {
@@ -41,6 +47,12 @@
     type: "object",
     additionalProperties: false,
     properties: {
+      email_document_supertype: {
+        type: "array",
+        items: {
+          type: "string",
+        },
+      },
       policies: {
         type: "array",
         items: {
