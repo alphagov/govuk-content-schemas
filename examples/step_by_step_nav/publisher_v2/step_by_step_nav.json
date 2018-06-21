@@ -22,6 +22,13 @@
   },
   "details": {
     "step_by_step_nav": {
+      "title": "Get a divorce: step by step",
+      "introduction": [
+        {
+          "content_type": "text/govspeak",
+          "content": "Check what you need to do to get a divorce."
+        }
+      ],
       "steps": [
         {
           "title": "Get support and advice",

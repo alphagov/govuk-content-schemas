@@ -3,6 +3,8 @@
     type: "object",
     additionalProperties: false,
     required: [
+      "title",
+      "introduction",
       "steps",
     ],
     properties: {
