@@ -84,6 +84,10 @@
           },
           description: "A set of links to corporate information pages to display for the organisation.",
         },
+        secondary_corporate_information_pages: {
+          type: "string",
+          description: "A string containing sentences and links to corporate information pages that are not included in ordered_corporate_information_pages.",
+        },
         ordered_featured_links: {
           type: "array",
           items: {
