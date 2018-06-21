@@ -551,6 +551,12 @@
         "document_type": {
           "type": "string"
         },
+        "email_document_supertype": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
         "format": {
           "type": "string"
         },
