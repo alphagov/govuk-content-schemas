@@ -238,6 +238,10 @@
         ordered_special_representatives: {
           "$ref": "#/definitions/people",
         },
+        important_board_members: {
+          type: "integer",
+          description: "The number of board members that will have photos displayed for them.",
+        },
         organisation_featuring_priority: {
           type: "string",
           enum: [
