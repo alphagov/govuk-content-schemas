@@ -83,7 +83,6 @@
   links: (import "shared/base_links.jsonnet") + {
     people: "",
     working_groups: "",
-    lead_organisations: "DEPRECATED: A subset of organisations that should be emphasised in relation to this content item. All organisations specified here should also be part of the organisations array.",
     related: "",
     email_alert_signup: "",
     available_translations: "",

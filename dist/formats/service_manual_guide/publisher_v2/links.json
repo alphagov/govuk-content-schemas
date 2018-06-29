@@ -11,6 +11,10 @@
           "description": "References a page of a GDS community responsible for maintaining the guide e.g. Agile delivery community, Design community",
           "$ref": "#/definitions/guid_list"
         },
+        "lead_organisations": {
+          "description": "DEPRECATED: A subset of organisations that should be emphasised in relation to this content item. All organisations specified here should also be part of the organisations array.",
+          "$ref": "#/definitions/guid_list"
+        },
         "mainstream_browse_pages": {
           "description": "Powers the /browse section of the site. These are known as sections in some legacy apps.",
           "$ref": "#/definitions/guid_list"

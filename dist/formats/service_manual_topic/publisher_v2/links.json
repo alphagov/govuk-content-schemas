@@ -15,6 +15,10 @@
           "description": "References an email alert signup page for this topic",
           "$ref": "#/definitions/guid_list"
         },
+        "lead_organisations": {
+          "description": "DEPRECATED: A subset of organisations that should be emphasised in relation to this content item. All organisations specified here should also be part of the organisations array.",
+          "$ref": "#/definitions/guid_list"
+        },
         "linked_items": {
           "description": "Includes all content ids referenced in 'details'. This is a temporary measure to expand content ids for frontends which is planned to be replaced by a dependency resolution service.",
           "$ref": "#/definitions/guid_list"

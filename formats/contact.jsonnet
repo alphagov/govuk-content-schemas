@@ -235,5 +235,6 @@
   },
   links: (import "shared/base_links.jsonnet") + {
     related: "",
+    world_locations: "",
   },
 }

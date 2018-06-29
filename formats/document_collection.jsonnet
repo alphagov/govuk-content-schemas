@@ -70,5 +70,6 @@
     related_guides: "",
     related_policies: "",
     related_mainstream_content: "",
+    documents: "",
   },
 }

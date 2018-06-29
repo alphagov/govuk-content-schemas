@@ -24,7 +24,7 @@
       },
     },
   },
-  links: {
+  links: (import "shared/base_links.jsonnet") + {
     top_level_browse_pages: "All top-level browse pages",
     active_top_level_browse_page: {
       description: "The top-level browse page which is active",
