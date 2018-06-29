@@ -19,6 +19,12 @@
       document_type: {
         type: "string",
       },
+      content_purpose_supergroup: {
+        type: "array",
+        items: {
+          type: "string",
+        },
+      },
       email_document_supertype: {
         type: "array",
         items: {
@@ -47,6 +53,12 @@
     type: "object",
     additionalProperties: false,
     properties: {
+      content_purpose_supergroup: {
+        type: "array",
+        items: {
+          type: "string",
+        },
+      },
       email_document_supertype: {
         type: "array",
         items: {
