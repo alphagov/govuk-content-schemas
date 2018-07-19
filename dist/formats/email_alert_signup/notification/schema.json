@@ -591,6 +591,7 @@
         "calendars",
         "collections-publisher",
         "contacts",
+        "content-publisher",
         "content-tagger",
         "email-alert-frontend",
         "external-link-tracker",
