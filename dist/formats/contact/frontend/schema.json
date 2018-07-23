@@ -430,6 +430,16 @@
             }
           ]
         },
+        "more_info_webchat": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
         "phone_numbers": {
           "type": "array",
           "items": {

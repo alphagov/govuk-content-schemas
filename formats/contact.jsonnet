@@ -96,6 +96,16 @@
             },
           ],
         },
+        more_info_webchat: {
+          anyOf: [
+            {
+              type: "string",
+            },
+            {
+              type: "null",
+            },
+          ],
+        },
         contact_type: {
           type: "string",
         },
