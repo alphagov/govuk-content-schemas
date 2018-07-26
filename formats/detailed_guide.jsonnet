@@ -9,7 +9,6 @@
       additionalProperties: false,
       required: [
         "body",
-        "first_public_at",
         "government",
         "political",
       ],

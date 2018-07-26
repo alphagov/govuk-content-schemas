@@ -28,7 +28,6 @@
       required: [
         "body",
         "documents",
-        "first_public_at",
         "government",
         "political",
       ],
