@@ -6,7 +6,6 @@
       additionalProperties: false,
       required: [
         "body",
-        "first_public_at",
         "change_history",
         "emphasised_organisations",
       ],

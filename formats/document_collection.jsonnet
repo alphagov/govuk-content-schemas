@@ -5,7 +5,6 @@
       type: "object",
       additionalProperties: false,
       required: [
-        "first_public_at",
         "collection_groups",
         "government",
         "political",
