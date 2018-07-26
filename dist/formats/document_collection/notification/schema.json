@@ -379,7 +379,6 @@
     "details": {
       "type": "object",
       "required": [
-        "first_public_at",
         "collection_groups",
         "government",
         "political"
@@ -445,7 +444,7 @@
       }
     },
     "first_public_at": {
-      "description": "DEPRECATED. The date the content was first published. Used in details. Will be deprecated in favour of top level first_published_at when publishing API allows it to be edited.",
+      "description": "DEPRECATED. The date the content was first published. Used in details. Deprecated in favour of top level `first_published_at`.",
       "type": "string",
       "format": "date-time"
     },
