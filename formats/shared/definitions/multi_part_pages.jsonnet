@@ -20,6 +20,10 @@
         body: {
           "$ref": "#/definitions/body_html_and_govspeak",
         },
+        hide_chapter_navigation: {
+          type: "boolean",
+          description: "Hide guide elements if this part is part of a step by step navigation"
+        },
       },
     },
   },
