@@ -171,6 +171,7 @@
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
         "topical_events": {
+          "description": "The topical events this content item relates to.",
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
         "topics": {
@@ -178,9 +179,11 @@
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
         "world_locations": {
+          "description": "The world locations this content item is about.",
           "$ref": "#/definitions/frontend_links"
         },
         "worldwide_organisations": {
+          "description": "The worldwide organisations associated with this content item.",
           "$ref": "#/definitions/frontend_links_with_base_path"
         }
       }
