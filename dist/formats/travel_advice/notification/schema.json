@@ -661,6 +661,10 @@
           "body": {
             "$ref": "#/definitions/body_html_and_govspeak"
           },
+          "hide_chapter_navigation": {
+            "description": "Hide guide elements if this part is part of a step by step navigation",
+            "type": "boolean"
+          },
           "slug": {
             "type": "string",
             "format": "uri"
