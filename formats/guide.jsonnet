@@ -12,6 +12,10 @@
         external_related_links: {
           "$ref": "#/definitions/external_related_links",
         },
+        hide_chapter_navigation: {
+          type: "boolean",
+          description: "Hide guide elements if this guide is part of a step by step navigation"
+        },
       },
     },
   },
