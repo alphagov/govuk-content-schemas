@@ -882,7 +882,6 @@
   },
   "description": "The English national curriculum means children in different schools (at primary and secondary level) study the same subjects to similar standards - it's split into key stages with tests",
   "details": {
-    "hide_chapter_navigation": true,
     "parts": [
       {
         "title": "Overview",
