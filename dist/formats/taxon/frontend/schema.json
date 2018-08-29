@@ -157,6 +157,10 @@
           "description": "Link type automatically added by Publishing API",
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
+        "relevant_to_step_navs": {
+          "description": "Link type automatically added by Publishing API",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
         "root_taxon": {
           "description": "Set to the root taxon (homepage) if this is a level one taxon.",
           "$ref": "#/definitions/frontend_links_with_base_path"

@@ -149,6 +149,10 @@
           "description": "Link type automatically added by Publishing API",
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
+        "relevant_to_step_navs": {
+          "description": "Link type automatically added by Publishing API",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
         "service_manual_topics": {
           "description": "References an array of 'service_manual_topic's. Not to be confused with 'topics'.",
           "$ref": "#/definitions/frontend_links_with_base_path"
