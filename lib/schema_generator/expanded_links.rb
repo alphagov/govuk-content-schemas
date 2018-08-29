@@ -35,6 +35,11 @@ module SchemaGenerator
       # to by the `pages_related_to_step_nav` link type
       "related_to_step_navs",
 
+      # These are content items that have content relevant to the step by step
+      # journey, but are not part of the the journey. They should have on page step by step
+      # navigation.  They are linked to by the `pages_relevant_to_step_navs` link type
+      "relevant_to_step_navs",
+
       # Taxons that have been created by merging old 'legacy' taxons will have
       # a reverse link to determine where the replacement Topic Taxonomy taxon
       # now resides
