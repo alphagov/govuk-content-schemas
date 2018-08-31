@@ -3,7 +3,8 @@
   publishing_app: "required",
   edition_links: (import "shared/base_edition_links.jsonnet") + {
     pages_part_of_step_nav: "A list of content that should be navigable via this step by step journey",
-    pages_related_to_step_nav: "A list of content that is related to this step by step navigation journey"
+    pages_related_to_step_nav: "A list of content that is related to this step by step navigation journey",
+    pages_relevant_to_step_nav: "A list of content that should show the step by step navigation but is not part of the journey"
   },
   links: {
   },

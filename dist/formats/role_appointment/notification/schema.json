@@ -149,6 +149,10 @@
           "description": "Link type automatically added by Publishing API",
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
+        "relevant_to_step_navs": {
+          "description": "Link type automatically added by Publishing API",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
         "role": {
           "description": "The role that the relevant person is currently appointed to.",
           "$ref": "#/definitions/frontend_links_with_base_path"
