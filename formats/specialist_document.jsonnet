@@ -10,6 +10,7 @@
     "employment_appeal_tribunal_decision",
     "employment_tribunal_decision",
     "esi_fund",
+    "export_health_certificate",
     "international_development_fund",
     "maib_report",
     "medical_safety_alert",
