@@ -44,7 +44,7 @@
   },
   links: (import "shared/base_links.jsonnet") + {
     related_policies: "",
-    ministers: "",
+    ministers: "Deprecated. These are relations to minister people pages, this is superseded by 'people'",
     topical_events: "The topical events this content item relates to.",
     world_locations: "The world locations this content item is about.",
     worldwide_organisations: "The worldwide organisations associated with this content item.",
