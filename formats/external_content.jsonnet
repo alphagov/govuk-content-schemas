@@ -2,6 +2,7 @@
   document_type: "external_content",
   base_path: "forbidden",
   routes: "forbidden",
+  redirects: "forbidden",
   description: "required",
   rendering_app: "forbidden",
   edition_links: {},

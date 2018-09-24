@@ -67,16 +67,16 @@ module SchemaGenerator
 
     def derived_properties
       {
-        "content_id" => format.content_id(frontend: true).definition,
-        "document_type" => format.document_type.definition,
-        "description" => format.description.definition,
-        "details" => format.details.definition,
+        "content_id" => format.content_id(frontend: true).schema,
+        "document_type" => format.document_type.schema,
+        "description" => format.description.schema,
+        "details" => format.details.schema,
         "links" => ExpandedLinks.new(format).generate,
-        "rendering_app" => format.rendering_app.definition,
-        "schema_name" => format.schema_name_definition,
-        "title" => format.title.definition,
+        "rendering_app" => format.rendering_app.schema,
+        "schema_name" => format.schema_name_schema,
+        "title" => format.title.schema,
       }.tap do |p|
-        p["redirects"] = format.redirects.definition if format.schema_name == "redirect"
+        p["redirects"] = format.redirects.schema if format.schema_name == "redirect"
       end
     end
 

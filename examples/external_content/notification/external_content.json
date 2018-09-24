@@ -1,6 +1,5 @@
 {
   "analytics_identifier": null,
-  "base_path": null,
   "content_id": "e0db9761-0e25-427b-935a-5de71608100b",
   "description": "Free, unbiased, independent advice and tools to help you manage your money better",
   "details": {
@@ -20,9 +19,6 @@
   "phase": "live",
   "public_updated_at": "2017-12-14T09:50:00Z",
   "publishing_app": "search-admin",
-  "redirects": [],
-  "rendering_app": null,
-  "routes": [],
   "schema_name": "external_content",
   "title": "Money Advice Service",
   "update_type": "major",

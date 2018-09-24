@@ -39,16 +39,16 @@ module SchemaGenerator
 
     def derived_properties
       {
-        "base_path" => format.base_path.definition,
-        "document_type" => format.document_type.definition,
-        "description" => format.description.definition,
-        "details" => format.details.definition,
+        "base_path" => format.base_path.schema,
+        "document_type" => format.document_type.schema,
+        "description" => format.description.schema,
+        "details" => format.details.schema,
         "links" => links,
-        "redirects" => format.redirects.definition,
-        "rendering_app" => format.rendering_app.definition,
-        "routes" => format.routes.definition,
-        "schema_name" => format.schema_name_definition,
-        "title" => format.title.definition,
+        "redirects" => format.redirects.schema,
+        "rendering_app" => format.rendering_app.schema,
+        "routes" => format.routes.schema,
+        "schema_name" => format.schema_name_schema,
+        "title" => format.title.schema,
       }
     end
 

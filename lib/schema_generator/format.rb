@@ -17,9 +17,7 @@ module SchemaGenerator
       @base_path ||= OptionalProperty.new(
         property: "base_path",
         status: format_data["base_path"] || "required",
-        required_definition: "absolute_path",
-        optional_definition: "absolute_path_optional",
-        forbidden_definition: "null"
+        definition: "absolute_path",
       )
     end
 
@@ -27,9 +25,7 @@ module SchemaGenerator
       @description ||= OptionalProperty.new(
         property: "description",
         status: format_data["description"] || "optional",
-        required_definition: "description",
-        optional_definition: "description_optional",
-        forbidden_definition: "null"
+        definition: "description",
       )
     end
 
@@ -37,9 +33,7 @@ module SchemaGenerator
       @details ||= OptionalProperty.new(
         property: "details",
         status: format_data["details"] || "required",
-        required_definition: "details",
-        optional_definition: "details",
-        forbidden_definition: "empty_object"
+        definition: "details",
       )
     end
 
@@ -47,9 +41,7 @@ module SchemaGenerator
       @redirects ||= OptionalProperty.new(
         property: "redirects",
         status: format_data["redirects"] || "required",
-        required_definition: "redirects",
-        optional_definition: "redirects_optional",
-        forbidden_definition: "empty_array"
+        definition: "redirects",
       )
     end
 
@@ -57,9 +49,7 @@ module SchemaGenerator
       @rendering_app ||= OptionalProperty.new(
         property: "base_path",
         status: format_data["rendering_app"] || "required",
-        required_definition: "rendering_app",
-        optional_definition: "rendering_app_optional",
-        forbidden_definition: "null"
+        definition: "rendering_app",
       )
     end
 
@@ -67,9 +57,7 @@ module SchemaGenerator
       @routes ||= OptionalProperty.new(
         property: "routes",
         status: format_data["routes"] || "required",
-        required_definition: "routes",
-        optional_definition: "routes_optional",
-        forbidden_definition: "empty_array"
+        definition: "routes",
       )
     end
 
@@ -77,9 +65,7 @@ module SchemaGenerator
       @title ||= OptionalProperty.new(
         property: "title",
         status: format_data["title"] || "required",
-        required_definition: "title",
-        optional_definition: "title_optional",
-        forbidden_definition: "null"
+        definition: "title",
       )
     end
 
@@ -88,9 +74,7 @@ module SchemaGenerator
       OptionalProperty.new(
         property: "content_id",
         status: frontend ? frontend_status : "required",
-        required_definition: "guid",
-        optional_definition: "guid_optional",
-        forbidden_definition: "null"
+        definition: "guid",
       )
     end
 
@@ -122,7 +106,7 @@ module SchemaGenerator
       @content_links ||= create_content_links
     end
 
-    def schema_name_definition
+    def schema_name_schema
       if schema_name == "placeholder"
         {
           "type" => "string",
@@ -167,7 +151,7 @@ module SchemaGenerator
         @document_types = document_types
       end
 
-      def definition
+      def schema
         if !document_types || document_types.empty?
           return build_definition(allowed_document_types)
         end
@@ -204,15 +188,11 @@ module SchemaGenerator
       def initialize(
         property:,
         status:,
-        required_definition:,
-        optional_definition:,
-        forbidden_definition:
+        definition:
       )
         @property = property
         @status = status
-        @required_definition = required_definition
-        @optional_definition = optional_definition
-        @forbidden_definition = forbidden_definition
+        @definition = definition
 
         unless VALID_STATUSES.include?(status)
           raise InvalidFormat, "Invalid value for #{property}: #{status}. Expected #{VALID_STATUSES.join(', ')}"
@@ -224,16 +204,15 @@ module SchemaGenerator
       end
 
       def required?
-        status == "required"
+        @status == "required"
       end
 
       def forbidden?
-        status == "forbidden"
+        @status == "forbidden"
       end
 
-      def definition
-        determined = determined_definition
-        case determined
+      def schema
+        case @definition
         when "null"
           { "type" => "null" }
         when "empty_array"
@@ -249,19 +228,8 @@ module SchemaGenerator
             "additionalProperties" => false
           }
         else
-          { "$ref" => "#/definitions/#{determined}" }
+          { "$ref" => "#/definitions/#{@definition}" }
         end
-      end
-
-    private
-
-      attr_reader :property, :status, :required_definition,
-        :optional_definition, :forbidden_definition
-
-      def determined_definition
-        return forbidden_definition if forbidden?
-        return required_definition if required?
-        optional_definition
       end
     end
 

@@ -42,30 +42,39 @@ module SchemaGenerator
 
     def derived_properties
       properties = {
-        "base_path" => format.base_path.definition,
-        "content_id" => format.content_id(frontend: false).definition,
-        "document_type" => format.document_type.definition,
-        "description" => format.description.definition,
-        "details" => format.details.definition,
+        "base_path" => format.base_path.schema,
+        "content_id" => format.content_id(frontend: false).schema,
+        "document_type" => format.document_type.schema,
+        "description" => format.description.schema,
+        "details" => format.details.schema,
         "expanded_links" => ExpandedLinks.new(format).generate,
         "links" => unexpanded_links,
-        "redirects" => format.redirects.definition,
-        "rendering_app" => format.rendering_app.definition,
-        "routes" => format.routes.definition,
-        "schema_name" => format.schema_name_definition,
-        "title" => format.title.definition,
+        "redirects" => format.redirects.schema,
+        "rendering_app" => format.rendering_app.schema,
+        "routes" => format.routes.schema,
+        "schema_name" => format.schema_name_schema,
+        "title" => format.title.schema,
       }
     end
 
     def default_required_properties
-      %w(
-        base_path
-        content_id
-        document_type
-        govuk_request_id
-        payload_version
-        schema_name
-      )
+      [
+        %w(
+          document_type
+          govuk_request_id
+          payload_version
+          schema_name
+        ),
+        %w(
+          base_path
+          content_id
+          rendering_app
+          routes
+          redirects
+        ).select do |property|
+          format.send(property).required?
+        end
+      ].flatten
     end
 
     def publishing_required_properties
@@ -83,9 +92,6 @@ module SchemaGenerator
         phase
         public_updated_at
         publishing_app
-        redirects
-        rendering_app
-        routes
         title
         update_type
         user_journey_document_supertype

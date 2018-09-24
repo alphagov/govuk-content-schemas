@@ -14,13 +14,13 @@
   },
   redirects: {
     type: "array",
-    minItems: 1,
     items: {
       "$ref": "#/definitions/redirect_route",
     },
   },
-  redirects_optional: {
+  non_empty_redirects: {
     type: "array",
+    minItems: 1,
     items: {
       "$ref": "#/definitions/redirect_route",
     },
