@@ -20,6 +20,9 @@
     "base_path": {
       "type": "null"
     },
+    "bulk_publishing": {
+      "type": "boolean"
+    },
     "change_note": {
       "type": [
         "null",

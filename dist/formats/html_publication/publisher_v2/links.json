@@ -3,6 +3,9 @@
   "type": "object",
   "additionalProperties": false,
   "properties": {
+    "bulk_publishing": {
+      "type": "boolean"
+    },
     "links": {
       "type": "object",
       "additionalProperties": false,
