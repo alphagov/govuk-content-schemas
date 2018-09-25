@@ -64,10 +64,10 @@
       maxItems: 1,
     },
     related_policies: "",
-    ministers: "",
+    ministers: "Deprecated. These are relations to minister people pages, this is superseded by 'people'",
     topical_events: "",
     world_locations: "",
-    roles: "Used to power Email Alert Api subscriptions for Whitehall content",
-    people: "Used to power Email Alert Api subscriptions for Whitehall content",
+    roles: "Government roles that are associated with this document, typically the role part of a role association",
+    people: "People that are associated with this document, typically the person part of a role association",
   },
 }
