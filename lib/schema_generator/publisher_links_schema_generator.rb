@@ -24,7 +24,8 @@ module SchemaGenerator
     def properties
       {
         "links" => links,
-        "previous_version" => { "type" => "string" }
+        "previous_version" => { "type" => "string" },
+        "bulk_publishing" => { "type" => "boolean" }
       }
     end
 

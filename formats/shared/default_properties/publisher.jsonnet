@@ -2,6 +2,9 @@
   access_limited: {
     "$ref": "#/definitions/access_limited",
   },
+  bulk_publishing: {
+    type: "boolean",
+  },
   change_note: {
     type: [
       "null",

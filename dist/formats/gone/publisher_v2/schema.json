@@ -17,6 +17,9 @@
     "base_path": {
       "$ref": "#/definitions/absolute_path_optional"
     },
+    "bulk_publishing": {
+      "type": "boolean"
+    },
     "change_note": {
       "type": [
         "null",
