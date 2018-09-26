@@ -107,6 +107,7 @@
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
         "ministers": {
+          "description": "Deprecated. These are relations to minister people pages, this is superseded by 'people'",
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
         "ordered_related_items": {
@@ -135,7 +136,7 @@
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
         "people": {
-          "description": "Used to power Email Alert Api subscriptions for Whitehall content",
+          "description": "People that are associated with this document, typically the person part of a role association",
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
         "policies": {
@@ -159,7 +160,7 @@
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
         "roles": {
-          "description": "Used to power Email Alert Api subscriptions for Whitehall content",
+          "description": "Government roles that are associated with this document, typically the role part of a role association",
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
         "speaker": {

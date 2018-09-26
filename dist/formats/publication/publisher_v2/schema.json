@@ -75,6 +75,7 @@
       "additionalProperties": false,
       "properties": {
         "ministers": {
+          "description": "Deprecated. These are relations to minister people pages, this is superseded by 'people'",
           "$ref": "#/definitions/guid_list"
         },
         "organisations": {
@@ -88,7 +89,7 @@
           "$ref": "#/definitions/guid_list"
         },
         "people": {
-          "description": "Used to power Email Alert Api subscriptions for Whitehall content",
+          "description": "People that are associated with this document, typically the person part of a role association",
           "$ref": "#/definitions/guid_list"
         },
         "policy_areas": {
@@ -107,7 +108,7 @@
           "$ref": "#/definitions/guid_list"
         },
         "roles": {
-          "description": "Used to power Email Alert Api subscriptions for Whitehall content",
+          "description": "Government roles that are associated with this document, typically the role part of a role association",
           "$ref": "#/definitions/guid_list"
         },
         "topical_events": {
