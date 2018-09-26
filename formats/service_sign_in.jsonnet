@@ -35,6 +35,12 @@
         description: {
           "$ref": "#/definitions/body_html_and_govspeak",
         },
+        tracking_code: {
+          type: "string"
+        },
+        tracking_name: {
+          type: "string"
+        },
         options: {
           type: "array",
           additionalProperties: false,
