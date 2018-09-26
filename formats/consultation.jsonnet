@@ -98,15 +98,15 @@
     },
   },
   edition_links: (import "shared/whitehall_edition_links.jsonnet") + {
-    ministers: "",
-    people: "Used to power Email Alert Api subscriptions for Whitehall content",
-    roles: "Used to power Email Alert Api subscriptions for Whitehall content",
+    ministers: "Deprecated. These are relations to minister people pages, this is superseded by 'people'",
+    people: "People that are associated with this document, typically the person part of a role association",
+    roles: "Government roles that are associated with this document, typically the role part of a role association",
   },
   links: (import "shared/base_links.jsonnet") + {
     related_policies: "",
-    ministers: "",
+    ministers: "Deprecated. These are relations to minister people pages, this is superseded by 'people'",
     topical_events: "",
-    roles: "Used to power Email Alert Api subscriptions for Whitehall content",
-    people: "Used to power Email Alert Api subscriptions for Whitehall content",
+    people: "People that are associated with this document, typically the person part of a role association",
+    roles: "Government roles that are associated with this document, typically the role part of a role association",
   },
 }

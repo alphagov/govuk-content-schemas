@@ -30,22 +30,22 @@
       maxItems: 1,
       minItems: 1,
     },
-    ministers: "",
+    ministers: "Deprecated. These are relations to minister people pages, this is superseded by 'people'",
     organisations: "All organisations linked to this content item. This should include lead organisations.",
-    people: "Used to power Email Alert Api subscriptions for Whitehall content",
+    people: "People that are associated with this document, typically the person part of a role association",
     primary_publishing_organisation: {
       description: "The organisation that published the page. Corresponds to the first of the 'Lead organisations' in Whitehall, and is empty for all other publishing applications.",
       maxItems: 1,
     },
     original_primary_publishing_organisation: "The organisation that published the original version of the page. Corresponds to the first of the 'Lead organisations' in Whitehall for the first edition, and is empty for all other publishing applications.",
-    roles: "Used to power Email Alert Api subscriptions for Whitehall content",
+    roles: "Government roles that are associated with this document, typically the role part of a role association",
   },
   links: (import "shared/base_links.jsonnet") + {
     field_of_operation: {
       maxItems: 1,
     },
-    ministers: "",
-    people: "Used to power Email Alert Api subscriptions for Whitehall content",
-    roles: "Used to power Email Alert Api subscriptions for Whitehall content",
+    ministers: "Deprecated. These are relations to minister people pages, this is superseded by 'people'",
+    people: "People that are associated with this document, typically the person part of a role association",
+    roles: "Government roles that are associated with this document, typically the role part of a role association",
   },
 }

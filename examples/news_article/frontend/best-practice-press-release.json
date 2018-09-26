@@ -60,7 +60,7 @@
         "web_url": "https:\/\/www.gov.uk\/government\/collections\/frank"
       }
     ],
-    "ministers": [
+    "people": [
       {
         "api_path": "\/api\/content\/government\/people\/jeremy-browne",
         "base_path": "\/government\/people\/jeremy-browne",
