@@ -1,6 +1,6 @@
 {
   "analytics_identifier": null,
-  "base_path": "/export-health-certificates/export-chicken-to-spain",
+  "base_path": "/export-health-certificates/export-fish-to-spain",
   "content_id": "8c26d04d-47ba-40df-ad20-82a87733fade",
   "content_purpose_document_supertype": "other",
   "content_purpose_supergroup": "other",
@@ -19,7 +19,7 @@
   "scheduled_publishing_delay_seconds": null,
   "schema_name": "specialist_document",
   "search_user_need_document_supertype": "government",
-  "title": "Export chicken to Spain",
+  "title": "Export fish to Spain",
   "updated_at": "2018-09-14T13:36:44.654Z",
   "user_journey_document_supertype": "thing",
   "withdrawn_notice": {},
@@ -926,7 +926,7 @@
     "body": "<p>jsndfkjs</p>\n",
     "metadata": {
       "certificate_status": "active",
-      "commodity_type": "poultry",
+      "commodity_type": "fish",
       "destination_country": [
         "spain"
       ]
