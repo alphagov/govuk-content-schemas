@@ -1,0 +1,171 @@
+{
+  "title": "Office of the Secretary of State for Wales",
+  "base_path": "/government/organisations/office-of-the-secretary-of-state-for-wales",
+  "content_id": "f323e83c-868b-4bcb-b6e2-a8f9bb40397c",
+  "analytics_identifier": "D1197",
+  "description": null,
+  "document_type": "organisation",
+  "first_published_at": "2016-07-14T18:15:21.000+00:00",
+  "locale": "en",
+  "phase": "live",
+  "public_updated_at": "2018-01-09T10:07:59.000+00:00",
+  "publishing_app": "whitehall",
+  "rendering_app": "collections",
+  "schema_name": "organisation",
+  "updated_at": "2018-03-27T18:42:06.661Z",
+  "details": {
+    "body": "The Office of the Secretary of State for Wales supports the Welsh Secretary",
+    "brand": "wales-office",
+    "logo": {
+      "formatted_title": "Office of the Secretary of State for Wales<br/>Swyddfa Ysgrifennydd Gwladol Cymru",
+      "crest": "single-identity"
+    },
+    "organisation_govuk_status": {
+      "status": "live"
+    },
+    "organisation_type": "non_ministerial_department",
+    "ordered_featured_links": [
+      {
+        "title": "Wales Office Featured Link",
+        "href": "/wales/link/1"
+      }
+    ],
+    "ordered_featured_documents": [
+      {
+        "title": "Welsh Secretary hails outstanding individuals in the Queen's Birthday Honours list",
+        "href": "/government/news/welsh-secretary-hails-outstanding-individuals-in-the-queens-birthday-honours-list",
+        "image": {
+          "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/feature/image/63372/GOV.UK_honours_web.jpg",
+          "alt_text": "Queen's Birthday Honours"
+        },
+        "summary": "Alun Cairns: \"I'm proud to see people from all walks of Welsh life honoured today\".",
+        "public_updated_at": "2018-06-08T23:23:11.000+01:00",
+        "document_type": "Press release"
+      }
+    ],
+    "social_media_links": [
+      {
+        "service_type": "twitter",
+        "title": "Twitter",
+        "href": "https://twitter.com/UKGovWales"
+      },
+      {
+        "service_type": "twitter",
+        "title": "Trydar",
+        "href": "https://twitter.com/LlywDUCymru"
+      }
+    ],
+    "ordered_military_personnel": [
+      {
+        "name": "Air Chief Marshal Sir  Stuart Peach GBE KCB ADC DL",
+        "role": "Chief of the Defence Staff",
+        "href": "/government/people/stuart-peach"
+      }
+    ]
+  },
+  "links": {
+    "available_translations": [
+      {
+        "title": "Swyddfa Ysgrifennydd Gwladol Cymru",
+        "public_updated_at": "2017-04-10T09:43:55Z",
+        "analytics_identifier": "D24",
+        "document_type": "organisation",
+        "schema_name": "organisation",
+        "base_path": "/government/organisations/office-of-the-secretary-of-state-for-wales.cy",
+        "api_path": "/api/content/government/organisations/office-of-the-secretary-of-state-for-wales.cy",
+        "withdrawn": false,
+        "content_id": "4f9fe232-e7a2-48e8-99b1-8f7828680493",
+        "locale": "cy",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/office-of-the-secretary-of-state-for-wales.cy",
+        "web_url": "https://www.gov.uk/government/organisations/office-of-the-secretary-of-state-for-wales.cy",
+        "links": {}
+      },
+      {
+        "title": "Office of the Secretary of State for Wales",
+        "public_updated_at": "2017-04-10T09:43:55Z",
+        "analytics_identifier": "D24",
+        "document_type": "organisation",
+        "schema_name": "organisation",
+        "base_path": "/government/organisations/office-of-the-secretary-of-state-for-wales",
+        "api_path": "/api/content/government/organisations/office-of-the-secretary-of-state-for-wales",
+        "withdrawn": false,
+        "content_id": "4f9fe232-e7a2-48e8-99b1-8f7828680493",
+        "locale": "en",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/office-of-the-secretary-of-state-for-wales",
+        "web_url": "https://www.gov.uk/government/organisations/office-of-the-secretary-of-state-for-wales",
+        "links": {}
+      }
+    ],
+    "ordered_contacts": [],
+    "ordered_foi_contacts": [
+      {
+        "content_id": "c9253289-a38e-422b-b16d-90e4b3b373d2",
+        "document_type": "contact",
+        "locale": "en",
+        "public_updated_at": "2017-02-07T13:12:46Z",
+        "schema_name": "contact",
+        "title": "FOI requests",
+        "withdrawn": false,
+        "details": {
+          "title": "FOI stuff",
+          "description": "FOI requests\r\n\r\nare possible",
+          "post_addresses": [
+            {
+              "title": "Office of the Secretary of State for Wales",
+              "street_address": "Gwydyr House\r\nWhitehall",
+              "locality": "",
+              "postal_code": "SW1A 2NP"
+            },
+            {
+              "title": "Office of the Secretary of State for Wales Cardiff",
+              "street_address": "White House\r\nCardiff",
+              "locality": "",
+              "postal_code": "W1 3BZ"
+            }
+          ],
+          "email_addresses": [
+            {
+              "email": "walesofficefoi@walesoffice.gsi.gov.uk"
+            },
+            {
+              "email": "foiwales@walesoffice.gsi.gov.uk"
+            }
+          ],
+          "contact_form_links": [
+            {
+              "title": "",
+              "link": "/foi_contact_link",
+              "description": ""
+            }
+          ]
+        }
+      },
+      {
+        "content_id": "c9253289-a38e-422b-b16d-90e4b3b373d3",
+        "document_type": "contact",
+        "locale": "en",
+        "public_updated_at": "2017-02-07T13:12:46Z",
+        "schema_name": "contact",
+        "title": "FOI requests 2",
+        "withdrawn": false,
+        "details": {
+          "description": "Something here\r\n\r\nSomething there",
+          "post_addresses": [
+            {
+              "title": "The Welsh Office",
+              "street_address": "Green House\r\nBracknell",
+              "locality": "",
+              "postal_code": "B2 3ZZ"
+            }
+          ],
+          "email_addresses": [
+            {
+              "email": "welshofficefoi@walesoffice.gsi.gov.uk"
+            }
+          ],
+          "contact_form_links": []
+        }
+      }
+    ]
+  }
+}

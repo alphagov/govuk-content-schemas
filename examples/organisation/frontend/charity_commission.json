@@ -1,0 +1,88 @@
+{
+  "title": "The Charity Commission",
+  "base_path": "/government/organisations/charity-commission",
+  "content_id": "f323e83c-868b-4bcb-b6e2-a8f9bb40397a",
+  "analytics_identifier": "D1197",
+  "description": null,
+  "document_type": "organisation",
+  "first_published_at": "2016-07-14T18:15:21.000+00:00",
+  "locale": "en",
+  "phase": "live",
+  "public_updated_at": "2018-01-09T10:07:59.000+00:00",
+  "publishing_app": "whitehall",
+  "rendering_app": "collections",
+  "schema_name": "organisation",
+  "updated_at": "2018-03-27T18:42:06.661Z",
+  "details": {
+    "body": "We register and regulate charities in England and Wales, to ensure that the public can support charities with confidence.\r\n",
+    "brand": "department-for-business-innovation-skills",
+    "logo": {
+      "formatted_title": "Charity Commission",
+      "image": {
+        "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/organisation/logo/98/Home_page.jpg",
+        "alt_text": "The Charity Commission"
+      }
+    },
+    "foi_exempt": true,
+    "organisation_govuk_status": {
+      "status": "live"
+    },
+    "organisation_type": "non_ministerial_department",
+    "organisation_featuring_priority": "service",
+    "ordered_featured_links": [
+      {
+        "title": "Find a charity",
+        "href": "http://apps.charitycommission.gov.uk/showcharity/registerofcharities/RegisterHomePage.aspx"
+      },
+      {
+        "title": "Online services and contact forms",
+        "href": "https://www.gov.uk/government/organisations/charity-commission/about/about-our-services"
+      }
+    ],
+    "ordered_featured_documents": [
+      {
+        "title": "Charity annual return 2018",
+        "href": "/government/news/charity-annual-return-2018",
+        "image": {
+          "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/feature/image/63313/AR18_prepare_v1.1.png",
+          "alt_text": "Annual return service 2018"
+        },
+        "summary": "How you can prepare for the 2018 annual return service, which will be available this summer. ",
+        "public_updated_at": "2018-06-06T10:56:00.000+01:00",
+        "document_type": "News story"
+      }
+    ],
+    "social_media_links": [
+      {
+        "service_type": "twitter",
+        "title": "Twitter",
+        "href": "https://twitter.com/chtycommission"
+      },
+      {
+        "service_type": "youtube",
+        "title": "YouTube",
+        "href": "http://www.youtube.com/TheCharityCommission"
+      }
+    ]
+  },
+  "links": {
+    "available_translations": [],
+    "ordered_featured_policies": [
+      {
+        "api_path": "/api/content/government/policies/waste-and-recycling",
+        "base_path": "/government/policies/waste-and-recycling",
+        "content_id": "5d5e9324-7631-11e4-a3cb-005056011aef",
+        "description": "What the government’s doing about waste and recycling.",
+        "document_type": "policy",
+        "locale": "en",
+        "public_updated_at": "2015-05-14T16:39:48Z",
+        "schema_name": "policy",
+        "title": "Waste and recycling",
+        "withdrawn": false,
+        "links": {},
+        "api_url": "https://www.gov.uk/api/content/government/policies/waste-and-recycling",
+        "web_url": "https://www.gov.uk/government/policies/waste-and-recycling"
+      }
+    ]
+  }
+}
