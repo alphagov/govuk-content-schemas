@@ -38,56 +38,10 @@
       "title": "Court of Appeal Civil Division",
       "withdrawn": false,
       "details": {
-        "acronym": "",
-        "body": "<div class=\"govspeak\">\n<p>Court of Appeal Civil Division is a court of <a class=\"brand__color\" href=\"/government/organisations/hm-courts-and-tribunals-service\">HM Courts &amp; Tribunals Service</a>.</p>\n</div>",
         "brand": null,
         "logo": {
           "formatted_title": "Court of Appeal <br/>Civil Division"
-        },
-        "foi_exempt": false,
-        "ordered_corporate_information_pages": [{
-          "title": "Jobs",
-          "href": "https://www.civilservicejobs.service.gov.uk/csr"
-        }],
-        "secondary_corporate_information_pages": "",
-        "ordered_featured_links": [{
-            "title": "Appeal to the Court of Appeal Civil Division",
-            "href": "https://www.gov.uk/guidance/appeal-to-the-court-of-appeal-civil-division"
-          },
-          {
-            "title": "Judicial assistants in the Court of Appeal Civil Division",
-            "href": "https://www.gov.uk/guidance/judicial-assistants-in-the-court-of-appeal-civil-division"
-          },
-          {
-            "title": "Track the progress of a case",
-            "href": "http://casetracker.justice.gov.uk/listing_calendar/search.jsp"
-          },
-          {
-            "title": "Timescales for listing cases",
-            "href": "https://www.judiciary.gov.uk/publications/practice-guidance-court-of-appeal-hear-by-dates/"
-          },
-          {
-            "title": "Find out which court or tribunal to appeal to ",
-            "href": "https://www.gov.uk/which-court-or-tribunal-to-appeal-to"
-          }
-        ],
-        "ordered_featured_documents": [],
-        "ordered_promotional_features": [],
-        "ordered_ministers": [],
-        "ordered_board_members": [],
-        "ordered_military_personnel": [],
-        "ordered_traffic_commissioners": [],
-        "ordered_chief_professional_officers": [],
-        "ordered_special_representatives": [],
-        "important_board_members": 1,
-        "organisation_featuring_priority": "service",
-        "organisation_govuk_status": {
-          "status": "live",
-          "url": null,
-          "updated_at": null
-        },
-        "organisation_type": "court",
-        "social_media_links": []
+        }
       },
       "links": {},
       "api_url": "https://www-origin.integration.publishing.service.gov.uk/api/content/courts-tribunals/court-of-appeal-civil-division",
