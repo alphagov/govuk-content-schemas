@@ -27,7 +27,7 @@
             "slug": "afghanistan",
             "name": "Afghanistan",
             "synonyms": [
-  
+
             ]
           },
           "change_description": "Latest update: Summary - on 26 October 2015 a serious earthquake struck causing casualties around the country and affecting communications networks; if someone you know is likely to have been involved and you're unable to contact them, contact the British Embassy in Kabul"
@@ -74,14 +74,16 @@
         "schema_name": "travel_advice",
         "title": "Finland travel advice",
         "withdrawn": false,
-        "country": {
-          "slug": "finland",
-          "name": "Finland",
-          "synonyms": [
-            "arctic"
-          ]
+        "details": {
+          "country": {
+            "slug": "finland",
+            "name": "Finland",
+            "synonyms": [
+              "arctic"
+            ]
+          },
+          "change_description": "Latest update: Summary – removal of advice on Northern Ireland football match"
         },
-        "change_description": "Latest update: Summary – removal of advice on Northern Ireland football match",
         "links": {
         },
         "api_url": "http://www.dev.gov.uk/api/content/foreign-travel-advice/finland",
@@ -99,14 +101,16 @@
         "schema_name": "travel_advice",
         "title": "India travel advice",
         "withdrawn": false,
-        "country": {
-          "slug": "india",
-          "name": "India",
-          "synonyms": [
+        "details": {
+          "country": {
+            "slug": "india",
+            "name": "India",
+            "synonyms": [
 
-          ]
+            ]
+          },
+          "change_description": "Latest update: Summary – removal of advice on Assam floods and the curfew in Srinagar "
         },
-        "change_description": "Latest update: Summary – removal of advice on Assam floods and the curfew in Srinagar ",
         "links": {
         },
         "api_url": "http://www.dev.gov.uk/api/content/foreign-travel-advice/india",
@@ -124,14 +128,16 @@
         "schema_name": "travel_advice",
         "title": "Malaysia travel advice",
         "withdrawn": false,
-        "country": {
-          "slug": "malaysia",
-          "name": "Malaysia",
-          "synonyms": [
-            "Borneo"
-          ]
+        "details": {
+          "country": {
+            "slug": "malaysia",
+            "name": "Malaysia",
+            "synonyms": [
+              "Borneo"
+            ]
+          },
+          "change_description": "Latest update: Summary - haze can cause disruption to local, regional air travel and to government and private schools"
         },
-        "change_description": "Latest update: Summary - haze can cause disruption to local, regional air travel and to government and private schools",
         "api_url": "http://www.dev.gov.uk/api/content/foreign-travel-advice/malaysia",
         "web_url": "http://www.dev.gov.uk/foreign-travel-advice/malaysia"
       },
@@ -147,15 +153,17 @@
         "schema_name": "travel_advice",
         "title": "Sao Tome & Principe travel advice",
         "withdrawn": false,
-        "country": {
-          "slug": "sao-tome-and-principe",
-          "name": "São Tomé and Principe",
-          "synonyms": [
-            "Sao Tome and Principe",
-            "Sao Tome & Principe"
-          ]
+        "details": {
+          "country": {
+            "slug": "sao-tome-and-principe",
+            "name": "São Tomé and Principe",
+            "synonyms": [
+              "Sao Tome and Principe",
+              "Sao Tome & Principe"
+            ]
+          },
+          "change_description": "Latest update: Entry requirements section - British nationals don’t need a visa to visit Sao Tome and Principe for up to 15 days; for longer stays, you should get a visa before you travel"
         },
-        "change_description": "Latest update: Entry requirements section - British nationals don’t need a visa to visit Sao Tome and Principe for up to 15 days; for longer stays, you should get a visa before you travel",
         "api_url": "http://www.dev.gov.uk/api/content/foreign-travel-advice/sao-tome-and-principe",
         "web_url": "http://www.dev.gov.uk/foreign-travel-advice/sao-tome-and-principe"
       },
@@ -171,23 +179,25 @@
         "schema_name": "travel_advice",
         "title": "Spain travel advice",
         "withdrawn": false,
-        "country": {
-          "slug": "spain",
-          "name": "Spain",
-          "synonyms": [
-            "Ibiza",
-            "Majorca",
-            "Mallorca",
-            "Lanzarote",
-            "Barcelona",
-            "Benidorm",
-            "Tenerife",
-            "Canary Islands",
-            "Canaries",
-            "Gran Canaria"
-          ]
+        "details": {
+          "country": {
+            "slug": "spain",
+            "name": "Spain",
+            "synonyms": [
+              "Ibiza",
+              "Majorca",
+              "Mallorca",
+              "Lanzarote",
+              "Barcelona",
+              "Benidorm",
+              "Tenerife",
+              "Canary Islands",
+              "Canaries",
+              "Gran Canaria"
+            ]
+          },
+          "change_description": "Latest update: Summary – information and advice for Manchester City fans travelling to Seville "
         },
-        "change_description": "Latest update: Summary – information and advice for Manchester City fans travelling to Seville ",
         "api_url": "http://www.dev.gov.uk/api/content/foreign-travel-advice/spain",
         "web_url": "http://www.dev.gov.uk/foreign-travel-advice/spain"
       }
