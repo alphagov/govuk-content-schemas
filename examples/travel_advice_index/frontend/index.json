@@ -49,14 +49,16 @@
         "schema_name": "travel_advice",
         "title": "Austria travel advice",
         "withdrawn": false,
-        "country": {
-          "slug": "austria",
-          "name": "Austria",
-          "synonyms": [
+        "details": {
+          "country": {
+            "slug": "austria",
+            "name": "Austria",
+            "synonyms": [
 
-          ]
+            ]
+          },
+          "change_description": "Latest update: Summary – there’s ongoing disruption to rail and road transport; you should monitor local media and check with your transport provider or the Austrian Railways (OBB) website"
         },
-        "change_description": "Latest update: Summary – there’s ongoing disruption to rail and road transport; you should monitor local media and check with your transport provider or the Austrian Railways (OBB) website",
         "links": {
         },
         "api_url": "http://www.dev.gov.uk/api/content/foreign-travel-advice/austria",
