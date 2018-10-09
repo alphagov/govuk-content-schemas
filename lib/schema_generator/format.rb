@@ -267,6 +267,7 @@ module SchemaGenerator
 
     class Links
       ALLOWED_KEYS = %w(description required minItems maxItems).freeze
+      LINKS_WITHOUT_BASE_PATHS = %w(ordered_contacts ordered_foi_contacts world_locations).freeze
 
       attr_reader :links
 
@@ -294,7 +295,7 @@ module SchemaGenerator
           # however apps aren't coded for this so fail on this, therefore
           # this legacy fix is included.
           # @FIXME remove need for this check
-          definition = k == "world_locations" ? "frontend_links" : "frontend_links_with_base_path"
+          definition = LINKS_WITHOUT_BASE_PATHS.include?(k) ? "frontend_links" : "frontend_links_with_base_path"
           link = v.merge({ "$ref" => "#/definitions/#{definition}" })
             .delete_if { |field| %w(required minItems).include?(field) }
           hash[k] = link
