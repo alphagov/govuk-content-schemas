@@ -109,7 +109,7 @@
         },
         "ordered_contacts": {
           "description": "Contact details primarily for use with Whitehall organisations.",
-          "$ref": "#/definitions/frontend_links_with_base_path"
+          "$ref": "#/definitions/frontend_links"
         },
         "ordered_featured_policies": {
           "description": "Featured policies primarily for use with Whitehall organisations.",
@@ -117,7 +117,7 @@
         },
         "ordered_foi_contacts": {
           "description": "FoI contact details primarily for use with Whitehall organisations.",
-          "$ref": "#/definitions/frontend_links_with_base_path"
+          "$ref": "#/definitions/frontend_links"
         },
         "ordered_high_profile_groups": {
           "description": "High profile groups primarily for use with Whitehall organisations.",
@@ -809,6 +809,72 @@
       "description": "The date the content was first published.  Automatically determined by the publishing-api, unless overridden by the publishing application.",
       "type": "string",
       "format": "date-time"
+    },
+    "frontend_links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "content_id",
+          "locale",
+          "title"
+        ],
+        "additionalProperties": true,
+        "properties": {
+          "analytics_identifier": {
+            "$ref": "#/definitions/analytics_identifier"
+          },
+          "api_path": {
+            "$ref": "#/definitions/absolute_path"
+          },
+          "api_url": {
+            "description": "DEPRECATED: api_path should be used instead of api_url. This is due to values of api_url being tied to an environment which can cause problems when data is synced between environments. In time this field will be removed by the Publishing Platform team.",
+            "type": "string",
+            "format": "uri"
+          },
+          "base_path": {
+            "$ref": "#/definitions/absolute_path"
+          },
+          "content_id": {
+            "$ref": "#/definitions/guid"
+          },
+          "document_type": {
+            "type": "string"
+          },
+          "links": {
+            "type": "object",
+            "patternProperties": {
+              "^[a-z_]+$": {
+                "$ref": "#/definitions/frontend_links_with_base_path"
+              }
+            }
+          },
+          "locale": {
+            "$ref": "#/definitions/locale"
+          },
+          "public_updated_at": {
+            "oneOf": [
+              {
+                "$ref": "#/definitions/public_updated_at"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "schema_name": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "web_url": {
+            "description": "DEPRECATED: base_path should be used instead of web_url. This is due to values of web_url being tied to an environment which can cause problems when data is synced between environments. In time this field will be removed by the Publishing Platform team.",
+            "type": "string",
+            "format": "uri"
+          }
+        }
+      }
     },
     "frontend_links_with_base_path": {
       "type": "array",
