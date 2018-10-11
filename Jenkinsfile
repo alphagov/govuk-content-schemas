@@ -64,6 +64,7 @@ node {
     }
 
     stage("bundle install") {
+      env.JSONNET_USE_SYSTEM_LIBRARIES = 1
       govuk.bundleApp();
     }
 
