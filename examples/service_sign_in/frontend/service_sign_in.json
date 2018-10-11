@@ -31,6 +31,7 @@
       "title": "Prove your identity to continue",
       "slug": "choose-sign-in",
       "tracking_code": "UA-xxxxxx",
+      "tracking_domain": "tax.service.gov.uk",
       "tracking_name": "somethingClicky",
       "description": "<p>You can't file online until you've activated Government Gateway account using your Unique Taxpayer Reference(UTR).</p>",
       "options": [

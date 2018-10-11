@@ -38,6 +38,9 @@
         tracking_code: {
           type: "string"
         },
+        tracking_domain: {
+          type: "string"
+        },
         tracking_name: {
           type: "string"
         },
