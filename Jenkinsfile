@@ -13,6 +13,7 @@ def dependentApplications = [
   ['collections-publisher', true],
   ['collections', true],
   ['contacts', true],
+  ['content-performance-manager', true],
   ['content-store', true],
   ['content-tagger', true],
   ['email-alert-frontend', true],
