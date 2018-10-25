@@ -20,7 +20,6 @@
       "manuals-publisher",
       "maslow",
       "performanceplatform-big-screen-view",
-      "policy-publisher",
       "publisher",
       "rummager",
       "search-admin",

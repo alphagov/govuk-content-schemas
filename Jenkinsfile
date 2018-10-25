@@ -27,7 +27,6 @@ def dependentApplications = [
   ['licencefinder', true],
   ['manuals-frontend', true],
   ['manuals-publisher', true],
-  ['policy-publisher', true],
   ['publisher', true],
   ['publishing-api', true],
   ['rummager', true],
