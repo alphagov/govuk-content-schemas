@@ -1,0 +1,89 @@
+{
+  "title": "Prime Minister's Office, 10 Downing Street",
+  "base_path": "/government/organisations/prime-ministers-office-10-downing-street",
+  "content_id": "f323e83c-868b-4bcb-b6e2-a8f9bb40397b",
+  "analytics_identifier": "D1197",
+  "description": null,
+  "document_type": "organisation",
+  "first_published_at": "2016-07-14T18:15:21.000+00:00",
+  "locale": "en",
+  "phase": "live",
+  "public_updated_at": "2018-01-09T10:07:59.000+00:00",
+  "publishing_app": "whitehall",
+  "rendering_app": "collections",
+  "schema_name": "organisation",
+  "updated_at": "2018-03-27T18:42:06.661Z",
+  "details": {
+    "body": "10 Downing Street is the official residence and the office of the British Prime Minister.",
+    "brand": "cabinet-office",
+    "logo": {
+      "formatted_title": "Prime Minister&#39;s Office, 10 Downing Street",
+      "crest": "eo"
+    },
+    "organisation_govuk_status": {
+      "status": "live"
+    },
+    "organisation_type": "executive_office",
+    "organisation_featuring_priority": "news",
+    "ordered_featured_documents": [
+      {
+        "title": "Government calls on technology firms to help tackle the UK’s biggest challenges",
+        "href": "/government/news/government-calls-on-technology-firms-to-help-tackle-the-uks-biggest-challenges",
+        "image": {
+          "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/feature/image/62609/Dowden.jpg",
+          "alt_text": "Cabinet Office Minister Oliver Dowden"
+        },
+        "summary": "The government is launching competitions for tech firms to develop solutions to tackle the major social challenges of our modern age.",
+        "public_updated_at": "2018-05-10T00:00:01.000+01:00",
+        "document_type": "Press release"
+      }
+    ],
+    "ordered_ministers": [
+      {
+        "name_prefix": "The Rt Hon",
+        "name": "Theresa May MP",
+        "role": "Prime Minister",
+        "href": "/government/people/theresa-may",
+        "role_href": "/government/ministers/prime-minister",
+        "image": {
+          "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/person/image/6/PM_portrait_960x640.jpg",
+          "alt_text": "Theresa May MP"
+        }
+      }
+    ],
+    "social_media_links": [
+      {
+        "service_type": "twitter",
+        "title": "Twitter - @10DowningStreet",
+        "href": "https://twitter.com/@10DowningStreet"
+      },
+      {
+        "service_type": "facebook",
+        "title": "Facebook",
+        "href": "https://www.facebook.com/10downingstreet"
+      }
+    ],
+    "ordered_promotional_features": []
+  },
+  "links": {
+    "available_translations": [],
+    "ordered_high_profile_groups": [
+      {
+        "content_id": "49e09fa7-f65b-49d6-b4ab-0ca82a548e93",
+        "document_type": "organisation",
+        "locale": "en",
+        "public_updated_at": "2017-10-03T12:48:26Z",
+        "base_path": "/government/organisations/attorney-generals-office-1",
+        "title": "High Profile Group 1"
+      },
+      {
+        "content_id": "49e09fa7-f65b-49d6-b4ab-0ca82a548e94",
+        "document_type": "organisation",
+        "locale": "en",
+        "public_updated_at": "2017-10-03T12:48:26Z",
+        "base_path": "/government/organisations/attorney-generals-office-2",
+        "title": "High Profile Group 2"
+      }
+    ]
+  }
+}
