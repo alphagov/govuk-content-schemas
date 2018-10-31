@@ -469,7 +469,7 @@
             "type": "object",
             "patternProperties": {
               "^[a-z_]+$": {
-                "$ref": "#/definitions/frontend_links_with_base_path"
+                "$ref": "#/definitions/frontend_links"
               }
             }
           },
