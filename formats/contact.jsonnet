@@ -195,7 +195,6 @@
             type: "object",
             additionalProperties: false,
             required: [
-              "title",
               "street_address",
               "postal_code",
               "world_location",
