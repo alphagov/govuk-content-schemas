@@ -221,6 +221,10 @@
               description: {
                 type: "string",
               },
+              iso2_country_code: {
+                type: "string",
+                description: "The ISO 3166-1 alpha-2 code for the world location, used to determine how address is rendered",
+              }
             },
           },
         },
