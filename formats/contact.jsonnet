@@ -117,7 +117,6 @@
             type: "object",
             additionalProperties: false,
             required: [
-              "title",
               "email",
             ],
             properties: {
