@@ -168,9 +168,6 @@
     },
     "details": {
       "type": "object",
-      "required": [
-        "title"
-      ],
       "additionalProperties": false,
       "properties": {
         "contact_form_links": {
@@ -214,6 +211,7 @@
           "type": "string"
         },
         "description": {
+          "description": "DEPRECATED: this has the same name and data as the top level descriptions field, which should be used instead",
           "type": [
             "string",
             "null"
@@ -224,7 +222,6 @@
           "items": {
             "type": "object",
             "required": [
-              "title",
               "email"
             ],
             "additionalProperties": false,
@@ -339,7 +336,6 @@
           "items": {
             "type": "object",
             "required": [
-              "title",
               "street_address",
               "postal_code",
               "world_location"
@@ -347,6 +343,10 @@
             "additionalProperties": false,
             "properties": {
               "description": {
+                "type": "string"
+              },
+              "iso2_country_code": {
+                "description": "The ISO 3166-1 alpha-2 code for the world location, used to determine how address is rendered",
                 "type": "string"
               },
               "locality": {
@@ -400,6 +400,7 @@
           "type": "string"
         },
         "title": {
+          "description": "DEPRECATED: this has the same name and data as the top level title field, which should be used instead",
           "type": "string"
         }
       }
