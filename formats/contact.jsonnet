@@ -7,21 +7,20 @@
     details: {
       type: "object",
       additionalProperties: false,
-      required: [
-        "title"
-      ],
       properties: {
         slug: {
           type: "string",
         },
         title: {
           type: "string",
+          description: "DEPRECATED: this has the same name and data as the top level title field, which should be used instead",
         },
         description: {
           type: [
             "string",
             "null",
           ],
+          description: "DEPRECATED: this has the same name and data as the top level descriptions field, which should be used instead",
         },
         quick_links: {
           type: "array",

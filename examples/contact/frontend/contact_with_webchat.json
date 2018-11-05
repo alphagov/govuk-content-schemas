@@ -117,8 +117,6 @@
   "description": "Contact HMRC for help with questions about Income Tax, including PAYE coding notices, Marriage Allowance and changing your personal details",
   "details": {
     "slug": "income-tax-enquiries-for-individuals-pensioners-and-employees",
-    "title": "Income Tax: general enquiries",
-    "description": "Contact HMRC for help with questions about Income Tax, including PAYE coding notices, Marriage Allowance and changing your personal details",
     "quick_links": [
       {
         "title": "Claim a tax refund ",
