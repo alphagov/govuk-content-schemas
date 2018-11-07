@@ -7,21 +7,20 @@
     details: {
       type: "object",
       additionalProperties: false,
-      required: [
-        "title"
-      ],
       properties: {
         slug: {
           type: "string",
         },
         title: {
           type: "string",
+          description: "DEPRECATED: this has the same name and data as the top level title field, which should be used instead",
         },
         description: {
           type: [
             "string",
             "null",
           ],
+          description: "DEPRECATED: this has the same name and data as the top level descriptions field, which should be used instead",
         },
         quick_links: {
           type: "array",
@@ -118,7 +117,6 @@
             type: "object",
             additionalProperties: false,
             required: [
-              "title",
               "email",
             ],
             properties: {
@@ -197,7 +195,6 @@
             type: "object",
             additionalProperties: false,
             required: [
-              "title",
               "street_address",
               "postal_code",
               "world_location",
@@ -224,6 +221,10 @@
               description: {
                 type: "string",
               },
+              iso2_country_code: {
+                type: "string",
+                description: "The ISO 3166-1 alpha-2 code for the world location, used to determine how address is rendered",
+              }
             },
           },
         },

@@ -3,9 +3,8 @@
   "schema_name": "contact",
   "document_type": "contact",
   "title": "Government Digital Service",
+  "description": "Government Digital Service",
   "details": {
-    "title": "Government Digital Service",
-    "description": "Government Digital Service",
     "contact_type": "general",
     "feature_on_homepage": true,
     "post_addresses": [

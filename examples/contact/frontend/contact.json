@@ -67,8 +67,6 @@
   "description": "Contact HMRC to report all types of smuggling, misuse of red diesel, customs, excise and VAT fraud",
   "details": {
     "slug": "customs-excise-and-vat-fraud-reporting",
-    "title": "Customs, Excise and VAT fraud reporting",
-    "description": "Contact HMRC to report all types of smuggling, misuse of red diesel, customs, excise and VAT fraud",
     "quick_links": [
       {
         "title": "Report smuggling ",
