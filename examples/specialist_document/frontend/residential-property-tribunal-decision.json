@@ -47,12 +47,6 @@
         "title": "Residential property tribunal decisions",
         "withdrawn": false,
         "details": {
-          "document_noun": "decision",
-          "filter": {
-            "document_type": "residential_property_tribunal_decision"
-          },
-          "format_name": "Residential property tribunal decision",
-          "show_summaries": true,
           "facets": [
             {
               "key": "tribunal_decision_category",
@@ -286,8 +280,7 @@
               "display_as_result_metadata": true,
               "filterable": true
             }
-          ],
-          "default_documents_per_page": 50
+          ]
         },
         "phase": "beta",
         "links": {},

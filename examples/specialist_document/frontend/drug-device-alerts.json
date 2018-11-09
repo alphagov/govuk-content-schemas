@@ -175,12 +175,6 @@
         "title": "Alerts and recalls for drugs and medical devices",
         "withdrawn": false,
         "details": {
-          "document_noun": "alert",
-          "filter": {
-            "document_type": "medical_safety_alert"
-          },
-          "format_name": "Medical safety alert",
-          "show_summaries": true,
           "facets": [
             {
               "key": "alert_type",
@@ -315,8 +309,7 @@
               "display_as_result_metadata": true,
               "filterable": true
             }
-          ],
-          "default_documents_per_page": 50
+          ]
         },
         "links": {
         },

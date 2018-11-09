@@ -116,12 +116,6 @@
         "title": "Competition and Markets Authority cases",
         "withdrawn": false,
         "details": {
-          "document_noun": "case",
-          "filter": {
-            "document_type": "cma_case"
-          },
-          "format_name": "Competition and Markets Authority case",
-          "show_summaries": false,
           "facets": [
             {
               "key": "case_type",
@@ -452,8 +446,7 @@
               "display_as_result_metadata": true,
               "filterable": true
             }
-          ],
-          "default_documents_per_page": 50
+          ]
         },
         "links": {
         },

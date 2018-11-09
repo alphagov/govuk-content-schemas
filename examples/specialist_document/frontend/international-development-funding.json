@@ -122,12 +122,6 @@
         "title": "International development funding",
         "withdrawn": false,
         "details": {
-          "document_noun": "fund",
-          "filter": {
-            "document_type": "international_development_fund"
-          },
-          "format_name": "International development funding",
-          "show_summaries": true,
           "facets": [
             {
               "key": "fund_state",
@@ -407,8 +401,7 @@
                 }
               ]
             }
-          ],
-          "default_documents_per_page": 50
+          ]
         },
         "links": {
         },

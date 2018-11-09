@@ -144,13 +144,6 @@
         "title": "Countryside Stewardship grants",
         "withdrawn": false,
         "details": {
-          "document_noun": "grant",
-          "filter": {
-            "document_type": "countryside_stewardship_grant"
-          },
-          "format_name": "Countryside Stewardship grant",
-          "show_summaries": false,
-          "summary": "<p>Find options, supplements and capital items to include in your application for Countryside Stewardship. See <a href=\"government/collections/countryside-stewardship-information-for-agreement-holders\">information for agreement holders</a> for earlier versions.</p>",
           "facets": [
             {
               "key": "grant_type",
@@ -312,8 +305,7 @@
                 }
               ]
             }
-          ],
-          "default_documents_per_page": 50
+          ]
         },
         "links": {
         },

@@ -60,13 +60,6 @@
         "title": "Administrative appeals tribunal decisions",
         "withdrawn": false,
         "details": {
-          "document_noun": "decision",
-          "filter": {
-            "document_type": "utaac_decision"
-          },
-          "format_name": "Administrative appeals tribunal decision",
-          "show_summaries": true,
-          "summary": "<p>Find decisions on appeals to the Upper Tribunal (Administrative Appeals Chamber), including social security and child support appeals.</p><p>This includes decisions made from January 2016 onwards. You can find details of <a rel=\"external\" href=\"http://administrativeappeals.decisions.tribunals.gov.uk/Aspx/default.aspx\">decisions made in 2015 or earlier</a> on the Courts and Tribunals Judiciary website.</p>",
           "facets": [
             {
               "key": "tribunal_decision_categories",
@@ -2471,8 +2464,7 @@
               "display_as_result_metadata": true,
               "filterable": true
             }
-          ],
-          "default_documents_per_page": 50
+          ]
         },
         "links": {
         },

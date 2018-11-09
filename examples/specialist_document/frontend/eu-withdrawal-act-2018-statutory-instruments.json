@@ -118,14 +118,8 @@
       "title": "EU Withdrawal Act 2018 statutory instruments",
       "withdrawn": false,
       "details": {
-        "document_noun": "statutory instrument",
-        "filter": {
-          "document_type": "statutory_instrument"
-        },
-        "format_name": "EU Withdrawal Act 2018 statutory instrument",
-        "show_summaries": false,
-        "summary": "<p>Find proposed negative statutory instruments created under the EU (Withdrawal) Act 2018.</p><p>‘Proposed negative’ means the government is proposing that the statutory instruments don’t need to be debated in parliament.</p>",
-        "facets": [{
+        "facets": [
+          {
             "key": "laid_date",
             "name": "Laid on",
             "short_name": "Laid on",
@@ -247,8 +241,7 @@
               }
             ]
           }
-        ],
-        "default_documents_per_page": 50
+        ]
       },
       "links": {},
       "api_url": "https://www-origin.integration.publishing.service.gov.uk/api/content/eu-withdrawal-act-2018-statutory-instruments",

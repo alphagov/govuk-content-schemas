@@ -57,13 +57,6 @@
         "title": "Employment tribunal decisions",
         "withdrawn": false,
         "details": {
-          "document_noun": "decision",
-          "filter": {
-            "document_type": "employment_tribunal_decision"
-          },
-          "format_name": "Employment tribunal decision",
-          "show_summaries": true,
-          "summary": "<p>Find decisions on Employment Tribunal cases in England, Wales and Scotland.</p>",
           "facets": [
             {
               "key": "tribunal_decision_country",
@@ -327,8 +320,7 @@
               "display_as_result_metadata": true,
               "filterable": true
             }
-          ],
-          "default_documents_per_page": 50
+          ]
         },
         "links": {
         },
