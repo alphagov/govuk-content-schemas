@@ -249,7 +249,7 @@
       "type": "integer"
     },
     "finder_default_order": {
-      "description": "Rummager fields to order the results by",
+      "description": "DEPRECATED: Use “sort” property",
       "type": "string"
     },
     "finder_document_noun": {

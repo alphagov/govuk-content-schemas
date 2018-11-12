@@ -211,6 +211,9 @@
         "signup_link": {
           "$ref": "#/definitions/finder_signup_link"
         },
+        "sort": {
+          "$ref": "#/definitions/finder_sort"
+        },
         "summary": {
           "$ref": "#/definitions/finder_summary"
         }
@@ -232,7 +235,7 @@
       "type": "integer"
     },
     "finder_default_order": {
-      "description": "Rummager fields to order the results by",
+      "description": "DEPRECATED: Use “sort” property",
       "type": "string"
     },
     "finder_document_noun": {
@@ -380,6 +383,32 @@
           "type": "null"
         }
       ]
+    },
+    "finder_sort": {
+      "description": "These are the options for sorting the finder",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "key",
+          "name"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "default": {
+            "description": "Indicates if this should be the default sort option",
+            "type": "boolean"
+          },
+          "key": {
+            "description": "Rummager field name, with an optional preceding “-” to sort in descending order",
+            "type": "string"
+          },
+          "name": {
+            "description": "Label for the sort option",
+            "type": "string"
+          }
+        }
+      }
     },
     "finder_summary": {
       "anyOf": [

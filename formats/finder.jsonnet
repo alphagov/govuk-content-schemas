@@ -37,6 +37,9 @@
         default_order: {
           "$ref": "#/definitions/finder_default_order",
         },
+        sort: {
+          "$ref": "#/definitions/finder_sort",
+        },
         filter: {
           "$ref": "#/definitions/finder_filter",
         },
