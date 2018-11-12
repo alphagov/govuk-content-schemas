@@ -8,8 +8,34 @@
     type: "integer",
   },
   finder_default_order: {
-    description: "Rummager fields to order the results by",
+    description: "DEPRECATED: Use “sort” property",
     type: "string",
+  },
+  finder_sort: {
+    description: "These are the options for sorting the finder",
+    type: "array",
+    items: {
+      type: "object",
+      additionalProperties: false,
+      required: [
+        "key",
+        "name",
+      ],
+      properties: {
+        key: {
+          description: "Rummager field name, with an optional preceding “-” to sort in descending order",
+          type: "string",
+        },
+        name: {
+          description: "Label for the sort option",
+          type: "string",
+        },
+        default: {
+          description: "Indicates if this should be the default sort option",
+          type: "boolean",
+        },
+      },
+    },
   },
   finder_filter: {
     description: "This is the fixed filter that scopes the finder",

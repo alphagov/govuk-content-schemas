@@ -13,6 +13,21 @@
     },
     "show_summaries": true,
     "summary": "The Ministry of Silly Walks researchs silly walks being developed by the British public",
+    "sort": [
+      {
+        "key": "-public_timestamp",
+        "name": "Recently published",
+        "default": true
+      },
+      {
+        "key": "-popularity",
+        "name": "Most popular"
+      },
+      {
+        "key": "-relevance",
+        "name": "Most relevant"
+      }
+    ],
     "facets": [
       {
         "key": "walk_type",
