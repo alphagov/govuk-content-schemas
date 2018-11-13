@@ -11,8 +11,6 @@
       additionalProperties: false,
       required: [
         "body",
-        "government",
-        "political",
       ],
       properties: {
         body: {

@@ -337,9 +337,7 @@
     "details": {
       "type": "object",
       "required": [
-        "body",
-        "government",
-        "political"
+        "body"
       ],
       "additionalProperties": false,
       "properties": {
