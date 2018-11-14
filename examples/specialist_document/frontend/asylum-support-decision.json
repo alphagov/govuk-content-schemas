@@ -69,13 +69,6 @@
         "title": "Asylum support tribunal decisions",
         "withdrawn": false,
         "details": {
-          "document_noun": "decision",
-          "filter": {
-            "document_type": "asylum_support_decision"
-          },
-          "format_name": "Asylum support tribunal decision",
-          "show_summaries": true,
-          "summary": "<p>Find decisions on appeals against the Home Office heard by the First-tier Tribunal (Asylum Support).</p>",
           "facets": [
             {
               "key": "tribunal_decision_categories",
@@ -352,8 +345,7 @@
               "display_as_result_metadata": true,
               "filterable": true
             }
-          ],
-          "default_documents_per_page": 50
+          ]
         },
         "links": {
         },

@@ -137,13 +137,6 @@
         "title": "European Structural and Investment Funds (ESIF)",
         "withdrawn": false,
         "details": {
-          "document_noun": "call",
-          "filter": {
-            "document_type": "european_structural_investment_fund"
-          },
-          "format_name": "ESIF call for proposals",
-          "show_summaries": false,
-          "summary": "<p>Applies to: England (see guidance for <a rel=\"external\" href=\"http://www.scotland.gov.uk/Topics/Business-Industry/support/17404\">Scotland</a>, <a rel=\"external\" href=\"http://wefo.wales.gov.uk/programmes/post2013/?skip=1&amp;lang=en\">Wales</a> and <a rel=\"external\" href=\"https://www.dfpni.gov.uk/topics/finance/european-funding-2014-2020\">Northern Ireland</a>)</p><p>Apply to run projects backed by the European Structural and Investment Fund (ESIF). ESIF includes money from the European Social Fund (ESF), European Regional Development Fund (ERDF) and European Agricultural Fund for Rural Development (EAFRD).</p>",
           "facets": [
             {
               "key": "fund_state",
@@ -300,9 +293,7 @@
               "display_as_result_metadata": true,
               "filterable": false
             }
-          ],
-          "default_order": "-closing_date",
-          "default_documents_per_page": 50
+          ]
         },
         "links": {
         },

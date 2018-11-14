@@ -354,12 +354,6 @@
         "title": "Export health certificates",
         "withdrawn": false,
         "details": {
-          "document_noun": "export health certificate",
-          "filter": {
-            "document_type": "export_health_certificate"
-          },
-          "format_name": "Export health certificate",
-          "show_summaries": false,
           "facets": [
             {
               "key": "destination_country",
@@ -627,8 +621,7 @@
                 }
               ]
             }
-          ],
-          "default_documents_per_page": 50
+          ]
         },
         "links": {},
         "api_url": "http://www.dev.gov.uk/api/content/export-health-certificates",

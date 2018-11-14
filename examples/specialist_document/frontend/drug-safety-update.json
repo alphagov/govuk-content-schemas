@@ -100,12 +100,6 @@
         "title": "Drug Safety Update",
         "withdrawn": false,
         "details": {
-          "document_noun": "update",
-          "filter": {
-            "document_type": "drug_safety_update"
-          },
-          "format_name": "Drug Safety Update",
-          "show_summaries": true,
           "facets": [
             {
               "key": "therapeutic_area",
@@ -218,8 +212,7 @@
               "display_as_result_metadata": true,
               "filterable": true
             }
-          ],
-          "default_documents_per_page": 50
+          ]
         },
         "links": {
         },

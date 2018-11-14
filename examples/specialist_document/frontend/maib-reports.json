@@ -76,12 +76,6 @@
         "title": "Marine Accident Investigation Branch reports",
         "withdrawn": false,
         "details": {
-          "document_noun": "report",
-          "filter": {
-            "document_type": "maib_report"
-          },
-          "format_name": "Marine Accident Investigation Branch report",
-          "show_summaries": true,
           "facets": [
             {
               "key": "vessel_type",
@@ -152,8 +146,7 @@
               "display_as_result_metadata": true,
               "filterable": true
             }
-          ],
-          "default_documents_per_page": 50
+          ]
         },
         "links": {
         },
