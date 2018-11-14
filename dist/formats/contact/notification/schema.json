@@ -546,7 +546,6 @@
             "type": "object",
             "required": [
               "street_address",
-              "postal_code",
               "world_location"
             ],
             "additionalProperties": false,

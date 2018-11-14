@@ -196,7 +196,6 @@
             additionalProperties: false,
             required: [
               "street_address",
-              "postal_code",
               "world_location",
             ],
             properties: {
