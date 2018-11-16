@@ -7,10 +7,20 @@ module SchemaGenerator
       return definitions unless definitions["details"]
 
       definitions.tap do |d|
-        d["details"]["properties"]["change_history"] = {
-          "$ref" => "#/definitions/change_history"
-        }
+        if d["details"]["oneOf"]
+          d["details"]["oneOf"].each do |details|
+            self.add_change_history(details)
+          end
+        else
+          self.add_change_history(d["details"])
+        end
       end
+    end
+
+    def self.add_change_history(hash)
+      hash["properties"]["change_history"] = {
+        "$ref" => "#/definitions/change_history"
+      }
     end
   end
 end

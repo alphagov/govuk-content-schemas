@@ -160,96 +160,130 @@
       ]
     },
     "details": {
-      "type": "object",
-      "required": [
-        "email_signup_choice",
-        "email_filter_by",
-        "subscription_list_title_prefix"
-      ],
-      "additionalProperties": false,
-      "properties": {
-        "beta": {
-          "$ref": "#/definitions/finder_beta"
-        },
-        "email_filter_by": {
-          "oneOf": [
-            {
-              "type": "string"
+      "oneOf": [
+        {
+          "type": "object",
+          "required": [
+            "email_signup_choice",
+            "email_filter_by",
+            "subscription_list_title_prefix"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "beta": {
+              "$ref": "#/definitions/finder_beta"
             },
-            {
-              "type": "null"
-            }
-          ]
-        },
-        "email_filter_name": {
-          "oneOf": [
-            {
-              "type": "object",
-              "properties": {
-                "plural": {
+            "email_filter_by": {
+              "oneOf": [
+                {
                   "type": "string"
                 },
-                "singular": {
-                  "type": "string"
+                {
+                  "type": "null"
                 }
-              }
+              ]
             },
-            {
-              "type": "string"
+            "email_filter_name": {
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/facet_name"
+                },
+                {
+                  "type": "null"
+                }
+              ]
             },
-            {
-              "type": "null"
-            }
-          ]
-        },
-        "email_signup_choice": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "required": [
-              "key",
-              "radio_button_name",
-              "topic_name",
-              "prechecked"
-            ],
-            "properties": {
-              "key": {
-                "type": "string"
-              },
-              "prechecked": {
-                "type": "boolean"
-              },
-              "radio_button_name": {
-                "type": "string"
-              },
-              "topic_name": {
-                "type": "string"
-              }
+            "email_signup_choice": {
+              "$ref": "#/definitions/facet_choices"
+            },
+            "subscription_list_title_prefix": {
+              "$ref": "#/definitions/subscription_list_title_prefix"
             }
           }
         },
-        "subscription_list_title_prefix": {
-          "oneOf": [
-            {
-              "type": "object",
-              "properties": {
-                "many": {
-                  "type": "string"
-                },
-                "plural": {
-                  "type": "string"
-                },
-                "singular": {
-                  "type": "string"
+        {
+          "type": "object",
+          "required": [
+            "email_filter_facets",
+            "subscription_list_title_prefix"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "beta": {
+              "$ref": "#/definitions/finder_beta"
+            },
+            "email_filter_facets": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "facet_id",
+                  "facet_name",
+                  "facet_choices"
+                ],
+                "properties": {
+                  "facet_choices": {
+                    "$ref": "#/definitions/facet_choices"
+                  },
+                  "facet_id": {
+                    "type": "string"
+                  },
+                  "facet_name": {
+                    "$ref": "#/definitions/facet_name"
+                  }
                 }
               }
             },
-            {
-              "type": "string"
+            "subscription_list_title_prefix": {
+              "$ref": "#/definitions/subscription_list_title_prefix"
             }
-          ]
+          }
+        }
+      ]
+    },
+    "facet_choices": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "key",
+          "radio_button_name",
+          "topic_name",
+          "prechecked"
+        ],
+        "properties": {
+          "key": {
+            "type": "string"
+          },
+          "prechecked": {
+            "type": "boolean"
+          },
+          "radio_button_name": {
+            "type": "string"
+          },
+          "topic_name": {
+            "type": "string"
+          }
         }
       }
+    },
+    "facet_name": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "plural": {
+              "type": "string"
+            },
+            "singular": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "type": "string"
+        }
+      ]
     },
     "finder_beta": {
       "description": "Indicates if finder is in beta. TODO: Switch to top-level phase label",
@@ -427,6 +461,27 @@
         "$ref": "#/definitions/route"
       },
       "minItems": 1
+    },
+    "subscription_list_title_prefix": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "many": {
+              "type": "string"
+            },
+            "plural": {
+              "type": "string"
+            },
+            "singular": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "type": "string"
+        }
+      ]
     },
     "title": {
       "type": "string"
