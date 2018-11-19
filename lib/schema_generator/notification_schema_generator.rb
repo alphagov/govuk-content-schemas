@@ -61,6 +61,7 @@ module SchemaGenerator
       %w(
         base_path
         content_id
+        locale
         document_type
         govuk_request_id
         payload_version
@@ -78,7 +79,6 @@ module SchemaGenerator
         first_published_at
         government_document_supertype
         links
-        locale
         navigation_document_supertype
         phase
         public_updated_at
