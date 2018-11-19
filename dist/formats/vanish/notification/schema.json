@@ -6,6 +6,7 @@
     "content_id",
     "document_type",
     "govuk_request_id",
+    "locale",
     "payload_version",
     "schema_name"
   ],
