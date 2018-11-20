@@ -72,6 +72,9 @@
       format: {
         type: "string",
       },
+      appear_in_find_eu_exit_guidance_business_finder: {
+        type: "string",
+      },
     },
   },
   finder_reject_filter: {
