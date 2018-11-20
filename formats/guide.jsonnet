@@ -16,6 +16,9 @@
           type: "boolean",
           description: "Hide guide elements if this guide is part of a step by step navigation"
         },
+        tags: {
+          "$ref": "#/definitions/tags",
+        },
       },
     },
   },

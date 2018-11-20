@@ -41,7 +41,10 @@
         },
         start_button_text: {
           "$ref": "#/definitions/start_button_text",
-        }
+        },
+        tags: {
+          "$ref": "#/definitions/tags",
+        },
       },
     },
   },

@@ -36,6 +36,9 @@
           type: "string",
           description: "Identifies the contact address of the institution which has produced the HTML Publication. To be displayed when printing an HTML Publication",
         },
+        tags: {
+          "$ref": "#/definitions/tags",
+        },
       },
     },
   },

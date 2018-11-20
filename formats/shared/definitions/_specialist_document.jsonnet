@@ -94,7 +94,7 @@
   aaib_report_metadata: {
     type: "object",
     additionalProperties: false,
-    properties: {
+    properties: (import "_eu_exit_business_finder_metadata.jsonnet") + {
       bulk_published: {
         type: "boolean",
       },
@@ -143,7 +143,7 @@
   asylum_support_decision_metadata: {
     type: "object",
     additionalProperties: false,
-    properties: {
+    properties: (import "_eu_exit_business_finder_metadata.jsonnet") + {
       bulk_published: {
         type: "boolean",
       },
@@ -203,7 +203,7 @@
   business_finance_support_scheme_metadata: {
     type: "object",
     additionalProperties: false,
-    properties: {
+    properties: (import "_eu_exit_business_finder_metadata.jsonnet") + {
       bulk_published: {
         type: "boolean",
       },
@@ -306,7 +306,7 @@
   cma_case_metadata: {
     type: "object",
     additionalProperties: false,
-    properties: {
+    properties: (import "_eu_exit_business_finder_metadata.jsonnet") + {
       bulk_published: {
         type: "boolean",
       },
@@ -414,7 +414,7 @@
   dfid_research_output_metadata: {
     type: "object",
     additionalProperties: false,
-    properties: {
+    properties: (import "_eu_exit_business_finder_metadata.jsonnet") + {
       bulk_published: {
         type: "boolean",
       },
@@ -694,7 +694,7 @@
   countryside_stewardship_grant_metadata: {
     type: "object",
     additionalProperties: false,
-    properties: {
+    properties: (import "_eu_exit_business_finder_metadata.jsonnet") + {
       bulk_published: {
         type: "boolean",
       },
@@ -766,7 +766,7 @@
   drug_safety_update_metadata: {
     type: "object",
     additionalProperties: false,
-    properties: {
+    properties: (import "_eu_exit_business_finder_metadata.jsonnet") + {
       bulk_published: {
         type: "boolean",
       },
@@ -810,7 +810,7 @@
   employment_appeal_tribunal_decision_metadata: {
     type: "object",
     additionalProperties: false,
-    properties: {
+    properties: (import "_eu_exit_business_finder_metadata.jsonnet") + {
       bulk_published: {
         type: "boolean",
       },
@@ -845,7 +845,7 @@
   employment_tribunal_decision_metadata: {
     type: "object",
     additionalProperties: false,
-    properties: {
+    properties: (import "_eu_exit_business_finder_metadata.jsonnet") + {
       bulk_published: {
         type: "boolean",
       },
@@ -874,7 +874,7 @@
   european_structural_investment_fund_metadata: {
     type: "object",
     additionalProperties: false,
-    properties: {
+    properties: (import "_eu_exit_business_finder_metadata.jsonnet") + {
       bulk_published: {
         type: "boolean",
       },
@@ -943,7 +943,7 @@
   export_health_certificate_metadata: {
     type: "object",
     additionalProperties: false,
-    properties: {
+    properties: (import "_eu_exit_business_finder_metadata.jsonnet") + {
       certificate_status: {
         type: "string",
         enum: [
@@ -1197,7 +1197,7 @@
   international_development_fund_metadata: {
     type: "object",
     additionalProperties: false,
-    properties: {
+    properties: (import "_eu_exit_business_finder_metadata.jsonnet") + {
       bulk_published: {
         type: "boolean",
       },
@@ -1469,7 +1469,7 @@
   maib_report_metadata: {
     type: "object",
     additionalProperties: false,
-    properties: {
+    properties: (import "_eu_exit_business_finder_metadata.jsonnet") + {
       bulk_published: {
         type: "boolean",
       },
@@ -1505,7 +1505,7 @@
   medical_safety_alert_metadata: {
     type: "object",
     additionalProperties: false,
-    properties: {
+    properties: (import "_eu_exit_business_finder_metadata.jsonnet") + {
       bulk_published: {
         type: "boolean",
       },
@@ -1557,7 +1557,7 @@
   raib_report_metadata: {
     type: "object",
     additionalProperties: false,
-    properties: {
+    properties: (import "_eu_exit_business_finder_metadata.jsonnet") + {
       bulk_published: {
         type: "boolean",
       },
@@ -1592,7 +1592,7 @@
   residential_property_tribunal_decision_metadata: {
     type: "object",
     additionalProperties: false,
-    properties: {
+    properties: (import "_eu_exit_business_finder_metadata.jsonnet") + {
       bulk_published: {
         type: "boolean",
       },
@@ -1669,7 +1669,7 @@
   service_standard_report_metadata: {
     type: "object",
     additionalProperties: false,
-    properties: {
+    properties: (import "_eu_exit_business_finder_metadata.jsonnet") + {
       bulk_published: {
         type: "boolean",
       },
@@ -1682,7 +1682,7 @@
   statutory_instrument_metadata: {
     type: "object",
     additionalProperties: false,
-    properties: {
+    properties: (import "_eu_exit_business_finder_metadata.jsonnet") + {
       laid_date: {
         type: "string",
         pattern: "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$",
@@ -1735,7 +1735,7 @@
   tax_tribunal_decision_metadata: {
     type: "object",
     additionalProperties: false,
-    properties: {
+    properties: (import "_eu_exit_business_finder_metadata.jsonnet") + {
       bulk_published: {
         type: "boolean",
       },
@@ -1762,7 +1762,7 @@
   utaac_decision_metadata: {
     type: "object",
     additionalProperties: false,
-    properties: {
+    properties: (import "_eu_exit_business_finder_metadata.jsonnet") + {
       bulk_published: {
         type: "boolean",
       },

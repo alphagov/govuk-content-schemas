@@ -17,6 +17,9 @@
         publishing_request_id: {
           "$ref": "#/definitions/publishing_request_id",
         },
+        tags: {
+          "$ref": "#/definitions/tags",
+        },
       },
     },
   },

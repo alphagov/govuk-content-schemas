@@ -387,6 +387,9 @@
           "description": "One line curated description, will appear in Licence Finder results.",
           "type": "string"
         },
+        "tags": {
+          "$ref": "#/definitions/tags"
+        },
         "will_continue_on": {
           "$ref": "#/definitions/will_continue_on"
         }
@@ -687,6 +690,94 @@
         "$ref": "#/definitions/route"
       },
       "minItems": 1
+    },
+    "tags": {
+      "description": "Field used by email-alert-api to trigger email alerts for subscriptions to topics (gov.uk/topic) and policies (gov.uk/policies).",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "additional_topics": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "appear_in_find_eu_exit_guidance_business_finder": {
+          "type": "string"
+        },
+        "browse_pages": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "doing_business_in_the_eu": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "employ_eu_citizens": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "intellectual_property": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "personal_data": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "policies": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "primary_topic": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "public_sector_procurement": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "receiving_eu_funding": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "regulations_and_standards": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sector_business_area": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "topics": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
     },
     "title": {
       "type": "string"

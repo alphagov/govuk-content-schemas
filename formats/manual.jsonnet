@@ -20,6 +20,9 @@
         organisations: {
           "$ref": "#/definitions/manual_organisations",
         },
+        tags: {
+          "$ref": "#/definitions/tags",
+        },
       },
     },
   },

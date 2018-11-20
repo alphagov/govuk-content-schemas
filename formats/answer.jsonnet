@@ -11,6 +11,9 @@
         external_related_links: {
           "$ref": "#/definitions/external_related_links",
         },
+        tags: {
+          "$ref": "#/definitions/tags",
+        },
       },
     },
   },

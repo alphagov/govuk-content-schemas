@@ -27,6 +27,9 @@
         child_section_groups: {
           "$ref": "#/definitions/hmrc_manual_child_section_groups",
         },
+        tags: {
+          "$ref": "#/definitions/tags",
+        },
       },
     },
   },

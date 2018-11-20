@@ -170,6 +170,9 @@
         "aircraft_type": {
           "type": "string"
         },
+        "appear_in_find_eu_exit_guidance_business_finder": {
+          "type": "string"
+        },
         "bulk_published": {
           "type": "boolean"
         },
@@ -177,11 +180,53 @@
           "type": "string",
           "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
         },
+        "doing_business_in_the_eu": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "employ_eu_citizens": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "intellectual_property": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
         "location": {
           "type": "string"
         },
+        "personal_data": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "public_sector_procurement": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "receiving_eu_funding": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
         "registration": {
           "type": "string"
+        },
+        "regulations_and_standards": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         },
         "report_type": {
           "type": "string",
@@ -195,6 +240,12 @@
             "special-bulletin",
             "safety-study"
           ]
+        },
+        "sector_business_area": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         }
       }
     },
@@ -335,11 +386,62 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "appear_in_find_eu_exit_guidance_business_finder": {
+          "type": "string"
+        },
         "bulk_published": {
           "type": "boolean"
         },
+        "doing_business_in_the_eu": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "employ_eu_citizens": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
         "hidden_indexable_content": {
           "type": "string"
+        },
+        "intellectual_property": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "personal_data": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "public_sector_procurement": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "receiving_eu_funding": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "regulations_and_standards": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sector_business_area": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         },
         "tribunal_decision_categories": {
           "type": "array",
@@ -403,6 +505,9 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "appear_in_find_eu_exit_guidance_business_finder": {
+          "type": "string"
+        },
         "bulk_published": {
           "type": "boolean"
         },
@@ -432,6 +537,18 @@
         "continuation_link": {
           "type": "string"
         },
+        "doing_business_in_the_eu": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "employ_eu_citizens": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
         "industries": {
           "type": "array",
           "items": {
@@ -457,6 +574,30 @@
             ]
           }
         },
+        "intellectual_property": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "personal_data": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "public_sector_procurement": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "receiving_eu_funding": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
         "regions": {
           "type": "array",
           "items": {
@@ -474,6 +615,18 @@
               "west-midlands",
               "yorkshire-and-the-humber"
             ]
+          }
+        },
+        "regulations_and_standards": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sector_business_area": {
+          "type": "array",
+          "items": {
+            "type": "string"
           }
         },
         "types_of_support": {
@@ -527,6 +680,9 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "appear_in_find_eu_exit_guidance_business_finder": {
+          "type": "string"
+        },
         "bulk_published": {
           "type": "boolean"
         },
@@ -553,6 +709,24 @@
         "closed_date": {
           "type": "string",
           "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+        },
+        "doing_business_in_the_eu": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "employ_eu_citizens": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "intellectual_property": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         },
         "market_sector": {
           "type": "array",
@@ -628,6 +802,36 @@
             "consumer-enforcement-changes-to-business-practices-agreed",
             "regulatory-references-and-appeals-final-determination"
           ]
+        },
+        "personal_data": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "public_sector_procurement": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "receiving_eu_funding": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "regulations_and_standards": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sector_business_area": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         }
       }
     },
@@ -635,8 +839,23 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "appear_in_find_eu_exit_guidance_business_finder": {
+          "type": "string"
+        },
         "bulk_published": {
           "type": "boolean"
+        },
+        "doing_business_in_the_eu": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "employ_eu_citizens": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         },
         "funding_amount": {
           "type": "array",
@@ -662,6 +881,12 @@
             "supplement"
           ]
         },
+        "intellectual_property": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
         "land_use": {
           "type": "array",
           "items": {
@@ -684,6 +909,36 @@
               "wildlife-package",
               "woodland"
             ]
+          }
+        },
+        "personal_data": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "public_sector_procurement": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "receiving_eu_funding": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "regulations_and_standards": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sector_business_area": {
+          "type": "array",
+          "items": {
+            "type": "string"
           }
         },
         "tiers_or_standalone_items": {
@@ -749,6 +1004,9 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "appear_in_find_eu_exit_guidance_business_finder": {
+          "type": "string"
+        },
         "bulk_published": {
           "type": "boolean"
         },
@@ -1019,9 +1277,57 @@
             ]
           }
         },
+        "doing_business_in_the_eu": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "employ_eu_citizens": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
         "first_published_at": {
           "type": "string",
           "pattern": "^[1-9][0-9]{3}[-/](0[1-9]|1[0-2])[-/](0[1-9]|[12][0-9]|3[0-1])$"
+        },
+        "intellectual_property": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "personal_data": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "public_sector_procurement": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "receiving_eu_funding": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "regulations_and_standards": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sector_business_area": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         }
       }
     },
@@ -1029,12 +1335,63 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "appear_in_find_eu_exit_guidance_business_finder": {
+          "type": "string"
+        },
         "bulk_published": {
           "type": "boolean"
+        },
+        "doing_business_in_the_eu": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "employ_eu_citizens": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         },
         "first_published_at": {
           "type": "string",
           "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+        },
+        "intellectual_property": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "personal_data": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "public_sector_procurement": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "receiving_eu_funding": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "regulations_and_standards": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sector_business_area": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         },
         "therapeutic_area": {
           "type": "array",
@@ -1073,11 +1430,62 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "appear_in_find_eu_exit_guidance_business_finder": {
+          "type": "string"
+        },
         "bulk_published": {
           "type": "boolean"
         },
+        "doing_business_in_the_eu": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "employ_eu_citizens": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
         "hidden_indexable_content": {
           "type": "string"
+        },
+        "intellectual_property": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "personal_data": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "public_sector_procurement": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "receiving_eu_funding": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "regulations_and_standards": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sector_business_area": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         },
         "tribunal_decision_categories": {
           "type": "array",
@@ -1108,11 +1516,62 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "appear_in_find_eu_exit_guidance_business_finder": {
+          "type": "string"
+        },
         "bulk_published": {
           "type": "boolean"
         },
+        "doing_business_in_the_eu": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "employ_eu_citizens": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
         "hidden_indexable_content": {
           "type": "string"
+        },
+        "intellectual_property": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "personal_data": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "public_sector_procurement": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "receiving_eu_funding": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "regulations_and_standards": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sector_business_area": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         },
         "tribunal_decision_categories": {
           "type": "array",
@@ -1137,12 +1596,27 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "appear_in_find_eu_exit_guidance_business_finder": {
+          "type": "string"
+        },
         "bulk_published": {
           "type": "boolean"
         },
         "closing_date": {
           "type": "string",
           "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+        },
+        "doing_business_in_the_eu": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "employ_eu_citizens": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         },
         "fund_state": {
           "type": "string",
@@ -1183,6 +1657,12 @@
             ]
           }
         },
+        "intellectual_property": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
         "location": {
           "type": "array",
           "items": {
@@ -1199,6 +1679,36 @@
               "london"
             ]
           }
+        },
+        "personal_data": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "public_sector_procurement": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "receiving_eu_funding": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "regulations_and_standards": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sector_business_area": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         }
       }
     },
@@ -1206,6 +1716,9 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "appear_in_find_eu_exit_guidance_business_finder": {
+          "type": "string"
+        },
         "certificate_status": {
           "type": "string",
           "enum": [
@@ -1453,6 +1966,54 @@
               "zimbabwe"
             ]
           }
+        },
+        "doing_business_in_the_eu": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "employ_eu_citizens": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "intellectual_property": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "personal_data": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "public_sector_procurement": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "receiving_eu_funding": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "regulations_and_standards": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sector_business_area": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         }
       }
     },
@@ -1476,6 +2037,9 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "appear_in_find_eu_exit_guidance_business_finder": {
+          "type": "string"
+        },
         "bulk_published": {
           "type": "boolean"
         },
@@ -1502,6 +2066,12 @@
             ]
           }
         },
+        "doing_business_in_the_eu": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
         "eligible_entities": {
           "type": "array",
           "items": {
@@ -1518,12 +2088,24 @@
             ]
           }
         },
+        "employ_eu_citizens": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
         "fund_state": {
           "type": "string",
           "enum": [
             "open",
             "closed"
           ]
+        },
+        "intellectual_property": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         },
         "location": {
           "type": "array",
@@ -1730,6 +2312,36 @@
             ]
           }
         },
+        "personal_data": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "public_sector_procurement": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "receiving_eu_funding": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "regulations_and_standards": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sector_business_area": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
         "value_of_funding": {
           "type": "array",
           "items": {
@@ -1803,12 +2415,57 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "appear_in_find_eu_exit_guidance_business_finder": {
+          "type": "string"
+        },
         "bulk_published": {
           "type": "boolean"
         },
         "date_of_occurrence": {
           "type": "string",
           "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+        },
+        "doing_business_in_the_eu": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "employ_eu_citizens": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "intellectual_property": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "personal_data": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "public_sector_procurement": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "receiving_eu_funding": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "regulations_and_standards": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         },
         "report_type": {
           "type": "string",
@@ -1819,6 +2476,12 @@
             "overseas-report",
             "discontinued-investigation"
           ]
+        },
+        "sector_business_area": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         },
         "vessel_type": {
           "type": "array",
@@ -1852,8 +2515,29 @@
             "company-led-drugs"
           ]
         },
+        "appear_in_find_eu_exit_guidance_business_finder": {
+          "type": "string"
+        },
         "bulk_published": {
           "type": "boolean"
+        },
+        "doing_business_in_the_eu": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "employ_eu_citizens": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "intellectual_property": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         },
         "issued_date": {
           "type": "string",
@@ -1887,6 +2571,36 @@
               "urology",
               "vascular-cardiac-surgery"
             ]
+          }
+        },
+        "personal_data": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "public_sector_procurement": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "receiving_eu_funding": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "regulations_and_standards": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sector_business_area": {
+          "type": "array",
+          "items": {
+            "type": "string"
           }
         }
       }
@@ -1982,12 +2696,45 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "appear_in_find_eu_exit_guidance_business_finder": {
+          "type": "string"
+        },
         "bulk_published": {
           "type": "boolean"
         },
         "date_of_occurrence": {
           "type": "string",
           "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+        },
+        "doing_business_in_the_eu": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "employ_eu_citizens": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "intellectual_property": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "personal_data": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "public_sector_procurement": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         },
         "railway_type": {
           "type": "array",
@@ -2001,6 +2748,18 @@
             ]
           }
         },
+        "receiving_eu_funding": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "regulations_and_standards": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
         "report_type": {
           "type": "string",
           "enum": [
@@ -2010,6 +2769,12 @@
             "discontinuation-report",
             "safety-digest"
           ]
+        },
+        "sector_business_area": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         }
       }
     },
@@ -2045,11 +2810,62 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "appear_in_find_eu_exit_guidance_business_finder": {
+          "type": "string"
+        },
         "bulk_published": {
           "type": "boolean"
         },
+        "doing_business_in_the_eu": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "employ_eu_citizens": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
         "hidden_indexable_content": {
           "type": "string"
+        },
+        "intellectual_property": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "personal_data": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "public_sector_procurement": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "receiving_eu_funding": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "regulations_and_standards": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sector_business_area": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         },
         "tribunal_decision_category": {
           "type": "string",
@@ -2148,12 +2964,63 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "appear_in_find_eu_exit_guidance_business_finder": {
+          "type": "string"
+        },
         "assessment_date": {
           "type": "string",
           "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
         },
         "bulk_published": {
           "type": "boolean"
+        },
+        "doing_business_in_the_eu": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "employ_eu_citizens": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "intellectual_property": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "personal_data": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "public_sector_procurement": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "receiving_eu_funding": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "regulations_and_standards": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sector_business_area": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         }
       }
     },
@@ -2161,9 +3028,60 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "appear_in_find_eu_exit_guidance_business_finder": {
+          "type": "string"
+        },
+        "doing_business_in_the_eu": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "employ_eu_citizens": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "intellectual_property": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
         "laid_date": {
           "type": "string",
           "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+        },
+        "personal_data": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "public_sector_procurement": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "receiving_eu_funding": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "regulations_and_standards": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sector_business_area": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         },
         "sift_end_date": {
           "type": "string",
@@ -2214,11 +3132,62 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "appear_in_find_eu_exit_guidance_business_finder": {
+          "type": "string"
+        },
         "bulk_published": {
           "type": "boolean"
         },
+        "doing_business_in_the_eu": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "employ_eu_citizens": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
         "hidden_indexable_content": {
           "type": "string"
+        },
+        "intellectual_property": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "personal_data": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "public_sector_procurement": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "receiving_eu_funding": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "regulations_and_standards": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sector_business_area": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         },
         "tribunal_decision_category": {
           "type": "string",
@@ -2251,11 +3220,62 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "appear_in_find_eu_exit_guidance_business_finder": {
+          "type": "string"
+        },
         "bulk_published": {
           "type": "boolean"
         },
+        "doing_business_in_the_eu": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "employ_eu_citizens": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
         "hidden_indexable_content": {
           "type": "string"
+        },
+        "intellectual_property": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "personal_data": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "public_sector_procurement": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "receiving_eu_funding": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "regulations_and_standards": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sector_business_area": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         },
         "tribunal_decision_categories": {
           "type": "array",

@@ -28,7 +28,7 @@
     type: "object",
     description: "Field used by email-alert-api to trigger email alerts for subscriptions to topics (gov.uk/topic) and policies (gov.uk/policies).",
     additionalProperties: false,
-    properties: {
+    properties: (import "_eu_exit_business_finder_metadata.jsonnet") + {
       browse_pages: {
         type: "array",
         items: {
