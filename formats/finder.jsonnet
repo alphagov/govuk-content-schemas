@@ -25,6 +25,9 @@
             },
           ],
         },
+        generic_description: {
+          type: "boolean",
+        },
         document_noun: {
           "$ref": "#/definitions/finder_document_noun",
         },

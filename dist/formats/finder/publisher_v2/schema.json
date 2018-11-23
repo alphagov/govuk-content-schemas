@@ -199,6 +199,9 @@
         "format_name": {
           "type": "string"
         },
+        "generic_description": {
+          "type": "boolean"
+        },
         "logo_path": {
           "type": "string"
         },
