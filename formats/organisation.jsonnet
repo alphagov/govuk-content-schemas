@@ -353,6 +353,9 @@
         external_related_links: {
           "$ref": "#/definitions/external_related_links",
         },
+        default_news_image: {
+          "$ref": "#/definitions/image",
+        },
       },
     },
   },
