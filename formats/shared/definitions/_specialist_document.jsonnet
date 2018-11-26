@@ -271,6 +271,7 @@
             "northern-ireland",
             "scotland",
             "south-east",
+            "south-west",
             "wales",
             "west-midlands",
             "yorkshire-and-the-humber",
