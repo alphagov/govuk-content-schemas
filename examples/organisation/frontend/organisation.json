@@ -42,6 +42,10 @@
   "details": {
     "brand": "department-of-energy-climate-change",
     "foi_exempt": false,
+    "default_news_image": {
+      "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/image_data/file/12345/dexeu.jpg",
+      "high_resolution_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/image_data/file/12345/dexeu-high-rest.jpg"
+    },
     "logo": {
       "formatted_title": "Department<br/>for Exiting the<br/>European Union",
       "crest": "single-identity"
