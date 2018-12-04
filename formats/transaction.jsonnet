@@ -5,6 +5,41 @@
       type: "object",
       additionalProperties: false,
       properties: {
+        variants: {
+          description: "List of transaction variants",
+          type: "array",
+          items: {
+            type: "object",
+            additionalProperties: false,
+            required: [
+              "title",
+              "slug",
+            ],
+            properties: {
+              title: {
+                type: "string",
+              },
+              slug: {
+                type: "string",
+                format: "uri",
+              },
+              introductory_paragraph: {
+                "$ref": "#/definitions/body_html_and_govspeak",
+              },
+              transaction_start_link: {
+                description: "Link the Start button will lead the user to.",
+                type: "string",
+                format: "uri",
+              },
+              more_information: {
+                "$ref": "#/definitions/body_html_and_govspeak",
+              },
+              other_ways_to_apply: {
+                "$ref": "#/definitions/body_html_and_govspeak",
+              },
+            },
+          },
+        },
         introductory_paragraph: {
           "$ref": "#/definitions/body_html_and_govspeak",
         },
