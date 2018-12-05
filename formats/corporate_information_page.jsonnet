@@ -40,6 +40,9 @@
           description: "Groups of corporate information to display on about pages",
           "$ref": "#/definitions/grouped_lists_of_links",
         },
+        has_brexit_update: {
+          "$ref": "#/definitions/has_brexit_update",
+        },
         organisation: {
           description: "A single organisation that is the subject of this corporate information page",
           "$ref": "#/definitions/guid",

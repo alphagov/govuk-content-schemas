@@ -334,6 +334,9 @@
         "government": {
           "$ref": "#/definitions/government"
         },
+        "has_brexit_update": {
+          "$ref": "#/definitions/has_brexit_update"
+        },
         "image": {
           "$ref": "#/definitions/image"
         },
@@ -514,6 +517,10 @@
     "guid": {
       "type": "string",
       "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-[1-5][a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$"
+    },
+    "has_brexit_update": {
+      "description": "Flag to indicate that content has been updated due to Brexit.",
+      "type": "boolean"
     },
     "image": {
       "type": "object",

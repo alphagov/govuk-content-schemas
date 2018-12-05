@@ -31,6 +31,9 @@
         political: {
           "$ref": "#/definitions/political",
         },
+        has_brexit_update: {
+          "$ref": "#/definitions/has_brexit_update",
+        },
       },
     },
   },
