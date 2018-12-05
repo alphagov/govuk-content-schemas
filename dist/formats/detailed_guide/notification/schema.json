@@ -406,6 +406,9 @@
         "government": {
           "$ref": "#/definitions/government"
         },
+        "has_brexit_update": {
+          "$ref": "#/definitions/has_brexit_update"
+        },
         "image": {
           "$ref": "#/definitions/image"
         },
@@ -550,6 +553,10 @@
         "$ref": "#/definitions/guid"
       },
       "uniqueItems": true
+    },
+    "has_brexit_update": {
+      "description": "Flag to indicate that content has been updated due to Brexit.",
+      "type": "boolean"
     },
     "image": {
       "type": "object",

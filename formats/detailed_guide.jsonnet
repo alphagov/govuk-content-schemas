@@ -56,6 +56,9 @@
         national_applicability: {
           "$ref": "#/definitions/national_applicability",
         },
+        has_brexit_update: {
+          "$ref": "#/definitions/has_brexit_update",
+        },
       },
     },
   },

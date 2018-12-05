@@ -28,6 +28,7 @@
       "current": false
     },
     "political": true,
+    "has_brexit_update": true,
     "emphasised_organisations": [
       "d65d4203-01f5-4920-a3b1-f614bfd8e83e"
     ]

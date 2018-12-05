@@ -319,4 +319,8 @@
     type: "string",
     format: "date-time",
   },
+  has_brexit_update: {
+    type: "boolean",
+    description: "Flag to indicate that content has been updated due to Brexit.",
+  },
 }
