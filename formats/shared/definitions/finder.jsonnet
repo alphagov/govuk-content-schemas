@@ -42,7 +42,7 @@
     type: "object",
     additionalProperties: false,
     properties: {
-      document_type: {
+      appear_in_find_eu_exit_guidance_business_finder: {
         type: "string",
       },
       content_purpose_supergroup: {
@@ -51,11 +51,17 @@
           type: "string",
         },
       },
+      document_type: {
+        type: "string",
+      },
       email_document_supertype: {
         type: "array",
         items: {
           type: "string",
         },
+      },
+      format: {
+        type: "string",
       },
       organisations: {
         type: "array",
@@ -68,12 +74,6 @@
         items: {
           type: "string",
         },
-      },
-      format: {
-        type: "string",
-      },
-      appear_in_find_eu_exit_guidance_business_finder: {
-        type: "string",
       },
     },
   },
