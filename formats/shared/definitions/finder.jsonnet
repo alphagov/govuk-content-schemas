@@ -172,6 +172,15 @@
           description: "Value that determines the closed state (the key field is in the past) of a topical facet.",
           "$ref": "#/definitions/label_value_pair",
         },
+        combine_mode: {
+          description: "Specifies how to combine with other facets",
+          type: "string",
+          enum: [
+            "and",
+            "or",
+          ],
+          default: "and",
+        },
       },
     },
   },
