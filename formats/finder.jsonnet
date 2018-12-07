@@ -49,6 +49,12 @@
         reject: {
           "$ref": "#/definitions/finder_reject_filter",
         },
+        operator_between_facets: {
+          type: "string",
+          enum: ["and", "or"],
+          default: "and",
+          description: "Whether to perform an OR or an AND operation between facets when filtering the content.",
+        },
         facets: {
           "$ref": "#/definitions/finder_facets",
         },
