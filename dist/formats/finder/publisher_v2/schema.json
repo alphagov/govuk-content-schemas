@@ -205,6 +205,15 @@
         "logo_path": {
           "type": "string"
         },
+        "operator_between_facets": {
+          "description": "Whether to perform an OR or an AND operation between facets when filtering the content.",
+          "type": "string",
+          "default": "and",
+          "enum": [
+            "and",
+            "or"
+          ]
+        },
         "reject": {
           "$ref": "#/definitions/finder_reject_filter"
         },
