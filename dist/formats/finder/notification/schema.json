@@ -413,15 +413,6 @@
         "logo_path": {
           "type": "string"
         },
-        "operator_between_facets": {
-          "description": "Whether to perform an OR or an AND operation between facets when filtering the content.",
-          "type": "string",
-          "default": "and",
-          "enum": [
-            "and",
-            "or"
-          ]
-        },
         "reject": {
           "$ref": "#/definitions/finder_reject_filter"
         },
@@ -484,6 +475,15 @@
           "closed_value": {
             "description": "Value that determines the closed state (the key field is in the past) of a topical facet.",
             "$ref": "#/definitions/label_value_pair"
+          },
+          "combine_mode": {
+            "description": "Specifies how to combine with other facets",
+            "type": "string",
+            "default": "and",
+            "enum": [
+              "and",
+              "or"
+            ]
           },
           "display_as_result_metadata": {
             "description": "Include this in search result metadata. Can be set for non-filterable facets.",
