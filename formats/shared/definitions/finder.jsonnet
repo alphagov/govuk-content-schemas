@@ -57,6 +57,12 @@
           type: "string",
         },
       },
+      content_store_document_type: {
+        type: "array",
+        items: {
+          type: "string",
+        },
+      },
       document_type: {
         type: "string",
       },
@@ -89,6 +95,12 @@
     additionalProperties: false,
     properties: {
       content_purpose_supergroup: {
+        type: "array",
+        items: {
+          type: "string",
+        },
+      },
+      content_store_document_type: {
         type: "array",
         items: {
           type: "string",
