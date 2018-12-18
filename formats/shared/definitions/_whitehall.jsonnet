@@ -52,6 +52,16 @@
           },
         ],
       },
+      credit: {
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
+      },
     },
   },
   people: {
