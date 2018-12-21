@@ -181,6 +181,9 @@
             }
           ]
         },
+        "canonical_link": {
+          "type": "boolean"
+        },
         "default_documents_per_page": {
           "$ref": "#/definitions/finder_default_documents_per_page"
         },

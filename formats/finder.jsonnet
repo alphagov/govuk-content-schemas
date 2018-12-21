@@ -61,6 +61,9 @@
         signup_link: {
           "$ref": "#/definitions/finder_signup_link",
         },
+        canonical_link: {
+          type: "boolean",
+        },
         summary: {
           "$ref": "#/definitions/finder_summary",
         },
