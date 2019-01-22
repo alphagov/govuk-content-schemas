@@ -121,7 +121,9 @@
     ]
   },
   "links": {
-    "available_translations": [],
+    "available_translations": [
+
+    ],
     "ordered_contacts": [
       {
         "content_id": "5bd25a81-41e6-4fb3-8fc1-24b79f213efd",
@@ -159,7 +161,8 @@
             }
           ]
         },
-        "links": {}
+        "links": {
+        }
       }
     ],
     "ordered_high_profile_groups": [

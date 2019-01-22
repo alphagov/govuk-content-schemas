@@ -22,7 +22,8 @@
   "title": "Employment Appeal Tribunal",
   "updated_at": "2018-10-01T17:52:25.635Z",
   "user_journey_document_supertype": "finding",
-  "withdrawn_notice": {},
+  "withdrawn_notice": {
+  },
   "publishing_request_id": "1923-1531220385.849-194.33.192.5-1719",
   "links": {
     "ordered_contacts": [
@@ -72,7 +73,8 @@
             }
           ]
         },
-        "links": {}
+        "links": {
+        }
       },
       {
         "content_id": "286f3494-ac3b-488b-833e-b072765e4831",
@@ -120,7 +122,8 @@
             }
           ]
         },
-        "links": {}
+        "links": {
+        }
       }
     ],
     "ordered_parent_organisations": [
@@ -285,8 +288,12 @@
               "document_type": "News story"
             }
           ],
-          "ordered_promotional_features": [],
-          "ordered_ministers": [],
+          "ordered_promotional_features": [
+
+          ],
+          "ordered_ministers": [
+
+          ],
           "ordered_board_members": [
             {
               "name_prefix": null,
@@ -476,10 +483,18 @@
               }
             }
           ],
-          "ordered_military_personnel": [],
-          "ordered_traffic_commissioners": [],
-          "ordered_chief_professional_officers": [],
-          "ordered_special_representatives": [],
+          "ordered_military_personnel": [
+
+          ],
+          "ordered_traffic_commissioners": [
+
+          ],
+          "ordered_chief_professional_officers": [
+
+          ],
+          "ordered_special_representatives": [
+
+          ],
           "important_board_members": 1,
           "organisation_featuring_priority": "service",
           "organisation_govuk_status": {
@@ -521,7 +536,8 @@
             }
           ]
         },
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/organisations/hm-courts-and-tribunals-service",
         "web_url": "https://www.gov.uk/government/organisations/hm-courts-and-tribunals-service"
       }
@@ -540,7 +556,8 @@
         "locale": "en",
         "api_url": "https://www.gov.uk/api/content/courts-tribunals/employment-appeal-tribunal",
         "web_url": "https://www.gov.uk/courts-tribunals/employment-appeal-tribunal",
-        "links": {}
+        "links": {
+        }
       }
     ]
   },
@@ -566,14 +583,30 @@
         "href": "https://www.gov.uk/appeal-employment-appeal-tribunal"
       }
     ],
-    "ordered_featured_documents": [],
-    "ordered_promotional_features": [],
-    "ordered_ministers": [],
-    "ordered_board_members": [],
-    "ordered_military_personnel": [],
-    "ordered_traffic_commissioners": [],
-    "ordered_chief_professional_officers": [],
-    "ordered_special_representatives": [],
+    "ordered_featured_documents": [
+
+    ],
+    "ordered_promotional_features": [
+
+    ],
+    "ordered_ministers": [
+
+    ],
+    "ordered_board_members": [
+
+    ],
+    "ordered_military_personnel": [
+
+    ],
+    "ordered_traffic_commissioners": [
+
+    ],
+    "ordered_chief_professional_officers": [
+
+    ],
+    "ordered_special_representatives": [
+
+    ],
     "important_board_members": 1,
     "organisation_featuring_priority": "service",
     "organisation_govuk_status": {
@@ -582,6 +615,8 @@
       "updated_at": null
     },
     "organisation_type": "tribunal_ndpb",
-    "social_media_links": []
+    "social_media_links": [
+
+    ]
   }
 }

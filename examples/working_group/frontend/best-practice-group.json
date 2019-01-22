@@ -18,7 +18,8 @@
   "title": "Bureaucracy Reference Group",
   "updated_at": "2017-03-27T12:11:14.442Z",
   "user_journey_document_supertype": "thing",
-  "withdrawn_notice": {},
+  "withdrawn_notice": {
+  },
   "publishing_request_id": null,
   "links": {
     "available_translations": [
@@ -35,7 +36,8 @@
         "locale": "en",
         "api_url": "https://www.gov.uk/api/content/government/groups/bureaucracy-reference-group",
         "web_url": "https://www.gov.uk/government/groups/bureaucracy-reference-group",
-        "links": {}
+        "links": {
+        }
       }
     ]
   },

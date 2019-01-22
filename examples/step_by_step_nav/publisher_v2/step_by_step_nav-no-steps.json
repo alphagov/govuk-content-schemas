@@ -9,6 +9,7 @@
     }
   ],
   "redirects": [
+
   ],
   "locale": "en",
   "update_type": "major",
@@ -28,7 +29,9 @@
           "content": "Check what you need to do to get a divorce."
         }
       ],
-      "steps": []
+      "steps": [
+
+      ]
     }
   }
 }

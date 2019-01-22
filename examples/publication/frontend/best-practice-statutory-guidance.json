@@ -18,7 +18,8 @@
   "title": "Schemes for financing schools",
   "updated_at": "2018-01-10T12:37:06.928Z",
   "user_journey_document_supertype": "thing",
-  "withdrawn_notice": {},
+  "withdrawn_notice": {
+  },
   "publishing_request_id": null,
   "links": {
     "document_collections": [
@@ -46,7 +47,8 @@
               "schema_name": "publication",
               "title": "Schemes for financing schools",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/government/publications/schemes-for-financing-schools",
               "web_url": "https://www.gov.uk/government/publications/schemes-for-financing-schools"
             }
@@ -75,7 +77,8 @@
             "crest": "single-identity"
           }
         },
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/organisations/department-for-education",
         "web_url": "https://www.gov.uk/government/organisations/department-for-education"
       },
@@ -97,7 +100,8 @@
             "crest": "single-identity"
           }
         },
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/organisations/education-funding-agency",
         "web_url": "https://www.gov.uk/government/organisations/education-funding-agency"
       }
@@ -113,7 +117,8 @@
         "schema_name": "placeholder_policy_area",
         "title": "Schools",
         "withdrawn": false,
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/topics/schools",
         "web_url": "https://www.gov.uk/government/topics/schools"
       }
@@ -137,7 +142,8 @@
             "crest": "single-identity"
           }
         },
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/organisations/department-for-education",
         "web_url": "https://www.gov.uk/government/organisations/department-for-education"
       }
@@ -194,7 +200,8 @@
                       "notes_for_editors": "",
                       "visible_to_departmental_editors": false
                     },
-                    "links": {},
+                    "links": {
+                    },
                     "api_url": "https://www.gov.uk/api/content/education",
                     "web_url": "https://www.gov.uk/education"
                   }
@@ -276,7 +283,8 @@
                             "notes_for_editors": "",
                             "visible_to_departmental_editors": false
                           },
-                          "links": {},
+                          "links": {
+                          },
                           "api_url": "https://www.gov.uk/api/content/education",
                           "web_url": "https://www.gov.uk/education"
                         }
@@ -308,7 +316,8 @@
         "schema_name": "topic",
         "title": "School and college funding and finance",
         "withdrawn": false,
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/topic/schools-colleges-childrens-services/school-college-funding-finance",
         "web_url": "https://www.gov.uk/topic/schools-colleges-childrens-services/school-college-funding-finance"
       }
@@ -327,7 +336,8 @@
         "locale": "en",
         "api_url": "https://www.gov.uk/api/content/government/publications/schemes-for-financing-schools",
         "web_url": "https://www.gov.uk/government/publications/schemes-for-financing-schools",
-        "links": {}
+        "links": {
+        }
       }
     ]
   },
@@ -387,8 +397,12 @@
       "current": false
     },
     "tags": {
-      "browse_pages": [],
-      "policies": [],
+      "browse_pages": [
+
+      ],
+      "policies": [
+
+      ],
       "topics": [
         "91a00dfb-bef5-4c90-ae08-5feeb4f8ba40"
       ]

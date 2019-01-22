@@ -16,245 +16,246 @@
   },
   "links": {
     "part_of_step_navs": [
-    {
-      "api_path": "/api/content/learn-to-drive-a-car",
-      "base_path": "/learn-to-drive-a-car",
-      "content_id": "e01e924b-9c7c-4c71-8241-66a575c2f61f",
-      "description": "Learn to drive a car in the UK - get a provisional licence, take driving lessons, prepare for your theory test, book your practical test",
-      "document_type": "step_by_step_nav",
-      "locale": "en",
-      "public_updated_at": "2018-04-03T13:47:57Z",
-      "schema_name": "step_by_step_nav",
-      "title": "Learn to drive a car: step by step",
-      "withdrawn": false,
-      "details": {
-        "step_by_step_nav": {
-          "title": "Learn to drive a car: step by step",
-          "introduction": [
-          {
-            "content_type": "text/govspeak",
-            "content": "Check what you need to do to learn to drive."
+      {
+        "api_path": "/api/content/learn-to-drive-a-car",
+        "base_path": "/learn-to-drive-a-car",
+        "content_id": "e01e924b-9c7c-4c71-8241-66a575c2f61f",
+        "description": "Learn to drive a car in the UK - get a provisional licence, take driving lessons, prepare for your theory test, book your practical test",
+        "document_type": "step_by_step_nav",
+        "locale": "en",
+        "public_updated_at": "2018-04-03T13:47:57Z",
+        "schema_name": "step_by_step_nav",
+        "title": "Learn to drive a car: step by step",
+        "withdrawn": false,
+        "details": {
+          "step_by_step_nav": {
+            "title": "Learn to drive a car: step by step",
+            "introduction": [
+              {
+                "content_type": "text/govspeak",
+                "content": "Check what you need to do to learn to drive."
+              }
+            ],
+            "steps": [
+              {
+                "title": "Check you're allowed to drive",
+                "contents": [
+                  {
+                    "type": "paragraph",
+                    "text": "Most people can start learning to drive when they’re 17."
+                  },
+                  {
+                    "type": "list",
+                    "contents": [
+                      {
+                        "text": "Check what age you can drive",
+                        "href": "/vehicles-can-drive"
+                      },
+                      {
+                        "text": "Requirements for driving legally",
+                        "href": "/legal-obligations-drivers-riders"
+                      },
+                      {
+                        "text": "Driving eyesight rules",
+                        "href": "/driving-eyesight-rules"
+                      }
+                    ]
+                  }
+                ],
+                "optional": false
+              },
+              {
+                "title": "Get a provisional licence",
+                "contents": [
+                  {
+                    "type": "list",
+                    "contents": [
+                      {
+                        "text": "Apply for your first provisional driving licence",
+                        "href": "/apply-first-provisional-driving-licence",
+                        "context": "£34 to £43"
+                      }
+                    ]
+                  }
+                ],
+                "optional": false
+              },
+              {
+                "title": "Driving lessons and practice",
+                "contents": [
+                  {
+                    "type": "paragraph",
+                    "text": "You need a provisional driving licence to take lessons or practice."
+                  },
+                  {
+                    "type": "list",
+                    "contents": [
+                      {
+                        "text": "The Highway Code",
+                        "href": "/guidance/the-highway-code"
+                      },
+                      {
+                        "text": "Taking driving lessons",
+                        "href": "/driving-lessons-learning-to-drive"
+                      },
+                      {
+                        "text": "Find driving schools, lessons and instructors",
+                        "href": "/find-driving-schools-and-lessons"
+                      },
+                      {
+                        "text": "Practise vehicle safety questions",
+                        "href": "/government/publications/car-show-me-tell-me-vehicle-safety-questions"
+                      }
+                    ]
+                  }
+                ],
+                "optional": false
+              },
+              {
+                "title": "Prepare for your theory test",
+                "contents": [
+                  {
+                    "type": "list",
+                    "contents": [
+                      {
+                        "text": "Theory test revision and practice",
+                        "href": "/theory-test/revision-and-practice"
+                      },
+                      {
+                        "text": "Take a practice theory test",
+                        "href": "/take-practice-theory-test"
+                      },
+                      {
+                        "text": "Theory and hazard perception test app",
+                        "href": "https://www.safedrivingforlife.info/shop/product/official-dvsa-theory-test-kit-app-app"
+                      }
+                    ]
+                  }
+                ],
+                "optional": false,
+                "logic": "and"
+              },
+              {
+                "title": "Book and manage your theory test",
+                "contents": [
+                  {
+                    "type": "paragraph",
+                    "text": "You need a provisional driving licence to book your theory test."
+                  },
+                  {
+                    "type": "list",
+                    "contents": [
+                      {
+                        "text": "Book your theory test",
+                        "href": "/book-theory-test",
+                        "context": "£23"
+                      },
+                      {
+                        "text": "What to take to your test",
+                        "href": "/theory-test/what-to-take"
+                      },
+                      {
+                        "text": "Change your theory test appointment",
+                        "href": "/change-theory-test"
+                      },
+                      {
+                        "text": "Check your theory test appointment details",
+                        "href": "/check-theory-test"
+                      },
+                      {
+                        "text": "Cancel your theory test",
+                        "href": "/cancel-theory-test"
+                      }
+                    ]
+                  }
+                ],
+                "optional": false
+              },
+              {
+                "title": "Book and manage your driving test",
+                "contents": [
+                  {
+                    "type": "paragraph",
+                    "text": "You must pass your theory test before you can book your driving test."
+                  },
+                  {
+                    "type": "list",
+                    "contents": [
+                      {
+                        "text": "Book your driving test",
+                        "href": "/book-driving-test",
+                        "context": "£62 to £75"
+                      },
+                      {
+                        "text": "What to take to your test",
+                        "href": "/driving-test/what-to-take"
+                      },
+                      {
+                        "text": "Change your driving test appointment",
+                        "href": "/change-driving-test"
+                      },
+                      {
+                        "text": "Check your driving test appointment details",
+                        "href": "/check-driving-test"
+                      },
+                      {
+                        "text": "Cancel your driving test",
+                        "href": "/cancel-driving-test"
+                      }
+                    ]
+                  }
+                ],
+                "optional": false
+              },
+              {
+                "title": "When you pass",
+                "contents": [
+                  {
+                    "type": "paragraph",
+                    "text": "You can start driving as soon as you pass your driving test."
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "You must have an insurance policy that allows you to drive without supervision."
+                  },
+                  {
+                    "type": "list",
+                    "contents": [
+                      {
+                        "text": "Find out about Pass Plus training courses",
+                        "href": "/pass-plus"
+                      }
+                    ]
+                  }
+                ],
+                "optional": false
+              }
+            ]
           }
-          ],
-          "steps": [
-          {
-            "title": "Check you're allowed to drive",
-            "contents": [
+        },
+        "links": {
+          "pages_part_of_step_nav": [
             {
-              "type": "paragraph",
-              "text": "Most people can start learning to drive when they’re 17."
-            },
-            {
-              "type": "list",
-              "contents": [
-              {
-                "text": "Check what age you can drive",
-                "href": "/vehicles-can-drive"
+              "api_path": "/api/content/driving-test",
+              "base_path": "/driving-test",
+              "content_id": "3bf0efc2-476c-4a9a-bd8a-872fb5c8e4d0",
+              "description": "When to book your car driving test, what to take with you, what happens during the test, major and minor faults, and what happens if your test is cancelled",
+              "document_type": "guide",
+              "locale": "en",
+              "public_updated_at": "2016-02-22T16:36:11Z",
+              "schema_name": "guide",
+              "title": "Driving test: cars",
+              "withdrawn": false,
+              "links": {
               },
-              {
-                "text": "Requirements for driving legally",
-                "href": "/legal-obligations-drivers-riders"
-              },
-              {
-                "text": "Driving eyesight rules",
-                "href": "/driving-eyesight-rules"
-              }
-              ]
+              "api_url": "https://www.gov.uk/api/content/driving-test",
+              "web_url": "https://www.gov.uk/driving-test"
             }
-            ],
-            "optional": false
-          },
-          {
-            "title": "Get a provisional licence",
-            "contents": [
-            {
-              "type": "list",
-              "contents": [
-              {
-                "text": "Apply for your first provisional driving licence",
-                "href": "/apply-first-provisional-driving-licence",
-                "context": "£34 to £43"
-              }
-              ]
-            }
-            ],
-            "optional": false
-          },
-          {
-            "title": "Driving lessons and practice",
-            "contents": [
-            {
-              "type": "paragraph",
-              "text": "You need a provisional driving licence to take lessons or practice."
-            },
-            {
-              "type": "list",
-              "contents": [
-              {
-                "text": "The Highway Code",
-                "href": "/guidance/the-highway-code"
-              },
-              {
-                "text": "Taking driving lessons",
-                "href": "/driving-lessons-learning-to-drive"
-              },
-              {
-                "text": "Find driving schools, lessons and instructors",
-                "href": "/find-driving-schools-and-lessons"
-              },
-              {
-                "text": "Practise vehicle safety questions",
-                "href": "/government/publications/car-show-me-tell-me-vehicle-safety-questions"
-              }
-              ]
-            }
-            ],
-            "optional": false
-          },
-          {
-            "title": "Prepare for your theory test",
-            "contents": [
-            {
-              "type": "list",
-              "contents": [
-              {
-                "text": "Theory test revision and practice",
-                "href": "/theory-test/revision-and-practice"
-              },
-              {
-                "text": "Take a practice theory test",
-                "href": "/take-practice-theory-test"
-              },
-              {
-                "text": "Theory and hazard perception test app",
-                "href": "https://www.safedrivingforlife.info/shop/product/official-dvsa-theory-test-kit-app-app"
-              }
-              ]
-            }
-            ],
-            "optional": false,
-            "logic": "and"
-          },
-          {
-            "title": "Book and manage your theory test",
-            "contents": [
-            {
-              "type": "paragraph",
-              "text": "You need a provisional driving licence to book your theory test."
-            },
-            {
-              "type": "list",
-              "contents": [
-              {
-                "text": "Book your theory test",
-                "href": "/book-theory-test",
-                "context": "£23"
-              },
-              {
-                "text": "What to take to your test",
-                "href": "/theory-test/what-to-take"
-              },
-              {
-                "text": "Change your theory test appointment",
-                "href": "/change-theory-test"
-              },
-              {
-                "text": "Check your theory test appointment details",
-                "href": "/check-theory-test"
-              },
-              {
-                "text": "Cancel your theory test",
-                "href": "/cancel-theory-test"
-              }
-              ]
-            }
-            ],
-            "optional": false
-          },
-          {
-            "title": "Book and manage your driving test",
-            "contents": [
-            {
-              "type": "paragraph",
-              "text": "You must pass your theory test before you can book your driving test."
-            },
-            {
-              "type": "list",
-              "contents": [
-              {
-                "text": "Book your driving test",
-                "href": "/book-driving-test",
-                "context": "£62 to £75"
-              },
-              {
-                "text": "What to take to your test",
-                "href": "/driving-test/what-to-take"
-              },
-              {
-                "text": "Change your driving test appointment",
-                "href": "/change-driving-test"
-              },
-              {
-                "text": "Check your driving test appointment details",
-                "href": "/check-driving-test"
-              },
-              {
-                "text": "Cancel your driving test",
-                "href": "/cancel-driving-test"
-              }
-              ]
-            }
-            ],
-            "optional": false
-          },
-          {
-            "title": "When you pass",
-            "contents": [
-            {
-              "type": "paragraph",
-              "text": "You can start driving as soon as you pass your driving test."
-            },
-            {
-              "type": "paragraph",
-              "text": "You must have an insurance policy that allows you to drive without supervision."
-            },
-            {
-              "type": "list",
-              "contents": [
-              {
-                "text": "Find out about Pass Plus training courses",
-                "href": "/pass-plus"
-              }
-              ]
-            }
-            ],
-            "optional": false
-          }
           ]
-        }
-      },
-      "links": {
-        "pages_part_of_step_nav": [
-        {
-          "api_path": "/api/content/driving-test",
-          "base_path": "/driving-test",
-          "content_id": "3bf0efc2-476c-4a9a-bd8a-872fb5c8e4d0",
-          "description": "When to book your car driving test, what to take with you, what happens during the test, major and minor faults, and what happens if your test is cancelled",
-          "document_type": "guide",
-          "locale": "en",
-          "public_updated_at": "2016-02-22T16:36:11Z",
-          "schema_name": "guide",
-          "title": "Driving test: cars",
-          "withdrawn": false,
-          "links": {},
-          "api_url": "https://www.gov.uk/api/content/driving-test",
-          "web_url": "https://www.gov.uk/driving-test"
-        }
-        ]
-      },
-      "api_url": "https://www.gov.uk/api/content/learn-to-drive-a-car",
-      "web_url": "https://www.gov.uk/learn-to-drive-a-car"
-    }
+        },
+        "api_url": "https://www.gov.uk/api/content/learn-to-drive-a-car",
+        "web_url": "https://www.gov.uk/learn-to-drive-a-car"
+      }
     ],
     "mainstream_browse_pages": [
       {

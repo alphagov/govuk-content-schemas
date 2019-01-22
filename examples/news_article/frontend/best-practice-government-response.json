@@ -18,7 +18,8 @@
   "title": "Improving food in hospitals and schools",
   "updated_at": "2018-01-10T15:15:16.626Z",
   "user_journey_document_supertype": "thing",
-  "withdrawn_notice": {},
+  "withdrawn_notice": {
+  },
   "publishing_request_id": "10251-1512473862.946-212.250.43.51-280106",
   "links": {
     "organisations": [
@@ -40,7 +41,8 @@
             "crest": "single-identity"
           }
         },
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/organisations/department-for-education",
         "web_url": "https://www.gov.uk/government/organisations/department-for-education"
       },
@@ -62,7 +64,8 @@
             "crest": "single-identity"
           }
         },
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/organisations/department-for-environment-food-rural-affairs",
         "web_url": "https://www.gov.uk/government/organisations/department-for-environment-food-rural-affairs"
       },
@@ -84,7 +87,8 @@
             "crest": "single-identity"
           }
         },
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/organisations/department-of-health-and-social-care",
         "web_url": "https://www.gov.uk/government/organisations/department-of-health-and-social-care"
       }
@@ -100,7 +104,8 @@
         "schema_name": "placeholder_policy_area",
         "title": "National Health Service",
         "withdrawn": false,
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/topics/national-health-service",
         "web_url": "https://www.gov.uk/government/topics/national-health-service"
       },
@@ -114,7 +119,8 @@
         "schema_name": "placeholder_policy_area",
         "title": "Public health",
         "withdrawn": false,
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/topics/public-health",
         "web_url": "https://www.gov.uk/government/topics/public-health"
       }
@@ -138,7 +144,8 @@
             "crest": "single-identity"
           }
         },
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/organisations/department-of-health-and-social-care",
         "web_url": "https://www.gov.uk/government/organisations/department-of-health-and-social-care"
       }
@@ -196,7 +203,8 @@
                       "notes_for_editors": "",
                       "visible_to_departmental_editors": false
                     },
-                    "links": {},
+                    "links": {
+                    },
                     "api_url": "https://www.gov.uk/api/content/education",
                     "web_url": "https://www.gov.uk/education"
                   }
@@ -225,7 +233,8 @@
         "locale": "en",
         "api_url": "https://www.gov.uk/api/content/government/news/improving-food-in-hospitals-and-schools",
         "web_url": "https://www.gov.uk/government/news/improving-food-in-hospitals-and-schools",
-        "links": {}
+        "links": {
+        }
       }
     ]
   },
@@ -256,9 +265,15 @@
       "current": false
     },
     "tags": {
-      "browse_pages": [],
-      "policies": [],
-      "topics": []
+      "browse_pages": [
+
+      ],
+      "policies": [
+
+      ],
+      "topics": [
+
+      ]
     }
   }
 }

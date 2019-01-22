@@ -18,7 +18,8 @@
   "title": "Corporation Tax",
   "updated_at": "2018-01-05T13:39:26.932Z",
   "user_journey_document_supertype": "finding",
-  "withdrawn_notice": {},
+  "withdrawn_notice": {
+  },
   "publishing_request_id": null,
   "links": {
     "children": [
@@ -46,7 +47,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -79,7 +81,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -112,7 +115,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -145,7 +149,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -178,7 +183,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -211,7 +217,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -244,7 +251,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -277,7 +285,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -310,7 +319,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -343,7 +353,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -376,7 +387,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -409,7 +421,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -442,7 +455,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -475,7 +489,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -508,7 +523,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -541,7 +557,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -574,7 +591,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -607,7 +625,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -640,7 +659,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -673,7 +693,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -706,7 +727,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -739,7 +761,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -772,7 +795,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -805,7 +829,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -838,7 +863,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -871,7 +897,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -904,7 +931,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -937,7 +965,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -970,7 +999,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -1003,7 +1033,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -1036,7 +1067,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -1069,7 +1101,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -1102,7 +1135,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -1135,7 +1169,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -1168,7 +1203,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -1201,7 +1237,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -1234,7 +1271,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -1267,7 +1305,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -1300,7 +1339,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -1333,7 +1373,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -1366,7 +1407,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -1399,7 +1441,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -1432,7 +1475,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -1465,7 +1509,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -1498,7 +1543,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -1531,7 +1577,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -1564,7 +1611,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -1597,7 +1645,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -1630,7 +1679,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -1663,7 +1713,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -1696,7 +1747,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -1729,7 +1781,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -1762,7 +1815,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -1795,7 +1849,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -1828,7 +1883,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -1861,7 +1917,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -1894,7 +1951,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -1927,7 +1985,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -1960,7 +2019,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -1993,7 +2053,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -2026,7 +2087,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -2059,7 +2121,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -2092,7 +2155,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -2125,7 +2189,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -2158,7 +2223,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -2191,7 +2257,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -2224,7 +2291,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -2257,7 +2325,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -2290,7 +2359,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -2323,7 +2393,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -2356,7 +2427,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -2389,7 +2461,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -2422,7 +2495,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -2455,7 +2529,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -2488,7 +2563,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -2521,7 +2597,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -2554,7 +2631,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -2587,7 +2665,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -2620,7 +2699,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -2653,7 +2733,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -2686,7 +2767,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -2719,7 +2801,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -2752,7 +2835,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -2785,7 +2869,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -2818,7 +2903,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -2851,7 +2937,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -2884,7 +2971,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -2917,7 +3005,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -2950,7 +3039,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -2983,7 +3073,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -3016,7 +3107,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -3049,7 +3141,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -3082,7 +3175,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -3115,7 +3209,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -3148,7 +3243,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -3181,7 +3277,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -3214,7 +3311,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -3247,7 +3345,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -3280,7 +3379,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -3313,7 +3413,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -3346,7 +3447,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -3379,7 +3481,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -3412,7 +3515,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -3445,7 +3549,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -3478,7 +3583,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -3511,7 +3617,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -3544,7 +3651,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -3577,7 +3685,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -3610,7 +3719,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -3643,7 +3753,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -3676,7 +3787,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -3709,7 +3821,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -3742,7 +3855,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -3775,7 +3889,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -3808,7 +3923,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -3841,7 +3957,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -3874,7 +3991,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -3907,7 +4025,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -3940,7 +4059,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -3973,7 +4093,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -4006,7 +4127,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -4039,7 +4161,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -4072,7 +4195,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -4105,7 +4229,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -4138,7 +4263,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -4171,7 +4297,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -4204,7 +4331,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -4237,7 +4365,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -4270,7 +4399,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -4303,7 +4433,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -4336,7 +4467,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -4369,7 +4501,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -4402,7 +4535,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -4435,7 +4569,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -4468,7 +4603,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -4501,7 +4637,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -4534,7 +4671,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -4567,7 +4705,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -4600,7 +4739,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -4633,7 +4773,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -4666,7 +4807,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -4699,7 +4841,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -4732,7 +4875,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -4765,7 +4909,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -4798,7 +4943,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -4831,7 +4977,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -4864,7 +5011,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -4897,7 +5045,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -4930,7 +5079,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -4963,7 +5113,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -4996,7 +5147,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -5029,7 +5181,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -5062,7 +5215,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -5095,7 +5249,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -5128,7 +5283,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -5161,7 +5317,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -5194,7 +5351,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -5227,7 +5385,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -5260,7 +5419,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -5293,7 +5453,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -5326,7 +5487,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -5359,7 +5521,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -5392,7 +5555,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -5425,7 +5589,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -5458,7 +5623,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -5491,7 +5657,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -5524,7 +5691,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -5557,7 +5725,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -5590,7 +5759,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -5623,7 +5793,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -5656,7 +5827,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -5689,7 +5861,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -5722,7 +5895,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -5755,7 +5929,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -5788,7 +5963,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -5821,7 +5997,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -5854,7 +6031,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -5887,7 +6065,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -5920,7 +6099,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -5953,7 +6133,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -5986,7 +6167,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -6019,7 +6201,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -6052,7 +6235,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -6085,7 +6269,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -6118,7 +6303,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -6151,7 +6337,8 @@
               "schema_name": "topic",
               "title": "Corporation Tax",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
               "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax"
             }
@@ -6173,7 +6360,8 @@
         "schema_name": "topic",
         "title": "Business tax",
         "withdrawn": false,
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/topic/business-tax",
         "web_url": "https://www.gov.uk/topic/business-tax"
       }
@@ -6192,7 +6380,8 @@
         "locale": "en",
         "api_url": "https://www.gov.uk/api/content/topic/business-tax/corporation-tax",
         "web_url": "https://www.gov.uk/topic/business-tax/corporation-tax",
-        "links": {}
+        "links": {
+        }
       }
     ]
   },

@@ -12,7 +12,8 @@
   "schema_name": "guide",
   "title": "The national curriculum",
   "updated_at": "2017-02-20T16:54:09.397Z",
-  "withdrawn_notice": {},
+  "withdrawn_notice": {
+  },
   "links": {
     "part_of_step_navs": [
       {
@@ -245,7 +246,8 @@
               "schema_name": "guide",
               "title": "Theory test: cars",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/theory-test",
               "web_url": "https://www.gov.uk/theory-test"
             }
@@ -268,7 +270,8 @@
         "schema_name": "mainstream_browse_page",
         "title": "Schools and education",
         "withdrawn": false,
-        "links": {},
+        "links": {
+        },
         "api_url": "http://www.dev.gov.uk/api/content/browse/childcare-parenting/schools-education",
         "web_url": "http://www.dev.gov.uk/browse/childcare-parenting/schools-education"
       },
@@ -284,7 +287,8 @@
         "schema_name": "mainstream_browse_page",
         "title": "Schools and curriculum",
         "withdrawn": false,
-        "links": {},
+        "links": {
+        },
         "api_url": "http://www.dev.gov.uk/api/content/browse/education/school-life",
         "web_url": "http://www.dev.gov.uk/browse/education/school-life"
       }
@@ -330,7 +334,8 @@
                     "schema_name": "mainstream_browse_page",
                     "title": "Education and learning",
                     "withdrawn": false,
-                    "links": {},
+                    "links": {
+                    },
                     "api_url": "http://www.dev.gov.uk/api/content/browse/education",
                     "web_url": "http://www.dev.gov.uk/browse/education"
                   }
@@ -365,7 +370,8 @@
                     "schema_name": "mainstream_browse_page",
                     "title": "Childcare and parenting",
                     "withdrawn": false,
-                    "links": {},
+                    "links": {
+                    },
                     "api_url": "http://www.dev.gov.uk/api/content/browse/childcare-parenting",
                     "web_url": "http://www.dev.gov.uk/browse/childcare-parenting"
                   }
@@ -419,7 +425,8 @@
                     "schema_name": "mainstream_browse_page",
                     "title": "Education and learning",
                     "withdrawn": false,
-                    "links": {},
+                    "links": {
+                    },
                     "api_url": "http://www.dev.gov.uk/api/content/browse/education",
                     "web_url": "http://www.dev.gov.uk/browse/education"
                   }
@@ -454,7 +461,8 @@
                     "schema_name": "mainstream_browse_page",
                     "title": "Childcare and parenting",
                     "withdrawn": false,
-                    "links": {},
+                    "links": {
+                    },
                     "api_url": "http://www.dev.gov.uk/api/content/browse/childcare-parenting",
                     "web_url": "http://www.dev.gov.uk/browse/childcare-parenting"
                   }
@@ -508,7 +516,8 @@
                     "schema_name": "mainstream_browse_page",
                     "title": "Childcare and parenting",
                     "withdrawn": false,
-                    "links": {},
+                    "links": {
+                    },
                     "api_url": "http://www.dev.gov.uk/api/content/browse/childcare-parenting",
                     "web_url": "http://www.dev.gov.uk/browse/childcare-parenting"
                   }
@@ -543,7 +552,8 @@
                     "schema_name": "mainstream_browse_page",
                     "title": "Education and learning",
                     "withdrawn": false,
-                    "links": {},
+                    "links": {
+                    },
                     "api_url": "http://www.dev.gov.uk/api/content/browse/education",
                     "web_url": "http://www.dev.gov.uk/browse/education"
                   }
@@ -597,7 +607,8 @@
                     "schema_name": "mainstream_browse_page",
                     "title": "Childcare and parenting",
                     "withdrawn": false,
-                    "links": {},
+                    "links": {
+                    },
                     "api_url": "http://www.dev.gov.uk/api/content/browse/childcare-parenting",
                     "web_url": "http://www.dev.gov.uk/browse/childcare-parenting"
                   }
@@ -632,7 +643,8 @@
                     "schema_name": "mainstream_browse_page",
                     "title": "Education and learning",
                     "withdrawn": false,
-                    "links": {},
+                    "links": {
+                    },
                     "api_url": "http://www.dev.gov.uk/api/content/browse/education",
                     "web_url": "http://www.dev.gov.uk/browse/education"
                   }
@@ -686,7 +698,8 @@
                     "schema_name": "mainstream_browse_page",
                     "title": "Education and learning",
                     "withdrawn": false,
-                    "links": {},
+                    "links": {
+                    },
                     "api_url": "http://www.dev.gov.uk/api/content/browse/education",
                     "web_url": "http://www.dev.gov.uk/browse/education"
                   }
@@ -721,7 +734,8 @@
                     "schema_name": "mainstream_browse_page",
                     "title": "Childcare and parenting",
                     "withdrawn": false,
-                    "links": {},
+                    "links": {
+                    },
                     "api_url": "http://www.dev.gov.uk/api/content/browse/childcare-parenting",
                     "web_url": "http://www.dev.gov.uk/browse/childcare-parenting"
                   }
@@ -756,7 +770,8 @@
             "crest": "single-identity"
           }
         },
-        "links": {},
+        "links": {
+        },
         "api_url": "http://www.dev.gov.uk/api/content/government/organisations/department-for-education",
         "web_url": "http://www.dev.gov.uk/government/organisations/department-for-education"
       }
@@ -788,7 +803,8 @@
               "schema_name": "mainstream_browse_page",
               "title": "Childcare and parenting",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "http://www.dev.gov.uk/api/content/browse/childcare-parenting",
               "web_url": "http://www.dev.gov.uk/browse/childcare-parenting"
             }
@@ -833,7 +849,8 @@
                 "internal_name": "education, training and skills",
                 "notes_for_editors": ""
               },
-              "links": {},
+              "links": {
+              },
               "api_url": "http://www.dev.gov.uk/api/content/education",
               "web_url": "http://www.dev.gov.uk/education"
             }
@@ -856,7 +873,8 @@
         "schema_name": "topic",
         "title": "Curriculum and qualifications",
         "withdrawn": false,
-        "links": {},
+        "links": {
+        },
         "api_url": "http://www.dev.gov.uk/api/content/topic/schools-colleges-childrens-services/curriculum-qualifications",
         "web_url": "http://www.dev.gov.uk/topic/schools-colleges-childrens-services/curriculum-qualifications"
       }
@@ -876,7 +894,8 @@
         "locale": "en",
         "api_url": "http://www.dev.gov.uk/api/content/national-curriculum",
         "web_url": "http://www.dev.gov.uk/national-curriculum",
-        "links": {}
+        "links": {
+        }
       }
     ]
   },
@@ -904,6 +923,8 @@
         "body": "<p>Children must also study:</p>\n\n<ul>\n  <li>sex and relationships education (year 7 onwards)</li>\n  <li>religious education (<abbr title=\"religious education\">RE</abbr>)</li>\n</ul>\n\n<p>They may not have to take exams in these subjects.</p>\n\n<h2 id=\"sex-and-relationship-education\">Sex and relationship education</h2>\n\n<p>Sex and relationship education (<abbr title=\"Sex and relationship education\">SRE</abbr>) is compulsory from age 11 onwards. It involves teaching children about reproduction, sexuality and sexual health. It doesn’t promote early sexual activity or any particular sexual orientation.</p>\n\n<p>Some parts of sex and relationship education are compulsory - these are part of the national curriculum for science. Parents can withdraw their children from all other parts of sex and relationship education if they want.</p>\n\n<div role=\"note\" aria-label=\"Information\" class=\"application-notice info-notice\">\n<p>All schools must have a written policy on sex education, which they must make available to parents for free.</p>\n</div>\n\n<h2 id=\"religious-education\">Religious education</h2>\n\n<p>Schools have to teach <abbr title=\"religious education\">RE</abbr> but parents can withdraw their children for all or part of the lessons. Pupils can choose to withdraw themselves once they’re 18.</p>\n\n<p>Local councils are responsible for deciding the <abbr title=\"religious education\">RE</abbr> syllabus, but <a href=\"/types-of-school/faith-schools\">faith schools</a> and <a href=\"/types-of-school/academies\">academies</a> can set their own.</p>\n\n"
       }
     ],
-    "external_related_links": []
+    "external_related_links": [
+
+    ]
   }
 }

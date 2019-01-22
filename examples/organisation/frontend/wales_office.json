@@ -78,7 +78,8 @@
         "locale": "cy",
         "api_url": "https://www.gov.uk/api/content/government/organisations/office-of-the-secretary-of-state-for-wales.cy",
         "web_url": "https://www.gov.uk/government/organisations/office-of-the-secretary-of-state-for-wales.cy",
-        "links": {}
+        "links": {
+        }
       },
       {
         "title": "Office of the Secretary of State for Wales",
@@ -93,10 +94,13 @@
         "locale": "en",
         "api_url": "https://www.gov.uk/api/content/government/organisations/office-of-the-secretary-of-state-for-wales",
         "web_url": "https://www.gov.uk/government/organisations/office-of-the-secretary-of-state-for-wales",
-        "links": {}
+        "links": {
+        }
       }
     ],
-    "ordered_contacts": [],
+    "ordered_contacts": [
+
+    ],
     "ordered_foi_contacts": [
       {
         "content_id": "c9253289-a38e-422b-b16d-90e4b3b373d2",
@@ -163,7 +167,9 @@
               "email": "welshofficefoi@walesoffice.gsi.gov.uk"
             }
           ],
-          "contact_form_links": []
+          "contact_form_links": [
+
+          ]
         }
       }
     ]

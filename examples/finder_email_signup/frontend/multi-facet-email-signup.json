@@ -12,7 +12,8 @@
   "schema_name": "finder_email_signup",
   "title": "Multi facet cases",
   "updated_at": "2016-06-13T14:31:32.260Z",
-  "withdrawn_notice": {},
+  "withdrawn_notice": {
+  },
   "links": {
     "related": [
       {

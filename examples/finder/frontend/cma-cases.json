@@ -4,7 +4,7 @@
   "title": "Competition and Markets Authority cases",
   "description": "",
   "locale": "en",
-  "updated_at": "2015-07-21T12:45:38.225Z",
+  "updated_at": "2017-06-30T15:44:11.073Z",
   "public_updated_at": "2015-04-30T10:41:26.000+00:00",
   "details": {
     "beta": false,
@@ -387,6 +387,5 @@
     ]
   },
   "schema_name": "finder",
-  "document_type": "finder",
-  "updated_at": "2017-06-30T15:44:11.073Z"
+  "document_type": "finder"
 }

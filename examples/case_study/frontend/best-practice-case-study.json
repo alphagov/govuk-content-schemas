@@ -18,7 +18,8 @@
   "title": "English language consultancy wins business in Turkey",
   "updated_at": "2017-12-19T11:29:18.792Z",
   "user_journey_document_supertype": "thing",
-  "withdrawn_notice": {},
+  "withdrawn_notice": {
+  },
   "publishing_request_id": null,
   "links": {
     "organisations": [
@@ -40,7 +41,8 @@
             "crest": "single-identity"
           }
         },
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/organisations/uk-trade-investment",
         "web_url": "https://www.gov.uk/government/organisations/uk-trade-investment"
       }
@@ -64,7 +66,8 @@
             "crest": "single-identity"
           }
         },
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/organisations/uk-trade-investment",
         "web_url": "https://www.gov.uk/government/organisations/uk-trade-investment"
       }
@@ -81,7 +84,8 @@
         "schema_name": "policy",
         "title": "Exports and inward investment",
         "withdrawn": false,
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/policies/exports-and-inward-investment",
         "web_url": "https://www.gov.uk/government/policies/exports-and-inward-investment"
       }
@@ -93,7 +97,8 @@
         "schema_name": "world_location",
         "locale": "en",
         "analytics_identifier": "WL142",
-        "links": {}
+        "links": {
+        }
       }
     ],
     "worldwide_organisations": [
@@ -109,7 +114,8 @@
         "schema_name": "placeholder",
         "title": "Department for International Trade Turkey",
         "withdrawn": false,
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/world/organisations/department-for-international-trade-turkey",
         "web_url": "https://www.gov.uk/world/organisations/department-for-international-trade-turkey"
       }
@@ -128,7 +134,8 @@
         "locale": "en",
         "api_url": "https://www.gov.uk/api/content/government/case-studies/english-language-consultancy-wins-business-in-turkey",
         "web_url": "https://www.gov.uk/government/case-studies/english-language-consultancy-wins-business-in-turkey",
-        "links": {}
+        "links": {
+        }
       }
     ]
   },
@@ -152,11 +159,15 @@
       "caption": null
     },
     "tags": {
-      "browse_pages": [],
+      "browse_pages": [
+
+      ],
       "policies": [
         "exports-and-inward-investment"
       ],
-      "topics": []
+      "topics": [
+
+      ]
     }
   }
 }

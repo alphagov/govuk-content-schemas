@@ -18,7 +18,8 @@
   "title": "Child sexual exploitation: health working group report",
   "updated_at": "2018-01-10T15:15:10.764Z",
   "user_journey_document_supertype": "thing",
-  "withdrawn_notice": {},
+  "withdrawn_notice": {
+  },
   "publishing_request_id": null,
   "links": {
     "organisations": [
@@ -40,7 +41,8 @@
             "crest": "single-identity"
           }
         },
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/organisations/department-of-health-and-social-care",
         "web_url": "https://www.gov.uk/government/organisations/department-of-health-and-social-care"
       }
@@ -56,7 +58,8 @@
         "schema_name": "placeholder_policy_area",
         "title": "Public health",
         "withdrawn": false,
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/topics/public-health",
         "web_url": "https://www.gov.uk/government/topics/public-health"
       }
@@ -80,7 +83,8 @@
             "crest": "single-identity"
           }
         },
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/organisations/department-of-health-and-social-care",
         "web_url": "https://www.gov.uk/government/organisations/department-of-health-and-social-care"
       }
@@ -99,7 +103,8 @@
         "locale": "en",
         "api_url": "https://www.gov.uk/api/content/government/publications/health-working-group-report-on-child-sexual-exploitation",
         "web_url": "https://www.gov.uk/government/publications/health-working-group-report-on-child-sexual-exploitation",
-        "links": {}
+        "links": {
+        }
       }
     ]
   },
@@ -152,9 +157,15 @@
       "current": false
     },
     "tags": {
-      "browse_pages": [],
-      "policies": [],
-      "topics": []
+      "browse_pages": [
+
+      ],
+      "policies": [
+
+      ],
+      "topics": [
+
+      ]
     },
     "first_public_at": "2014-01-15T17:38:00.000+00:00"
   }

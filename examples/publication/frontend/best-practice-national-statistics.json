@@ -18,7 +18,8 @@
   "title": "Road traffic estimates for Great Britain: January to March 2015",
   "updated_at": "2018-01-10T14:08:57.597Z",
   "user_journey_document_supertype": "thing",
-  "withdrawn_notice": {},
+  "withdrawn_notice": {
+  },
   "publishing_request_id": null,
   "links": {
     "document_collections": [
@@ -46,7 +47,8 @@
               "schema_name": "publication",
               "title": "Road traffic estimates for Great Britain: January to March 2015",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/government/statistics/road-traffic-estimates-for-great-britain-january-to-march-2015",
               "web_url": "https://www.gov.uk/government/statistics/road-traffic-estimates-for-great-britain-january-to-march-2015"
             }
@@ -75,7 +77,8 @@
             "crest": "single-identity"
           }
         },
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/organisations/department-for-transport",
         "web_url": "https://www.gov.uk/government/organisations/department-for-transport"
       }
@@ -91,7 +94,8 @@
         "schema_name": "placeholder",
         "title": "Transport",
         "withdrawn": false,
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/topics/transport",
         "web_url": "https://www.gov.uk/government/topics/transport"
       },
@@ -105,7 +109,8 @@
         "schema_name": "placeholder_policy_area",
         "title": "UK economy",
         "withdrawn": false,
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/topics/uk-economy",
         "web_url": "https://www.gov.uk/government/topics/uk-economy"
       }
@@ -129,7 +134,8 @@
             "crest": "single-identity"
           }
         },
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/organisations/department-for-transport",
         "web_url": "https://www.gov.uk/government/organisations/department-for-transport"
       }
@@ -146,7 +152,8 @@
         "schema_name": "policy",
         "title": "Road network and traffic",
         "withdrawn": false,
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/policies/road-network-and-traffic",
         "web_url": "https://www.gov.uk/government/policies/road-network-and-traffic"
       }
@@ -163,7 +170,8 @@
         "schema_name": "statistical_data_set",
         "title": "Quarterly traffic estimates (TRA25)",
         "withdrawn": false,
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/statistical-data-sets/tra25-quarterly-estimates",
         "web_url": "https://www.gov.uk/government/statistical-data-sets/tra25-quarterly-estimates"
       }
@@ -182,7 +190,8 @@
         "locale": "en",
         "api_url": "https://www.gov.uk/api/content/government/statistics/road-traffic-estimates-for-great-britain-january-to-march-2015",
         "web_url": "https://www.gov.uk/government/statistics/road-traffic-estimates-for-great-britain-january-to-march-2015",
-        "links": {}
+        "links": {
+        }
       }
     ]
   },
@@ -209,11 +218,15 @@
       "current": true
     },
     "tags": {
-      "browse_pages": [],
+      "browse_pages": [
+
+      ],
       "policies": [
         "road-network-and-traffic"
       ],
-      "topics": []
+      "topics": [
+
+      ]
     },
     "first_public_at": "2015-05-21T09:30:36.000+01:00"
   }

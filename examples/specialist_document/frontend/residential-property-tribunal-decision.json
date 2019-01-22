@@ -42,7 +42,7 @@
         "description": "Find decisions on Residential Property Tribunal cases in England, Wales and Scotland.",
         "document_type": "finder",
         "locale": "en",
-        "public_updated_at":"2018-01-01T00:00:00+00:00",
+        "public_updated_at": "2018-01-01T00:00:00+00:00",
         "schema_name": "finder",
         "title": "Residential property tribunal decisions",
         "withdrawn": false,
@@ -283,17 +283,18 @@
           ]
         },
         "phase": "beta",
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/residential-property-tribunal-decisions",
         "web_url": "https://www.gov.uk/residential-property-tribunal-decisions"
       }
     ]
   },
-  "locale":"en",
-  "phase":"beta",
-  "public_updated_at":"2018-01-01T01:01:01+00:00",
-  "rendering_app":"government-frontend",
-  "schema_name":"specialist_document",
-  "title":"A decision has been made",
-  "updated_at":"2018-01-01T01:01:01+00:00"
+  "locale": "en",
+  "phase": "beta",
+  "public_updated_at": "2018-01-01T01:01:01+00:00",
+  "rendering_app": "government-frontend",
+  "schema_name": "specialist_document",
+  "title": "A decision has been made",
+  "updated_at": "2018-01-01T01:01:01+00:00"
 }

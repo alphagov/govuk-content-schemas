@@ -18,7 +18,8 @@
   "title": "Fostering in England 1 April 2013 to 31 March 2014",
   "updated_at": "2017-12-22T10:26:19.210Z",
   "user_journey_document_supertype": "thing",
-  "withdrawn_notice": {},
+  "withdrawn_notice": {
+  },
   "publishing_request_id": null,
   "links": {
     "document_collections": [
@@ -46,7 +47,8 @@
               "schema_name": "publication",
               "title": "Fostering in England 1 April 2013 to 31 March 2014",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/government/statistics/fostering-in-england-1-april-2013-to-31-march-2014",
               "web_url": "https://www.gov.uk/government/statistics/fostering-in-england-1-april-2013-to-31-march-2014"
             }
@@ -78,7 +80,8 @@
             }
           }
         },
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/organisations/ofsted",
         "web_url": "https://www.gov.uk/government/organisations/ofsted"
       }
@@ -94,7 +97,8 @@
         "schema_name": "placeholder_policy_area",
         "title": "Social care",
         "withdrawn": false,
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/topics/social-care",
         "web_url": "https://www.gov.uk/government/topics/social-care"
       }
@@ -121,7 +125,8 @@
             }
           }
         },
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/organisations/ofsted",
         "web_url": "https://www.gov.uk/government/organisations/ofsted"
       }
@@ -140,7 +145,8 @@
         "locale": "en",
         "api_url": "https://www.gov.uk/api/content/government/statistics/fostering-in-england-1-april-2013-to-31-march-2014",
         "web_url": "https://www.gov.uk/government/statistics/fostering-in-england-1-april-2013-to-31-march-2014",
-        "links": {}
+        "links": {
+        }
       }
     ]
   },
@@ -204,9 +210,15 @@
       "current": false
     },
     "tags": {
-      "browse_pages": [],
-      "policies": [],
-      "topics": []
+      "browse_pages": [
+
+      ],
+      "policies": [
+
+      ],
+      "topics": [
+
+      ]
     },
     "first_public_at": "2015-01-14T09:30:00.000+00:00"
   }

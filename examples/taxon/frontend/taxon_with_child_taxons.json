@@ -43,7 +43,8 @@
                 "notes_for_editors": "",
                 "visible_to_departmental_editors": false
               },
-              "links": { },
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/education",
               "web_url": "https://www.gov.uk/education"
             }
@@ -63,7 +64,8 @@
         "schema_name": "homepage",
         "title": "GOV.UK homepage",
         "withdrawn": false,
-        "links": { },
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/",
         "web_url": "https://www.gov.uk/"
       }

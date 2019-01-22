@@ -78,7 +78,8 @@
         "schema_name": "placeholder_policy_area",
         "title": "Energy",
         "withdrawn": false,
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/topics/energy",
         "web_url": "https://www.gov.uk/government/topics/energy"
       }
@@ -94,7 +95,8 @@
         "schema_name": "placeholder",
         "title": "The Rt Hon Andrea Leadsom MP",
         "withdrawn": false,
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/people/andrea-leadsom",
         "web_url": "https://www.gov.uk/government/people/andrea-leadsom"
       }

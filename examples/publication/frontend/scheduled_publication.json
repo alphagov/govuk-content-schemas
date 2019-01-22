@@ -11,7 +11,9 @@
   "government_document_supertype": "notices",
   "details": {
     "body": "Body text",
-    "documents": [],
+    "documents": [
+
+    ],
     "first_public_at": "2012-11-01T00:00:00.000+00:00",
     "government": {
       "title": "2010 to 2015 Conservative and Liberal Democrat coalition government",
@@ -20,7 +22,8 @@
     },
     "political": false
   },
-  "links": {},
+  "links": {
+  },
   "schema_name": "publication",
   "document_type": "notice"
 }

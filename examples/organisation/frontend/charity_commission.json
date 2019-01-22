@@ -66,7 +66,9 @@
     ]
   },
   "links": {
-    "available_translations": [],
+    "available_translations": [
+
+    ],
     "ordered_featured_policies": [
       {
         "api_path": "/api/content/government/policies/waste-and-recycling",
@@ -79,7 +81,8 @@
         "schema_name": "policy",
         "title": "Waste and recycling",
         "withdrawn": false,
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/policies/waste-and-recycling",
         "web_url": "https://www.gov.uk/government/policies/waste-and-recycling"
       }
