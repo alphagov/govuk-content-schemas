@@ -18,7 +18,8 @@
   "title": "About us",
   "updated_at": "2018-01-09T15:25:01.623Z",
   "user_journey_document_supertype": "thing",
-  "withdrawn_notice": {},
+  "withdrawn_notice": {
+  },
   "publishing_request_id": "23640-1515511464.405-212.250.142.210-19753",
   "links": {
     "corporate_information_pages": [
@@ -33,7 +34,8 @@
         "schema_name": "corporate_information_page",
         "title": "Procurement at IPO",
         "withdrawn": false,
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/organisations/intellectual-property-office/about/procurement",
         "web_url": "https://www.gov.uk/government/organisations/intellectual-property-office/about/procurement"
       },
@@ -48,7 +50,8 @@
         "schema_name": "corporate_information_page",
         "title": "Working for IPO",
         "withdrawn": false,
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/organisations/intellectual-property-office/about/recruitment",
         "web_url": "https://www.gov.uk/government/organisations/intellectual-property-office/about/recruitment"
       },
@@ -63,7 +66,8 @@
         "schema_name": "corporate_information_page",
         "title": "Complaints procedure",
         "withdrawn": false,
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/organisations/intellectual-property-office/about/complaints-procedure",
         "web_url": "https://www.gov.uk/government/organisations/intellectual-property-office/about/complaints-procedure"
       },
@@ -78,7 +82,8 @@
         "schema_name": "corporate_information_page",
         "title": "Equality and diversity",
         "withdrawn": false,
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/organisations/intellectual-property-office/about/equality-and-diversity",
         "web_url": "https://www.gov.uk/government/organisations/intellectual-property-office/about/equality-and-diversity"
       },
@@ -93,7 +98,8 @@
         "schema_name": "corporate_information_page",
         "title": "Our energy use",
         "withdrawn": false,
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/organisations/intellectual-property-office/about/our-energy-use",
         "web_url": "https://www.gov.uk/government/organisations/intellectual-property-office/about/our-energy-use"
       },
@@ -108,7 +114,8 @@
         "schema_name": "corporate_information_page",
         "title": "Research at IPO",
         "withdrawn": false,
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/organisations/intellectual-property-office/about/research",
         "web_url": "https://www.gov.uk/government/organisations/intellectual-property-office/about/research"
       },
@@ -123,7 +130,8 @@
         "schema_name": "corporate_information_page",
         "title": "Media enquiries",
         "withdrawn": false,
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/organisations/intellectual-property-office/about/media-enquiries",
         "web_url": "https://www.gov.uk/government/organisations/intellectual-property-office/about/media-enquiries"
       },
@@ -138,7 +146,8 @@
         "schema_name": "corporate_information_page",
         "title": "Our governance",
         "withdrawn": false,
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/organisations/intellectual-property-office/about/our-governance",
         "web_url": "https://www.gov.uk/government/organisations/intellectual-property-office/about/our-governance"
       },
@@ -153,7 +162,8 @@
         "schema_name": "corporate_information_page",
         "title": "Office access and opening times",
         "withdrawn": false,
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/organisations/intellectual-property-office/about/access-and-opening",
         "web_url": "https://www.gov.uk/government/organisations/intellectual-property-office/about/access-and-opening"
       },
@@ -168,7 +178,8 @@
         "schema_name": "corporate_information_page",
         "title": "Personal information charter",
         "withdrawn": false,
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/organisations/intellectual-property-office/about/personal-information-charter",
         "web_url": "https://www.gov.uk/government/organisations/intellectual-property-office/about/personal-information-charter"
       },
@@ -183,7 +194,8 @@
         "schema_name": "corporate_information_page",
         "title": "Publication scheme",
         "withdrawn": false,
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/organisations/intellectual-property-office/about/publication-scheme",
         "web_url": "https://www.gov.uk/government/organisations/intellectual-property-office/about/publication-scheme"
       },
@@ -198,7 +210,8 @@
         "schema_name": "corporate_information_page",
         "title": "Welsh language scheme",
         "withdrawn": false,
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/organisations/intellectual-property-office/about/welsh-language-scheme",
         "web_url": "https://www.gov.uk/government/organisations/intellectual-property-office/about/welsh-language-scheme"
       }
@@ -222,7 +235,8 @@
             "crest": "single-identity"
           }
         },
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/organisations/intellectual-property-office",
         "web_url": "https://www.gov.uk/government/organisations/intellectual-property-office"
       }
@@ -241,7 +255,8 @@
         "locale": "en",
         "api_url": "https://www.gov.uk/api/content/government/organisations/intellectual-property-office/about",
         "web_url": "https://www.gov.uk/government/organisations/intellectual-property-office/about",
-        "links": {}
+        "links": {
+        }
       }
     ]
   },
@@ -287,9 +302,15 @@
     ],
     "organisation": "5d6f9583-991f-413d-ae83-be7274e5eae4",
     "tags": {
-      "browse_pages": [],
-      "policies": [],
-      "topics": []
+      "browse_pages": [
+
+      ],
+      "policies": [
+
+      ],
+      "topics": [
+
+      ]
     },
     "change_history": [
       {

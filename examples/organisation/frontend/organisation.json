@@ -27,7 +27,6 @@
         "api_url": "https://www.gov.uk/api/content/government/organisations/department-for-exiting-the-european-union",
         "web_url": "https://www.gov.uk/government/organisations/department-for-exiting-the-european-union",
         "links": {
-
         }
       }
     ],
@@ -86,7 +85,7 @@
         "document_type": "Collection"
       }
     ],
-    "ordered_promotional_features":[
+    "ordered_promotional_features": [
       {
         "title": "Transparency",
         "items": [

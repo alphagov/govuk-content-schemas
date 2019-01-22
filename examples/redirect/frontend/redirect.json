@@ -18,11 +18,14 @@
   "title": null,
   "updated_at": "2017-12-13T15:11:33.804Z",
   "user_journey_document_supertype": "",
-  "withdrawn_notice": {},
+  "withdrawn_notice": {
+  },
   "publishing_request_id": null,
-  "links": {},
+  "links": {
+  },
   "description": null,
-  "details": {},
+  "details": {
+  },
   "redirects": [
     {
       "path": "/406beacon",

@@ -18,7 +18,8 @@
   "title": "Glasgow 2014 Commonwealth Games airspace restrictions",
   "updated_at": "2018-01-10T14:07:43.544Z",
   "user_journey_document_supertype": "thing",
-  "withdrawn_notice": {},
+  "withdrawn_notice": {
+  },
   "publishing_request_id": "1243-1502190415.911-10.3.3.1-410",
   "links": {
     "organisations": [
@@ -40,7 +41,8 @@
             "crest": "single-identity"
           }
         },
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/organisations/department-for-transport",
         "web_url": "https://www.gov.uk/government/organisations/department-for-transport"
       },
@@ -61,7 +63,8 @@
             "formatted_title": "Civil Aviation Authority"
           }
         },
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/organisations/civil-aviation-authority",
         "web_url": "https://www.gov.uk/government/organisations/civil-aviation-authority"
       }
@@ -77,7 +80,8 @@
         "schema_name": "placeholder",
         "title": "Robert Goodwill MP",
         "withdrawn": false,
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/people/robert-goodwill",
         "web_url": "https://www.gov.uk/government/people/robert-goodwill"
       }
@@ -107,7 +111,8 @@
               "schema_name": "speech",
               "title": "Glasgow 2014 Commonwealth Games airspace restrictions",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/government/speeches/glasgow-2014-commonwealth-games-airspace-restrictions",
               "web_url": "https://www.gov.uk/government/speeches/glasgow-2014-commonwealth-games-airspace-restrictions"
             }
@@ -128,7 +133,8 @@
         "schema_name": "placeholder",
         "title": "Transport",
         "withdrawn": false,
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/topics/transport",
         "web_url": "https://www.gov.uk/government/topics/transport"
       },
@@ -142,7 +148,8 @@
         "schema_name": "placeholder_policy_area",
         "title": "UK economy",
         "withdrawn": false,
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/topics/uk-economy",
         "web_url": "https://www.gov.uk/government/topics/uk-economy"
       }
@@ -166,7 +173,8 @@
             "crest": "single-identity"
           }
         },
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/organisations/department-for-transport",
         "web_url": "https://www.gov.uk/government/organisations/department-for-transport"
       }
@@ -183,7 +191,8 @@
         "schema_name": "policy",
         "title": "Aviation and airports",
         "withdrawn": false,
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/policies/aviation-and-airports",
         "web_url": "https://www.gov.uk/government/policies/aviation-and-airports"
       }
@@ -199,7 +208,8 @@
         "schema_name": "placeholder_ministerial_role",
         "title": "Parliamentary Under Secretary of State for Transport",
         "withdrawn": false,
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/ministers/parliamentary-under-secretary-of-state-for-transport--2",
         "web_url": "https://www.gov.uk/government/ministers/parliamentary-under-secretary-of-state-for-transport--2"
       }
@@ -215,7 +225,8 @@
         "schema_name": "placeholder",
         "title": "Robert Goodwill MP",
         "withdrawn": false,
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/people/robert-goodwill",
         "web_url": "https://www.gov.uk/government/people/robert-goodwill"
       }
@@ -234,7 +245,8 @@
         "locale": "en",
         "api_url": "https://www.gov.uk/api/content/government/speeches/glasgow-2014-commonwealth-games-airspace-restrictions",
         "web_url": "https://www.gov.uk/government/speeches/glasgow-2014-commonwealth-games-airspace-restrictions",
-        "links": {}
+        "links": {
+        }
       }
     ]
   },

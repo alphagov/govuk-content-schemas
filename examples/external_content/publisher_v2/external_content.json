@@ -2,7 +2,11 @@
   "description": "Free, unbiased, independent advice and tools to help you manage your money better",
   "details": {
     "url": "https://www.moneyadviceservice.org.uk/",
-    "hidden_search_terms": ["money advice", "financial advice", "mas"]
+    "hidden_search_terms": [
+      "money advice",
+      "financial advice",
+      "mas"
+    ]
   },
   "document_type": "external_content",
   "publishing_app": "search-admin",

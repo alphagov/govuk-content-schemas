@@ -20,13 +20,15 @@
         {
           "title": "Get support and advice",
           "optional": true,
-          "contents": [{
+          "contents": [
+            {
               "type": "paragraph",
               "text": "You can get support and advice to help you deal with disputes and emotional stress."
             },
             {
               "type": "list",
-              "contents": [{
+              "contents": [
+                {
                   "href": "https://www.relate.org.uk/relationship-help/help-separation-and-divorce",
                   "text": "Get advice from Relate"
                 },
@@ -45,31 +47,36 @@
         },
         {
           "title": "Check if you can get divorced",
-          "contents": [{
+          "contents": [
+            {
               "type": "paragraph",
               "text": "Your marriage must meet certain legal requirements for you to be able to get a divorce."
             },
             {
               "type": "list",
               "style": "required",
-              "contents": [{
-                "href": "/divorce",
-                "text": "Check you can get a divorce"
-              }]
+              "contents": [
+                {
+                  "href": "/divorce",
+                  "text": "Check you can get a divorce"
+                }
+              ]
             }
           ]
         },
         {
           "title": "Make arrangements for your children, money and property",
           "optional": true,
-          "contents": [{
+          "contents": [
+            {
               "type": "paragraph",
               "text": "You should try to agree the arrangements for looking after your children and work out any money or property issues before you start your divorce."
             },
             {
               "type": "list",
               "style": "required",
-              "contents": [{
+              "contents": [
+                {
                   "href": "/looking-after-children-divorce",
                   "text": "Make arrangements for your children"
                 },
@@ -86,7 +93,8 @@
             {
               "type": "list",
               "style": "choice",
-              "contents": [{
+              "contents": [
+                {
                   "href": "/benefits-calculators",
                   "text": "benefits you're eligible for"
                 },

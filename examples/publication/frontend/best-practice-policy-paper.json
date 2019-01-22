@@ -18,7 +18,8 @@
   "title": "Strategy for dealing with safeguarding issues in charities",
   "updated_at": "2017-12-13T10:55:26.950Z",
   "user_journey_document_supertype": "thing",
-  "withdrawn_notice": {},
+  "withdrawn_notice": {
+  },
   "publishing_request_id": "10250-1512544085.151-62.25.109.199-1844",
   "links": {
     "document_collections": [
@@ -46,7 +47,8 @@
               "schema_name": "publication",
               "title": "Strategy for dealing with safeguarding issues in charities",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/government/publications/strategy-for-dealing-with-safeguarding-issues-in-charities",
               "web_url": "https://www.gov.uk/government/publications/strategy-for-dealing-with-safeguarding-issues-in-charities"
             }
@@ -80,7 +82,8 @@
               "schema_name": "publication",
               "title": "Strategy for dealing with safeguarding issues in charities",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/government/publications/strategy-for-dealing-with-safeguarding-issues-in-charities",
               "web_url": "https://www.gov.uk/government/publications/strategy-for-dealing-with-safeguarding-issues-in-charities"
             }
@@ -112,7 +115,8 @@
             }
           }
         },
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/organisations/charity-commission",
         "web_url": "https://www.gov.uk/government/organisations/charity-commission"
       }
@@ -128,7 +132,8 @@
         "schema_name": "placeholder_policy_area",
         "title": "Community and society",
         "withdrawn": false,
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/topics/community-and-society",
         "web_url": "https://www.gov.uk/government/topics/community-and-society"
       }
@@ -155,7 +160,8 @@
             }
           }
         },
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/organisations/charity-commission",
         "web_url": "https://www.gov.uk/government/organisations/charity-commission"
       }
@@ -174,7 +180,8 @@
         "locale": "en",
         "api_url": "https://www.gov.uk/api/content/government/publications/strategy-for-dealing-with-safeguarding-issues-in-charities",
         "web_url": "https://www.gov.uk/government/publications/strategy-for-dealing-with-safeguarding-issues-in-charities",
-        "links": {}
+        "links": {
+        }
       }
     ]
   },
@@ -225,9 +232,15 @@
       "current": false
     },
     "tags": {
-      "browse_pages": [],
-      "policies": [],
-      "topics": []
+      "browse_pages": [
+
+      ],
+      "policies": [
+
+      ],
+      "topics": [
+
+      ]
     },
     "first_public_at": "2013-05-23T13:52:00.000+01:00"
   }

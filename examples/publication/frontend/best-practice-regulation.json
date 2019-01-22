@@ -18,7 +18,8 @@
   "title": "Regulatory Article (RA) 2135: aircrew medical requirements",
   "updated_at": "2018-01-10T12:28:56.944Z",
   "user_journey_document_supertype": "thing",
-  "withdrawn_notice": {},
+  "withdrawn_notice": {
+  },
   "publishing_request_id": null,
   "links": {
     "document_collections": [
@@ -46,7 +47,8 @@
               "schema_name": "publication",
               "title": "Regulatory Article (RA) 2135: aircrew medical requirements",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/government/publications/regulatory-article-ra-2135-medical-requirements",
               "web_url": "https://www.gov.uk/government/publications/regulatory-article-ra-2135-medical-requirements"
             }
@@ -75,7 +77,8 @@
             "crest": "mod"
           }
         },
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/organisations/ministry-of-defence",
         "web_url": "https://www.gov.uk/government/organisations/ministry-of-defence"
       },
@@ -100,7 +103,8 @@
             }
           }
         },
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/organisations/military-aviation-authority",
         "web_url": "https://www.gov.uk/government/organisations/military-aviation-authority"
       }
@@ -116,7 +120,8 @@
         "schema_name": "placeholder_policy_area",
         "title": "Defence and armed forces",
         "withdrawn": false,
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/topics/defence-and-armed-forces",
         "web_url": "https://www.gov.uk/government/topics/defence-and-armed-forces"
       }
@@ -140,7 +145,8 @@
             "crest": "mod"
           }
         },
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/organisations/ministry-of-defence",
         "web_url": "https://www.gov.uk/government/organisations/ministry-of-defence"
       }
@@ -159,7 +165,8 @@
         "locale": "en",
         "api_url": "https://www.gov.uk/api/content/government/publications/regulatory-article-ra-2135-medical-requirements",
         "web_url": "https://www.gov.uk/government/publications/regulatory-article-ra-2135-medical-requirements",
-        "links": {}
+        "links": {
+        }
       }
     ]
   },
@@ -197,9 +204,15 @@
       "current": false
     },
     "tags": {
-      "browse_pages": [],
-      "policies": [],
-      "topics": []
+      "browse_pages": [
+
+      ],
+      "policies": [
+
+      ],
+      "topics": [
+
+      ]
     },
     "first_public_at": "2014-11-14T11:37:00.000+00:00"
   }

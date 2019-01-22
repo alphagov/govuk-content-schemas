@@ -267,7 +267,8 @@
               "schema_name": "guide",
               "title": "Theory test: cars",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/theory-test",
               "web_url": "https://www.gov.uk/theory-test"
             }

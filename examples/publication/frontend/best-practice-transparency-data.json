@@ -18,7 +18,8 @@
   "title": "Cabinet Office: special advisers' gifts, hospitality and meetings, April to June 2014",
   "updated_at": "2018-01-10T13:53:00.820Z",
   "user_journey_document_supertype": "thing",
-  "withdrawn_notice": {},
+  "withdrawn_notice": {
+  },
   "publishing_request_id": null,
   "links": {
     "document_collections": [
@@ -46,7 +47,8 @@
               "schema_name": "publication",
               "title": "Cabinet Office: special advisers' gifts, hospitality and meetings, April to June 2014",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/government/publications/cabinet-office-special-advisers-gifts-hospitality-and-meetings-april-to-june-2014",
               "web_url": "https://www.gov.uk/government/publications/cabinet-office-special-advisers-gifts-hospitality-and-meetings-april-to-june-2014"
             }
@@ -75,7 +77,8 @@
             "crest": "single-identity"
           }
         },
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/organisations/cabinet-office",
         "web_url": "https://www.gov.uk/government/organisations/cabinet-office"
       },
@@ -97,7 +100,8 @@
             "crest": "eo"
           }
         },
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/organisations/prime-ministers-office-10-downing-street",
         "web_url": "https://www.gov.uk/government/organisations/prime-ministers-office-10-downing-street"
       },
@@ -119,7 +123,8 @@
             "crest": "eo"
           }
         },
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/organisations/deputy-prime-ministers-office",
         "web_url": "https://www.gov.uk/government/organisations/deputy-prime-ministers-office"
       }
@@ -135,7 +140,8 @@
         "schema_name": "placeholder_policy_area",
         "title": "Government efficiency, transparency and accountability",
         "withdrawn": false,
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/topics/government-efficiency-transparency-and-accountability",
         "web_url": "https://www.gov.uk/government/topics/government-efficiency-transparency-and-accountability"
       }
@@ -159,7 +165,8 @@
             "crest": "single-identity"
           }
         },
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/organisations/cabinet-office",
         "web_url": "https://www.gov.uk/government/organisations/cabinet-office"
       }
@@ -176,7 +183,8 @@
         "schema_name": "policy",
         "title": "Government transparency and accountability",
         "withdrawn": false,
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/policies/government-transparency-and-accountability",
         "web_url": "https://www.gov.uk/government/policies/government-transparency-and-accountability"
       }
@@ -195,7 +203,8 @@
         "locale": "en",
         "api_url": "https://www.gov.uk/api/content/government/publications/cabinet-office-special-advisers-gifts-hospitality-and-meetings-april-to-june-2014",
         "web_url": "https://www.gov.uk/government/publications/cabinet-office-special-advisers-gifts-hospitality-and-meetings-april-to-june-2014",
-        "links": {}
+        "links": {
+        }
       }
     ]
   },
@@ -229,11 +238,15 @@
       "current": false
     },
     "tags": {
-      "browse_pages": [],
+      "browse_pages": [
+
+      ],
       "policies": [
         "government-transparency-and-accountability"
       ],
-      "topics": []
+      "topics": [
+
+      ]
     },
     "first_public_at": "2015-03-13T11:45:39.000+00:00"
   }

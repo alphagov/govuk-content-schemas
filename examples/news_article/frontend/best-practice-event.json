@@ -18,7 +18,8 @@
   "title": "CDE Innovation Network event: 9 July 2015, London",
   "updated_at": "2018-01-03T07:51:18.291Z",
   "user_journey_document_supertype": "thing",
-  "withdrawn_notice": {},
+  "withdrawn_notice": {
+  },
   "publishing_request_id": null,
   "links": {
     "document_collections": [
@@ -46,7 +47,8 @@
               "schema_name": "news_article",
               "title": "CDE Innovation Network event: 9 July 2015, London",
               "withdrawn": false,
-              "links": {},
+              "links": {
+              },
               "api_url": "https://www.gov.uk/api/content/government/news/cde-innovation-network-event-9-july-2015-london",
               "web_url": "https://www.gov.uk/government/news/cde-innovation-network-event-9-july-2015-london"
             }
@@ -78,7 +80,8 @@
             }
           }
         },
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/organisations/defence-science-and-technology-laboratory",
         "web_url": "https://www.gov.uk/government/organisations/defence-science-and-technology-laboratory"
       },
@@ -100,7 +103,8 @@
             "crest": "single-identity"
           }
         },
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/organisations/centre-for-defence-enterprise",
         "web_url": "https://www.gov.uk/government/organisations/centre-for-defence-enterprise"
       }
@@ -116,7 +120,8 @@
         "schema_name": "placeholder",
         "title": "Business and enterprise",
         "withdrawn": false,
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/topics/business-and-enterprise",
         "web_url": "https://www.gov.uk/government/topics/business-and-enterprise"
       },
@@ -130,7 +135,8 @@
         "schema_name": "placeholder_policy_area",
         "title": "Defence and armed forces",
         "withdrawn": false,
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/topics/defence-and-armed-forces",
         "web_url": "https://www.gov.uk/government/topics/defence-and-armed-forces"
       },
@@ -144,7 +150,8 @@
         "schema_name": "placeholder_policy_area",
         "title": "Science and innovation",
         "withdrawn": false,
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/topics/science-and-innovation",
         "web_url": "https://www.gov.uk/government/topics/science-and-innovation"
       },
@@ -158,7 +165,8 @@
         "schema_name": "placeholder_policy_area",
         "title": "National security",
         "withdrawn": false,
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/topics/national-security",
         "web_url": "https://www.gov.uk/government/topics/national-security"
       }
@@ -182,7 +190,8 @@
             "crest": "single-identity"
           }
         },
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/organisations/centre-for-defence-enterprise",
         "web_url": "https://www.gov.uk/government/organisations/centre-for-defence-enterprise"
       }
@@ -199,7 +208,8 @@
         "schema_name": "policy",
         "title": "Armed forces and Ministry of Defence reform",
         "withdrawn": false,
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/policies/armed-forces-and-ministry-of-defence-reform",
         "web_url": "https://www.gov.uk/government/policies/armed-forces-and-ministry-of-defence-reform"
       }
@@ -218,7 +228,8 @@
         "locale": "en",
         "api_url": "https://www.gov.uk/api/content/government/news/cde-innovation-network-event-9-july-2015-london",
         "web_url": "https://www.gov.uk/government/news/cde-innovation-network-event-9-july-2015-london",
-        "links": {}
+        "links": {
+        }
       }
     ]
   },
@@ -255,11 +266,15 @@
       "current": false
     },
     "tags": {
-      "browse_pages": [],
+      "browse_pages": [
+
+      ],
       "policies": [
         "armed-forces-and-ministry-of-defence-reform"
       ],
-      "topics": []
+      "topics": [
+
+      ]
     }
   }
 }

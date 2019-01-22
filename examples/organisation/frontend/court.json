@@ -22,7 +22,8 @@
   "title": "Administrative Court",
   "updated_at": "2018-10-01T17:50:45.260Z",
   "user_journey_document_supertype": "finding",
-  "withdrawn_notice": {},
+  "withdrawn_notice": {
+  },
   "publishing_request_id": "1923-1531218353.319-194.33.196.5-1623",
   "links": {
     "ordered_contacts": [
@@ -68,7 +69,8 @@
             }
           ]
         },
-        "links": {}
+        "links": {
+        }
       },
       {
         "content_id": "08aaee8b-101a-43d0-9b11-bb75898363be",
@@ -112,7 +114,8 @@
             }
           ]
         },
-        "links": {}
+        "links": {
+        }
       },
       {
         "content_id": "5d763701-c6ee-44b3-a74e-09d91866e244",
@@ -156,7 +159,8 @@
             }
           ]
         },
-        "links": {}
+        "links": {
+        }
       },
       {
         "content_id": "f4b72bad-cd13-44e0-9693-4820ca3400c5",
@@ -200,7 +204,8 @@
             }
           ]
         },
-        "links": {}
+        "links": {
+        }
       },
       {
         "content_id": "9af29fe3-5014-4f78-89fa-9ac4d457e4a3",
@@ -244,7 +249,8 @@
             }
           ]
         },
-        "links": {}
+        "links": {
+        }
       }
     ],
     "ordered_parent_organisations": [
@@ -409,8 +415,12 @@
               "document_type": "News story"
             }
           ],
-          "ordered_promotional_features": [],
-          "ordered_ministers": [],
+          "ordered_promotional_features": [
+
+          ],
+          "ordered_ministers": [
+
+          ],
           "ordered_board_members": [
             {
               "name_prefix": null,
@@ -600,10 +610,18 @@
               }
             }
           ],
-          "ordered_military_personnel": [],
-          "ordered_traffic_commissioners": [],
-          "ordered_chief_professional_officers": [],
-          "ordered_special_representatives": [],
+          "ordered_military_personnel": [
+
+          ],
+          "ordered_traffic_commissioners": [
+
+          ],
+          "ordered_chief_professional_officers": [
+
+          ],
+          "ordered_special_representatives": [
+
+          ],
           "important_board_members": 1,
           "organisation_featuring_priority": "service",
           "organisation_govuk_status": {
@@ -645,7 +663,8 @@
             }
           ]
         },
-        "links": {},
+        "links": {
+        },
         "api_url": "https://www.gov.uk/api/content/government/organisations/hm-courts-and-tribunals-service",
         "web_url": "https://www.gov.uk/government/organisations/hm-courts-and-tribunals-service"
       }
@@ -664,7 +683,8 @@
         "locale": "en",
         "api_url": "https://www.gov.uk/api/content/courts-tribunals/administrative-court",
         "web_url": "https://www.gov.uk/courts-tribunals/administrative-court",
-        "links": {}
+        "links": {
+        }
       }
     ]
   },
@@ -694,14 +714,30 @@
         "href": "http://www.gov.uk/government/publications/administrative-court-judicial-review-guide"
       }
     ],
-    "ordered_featured_documents": [],
-    "ordered_promotional_features": [],
-    "ordered_ministers": [],
-    "ordered_board_members": [],
-    "ordered_military_personnel": [],
-    "ordered_traffic_commissioners": [],
-    "ordered_chief_professional_officers": [],
-    "ordered_special_representatives": [],
+    "ordered_featured_documents": [
+
+    ],
+    "ordered_promotional_features": [
+
+    ],
+    "ordered_ministers": [
+
+    ],
+    "ordered_board_members": [
+
+    ],
+    "ordered_military_personnel": [
+
+    ],
+    "ordered_traffic_commissioners": [
+
+    ],
+    "ordered_chief_professional_officers": [
+
+    ],
+    "ordered_special_representatives": [
+
+    ],
     "important_board_members": 1,
     "organisation_featuring_priority": "service",
     "organisation_govuk_status": {
@@ -710,6 +746,8 @@
       "updated_at": null
     },
     "organisation_type": "court",
-    "social_media_links": []
+    "social_media_links": [
+
+    ]
   }
 }
