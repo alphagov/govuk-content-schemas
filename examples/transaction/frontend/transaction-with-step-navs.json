@@ -805,8 +805,6 @@
   },
   "withdrawn_notice": {
   },
-  "user_journey_document_supertype": "thing",
-  "navigation_document_supertype": "guidance",
   "locale": "en",
   "first_published_at": "2016-02-29T09:24:10.000+00:00",
   "document_type": "transaction",

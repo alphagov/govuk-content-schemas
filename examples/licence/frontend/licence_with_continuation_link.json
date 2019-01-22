@@ -5,7 +5,6 @@
   "document_type": "licence",
   "first_published_at": "2016-02-29T09:24:10.000+00:00",
   "locale": "en",
-  "navigation_document_supertype": "guidance",
   "phase": "live",
   "public_updated_at": "2015-03-23T15:40:47.000+00:00",
   "publishing_app": "publisher",
@@ -13,7 +12,6 @@
   "schema_name": "licence",
   "title": "Seed potato import notification (Northern Ireland)",
   "updated_at": "2017-03-10T16:08:56.927Z",
-  "user_journey_document_supertype": "thing",
   "withdrawn_notice": {
   },
   "links": {
