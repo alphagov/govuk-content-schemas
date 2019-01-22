@@ -25,18 +25,6 @@
     "content_id": {
       "$ref": "#/definitions/guid"
     },
-    "content_purpose_document_supertype": {
-      "description": "DEPRECATED. Use `content_purpose_subgroup`.",
-      "type": "string"
-    },
-    "content_purpose_subgroup": {
-      "description": "Document subgroup grouping documents by purpose. Narrows down the purpose defined in content_purpose_supergroup.",
-      "type": "string"
-    },
-    "content_purpose_supergroup": {
-      "description": "Document supergroup grouping documents by a purpose",
-      "type": "string"
-    },
     "description": {
       "$ref": "#/definitions/description_optional"
     },
@@ -49,10 +37,6 @@
         "case_study"
       ]
     },
-    "email_document_supertype": {
-      "description": "Document supertype grouping intended to power the Whitehall finders and email subscriptions",
-      "type": "string"
-    },
     "first_published_at": {
       "anyOf": [
         {
@@ -62,10 +46,6 @@
           "type": "null"
         }
       ]
-    },
-    "government_document_supertype": {
-      "description": "Document supertype grouping intended to power the Whitehall finders and email subscriptions",
-      "type": "string"
     },
     "links": {
       "type": "object",
@@ -171,10 +151,6 @@
     "locale": {
       "$ref": "#/definitions/locale"
     },
-    "navigation_document_supertype": {
-      "description": "Document type grouping powering the new taxonomy-based navigation pages",
-      "type": "string"
-    },
     "need_ids": {
       "type": "array",
       "items": {
@@ -235,24 +211,12 @@
         "case_study"
       ]
     },
-    "search_user_need_document_supertype": {
-      "description": "Document supertype grouping core and government documents",
-      "type": "string"
-    },
     "title": {
       "$ref": "#/definitions/title"
     },
     "updated_at": {
       "type": "string",
       "format": "date-time"
-    },
-    "user_journey_document_supertype": {
-      "description": "Document type grouping powering analytics of user journeys",
-      "type": "string"
-    },
-    "user_need_document_supertype": {
-      "description": "DEPRECATED. Use `content_purpose_document_supertype`.",
-      "type": "string"
     },
     "withdrawn_notice": {
       "$ref": "#/definitions/withdrawn_notice"
