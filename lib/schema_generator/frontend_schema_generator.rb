@@ -24,17 +24,11 @@ module SchemaGenerator
       # These properties are always returned from content store but there are
       # lots of examples in this repo to fix before able to use them:
       # - analytics_identifier
-      # - email_document_supertype
       # - first_published_at
-      # - government_document_supertype
-      # - navigation_document_supertype
       # - phase
       # - publishing_app
       # - publishing_request_id
       # - rendering_app
-      # - search_user_need_document_supertype
-      # - user_journey_document_supertype
-      # - user_need_document_supertype
       # - withdrawn_notice
       %w(
         base_path

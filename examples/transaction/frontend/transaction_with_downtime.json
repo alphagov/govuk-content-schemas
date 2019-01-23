@@ -5,7 +5,6 @@
   "document_type": "transaction",
   "first_published_at": "2016-02-29T09:24:10.000+00:00",
   "locale": "en",
-  "navigation_document_supertype": "guidance",
   "phase": "live",
   "public_updated_at": "2012-10-09T18:06:32.000+00:00",
   "publishing_app": "publisher",
@@ -13,7 +12,6 @@
   "schema_name": "transaction",
   "title": "Car fuel and CO2 emissions data",
   "updated_at": "2017-03-16T13:52:38.203Z",
-  "user_journey_document_supertype": "thing",
   "withdrawn_notice": {
   },
   "links": {

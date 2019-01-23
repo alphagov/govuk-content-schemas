@@ -8,7 +8,6 @@
   "public_updated_at": "2016-05-03T14:11:50.000+00:00",
   "publishing_scheduled_at": "2016-05-03T14:10:00.000+00:00",
   "scheduled_publishing_delay_seconds": 110,
-  "government_document_supertype": "notices",
   "details": {
     "body": "Body text",
     "documents": [
