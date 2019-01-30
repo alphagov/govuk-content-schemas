@@ -136,9 +136,20 @@
           description: "The exact rummager field name for this facet. Allows 'key' to be aliased to a rummager filter field",
           type: "string",
         },
+        filter_value: {
+          description: "A preset filter value that is applied when a checkbox is selected",
+          type: "string"
+        },
         key: {
           description: "The rummager field name used for this facet.",
           type: "string",
+        },
+        keys: {
+          description: "Field names used for the taxon drop down.",
+          type: "array",
+          items: {
+            type: "string",
+          },
         },
         filterable: {
           description: "This must be true to show the facet to users.",
@@ -163,10 +174,13 @@
           description: "Defines the UI component and how the facet is queried from the search API",
           type: "string",
           enum: [
-            "text",
+            "autocomplete",
+            "checkbox",
             "date",
-            "topical",
             "hidden",
+            "taxon",
+            "text",
+            "topical",
           ],
         },
         allowed_values: {
