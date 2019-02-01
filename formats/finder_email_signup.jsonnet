@@ -66,88 +66,79 @@
         },
       },
     },
-
     details: {
-      oneOf: [
-        {
-          type: "object",
-          additionalProperties: false,
-          required: [
-            "email_signup_choice",
-            "email_filter_by",
-            "subscription_list_title_prefix",
-          ],
-          properties: {
-            beta: {
-              "$ref": "#/definitions/finder_beta",
-            },
-            email_signup_choice: {
-              "$ref": "#/definitions/facet_choices",
-            },
-            email_filter_name: {
-              oneOf: [
-                {
-                  "$ref": "#/definitions/facet_name"
-                },
-                {
-                  type: "null",
-                },
-              ]
-            },
-            email_filter_by: {
-              oneOf: [
-                {
-                  type: "string",
-                },
-                {
-                  type: "null",
-                },
-              ],
-            },
-            subscription_list_title_prefix: {
-              "$ref": "#/definitions/subscription_list_title_prefix",
-            },
-          }
+      type: "object",
+      additionalProperties: false,
+      required: [
+        "subscription_list_title_prefix",
+      ],
+      properties: {
+        beta: {
+          "$ref": "#/definitions/finder_beta",
         },
-        {
-          type: "object",
-          additionalProperties: false,
-          required: [
-            "email_filter_facets",
-            "subscription_list_title_prefix",
-          ],
-          properties: {
-            beta: {
-              "$ref": "#/definitions/finder_beta",
+        email_signup_choice: {
+          "$ref": "#/definitions/facet_choices",
+        },
+        email_filter_name: {
+          oneOf: [
+            {
+              "$ref": "#/definitions/facet_name"
             },
-            email_filter_facets : {
-              type: "array",
-              items: {
-                type: "object",
-                required: [
-                  "facet_id",
-                  "facet_name",
-                  "facet_choices",
-                ],
-                properties: {
-                  facet_id: {
-                    type: "string",
-                  },
-                  facet_name: {
-                    "$ref": "#/definitions/facet_name"
-                  },
-                  facet_choices: {
-                    "$ref": "#/definitions/facet_choices",
-                  },
-                },
+            {
+              type: "null",
+            },
+          ]
+        },
+        email_filter_by: {
+          oneOf: [
+            {
+              type: "string",
+            },
+            {
+              type: "null",
+            },
+          ],
+        },
+        email_filter_facets : {
+          type: "array",
+          items: {
+            type: "object",
+            required: [
+              "facet_id",
+              "facet_name",
+            ],
+            properties: {
+              facet_id: {
+                type: "string",
+              },
+              facet_name: {
+                "$ref": "#/definitions/facet_name"
+              },
+              facet_choices: {
+                "$ref": "#/definitions/facet_choices",
+              },
+              filter_key: {
+                type: "string",
+              },
+              filter_value: {
+                type: "string",
               },
             },
-            subscription_list_title_prefix: {
-              "$ref": "#/definitions/subscription_list_title_prefix",
-            },
-          }
+          },
         },
-      ],
+        subscription_list_title_prefix: {
+          "$ref": "#/definitions/subscription_list_title_prefix",
+        },
+        filter: {
+          type: "object",
+          additionalProperties: false,
+          properties: {
+            content_purpose_supergroup: {
+              type: "string",
+            },
+          },
+        },
+      },
     },
   },
   links: (import "shared/base_links.jsonnet") + {
