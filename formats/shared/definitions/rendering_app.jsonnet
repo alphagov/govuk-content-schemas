@@ -6,6 +6,7 @@
       "calculators",
       "calendars",
       "collections",
+      "content-store",
       "email-alert-frontend",
       "email-campaign-frontend",
       "feedback",
