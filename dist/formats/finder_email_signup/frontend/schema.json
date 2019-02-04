@@ -271,92 +271,81 @@
       ]
     },
     "details": {
-      "oneOf": [
-        {
-          "type": "object",
-          "required": [
-            "email_signup_choice",
-            "email_filter_by",
-            "subscription_list_title_prefix"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "beta": {
-              "$ref": "#/definitions/finder_beta"
+      "type": "object",
+      "required": [
+        "subscription_list_title_prefix"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "beta": {
+          "$ref": "#/definitions/finder_beta"
+        },
+        "change_history": {
+          "$ref": "#/definitions/change_history"
+        },
+        "email_filter_by": {
+          "oneOf": [
+            {
+              "type": "string"
             },
-            "change_history": {
-              "$ref": "#/definitions/change_history"
-            },
-            "email_filter_by": {
-              "oneOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ]
-            },
-            "email_filter_name": {
-              "oneOf": [
-                {
-                  "$ref": "#/definitions/facet_name"
-                },
-                {
-                  "type": "null"
-                }
-              ]
-            },
-            "email_signup_choice": {
-              "$ref": "#/definitions/facet_choices"
-            },
-            "subscription_list_title_prefix": {
-              "$ref": "#/definitions/subscription_list_title_prefix"
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "email_filter_facets": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "facet_id",
+              "facet_name"
+            ],
+            "properties": {
+              "facet_choices": {
+                "$ref": "#/definitions/facet_choices"
+              },
+              "facet_id": {
+                "type": "string"
+              },
+              "facet_name": {
+                "$ref": "#/definitions/facet_name"
+              },
+              "filter_key": {
+                "type": "string"
+              },
+              "filter_value": {
+                "type": "string"
+              }
             }
           }
         },
-        {
+        "email_filter_name": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/facet_name"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "email_signup_choice": {
+          "$ref": "#/definitions/facet_choices"
+        },
+        "filter": {
           "type": "object",
-          "required": [
-            "email_filter_facets",
-            "subscription_list_title_prefix"
-          ],
           "additionalProperties": false,
           "properties": {
-            "beta": {
-              "$ref": "#/definitions/finder_beta"
-            },
-            "change_history": {
-              "$ref": "#/definitions/change_history"
-            },
-            "email_filter_facets": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "required": [
-                  "facet_id",
-                  "facet_name",
-                  "facet_choices"
-                ],
-                "properties": {
-                  "facet_choices": {
-                    "$ref": "#/definitions/facet_choices"
-                  },
-                  "facet_id": {
-                    "type": "string"
-                  },
-                  "facet_name": {
-                    "$ref": "#/definitions/facet_name"
-                  }
-                }
-              }
-            },
-            "subscription_list_title_prefix": {
-              "$ref": "#/definitions/subscription_list_title_prefix"
+            "content_purpose_supergroup": {
+              "type": "string"
             }
           }
+        },
+        "subscription_list_title_prefix": {
+          "$ref": "#/definitions/subscription_list_title_prefix"
         }
-      ]
+      }
     },
     "facet_choices": {
       "type": "array",
