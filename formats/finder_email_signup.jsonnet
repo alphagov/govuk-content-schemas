@@ -138,6 +138,15 @@
             },
           },
         },
+        reject: {
+          type: "object",
+          additionalProperties: false,
+          properties: {
+            content_purpose_supergroup: {
+              type: "string",
+            },
+          },
+        },
       },
     },
   },
