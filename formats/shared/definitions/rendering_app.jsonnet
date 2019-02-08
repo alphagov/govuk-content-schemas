@@ -17,7 +17,6 @@
       "licencefinder",
       "manuals-frontend",
       "performanceplatform-big-screen-view",
-      "publicapi",
       "rummager",
       "search-api",
       "service-manual-frontend",
