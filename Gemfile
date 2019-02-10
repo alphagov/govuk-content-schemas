@@ -1,5 +1,6 @@
 source "https://rubygems.org"
-ruby File.read(".ruby-version").strip
+
+ruby File.read(".ruby-version").chomp
 
 gem 'json-schema'
 gem 'rake'
