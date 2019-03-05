@@ -1,0 +1,11 @@
+{
+  "document_type": "facet_value",
+  "publishing_app": "content-tagger",
+  "rendering_app": "finder-frontend",
+  "schema_name": "facet_value",
+  "title": "Air transport (aviation)",
+  "details": {
+    "label": "Air transport (aviation)",
+    "value": "air-transport-aviation"
+  }
+}

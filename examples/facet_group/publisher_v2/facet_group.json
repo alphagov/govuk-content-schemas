@@ -1,0 +1,11 @@
+{
+  "document_type": "facet_group",
+  "publishing_app": "content-tagger",
+  "rendering_app": "finder-frontend",
+  "schema_name": "facet_group",
+  "title": "EU Exit guidance for business facet group",
+  "details": {
+    "description": "Facets for use with content relating to EU Exit business guidance.",
+    "name": "EU Exit guidance for business facet group"
+  }
+}
