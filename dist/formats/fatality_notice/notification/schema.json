@@ -87,6 +87,10 @@
           "description": "Link type automatically added by Publishing API",
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
+        "facet_values": {
+          "description": "Prototype-stage metadata tagging values for this content item",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
         "field_of_operation": {
           "$ref": "#/definitions/frontend_links_with_base_path",
           "maxItems": 1
@@ -193,6 +197,10 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "facet_values": {
+          "description": "Prototype-stage metadata tagging values for this content item",
+          "$ref": "#/definitions/guid_list"
+        },
         "field_of_operation": {
           "$ref": "#/definitions/guid_list",
           "maxItems": 1,

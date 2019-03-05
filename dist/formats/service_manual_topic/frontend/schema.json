@@ -75,6 +75,10 @@
           "description": "References an email alert signup page for this topic",
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
+        "facet_values": {
+          "description": "Prototype-stage metadata tagging values for this content item",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
         "lead_organisations": {
           "description": "DEPRECATED: A subset of organisations that should be emphasised in relation to this content item. All organisations specified here should also be part of the organisations array.",
           "$ref": "#/definitions/frontend_links_with_base_path"

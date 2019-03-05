@@ -100,6 +100,9 @@
         "esi_fund",
         "export_health_certificate",
         "external_content",
+        "facet",
+        "facet_group",
+        "facet_value",
         "fatality_notice",
         "field_of_operation",
         "finder",
@@ -249,6 +252,10 @@
           "description": "Link type automatically added by Publishing API",
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
+        "facet_values": {
+          "description": "Prototype-stage metadata tagging values for this content item",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
         "lead_organisations": {
           "description": "DEPRECATED: A subset of organisations that should be emphasised in relation to this content item. All organisations specified here should also be part of the organisations array.",
           "$ref": "#/definitions/frontend_links_with_base_path"
@@ -339,6 +346,10 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "facet_values": {
+          "description": "Prototype-stage metadata tagging values for this content item",
+          "$ref": "#/definitions/guid_list"
+        },
         "lead_organisations": {
           "description": "DEPRECATED: A subset of organisations that should be emphasised in relation to this content item. All organisations specified here should also be part of the organisations array.",
           "$ref": "#/definitions/guid_list"
