@@ -1162,6 +1162,7 @@
             "sudan",
             "suriname",
             "swaziland-now-eswatini",
+            "sweden",
             "switzerland",
             "syria",
             "taiwan",
