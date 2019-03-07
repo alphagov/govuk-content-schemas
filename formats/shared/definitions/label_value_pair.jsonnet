@@ -16,6 +16,10 @@
         description: "A value to use for form controls",
         type: "string",
       },
+      default: {
+        description: "The default option for a radio facet",
+        type: "boolean"
+      }
     },
   },
 }

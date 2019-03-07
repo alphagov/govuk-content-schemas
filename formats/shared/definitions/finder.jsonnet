@@ -178,6 +178,7 @@
             "checkbox",
             "date",
             "hidden",
+            "radio",
             "taxon",
             "text",
             "topical",
@@ -189,6 +190,19 @@
           items: {
             "$ref": "#/definitions/label_value_pair",
           },
+        },
+        option_lookup: {
+          description: "A map of keys to values that can be used to associate allowed_values with multiple values",
+          type: "object",
+          additionalProperties: true,
+          patternProperties: {
+            "^[a-z_]+$": {
+              type: "array",
+              items: {
+                type: "string"
+              }
+            }
+          }
         },
         open_value: {
           description: "Value that determines the open state (the key field is in the future) of a topical facet.",
@@ -211,6 +225,10 @@
           description: "Controls whether Option Select Facet displays a filter field",
           type: "boolean",
         },
+        hide_facet_tag: {
+          description: "Causes the facet to not have a facet tag shown in a finder",
+          type: "boolean"
+        }
       },
     },
   },
