@@ -207,6 +207,10 @@
           ],
           default: "and",
         },
+        show_option_select_filter: {
+          description: "Controls whether Option Select Facet displays a filter field",
+          type: "boolean",
+        },
       },
     },
   },
