@@ -322,6 +322,10 @@
           "short_name": {
             "type": "string"
           },
+          "show_option_select_filter": {
+            "description": "Controls whether Option Select Facet displays a filter field",
+            "type": "boolean"
+          },
           "type": {
             "description": "Defines the UI component and how the facet is queried from the search API",
             "type": "string",

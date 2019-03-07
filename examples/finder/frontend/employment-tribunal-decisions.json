@@ -31,7 +31,8 @@
             "label": "Scotland",
             "value": "scotland"
           }
-        ]
+        ],
+        "show_option_select_filter": true
       },
       {
         "key": "tribunal_decision_country_name",
