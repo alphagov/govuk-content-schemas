@@ -77,6 +77,9 @@
         "esi_fund",
         "export_health_certificate",
         "external_content",
+        "facet",
+        "facet_group",
+        "facet_value",
         "fatality_notice",
         "field_of_operation",
         "finder",
@@ -230,6 +233,10 @@
         },
         "document_collections": {
           "description": "Link type automatically added by Publishing API",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
+        "facet_values": {
+          "description": "Prototype-stage metadata tagging values for this content item",
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
         "lead_organisations": {

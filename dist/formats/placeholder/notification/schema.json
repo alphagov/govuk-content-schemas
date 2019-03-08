@@ -100,6 +100,9 @@
         "esi_fund",
         "export_health_certificate",
         "external_content",
+        "facet",
+        "facet_group",
+        "facet_value",
         "fatality_notice",
         "field_of_operation",
         "finder",
@@ -249,6 +252,10 @@
           "description": "Link type automatically added by Publishing API",
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
+        "facet_values": {
+          "description": "Prototype-stage metadata tagging values for this content item",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
         "featured_policies": {
           "description": "Featured policies primarily for use with Whitehall organisations. Deprecated in favour of ordered_featured_policies.",
           "$ref": "#/definitions/frontend_links_with_base_path"
@@ -343,6 +350,10 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "facet_values": {
+          "description": "Prototype-stage metadata tagging values for this content item",
+          "$ref": "#/definitions/guid_list"
+        },
         "featured_policies": {
           "description": "Featured policies primarily for use with Whitehall organisations. Deprecated in favour of ordered_featured_policies.",
           "$ref": "#/definitions/guid_list"

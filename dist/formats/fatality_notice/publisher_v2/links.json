@@ -10,6 +10,10 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "facet_values": {
+          "description": "Prototype-stage metadata tagging values for this content item",
+          "$ref": "#/definitions/guid_list"
+        },
         "field_of_operation": {
           "$ref": "#/definitions/guid_list",
           "maxItems": 1
