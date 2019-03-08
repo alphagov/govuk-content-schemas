@@ -413,6 +413,10 @@
             "description": "This must be true to show the facet to users.",
             "type": "boolean"
           },
+          "hide_facet_tag": {
+            "description": "Causes the facet to not have a facet tag shown in a finder",
+            "type": "boolean"
+          },
           "key": {
             "description": "The rummager field name used for this facet.",
             "type": "string"
@@ -431,6 +435,19 @@
           "open_value": {
             "description": "Value that determines the open state (the key field is in the future) of a topical facet.",
             "$ref": "#/definitions/label_value_pair"
+          },
+          "option_lookup": {
+            "description": "A map of keys to values that can be used to associate allowed_values with multiple values",
+            "type": "object",
+            "additionalProperties": true,
+            "patternProperties": {
+              "^[a-z_]+$": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
           },
           "preposition": {
             "description": "Text used to augment the description of the search when the facet is used.",
@@ -451,6 +468,7 @@
               "checkbox",
               "date",
               "hidden",
+              "radio",
               "taxon",
               "text",
               "topical"
@@ -676,6 +694,10 @@
       ],
       "additionalProperties": false,
       "properties": {
+        "default": {
+          "description": "The default option for a radio facet",
+          "type": "boolean"
+        },
         "label": {
           "description": "A human readable label",
           "type": "string"
