@@ -14,8 +14,12 @@
           "description": "References a page of a GDS community responsible for maintaining the guide e.g. Agile delivery community, Design community",
           "$ref": "#/definitions/guid_list"
         },
+        "facet_groups": {
+          "description": "Prototype-stage metadata tagging tree roots for this content item. A content item my belong to many facet groups without having any specific facet_values links.",
+          "$ref": "#/definitions/guid_list"
+        },
         "facet_values": {
-          "description": "Prototype-stage metadata tagging values for this content item",
+          "description": "Prototype-stage metadata tagging values for this content item, a content item can be linked to many facet values from varying facet groups.",
           "$ref": "#/definitions/guid_list"
         },
         "lead_organisations": {

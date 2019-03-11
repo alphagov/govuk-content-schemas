@@ -90,8 +90,12 @@
           "description": "Link type automatically added by Publishing API",
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
+        "facet_groups": {
+          "description": "Prototype-stage metadata tagging tree roots for this content item. A content item my belong to many facet groups without having any specific facet_values links.",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
         "facet_values": {
-          "description": "Prototype-stage metadata tagging values for this content item",
+          "description": "Prototype-stage metadata tagging values for this content item, a content item can be linked to many facet values from varying facet groups.",
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
         "lead_organisations": {
@@ -211,8 +215,12 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "facet_groups": {
+          "description": "Prototype-stage metadata tagging tree roots for this content item. A content item my belong to many facet groups without having any specific facet_values links.",
+          "$ref": "#/definitions/guid_list"
+        },
         "facet_values": {
-          "description": "Prototype-stage metadata tagging values for this content item",
+          "description": "Prototype-stage metadata tagging values for this content item, a content item can be linked to many facet values from varying facet groups.",
           "$ref": "#/definitions/guid_list"
         },
         "lead_organisations": {
