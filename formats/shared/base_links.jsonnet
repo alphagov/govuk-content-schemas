@@ -18,5 +18,6 @@
   original_primary_publishing_organisation: "The organisation that published the original version of the page. Corresponds to the first of the 'Lead organisations' in Whitehall for the first edition, and is empty for all other publishing applications.",
   lead_organisations: "DEPRECATED: A subset of organisations that should be emphasised in relation to this content item. All organisations specified here should also be part of the organisations array.",
   suggested_ordered_related_items: "New A/B test suggestions for related items. Used for displaying related content on most pages, except for step-by-step and fatality notices. Links and their ordering are determined by the machine learning algorithms included in this A/B test.",
-  facet_values: "Prototype-stage metadata tagging values for this content item"
+  facet_groups: "Prototype-stage metadata tagging tree roots for this content item. A content item my belong to many facet groups without having any specific facet_values links.",
+  facet_values: "Prototype-stage metadata tagging values for this content item, a content item can be linked to many facet values from varying facet groups.",
 }
