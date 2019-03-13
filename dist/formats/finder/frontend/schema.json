@@ -70,6 +70,11 @@
         "email_alert_signup": {
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
+        "facet_group": {
+          "description": "The facet_group this finder uses to define available filters.",
+          "$ref": "#/definitions/frontend_links_with_base_path",
+          "maxItems": 1
+        },
         "facet_groups": {
           "description": "Prototype-stage metadata tagging tree roots for this content item. A content item my belong to many facet groups without having any specific facet_values links.",
           "$ref": "#/definitions/frontend_links_with_base_path"
