@@ -424,6 +424,19 @@
               },
               "filter_value": {
                 "type": "string"
+              },
+              "option_lookup": {
+                "description": "An array of key values where the key is the value of a selected facet and the value(s) are what these are converted to in a Rummager query",
+                "type": "object",
+                "additionalProperties": true,
+                "patternProperties": {
+                  "^[a-z_]+$": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
               }
             }
           }

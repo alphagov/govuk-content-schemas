@@ -53,6 +53,23 @@
             "prechecked": false
           }
         ]
+      },
+      {
+        "facet_id": "facet_three",
+        "facet_name": "Facet three",
+        "option_lookup": {
+          "option_one": [
+            "option_one_value_one",
+            "option_one_value_two"
+          ],
+          "option_two": [
+            "option_two_value_one"
+          ],
+          "option_three": [
+            "option_three_value_one",
+            "option_three_value_two"
+          ]
+        }
       }
     ],
     "subscription_list_title_prefix": {
