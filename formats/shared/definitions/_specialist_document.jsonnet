@@ -1047,6 +1047,7 @@
             "germany",
             "ghana",
             "gibraltar",
+            "great-britain",
             "greece",
             "grenada",
             "guam",
