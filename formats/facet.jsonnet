@@ -58,6 +58,7 @@
           enum: [
             "autocomplete",
             "checkbox",
+            "content_id",
             "date",
             "hidden",
             "taxon",
