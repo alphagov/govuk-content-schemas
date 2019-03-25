@@ -51,6 +51,12 @@
           "prechecked",
         ],
         properties: {
+          filter_values: {
+            type: "array",
+            items: {
+              type: "string"
+            }
+          },
           key: {
             type: "string",
           },
