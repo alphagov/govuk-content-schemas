@@ -182,6 +182,7 @@
             "checkbox",
             "date",
             "hidden",
+            "hidden_clearable",
             "radio",
             "taxon",
             "text",
