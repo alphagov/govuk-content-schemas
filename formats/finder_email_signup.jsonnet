@@ -155,6 +155,12 @@
             content_purpose_supergroup: {
               type: "string",
             },
+            all_part_of_taxonomy_tree: {
+              type: "string"
+            },
+            part_of_taxonomy_tree: {
+              type: "string"
+            },
           },
         },
         reject: {
