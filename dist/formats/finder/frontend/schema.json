@@ -341,6 +341,9 @@
         "logo_path": {
           "type": "string"
         },
+        "no_index": {
+          "type": "boolean"
+        },
         "reject": {
           "$ref": "#/definitions/finder_reject_filter"
         },
