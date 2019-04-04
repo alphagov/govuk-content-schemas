@@ -25,6 +25,9 @@
             },
           ],
         },
+        no_index: {
+          type: "boolean",
+        },
         generic_description: {
           type: "boolean",
         },
