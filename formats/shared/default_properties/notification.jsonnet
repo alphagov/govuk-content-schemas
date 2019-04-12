@@ -50,4 +50,8 @@
     type: "string",
     description: "Document subgroup grouping documents by purpose. Narrows down the purpose defined in content_purpose_supergroup.",
   },
+  workflow_message: {
+    type: "string",
+    description: "Message to be used in an email notification explaining the nature of the workflow change to subscribers.",
+  },
 }
