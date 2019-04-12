@@ -378,6 +378,10 @@
     },
     "withdrawn_notice": {
       "$ref": "#/definitions/withdrawn_notice"
+    },
+    "workflow_message": {
+      "description": "Message to be used in an email notification explaining the nature of the workflow change to subscribers.",
+      "type": "string"
     }
   },
   "definitions": {
