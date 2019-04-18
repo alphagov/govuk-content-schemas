@@ -55,11 +55,17 @@
       appear_in_find_eu_exit_guidance_business_finder: {
         type: "string",
       },
-      facet_groups:{
+      facet_groups: {
           type: "array",
           items: {
               type: "string",
           },
+      },
+      content_purpose_subgroup: {
+        type: "array",
+        items: {
+          type: "string",
+        },
       },
       content_purpose_supergroup: {
         type: "array",

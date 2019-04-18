@@ -152,6 +152,12 @@
           type: "object",
           additionalProperties: false,
           properties: {
+            content_purpose_subgroup: {
+              type: "array",
+              items: {
+                type: "string",
+              },
+            },
             content_purpose_supergroup: {
               type: "string",
             },
