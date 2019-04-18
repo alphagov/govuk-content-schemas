@@ -190,9 +190,10 @@
             "hidden",
             "hidden_clearable",
             "radio",
+            "research_and_statistics",
             "taxon",
             "text",
-            "topical",
+            "topical"
           ],
         },
         allowed_values: {
