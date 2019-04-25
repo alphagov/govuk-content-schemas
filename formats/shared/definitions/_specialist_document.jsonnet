@@ -1963,6 +1963,24 @@
         type: "string",
         pattern: "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$",
       },
+      result: {
+        type: "string",
+        enum: [
+          "met",
+          "not-met",
+        ],
+      },
+      stage: {
+        type: "string",
+        enum: [
+          "alpha",
+          "beta",
+          "live",
+        ],
+      },
+      service_provider: {
+        "$ref": "#/definitions/guid",
+      },
     },
   },
   statutory_instrument_metadata: {

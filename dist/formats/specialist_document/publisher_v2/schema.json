@@ -2173,6 +2173,24 @@
         },
         "bulk_published": {
           "type": "boolean"
+        },
+        "result": {
+          "type": "string",
+          "enum": [
+            "met",
+            "not-met"
+          ]
+        },
+        "service_provider": {
+          "$ref": "#/definitions/guid"
+        },
+        "stage": {
+          "type": "string",
+          "enum": [
+            "alpha",
+            "beta",
+            "live"
+          ]
         }
       }
     },
