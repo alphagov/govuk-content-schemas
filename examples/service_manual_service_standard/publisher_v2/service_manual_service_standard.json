@@ -5,8 +5,8 @@
   "update_type": "major",
   "base_path": "/service-manual/service-standard",
   "public_updated_at": "2015-10-09T08:17:10+00:00",
-  "title": "Government Service Standard",
-  "description": "Government Service Standard",
+  "title": "Service Standard",
+  "description": "Service Standard",
   "phase": "beta",
   "routes": [
     {

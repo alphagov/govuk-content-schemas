@@ -13,7 +13,7 @@
         "content_id": "053d245d-b1cd-4807-9dbc-ce78654121d1",
         "title": "Service manual",
         "base_path": "/service-manual",
-        "description": "Helping government teams create and run great digital services that meet the Government Service Standard.",
+        "description": "Helping government teams create and run great digital services that meet the Service Standard.",
         "api_url": "https://www.gov.uk/api/content/service-manual",
         "web_url": "https://www.gov.uk/service-manual",
         "locale": "en",
