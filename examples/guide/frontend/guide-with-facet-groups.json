@@ -43,6 +43,24 @@
         }
       }
     ],
+    "finder": [
+      {
+        "api_path": "/api/content/eu-withdrawal-act-2018-statutory-instruments",
+        "base_path": "/eu-withdrawal-act-2018-statutory-instruments",
+        "content_id": "f722816d-7e12-4055-8e7e-68b2d144e2b6",
+        "description": "Find EU Withdrawal Act statutory instruments",
+        "document_type": "finder",
+        "locale": "en",
+        "public_updated_at": "2018-06-27T16:16:40Z",
+        "schema_name": "finder",
+        "title": "EU Withdrawal Act 2018 statutory instruments",
+        "withdrawn": false,
+        "details": {
+        },
+        "links": {
+        }
+      }
+    ],
     "mainstream_browse_pages": [
       {
         "analytics_identifier": null,
