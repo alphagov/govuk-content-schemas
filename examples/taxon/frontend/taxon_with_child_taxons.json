@@ -5,6 +5,7 @@
   "description": null,
   "public_updated_at": "2015-12-09T11:11:11.000+00:00",
   "locale": "en",
+  "phase": "live",
   "details": {
     "visible_to_departmental_editors": false
   },
@@ -17,6 +18,7 @@
         "description": "University and college qualifications. Apprenticeships, traineeships and internships. Funding for further education providers.",
         "document_type": "taxon",
         "locale": "en",
+        "phase": "live",
         "public_updated_at": "2017-03-06T09:19:22Z",
         "schema_name": "taxon",
         "title": "Further and higher education, skills and vocational training",
@@ -34,6 +36,7 @@
               "description": "Schools and academies, further and higher education, apprenticeships and other skills training, student funding, early years.",
               "document_type": "taxon",
               "locale": "en",
+              "phase": "live",
               "public_updated_at": "2018-01-18T13:25:17Z",
               "schema_name": "taxon",
               "title": "Education, training and skills",

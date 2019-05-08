@@ -1,11 +1,11 @@
 {
   "content_id": "63d98739-fc60-4e28-a65f-edb56000fd39",
   "base_path": "/alpha-taxonomy/a-level",
-  "title": "A level",
+  "title": "Another level",
   "description": null,
   "public_updated_at": "2015-12-09T11:11:11.000+00:00",
   "locale": "en",
-  "phase": "live",
+  "phase": "alpha",
   "details": {
     "visible_to_departmental_editors": false
   },
