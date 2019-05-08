@@ -10,7 +10,7 @@
   "publishing_app": "service-manual-publisher",
   "rendering_app": "service-manual-frontend",
   "schema_name": "service_manual_service_standard",
-  "title": "Digital Service Standard",
+  "title": "Service Standard",
   "updated_at": "2016-06-30T13:28:53.128Z",
   "withdrawn_notice": {
   },
@@ -73,7 +73,7 @@
     "available_translations": [
       {
         "content_id": "00f693d4-866a-4fe6-a8d6-09cd7db8980b",
-        "title": "Digital Service Standard",
+        "title": "Service Standard",
         "api_path": "/api/content/service-manual/service-standard",
         "base_path": "/service-manual/service-standard",
         "description": null,
@@ -89,7 +89,7 @@
       }
     ]
   },
-  "description": "The Digital Service Standard is a set of 18 criteria to help government create and run good digital services.",
+  "description": "The Service Standard is a set of 18 criteria to help government create and run good digital services.",
   "details": {
     "body": "All public facing transactional services must meet the standard. It’s used by departments and the Government Digital Service to check whether a service is good enough for public use.",
     "poster_url": "http://example.com/service-standard-poster.pdf"
