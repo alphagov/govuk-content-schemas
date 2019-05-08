@@ -92,10 +92,14 @@
         },
         "facet_groups": {
           "description": "Prototype-stage metadata tagging tree roots for this content item. A content item my belong to many facet groups without having any specific facet_values links.",
-          "$ref": "#/definitions/frontend_links_with_base_path"
+          "$ref": "#/definitions/frontend_links"
         },
         "facet_values": {
           "description": "Prototype-stage metadata tagging values for this content item, a content item can be linked to many facet values from varying facet groups.",
+          "$ref": "#/definitions/frontend_links"
+        },
+        "finder": {
+          "description": "Powers links from content back to finders the content is surfaced on",
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
         "lead_organisations": {
@@ -220,6 +224,10 @@
         },
         "facet_values": {
           "description": "Prototype-stage metadata tagging values for this content item, a content item can be linked to many facet values from varying facet groups.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "finder": {
+          "description": "Powers links from content back to finders the content is surfaced on",
           "$ref": "#/definitions/guid_list"
         },
         "lead_organisations": {
