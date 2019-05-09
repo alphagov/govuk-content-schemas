@@ -15,6 +15,13 @@
         analytics_identifier: {
           "$ref": "#/definitions/analytics_identifier",
         },
+        alternative_format_contact_email: {
+          type: [
+            "string",
+            "null",
+          ],
+          description: "The organisation's email for requesting an alternative format for attachments",
+        },
         body: {
           "$ref": "#/definitions/body",
         },

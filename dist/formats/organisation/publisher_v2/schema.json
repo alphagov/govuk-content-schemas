@@ -213,6 +213,13 @@
             "null"
           ]
         },
+        "alternative_format_contact_email": {
+          "description": "The organisation's email for requesting an alternative format for attachments",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
         "analytics_identifier": {
           "$ref": "#/definitions/analytics_identifier"
         },
