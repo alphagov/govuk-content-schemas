@@ -111,6 +111,10 @@
           "description": "Link type automatically added by Publishing API",
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
+        "secondary_to_step_by_steps": {
+          "description": "Link type automatically added by Publishing API",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
         "topic_taxonomy_taxons": {
           "description": "Link type automatically added by Publishing API",
           "$ref": "#/definitions/frontend_links_with_base_path"

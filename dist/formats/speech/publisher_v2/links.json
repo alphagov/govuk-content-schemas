@@ -79,6 +79,10 @@
           "description": "Government roles that are associated with this document, typically the role part of a role association",
           "$ref": "#/definitions/guid_list"
         },
+        "secondary_to_step_by_steps": {
+          "description": "Step by steps that a content items may be a part of but is not essential to completing it.",
+          "$ref": "#/definitions/guid_list"
+        },
         "speaker": {
           "description": "A speaker that has a GOV.UK profile",
           "$ref": "#/definitions/guid_list",

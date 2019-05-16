@@ -20,5 +20,6 @@
   suggested_ordered_related_items: "New A/B test suggestions for related items. Used for displaying related content on most pages, except for step-by-step and fatality notices. Links and their ordering are determined by the machine learning algorithms included in this A/B test.",
   facet_groups: "Prototype-stage metadata tagging tree roots for this content item. A content item my belong to many facet groups without having any specific facet_values links.",
   facet_values: "Prototype-stage metadata tagging values for this content item, a content item can be linked to many facet values from varying facet groups.",
-  finder: "Powers links from content back to finders the content is surfaced on"
+  finder: "Powers links from content back to finders the content is surfaced on",
+  secondary_to_step_by_steps: "Step by steps that a content items may be a part of but is not essential to completing it."
 }

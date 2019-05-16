@@ -39,6 +39,10 @@ module SchemaGenerator
       # a reverse link to determine where the replacement Topic Taxonomy taxon
       # now resides
       "topic_taxonomy_taxons",
+
+      # Step by steps that a content items may be a part of but is not essential
+      # to completing it.
+      "pages_secondary_to_step_nav",
     ].freeze
 
     def initialize(format)
