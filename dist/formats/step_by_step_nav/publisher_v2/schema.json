@@ -63,6 +63,10 @@
           "description": "A list of content that is related to this step by step navigation journey",
           "$ref": "#/definitions/guid_list"
         },
+        "pages_secondary_to_step_nav": {
+          "description": "A list of content items that may be a part of but not essential to completing this step by step navigation journey.",
+          "$ref": "#/definitions/guid_list"
+        },
         "policy_areas": {
           "description": "A largely deprecated tag currently only used to power email alerts.",
           "$ref": "#/definitions/guid_list"

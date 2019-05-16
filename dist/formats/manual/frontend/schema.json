@@ -135,6 +135,10 @@
           "description": "Link type automatically added by Publishing API",
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
+        "secondary_to_step_navs": {
+          "description": "Link type automatically added by Publishing API",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
         "sections": {
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
