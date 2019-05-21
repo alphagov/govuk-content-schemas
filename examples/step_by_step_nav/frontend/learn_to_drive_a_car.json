@@ -11,6 +11,34 @@
   "base_path": "/learn-to-drive-a-car",
   "description": "Learn to drive a car in the UK - get a provisional licence, take driving lessons, prepare for your theory test, book your practical test.",
   "links": {
+    "pages_secondary_to_step_nav": [
+      {
+        "api_path": "/api/content/government/publications/car-and-small-van-driving-syllabus",
+        "base_path": "/government/publications/car-and-small-van-driving-syllabus",
+        "content_id": "5e5dc201-7631-11e4-a3cb-005056011aef",
+        "document_type": "guidance",
+        "locale": "en",
+        "public_updated_at": "2014-11-24T15:00:02.000+00:00",
+        "schema_name": "publication",
+        "title": "Learning to drive a car syllabus",
+        "withdrawn": false,
+        "links": {
+        }
+      },
+      {
+        "api_path": "/api/content/government/publications/regulatory-article-ra-2135-medical-requirements",
+        "base_path": "/government/publications/regulatory-article-ra-2135-medical-requirements",
+        "content_id": "5fecc60b-7631-11e4-a3cb-005056011aef",
+        "document_type": "regulation",
+        "locale": "en",
+        "public_updated_at": "2016-05-25T14:23:23.000+00:00",
+        "schema_name": "publication",
+        "title": "Regulatory Article (RA) 2135: aircrew medical requirements",
+        "withdrawn": false,
+        "links": {
+        }
+      }
+    ]
   },
   "details": {
     "step_by_step_nav": {
