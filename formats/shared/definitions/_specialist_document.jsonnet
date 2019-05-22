@@ -1974,8 +1974,12 @@
         type: "string",
         enum: [
           "alpha",
+          "alpha-reassessment",
           "beta",
+          "beta-reassessment",
           "live",
+          "live-reassessment",
+          "live-review",
         ],
       },
       service_provider: {
