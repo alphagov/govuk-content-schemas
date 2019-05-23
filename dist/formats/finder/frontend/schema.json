@@ -597,6 +597,12 @@
             "type": "string"
           }
         },
+        "link": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
         "policies": {
           "type": "array",
           "items": {
