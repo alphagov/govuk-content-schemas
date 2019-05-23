@@ -403,6 +403,14 @@
         "change_history": {
           "$ref": "#/definitions/change_history"
         },
+        "combine_mode": {
+          "description": "Controls which logic facets on the subscriber list should be joined by. Default is blank which maps to 'and'",
+          "type": "string",
+          "enum": [
+            "",
+            "or"
+          ]
+        },
         "email_filter_by": {
           "oneOf": [
             {
