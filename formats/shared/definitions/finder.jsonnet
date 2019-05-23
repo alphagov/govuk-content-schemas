@@ -134,6 +134,12 @@
           type: "string",
         },
       },
+      link: {
+        type: "array",
+        items: {
+          type: "string",
+        },
+      },
     },
   },
   finder_facets: {
