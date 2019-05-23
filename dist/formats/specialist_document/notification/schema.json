@@ -2536,8 +2536,12 @@
           "type": "string",
           "enum": [
             "alpha",
+            "alpha-reassessment",
             "beta",
-            "live"
+            "beta-reassessment",
+            "live",
+            "live-reassessment",
+            "live-review"
           ]
         }
       }
