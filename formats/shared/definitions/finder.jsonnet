@@ -91,6 +91,9 @@
       format: {
         type: "string",
       },
+      has_official_document: {
+        type: "boolean"
+      },
       organisations: {
         type: "array",
         items: {
@@ -203,6 +206,7 @@
             "hidden_clearable",
             "radio",
             "research_and_statistics",
+            "official_documents",
             "taxon",
             "text",
             "topical"
