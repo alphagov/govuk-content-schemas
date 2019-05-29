@@ -612,6 +612,7 @@
               "date",
               "hidden",
               "hidden_clearable",
+              "official_documents",
               "radio",
               "research_and_statistics",
               "taxon",
