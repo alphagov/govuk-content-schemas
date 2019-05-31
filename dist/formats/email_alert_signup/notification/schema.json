@@ -712,6 +712,7 @@
         "hmrc-manuals-api",
         "info-frontend",
         "licencefinder",
+        "local-links-manager",
         "manuals-frontend",
         "manuals-publisher",
         "maslow",
