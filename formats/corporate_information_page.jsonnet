@@ -20,7 +20,7 @@
     "staff_update",
     "terms_of_reference",
     "petitions_and_campaigns",
-    "accessibility_statement",
+    "accessible_documents_policy",
   ],
   definitions: {
     details: {
