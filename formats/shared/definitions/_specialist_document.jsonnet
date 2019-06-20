@@ -325,6 +325,7 @@
           "consumer-enforcement",
           "regulatory-references-and-appeals",
           "review-of-orders-and-undertakings",
+          "state-aid",
         ],
       },
       case_state: {
@@ -403,6 +404,14 @@
           "consumer-enforcement-undertakings",
           "consumer-enforcement-changes-to-business-practices-agreed",
           "regulatory-references-and-appeals-final-determination",
+          "state-aid-no-aid",
+          "state-aid-aid-approved",
+          "state-aid-conditional-decision",
+          "state-aid-aid-not-approved",
+          "state-aid-investigation",
+          "state-aid-recommendation-accepted",
+          "state-aid-recommendation-implemented",
+          "state-aid-aid-not-misused",
         ],
       },
       opened_date: {
