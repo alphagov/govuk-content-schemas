@@ -1,0 +1,117 @@
+{
+  "analytics_identifier": null,
+  "base_path": "/government/people/rufus-scrimgeour",
+  "content_id": "85291e63-c0f1-11e4-8223-005056011aef",
+  "document_type": "person",
+  "first_published_at": "2011-10-11T16:11:44.000+00:00",
+  "locale": "en",
+  "phase": "live",
+  "public_updated_at": "2017-06-09T16:13:13.000+00:00",
+  "publishing_app": "whitehall",
+  "publishing_scheduled_at": null,
+  "rendering_app": "whitehall-frontend",
+  "scheduled_publishing_delay_seconds": null,
+  "schema_name": "person",
+  "title": "The Rt Hon Rufus Scrimgeour MP",
+  "updated_at": "2019-06-07T10:41:46.846Z",
+  "withdrawn_notice": {
+  },
+  "publishing_request_id": "867-1559900554.952-10.3.3.1-403",
+  "links": {
+    "ordered_current_appointments": [
+      {
+        "content_id": "ad8c9a8d-1293-4b14-bca1-86926c017278",
+        "document_type": "role_appointment",
+        "base_path": "/first-lord",
+        "locale": "en",
+        "public_updated_at": "2018-06-07T14:27:39Z",
+        "schema_name": "role_appointment",
+        "title": "The Rt Hon Rufus Scrimgeour MP - First Lord of the Treasury",
+        "withdrawn": false,
+        "details": {
+          "started_on": "2016-07-13T00:00:00+01:00",
+          "ended_on": null
+        },
+        "links": {
+        }
+      },
+      {
+        "content_id": "52e446e9-9c12-4902-af12-701960558f29",
+        "document_type": "role_appointment",
+        "base_path": "/min-civil-service",
+        "locale": "en",
+        "public_updated_at": "2018-06-07T14:27:39Z",
+        "schema_name": "role_appointment",
+        "title": "The Rt Hon Rufus Scrimgeour MP - Minister for the Civil Service",
+        "withdrawn": false,
+        "details": {
+          "started_on": "2016-07-13T00:00:00+01:00",
+          "ended_on": null
+        },
+        "links": {
+        }
+      },
+      {
+        "content_id": "1b938691-b00e-4a9f-8a70-dcf1ef0993f4",
+        "document_type": "role_appointment",
+        "base_path": "/pm",
+        "locale": "en",
+        "public_updated_at": "2018-11-05T08:52:39Z",
+        "schema_name": "role_appointment",
+        "title": "The Rt Hon Rufus Scrimgeour MP - Prime Minister",
+        "withdrawn": false,
+        "details": {
+          "started_on": "2016-07-13T00:00:00+01:00",
+          "ended_on": null
+        },
+        "links": {
+        }
+      }
+    ],
+    "ordered_previous_appointments": [
+      {
+        "content_id": "11c655e6-80e3-41a1-8afe-8636f4ce99bf",
+        "document_type": "role_appointment",
+        "base_path": "/women-equalities",
+        "locale": "en",
+        "public_updated_at": "2018-06-07T14:08:05Z",
+        "schema_name": "role_appointment",
+        "title": "The Rt Hon Rufus Scrimgeour MP - Minister for Women and Equalities",
+        "withdrawn": false,
+        "details": {
+          "started_on": "2010-05-12T00:00:00+01:00",
+          "ended_on": "2012-09-04T00:00:00+01:00"
+        },
+        "links": {
+        }
+      }
+    ],
+    "available_translations": [
+      {
+        "title": "The Rt Hon Rufus Scrimgeour MP",
+        "public_updated_at": "2017-06-09T16:13:13Z",
+        "document_type": "person",
+        "schema_name": "person",
+        "base_path": "/government/people/rufus-scrimgeour",
+        "api_path": "/api/content/government/people/rufus-scrimgeour",
+        "withdrawn": false,
+        "content_id": "85291e63-c0f1-11e4-8223-005056011aef",
+        "locale": "en",
+        "api_url": "https://www.gov.uk/api/content/government/people/rufus-scrimgeour",
+        "web_url": "https://www.gov.uk/government/people/rufus-scrimgeour",
+        "links": {
+        }
+      }
+    ]
+  },
+  "description": null,
+  "details": {
+    "image": {
+      "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/person/image/6/s465_PM_portrait_960x640.jpg",
+      "alt_text": "The Rt Hon Rufus Scrimgeour MP"
+    },
+    "full_name": "Rufus Scrimgeour MP",
+    "privy_counsellor": true,
+    "body": "Rufus Scrimgeour became Prime Minister on 13 July 2016. He served as Home Secretary from May 2010 until July 2016."
+  }
+}

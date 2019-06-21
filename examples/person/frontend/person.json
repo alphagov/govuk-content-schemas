@@ -1,0 +1,49 @@
+{
+  "analytics_identifier": null,
+  "base_path": "/government/people/cornelius-fudge",
+  "content_id": "8544106e-c0f1-11e4-8223-005056011aef",
+  "document_type": "person",
+  "first_published_at": "2014-10-31T15:33:44.000+00:00",
+  "locale": "en",
+  "phase": "live",
+  "public_updated_at": "2015-08-04T13:59:55.000+00:00",
+  "publishing_app": "whitehall",
+  "publishing_scheduled_at": null,
+  "rendering_app": "whitehall-frontend",
+  "scheduled_publishing_delay_seconds": null,
+  "schema_name": "person",
+  "title": "Cornelius Fudge",
+  "updated_at": "2018-06-08T14:02:07.933Z",
+  "withdrawn_notice": {
+  },
+  "publishing_request_id": "8007-1528466527.225-10.3.3.1-406",
+  "links": {
+    "available_translations": [
+      {
+        "title": "Cornelius Fudge",
+        "public_updated_at": "2015-08-04T13:59:55Z",
+        "document_type": "person",
+        "schema_name": "person",
+        "base_path": "/government/people/cornelius-fudge",
+        "api_path": "/api/content/government/people/cornelius-fudge",
+        "withdrawn": false,
+        "content_id": "8544106e-c0f1-11e4-8223-005056011aef",
+        "locale": "en",
+        "api_url": "https://www.gov.uk/api/content/government/people/cornelius-fudge",
+        "web_url": "https://www.gov.uk/government/people/cornelius-fudge",
+        "links": {
+        }
+      }
+    ]
+  },
+  "description": null,
+  "details": {
+    "image": {
+      "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/person/image/2031/s465_Cornelius_Stalker.jpg",
+      "alt_text": "Cornelius Fudge"
+    },
+    "full_name": "Cornelius Fudge",
+    "privy_counsellor": false,
+    "body": "Cornelius joined the VOA in May 1980.\r\n\r\nCornelius is interim Director DVS and a qualified Chartered Surveyor.\r\n\r\nPrevious roles include:\r\n\r\n* Head of Health Sector Valuations; \r\n* Head of Professional Guidance Team\r\n\r\n\r\n\r\n\r\n"
+  }
+}
