@@ -11,10 +11,6 @@
         promotion: {
           type: "object",
           additionalProperties: false,
-          required: [
-            "category",
-            "url",
-          ],
           properties: {
             category: {
               enum: [
@@ -28,6 +24,26 @@
               format: "uri",
             },
           },
+          oneOf: [
+            {
+              properties: {
+                category: { enum: ["mot_reminder"] }
+              },
+              required: ["url"]
+            },
+            {
+              properties: {
+                category: { enum: ["organ_donor"] }
+              },
+              required: ["url"]
+            },
+            {
+              properties: {
+                category: { enum: ["register_to_vote"] }
+              },
+              required: ["url"]
+            },
+          ]
         },
       },
     },
