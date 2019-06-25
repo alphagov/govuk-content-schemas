@@ -23,6 +23,14 @@
               type: "string",
               format: "uri",
             },
+            opt_in_url: {
+              type: "string",
+              format: "uri",
+            },
+            opt_out_url: {
+              type: "string",
+              format: "uri",
+            },
           },
           oneOf: [
             {
