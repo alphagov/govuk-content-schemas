@@ -168,11 +168,45 @@
         },
         "promotion": {
           "type": "object",
-          "required": [
-            "category",
-            "url"
-          ],
           "additionalProperties": false,
+          "oneOf": [
+            {
+              "required": [
+                "url"
+              ],
+              "properties": {
+                "category": {
+                  "enum": [
+                    "mot_reminder"
+                  ]
+                }
+              }
+            },
+            {
+              "required": [
+                "url"
+              ],
+              "properties": {
+                "category": {
+                  "enum": [
+                    "organ_donor"
+                  ]
+                }
+              }
+            },
+            {
+              "required": [
+                "url"
+              ],
+              "properties": {
+                "category": {
+                  "enum": [
+                    "register_to_vote"
+                  ]
+                }
+              }
+            }
+          ],
           "properties": {
             "category": {
               "enum": [
@@ -180,6 +214,14 @@
                 "organ_donor",
                 "register_to_vote"
               ]
+            },
+            "opt_in_url": {
+              "type": "string",
+              "format": "uri"
+            },
+            "opt_out_url": {
+              "type": "string",
+              "format": "uri"
             },
             "url": {
               "type": "string",
