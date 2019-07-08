@@ -121,7 +121,8 @@ stage("Check dependent projects against updated schema") {
           [$class: 'StringParameterValue',
             name: 'SCHEMA_COMMIT',
             value: env.GIT_COMMIT]
-        ], wait: false
+        ],
+        propagate: true
     }
   }
 
