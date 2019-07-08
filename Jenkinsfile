@@ -4,40 +4,37 @@ library("govuk")
 
 REPOSITORY = 'govuk-content-schemas'
 
-// second boolean parameter describes whether the app is using the central
-// buildProject script - if so it will report its success individually, so this
-// job does not need to wait for it.
 def dependentApplications = [
-  ['calculators', true],
-  ['calendars', true],
-  ['collections-publisher', true],
-  ['collections', true],
-  ['contacts', true],
-  ['content-data-api', true],
-  ['content-store', true],
-  ['content-tagger', true],
-  ['email-alert-frontend', true],
-  ['email-alert-service', true],
-  ['feedback', true],
-  ['finder-frontend', true],
-  ['frontend', true],
-  ['government-frontend', true],
-  ['hmrc-manuals-api', true],
-  ['info-frontend', true],
-  ['licencefinder', true],
-  ['manuals-frontend', true],
-  ['manuals-publisher', true],
-  ['publisher', true],
-  ['publishing-api', true],
-  ['rummager', true],
-  ['search-admin', true],
-  ['service-manual-frontend', true],
-  ['service-manual-publisher', true],
-  ['short-url-manager', true],
-  ['smartanswers', true],
-  ['specialist-publisher', true],
-  ['static', true],
-  ['whitehall', true],
+  'calculators',
+  'calendars',
+  'collections-publisher',
+  'collections',
+  'contacts',
+  'content-data-api',
+  'content-store',
+  'content-tagger',
+  'email-alert-frontend',
+  'email-alert-service',
+  'feedback',
+  'finder-frontend',
+  'frontend',
+  'government-frontend',
+  'hmrc-manuals-api',
+  'info-frontend',
+  'licencefinder',
+  'manuals-frontend',
+  'manuals-publisher',
+  'publisher',
+  'publishing-api',
+  'rummager',
+  'search-admin',
+  'service-manual-frontend',
+  'service-manual-publisher',
+  'short-url-manager',
+  'smartanswers',
+  'specialist-publisher',
+  'static',
+  'whitehall',
 ]
 
 node {
@@ -105,11 +102,10 @@ stage("Check dependent projects against updated schema") {
   def dependentBuilds = [:]
 
   for (dependentApp in dependentApplications) {
-    // Dummy parameters to prevent mutation of the parameter used inside the
-    // closure below. If this is not defined, all of the builds will be for the
-    // last application in the array.
-    def app = dependentApp[0]
-    def wait = !dependentApp[1]
+    // Dummy parameter to prevent mutation of the parameter used
+    // inside the closure below. If this is not defined, all of the
+    // builds will be for the last application in the array.
+    def app = dependentApp
 
     dependentBuilds[app] = {
       start = System.currentTimeMillis()
@@ -125,7 +121,7 @@ stage("Check dependent projects against updated schema") {
           [$class: 'StringParameterValue',
             name: 'SCHEMA_COMMIT',
             value: env.GIT_COMMIT]
-        ], wait: wait
+        ], wait: false
     }
   }
 
