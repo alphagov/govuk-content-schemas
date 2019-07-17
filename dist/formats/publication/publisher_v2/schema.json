@@ -192,10 +192,8 @@
           "$ref": "#/definitions/guid_list"
         },
         "organisations": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
+          "description": "A list of organisation content ids permitted access to this item",
+          "$ref": "#/definitions/guid_list"
         },
         "users": {
           "type": "array",
