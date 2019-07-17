@@ -16,10 +16,8 @@
         },
       },
       organisations: {
-        type: "array",
-        items: {
-          type: "string",
-        },
+        "$ref": "#/definitions/guid_list",
+        description: "A list of organisation content ids permitted access to this item",
       },
       auth_bypass_ids: {
         "$ref": "#/definitions/guid_list",
