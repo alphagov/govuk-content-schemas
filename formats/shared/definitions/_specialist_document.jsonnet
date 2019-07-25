@@ -446,6 +446,7 @@
             "recognised-third-party-organisation",
             "technical-assessment-body",
             "user-inspectorate",
+            "third-country-body",
           ],
         },
       },
