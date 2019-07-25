@@ -2499,7 +2499,7 @@
               "cableway-installations",
               "construction-products",
               "electromagnetic-compatibility",
-              "equipment-and-protective-systems-for-use-in-potentially-explosive-atmospheres",
+              "equipment-and-protective-systems-intended-for-use-in-potentially-explosive-atmospheres",
               "explosives",
               "gas-appliances-and-related",
               "lifts",
@@ -2753,7 +2753,8 @@
               "approved-body",
               "recognised-third-party-organisation",
               "technical-assessment-body",
-              "user-inspectorate"
+              "user-inspectorate",
+              "third-country-body"
             ]
           }
         },
