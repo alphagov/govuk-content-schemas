@@ -279,6 +279,9 @@
             tribunal_ndpb: {
               "$ref": "#/definitions/list_of_sub_organisations",
             },
+            tribunal: {
+              "$ref": "#/definitions/list_of_sub_organisations",
+            },
           },
         },
       },

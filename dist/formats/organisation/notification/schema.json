@@ -780,7 +780,8 @@
             "other",
             "public_corporation",
             "sub_organisation",
-            "tribunal_ndpb"
+            "tribunal_ndpb",
+            "tribunal"
           ]
         },
         "secondary_corporate_information_pages": {

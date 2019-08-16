@@ -315,6 +315,7 @@
             "public_corporation",
             "sub_organisation",
             "tribunal_ndpb",
+            "tribunal",
           ],
           description: "The type of organisation.",
         },
