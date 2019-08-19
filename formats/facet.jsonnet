@@ -7,53 +7,48 @@
     details: {
       type: "object",
       additionalProperties: false,
-      required: [
-        "filterable",
-        "key",
-        "name",
-        "type",
-      ],
       properties: {
         filter_key: {
-          description: "The exact rummager field name for this facet. Allows 'key' to be aliased to a rummager filter field",
+          description: "DEPRECATED - This field isn't used.",
           type: "string",
         },
         filter_value: {
-          description: "A preset filter value that is applied when a checkbox is selected",
+          description: "DEPRECATED - This field isn't used.",
           type: "string"
         },
         key: {
-          description: "The rummager field name used for this facet.",
+          description: "DEPRECATED - This field isn't used.",
           type: "string",
         },
         keys: {
-          description: "Field names used for the taxon drop down.",
+          description: "DEPRECATED - This field isn't used.",
           type: "array",
           items: {
             type: "string",
           },
         },
         filterable: {
-          description: "This must be true to show the facet to users.",
+          description: "DEPRECATED - This field isn't used.",
           type: "boolean",
         },
         display_as_result_metadata: {
-          description: "Include this in search result metadata. Can be set for non-filterable facets.",
+          description: "DEPRECATED - This field isn't used.",
           type: "boolean",
         },
         name: {
-          description: "Label for the facet.",
+          description: "DEPRECATED - This field isn't used.",
           type: "string",
         },
         preposition: {
-          description: "Text used to augment the description of the search when the facet is used.",
+          description: "DEPRECATED - This field isn't used.",
           type: "string",
         },
         short_name: {
+          description: "DEPRECATED - This field isn't used.",
           type: "string",
         },
         type: {
-          description: "Defines the UI component and how the facet is queried from the search API",
+          description: "DEPRECATED - This field isn't used.",
           type: "string",
           enum: [
             "autocomplete",
@@ -67,13 +62,13 @@
           ],
         },
         open_value: {
-          description: "Value that determines the open state (the key field is in the future) of a topical facet.",
+          description: "DEPRECATED - This field isn't used.",
         },
         closed_value: {
-          description: "Value that determines the closed state (the key field is in the past) of a topical facet.",
+          description: "DEPRECATED - This field isn't used.",
         },
         combine_mode: {
-          description: "Specifies how to combine with other facets",
+          description: "DEPRECATED - This field isn't used.",
           type: "string",
           enum: [
             "and",
