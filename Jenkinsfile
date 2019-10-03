@@ -26,7 +26,7 @@ def dependentApplications = [
   'manuals-publisher',
   'publisher',
   'publishing-api',
-  'rummager',
+  'search-api',
   'search-admin',
   'service-manual-frontend',
   'service-manual-publisher',
