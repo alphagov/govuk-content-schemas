@@ -2654,6 +2654,7 @@
             "enum": [
               "cableway-installations",
               "construction-products",
+              "ecodesign",
               "electromagnetic-compatibility",
               "equipment-and-protective-systems-intended-for-use-in-potentially-explosive-atmospheres",
               "explosives",
