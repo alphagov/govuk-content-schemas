@@ -32,7 +32,6 @@
       "steps": [
         {
           "title": "Get support and advice",
-          "optional": true,
           "contents": [
             {
               "type": "paragraph",
@@ -79,7 +78,6 @@
         },
         {
           "title": "Make arrangements for your children, money and property",
-          "optional": true,
           "contents": [
             {
               "type": "paragraph",
