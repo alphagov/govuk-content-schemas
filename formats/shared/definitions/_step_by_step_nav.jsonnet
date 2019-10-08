@@ -40,9 +40,6 @@
           "or"
         ]
       },
-      optional: {
-        type: "boolean"
-      },
       contents: {
         type: "array",
         items: {

@@ -426,9 +426,6 @@
             "or"
           ]
         },
-        "optional": {
-          "type": "boolean"
-        },
         "title": {
           "type": "string"
         }
