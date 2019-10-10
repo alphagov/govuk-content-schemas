@@ -2,6 +2,10 @@
   access_limited: {
     "$ref": "#/definitions/access_limited",
   },
+  auth_bypass_ids: {
+    description: "A list of ids that will allow access to this item for non-authenticated users",
+    "$ref": "#/definitions/guid_list",
+  },
   bulk_publishing: {
     type: "boolean",
   },
