@@ -14,6 +14,10 @@
     "analytics_identifier": {
       "$ref": "#/definitions/analytics_identifier"
     },
+    "auth_bypass_ids": {
+      "description": "A list of ids that will allow access to this item for non-authenticated users",
+      "$ref": "#/definitions/guid_list"
+    },
     "base_path": {
       "$ref": "#/definitions/absolute_path_optional"
     },
@@ -125,7 +129,7 @@
       "additionalProperties": false,
       "properties": {
         "auth_bypass_ids": {
-          "description": "A list of ids that will allow access to this item for non-authenticated users",
+          "description": "Deprecated: auth_bypass_ids should be sent as a separate field",
           "$ref": "#/definitions/guid_list"
         },
         "organisations": {

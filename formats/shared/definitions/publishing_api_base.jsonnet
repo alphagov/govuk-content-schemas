@@ -21,7 +21,7 @@
       },
       auth_bypass_ids: {
         "$ref": "#/definitions/guid_list",
-        description: "A list of ids that will allow access to this item for non-authenticated users",
+        description: "Deprecated: auth_bypass_ids should be sent as a separate field",
       },
     },
   },
