@@ -17,6 +17,7 @@
                 "mot_reminder",
                 "organ_donor",
                 "register_to_vote",
+                "electric_vehicle",
               ],
             },
             url: {
@@ -48,6 +49,12 @@
             {
               properties: {
                 category: { enum: ["register_to_vote"] }
+              },
+              required: ["url"]
+            },
+            {
+              properties: {
+                category: { enum: ["electric_vehicle"] }
               },
               required: ["url"]
             },

@@ -435,6 +435,18 @@
                   ]
                 }
               }
+            },
+            {
+              "required": [
+                "url"
+              ],
+              "properties": {
+                "category": {
+                  "enum": [
+                    "electric_vehicle"
+                  ]
+                }
+              }
             }
           ],
           "properties": {
@@ -442,7 +454,8 @@
               "enum": [
                 "mot_reminder",
                 "organ_donor",
-                "register_to_vote"
+                "register_to_vote",
+                "electric_vehicle"
               ]
             },
             "opt_in_url": {
