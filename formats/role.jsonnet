@@ -21,7 +21,7 @@
       additionalProperties: false,
       properties: {
         body: {
-          "$ref": "#/definitions/body_html_and_govspeak",
+          "$ref": "#/definitions/body",
         },
         attends_cabinet_type: {
           type: [

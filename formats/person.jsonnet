@@ -9,7 +9,7 @@
           "$ref": "#/definitions/analytics_identifier",
         },
         body: {
-          "$ref": "#/definitions/body_html_and_govspeak",
+          "$ref": "#/definitions/body",
         },
         full_name: {
           type: "string",
