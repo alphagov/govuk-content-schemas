@@ -371,13 +371,9 @@
         }
       ]
     },
-    "body_html_and_govspeak": {
-      "description": "The main content provided as HTML with the govspeak markdown it's rendered from",
-      "anyOf": [
-        {
-          "$ref": "#/definitions/multiple_content_types"
-        }
-      ]
+    "body": {
+      "description": "The main content provided as HTML rendered from govspeak",
+      "type": "string"
     },
     "change_history": {
       "type": "array",
@@ -418,7 +414,7 @@
           "$ref": "#/definitions/analytics_identifier"
         },
         "body": {
-          "$ref": "#/definitions/body_html_and_govspeak"
+          "$ref": "#/definitions/body"
         },
         "change_history": {
           "$ref": "#/definitions/change_history"
@@ -700,25 +696,6 @@
         "zh-hk",
         "zh-tw"
       ]
-    },
-    "multiple_content_types": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "required": [
-          "content_type",
-          "content"
-        ],
-        "additionalProperties": false,
-        "properties": {
-          "content": {
-            "type": "string"
-          },
-          "content_type": {
-            "type": "string"
-          }
-        }
-      }
     },
     "payload_version": {
       "description": "Counter to indicate when the payload was generated",

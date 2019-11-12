@@ -188,13 +188,9 @@
         }
       ]
     },
-    "body_html_and_govspeak": {
-      "description": "The main content provided as HTML with the govspeak markdown it's rendered from",
-      "anyOf": [
-        {
-          "$ref": "#/definitions/multiple_content_types"
-        }
-      ]
+    "body": {
+      "description": "The main content provided as HTML rendered from govspeak",
+      "type": "string"
     },
     "description_optional": {
       "anyOf": [
@@ -222,7 +218,7 @@
           ]
         },
         "body": {
-          "$ref": "#/definitions/body_html_and_govspeak"
+          "$ref": "#/definitions/body"
         },
         "role_payment_type": {
           "type": [
@@ -321,25 +317,6 @@
         "zh-hk",
         "zh-tw"
       ]
-    },
-    "multiple_content_types": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "required": [
-          "content_type",
-          "content"
-        ],
-        "additionalProperties": false,
-        "properties": {
-          "content": {
-            "type": "string"
-          },
-          "content_type": {
-            "type": "string"
-          }
-        }
-      }
     },
     "public_updated_at": {
       "description": "When the content was last significantly changed (a major update). Shown to users.  Automatically determined by the publishing-api, unless overridden by the publishing application.",
