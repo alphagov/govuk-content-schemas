@@ -43,6 +43,11 @@ module SchemaGenerator
       # Step by steps that a content items may be a part of but is not essential
       # to completing it.
       "secondary_to_step_navs",
+
+      # Content items that are linked to with a `role` or `person` link type
+      # will automatically have a `role_appointments` link type with those
+      # items.
+      "role_appointments",
     ].freeze
 
     def initialize(format)
