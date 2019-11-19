@@ -19,6 +19,9 @@
           ],
           format: "date-time",
         },
+        current: {
+          type: "boolean"
+        },
       },
     },
   },
