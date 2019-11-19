@@ -22,6 +22,9 @@
         current: {
           type: "boolean"
         },
+        person_appointment_order: {
+          type: "integer"
+        }
       },
     },
   },
