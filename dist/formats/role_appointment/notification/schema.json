@@ -423,12 +423,18 @@
         "change_history": {
           "$ref": "#/definitions/change_history"
         },
+        "current": {
+          "type": "boolean"
+        },
         "ended_on": {
           "type": [
             "string",
             "null"
           ],
           "format": "date-time"
+        },
+        "person_appointment_order": {
+          "type": "integer"
         },
         "started_on": {
           "type": "string",
