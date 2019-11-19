@@ -171,6 +171,10 @@
           "description": "Link type automatically added by Publishing API",
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
+        "role_appointments": {
+          "description": "Link type automatically added by Publishing API",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
         "roles": {
           "description": "Government roles that are associated with this document, typically the role part of a role association",
           "$ref": "#/definitions/frontend_links_with_base_path"
