@@ -60,6 +60,7 @@
     },
   },
   links: (import "shared/base_links.jsonnet") + {
+    government: "The government associated with this document",
     related_guides: "",
     related_policies: "",
     related_mainstream_content: "",

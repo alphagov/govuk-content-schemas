@@ -35,6 +35,7 @@
     },
   },
   links: (import "shared/base_links.jsonnet") + {
+    government: "The government associated with this document",
     topical_events: "",
     worldwide_organisations: "",
     world_locations: "",
