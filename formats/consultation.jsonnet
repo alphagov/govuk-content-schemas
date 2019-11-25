@@ -98,11 +98,13 @@
     },
   },
   edition_links: (import "shared/whitehall_edition_links.jsonnet") + {
+    government: "The government associated with this document",
     ministers: "Deprecated. These are relations to minister people pages, this is superseded by 'people'",
     people: "People that are associated with this document, typically the person part of a role association",
     roles: "Government roles that are associated with this document, typically the role part of a role association",
   },
   links: (import "shared/base_links.jsonnet") + {
+    government: "The government associated with this document",
     related_policies: "",
     ministers: "Deprecated. These are relations to minister people pages, this is superseded by 'people'",
     topical_events: "",

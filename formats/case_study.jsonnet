@@ -48,6 +48,7 @@
     },
   },
   links: (import "shared/base_links.jsonnet") + {
+    government: "The government associated with this document",
     related_policies: "",
     world_locations: "",
     worldwide_organisations: "",

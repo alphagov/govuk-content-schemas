@@ -62,6 +62,10 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "government": {
+          "description": "The government associated with this document",
+          "$ref": "#/definitions/guid_list"
+        },
         "ministers": {
           "description": "Deprecated. These are relations to minister people pages, this is superseded by 'people'",
           "$ref": "#/definitions/guid_list"

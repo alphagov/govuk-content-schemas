@@ -122,6 +122,10 @@
           "description": "Powers links from content back to finders the content is surfaced on",
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
+        "government": {
+          "description": "The government associated with this document",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
         "lead_organisations": {
           "description": "DEPRECATED: A subset of organisations that should be emphasised in relation to this content item. All organisations specified here should also be part of the organisations array.",
           "$ref": "#/definitions/frontend_links_with_base_path"
@@ -233,6 +237,10 @@
         },
         "finder": {
           "description": "Powers links from content back to finders the content is surfaced on",
+          "$ref": "#/definitions/guid_list"
+        },
+        "government": {
+          "description": "The government associated with this document",
           "$ref": "#/definitions/guid_list"
         },
         "lead_organisations": {
