@@ -82,6 +82,10 @@
         "corporate_information_pages": {
           "$ref": "#/definitions/guid_list"
         },
+        "government": {
+          "description": "The government associated with this document",
+          "$ref": "#/definitions/guid_list"
+        },
         "organisations": {
           "description": "All organisations linked to this content item. This should include lead organisations.",
           "$ref": "#/definitions/guid_list"
