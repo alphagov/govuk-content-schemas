@@ -167,7 +167,7 @@
         },
         "role_appointments": {
           "description": "Link type automatically added by Publishing API",
-          "$ref": "#/definitions/frontend_links_with_base_path"
+          "$ref": "#/definitions/frontend_links"
         },
         "second_level_browse_pages": {
           "description": "All 2nd level browse pages under active_top_level_browse_page",
