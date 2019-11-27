@@ -53,7 +53,10 @@
   },
   edition_links: {
     corporate_information_pages: "",
-    government: "The government associated with this document",
+    government: {
+      description: "The government associated with this document",
+      maxItems: 1,
+    },
     organisations: "All organisations linked to this content item. This should include lead organisations.",
     parent: {
       description: "The parent content item.",
@@ -67,6 +70,9 @@
   },
   links: (import "shared/base_links.jsonnet") + {
     corporate_information_pages: "",
-    government: "The government associated with this document",
+    government: {
+      description: "The government associated with this document",
+      maxItems: 1,
+    },
   },
 }

@@ -35,7 +35,10 @@
     },
   },
   links: (import "shared/base_links.jsonnet") + {
-    government: "The government associated with this document",
+    government: {
+      description: "The government associated with this document",
+      maxItems: 1,
+    },
     topical_events: "",
     worldwide_organisations: "",
     world_locations: "",
