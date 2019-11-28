@@ -34,6 +34,9 @@
       },
     },
   },
+  links: (import "shared/base_links.jsonnet") + {
+    government: "The government associated with this document",
+  },
   edition_links: (import "shared/base_edition_links.jsonnet") + {
     organisations: "All organisations linked to this content item. This should include lead organisations.",
     primary_publishing_organisation: {
