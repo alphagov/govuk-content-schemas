@@ -41,7 +41,10 @@
     },
   },
   links: (import "shared/base_links.jsonnet") + {
-    government: "The government associated with this document",
+    government: {
+      description: "The government associated with this document",
+      maxItems: 1,
+    },
     related_policies: "",
     ministers: "Deprecated. These are relations to minister people pages, this is superseded by 'people'",
     topical_events: "The topical events this content item relates to.",
@@ -51,7 +54,10 @@
     people: "People that are associated with this document, typically the person part of a role association",
   },
   edition_links: (import "shared/base_edition_links.jsonnet") + {
-    government: "The government associated with this document",
+    government: {
+      description: "The government associated with this document",
+      maxItems: 1,
+    },
     roles: "Government roles that are associated with this document, typically the role part of a role association",
     people: "People that are associated with this document, typically the person part of a role association",
     topical_events: "The topical events this content item relates to.",

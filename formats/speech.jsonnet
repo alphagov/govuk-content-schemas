@@ -59,7 +59,10 @@
     },
   },
   links: (import "shared/base_links.jsonnet") + {
-    government: "The government associated with this document",
+    government: {
+      description: "The government associated with this document",
+      maxItems: 1,
+    },
     speaker: {
       description: "A speaker that has a GOV.UK profile",
       maxItems: 1,

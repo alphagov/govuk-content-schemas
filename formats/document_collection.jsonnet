@@ -63,11 +63,13 @@
     },
   },
   edition_links: (import "shared/whitehall_edition_links.jsonnet") + {
-    government: "The government associated with this document",
     documents: "",
   },
   links: (import "shared/base_links.jsonnet") + {
-    government: "The government associated with this document",
+    government: {
+      description: "The government associated with this document",
+      maxItems: 1,
+    },
     related_guides: "",
     related_policies: "",
     related_mainstream_content: "",
