@@ -264,6 +264,9 @@
             "content_purpose_supergroup": {
               "type": "string"
             },
+            "document_type": {
+              "type": "string"
+            },
             "part_of_taxonomy_tree": {
               "type": "string"
             }
