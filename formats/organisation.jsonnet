@@ -318,6 +318,10 @@
           ],
           description: "The type of organisation.",
         },
+        "political": {
+          "description": "Political status of the organisation used for history mode",
+          "type": "boolean"
+        },
         social_media_links: {
           type: "array",
           items: {
