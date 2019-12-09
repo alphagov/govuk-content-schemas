@@ -66,6 +66,9 @@
         "$ref": "#/definitions/tax_tribunal_decision_metadata",
       },
       {
+        "$ref": "#/definitions/traffic_commissioner_regulatory_decision_metadata",
+      },
+      {
         "$ref": "#/definitions/utaac_decision_metadata",
       },
     ],
@@ -2136,6 +2139,60 @@
       },
       hidden_indexable_content: {
         type: "string",
+      },
+    },
+  },
+  traffic_commissioner_regulatory_decision_metadata: {
+    type: "object",
+    additionalProperties: false,
+    properties: {
+      "decision_subject": {
+        "type": "string",
+        enum: [
+          "hgv-operator",
+          "bus-operator",
+          "transport-manager",
+        ]
+      },
+      regions: {
+        type: "array",
+        items: {
+          type: "string",
+          enum: [
+            "east-midlands",
+            "eastern",
+            "london",
+            "north-east",
+            "north-west",
+            "northern-ireland",
+            "scotland",
+            "south-east",
+            "south-west",
+            "wales",
+            "west-midlands",
+            "yorkshire-and-the-humber",
+          ],
+        },
+      },
+      "case_type": {
+        "type": "string",
+        enum: [
+          "application",
+          "regulatory",
+          "impounding",
+          "environmental",
+        ]
+      },
+      "outcome_type": {
+        "type": "string",
+        enum: [
+          "no-action",
+          "formal-warning",
+        ]
+      },
+      first_published_at: {
+        type: "string",
+        pattern: "^[1-9][0-9]{3}[-/](0[1-9]|1[0-2])[-/](0[1-9]|[12][0-9]|3[0-1])$",
       },
     },
   },
