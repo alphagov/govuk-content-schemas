@@ -1903,7 +1903,8 @@
           "park-homes",
           "rents",
           "right-to-buy",
-          "tenant-associations"
+          "tenant-associations",
+          "tenant-fees-act"
         ],
       },
       tribunal_decision_sub_category: {
@@ -1952,7 +1953,9 @@
           "rents---fair-rent",
           "right-to-buy---right-to-buy-appeals-elderly-persons",
           "tenant-associations---recognition-of-tenants-association",
-          "tenant-associations---request-for-information"
+          "tenant-associations---request-for-information",
+          "tenant-fees-act---recovery-of-a-prohibited-payment",
+          "tenant-fees-act---financial-penalties"
         ],
       },
       tribunal_decision_decision_date: {
