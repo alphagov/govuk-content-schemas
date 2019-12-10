@@ -318,8 +318,8 @@
           ],
           description: "The type of organisation.",
         },
-        "political": {
-          "description": "Political status of the organisation used for history mode",
+        "organisation_political": {
+          "description": "Determines whether content published by this organisation represents governments policies and can be eligible for history mode",
           "type": "boolean"
         },
         social_media_links: {

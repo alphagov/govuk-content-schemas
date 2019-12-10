@@ -172,7 +172,7 @@
       "status": "live"
     },
     "organisation_type": "ministerial_department",
-    "political": true,
+    "organisation_political": true,
     "social_media_links": [
       {
         "service_type": "twitter",
