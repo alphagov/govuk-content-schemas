@@ -2,6 +2,7 @@
   government: {
     type: "object",
     additionalProperties: false,
+    description: "DEPRECATED: Content should be associated with a government through a link",
     required: [
       "title",
       "slug",

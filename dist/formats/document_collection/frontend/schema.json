@@ -519,6 +519,7 @@
       }
     },
     "government": {
+      "description": "DEPRECATED: Content should be associated with a government through a link",
       "type": "object",
       "required": [
         "title",
