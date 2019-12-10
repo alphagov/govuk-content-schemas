@@ -653,6 +653,10 @@
             "tribunal"
           ]
         },
+        "political": {
+          "description": "Political status of the organisation used for history mode",
+          "type": "boolean"
+        },
         "secondary_corporate_information_pages": {
           "description": "A string containing sentences and links to corporate information pages that are not included in ordered_corporate_information_pages.",
           "type": "string"
