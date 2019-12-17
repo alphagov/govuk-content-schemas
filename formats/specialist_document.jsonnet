@@ -14,6 +14,7 @@
     "export_health_certificate",
     "international_development_fund",
     "maib_report",
+    "marine_notice",
     "medical_safety_alert",
     "raib_report",
     "residential_property_tribunal_decision",
