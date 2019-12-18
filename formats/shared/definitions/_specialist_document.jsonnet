@@ -1851,7 +1851,7 @@
           "survey-and-inspection",
         ],
       },
-      marine_notice_issued_date: {
+      issued_date: {
         type: "string",
         pattern: "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$",
       },
