@@ -45,6 +45,9 @@
         "$ref": "#/definitions/maib_report_metadata",
       },
       {
+        "$ref": "#/definitions/marine_notice_metadata",
+      },
+      {
         "$ref": "#/definitions/medical_safety_alert_metadata",
       },
       {
@@ -1795,6 +1798,60 @@
         ],
       },
       date_of_occurrence: {
+        type: "string",
+        pattern: "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$",
+      },
+    },
+  },
+  marine_notice_metadata: {
+    type: "object",
+    additionalProperties: false,
+    properties: {
+      bulk_published: {
+        type: "boolean",
+      },
+      marine_notice_type: {
+        type: "string",
+        enum: [
+          "marine-guidance-note",
+          "merchant-shipping-notice",
+          "marine-information-note",
+          "form",
+          "instructions-to-surveyors",
+          "codes-of-practice",
+          "safety-bulletin",
+          "other",
+        ],
+      },
+      marine_notice_vessel_type: {
+        type: "string",
+        enum: [
+          "pleasure-vessels",
+          "small-commercial-vessels",
+          "cargo-vessels-over-24-metres",
+          "fishing-vessels-under-15-metres",
+          "fishing-vessels-15-24-metres",
+          "fishing-vessels-over-24-metres",
+          "high-speed-craft",
+          "large-yachts",
+          "passenger-vessels",
+        ],
+      },
+      marine_notice_topic: {
+        type: "string",
+        enum: [
+          "construction-and-equipment",
+          "crew-and-training",
+          "health-and-safety",
+          "environmental",
+          "navigation",
+          "radio-communications",
+          "registration",
+          "security-isps",
+          "survey-and-inspection",
+        ],
+      },
+      issued_date: {
         type: "string",
         pattern: "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$",
       },
