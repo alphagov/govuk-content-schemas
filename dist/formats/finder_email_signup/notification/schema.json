@@ -465,19 +465,6 @@
             }
           }
         },
-        "email_filter_name": {
-          "oneOf": [
-            {
-              "$ref": "#/definitions/facet_name"
-            },
-            {
-              "type": "null"
-            }
-          ]
-        },
-        "email_signup_choice": {
-          "$ref": "#/definitions/facet_choices"
-        },
         "filter": {
           "type": "object",
           "additionalProperties": false,
