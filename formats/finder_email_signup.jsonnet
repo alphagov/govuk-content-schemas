@@ -86,19 +86,6 @@
         beta: {
           "$ref": "#/definitions/finder_beta",
         },
-        email_signup_choice: {
-          "$ref": "#/definitions/facet_choices",
-        },
-        email_filter_name: {
-          oneOf: [
-            {
-              "$ref": "#/definitions/facet_name"
-            },
-            {
-              type: "null",
-            },
-          ]
-        },
         email_filter_by: {
           oneOf: [
             {
