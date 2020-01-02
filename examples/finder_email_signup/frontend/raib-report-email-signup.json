@@ -65,37 +65,39 @@
   "description": "You'll get an email each time a report is updated or a new report is published.",
   "details": {
     "beta": false,
-    "email_signup_choice": [
+    "email_filter_facets": [
       {
-        "key": "heavy-rail",
-        "radio_button_name": "Heavy rail",
-        "topic_name": "heavy rail",
-        "prechecked": false
-      },
-      {
-        "key": "light-rail",
-        "radio_button_name": "Light rail",
-        "topic_name": "light rail",
-        "prechecked": false
-      },
-      {
-        "key": "metros",
-        "radio_button_name": "Metros",
-        "topic_name": "metros",
-        "prechecked": false
-      },
-      {
-        "key": "heritage-railways",
-        "radio_button_name": "Heritage railways",
-        "topic_name": "heritage railways",
-        "prechecked": false
+        "facet_id": "railway_type",
+        "facet_name": "Railway types",
+        "facet_choices": [
+          {
+            "key": "heavy-rail",
+            "radio_button_name": "Heavy rail",
+            "topic_name": "heavy rail",
+            "prechecked": false
+          },
+          {
+            "key": "light-rail",
+            "radio_button_name": "Light rail",
+            "topic_name": "light rail",
+            "prechecked": false
+          },
+          {
+            "key": "metros",
+            "radio_button_name": "Metros",
+            "topic_name": "metros",
+            "prechecked": false
+          },
+          {
+            "key": "heritage-railways",
+            "radio_button_name": "Heritage railways",
+            "topic_name": "heritage railways",
+            "prechecked": false
+          }
+        ]
       }
     ],
     "email_filter_by": "railway_type",
-    "email_filter_name": {
-      "singular": "railway type",
-      "plural": "railway types"
-    },
     "subscription_list_title_prefix": {
       "singular": "Rail Accident Investigation Branch (RAIB) reports with the following railway type: ",
       "plural": "Rail Accident Investigation Branch (RAIB) reports with the following railway types: ",
