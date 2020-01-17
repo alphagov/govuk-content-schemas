@@ -463,9 +463,6 @@
         "generic_description": {
           "type": "boolean"
         },
-        "hide_facets_by_default": {
-          "$ref": "#/definitions/finder_hide_facets_by_default"
-        },
         "logo_path": {
           "type": "string"
         },
@@ -693,10 +690,6 @@
           }
         }
       }
-    },
-    "finder_hide_facets_by_default": {
-      "description": "Specify this to hide most of the facets behind a toggle on desktop",
-      "type": "boolean"
     },
     "finder_reject_filter": {
       "description": "A fixed filter that rejects documents which match the conditions",
