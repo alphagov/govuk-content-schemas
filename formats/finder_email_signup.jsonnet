@@ -120,6 +120,10 @@
               filter_value: {
                 type: "string",
               },
+              required: {
+                description: "Indicates whether this facet must have a value in order for a subscriber lists to be acceptable",
+                type: "boolean",
+              },
               option_lookup: {
                 description: "An array of key values where the key is the value of a selected facet and the value(s) are what these are converted to in a Rummager query",
                 type: "object",
