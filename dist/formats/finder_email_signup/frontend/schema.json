@@ -357,6 +357,10 @@
                     }
                   }
                 }
+              },
+              "required": {
+                "description": "Indicates whether this facet must have a value in order for a subscriber lists to be acceptable",
+                "type": "boolean"
               }
             }
           }
