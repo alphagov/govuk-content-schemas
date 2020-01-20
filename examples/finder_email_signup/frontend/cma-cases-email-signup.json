@@ -76,6 +76,9 @@
   "description": "You'll get an email each time a case is updated or a new case is published.",
   "details": {
     "beta": false,
+    "filter": {
+      "document_type": "cma_case"
+    },
     "email_filter_facets": [
       {
         "facet_id": "case_type",

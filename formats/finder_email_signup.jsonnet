@@ -165,6 +165,9 @@
             document_type: {
               type: "string"
             },
+            format: {
+              type: "string"
+            }
           },
         },
         reject: {
