@@ -275,6 +275,26 @@
       "description": "The main content provided as HTML rendered from govspeak",
       "type": "string"
     },
+    "brexit_no_deal_notice": {
+      "description": "A list of URLs and titles for a brexit no deal notice.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "title",
+          "href"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "href": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          }
+        }
+      }
+    },
     "change_history": {
       "type": "array",
       "items": {
@@ -327,6 +347,9 @@
         },
         "body": {
           "$ref": "#/definitions/body"
+        },
+        "brexit_no_deal_notice": {
+          "$ref": "#/definitions/brexit_no_deal_notice"
         },
         "change_history": {
           "$ref": "#/definitions/change_history"
