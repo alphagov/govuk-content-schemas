@@ -1,6 +1,6 @@
 (import "shared/default_format.jsonnet") + {
   document_type: "html_publication",
-  definitions: {
+  definitions: (import "shared/definitions/_whitehall.jsonnet") + {
     details: {
       type: "object",
       additionalProperties: false,
@@ -36,6 +36,9 @@
           type: "string",
           description: "Identifies the contact address of the institution which has produced the HTML Publication. To be displayed when printing an HTML Publication",
         },
+        brexit_no_deal_notice: {
+          "$ref": "#/definitions/brexit_no_deal_notice",
+        }
       },
     },
   },
