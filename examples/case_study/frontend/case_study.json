@@ -37,7 +37,20 @@
     "format_display_type": "case_study",
     "emphasised_organisations": [
       "8b19c238-54e3-4e27-b0d7-60f8e2a677c9"
-    ]
+    ],
+    "brexit_no_deal_notice": {
+      "show": true,
+      "links": [
+        {
+          "title": "Link 1",
+          "href": "http://www.example.com/1"
+        },
+        {
+          "title": "Link 2",
+          "href": "http://www.example.com/2"
+        }
+      ]
+    }
   },
   "links": {
     "organisations": [

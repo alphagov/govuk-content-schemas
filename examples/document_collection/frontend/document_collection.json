@@ -79,7 +79,20 @@
     "political": false,
     "emphasised_organisations": [
       "d39237a5-678b-4bb5-a372-eb2cb036933d"
-    ]
+    ],
+    "brexit_no_deal_notice": {
+      "show": true,
+      "links": [
+        {
+          "title": "Link 1",
+          "href": "http://www.example.com/1"
+        },
+        {
+          "title": "Link 2",
+          "href": "http://www.example.com/2"
+        }
+      ]
+    }
   },
   "links": {
     "government": [
