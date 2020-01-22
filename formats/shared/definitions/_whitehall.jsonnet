@@ -331,23 +331,34 @@
     format: "date-time",
   },
   brexit_no_deal_notice: {
-    type: "array",
-    items: {
-      type: "object",
-      additionalProperties: false,
-      required: [
-        "title",
-        "href",
-      ],
-      properties: {
-        title: {
-          type: "string",
-        },
-        href: {
-          type: "string",
-        },
+    type: "object",
+    description: "A list of URLs and titles for a Brexit no-deal notice",
+    properties: {
+      show: {
+        type: "boolean",
       },
-    },
-    description: "A list of URLs and titles for a brexit no deal notice.",
-  }
+      links: {
+        type: "array",
+        items: {
+          description: "A list of URLs and titles for a Brexit no-deal notice",
+          type: "object",
+          additionalProperties: false,
+          required: [
+            "title",
+            "href",
+          ],
+          properties: {
+            title: {
+              type: "string",
+              description: "Link title",
+            },
+            href: {
+              type: "string",
+              description: "Link URL",
+            }
+          }
+        }
+      }
+    }
+  },
 }
