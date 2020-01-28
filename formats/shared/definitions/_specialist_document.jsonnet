@@ -2150,7 +2150,7 @@
         "type": "string",
         enum: [
           "hgv-operator",
-          "bus-operator",
+          "psv-operator",
           "transport-manager",
         ]
       },
@@ -2159,18 +2159,14 @@
         items: {
           type: "string",
           enum: [
-            "east-midlands",
             "eastern",
-            "london",
-            "north-east",
+            "london-and-southeast",
             "north-west",
-            "northern-ireland",
+            "north-east",
             "scotland",
-            "south-east",
-            "south-west",
             "wales",
             "west-midlands",
-            "yorkshire-and-the-humber",
+            "western"
           ],
         },
       },
@@ -2187,7 +2183,10 @@
         "type": "string",
         enum: [
           "no-action",
+          "curtailment",
           "formal-warning",
+          "loss-of-repute",
+          "revocation"
         ]
       },
       first_published_at: {
