@@ -34,9 +34,6 @@
         document_noun: {
           "$ref": "#/definitions/finder_document_noun",
         },
-        hide_facets_by_default: {
-          "$ref": "#/definitions/finder_hide_facets_by_default",
-        },
         default_documents_per_page: {
           "$ref": "#/definitions/finder_default_documents_per_page",
         },

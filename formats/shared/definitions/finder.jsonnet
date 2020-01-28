@@ -3,10 +3,6 @@
     description: "How to refer to documents when presenting the search results",
     type: "string",
   },
-  finder_hide_facets_by_default: {
-    description: "Specify this to hide most of the facets behind a toggle on desktop",
-    type: "boolean",
-  },
   finder_default_documents_per_page: {
     description: "Specify this to paginate results",
     type: "integer",
