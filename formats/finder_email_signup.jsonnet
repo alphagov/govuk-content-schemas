@@ -114,6 +114,10 @@
               facet_choices: {
                 "$ref": "#/definitions/facet_choices",
               },
+              facet_connector: {
+                description: "The joining text between a facet name and list of values e.g. X filtered by Y",
+                type: "string",
+              },
               filter_key: {
                 type: "string",
               },
