@@ -19,20 +19,14 @@
     ],
     "attachments": [
       {
-        "content_id": "0aa1aa33-36b9-4677-a643-52b9034a1c32",
         "url": "https://assets.digital.cabinet-office.gov.uk/media/56e7fc15ed915d037a000004/introduction-section-image.jpg",
         "content_type": "application/jpg",
-        "title": "introduction section image",
-        "created_at": "2015-02-11T13:45:00.000+00:00",
-        "updated_at": "2015-02-13T13:45:00.000+00:00"
+        "title": "introduction section image"
       },
       {
-        "content_id": "130d2b69-e32f-437f-9caa-89a4246fbe39",
         "url": "https://assets.digital.cabinet-office.gov.uk/media/56e7fc15ed915d037a000004/introduction-section-pdf.pdf",
         "content_type": "application/pdf",
-        "title": "introduction section pdf",
-        "created_at": "2015-02-11T13:45:00.000+00:00",
-        "updated_at": "2015-02-13T13:45:00.000+00:00"
+        "title": "introduction section pdf"
       }
     ],
     "manual": {
