@@ -157,35 +157,6 @@
         }
       ]
     },
-    "asset_link": {
-      "type": "object",
-      "required": [
-        "url",
-        "content_type"
-      ],
-      "additionalProperties": false,
-      "properties": {
-        "content_id": {
-          "$ref": "#/definitions/guid"
-        },
-        "content_type": {
-          "type": "string"
-        },
-        "created_at": {
-          "format": "date-time"
-        },
-        "title": {
-          "type": "string"
-        },
-        "updated_at": {
-          "format": "date-time"
-        },
-        "url": {
-          "type": "string",
-          "format": "uri"
-        }
-      }
-    },
     "body_html_and_govspeak": {
       "description": "The main content provided as HTML with the govspeak markdown it's rendered from",
       "anyOf": [
@@ -253,13 +224,13 @@
           "$ref": "#/definitions/country"
         },
         "document": {
-          "$ref": "#/definitions/asset_link"
+          "$ref": "#/definitions/file_attachment_asset"
         },
         "email_signup_link": {
           "$ref": "#/definitions/email_signup_link"
         },
         "image": {
-          "$ref": "#/definitions/asset_link"
+          "$ref": "#/definitions/image_asset"
         },
         "max_cache_time": {
           "$ref": "#/definitions/max_cache_time"
@@ -288,6 +259,57 @@
       "type": "string",
       "format": "uri"
     },
+    "file_attachment_asset": {
+      "type": "object",
+      "required": [
+        "content_type",
+        "url"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "accessible": {
+          "type": "boolean"
+        },
+        "alternative_format_contact_email": {
+          "type": "string"
+        },
+        "attachment_type": {
+          "type": "string",
+          "enum": [
+            "file"
+          ]
+        },
+        "content_type": {
+          "type": "string"
+        },
+        "file_size": {
+          "type": "integer"
+        },
+        "filename": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "locale": {
+          "$ref": "#/definitions/locale"
+        },
+        "number_of_pages": {
+          "type": "integer"
+        },
+        "preview_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "title": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
     "first_published_at": {
       "description": "The date the content was first published.  Automatically determined by the publishing-api, unless overridden by the publishing application.",
       "type": "string",
@@ -303,6 +325,32 @@
         "$ref": "#/definitions/guid"
       },
       "uniqueItems": true
+    },
+    "image_asset": {
+      "type": "object",
+      "required": [
+        "content_type",
+        "url"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "alt_text": {
+          "type": "string"
+        },
+        "caption": {
+          "type": "string"
+        },
+        "content_type": {
+          "type": "string"
+        },
+        "credit": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
     },
     "locale": {
       "type": "string",
