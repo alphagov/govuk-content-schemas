@@ -42,10 +42,10 @@
           "$ref": "#/definitions/email_signup_link",
         },
         image: {
-          "$ref": "#/definitions/asset_link",
+          "$ref": "#/definitions/image_asset",
         },
         document: {
-          "$ref": "#/definitions/asset_link",
+          "$ref": "#/definitions/file_attachment_asset",
         },
         parts: {
           "$ref": "#/definitions/parts",

@@ -36,7 +36,11 @@
           "$ref": "#/definitions/body_html_and_govspeak",
         },
         attachments: {
-          "$ref": "#/definitions/asset_link_list",
+          description: "An ordered list of asset links",
+          type: "array",
+          items: {
+            "$ref": "#/definitions/specialist_publisher_attachment_asset",
+          },
         },
         metadata: {
           "$ref": "#/definitions/any_metadata",
