@@ -13,6 +13,32 @@ local FileAttachmentAssetProperties = {
   url: { type: "string", format: "uri", },
 };
 
+local HtmlAttachmentAssetProperties = {
+  attachment_type: { type: "string", enum: ["html"], },
+  id: { type: "string" },
+  locale: { "$ref": "#/definitions/locale", },
+  title: { type: "string", },
+  url: { type: "string", format: "uri", },
+};
+
+local ExternalAttachmentAssetProperties = {
+  attachment_type: { type: "string", enum: ["external"], },
+  id: { type: "string" },
+  locale: { "$ref": "#/definitions/locale", },
+  title: { type: "string", },
+  url: { type: "string", format: "uri", },
+};
+
+local PublicationAttachmentAssetProperties = {
+  command_paper_number: { type: "string", },
+  hoc_paper_number: { type: "string", },
+  isbn: { type: "string", },
+  parliamentary_session: { type: "string", },
+  unique_reference: { type: "string", },
+  unnumbered_command_paper: { type: "boolean", },
+  unnumbered_hoc_paper: { type: "boolean", },
+};
+
 {
   image_asset: {
     type: "object",
@@ -53,5 +79,38 @@ local FileAttachmentAssetProperties = {
       created_at: { format: "date-time", },
       updated_at: { format: "date-time", },
     },
+  },
+
+  publication_attachment_asset: {
+    oneOf: [
+      {
+        type: "object",
+        additionalProperties: false,
+        required: [
+          "attachment_type",
+          "content_type",
+          "url",
+        ],
+        properties: FileAttachmentAssetProperties + PublicationAttachmentAssetProperties,
+      },
+      {
+        type: "object",
+        additionalProperties: false,
+        required: [
+          "attachment_type",
+          "url",
+        ],
+        properties: HtmlAttachmentAssetProperties + PublicationAttachmentAssetProperties,
+      },
+      {
+        type: "object",
+        additionalProperties: false,
+        required: [
+          "attachment_type",
+          "url",
+        ],
+        properties: ExternalAttachmentAssetProperties + PublicationAttachmentAssetProperties,
+      }
+    ],
   },
 }
