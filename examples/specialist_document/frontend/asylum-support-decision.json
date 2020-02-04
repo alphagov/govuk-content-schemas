@@ -39,6 +39,7 @@
     "body": "<p>Download decision: </p>\n",
     "attachments": [
       {
+        "content_id": "77b8a9e2-befb-4bb2-b2cf-a0d0aa172765",
         "url": "https://assets.digital.cabinet-office.gov.uk/media/513a0efbed915d425e000002/asylum-support-image.jpg",
         "content_type": "application/jpeg",
         "title": "asylum report image title",
@@ -46,6 +47,7 @@
         "updated_at": "2015-02-13T13:45:00.000+00:00"
       },
       {
+        "content_id": "a4bcc563-d73d-474d-af4c-30ab40d43bd2",
         "url": "https://assets.digital.cabinet-office.gov.uk/media/513a0efbed915d425e000002/asylum-support-pdf.pdf",
         "content_type": "application/pdf",
         "title": "asylum report pdf title",

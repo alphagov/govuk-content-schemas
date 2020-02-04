@@ -14,7 +14,11 @@
           "$ref": "#/definitions/body_html_and_govspeak",
         },
         attachments: {
-          "$ref": "#/definitions/asset_link_list",
+          description: "An ordered list of asset links",
+          type: "array",
+          items: {
+            "$ref": "#/definitions/file_attachment_asset",
+          },
         },
         manual: {
           "$ref": "#/definitions/manual_section_parent",

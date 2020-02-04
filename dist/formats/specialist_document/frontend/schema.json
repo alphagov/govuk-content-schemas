@@ -398,42 +398,6 @@
         }
       ]
     },
-    "asset_link": {
-      "type": "object",
-      "required": [
-        "url",
-        "content_type"
-      ],
-      "additionalProperties": false,
-      "properties": {
-        "content_id": {
-          "$ref": "#/definitions/guid"
-        },
-        "content_type": {
-          "type": "string"
-        },
-        "created_at": {
-          "format": "date-time"
-        },
-        "title": {
-          "type": "string"
-        },
-        "updated_at": {
-          "format": "date-time"
-        },
-        "url": {
-          "type": "string",
-          "format": "uri"
-        }
-      }
-    },
-    "asset_link_list": {
-      "description": "An ordered list of asset links",
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/asset_link"
-      }
-    },
     "asylum_support_decision_metadata": {
       "type": "object",
       "additionalProperties": false,
@@ -835,7 +799,11 @@
       "additionalProperties": false,
       "properties": {
         "attachments": {
-          "$ref": "#/definitions/asset_link_list"
+          "description": "An ordered list of asset links",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/specialist_publisher_attachment_asset"
+          }
         },
         "body": {
           "$ref": "#/definitions/body_html_and_govspeak"
@@ -2463,6 +2431,67 @@
             "live-reassessment",
             "live-review"
           ]
+        }
+      }
+    },
+    "specialist_publisher_attachment_asset": {
+      "type": "object",
+      "required": [
+        "content_id",
+        "content_type",
+        "url"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "accessible": {
+          "type": "boolean"
+        },
+        "alternative_format_contact_email": {
+          "type": "string"
+        },
+        "attachment_type": {
+          "type": "string",
+          "enum": [
+            "file"
+          ]
+        },
+        "content_id": {
+          "$ref": "#/definitions/guid"
+        },
+        "content_type": {
+          "type": "string"
+        },
+        "created_at": {
+          "format": "date-time"
+        },
+        "file_size": {
+          "type": "integer"
+        },
+        "filename": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "locale": {
+          "$ref": "#/definitions/locale"
+        },
+        "number_of_pages": {
+          "type": "integer"
+        },
+        "preview_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "title": {
+          "type": "string"
+        },
+        "updated_at": {
+          "format": "date-time"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
         }
       }
     },
