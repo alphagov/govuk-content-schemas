@@ -27,6 +27,8 @@
     "body": "<p>Download PDF: </p>\n",
     "attachments": [
       {
+        "attachment_type": "file",
+        "id": "87905ae5-fa63-4a74-8987-7414b5aee89c",
         "content_id": "87905ae5-fa63-4a74-8987-7414b5aee89c",
         "url": "https://assets.digital.cabinet-office.gov.uk/media/513a0efbed915d425e000002/employment-tribunal-decision-image.jpg",
         "content_type": "application/jpeg",
@@ -35,6 +37,8 @@
         "updated_at": "2015-02-13T13:45:00.000+00:00"
       },
       {
+        "attachment_type": "file",
+        "id": "f998c1ed-44d6-4af1-846e-2baa54911c66",
         "content_id": "f998c1ed-44d6-4af1-846e-2baa54911c66",
         "url": "https://assets.digital.cabinet-office.gov.uk/media/513a0efbed915d425e000002/employment-tribunal-decision-pdf.pdf",
         "content_type": "application/pdf",

@@ -506,6 +506,8 @@
       "content_type": "image/jpeg"
     },
     "document": {
+      "attachment_type": "file",
+      "id": "43be2ac0-ea23-4b34-a73c-e2ac268e7f6c",
       "url": "https://assets.publishing.service.gov.uk/media/513a0efced915d4261000001/120613_Albania_Travel_Advice_Ed2_pdf.pdf",
       "content_type": "application/pdf"
     },

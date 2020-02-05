@@ -30,6 +30,8 @@
     "body": "<p>Download PDF: <a rel=\"external\" href=\"http://assets-origin.dev.gov.uk/media/56324037759b742c00000001/15_0144rjfhMDLA.doc\">UKEAT/0144/15/LA</a></p>\n",
     "attachments": [
       {
+        "attachment_type": "file",
+        "id": "988d543e-267b-40b2-9e8e-64d380e67a78",
         "content_id": "988d543e-267b-40b2-9e8e-64d380e67a78",
         "url": "https://assets.digital.cabinet-office.gov.uk/media/513a0efbed915d425e000002/employment-appeal-tribunal-decision-image.jpg",
         "content_type": "application/jpeg",
@@ -38,6 +40,8 @@
         "updated_at": "2015-02-13T13:45:00.000+00:00"
       },
       {
+        "attachment_type": "file",
+        "id": "3d973de4-72a7-4843-bbb9-62c6fd960536",
         "content_id": "3d973de4-72a7-4843-bbb9-62c6fd960536",
         "url": "https://assets.digital.cabinet-office.gov.uk/media/513a0efbed915d425e000002/employment-appeal-tribunal-decision-pdf.pdf",
         "content_type": "application/pdf",

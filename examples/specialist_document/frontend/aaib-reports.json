@@ -24,6 +24,8 @@
     "max_cache_time": 10,
     "attachments": [
       {
+        "attachment_type": "file",
+        "id": "bb227d96-abc7-4748-bd70-3029dba930bb",
         "content_id": "bb227d96-abc7-4748-bd70-3029dba930bb",
         "title": "Rotorsport UK Calidus G-PCPC 07-15",
         "url": "https://assets.digital.cabinet-office.gov.uk/media/559e25de40f0b61564000039/Rotorsport_UK_Calidus_G-PCPC_07-15.pdf",

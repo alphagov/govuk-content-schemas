@@ -437,7 +437,9 @@
     "file_attachment_asset": {
       "type": "object",
       "required": [
+        "attachment_type",
         "content_type",
+        "id",
         "url"
       ],
       "additionalProperties": false,

@@ -60,7 +60,9 @@ local PublicationAttachmentAssetProperties = {
     type: "object",
     additionalProperties: false,
     required: [
+      "attachment_type",
       "content_type",
+      "id",
       "url",
     ],
     properties: FileAttachmentAssetProperties,
@@ -70,8 +72,10 @@ local PublicationAttachmentAssetProperties = {
     type: "object",
     additionalProperties: false,
     required: [
+      "attachment_type",
       "content_id",
       "content_type",
+      "id",
       "url",
     ],
     properties: FileAttachmentAssetProperties + {
@@ -89,6 +93,7 @@ local PublicationAttachmentAssetProperties = {
         required: [
           "attachment_type",
           "content_type",
+          "id",
           "url",
         ],
         properties: FileAttachmentAssetProperties + PublicationAttachmentAssetProperties,
@@ -98,6 +103,7 @@ local PublicationAttachmentAssetProperties = {
         additionalProperties: false,
         required: [
           "attachment_type",
+          "id",
           "url",
         ],
         properties: HtmlAttachmentAssetProperties + PublicationAttachmentAssetProperties,
@@ -107,6 +113,7 @@ local PublicationAttachmentAssetProperties = {
         additionalProperties: false,
         required: [
           "attachment_type",
+          "id",
           "url",
         ],
         properties: ExternalAttachmentAssetProperties + PublicationAttachmentAssetProperties,
