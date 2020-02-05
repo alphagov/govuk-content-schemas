@@ -23,6 +23,8 @@
     "body": "<p>Download decision as a PDF document: <a rel=\"external\" href=\"http://assets-origin.dev.gov.uk/media/5614f9f7759b74281e000001/Why-Pay-More-for-Cars-v-HMRC.pdf\">Why Pay More For Cars Limited v The Commissioners For Her Majesty&rsquo;s Revenue And Customs</a></p>\n",
     "attachments": [
       {
+        "attachment_type": "file",
+        "id": "04ab8f0c-e62c-49fc-a06e-a3f31e66773b",
         "content_id": "04ab8f0c-e62c-49fc-a06e-a3f31e66773b",
         "url": "https://assets.digital.cabinet-office.gov.uk/media/513a0efbed915d425e000002/tax-tribunal-decision-image.jpg",
         "content_type": "application/jpeg",
@@ -31,6 +33,8 @@
         "updated_at": "2015-02-13T13:45:00.000+00:00"
       },
       {
+        "attachment_type": "file",
+        "id": "e35925b8-c9d0-4013-8909-d71ff22001a1",
         "content_id": "e35925b8-c9d0-4013-8909-d71ff22001a1",
         "url": "https://assets.digital.cabinet-office.gov.uk/media/513a0efbed915d425e000002/tax-tribunal-decision-pdf.pdf",
         "content_type": "application/pdf",

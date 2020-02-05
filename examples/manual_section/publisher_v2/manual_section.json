@@ -19,11 +19,15 @@
     ],
     "attachments": [
       {
+        "attachment_type": "file",
+        "id": "3d5b5608-e687-445e-ae09-5f62a0deb7ca",
         "url": "https://assets.digital.cabinet-office.gov.uk/media/56e7fc15ed915d037a000004/introduction-section-image.jpg",
         "content_type": "application/jpg",
         "title": "introduction section image"
       },
       {
+        "attachment_type": "file",
+        "id": "d6a33c9b-6fc2-4f7b-991a-575da01700f8",
         "url": "https://assets.digital.cabinet-office.gov.uk/media/56e7fc15ed915d037a000004/introduction-section-pdf.pdf",
         "content_type": "application/pdf",
         "title": "introduction section pdf"

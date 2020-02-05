@@ -29,6 +29,8 @@
       "content_type": "image/jpeg"
     },
     "document": {
+      "attachment_type": "file",
+      "id": "fecc20ab-73c2-4817-aafc-93745fc75f67",
       "url": "https://assets.digital.cabinet-office.gov.uk/media/513a0efced915d4261000001/120613_Albania_Travel_Advice_Ed2_pdf.pdf",
       "content_type": "application/pdf"
     },
