@@ -28,14 +28,6 @@
           type: "string",
           description: "Identifies the Print ISBN to be displayed when printing an HTML Publication",
         },
-        web_isbn: {
-          type: "string",
-          description: "Identifies the Web ISBN to be displayed when printing an HTML Publication",
-        },
-        print_meta_data_contact_address: {
-          type: "string",
-          description: "Identifies the contact address of the institution which has produced the HTML Publication. To be displayed when printing an HTML Publication",
-        },
         brexit_no_deal_notice: {
           "$ref": "#/definitions/brexit_no_deal_notice",
         }
