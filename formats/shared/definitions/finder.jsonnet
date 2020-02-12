@@ -48,9 +48,6 @@
           type: "string",
         },
       },
-      appear_in_find_eu_exit_guidance_business_finder: {
-        type: "string",
-      },
       facet_groups: {
           type: "array",
           items: {
