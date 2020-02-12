@@ -13,6 +13,13 @@
         "political",
       ],
       properties: {
+        attachments: {
+          description: "An ordered list of asset links",
+          type: "array",
+          items: {
+            "$ref": "#/definitions/publication_attachment_asset",
+          },
+        },
         body: {
           "$ref": "#/definitions/body",
         },
