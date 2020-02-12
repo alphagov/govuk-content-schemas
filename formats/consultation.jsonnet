@@ -15,6 +15,20 @@
         "political",
       ],
       properties: {
+        attachments: {
+          description: "An ordered list of asset links",
+          type: "array",
+          items: {
+            "$ref": "#/definitions/publication_attachment_asset",
+          },
+        },
+        featured_attachments: {
+          description: "An ordered list of attachments to feature on the page",
+          type: "array",
+          items: {
+            "$ref": "#/definitions/multiple_content_types",
+          },
+        },
         body: {
           "$ref": "#/definitions/body",
         },
