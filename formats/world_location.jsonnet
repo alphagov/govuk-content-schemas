@@ -10,13 +10,6 @@
        analytics_identifier: {
           "$ref": "#/definitions/analytics_identifier",
         },
-        attachments: {
-          description: "An ordered list of asset links",
-          type: "array",
-          items: {
-            "$ref": "#/definitions/publication_attachment_asset",
-          },
-        },
         change_note: {
           "$ref": "#/definitions/change_note",
         },
