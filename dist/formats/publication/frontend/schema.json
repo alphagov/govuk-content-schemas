@@ -397,7 +397,11 @@
           "$ref": "#/definitions/emphasised_organisations"
         },
         "featured_attachments": {
-          "type": "string"
+          "description": "An ordered list of attachments to feature below the document",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         },
         "first_public_at": {
           "$ref": "#/definitions/first_public_at"

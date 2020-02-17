@@ -23,7 +23,11 @@
           },
         },
         featured_attachments: {
-          "$ref": "#/definitions/multiple_content_types",
+          description: "An ordered list of attachments to feature below the document",
+          type: "array",
+          items: {
+            "$ref": "#/definitions/multiple_content_types",
+          },
         },
         body: {
           "$ref": "#/definitions/body",
@@ -91,6 +95,12 @@
         public_feedback_documents: {
           "$ref": "#/definitions/attachments_with_thumbnails",
         },
+        public_feedback_attachments: {
+          type: "array",
+          items: {
+            "$ref": "#/definitions/multiple_content_types",
+          },
+        },
         final_outcome_publication_date: {
           type: "string",
           format: "date-time",
@@ -100,6 +110,12 @@
         },
         final_outcome_documents: {
           "$ref": "#/definitions/attachments_with_thumbnails",
+        },
+        final_outcome_attachments: {
+          type: "array",
+          items: {
+            "$ref": "#/definitions/multiple_content_types",
+          },
         },
         tags: {
           "$ref": "#/definitions/tags",
