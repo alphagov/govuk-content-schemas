@@ -23,7 +23,11 @@
           },
         },
         featured_attachments: {
-          "$ref": "#/definitions/multiple_content_types",
+          description: "An ordered list of attachments to feature below the document",
+          type: "array",
+          items: {
+            "$ref": "#/definitions/multiple_content_types",
+          },
         },
         body: {
           "$ref": "#/definitions/body",
