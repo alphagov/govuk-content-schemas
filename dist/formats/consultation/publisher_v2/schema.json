@@ -277,7 +277,17 @@
           "$ref": "#/definitions/emphasised_organisations"
         },
         "featured_attachments": {
-          "$ref": "#/definitions/multiple_content_types"
+          "description": "An ordered list of attachments to feature below the document",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/multiple_content_types"
+          }
+        },
+        "final_outcome_attachments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/multiple_content_types"
+          }
         },
         "final_outcome_detail": {
           "type": "string"
@@ -310,6 +320,12 @@
         },
         "political": {
           "$ref": "#/definitions/political"
+        },
+        "public_feedback_attachments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/multiple_content_types"
+          }
         },
         "public_feedback_detail": {
           "type": "string"
