@@ -11,7 +11,6 @@
       additionalProperties: false,
       required: [
         "body",
-        "government",
         "political",
         "delivered_on",
       ],

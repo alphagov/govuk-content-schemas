@@ -28,7 +28,6 @@
       required: [
         "body",
         "documents",
-        "government",
         "political",
       ],
       properties: {
