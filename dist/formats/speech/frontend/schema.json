@@ -330,7 +330,6 @@
       "type": "object",
       "required": [
         "body",
-        "government",
         "political",
         "delivered_on"
       ],

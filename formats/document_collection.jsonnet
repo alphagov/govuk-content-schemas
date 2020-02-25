@@ -6,7 +6,6 @@
       additionalProperties: false,
       required: [
         "collection_groups",
-        "government",
         "political",
       ],
       properties: {
