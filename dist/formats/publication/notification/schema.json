@@ -496,7 +496,6 @@
       "required": [
         "body",
         "documents",
-        "government",
         "political"
       ],
       "additionalProperties": false,

@@ -326,7 +326,6 @@
       "type": "object",
       "required": [
         "body",
-        "government",
         "political"
       ],
       "additionalProperties": false,
