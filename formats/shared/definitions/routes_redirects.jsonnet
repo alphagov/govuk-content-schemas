@@ -42,6 +42,19 @@
           "exact",
         ],
       },
+      http_methods: {
+        type: "array",
+        items: {
+          type: "string",
+          enum: [
+            "GET",
+            "POST",
+            "PUT",
+            "PATCH",
+            "DELETE",
+          ],
+        },
+      },
     },
   },
   redirect_route: {
