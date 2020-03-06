@@ -526,8 +526,9 @@
           "description": "An ordered list of attachments to feature below the document",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/multiple_content_types"
-          }
+            "type": "string"
+          },
+          "uniqueItems": true
         },
         "first_public_at": {
           "$ref": "#/definitions/first_public_at"
@@ -802,25 +803,6 @@
         "zh-hk",
         "zh-tw"
       ]
-    },
-    "multiple_content_types": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "required": [
-          "content_type",
-          "content"
-        ],
-        "additionalProperties": false,
-        "properties": {
-          "content": {
-            "type": "string"
-          },
-          "content_type": {
-            "type": "string"
-          }
-        }
-      }
     },
     "nation_applicability": {
       "description": "An object specifying the applicability of a particular nation.",
