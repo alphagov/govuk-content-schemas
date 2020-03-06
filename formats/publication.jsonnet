@@ -41,8 +41,9 @@
         featured_attachments: {
           description: "An ordered list of attachments to feature below the document",
           type: "array",
+          uniqueItems: true,
           items: {
-            "$ref": "#/definitions/multiple_content_types",
+            type: "string",
           },
         },
         body: {

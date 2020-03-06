@@ -24,8 +24,9 @@
         featured_attachments: {
           description: "An ordered list of attachments to feature below the document",
           type: "array",
+          uniqueItems: true,
           items: {
-            "$ref": "#/definitions/multiple_content_types",
+            type: "string",
           },
         },
         body: {
@@ -96,8 +97,9 @@
         },
         public_feedback_attachments: {
           type: "array",
+          uniqueItems: true,
           items: {
-            "$ref": "#/definitions/multiple_content_types",
+            type: "string",
           },
         },
         final_outcome_publication_date: {
@@ -112,8 +114,9 @@
         },
         final_outcome_attachments: {
           type: "array",
+          uniqueItems: true,
           items: {
-            "$ref": "#/definitions/multiple_content_types",
+            type: "string",
           },
         },
         tags: {
