@@ -6,7 +6,6 @@
       additionalProperties: false,
       required: [
         "body",
-        "government",
         "political",
       ],
       properties: {
