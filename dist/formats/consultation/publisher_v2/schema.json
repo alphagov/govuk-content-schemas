@@ -279,14 +279,16 @@
           "description": "An ordered list of attachments to feature below the document",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/multiple_content_types"
-          }
+            "type": "string"
+          },
+          "uniqueItems": true
         },
         "final_outcome_attachments": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/multiple_content_types"
-          }
+            "type": "string"
+          },
+          "uniqueItems": true
         },
         "final_outcome_detail": {
           "type": "string"
@@ -323,8 +325,9 @@
         "public_feedback_attachments": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/multiple_content_types"
-          }
+            "type": "string"
+          },
+          "uniqueItems": true
         },
         "public_feedback_detail": {
           "type": "string"
@@ -518,25 +521,6 @@
         "zh-hk",
         "zh-tw"
       ]
-    },
-    "multiple_content_types": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "required": [
-          "content_type",
-          "content"
-        ],
-        "additionalProperties": false,
-        "properties": {
-          "content": {
-            "type": "string"
-          },
-          "content_type": {
-            "type": "string"
-          }
-        }
-      }
     },
     "nation_applicability": {
       "description": "An object specifying the applicability of a particular nation.",

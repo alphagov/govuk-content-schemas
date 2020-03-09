@@ -400,7 +400,8 @@
           "type": "array",
           "items": {
             "type": "string"
-          }
+          },
+          "uniqueItems": true
         },
         "first_public_at": {
           "$ref": "#/definitions/first_public_at"

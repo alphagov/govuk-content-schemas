@@ -358,13 +358,15 @@
           "type": "array",
           "items": {
             "type": "string"
-          }
+          },
+          "uniqueItems": true
         },
         "final_outcome_attachments": {
           "type": "array",
           "items": {
             "type": "string"
-          }
+          },
+          "uniqueItems": true
         },
         "final_outcome_detail": {
           "type": "string"
@@ -402,7 +404,8 @@
           "type": "array",
           "items": {
             "type": "string"
-          }
+          },
+          "uniqueItems": true
         },
         "public_feedback_detail": {
           "type": "string"
