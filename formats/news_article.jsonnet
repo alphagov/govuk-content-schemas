@@ -17,7 +17,7 @@
           description: "An ordered list of asset links",
           type: "array",
           items: {
-            "$ref": "#/definitions/publication_attachment_asset",
+            "$ref": "#/definitions/file_attachment_asset",
           },
         },
         body: {
