@@ -281,7 +281,7 @@ module SchemaGenerator
       def guid_properties
         links.each_with_object({}) do |(k, v), hash|
           link = v.merge({ "$ref" => "#/definitions/guid_list" })
-            .delete_if { |k| %w(required).include?(k) }
+            .delete_if { |key| %w(required).include?(key) }
           hash[k] = link
         end
       end

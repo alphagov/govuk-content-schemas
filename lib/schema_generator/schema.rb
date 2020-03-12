@@ -44,7 +44,7 @@ module SchemaGenerator
 
     def self.ordered_schema(schema_hash)
       # Custom consistent sorting for JSON Schema objects
-      sorted_hash = schema_hash.deep_sort do |(a, _), (b, _), parent_key|
+      schema_hash.deep_sort do |(a, _), (b, _), parent_key|
         a = a.to_s
         b = b.to_s
         # We don't want to sort any items properties

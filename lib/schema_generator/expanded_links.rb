@@ -55,7 +55,7 @@ module SchemaGenerator
     end
 
     def generate
-      properties = {
+      {
         type: "object",
         additionalProperties: false,
         properties: links,
