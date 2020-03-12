@@ -14,3 +14,7 @@ gem 'rack-test', '~> 0.8.2'
 group :test do
   gem 'pry-byebug'
 end
+
+group :development, :test do
+  gem "rubocop-govuk"
+end
