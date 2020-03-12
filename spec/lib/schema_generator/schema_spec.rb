@@ -40,7 +40,7 @@ RSpec.describe SchemaGenerator::Schema do
             "z" => 1,
             "a" => 2,
             "_" => 3,
-          }
+          },
         }
       end
 
@@ -59,8 +59,8 @@ RSpec.describe SchemaGenerator::Schema do
           "nested" => {
             "type" => "object",
             "description" => "My object",
-            "nested" => {}
-          }
+            "nested" => {},
+          },
         }
       end
 

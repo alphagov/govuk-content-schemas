@@ -19,7 +19,7 @@ module SchemaGenerator
         status: format_data["base_path"] || "required",
         required_definition: "absolute_path",
         optional_definition: "absolute_path_optional",
-        forbidden_definition: "null"
+        forbidden_definition: "null",
       )
     end
 
@@ -29,7 +29,7 @@ module SchemaGenerator
         status: format_data["description"] || "optional",
         required_definition: "description",
         optional_definition: "description_optional",
-        forbidden_definition: "null"
+        forbidden_definition: "null",
       )
     end
 
@@ -39,7 +39,7 @@ module SchemaGenerator
         status: format_data["details"] || "required",
         required_definition: "details",
         optional_definition: "details",
-        forbidden_definition: "empty_object"
+        forbidden_definition: "empty_object",
       )
     end
 
@@ -49,7 +49,7 @@ module SchemaGenerator
         status: format_data["redirects"] || "required",
         required_definition: "redirects",
         optional_definition: "redirects_optional",
-        forbidden_definition: "empty_array"
+        forbidden_definition: "empty_array",
       )
     end
 
@@ -59,7 +59,7 @@ module SchemaGenerator
         status: format_data["rendering_app"] || "required",
         required_definition: "rendering_app",
         optional_definition: "rendering_app_optional",
-        forbidden_definition: "null"
+        forbidden_definition: "null",
       )
     end
 
@@ -69,7 +69,7 @@ module SchemaGenerator
         status: format_data["routes"] || "required",
         required_definition: "routes",
         optional_definition: "routes_optional",
-        forbidden_definition: "empty_array"
+        forbidden_definition: "empty_array",
       )
     end
 
@@ -79,7 +79,7 @@ module SchemaGenerator
         status: format_data["title"] || "required",
         required_definition: "title",
         optional_definition: "title_optional",
-        forbidden_definition: "null"
+        forbidden_definition: "null",
       )
     end
 
@@ -90,7 +90,7 @@ module SchemaGenerator
         status: frontend ? frontend_status : "required",
         required_definition: "guid",
         optional_definition: "guid_optional",
-        forbidden_definition: "null"
+        forbidden_definition: "null",
       )
     end
 
@@ -127,12 +127,12 @@ module SchemaGenerator
         {
           "type" => "string",
           "pattern" => "^(placeholder|placeholder_.+)$",
-          "description" => "Should be of the form 'placeholder_my_format_name'. 'placeholder' is allowed for backwards compatibility."
+          "description" => "Should be of the form 'placeholder_my_format_name'. 'placeholder' is allowed for backwards compatibility.",
         }
       else
         {
           "enum" => [schema_name],
-          "type" => "string"
+          "type" => "string",
         }
       end
     end
@@ -157,6 +157,7 @@ module SchemaGenerator
       if links.required_links.any?
         raise InvalidFormat, "Can only require edition links"
       end
+
       links
     end
 
@@ -177,6 +178,7 @@ module SchemaGenerator
         if disallowed.any?
           raise InvalidFormat, "Encountered document types which are not allowed in `lib/govuk_content_schemas/allowed_document_types.yml`: #{disallowed.join(', ')}"
         end
+
         build_definition(specified_document_types)
       end
 
@@ -193,13 +195,13 @@ module SchemaGenerator
       def allowed_document_types_path
         File.expand_path(
           "../govuk_content_schemas/allowed_document_types.yml",
-          __dir__
+          __dir__,
         )
       end
     end
 
     class OptionalProperty
-      VALID_STATUSES = %w(required optional forbidden)
+      VALID_STATUSES = %w(required optional forbidden).freeze
 
       def initialize(
         property:,
@@ -240,13 +242,13 @@ module SchemaGenerator
           {
             "type" => "array",
             "items" => {},
-            "additionalItems" => false
+            "additionalItems" => false,
           }
         when "empty_object"
           {
             "type" => "object",
             "properties" => {},
-            "additionalProperties" => false
+            "additionalProperties" => false,
           }
         else
           { "$ref" => "#/definitions/#{determined}" }
@@ -256,11 +258,12 @@ module SchemaGenerator
     private
 
       attr_reader :property, :status, :required_definition,
-        :optional_definition, :forbidden_definition
+                  :optional_definition, :forbidden_definition
 
       def determined_definition
         return forbidden_definition if forbidden?
         return required_definition if required?
+
         optional_definition
       end
     end
@@ -307,11 +310,13 @@ module SchemaGenerator
       def normalise_links(links_data)
         links_data.each_with_object({}) do |(k, v), hash|
           next unless v
+
           if v.is_a?(Hash)
             extra_keys = v.keys - ALLOWED_KEYS
             if extra_keys.any?
               raise InvalidFormat, "Unexpected keys #{extra_keys.join(', ')} for link - only #{ALLOWED_KEYS.join(', ')} are allowed"
             end
+
             definition = v
           else
             definition = {}

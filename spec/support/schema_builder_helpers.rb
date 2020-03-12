@@ -9,7 +9,7 @@ module SchemaBuilderHelpers
   def build_schema(name, properties: nil, definitions: nil, required: nil)
     schema = {
       "$schema" => "http://json-schema.org/draft-04/schema#",
-      "type" => "object"
+      "type" => "object",
     }
     schema["properties"] = properties if properties
     schema["definitions"] = definitions if definitions
@@ -26,7 +26,7 @@ module SchemaBuilderHelpers
   def build_ref_properties(property_names, refname)
     property_names.inject({}) do |memo, property_name|
       memo.merge(property_name => {
-        "$ref" => "#/definitions/#{refname}"
+        "$ref" => "#/definitions/#{refname}",
       })
     end
   end

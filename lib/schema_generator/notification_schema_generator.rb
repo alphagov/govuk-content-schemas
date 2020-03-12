@@ -104,7 +104,7 @@ module SchemaGenerator
       {
         "type" => "object",
         "additionalProperties" => false,
-        "properties" => content_links.merge(edition_links)
+        "properties" => content_links.merge(edition_links),
       }
     end
   end

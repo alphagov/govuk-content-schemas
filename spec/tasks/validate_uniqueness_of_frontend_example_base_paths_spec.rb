@@ -23,7 +23,7 @@ RSpec.describe "validate" do
       let(:examples) {
         [
           generate_example("a.json", "/letter_a"),
-          generate_example("b.json", "/letter_b")
+          generate_example("b.json", "/letter_b"),
         ]
       }
 
@@ -36,7 +36,7 @@ RSpec.describe "validate" do
       let(:examples) {
         [
           generate_example("a.json", "/letter_a"),
-          generate_example("b.json", "/letter_a")
+          generate_example("b.json", "/letter_a"),
         ]
       }
 
