@@ -50,10 +50,7 @@ node {
   try {
     stage("Checkout") {
       checkout scm
-      env.GIT_COMMIT = sh(
-        script: 'git rev-parse HEAD',
-        returnStdout: true
-      ).trim()
+      env.GIT_COMMIT_HASH = govuk.getFullCommitHash()
     }
 
     stage("Merge master") {
@@ -62,6 +59,10 @@ node {
 
     stage("bundle install") {
       govuk.bundleApp();
+    }
+
+    stage("Lint") {
+      govuk.lintRuby()
     }
 
     stage("Run tests") {
@@ -120,7 +121,7 @@ stage("Check dependent projects against updated schema") {
             value: env.BRANCH_NAME],
           [$class: 'StringParameterValue',
             name: 'SCHEMA_COMMIT',
-            value: env.GIT_COMMIT]
+            value: env.GIT_COMMIT_HASH]
         ], wait: false
     }
   }
