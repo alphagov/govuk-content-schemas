@@ -49,6 +49,7 @@ module SchemaGenerator
       names = definition_names.flat_map do |name|
         dependencies = definition_dependencies[name]
         raise UnresolvedDefinition.new(name) unless dependencies
+
         new_dependencies = dependencies - dependencies_found
         current_dependencies = dependencies_found + new_dependencies
         current_dependencies + resolve_depenencies(new_dependencies, current_dependencies)
@@ -64,6 +65,5 @@ module SchemaGenerator
         super("Unresolved defintion: #{definition}")
       end
     end
-
   end
 end

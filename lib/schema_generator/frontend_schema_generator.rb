@@ -46,7 +46,7 @@ module SchemaGenerator
     end
 
     def properties
-      all_properties = default_properties.merge(derived_properties)
+      default_properties.merge(derived_properties)
     end
 
     def definitions

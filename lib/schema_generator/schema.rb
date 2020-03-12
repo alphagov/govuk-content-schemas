@@ -44,8 +44,9 @@ module SchemaGenerator
 
     def self.ordered_schema(schema_hash)
       # Custom consistent sorting for JSON Schema objects
-      sorted_hash = schema_hash.deep_sort do |(a, _), (b, _), parent_key|
-        a, b = [a.to_s, b.to_s]
+      schema_hash.deep_sort do |(a, _), (b, _), parent_key|
+        a = a.to_s
+        b = b.to_s
         # We don't want to sort any items properties
         next a <=> b if parent_key == "properties"
         # a description is always first
@@ -57,6 +58,7 @@ module SchemaGenerator
         next (a == "required" ? -1 : 1) if [a, b].include?("required")
         # definitions are the last item
         next (a == "definitions" ? 1 : -1) if [a, b].include?("definitions")
+
         # otherwise it's alphabetical
         a <=> b
       end

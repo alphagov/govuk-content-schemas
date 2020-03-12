@@ -41,7 +41,7 @@ module SchemaGenerator
     end
 
     def derived_properties
-      properties = {
+      {
         "base_path" => format.base_path.definition,
         "content_id" => format.content_id(frontend: false).definition,
         "document_type" => format.document_type.definition,
@@ -104,7 +104,7 @@ module SchemaGenerator
       {
         "type" => "object",
         "additionalProperties" => false,
-        "properties" => content_links.merge(edition_links)
+        "properties" => content_links.merge(edition_links),
       }
     end
   end

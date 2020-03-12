@@ -19,7 +19,7 @@ module SchemaGenerator
 
     def self.add_change_history(hash)
       hash["properties"]["change_history"] = {
-        "$ref" => "#/definitions/change_history"
+        "$ref" => "#/definitions/change_history",
       }
     end
   end

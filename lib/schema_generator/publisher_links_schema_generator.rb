@@ -25,7 +25,7 @@ module SchemaGenerator
       {
         "links" => links,
         "previous_version" => { "type" => "string" },
-        "bulk_publishing" => { "type" => "boolean" }
+        "bulk_publishing" => { "type" => "boolean" },
       }
     end
 

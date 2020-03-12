@@ -1,7 +1,7 @@
 ENV["GOVUK_CONTENT_SCHEMAS_PATH"] = "."
 
-require 'rack/test'
-require_relative '../../app'
+require "rack/test"
+require_relative "../../app"
 
 RSpec.describe "Dummy content store rack application" do
   include Rack::Test::Methods
