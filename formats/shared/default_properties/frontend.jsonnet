@@ -46,4 +46,7 @@
       },
     ],
   },
+  global: {
+    "$ref": "#/definitions/global",
+  }
 }
