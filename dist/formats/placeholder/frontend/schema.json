@@ -218,6 +218,9 @@
         }
       ]
     },
+    "global": {
+      "$ref": "#/definitions/global"
+    },
     "links": {
       "type": "object",
       "additionalProperties": false,
@@ -700,9 +703,170 @@
         }
       }
     },
+    "global": {
+      "description": "Configuration for the header and footer chrome of GOV.UK",
+      "type": "object",
+      "required": [
+        "header",
+        "footer"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "footer": {
+          "$ref": "#/definitions/global_footer"
+        },
+        "header": {
+          "$ref": "#/definitions/global_header"
+        }
+      }
+    },
+    "global_footer": {
+      "description": "Configuration for the global footer options for GOV.UK",
+      "type": "object",
+      "required": [
+        "services_and_information_links",
+        "departments_and_policy_links",
+        "support_links"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "departments_and_policy_links": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/hyperlink_with_text"
+          }
+        },
+        "services_and_information_links": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/hyperlink_with_text"
+          }
+        },
+        "support_links": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/hyperlink_with_text"
+          }
+        },
+        "transition_links": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/hyperlink_with_text"
+          }
+        }
+      }
+    },
+    "global_header": {
+      "description": "Configuration for the global header options for GOV.UK",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "alert_bar": {
+          "description": "Used to populate a global alert across all GOV.UK pages",
+          "type": "object",
+          "required": [
+            "heading"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "alert_type": {
+              "type": "string",
+              "enum": [
+                "warning"
+              ]
+            },
+            "description": {
+              "type": "string"
+            },
+            "description_link": {
+              "$ref": "#/definitions/hyperlink"
+            },
+            "heading": {
+              "type": "string"
+            },
+            "heading_link": {
+              "$ref": "#/definitions/hyperlink"
+            },
+            "persistent": {
+              "type": "boolean"
+            }
+          }
+        },
+        "emergency_banner": {
+          "type": "object",
+          "required": [
+            "emergency_type",
+            "heading"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "description": {
+              "type": "string"
+            },
+            "emergency_type": {
+              "type": "string",
+              "enum": [
+                "notable_death",
+                "national_emergency",
+                "local_emergency"
+              ]
+            },
+            "heading": {
+              "type": "string"
+            },
+            "more_info": {
+              "$ref": "#/definitions/hyperlink_with_text"
+            }
+          }
+        }
+      }
+    },
     "guid": {
       "type": "string",
       "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-[1-5][a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$"
+    },
+    "hyperlink": {
+      "type": "object",
+      "required": [
+        "href"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "href": {
+          "type": "string",
+          "format": "uri"
+        },
+        "lang": {
+          "type": "string"
+        },
+        "rel": {
+          "type": "string"
+        }
+      }
+    },
+    "hyperlink_with_text": {
+      "type": "object",
+      "required": [
+        "href",
+        "text"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "href": {
+          "type": "string",
+          "format": "uri"
+        },
+        "lang": {
+          "type": "string"
+        },
+        "rel": {
+          "type": "string"
+        },
+        "text": {
+          "description": "The text shown to users",
+          "type": "string"
+        }
+      }
     },
     "image": {
       "type": "object",
