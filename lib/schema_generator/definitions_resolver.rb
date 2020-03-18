@@ -27,8 +27,8 @@ module SchemaGenerator
     end
 
     def calculate_definition_dependencies
-      all_definitions.each_with_object({}) do |(k, v), memo|
-        memo[k] = extract_definitions(v)
+      all_definitions.transform_values do |v|
+        extract_definitions(v)
       end
     end
 

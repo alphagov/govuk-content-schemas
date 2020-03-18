@@ -16,5 +16,5 @@ group :test do
 end
 
 group :development, :test do
-  gem "rubocop-govuk"
+  gem "rubocop-govuk", "~> 3.3.0"
 end
