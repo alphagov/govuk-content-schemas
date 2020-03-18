@@ -72,8 +72,8 @@ module SchemaGenerator
     end
 
     def publishing_api_links
-      LINK_TYPES_ADDED_BY_PUBLISHING_API.each_with_object({}) do |(type, definition), memo|
-        memo[type] = {
+      LINK_TYPES_ADDED_BY_PUBLISHING_API.transform_values do |definition|
+        {
           "description" => "Link type automatically added by Publishing API",
           "$ref": "#/definitions/#{definition}",
         }
