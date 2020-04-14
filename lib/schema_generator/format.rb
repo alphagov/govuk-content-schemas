@@ -280,7 +280,7 @@ module SchemaGenerator
 
       def guid_properties
         links.each_with_object({}) do |(k, v), hash|
-          link = v.merge({ "$ref" => "#/definitions/guid_list" })
+          link = v.merge("$ref" => "#/definitions/guid_list")
             .delete_if { |key| %w(required).include?(key) }
           hash[k] = link
         end
@@ -299,7 +299,7 @@ module SchemaGenerator
           # this legacy fix is included.
           # @FIXME remove need for this check
           definition = LINKS_WITHOUT_BASE_PATHS.include?(k) ? "frontend_links" : "frontend_links_with_base_path"
-          link = v.merge({ "$ref" => "#/definitions/#{definition}" })
+          link = v.merge("$ref" => "#/definitions/#{definition}")
             .delete_if { |field| %w(required minItems).include?(field) }
           hash[k] = link
         end
