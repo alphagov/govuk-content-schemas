@@ -107,6 +107,11 @@
           "description": "The user needs this piece of content meets.",
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
+        "ministerial": {
+          "description": "Link to the ministers index page, present if this is a ministerial role.",
+          "$ref": "#/definitions/frontend_links_with_base_path",
+          "maxItems": 1
+        },
         "ordered_parent_organisations": {
           "description": "Organisations that own this role.",
           "$ref": "#/definitions/frontend_links_with_base_path"
