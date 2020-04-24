@@ -75,6 +75,10 @@
           "description": "Link type automatically added by Publishing API",
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
+        "ministers": {
+          "description": "Link type automatically added by Publishing API",
+          "$ref": "#/definitions/frontend_links"
+        },
         "parent": {
           "description": "The facet_group this facet belongs to.",
           "$ref": "#/definitions/frontend_links_with_base_path",

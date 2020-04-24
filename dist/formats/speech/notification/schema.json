@@ -124,8 +124,8 @@
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
         "ministers": {
-          "description": "Deprecated. These are relations to minister people pages, this is superseded by 'people'",
-          "$ref": "#/definitions/frontend_links_with_base_path"
+          "description": "Link type automatically added by Publishing API",
+          "$ref": "#/definitions/frontend_links"
         },
         "ordered_related_items": {
           "description": "Related items, can be any page on GOV.UK. Mostly used for mainstream content to power the sidebar. Ordering of the links is determined by the editor in Content Tagger.",
@@ -258,10 +258,6 @@
         },
         "meets_user_needs": {
           "description": "The user needs this piece of content meets.",
-          "$ref": "#/definitions/guid_list"
-        },
-        "ministers": {
-          "description": "Deprecated. These are relations to minister people pages, this is superseded by 'people'",
           "$ref": "#/definitions/guid_list"
         },
         "ordered_related_items": {

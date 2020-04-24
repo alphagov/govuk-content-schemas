@@ -115,6 +115,10 @@
           "description": "The user needs this piece of content meets.",
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
+        "ministers": {
+          "description": "Link type automatically added by Publishing API",
+          "$ref": "#/definitions/frontend_links"
+        },
         "ordered_child_organisations": {
           "description": "Child organisations primarily for use with Whitehall organisations.",
           "$ref": "#/definitions/frontend_links_with_base_path"

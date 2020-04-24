@@ -132,6 +132,10 @@
           "$ref": "#/definitions/frontend_links_with_base_path",
           "maxItems": 1
         },
+        "ministers": {
+          "description": "Link type automatically added by Publishing API",
+          "$ref": "#/definitions/frontend_links"
+        },
         "ordered_parent_organisations": {
           "description": "Organisations that own this role.",
           "$ref": "#/definitions/frontend_links_with_base_path"
