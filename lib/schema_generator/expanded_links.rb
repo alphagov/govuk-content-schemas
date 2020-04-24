@@ -48,6 +48,10 @@ module SchemaGenerator
      # will automatically have a `role_appointments` link type with those
      # items.
      "role_appointments" => "frontend_links",
+
+     # `Role` content items that are ministerial roles will automatically
+     # have a `ministers` link type from the main `ministers` index page.
+     "ministers" => "frontend_links",
    }.freeze
 
     def initialize(format)
