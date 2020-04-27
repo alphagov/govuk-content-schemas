@@ -184,6 +184,9 @@
         },
         "external_related_links": {
           "$ref": "#/definitions/external_related_links"
+        },
+        "phase_message": {
+          "$ref": "#/definitions/multiple_content_types"
         }
       }
     },
