@@ -95,6 +95,9 @@
         "live"
       ]
     },
+    "phase_message": {
+      "$ref": "#/definitions/body_html_and_govspeak"
+    },
     "previous_version": {
       "type": "string"
     },

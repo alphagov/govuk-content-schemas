@@ -86,6 +86,9 @@
         "live"
       ]
     },
+    "phase_message": {
+      "$ref": "#/definitions/body_html_and_govspeak"
+    },
     "previous_version": {
       "type": "string"
     },
@@ -163,6 +166,14 @@
     "body": {
       "description": "The main content provided as HTML rendered from govspeak",
       "type": "string"
+    },
+    "body_html_and_govspeak": {
+      "description": "The main content provided as HTML with the govspeak markdown it's rendered from",
+      "anyOf": [
+        {
+          "$ref": "#/definitions/multiple_content_types"
+        }
+      ]
     },
     "change_history": {
       "type": "array",
@@ -404,6 +415,25 @@
         "zh-hk",
         "zh-tw"
       ]
+    },
+    "multiple_content_types": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "content_type",
+          "content"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "content": {
+            "type": "string"
+          },
+          "content_type": {
+            "type": "string"
+          }
+        }
+      }
     },
     "political": {
       "description": "If the content is considered political in nature, reflecting views of the government it was published under.",

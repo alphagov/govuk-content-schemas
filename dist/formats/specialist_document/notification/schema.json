@@ -313,6 +313,9 @@
         "live"
       ]
     },
+    "phase_message": {
+      "$ref": "#/definitions/body_html_and_govspeak"
+    },
     "public_updated_at": {
       "$ref": "#/definitions/public_updated_at"
     },
