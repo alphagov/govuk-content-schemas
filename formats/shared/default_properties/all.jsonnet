@@ -23,9 +23,6 @@
       "live",
     ],
   },
-  phase_message: {
-    "$ref": "#/definitions/body_html_and_govspeak",
-  },
   publishing_app: {
     "$ref": "#/definitions/publishing_app_name",
   },

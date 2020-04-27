@@ -8,6 +8,9 @@
         body: {
           "$ref": "#/definitions/body_html_and_govspeak",
         },
+        phase_message: {
+          "$ref": "#/definitions/multiple_content_types",
+        },
         external_related_links: {
           "$ref": "#/definitions/external_related_links",
         },
