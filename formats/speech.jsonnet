@@ -67,7 +67,6 @@
       maxItems: 1,
     },
     related_policies: "",
-    ministers: "Deprecated. These are relations to minister people pages, this is superseded by 'people'",
     topical_events: "",
     world_locations: "",
     roles: "Government roles that are associated with this document, typically the role part of a role association",

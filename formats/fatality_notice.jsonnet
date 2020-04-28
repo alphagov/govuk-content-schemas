@@ -30,7 +30,6 @@
       maxItems: 1,
       minItems: 1,
     },
-    ministers: "Deprecated. These are relations to minister people pages, this is superseded by 'people'",
     organisations: "All organisations linked to this content item. This should include lead organisations.",
     people: "People that are associated with this document, typically the person part of a role association",
     primary_publishing_organisation: {
@@ -44,7 +43,6 @@
     field_of_operation: {
       maxItems: 1,
     },
-    ministers: "Deprecated. These are relations to minister people pages, this is superseded by 'people'",
     people: "People that are associated with this document, typically the person part of a role association",
     roles: "Government roles that are associated with this document, typically the role part of a role association",
   },
