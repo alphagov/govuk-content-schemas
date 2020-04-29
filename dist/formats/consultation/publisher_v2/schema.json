@@ -67,10 +67,6 @@
           "$ref": "#/definitions/guid_list",
           "maxItems": 1
         },
-        "ministers": {
-          "description": "Deprecated. These are relations to minister people pages, this is superseded by 'people'",
-          "$ref": "#/definitions/guid_list"
-        },
         "organisations": {
           "$ref": "#/definitions/guid_list"
         },
