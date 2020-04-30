@@ -1827,17 +1827,38 @@
         ],
       },
       marine_notice_vessel_type: {
-        type: "string",
-        enum: [
-          "pleasure-vessels",
-          "small-commercial-vessels",
-          "cargo-vessels-over-24-metres",
-          "fishing-vessels-under-15-metres",
-          "fishing-vessels-15-24-metres",
-          "fishing-vessels-over-24-metres",
-          "high-speed-craft",
-          "large-yachts",
-          "passenger-vessels",
+        oneOf: [
+          {
+            type: "array",
+            items: {
+              type: "string",
+              enum: [
+                "pleasure-vessels",
+                "small-commercial-vessels",
+                "cargo-vessels-over-24-metres",
+                "fishing-vessels-under-15-metres",
+                "fishing-vessels-15-24-metres",
+                "fishing-vessels-over-24-metres",
+                "high-speed-craft",
+                "large-yachts",
+                "passenger-vessels",
+              ],
+            },
+          },
+          {
+            type: "string",
+            enum: [
+              "pleasure-vessels",
+              "small-commercial-vessels",
+              "cargo-vessels-over-24-metres",
+              "fishing-vessels-under-15-metres",
+              "fishing-vessels-15-24-metres",
+              "fishing-vessels-over-24-metres",
+              "high-speed-craft",
+              "large-yachts",
+              "passenger-vessels",
+            ],
+          },
         ],
       },
       marine_notice_topic: {
