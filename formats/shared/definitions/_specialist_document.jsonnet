@@ -1862,17 +1862,38 @@
         ],
       },
       marine_notice_topic: {
-        type: "string",
-        enum: [
-          "construction-and-equipment",
-          "crew-and-training",
-          "health-and-safety",
-          "environmental",
-          "navigation",
-          "radio-communications",
-          "registration",
-          "security-isps",
-          "survey-and-inspection",
+        oneOf: [
+          {
+            type: "array",
+            items: {
+              type: "string",
+              enum: [
+                "construction-and-equipment",
+                "crew-and-training",
+                "health-and-safety",
+                "environmental",
+                "navigation",
+                "radio-communications",
+                "registration",
+                "security-isps",
+                "survey-and-inspection",
+              ],
+            },
+          },
+          {
+            type: "string",
+            enum: [
+              "construction-and-equipment",
+              "crew-and-training",
+              "health-and-safety",
+              "environmental",
+              "navigation",
+              "radio-communications",
+              "registration",
+              "security-isps",
+              "survey-and-inspection",
+            ],
+          },
         ],
       },
       issued_date: {
