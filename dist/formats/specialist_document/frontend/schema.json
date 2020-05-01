@@ -2075,17 +2075,38 @@
           "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
         },
         "marine_notice_topic": {
-          "type": "string",
-          "enum": [
-            "construction-and-equipment",
-            "crew-and-training",
-            "health-and-safety",
-            "environmental",
-            "navigation",
-            "radio-communications",
-            "registration",
-            "security-isps",
-            "survey-and-inspection"
+          "oneOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "construction-and-equipment",
+                  "crew-and-training",
+                  "health-and-safety",
+                  "environmental",
+                  "navigation",
+                  "radio-communications",
+                  "registration",
+                  "security-isps",
+                  "survey-and-inspection"
+                ]
+              }
+            },
+            {
+              "type": "string",
+              "enum": [
+                "construction-and-equipment",
+                "crew-and-training",
+                "health-and-safety",
+                "environmental",
+                "navigation",
+                "radio-communications",
+                "registration",
+                "security-isps",
+                "survey-and-inspection"
+              ]
+            }
           ]
         },
         "marine_notice_type": {
@@ -2102,17 +2123,38 @@
           ]
         },
         "marine_notice_vessel_type": {
-          "type": "string",
-          "enum": [
-            "pleasure-vessels",
-            "small-commercial-vessels",
-            "cargo-vessels-over-24-metres",
-            "fishing-vessels-under-15-metres",
-            "fishing-vessels-15-24-metres",
-            "fishing-vessels-over-24-metres",
-            "high-speed-craft",
-            "large-yachts",
-            "passenger-vessels"
+          "oneOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "pleasure-vessels",
+                  "small-commercial-vessels",
+                  "cargo-vessels-over-24-metres",
+                  "fishing-vessels-under-15-metres",
+                  "fishing-vessels-15-24-metres",
+                  "fishing-vessels-over-24-metres",
+                  "high-speed-craft",
+                  "large-yachts",
+                  "passenger-vessels"
+                ]
+              }
+            },
+            {
+              "type": "string",
+              "enum": [
+                "pleasure-vessels",
+                "small-commercial-vessels",
+                "cargo-vessels-over-24-metres",
+                "fishing-vessels-under-15-metres",
+                "fishing-vessels-15-24-metres",
+                "fishing-vessels-over-24-metres",
+                "high-speed-craft",
+                "large-yachts",
+                "passenger-vessels"
+              ]
+            }
           ]
         }
       }
