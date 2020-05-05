@@ -6,7 +6,6 @@ REPOSITORY = 'govuk-content-schemas'
 
 def dependentApplications = [
   'calculators',
-  'calendars',
   'collections-publisher',
   'collections',
   'contacts',
