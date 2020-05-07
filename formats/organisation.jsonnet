@@ -227,24 +227,6 @@
           },
           description: "A set of promotional features to display for the organisation. Turn into proper links once organisations are fully migrated.",
         },
-        ordered_ministers: {
-          "$ref": "#/definitions/people",
-        },
-        ordered_board_members: {
-          "$ref": "#/definitions/people",
-        },
-        ordered_military_personnel: {
-          "$ref": "#/definitions/people",
-        },
-        ordered_traffic_commissioners: {
-          "$ref": "#/definitions/people",
-        },
-        ordered_chief_professional_officers: {
-          "$ref": "#/definitions/people",
-        },
-        ordered_special_representatives: {
-          "$ref": "#/definitions/people",
-        },
         important_board_members: {
           type: "integer",
           description: "The number of board members that will have photos displayed for them.",

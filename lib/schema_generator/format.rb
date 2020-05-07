@@ -270,7 +270,21 @@ module SchemaGenerator
 
     class Links
       ALLOWED_KEYS = %w(description required minItems maxItems).freeze
-      LINKS_WITHOUT_BASE_PATHS = %w(facet_groups facets facet_values ordered_contacts ordered_foi_contacts world_locations).freeze
+      LINKS_WITHOUT_BASE_PATHS = %w(
+        facets
+        facet_groups
+        facet_values
+        ordered_board_members
+        ordered_chief_professional_officers
+        ordered_contacts
+        ordered_foi_contacts
+        ordered_military_personnel
+        ordered_ministers
+        ordered_roles
+        ordered_special_representatives
+        ordered_traffic_commissioners
+        world_locations
+      ).freeze
 
       attr_reader :links
 

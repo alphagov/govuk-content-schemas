@@ -314,12 +314,6 @@
             }
           }
         },
-        "ordered_board_members": {
-          "$ref": "#/definitions/people"
-        },
-        "ordered_chief_professional_officers": {
-          "$ref": "#/definitions/people"
-        },
         "ordered_corporate_information_pages": {
           "description": "A set of links to corporate information pages to display for the organisation.",
           "type": "array",
@@ -402,12 +396,6 @@
             }
           }
         },
-        "ordered_military_personnel": {
-          "$ref": "#/definitions/people"
-        },
-        "ordered_ministers": {
-          "$ref": "#/definitions/people"
-        },
         "ordered_promotional_features": {
           "description": "A set of promotional features to display for the organisation. Turn into proper links once organisations are fully migrated.",
           "type": "array",
@@ -477,12 +465,6 @@
               }
             }
           }
-        },
-        "ordered_special_representatives": {
-          "$ref": "#/definitions/people"
-        },
-        "ordered_traffic_commissioners": {
-          "$ref": "#/definitions/people"
         },
         "organisation_featuring_priority": {
           "description": "Whether to prioritise news or services on the organisation's home page.",
@@ -748,57 +730,6 @@
         "zh-hk",
         "zh-tw"
       ]
-    },
-    "people": {
-      "description": "A list of people. Turn into proper links once organisations, people and roles are fully migrated.",
-      "type": "array",
-      "items": {
-        "type": "object",
-        "required": [
-          "name",
-          "role",
-          "href"
-        ],
-        "additionalProperties": false,
-        "properties": {
-          "attends_cabinet_type": {
-            "type": [
-              "string",
-              "null"
-            ]
-          },
-          "href": {
-            "type": "string"
-          },
-          "image": {
-            "$ref": "#/definitions/image"
-          },
-          "name": {
-            "type": "string"
-          },
-          "name_prefix": {
-            "type": [
-              "string",
-              "null"
-            ]
-          },
-          "payment_type": {
-            "type": [
-              "string",
-              "null"
-            ]
-          },
-          "role": {
-            "type": "string"
-          },
-          "role_href": {
-            "type": [
-              "string",
-              "null"
-            ]
-          }
-        }
-      }
     },
     "public_updated_at": {
       "description": "When the content was last significantly changed (a major update). Shown to users.  Automatically determined by the publishing-api, unless overridden by the publishing application.",
