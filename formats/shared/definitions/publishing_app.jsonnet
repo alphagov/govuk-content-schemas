@@ -13,6 +13,7 @@
       "external-link-tracker",
       "feedback",
       "frontend",
+      "government-frontend",
       "hmrc-manuals-api",
       "info-frontend",
       "licencefinder",
