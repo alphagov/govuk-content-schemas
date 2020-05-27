@@ -52,6 +52,10 @@ module SchemaGenerator
      # `Role` content items that are ministerial roles will automatically
      # have a `ministers` link type from the main `ministers` index page.
      "ministers" => "frontend_links",
+
+     # Taxons that a content item is tagged to. Taxons have the reverse link
+     # `ordered_taxon_curated_items` which allows us to store a list of curated links.
+     "curated_on_taxons" => "frontend_links_with_base_path",
    }.freeze
 
     def initialize(format)
