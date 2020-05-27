@@ -87,6 +87,10 @@
           "description": "References a page of a GDS community responsible for maintaining the guide e.g. Agile delivery community, Design community",
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
+        "curated_on_taxons": {
+          "description": "Link type automatically added by Publishing API",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
         "document_collections": {
           "description": "Link type automatically added by Publishing API",
           "$ref": "#/definitions/frontend_links_with_base_path"
