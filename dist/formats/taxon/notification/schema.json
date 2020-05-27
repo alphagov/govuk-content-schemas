@@ -87,6 +87,10 @@
           "description": "Link type automatically added by Publishing API",
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
+        "curated_on_taxons": {
+          "description": "For curated things, the taxons in this list will have a reverse link storing all pages tagged to it.",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
         "document_collections": {
           "description": "Link type automatically added by Publishing API",
           "$ref": "#/definitions/frontend_links_with_base_path"
@@ -219,6 +223,10 @@
       "properties": {
         "associated_taxons": {
           "description": "A list of associated taxons whose children should be included as children of this taxon",
+          "$ref": "#/definitions/guid_list"
+        },
+        "curated_on_taxons": {
+          "description": "For curated things, the taxons in this list will have a reverse link storing all pages tagged to it.",
           "$ref": "#/definitions/guid_list"
         },
         "facet_groups": {

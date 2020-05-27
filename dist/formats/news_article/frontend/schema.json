@@ -66,6 +66,10 @@
           "description": "Link type automatically added by Publishing API",
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
+        "curated_on_taxons": {
+          "description": "For curated things, the taxons in this list will have a reverse link storing all pages tagged to it.",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
         "document_collections": {
           "description": "Link type automatically added by Publishing API",
           "$ref": "#/definitions/frontend_links_with_base_path"

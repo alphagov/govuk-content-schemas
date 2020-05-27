@@ -15,6 +15,10 @@
           "$ref": "#/definitions/guid_list",
           "maxItems": 1
         },
+        "curated_on_taxons": {
+          "description": "For curated things, the taxons in this list will have a reverse link storing all pages tagged to it.",
+          "$ref": "#/definitions/guid_list"
+        },
         "facet_groups": {
           "description": "Prototype-stage metadata tagging tree roots for this content item. A content item my belong to many facet groups without having any specific facet_values links.",
           "$ref": "#/definitions/guid_list"

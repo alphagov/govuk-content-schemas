@@ -1,6 +1,6 @@
 {
   taxons: "Prototype-stage taxonomy label for this content item",
-  curated_on_taxons: "For curated things, the taxons in this list will have a reverse link storing all pages tagged to it."
+  curated_on_taxons: "For curated things, the taxons in this list will have a reverse link storing all pages tagged to it.",
   ordered_related_items: "Related items, can be any page on GOV.UK. Mostly used for mainstream content to power the sidebar. Ordering of the links is determined by the editor in Content Tagger.",
   ordered_related_items_overrides: "Related items, can be any page on GOV.UK. Overrides 'more like this' automatically generated links in the beta navigation.",
   mainstream_browse_pages: "Powers the /browse section of the site. These are known as sections in some legacy apps.",
