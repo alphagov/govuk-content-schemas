@@ -42,6 +42,20 @@
         "web_url": "https://www.gov.uk/alpha-taxonomy/curriculum-and-qualifications",
         "locale": "en"
       }
+    ],
+    "ordered_taxon_curated_items": [
+      {
+        "content_id": "7277c126-577a-4d8e-9cc5-6c57d80815d7",
+        "base_path": "/government/publications/responsibility-for-autumn-gcse-as-and-a-level-exam-series",
+        "title": "Responsibility for autumn GCSE, AS and A level exam series",
+        "locale": "en"
+      },
+      {
+        "content_id": "48c0c30d-5f04-4095-8804-d1ee8989761d",
+        "base_path": "/what-different-qualification-levels-mean",
+        "title": "What qualification levels mean",
+        "locale": "en"
+      }
     ]
   },
   "schema_name": "taxon",

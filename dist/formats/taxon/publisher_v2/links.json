@@ -46,6 +46,10 @@
           "description": "Related items, can be any page on GOV.UK. Overrides 'more like this' automatically generated links in the beta navigation.",
           "$ref": "#/definitions/guid_list"
         },
+        "ordered_taxon_curated_items": {
+          "description": "A list of content items that are tagged to this taxon",
+          "$ref": "#/definitions/guid_list"
+        },
         "organisations": {
           "description": "All organisations linked to this content item. This should include lead organisations.",
           "$ref": "#/definitions/guid_list"
