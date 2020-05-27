@@ -183,6 +183,10 @@
           "description": "Successor organisations primarily for use with closed Whitehall organisations.",
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
+        "ordered_taxon_curated_items": {
+          "description": "Link type automatically added by Publishing API",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
         "ordered_traffic_commissioners": {
           "description": "Traffic commissioners primarily for use with Whitehall organisations.",
           "$ref": "#/definitions/frontend_links"

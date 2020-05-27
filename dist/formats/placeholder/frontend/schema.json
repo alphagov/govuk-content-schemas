@@ -287,6 +287,10 @@
           "description": "Related items, can be any page on GOV.UK. Overrides 'more like this' automatically generated links in the beta navigation.",
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
+        "ordered_taxon_curated_items": {
+          "description": "Link type automatically added by Publishing API",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
         "organisations": {
           "description": "All organisations linked to this content item. This should include lead organisations.",
           "$ref": "#/definitions/frontend_links_with_base_path"

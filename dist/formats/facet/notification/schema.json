@@ -99,6 +99,10 @@
           "description": "Link type automatically added by Publishing API",
           "$ref": "#/definitions/frontend_links"
         },
+        "ordered_taxon_curated_items": {
+          "description": "Link type automatically added by Publishing API",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
         "parent": {
           "description": "The facet_group this facet belongs to.",
           "$ref": "#/definitions/frontend_links_with_base_path",
