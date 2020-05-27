@@ -33,5 +33,8 @@
     legacy_taxons: {
       description: "Prior taxons (such as mainstream_browse_page, topic, policy_area, policy) before the single site-wide Topic Taxonomy was introduced",
     },
+    ordered_taxon_curated_items: {
+      description: "A list of content items that are tagged to this taxon",
+    },
   },
 }
