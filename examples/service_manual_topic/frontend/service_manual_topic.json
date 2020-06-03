@@ -92,24 +92,6 @@
         "web_url": "https://www.gov.uk/service-manual/test-topic",
         "locale": "en"
       }
-    ],
-    "email_alert_signup": [
-      {
-        "analytics_identifier": null,
-        "api_path": "/api/content/service-manual/test-expanded-topic/email-signup",
-        "api_url": "https://www.gov.uk/api/content/service-manual/test-expanded-topic/email-signup",
-        "base_path": "/service-manual/test-expanded-topic/email-signup",
-        "content_id": "e57b21e6-2111-4a50-9ead-9c502cd40a3d",
-        "description": null,
-        "document_type": "email_alert_signup",
-        "locale": "en",
-        "public_updated_at": "2016-08-17T10:52:00Z",
-        "schema_name": "email_alert_signup",
-        "title": "Service Manual – Service Manual Test Expanded Topic",
-        "web_url": "https://www.gov.uk/service-manual/test-expanded-topic/email-signup",
-        "links": {
-        }
-      }
     ]
   },
   "description": "Service Manual Topic description",
