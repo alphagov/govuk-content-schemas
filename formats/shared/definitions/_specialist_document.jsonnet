@@ -1078,6 +1078,7 @@
           type: "string",
           enum: [
             "anaesthesia-intensive-care",
+            "breastfeeding",
             "cancer",
             "cardiovascular-disease-lipidology",
             "dentistry",
@@ -1095,6 +1096,7 @@
             "ophthalmology",
             "paediatrics-neonatology",
             "pain-management-palliation",
+            "pregnancy",
             "psychiatry",
             "radiology-imaging",
             "respiratory-disease-allergy",
