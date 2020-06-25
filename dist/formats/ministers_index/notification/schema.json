@@ -60,7 +60,7 @@
     "document_type": {
       "type": "string",
       "enum": [
-        "finder"
+        "ministers_index"
       ]
     },
     "email_document_supertype": {
