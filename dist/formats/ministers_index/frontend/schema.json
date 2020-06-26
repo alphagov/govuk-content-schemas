@@ -34,7 +34,7 @@
     "document_type": {
       "type": "string",
       "enum": [
-        "finder"
+        "ministers_index"
       ]
     },
     "first_published_at": {

@@ -1,5 +1,5 @@
 (import "shared/default_format.jsonnet") + {
-  document_type: "finder",
+  document_type: "ministers_index",
   definitions: {
     details: {
       type: "object",
