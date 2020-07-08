@@ -60,10 +60,6 @@
           key: {
             type: "string",
           },
-          content_id: {
-            type: "string",
-            description: "Content id corresponding to the facet value, required by the email-alert-api for constructing facet value linked subscriber lists.",
-          },
           radio_button_name: {
             type: "string",
           },
