@@ -174,14 +174,6 @@
             }
           },
         },
-        combine_mode: {
-          type: "string",
-          description: "Controls which logic facets on the subscriber list should be joined by. Default is blank which maps to 'and'",
-          enum: [
-            "",
-            "or",
-          ],
-        },
       },
     },
   },
