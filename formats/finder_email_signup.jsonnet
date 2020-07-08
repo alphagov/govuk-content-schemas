@@ -166,9 +166,6 @@
             part_of_taxonomy_tree: {
               type: "string"
             },
-            document_type: {
-              type: "string"
-            },
             format: {
               type: "string"
             }

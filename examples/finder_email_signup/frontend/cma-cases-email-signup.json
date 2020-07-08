@@ -77,7 +77,7 @@
   "details": {
     "beta": false,
     "filter": {
-      "document_type": "cma_case"
+      "format": "cma_case"
     },
     "email_filter_facets": [
       {
