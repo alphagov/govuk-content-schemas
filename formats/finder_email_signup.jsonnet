@@ -174,15 +174,6 @@
             }
           },
         },
-        reject: {
-          type: "object",
-          additionalProperties: false,
-          properties: {
-            content_purpose_supergroup: {
-              type: "string",
-            },
-          },
-        },
         combine_mode: {
           type: "string",
           description: "Controls which logic facets on the subscriber list should be joined by. Default is blank which maps to 'and'",
