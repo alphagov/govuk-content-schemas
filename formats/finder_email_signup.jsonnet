@@ -60,10 +60,6 @@
           key: {
             type: "string",
           },
-          content_id: {
-            type: "string",
-            description: "Content id corresponding to the facet value, required by the email-alert-api for constructing facet value linked subscriber lists.",
-          },
           radio_button_name: {
             type: "string",
           },
@@ -166,21 +162,10 @@
             part_of_taxonomy_tree: {
               type: "string"
             },
-            document_type: {
-              type: "string"
-            },
             format: {
               type: "string"
             }
           },
-        },
-        combine_mode: {
-          type: "string",
-          description: "Controls which logic facets on the subscriber list should be joined by. Default is blank which maps to 'and'",
-          enum: [
-            "",
-            "or",
-          ],
         },
       },
     },
