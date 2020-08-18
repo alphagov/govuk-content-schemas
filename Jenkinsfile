@@ -60,9 +60,9 @@ node {
       govuk.bundleApp();
     }
 
-    stage("Lint") {
-      govuk.lintRuby()
-    }
+    stage("Lint Ruby") {
+      govuk.runRakeTask("lint")
+    } 
 
     stage("Run tests") {
       govuk.runRakeTask("spec")
