@@ -49,6 +49,9 @@
         supports_historical_accounts: {
           type: "boolean",
         },
+        seniority :{
+          type: "integer",
+        },
       },
     },
   },

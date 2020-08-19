@@ -233,6 +233,9 @@
             null
           ]
         },
+        "seniority": {
+          "type": "integer"
+        },
         "supports_historical_accounts": {
           "type": "boolean"
         }
