@@ -17,6 +17,7 @@
     "marine_notice",
     "medical_safety_alert",
     "raib_report",
+    "research_for_development_output",
     "residential_property_tribunal_decision",
     "service_standard_report",
     "statutory_instrument",
