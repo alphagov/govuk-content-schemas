@@ -68,6 +68,10 @@
       },
     },
   },
+  edition_links: (import "shared/whitehall_edition_links.jsonnet") + {
+    related_guides: "",
+    related_mainstream_content: "",
+  },
   links: (import "shared/base_links.jsonnet") + {
     government: {
       description: "The government associated with this document",
