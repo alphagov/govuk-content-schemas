@@ -21,11 +21,11 @@ module SchemaGenerator
     attr_reader :format, :global_definitions
 
     def required
-      fields = %w(
+      fields = %w[
         document_type
         publishing_app
         schema_name
-      ) + format.publisher_required
+      ] + format.publisher_required
       fields.sort
     end
 

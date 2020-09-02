@@ -9,10 +9,10 @@ module SchemaGenerator
       definitions.tap do |d|
         if d["details"]["oneOf"]
           d["details"]["oneOf"].each do |details|
-            self.add_change_history(details)
+            add_change_history(details)
           end
         else
-          self.add_change_history(d["details"])
+          add_change_history(d["details"])
         end
       end
     end

@@ -18,14 +18,14 @@ RSpec.describe SchemaGenerator::Schema do
       end
 
       let(:expected_ordering) do
-        %w(
+        %w[
           description
           $ref
           type
           required
           properties
           definitions
-        )
+        ]
       end
 
       it "orders the schema" do
@@ -44,7 +44,7 @@ RSpec.describe SchemaGenerator::Schema do
         }
       end
 
-      let(:expected_ordering) { %w(_ a z) }
+      let(:expected_ordering) { %w[_ a z] }
 
       it "orders the property alphabetically" do
         expect(ordered_schema["properties"].keys).to eq expected_ordering
@@ -64,7 +64,7 @@ RSpec.describe SchemaGenerator::Schema do
         }
       end
 
-      let(:expected_ordering) { %w(description type nested) }
+      let(:expected_ordering) { %w[description type nested] }
 
       it "orders the nested object" do
         expect(ordered_schema.keys).to eq expected_ordering
