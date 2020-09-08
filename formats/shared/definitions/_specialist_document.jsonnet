@@ -1885,6 +1885,7 @@
           "devices",
           "field-safety-notices",
           "company-led-drugs",
+          "national-patient-safety"
         ],
       },
       medical_specialism: {
