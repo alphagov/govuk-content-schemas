@@ -49,8 +49,25 @@
         supports_historical_accounts: {
           type: "boolean",
         },
-        seniority :{
+        seniority: {
           type: "integer",
+        },
+        whip_organisation: {
+          type: "object",
+          properties: {
+            sort_order: {
+              type: [
+                "integer",
+                "null",
+              ],
+            },
+            label: {
+              type: [
+                "string",
+                "null",
+              ],
+            },
+          },
         },
       },
     },
