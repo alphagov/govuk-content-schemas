@@ -479,6 +479,23 @@
         },
         "supports_historical_accounts": {
           "type": "boolean"
+        },
+        "whip_organisation": {
+          "type": "object",
+          "properties": {
+            "label": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "sort_order": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            }
+          }
         }
       }
     },
