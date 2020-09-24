@@ -80,15 +80,15 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  govuk_schemas (~> 3.2.0)
+  govuk_schemas
   json-schema
-  jsonnet (~> 0.2)
+  jsonnet
   pry-byebug
-  rack-test (~> 0.8.2)
+  rack-test
   rake
   rspec
-  rubocop-govuk (~> 3.3.0)
-  sinatra (~> 2.0)
+  rubocop-govuk
+  sinatra
 
 BUNDLED WITH
    1.17.2
