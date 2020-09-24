@@ -48,7 +48,7 @@ module SchemaGenerator
     def resolve_depenencies(definition_names, dependencies_found = [])
       names = definition_names.flat_map do |name|
         dependencies = definition_dependencies[name]
-        raise UnresolvedDefinition.new(name) unless dependencies
+        raise UnresolvedDefinition, name unless dependencies
 
         new_dependencies = dependencies - dependencies_found
         current_dependencies = dependencies_found + new_dependencies

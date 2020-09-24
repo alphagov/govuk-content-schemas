@@ -138,7 +138,7 @@ module SchemaGenerator
     end
 
     def publisher_required
-      %w(base_path description details redirects rendering_app routes title)
+      %w[base_path description details redirects rendering_app routes title]
         .select { |property| public_send(property.to_sym).required? }
     end
 
@@ -201,7 +201,7 @@ module SchemaGenerator
     end
 
     class OptionalProperty
-      VALID_STATUSES = %w(required optional forbidden).freeze
+      VALID_STATUSES = %w[required optional forbidden].freeze
 
       def initialize(
         property:,
@@ -269,8 +269,8 @@ module SchemaGenerator
     end
 
     class Links
-      ALLOWED_KEYS = %w(description required minItems maxItems).freeze
-      LINKS_WITHOUT_BASE_PATHS = %w(
+      ALLOWED_KEYS = %w[description required minItems maxItems].freeze
+      LINKS_WITHOUT_BASE_PATHS = %w[
         facets
         facet_groups
         facet_values
@@ -284,7 +284,7 @@ module SchemaGenerator
         ordered_special_representatives
         ordered_traffic_commissioners
         world_locations
-      ).freeze
+      ].freeze
 
       attr_reader :links
 
@@ -295,7 +295,7 @@ module SchemaGenerator
       def guid_properties
         links.each_with_object({}) do |(k, v), hash|
           link = v.merge("$ref" => "#/definitions/guid_list")
-            .delete_if { |key| %w(required).include?(key) }
+            .delete_if { |key| %w[required].include?(key) }
           hash[k] = link
         end
       end
@@ -314,7 +314,7 @@ module SchemaGenerator
           # @FIXME remove need for this check
           definition = LINKS_WITHOUT_BASE_PATHS.include?(k) ? "frontend_links" : "frontend_links_with_base_path"
           link = v.merge("$ref" => "#/definitions/#{definition}")
-            .delete_if { |field| %w(required minItems).include?(field) }
+            .delete_if { |field| %w[required minItems].include?(field) }
           hash[k] = link
         end
       end

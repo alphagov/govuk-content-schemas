@@ -7,11 +7,9 @@ end
 def validate_schemas(schema_file_list)
   validation_errors = []
   schema_file_list.each do |schema|
-    begin
-      JSON::Validator.fully_validate(schema, {}, validate_schema: true)
-    rescue JSON::Schema::ValidationError => e
-      validation_errors << "#{schema}: #{e.message}"
-    end
+    JSON::Validator.fully_validate(schema, {}, validate_schema: true)
+  rescue JSON::Schema::ValidationError => e
+    validation_errors << "#{schema}: #{e.message}"
   end
   abort "\nThe following schemas aren't valid:\n" + validation_errors.join("\n") if validation_errors.any?
 end
@@ -82,11 +80,11 @@ task :validate_links, :files do |_, args|
   link_schemas = args[:files] || Rake::FileList.new("formats/*/*/links.json")
   link_schemas.each do |filename|
     schema = JSON.parse(File.read(filename))
-    if schema["required"]
-      warn "\nERROR: #{filename} has required links (#{schema['required'].inspect})"
-      warn "This is disallowed because the publishing-api wouldn't be able to validate partial payloads when sending a PATCH links request."
-      abort
-    end
+    next unless schema["required"]
+
+    warn "\nERROR: #{filename} has required links (#{schema['required'].inspect})"
+    warn "This is disallowed because the publishing-api wouldn't be able to validate partial payloads when sending a PATCH links request."
+    abort
   end
   puts "✔︎"
 end

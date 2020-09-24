@@ -1,6 +1,7 @@
 require "schema_generator/generator"
 require "jsonnet"
 
+desc "Regenerate schemas"
 task :regenerate_schemas do
   print "Generating schemas: "
   FileUtils.rm_rf("dist/formats")
