@@ -1,5 +1,4 @@
 source "https://rubygems.org"
-ruby File.read(".ruby-version").strip
 
 gem "json-schema"
 gem "jsonnet", "~> 0.2"
