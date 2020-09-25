@@ -29,7 +29,7 @@ module SchemaGenerator
     end
 
     def unpublishing_format?
-      %w(gone redirect vanish).include?(format.schema_name)
+      %w[gone redirect vanish].include?(format.schema_name)
     end
 
     def properties
@@ -58,7 +58,7 @@ module SchemaGenerator
     end
 
     def default_required_properties
-      %w(
+      %w[
         base_path
         content_id
         locale
@@ -66,11 +66,11 @@ module SchemaGenerator
         govuk_request_id
         payload_version
         schema_name
-      )
+      ]
     end
 
     def publishing_required_properties
-      %w(
+      %w[
         analytics_identifier
         description
         details
@@ -89,7 +89,7 @@ module SchemaGenerator
         title
         update_type
         user_journey_document_supertype
-      )
+      ]
     end
 
     def definitions

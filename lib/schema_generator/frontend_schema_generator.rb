@@ -30,7 +30,7 @@ module SchemaGenerator
       # - publishing_request_id
       # - rendering_app
       # - withdrawn_notice
-      %w(
+      %w[
         base_path
         content_id
         description
@@ -42,7 +42,7 @@ module SchemaGenerator
         schema_name
         title
         updated_at
-      ).sort
+      ].sort
     end
 
     def properties

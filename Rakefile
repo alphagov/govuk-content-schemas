@@ -6,14 +6,15 @@ begin
 rescue LoadError # rubocop:disable Lint/SuppressedException
 end
 
+desc "regenerate schemas and validate"
 task build: %i[
-              regenerate_schemas
-              validate_dist_schemas
-              validate_uniqueness_of_frontend_example_base_paths
-              validate_links
-              format_examples
-              validate_examples
-            ]
+  regenerate_schemas
+  validate_dist_schemas
+  validate_uniqueness_of_frontend_example_base_paths
+  validate_links
+  format_examples
+  validate_examples
+]
 
 task default: %w[lint build]
 

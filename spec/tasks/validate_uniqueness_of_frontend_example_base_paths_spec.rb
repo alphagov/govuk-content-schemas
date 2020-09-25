@@ -20,12 +20,12 @@ RSpec.describe "validate" do
     let(:task_name) { "validate_uniqueness_of_frontend_example_base_paths" }
 
     context "all examples have unique base_paths" do
-      let(:examples) {
+      let(:examples) do
         [
           generate_example("a.json", "/letter_a"),
           generate_example("b.json", "/letter_b"),
         ]
-      }
+      end
 
       it "succeeds without exceptions" do
         expect { subject.invoke(examples) }.to_not raise_error
@@ -33,16 +33,16 @@ RSpec.describe "validate" do
     end
 
     context "some examples have duplicate base_paths" do
-      let(:examples) {
+      let(:examples) do
         [
           generate_example("a.json", "/letter_a"),
           generate_example("b.json", "/letter_a"),
         ]
-      }
+      end
 
       it "exits with non-zero exit status and outputs a list of the duplicates" do
-        expect { subject.invoke(examples) }.to raise_error(SystemExit).
-          and output(/a.json.*b.json/m).to_stderr
+        expect { subject.invoke(examples) }.to raise_error(SystemExit)
+          .and output(/a.json.*b.json/m).to_stderr
       end
     end
   end
