@@ -50,6 +50,7 @@
         "maib_report",
         "marine_notice",
         "medical_safety_alert",
+        "protected_food_drink_name",
         "raib_report",
         "research_for_development_output",
         "residential_property_tribunal_decision",
@@ -383,6 +384,9 @@
         },
         {
           "$ref": "#/definitions/medical_safety_alert_metadata"
+        },
+        {
+          "$ref": "#/definitions/protected_food_drink_name_metadata"
         },
         {
           "$ref": "#/definitions/raib_report_metadata"
@@ -2213,6 +2217,284 @@
         }
       },
       "minItems": 1
+    },
+    "protected_food_drink_name_metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "class_category": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "1-1-fresh-meat-and-offal",
+              "1-2-meat-products-cooked-salted-smoked-etc",
+              "1-3-cheeses",
+              "1-4-other-products-of-animal-origin-eggs-honey-various-dairy-products-except-butter-etc",
+              "1-5-oils-and-fats-butter-margarine-oil-etc",
+              "1-6-fruit-vegetables-and-cereals-fresh-or-processed",
+              "1-7-fresh-fish-molluscs-and-crustaceans-and-products-derived-therefrom",
+              "1-8-other-products-of-annex-i-of-the-treaty-spices-etc",
+              "2-1-beers",
+              "2-2-chocolate-and-derived-products",
+              "2-3-bread-pastry-cakes-confectionery-biscuits-and-other-bakers-wares",
+              "2-4-beverages-made-from-plant-extracts",
+              "2-5-pasta",
+              "2-6-salt",
+              "2-7-natural-gums-and-resins",
+              "2-8-mustard-paste",
+              "2-9-hay",
+              "2-10-essential-oils",
+              "2-11-cork",
+              "2-12-cochineal-raw-product-of-animal-origin",
+              "2-13-flowers-and-ornamental-plants",
+              "2-14-cotton",
+              "2-15-wool",
+              "2-16-wicker",
+              "2-17-scutched-flax",
+              "2-18-leather",
+              "2-19-fur",
+              "2-20-feather",
+              "2-21-prepared-meals",
+              "2-22-beers",
+              "2-23-chocolate-and-derived-products",
+              "2-24-bread-pastry-cakes-confectionery-biscuits-and-other-bakers-wares",
+              "2-25-beverages-made-from-plant-extracts",
+              "2-26-pasta",
+              "2-27-salt",
+              "wine",
+              "1-rum",
+              "2-whisky-or-whiskey",
+              "3-grain-spirit",
+              "4-wine-spirit",
+              "5-brandy-or-weinbrand",
+              "6-grape-marc-spirit-or-grape-marc",
+              "7-fruit-marc-spirit",
+              "8-raisin-spirit-or-raisin-brandy",
+              "9-fruit-spirit",
+              "10-cider-spirit-and-perry-spirit",
+              "11-honey-spirit",
+              "12-hefebrand-or-lees-spirit",
+              "13-bierbrand-or-eau-de-vie-de-biere",
+              "14-topinambur-or-jerusalem-artichoke-spirit",
+              "15-vodka",
+              "16-spirit-preceded-by-the-name-of-the-fruit-obtained-by-maceration-and-distillation",
+              "17-geist-with-the-name-of-the-fruit-or-the-raw-material-used",
+              "18-gentian",
+              "19-juniper-flavoured-spirit-drinks",
+              "20-gin",
+              "21-distilled-gin",
+              "22-london-gin",
+              "23-caraway-flavoured-spirit-drinks",
+              "24-akvavit-or-aquavit",
+              "25-aniseed-flavoured-spirit-drinks",
+              "26-pastis",
+              "27-pastis-de-marseille",
+              "28-anis",
+              "29-distilled-anis",
+              "30-bitter-tasting-spirit-drinks-or-bitter",
+              "31-flavoured-vodka",
+              "32-liqueur",
+              "33-creme-de-followed-by-the-name-of-a-fruit-or-the-raw-material-used",
+              "34-creme-de-cassis",
+              "35-guignolet",
+              "36-punch-au-rhum",
+              "37-sloe-gin",
+              "37a-sloe-aromatised-spirit-drink-or-pacharan",
+              "38-sambuca",
+              "39-maraschino-marrasquino-or-maraskino",
+              "40-nocino",
+              "41-egg-liqueur-or-advocaat-or-avocat-or-advokat",
+              "42-liqueur-with-egg",
+              "43-mistra",
+              "44-vakeva-glogi-or-spritglogg",
+              "45-berenburg-or-beerenburg",
+              "46-honey-or-mead-nectar",
+              "47-other-spirit-drinks",
+              "99-other-spirit-drink",
+              "traditional-term",
+              "1-aromatised-wine",
+              "2-aromatised-wine-based-drink"
+            ]
+          }
+        },
+        "country": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "united-kingdom",
+              "andorra",
+              "armenia",
+              "australia",
+              "austria",
+              "belgium",
+              "brazil",
+              "bulgaria",
+              "cambodia",
+              "chile",
+              "china",
+              "colombia",
+              "costa-rica",
+              "croatia",
+              "cyprus",
+              "czechia",
+              "denmark",
+              "dominican-republic",
+              "el-salvador",
+              "ecuador",
+              "estonia",
+              "finland",
+              "france",
+              "germany",
+              "greece",
+              "guatemala",
+              "guinea",
+              "guyana",
+              "hungary",
+              "india",
+              "indonesia",
+              "ireland",
+              "italy",
+              "japan",
+              "latvia",
+              "liechtenstein",
+              "lithuania",
+              "luxembourg",
+              "malta",
+              "mexico",
+              "mongolia",
+              "morocco",
+              "netherlands",
+              "norway",
+              "panama",
+              "peru",
+              "poland",
+              "portugal",
+              "romania",
+              "russia",
+              "serbia",
+              "slovakia",
+              "slovenia",
+              "south-africa",
+              "south-korea",
+              "spain",
+              "sri-lanka",
+              "sweden",
+              "switzerland",
+              "thailand",
+              "trinidad-and-tobago",
+              "turkey",
+              "united-states",
+              "vietnam"
+            ]
+          }
+        },
+        "date_application": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+        },
+        "date_registration": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+        },
+        "date_registration_eu": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+        },
+        "internal_notes": {
+          "type": "string"
+        },
+        "protection_type": {
+          "type": "string",
+          "enum": [
+            "protected-geographical-indication-pgi",
+            "protected-designation-of-origin-pdo",
+            "traditional-speciality-guaranteed-tsg",
+            "traditional-term",
+            "geographical-indication-gi"
+          ]
+        },
+        "register": {
+          "type": "string",
+          "enum": [
+            "foods-designated-origin-and-geographic-origin",
+            "foods-traditional-speciality",
+            "spirit-drinks",
+            "wines",
+            "aromatised-wines",
+            "traditional-terms-for-wine"
+          ]
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "registered",
+            "applied-for",
+            "in-consultation",
+            "rejected"
+          ]
+        },
+        "traditional_term_grapevine_product_category": {
+          "type": "string",
+          "enum": [
+            "wine",
+            "new-wine-still-in-fermentation",
+            "liqueur-wine",
+            "sparkling-wine",
+            "quality-sparkling-wine",
+            "quality-aromatic-sparkling-wine",
+            "aerated-sparkling-wine",
+            "semi-sparkling-wine",
+            "aerated-semi-sparkling-wine",
+            "grape-must",
+            "partially-fermented-grape-must",
+            "partially-fermented-grape-must-extracted-from-raisined-grapes",
+            "concentrated-grape-must",
+            "rectified-concentrated-grape-must",
+            "wine-from-raisined-grapes",
+            "wine-of-overripe-grapes",
+            "wine-vinegar"
+          ]
+        },
+        "traditional_term_language": {
+          "type": "string",
+          "enum": [
+            "bulgarian",
+            "croatian",
+            "czech",
+            "danish",
+            "dutch",
+            "english",
+            "estonian",
+            "finnish",
+            "french",
+            "german",
+            "greek",
+            "hungarian",
+            "irish",
+            "italian",
+            "latin",
+            "latvian",
+            "lithuanian",
+            "maltese",
+            "polish",
+            "portuguese",
+            "romanian",
+            "slovak",
+            "slovenian",
+            "spanish",
+            "swedish"
+          ]
+        },
+        "traditional_term_type": {
+          "type": "string",
+          "enum": [
+            "description-of-product-characteristic",
+            "in-place-of-pdo-pgi"
+          ]
+        }
+      }
     },
     "public_updated_at": {
       "description": "When the content was last significantly changed (a major update). Shown to users.  Automatically determined by the publishing-api, unless overridden by the publishing application.",

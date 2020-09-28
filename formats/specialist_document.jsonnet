@@ -16,6 +16,7 @@
     "maib_report",
     "marine_notice",
     "medical_safety_alert",
+    "protected_food_drink_name",
     "raib_report",
     "research_for_development_output",
     "residential_property_tribunal_decision",
