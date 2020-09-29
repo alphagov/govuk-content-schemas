@@ -851,10 +851,6 @@
                   "value": "macao"
                 },
                 {
-                  "label": "Macedonia",
-                  "value": "macedonia"
-                },
-                {
                   "label": "Madagascar",
                   "value": "madagascar"
                 },
@@ -965,6 +961,10 @@
                 {
                   "label": "North Korea",
                   "value": "north-korea"
+                },
+                {
+                  "label": "North Macedonia",
+                  "value": "north-macedonia"
                 },
                 {
                   "label": "North Sudan",
