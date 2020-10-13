@@ -16,6 +16,6 @@ task build: %i[
   validate_examples
 ]
 
-task default: %w[lint build]
+task default: %w[lint spec build]
 
 Dir.glob("lib/tasks/*.rake").each { |r| import r }

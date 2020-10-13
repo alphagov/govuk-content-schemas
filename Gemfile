@@ -12,6 +12,7 @@ gem "sinatra"
 
 group :test do
   gem "pry-byebug"
+  gem "simplecov"
 end
 
 group :development, :test do

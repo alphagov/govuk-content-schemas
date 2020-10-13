@@ -1,5 +1,8 @@
 $LOAD_PATH << File.expand_path("../lib", File.dirname(__FILE__))
 
+require "simplecov"
+SimpleCov.start
+
 Dir[File.dirname(__FILE__) + "/support/*.rb"].sort.each do |helper|
   require helper
 end
