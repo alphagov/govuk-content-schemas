@@ -7,6 +7,7 @@
       required: [
         "body",
         "image",
+        "ordering",
       ],
       properties: {
         body: {
