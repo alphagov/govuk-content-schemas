@@ -15,6 +15,9 @@
         image: {
           "$ref": "#/definitions/image",
         },
+        ordering: {
+          type: "integer",
+        },
       },
     },
   },
