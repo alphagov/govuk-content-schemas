@@ -36,7 +36,9 @@
       "date_registration": "1984-01-16",
       "traditional_term_type": "description-of-product-characteristic",
       "traditional_term_language": "italian",
-      "traditional_term_grapevine_product_category": "liqueur-wine"
+      "traditional_term_grapevine_product_category": [
+        "liqueur-wine"
+      ]
     },
     "max_cache_time": 10,
     "temporary_update_type": false,
