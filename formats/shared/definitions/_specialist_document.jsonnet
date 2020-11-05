@@ -2170,7 +2170,7 @@
           "uk-gi-after-2021"
         ]
       },
-      country: {
+      country_of_origin: {
         type: "array",
         items: {
           type: "string",
