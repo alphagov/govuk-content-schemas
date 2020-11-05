@@ -2043,7 +2043,8 @@
           "spirit-drinks",
           "wines",
           "aromatised-wines",
-          "traditional-terms-for-wine"
+          "traditional-terms-for-wine",
+          "names-protected-by-international-treaty"
         ]
       },
       status: {
@@ -2158,7 +2159,8 @@
           "protected-designation-of-origin-pdo",
           "traditional-speciality-guaranteed-tsg",
           "traditional-term",
-          "geographical-indication-gi"
+          "geographical-indication-gi",
+          "name-protected-by-international-treaty"
         ]
       },
       reason_for_protection: {
