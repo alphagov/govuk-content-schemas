@@ -2038,8 +2038,8 @@
       register: {
         type: "string",
         enum: [
-          "foods-designated-origin-and-geographic-origin",
-          "foods-traditional-speciality",
+          "foods-designated-origin-and-geographical-indication",
+          "foods-traditional-speciality-guaranteed",
           "spirit-drinks",
           "wines",
           "aromatised-wines",
