@@ -2161,6 +2161,15 @@
           "geographical-indication-gi"
         ]
       },
+      reason_for_protection: {
+        type: "string",
+        enum: [
+          "uk-gi-before-2021",
+          "eu-agreement",
+          "uk-trade-agreement",
+          "uk-gi-after-2021"
+        ]
+      },
       country: {
         type: "array",
         items: {
