@@ -46,6 +46,7 @@
         "employment_tribunal_decision",
         "esi_fund",
         "export_health_certificate",
+        "flood_and_coastal_erosion_risk_management_research_report",
         "international_development_fund",
         "maib_report",
         "marine_notice",
@@ -375,6 +376,9 @@
         },
         {
           "$ref": "#/definitions/international_development_fund_metadata"
+        },
+        {
+          "$ref": "#/definitions/flood_and_coastal_erosion_risk_management_research_report"
         },
         {
           "$ref": "#/definitions/maib_report_metadata"
@@ -1561,6 +1565,106 @@
       "description": "The date the content was first published.  Automatically determined by the publishing-api, unless overridden by the publishing application.",
       "type": "string",
       "format": "date-time"
+    },
+    "flood_and_coastal_erosion_risk_management_research_report": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "category": {
+          "type": "string",
+          "enum": [
+            "environmental-management-and-sustainability",
+            "increasing-resilience-to-flooding",
+            "managing-flood-incidents",
+            "policy-governance-and-funding",
+            "understanding-risks-from-all-sources-of-flooding",
+            "whole-life-asset-management"
+          ]
+        },
+        "date_of_completion": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+        },
+        "date_of_start": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+        },
+        "project_code": {
+          "type": "string"
+        },
+        "project_status": {
+          "type": "string",
+          "enum": [
+            "completed",
+            "ongoing"
+          ]
+        },
+        "topics": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "adaptation",
+              "alternative-construction-materials",
+              "appraisal-guidance",
+              "appraisal-strategy",
+              "artificial-intelligence",
+              "asset-maintenance",
+              "asset-monitoring",
+              "asset-performance",
+              "asset-system-optimisation",
+              "behavioural-change",
+              "big-data",
+              "carbon",
+              "channel-management",
+              "citizen-science",
+              "climate-change",
+              "coast",
+              "coastal-erosion",
+              "communicating-risk",
+              "community-participation",
+              "community-response-and-resilience",
+              "decision-making-with-uncertainty",
+              "design-and-build",
+              "deterioration",
+              "ecosystem-service-benefits",
+              "emergency-planning",
+              "flood-costs",
+              "flood-forecasting",
+              "flood-risk-assessment",
+              "flood-risk-governance",
+              "flood-warning",
+              "groundwater",
+              "health-safety-and-wellbeing",
+              "hydrology",
+              "incident-management",
+              "insurance",
+              "investment",
+              "machine-learning",
+              "meteorology",
+              "modelling",
+              "monitoring-and-detection",
+              "natural-capital",
+              "natural-flood-management",
+              "non-stationarity",
+              "offsite-methods-and-remote-techniques",
+              "partnership-working",
+              "recovery",
+              "reservoirs",
+              "resilience-planning",
+              "resilient-infrastructure",
+              "sea-level-rise",
+              "spatial-planning",
+              "strategy-and-planning",
+              "surface-water",
+              "sustainability",
+              "sustainable-drainage-systems",
+              "understanding-physical-processes",
+              "whole-life-costs"
+            ]
+          }
+        }
+      }
     },
     "frontend_links": {
       "type": "array",
