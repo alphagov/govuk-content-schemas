@@ -2226,7 +2226,7 @@
             ]
           }
         },
-        "country": {
+        "country_of_origin": {
           "type": "array",
           "items": {
             "type": "string",
@@ -2320,18 +2320,29 @@
             "protected-designation-of-origin-pdo",
             "traditional-speciality-guaranteed-tsg",
             "traditional-term",
-            "geographical-indication-gi"
+            "geographical-indication-gi",
+            "name-protected-by-international-treaty"
+          ]
+        },
+        "reason_for_protection": {
+          "type": "string",
+          "enum": [
+            "uk-gi-before-2021",
+            "eu-agreement",
+            "uk-trade-agreement",
+            "uk-gi-after-2021"
           ]
         },
         "register": {
           "type": "string",
           "enum": [
-            "foods-designated-origin-and-geographic-origin",
-            "foods-traditional-speciality",
+            "foods-designated-origin-and-geographical-indication",
+            "foods-traditional-speciality-guaranteed",
             "spirit-drinks",
             "wines",
             "aromatised-wines",
-            "traditional-terms-for-wine"
+            "traditional-terms-for-wine",
+            "names-protected-by-international-treaty"
           ]
         },
         "status": {
@@ -2344,26 +2355,29 @@
           ]
         },
         "traditional_term_grapevine_product_category": {
-          "type": "string",
-          "enum": [
-            "wine",
-            "new-wine-still-in-fermentation",
-            "liqueur-wine",
-            "sparkling-wine",
-            "quality-sparkling-wine",
-            "quality-aromatic-sparkling-wine",
-            "aerated-sparkling-wine",
-            "semi-sparkling-wine",
-            "aerated-semi-sparkling-wine",
-            "grape-must",
-            "partially-fermented-grape-must",
-            "partially-fermented-grape-must-extracted-from-raisined-grapes",
-            "concentrated-grape-must",
-            "rectified-concentrated-grape-must",
-            "wine-from-raisined-grapes",
-            "wine-of-overripe-grapes",
-            "wine-vinegar"
-          ]
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "wine",
+              "new-wine-still-in-fermentation",
+              "liqueur-wine",
+              "sparkling-wine",
+              "quality-sparkling-wine",
+              "quality-aromatic-sparkling-wine",
+              "aerated-sparkling-wine",
+              "semi-sparkling-wine",
+              "aerated-semi-sparkling-wine",
+              "grape-must",
+              "partially-fermented-grape-must",
+              "partially-fermented-grape-must-extracted-from-raisined-grapes",
+              "concentrated-grape-must",
+              "rectified-concentrated-grape-must",
+              "wine-from-raisined-grapes",
+              "wine-of-overripe-grapes",
+              "wine-vinegar"
+            ]
+          }
         },
         "traditional_term_language": {
           "type": "string",
