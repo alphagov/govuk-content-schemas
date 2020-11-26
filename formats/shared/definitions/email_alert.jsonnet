@@ -21,7 +21,7 @@
     },
   },
   email_alert_signup_summary: {
-    description: "TODO: Use top-level description instead",
+    description: "DEPRECATED. No longer used.",
     type: "string",
   },
   tags: {
