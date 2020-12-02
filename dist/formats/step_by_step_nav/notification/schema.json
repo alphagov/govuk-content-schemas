@@ -263,6 +263,10 @@
         }
       ]
     },
+    "body": {
+      "description": "The main content provided as HTML rendered from govspeak",
+      "type": "string"
+    },
     "body_html_and_govspeak": {
       "description": "The main content provided as HTML with the govspeak markdown it's rendered from",
       "anyOf": [
@@ -309,6 +313,9 @@
       ],
       "additionalProperties": false,
       "properties": {
+        "body": {
+          "$ref": "#/definitions/body"
+        },
         "change_history": {
           "$ref": "#/definitions/change_history"
         },
