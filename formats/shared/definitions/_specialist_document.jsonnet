@@ -2155,12 +2155,14 @@
       protection_type: {
         type: "string",
         enum: [
+          "american-viticultural-area",
           "protected-geographical-indication-pgi",
           "protected-designation-of-origin-pdo",
           "traditional-speciality-guaranteed-tsg",
           "traditional-term",
           "geographical-indication-gi",
-          "name-protected-by-international-treaty"
+          "name-protected-by-international-treaty",
+          "us-spirit-drink",
         ]
       },
       reason_for_protection: {
