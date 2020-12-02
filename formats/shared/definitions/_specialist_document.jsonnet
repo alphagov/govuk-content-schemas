@@ -2044,7 +2044,8 @@
           "wines",
           "aromatised-wines",
           "traditional-terms-for-wine",
-          "names-protected-by-international-treaty"
+          "names-protected-by-international-treaty",
+          "american-viticultural-areas",
         ]
       },
       status: {
