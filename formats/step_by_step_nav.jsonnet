@@ -18,7 +18,10 @@
       properties: {
         step_by_step_nav: {
           "$ref": "#/definitions/step_by_step_nav"
-        }
+        },
+        body: {
+          "$ref": "#/definitions/body",
+        },
       }
     }
   }
