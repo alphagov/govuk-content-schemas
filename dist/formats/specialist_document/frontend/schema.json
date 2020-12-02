@@ -2333,6 +2333,7 @@
           "items": {
             "type": "string",
             "enum": [
+              "no-class-category",
               "1-1-fresh-meat-and-offal",
               "1-2-meat-products-cooked-salted-smoked-etc",
               "1-3-cheeses",
@@ -2361,6 +2362,7 @@
               "2-18-leather",
               "2-19-fur",
               "2-20-feather",
+              "2-20a-rush",
               "2-21-prepared-meals",
               "2-22-beers",
               "2-23-chocolate-and-derived-products",
@@ -2420,7 +2422,8 @@
               "99-other-spirit-drink",
               "traditional-term",
               "1-aromatised-wine",
-              "2-aromatised-wine-based-drink"
+              "2-aromatised-wine-based-drink",
+              "spirit-drink"
             ]
           }
         },
@@ -2453,10 +2456,12 @@
               "finland",
               "france",
               "germany",
+              "georgia",
               "greece",
               "guatemala",
               "guinea",
               "guyana",
+              "honduras",
               "hungary",
               "india",
               "indonesia",
@@ -2469,6 +2474,7 @@
               "luxembourg",
               "malta",
               "mexico",
+              "moldova",
               "mongolia",
               "morocco",
               "netherlands",
@@ -2491,6 +2497,7 @@
               "thailand",
               "trinidad-and-tobago",
               "turkey",
+              "ukraine",
               "united-states",
               "vietnam"
             ]
@@ -2514,12 +2521,14 @@
         "protection_type": {
           "type": "string",
           "enum": [
+            "american-viticultural-area",
             "protected-geographical-indication-pgi",
             "protected-designation-of-origin-pdo",
             "traditional-speciality-guaranteed-tsg",
             "traditional-term",
             "geographical-indication-gi",
-            "name-protected-by-international-treaty"
+            "name-protected-by-international-treaty",
+            "us-spirit-drink"
           ]
         },
         "reason_for_protection": {
@@ -2540,7 +2549,8 @@
             "wines",
             "aromatised-wines",
             "traditional-terms-for-wine",
-            "names-protected-by-international-treaty"
+            "names-protected-by-international-treaty",
+            "american-viticultural-areas"
           ]
         },
         "status": {
