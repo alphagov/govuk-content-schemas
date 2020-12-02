@@ -2061,6 +2061,7 @@
         items: {
           type: "string",
           enum: [
+            "no-class-category",
             "1-1-fresh-meat-and-offal",
             "1-2-meat-products-cooked-salted-smoked-etc",
             "1-3-cheeses",
@@ -2089,6 +2090,7 @@
             "2-18-leather",
             "2-19-fur",
             "2-20-feather",
+            "2-20a-rush",
             "2-21-prepared-meals",
             "2-22-beers",
             "2-23-chocolate-and-derived-products",
@@ -2148,7 +2150,8 @@
             "99-other-spirit-drink",
             "traditional-term",
             "1-aromatised-wine",
-            "2-aromatised-wine-based-drink"
+            "2-aromatised-wine-based-drink",
+            "spirit-drink",
           ]
         },
       },
