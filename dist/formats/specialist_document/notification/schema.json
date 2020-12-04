@@ -2692,6 +2692,9 @@
             "american-viticultural-areas"
           ]
         },
+        "registered_name": {
+          "type": "string"
+        },
         "status": {
           "type": "string",
           "enum": [
@@ -2700,6 +2703,10 @@
             "in-consultation",
             "rejected"
           ]
+        },
+        "time_registration": {
+          "type": "string",
+          "pattern": "^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$"
         },
         "traditional_term_grapevine_product_category": {
           "type": "array",
