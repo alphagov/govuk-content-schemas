@@ -2035,6 +2035,9 @@
     type: "object",
     additionalProperties: false,
     properties: {
+      registered_name: {
+        type: "string"
+      },
       register: {
         type: "string",
         enum: [
