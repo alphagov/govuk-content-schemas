@@ -2035,6 +2035,9 @@
     type: "object",
     additionalProperties: false,
     properties: {
+      registered_name: {
+        type: "string"
+      },
       register: {
         type: "string",
         enum: [
@@ -2323,6 +2326,10 @@
       date_registration: {
         type: "string",
         pattern: "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+      },
+      time_registration: {
+        type: "string",
+        pattern: "^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$"
       },
       date_registration_eu: {
         type: "string",
