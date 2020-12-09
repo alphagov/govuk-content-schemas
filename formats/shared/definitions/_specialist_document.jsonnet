@@ -2195,6 +2195,7 @@
             "brazil",
             "bulgaria",
             "cambodia",
+            "canada",
             "chile",
             "china",
             "colombia",
