@@ -2047,7 +2047,6 @@
           "wines",
           "aromatised-wines",
           "traditional-terms-for-wine",
-          "names-protected-by-international-treaty",
           "american-viticultural-areas",
         ]
       },
@@ -2195,6 +2194,7 @@
             "brazil",
             "bulgaria",
             "cambodia",
+            "canada",
             "chile",
             "china",
             "colombia",
