@@ -187,6 +187,7 @@
           ]
         },
         "govdelivery_title": {
+          "description": "UNSUPPORTED. Use title field instead.",
           "type": "string"
         },
         "subscriber_list": {
