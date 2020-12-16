@@ -3378,6 +3378,7 @@
               "machinery",
               "marine-equipment",
               "measuring-instruments",
+              "medical-devices",
               "noise-emissions-in-the-environment-by-equipment-for-use-outdoors",
               "non-automatic-weighing-instruments",
               "personal-protective-equipment",
@@ -3626,7 +3627,8 @@
               "recognised-third-party-organisation",
               "technical-assessment-body",
               "user-inspectorate",
-              "third-country-body"
+              "third-country-body",
+              "notified-body-ni"
             ]
           }
         },
