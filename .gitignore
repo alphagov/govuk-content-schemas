@@ -4,3 +4,4 @@
 *.json.publisher_v2.valid
 *.json.publisher_v2_links.valid
 coverage
+/.bundle
