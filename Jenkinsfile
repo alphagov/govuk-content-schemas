@@ -34,6 +34,7 @@ def dependentApplications = [
   'smartanswers',
   'specialist-publisher',
   'static',
+  'travel-advice-publisher',
   'whitehall',
 ]
 
@@ -63,7 +64,7 @@ node {
 
     stage("Lint Ruby") {
       govuk.runRakeTask("lint")
-    } 
+    }
 
     stage("Run tests") {
       govuk.runRakeTask("spec")

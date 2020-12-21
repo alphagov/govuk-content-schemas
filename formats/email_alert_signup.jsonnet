@@ -50,6 +50,7 @@
         },
         govdelivery_title: {
           type: "string",
+          description: "UNSUPPORTED. Use title field instead.",
         },
       },
     },
