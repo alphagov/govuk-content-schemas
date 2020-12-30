@@ -2188,6 +2188,7 @@
           type: "string",
           enum: [
             "united-kingdom",
+            "albania",
             "andorra",
             "armenia",
             "australia",
