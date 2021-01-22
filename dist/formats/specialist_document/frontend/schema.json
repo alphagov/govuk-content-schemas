@@ -2255,7 +2255,8 @@
             "field-safety-notices",
             "company-led-drugs",
             "national-patient-safety",
-            "device-safety-information"
+            "device-safety-information",
+            "medicines-recall-notification"
           ]
         },
         "bulk_published": {
