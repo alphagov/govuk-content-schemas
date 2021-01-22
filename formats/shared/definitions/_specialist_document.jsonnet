@@ -1993,6 +1993,7 @@
           "company-led-drugs",
           "national-patient-safety",
           "device-safety-information",
+          "medicines-recall-notification",
         ],
       },
       medical_specialism: {
