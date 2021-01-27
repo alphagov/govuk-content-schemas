@@ -1570,7 +1570,15 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "category": {
+        "date_of_completion": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+        },
+        "date_of_start": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+        },
+        "flood_and_coastal_erosion_category": {
           "type": "string",
           "enum": [
             "environmental-management-and-sustainability",
@@ -1580,14 +1588,6 @@
             "understanding-risks-from-all-sources-of-flooding",
             "whole-life-asset-management"
           ]
-        },
-        "date_of_completion": {
-          "type": "string",
-          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
-        },
-        "date_of_start": {
-          "type": "string",
-          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
         },
         "project_code": {
           "type": "string"
