@@ -1518,7 +1518,7 @@
       project_code: {
         type: "string",
       },
-      category: {
+      flood_and_coastal_erosion_category: {
         type: "string",
         enum: [
           "environmental-management-and-sustainability",
