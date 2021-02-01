@@ -1024,6 +1024,7 @@
         items: {
           type: "string",
           enum: [
+            "air-quality",
             "arable-land",
             "boundaries",
             "coast",
