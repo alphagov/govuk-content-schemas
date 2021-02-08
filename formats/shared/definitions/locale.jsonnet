@@ -41,6 +41,7 @@
       "nl",
       "no",
       "pa",
+      "pa-pan",
       "pa-pnb",
       "pa-ur",
       "pl",
