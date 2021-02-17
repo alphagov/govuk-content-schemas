@@ -1869,6 +1869,7 @@
             "educational-institutions",
             "individuals",
             "humanitarian-relief-organisations",
+            "organisations-lmic",
           ],
         },
       },
