@@ -1608,9 +1608,11 @@
               "girls-and-women",
               "health",
               "humanitarian-emergencies-disasters",
+              "innovation",
               "livelihoods",
               "peace-and-access-to-justice",
               "private-sector-business",
+              "research",
               "technology",
               "trade",
               "water-and-sanitation"
@@ -1629,7 +1631,8 @@
               "local-government",
               "educational-institutions",
               "individuals",
-              "humanitarian-relief-organisations"
+              "humanitarian-relief-organisations",
+              "organisations-lmic"
             ]
           }
         },
