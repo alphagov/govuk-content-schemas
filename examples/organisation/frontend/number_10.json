@@ -1602,27 +1602,32 @@
       {
         "service_type": "twitter",
         "title": "Twitter",
-        "href": "https://twitter.com/@10DowningStreet"
+        "href": "https://twitter.com/@10DowningStreet",
+        "locale": "en"
       },
       {
         "service_type": "instagram",
         "title": "Instagram",
-        "href": "https://www.instagram.com/10downingstreet"
+        "href": "https://www.instagram.com/10downingstreet",
+        "locale": "en"
       },
       {
         "service_type": "facebook",
         "title": "Facebook",
-        "href": "https://www.facebook.com/10downingstreet"
+        "href": "https://www.facebook.com/10downingstreet",
+        "locale": "en"
       },
       {
         "service_type": "flickr",
         "title": "Flickr",
-        "href": "http://www.flickr.com/photos/number10gov"
+        "href": "http://www.flickr.com/photos/number10gov",
+        "locale": "en"
       },
       {
         "service_type": "youtube",
         "title": "YouTube",
-        "href": "http://www.youtube.com/number10gov"
+        "href": "http://www.youtube.com/number10gov",
+        "locale": "en"
       }
     ],
     "default_news_image": {

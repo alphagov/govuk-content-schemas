@@ -2352,17 +2352,20 @@
       {
         "service_type": "twitter",
         "title": "Twitter - @DExEUgov",
-        "href": "https://twitter.com/DExEUgov"
+        "href": "https://twitter.com/DExEUgov",
+        "locale": "en"
       },
       {
         "service_type": "facebook",
         "title": "Facebook - DExEU",
-        "href": "https://www.facebook.com/dexeugov/"
+        "href": "https://www.facebook.com/dexeugov/",
+        "locale": "en"
       },
       {
         "service_type": "instagram",
         "title": "Instagram - @DExEUgov",
-        "href": "https://www.instagram.com/dexeugov/"
+        "href": "https://www.instagram.com/dexeugov/",
+        "locale": "en"
       }
     ]
   }

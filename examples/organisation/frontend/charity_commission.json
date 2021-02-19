@@ -1726,22 +1726,26 @@
       {
         "service_type": "twitter",
         "title": "Twitter",
-        "href": "https://twitter.com/chtycommission"
+        "href": "https://twitter.com/chtycommission",
+        "locale": "en"
       },
       {
         "service_type": "youtube",
         "title": "YouTube",
-        "href": "http://www.youtube.com/TheCharityCommission"
+        "href": "http://www.youtube.com/TheCharityCommission",
+        "locale": "en"
       },
       {
         "service_type": "linkedin",
         "title": "LinkedIn",
-        "href": "https://www.linkedin.com/company/charity-commission-for-england-and-wales"
+        "href": "https://www.linkedin.com/company/charity-commission-for-england-and-wales",
+        "locale": "en"
       },
       {
         "service_type": "blog",
         "title": "Charity Commission blog",
-        "href": "https://charitycommission.blog.gov.uk/"
+        "href": "https://charitycommission.blog.gov.uk/",
+        "locale": "en"
       }
     ],
     "default_news_image": {

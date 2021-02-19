@@ -1218,37 +1218,44 @@
       {
         "service_type": "twitter",
         "title": "Twitter",
-        "href": "https://twitter.com/UKGovWales"
+        "href": "https://twitter.com/UKGovWales",
+        "locale": "cy"
       },
       {
         "service_type": "twitter",
         "title": "Trydar",
-        "href": "https://twitter.com/LlywDUCymru"
+        "href": "https://twitter.com/LlywDUCymru",
+        "locale": "cy"
       },
       {
         "service_type": "facebook",
         "title": "Facebook",
-        "href": "https://www.facebook.com/ukgovwales"
+        "href": "https://www.facebook.com/ukgovwales",
+        "locale": "cy"
       },
       {
         "service_type": "linkedin",
         "title": "LinkedIn",
-        "href": "https://www.linkedin.com/company/uk-government-wales-llywodraeth-du-cymru?trk=top_nav_home"
+        "href": "https://www.linkedin.com/company/uk-government-wales-llywodraeth-du-cymru?trk=top_nav_home",
+        "locale": "cy"
       },
       {
         "service_type": "other",
         "title": "Newsletter",
-        "href": "http://eepurl.com/3hkrb"
+        "href": "http://eepurl.com/3hkrb",
+        "locale": "cy"
       },
       {
         "service_type": "other",
         "title": "Cylchlythr",
-        "href": "http://eepurl.com/ckrRwz"
+        "href": "http://eepurl.com/ckrRwz",
+        "locale": "cy"
       },
       {
         "service_type": "youtube",
         "title": "YouTube",
-        "href": "https://www.youtube.com/channel/UCFj70_9F31CLQY76H5yg7AQ"
+        "href": "https://www.youtube.com/channel/UCFj70_9F31CLQY76H5yg7AQ",
+        "locale": "cy"
       }
     ],
     "default_news_image": {

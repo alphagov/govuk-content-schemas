@@ -313,6 +313,7 @@
               "service_type",
               "title",
               "href",
+              "locale",
             ],
             properties: {
               service_type: {
@@ -338,6 +339,9 @@
               href: {
                 type: "string",
                 format: "uri",
+              },
+              locale: {
+                type: "string",
               },
             },
           },

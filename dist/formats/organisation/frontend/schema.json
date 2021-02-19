@@ -679,13 +679,17 @@
             "required": [
               "service_type",
               "title",
-              "href"
+              "href",
+              "locale"
             ],
             "additionalProperties": false,
             "properties": {
               "href": {
                 "type": "string",
                 "format": "uri"
+              },
+              "locale": {
+                "type": "string"
               },
               "service_type": {
                 "type": "string",

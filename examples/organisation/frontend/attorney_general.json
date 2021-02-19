@@ -977,7 +977,8 @@
       {
         "service_type": "twitter",
         "title": "Twitter - @attorneygeneral",
-        "href": "https://twitter.com/@attorneygeneral"
+        "href": "https://twitter.com/@attorneygeneral",
+        "locale": "en"
       }
     ],
     "default_news_image": {
