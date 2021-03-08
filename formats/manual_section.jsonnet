@@ -26,6 +26,10 @@
         organisations: {
           "$ref": "#/definitions/manual_organisations",
         },
+        visually_expanded: {
+          type: "boolean",
+          description: "A flag set by a content designer when they want the manual sections to be expanded and display without accordions.",
+        },
       },
     },
   },
