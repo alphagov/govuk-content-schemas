@@ -2,10 +2,6 @@
 
 This repo contains schemas and examples of the content that uses them on GOV.UK.
 
-The aim of it is to support 'contract testing' between the frontend and
-publisher apps by expressing the schema and examples in strict, machine
-processable form.
-
 We use [JSON Schema](http://json-schema.org/) to define the schemas.
 
 For each schema, there are three possible representations:
