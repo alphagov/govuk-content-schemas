@@ -40,27 +40,6 @@ You can use the [GOV.UK Docker environment](https://github.com/alphagov/govuk-do
 
 **Use GOV.UK Docker to run any commands that follow.**
 
-### Validation of examples
-
-To validate examples against the generated schemas, use the `validate_examples`
-Rake task:
-
-```sh
-$ bundle exec rake validate_examples
-```
-
-This will print the errors out to the console if validation fails.
-
-### Rakefile
-
-A `Rakefile` exists which combines these scripts. It
-automatically re-generates the intermediate schema files and validates all the
-examples.
-
-To invoke the default task just invoke `rake` on its own.
-
-### Further documentation
-
 * [How to change a schema](docs/changing-a-schema.md)
 * [How to add a new content schema](docs/adding-a-new-schema.md)
 * [Working with JSON Schema keywords](docs/working-with-json-schema-keywords.md)
