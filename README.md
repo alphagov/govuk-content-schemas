@@ -13,17 +13,6 @@ For each schema, there are three possible representations:
 * the 'notification' representation, which is used when broadcasting messages about content
   items on the message queue
 
-## Howtos
-
-* [How to change a schema](docs/changing-a-schema.md)
-* [How to add a new content schema](docs/adding-a-new-schema.md)
-* [Working with JSON Schema keywords](docs/working-with-json-schema-keywords.md)
-* [Adding contract tests to your app](docs/contract-testing-howto.md)
-* [Suggested workflows](docs/suggested-workflows.md)
-* [Why do contract testing?](docs/why-contract-testing.md)
-* [Running your frontend against the examples and random content (content-store not needed)](docs/running-frontend-against-examples.md)
-* [Deployment](docs/deployment.md)
-
 ## Background
 
 ### Publisher schema defined using component parts
@@ -71,6 +60,12 @@ formats
 
 ```
 
+## Technical documentation
+
+You can use the [GOV.UK Docker environment](https://github.com/alphagov/govuk-docker) to run the tests with all the necessary dependencies. Follow [the usage instructions](https://github.com/alphagov/govuk-docker#usage) to get started.
+
+**Use GOV.UK Docker to run any commands that follow.**
+
 ### Validation of examples
 
 To validate examples against the generated schemas, use the `validate_examples`
@@ -89,3 +84,14 @@ automatically re-generates the intermediate schema files and validates all the
 examples.
 
 To invoke the default task just invoke `rake` on its own.
+
+### Further documentation
+
+* [How to change a schema](docs/changing-a-schema.md)
+* [How to add a new content schema](docs/adding-a-new-schema.md)
+* [Working with JSON Schema keywords](docs/working-with-json-schema-keywords.md)
+* [Adding contract tests to your app](docs/contract-testing-howto.md)
+* [Suggested workflows](docs/suggested-workflows.md)
+* [Why do contract testing?](docs/why-contract-testing.md)
+* [Running your frontend against the examples and random content (content-store not needed)](docs/running-frontend-against-examples.md)
+* [Deployment](docs/deployment.md)
