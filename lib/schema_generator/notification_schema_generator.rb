@@ -79,7 +79,6 @@ module SchemaGenerator
         first_published_at
         government_document_supertype
         links
-        navigation_document_supertype
         phase
         public_updated_at
         publishing_app
@@ -88,7 +87,6 @@ module SchemaGenerator
         routes
         title
         update_type
-        user_journey_document_supertype
       ]
     end
 
