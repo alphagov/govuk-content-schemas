@@ -21,7 +21,6 @@
   "links": {
   },
   "locale": "en",
-  "navigation_document_supertype": "other",
   "payload_version": 123,
   "phase": "live",
   "public_updated_at": "2017-12-14T09:50:00Z",
@@ -35,6 +34,5 @@
   ],
   "schema_name": "external_content",
   "title": "Money Advice Service",
-  "update_type": "major",
-  "user_journey_document_supertype": "other"
+  "update_type": "major"
 }
