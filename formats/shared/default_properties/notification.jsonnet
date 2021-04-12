@@ -22,16 +22,4 @@
     type: "string",
     description: "Document supertype grouping intended to power the Whitehall finders and email subscriptions",
   },
-  user_journey_document_supertype: {
-    type: "string",
-    description: "Document type grouping powering analytics of user journeys",
-  },
-  content_purpose_supergroup: {
-    type: "string",
-    description: "Document supergroup grouping documents by a purpose",
-  },
-  content_purpose_subgroup: {
-    type: "string",
-    description: "Document subgroup grouping documents by purpose. Narrows down the purpose defined in content_purpose_supergroup.",
-  },
 }

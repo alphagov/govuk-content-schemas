@@ -21,18 +21,6 @@
     "content_id": {
       "$ref": "#/definitions/guid"
     },
-    "content_purpose_document_supertype": {
-      "description": "DEPRECATED. Use `content_purpose_subgroup`.",
-      "type": "string"
-    },
-    "content_purpose_subgroup": {
-      "description": "Document subgroup grouping documents by purpose. Narrows down the purpose defined in content_purpose_supergroup.",
-      "type": "string"
-    },
-    "content_purpose_supergroup": {
-      "description": "Document supergroup grouping documents by a purpose",
-      "type": "string"
-    },
     "description": {
       "type": "null"
     },
@@ -125,10 +113,6 @@
     "locale": {
       "$ref": "#/definitions/locale"
     },
-    "navigation_document_supertype": {
-      "description": "Document type grouping powering the new taxonomy-based navigation pages",
-      "type": "string"
-    },
     "need_ids": {
       "type": "array",
       "items": {
@@ -174,23 +158,11 @@
         "vanish"
       ]
     },
-    "search_user_need_document_supertype": {
-      "description": "Document supertype grouping core and government documents",
-      "type": "string"
-    },
     "title": {
       "type": "null"
     },
     "update_type": {
       "$ref": "#/definitions/update_type"
-    },
-    "user_journey_document_supertype": {
-      "description": "Document type grouping powering analytics of user journeys",
-      "type": "string"
-    },
-    "user_need_document_supertype": {
-      "description": "DEPRECATED. Use `content_purpose_document_supertype`.",
-      "type": "string"
     },
     "withdrawn_notice": {
       "$ref": "#/definitions/withdrawn_notice"
