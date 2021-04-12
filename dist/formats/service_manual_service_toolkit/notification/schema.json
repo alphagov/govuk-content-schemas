@@ -15,7 +15,6 @@
     "govuk_request_id",
     "links",
     "locale",
-    "navigation_document_supertype",
     "payload_version",
     "phase",
     "public_updated_at",
@@ -25,8 +24,7 @@
     "routes",
     "schema_name",
     "title",
-    "update_type",
-    "user_journey_document_supertype"
+    "update_type"
   ],
   "additionalProperties": false,
   "properties": {
