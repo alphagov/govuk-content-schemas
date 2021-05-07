@@ -359,26 +359,6 @@
       "description": "The main content provided as HTML rendered from govspeak",
       "type": "string"
     },
-    "brexit_current_state_notice": {
-      "description": "A list of URLs and titles about the current state of guidance that might change after brexit.",
-      "type": "array",
-      "items": {
-        "type": "object",
-        "required": [
-          "title",
-          "href"
-        ],
-        "additionalProperties": false,
-        "properties": {
-          "href": {
-            "type": "string"
-          },
-          "title": {
-            "type": "string"
-          }
-        }
-      }
-    },
     "brexit_no_deal_notice": {
       "description": "A list of URLs and titles for a brexit no deal notice.",
       "type": "array",
@@ -441,9 +421,6 @@
       "properties": {
         "body": {
           "$ref": "#/definitions/body"
-        },
-        "brexit_current_state_notice": {
-          "$ref": "#/definitions/brexit_current_state_notice"
         },
         "brexit_no_deal_notice": {
           "$ref": "#/definitions/brexit_no_deal_notice"

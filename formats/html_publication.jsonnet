@@ -30,9 +30,6 @@
         },
         brexit_no_deal_notice: {
           "$ref": "#/definitions/brexit_no_deal_notice",
-        },
-        brexit_current_state_notice: {
-          "$ref": "#/definitions/brexit_current_state_notice",
         }
       },
     },

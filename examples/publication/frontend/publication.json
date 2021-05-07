@@ -33,16 +33,6 @@
     "political": false,
     "emphasised_organisations": [
       "16628142-57b2-4611-bc03-5912785acee3"
-    ],
-    "brexit_current_state_notice": [
-      {
-        "title": "test page",
-        "href": "https://www.gov.uk/transition"
-      },
-      {
-        "title": "test page2",
-        "href": "https://www.gov.uk/coronavirus"
-      }
     ]
   },
   "links": {
