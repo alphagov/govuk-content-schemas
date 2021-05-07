@@ -35,7 +35,7 @@ This comprises three things:
 
 1. json-schema files which define the *publishing representation* for a given format
 2. a curated set of frontend examples of that format, which are validated against the schemas
-3. [a mechanism to convert from the 'publisher' schemas to the 'frontend' schemas](https://github.com/alphagov/govuk-content-schemas/blob/master/lib/govuk_content_schemas/frontend_schema_generator.rb), simulating the behaviour of the content store
+3. [a mechanism to convert from the 'publisher' schemas to the 'frontend' schemas](https://github.com/alphagov/govuk-content-schemas/blob/main/lib/govuk_content_schemas/frontend_schema_generator.rb), simulating the behaviour of the content store
 
 With those three parts we are able to verify the examples against the schemas.
 
