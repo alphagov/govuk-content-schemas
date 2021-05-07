@@ -8,7 +8,7 @@ Note: The dummy content store also has an index page which lists all the example
 
 ## Using the Heroku version
 
-There is an instance of the dummy content store running on Heroku, which applications can use rather than running it locally. Whenever master changes, it will automatically be updated, and the available examples may change.
+There is an instance of the dummy content store running on Heroku, which applications can use rather than running it locally. Whenever main changes, it will automatically be updated, and the available examples may change.
 
 [govuk-content-store-examples.herokuapp.com](https://govuk-content-store-examples.herokuapp.com/)
 

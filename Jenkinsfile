@@ -53,8 +53,8 @@ node {
       env.GIT_COMMIT_HASH = govuk.getFullCommitHash()
     }
 
-    stage("Merge master") {
-      govuk.mergeMasterBranch();
+    stage("Merge main") {
+      govuk.mergeIntoBranch("main");
     }
 
     stage("bundle install") {
@@ -80,7 +80,7 @@ node {
       }
     }
 
-    if (env.BRANCH_NAME == 'master') {
+    if (env.BRANCH_NAME == 'main') {
       stage("Push release tag") {
         govuk.pushTag(REPOSITORY, env.BRANCH_NAME, 'release_' + env.BUILD_NUMBER)
       }
