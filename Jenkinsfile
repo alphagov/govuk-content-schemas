@@ -82,7 +82,7 @@ node {
 
     if (env.BRANCH_NAME == 'main') {
       stage("Push release tag") {
-        govuk.pushTag(REPOSITORY, env.BRANCH_NAME, 'release_' + env.BUILD_NUMBER)
+        govuk.pushTag(REPOSITORY, env.BRANCH_NAME, 'release_' + env.BUILD_NUMBER, 'main')
       }
 
       govuk.deployIntegration(REPOSITORY, env.BRANCH_NAME, 'release_' + env.BUILD_NUMBER, 'deploy')
