@@ -438,6 +438,9 @@
           "description": "Usage notes for editors when tagging content to a taxon.",
           "type": "string"
         },
+        "url_override": {
+          "$ref": "#/definitions/taxonomy_url_override"
+        },
         "visible_to_departmental_editors": {
           "description": "Should this taxon be made visible to Content Editors in publishing apps? It's currently only a consideration for Root Taxons in a draft state.",
           "type": "boolean"
@@ -784,6 +787,10 @@
     },
     "taxonomy_internal_name": {
       "description": "An internal name for taxonomy admin interfaces. Includes parent.",
+      "type": "string"
+    },
+    "taxonomy_url_override": {
+      "description": "Set a custom url for the taxon to override the default of /taxon",
       "type": "string"
     },
     "title": {
