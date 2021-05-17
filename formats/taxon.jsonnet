@@ -16,6 +16,9 @@
           type: "boolean",
           description: "Should this taxon be made visible to Content Editors in publishing apps? It's currently only a consideration for Root Taxons in a draft state.",
         },
+        url_override: {
+          "$ref": "#/definitions/taxonomy_url_override",
+        },
       },
     },
   },
