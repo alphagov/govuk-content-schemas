@@ -61,9 +61,6 @@
         },
         national_applicability: {
           "$ref": "#/definitions/national_applicability",
-        },
-        brexit_no_deal_notice: {
-          "$ref": "#/definitions/brexit_no_deal_notice",
         }
       },
     },

@@ -27,9 +27,6 @@
         isbn: {
           type: "string",
           description: "Identifies the Print ISBN to be displayed when printing an HTML Publication",
-        },
-        brexit_no_deal_notice: {
-          "$ref": "#/definitions/brexit_no_deal_notice",
         }
       },
     },
