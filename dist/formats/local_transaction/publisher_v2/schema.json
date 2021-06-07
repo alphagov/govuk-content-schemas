@@ -221,14 +221,63 @@
         "need_to_know": {
           "$ref": "#/definitions/body_html_and_govspeak"
         },
+        "northern_ireland_availability": {
+          "$ref": "#/definitions/devolved_administration_availability"
+        },
+        "scotland_availability": {
+          "$ref": "#/definitions/devolved_administration_availability"
+        },
         "service_tiers": {
           "description": "List of local government tiers that provide the service",
           "type": "array",
           "items": {
             "type": "string"
           }
+        },
+        "wales_availability": {
+          "$ref": "#/definitions/devolved_administration_availability"
         }
       }
+    },
+    "devolved_administration_availability": {
+      "description": "Used to indicate that a particular devolved administration has a different handling process for the service",
+      "oneOf": [
+        {
+          "description": "A value that indicates a service is unavailable",
+          "type": "object",
+          "required": [
+            "type"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "type": {
+              "enum": [
+                "unavailable"
+              ]
+            }
+          }
+        },
+        {
+          "description": "A value that indicates the service is available through an alternative url",
+          "type": "object",
+          "required": [
+            "type",
+            "alternative_url"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "alternative_url": {
+              "type": "string",
+              "format": "uri"
+            },
+            "type": {
+              "enum": [
+                "devolved_administration_service"
+              ]
+            }
+          }
+        }
+      ]
     },
     "external_link": {
       "type": "object",
