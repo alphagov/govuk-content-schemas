@@ -21,6 +21,7 @@
     "terms_of_reference",
     "petitions_and_campaigns",
     "accessible_documents_policy",
+    "modern_slavery_statement",
   ],
   definitions: {
     details: {
