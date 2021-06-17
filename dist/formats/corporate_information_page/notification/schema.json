@@ -78,7 +78,8 @@
         "staff_update",
         "terms_of_reference",
         "petitions_and_campaigns",
-        "accessible_documents_policy"
+        "accessible_documents_policy",
+        "modern_slavery_statement"
       ]
     },
     "email_document_supertype": {
