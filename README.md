@@ -48,3 +48,7 @@ You can use the [GOV.UK Docker environment](https://github.com/alphagov/govuk-do
 * [Why do contract testing?](docs/why-contract-testing.md)
 * [Running your frontend against the examples and random content (content-store not needed)](docs/running-frontend-against-examples.md)
 * [Deployment](docs/deployment.md)
+
+## Licence
+
+[MIT Licence](LICENCE)
