@@ -2,35 +2,13 @@
 
 This repo contains [JSON Schema](http://json-schema.org/) files and examples of the content that uses them on GOV.UK.
 
-```
-# source files and shared definitions
-formats
-└── case_study.jsonnet
-└── shared
-    └── default_format.jsonnet
+The actual JSON schema files live in `dist` and are generated from [Jsonnet templates](https://jsonnet.org) in `source`. Using templates makes it easier to duplicate common blocks across multiple schemas e.g. format and URL fields. **Do not edit files in `dist` manually**, as they will be overwritten.
 
-# built schemas (DO NOT EDIT DIRECTLY)
-dist
-└── formats
-    └── case_study
-        ├── frontend
-        │   └── schema.json
-        └── publisher
-            └── schema.json
+## Nomenclature
 
-# fixtures to support testing in apps
-examples
-└── case_study
-    └── frontend
-        ├── archived.json
-        ├── case_study.json
-        └── translated.json
+Schemas and examples are divided into three categories:
 
-```
-
-For each source file, we generate up to schemas for the content:
-
-* `publisher` - for when a publishing application transmits data to the content store.
+* `publisher_v2` - for when a publishing application transmits data to the content store
 * `frontend` - for data returned by the content store for a frontend application request
 * `notification` - for broadcasting messages about content items on the message queue
 
@@ -52,6 +30,14 @@ Run the tests only:
 
 ```
 bundle exec rake spec
+```
+
+### Building the schemas
+
+Use this to validate a change to the schemas, without having to run the tests.
+
+```
+bundle exec rake build
 ```
 
 ### Further documentation
