@@ -2,6 +2,7 @@ require "sinatra"
 require "govuk_schemas"
 
 set :views, "preview_app"
+set :bind, "0.0.0.0"
 
 get "/" do
   schema_examples = {}
