@@ -40,6 +40,22 @@ You can use the [GOV.UK Docker environment](https://github.com/alphagov/govuk-do
 
 **Use GOV.UK Docker to run any commands that follow.**
 
+### Running the tests
+
+Run the full test suite and linting:
+
+```
+bundle exec rake
+```
+
+Run the tests only:
+
+```
+bundle exec rake spec
+```
+
+### Further documentation
+
 * [How to change a schema](docs/changing-a-schema.md)
 * [How to add a new content schema](docs/adding-a-new-schema.md)
 * [Working with JSON Schema keywords](docs/working-with-json-schema-keywords.md)
