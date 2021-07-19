@@ -49,7 +49,6 @@ bundle exec rake build
 * [Suggested workflows](docs/suggested-workflows.md)
 * [Why do contract testing?](docs/why-contract-testing.md)
 * [Running your frontend against the examples and random content (content-store not needed)](docs/running-frontend-against-examples.md)
-* [Deployment](docs/deployment.md)
 
 ## Licence
 
