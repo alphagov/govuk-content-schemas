@@ -1,4 +1,4 @@
-# Why do contract testing?
+# Contract Testing against Schemas
 
 We want to be able to evolve our publishing systems and have confidence that the changes we make will not break something.
 
