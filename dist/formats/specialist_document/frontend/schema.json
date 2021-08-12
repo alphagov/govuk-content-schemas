@@ -3368,6 +3368,9 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "uk_market_conformity_assessment_body_address": {
+          "type": "string"
+        },
         "uk_market_conformity_assessment_body_email": {
           "type": "string"
         },
@@ -3403,6 +3406,9 @@
           }
         },
         "uk_market_conformity_assessment_body_name": {
+          "type": "string"
+        },
+        "uk_market_conformity_assessment_body_notified_body_number": {
           "type": "string"
         },
         "uk_market_conformity_assessment_body_number": {
