@@ -452,6 +452,9 @@
       uk_market_conformity_assessment_body_number: {
         type: "string",
       },
+      uk_market_conformity_assessment_body_notified_body_number: {
+        type: "string",
+      },
       uk_market_conformity_assessment_body_type: {
         type: "array",
         items: {
@@ -689,6 +692,9 @@
         type: "string",
       },
       uk_market_conformity_assessment_body_phone: {
+        type: "string",
+      },
+      uk_market_conformity_assessment_body_address: {
         type: "string",
       },
       uk_market_conformity_assessment_body_legislative_area: {

@@ -10,6 +10,7 @@
       "uk_market_conformity_assessment_body_name": "rail system confomity body example",
       "updated_at": "2015-02-13T13:45:00.000+00:00",
       "uk_market_conformity_assessment_body_number": "0001",
+      "uk_market_conformity_assessment_body_notified_body_number": "0002",
       "uk_market_conformity_assessment_body_registered_office_location": "united-kingdom",
       "uk_market_conformity_assessment_body_testing_locations": [
         "north-macedonia",
@@ -18,6 +19,7 @@
       "uk_market_conformity_assessment_body_website": "somewebsite.somewhere.com",
       "uk_market_conformity_assessment_body_email": "contactthem@somewhere.com",
       "uk_market_conformity_assessment_body_phone": "01555555555",
+      "uk_market_conformity_assessment_body_address": "1 GDS Way, London",
       "uk_market_conformity_assessment_body_legislative_area": [
         "railway-interoperability"
       ]
