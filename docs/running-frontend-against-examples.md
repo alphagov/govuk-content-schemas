@@ -17,19 +17,3 @@ To use the heroku version when running your application set `PLEK_SERVICE_CONTEN
 ```
 $ PLEK_SERVICE_CONTENT_STORE_URI=https://govuk-content-store-examples.herokuapp.com bundle exec rails s
 ```
-
-## Using it locally
-
-To start an instance of the dummy content store, from this repo, run:
-
-```
-$ bundle exec dummy_content_store
-```
-
-It will be available at: [0.0.0.0:3068](http://0.0.0.0:3068).
-
-You will need to configure your application to point at this version of content-store, which you can do by setting `PLEK_SERVICE_CONTENT_STORE_URI` while running your application, eg,
-
-```
-$ PLEK_SERVICE_CONTENT_STORE_URI=http://0.0.0.0:3068 bundle exec rails s
-```
