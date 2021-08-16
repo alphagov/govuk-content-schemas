@@ -2,35 +2,13 @@
 
 This repo contains [JSON Schema](http://json-schema.org/) files and examples of the content that uses them on GOV.UK.
 
-```
-# source files and shared definitions
-formats
-└── case_study.jsonnet
-└── shared
-    └── default_format.jsonnet
+The actual JSON schema files live in `dist` and are generated from [Jsonnet templates](https://jsonnet.org) in `source`. Using templates makes it easier to duplicate common blocks across multiple schemas e.g. format and URL fields. **Do not edit files in `dist` manually**, as they will be overwritten.
 
-# built schemas (DO NOT EDIT DIRECTLY)
-dist
-└── formats
-    └── case_study
-        ├── frontend
-        │   └── schema.json
-        └── publisher
-            └── schema.json
+## Nomenclature
 
-# fixtures to support testing in apps
-examples
-└── case_study
-    └── frontend
-        ├── archived.json
-        ├── case_study.json
-        └── translated.json
+Schemas and examples are divided into three categories:
 
-```
-
-For each source file, we generate up to schemas for the content:
-
-* `publisher` - for when a publishing application transmits data to the content store.
+* `publisher_v2` - for when a publishing application transmits data to the content store
 * `frontend` - for data returned by the content store for a frontend application request
 * `notification` - for broadcasting messages about content items on the message queue
 
@@ -40,11 +18,36 @@ You can use the [GOV.UK Docker environment](https://github.com/alphagov/govuk-do
 
 **Use GOV.UK Docker to run any commands that follow.**
 
-* [How to change a schema](docs/changing-a-schema.md)
+### Running the tests
+
+Run the full test suite and linting:
+
+```
+bundle exec rake
+```
+
+Run the tests only:
+
+```
+bundle exec rake spec
+```
+
+### Building the schemas
+
+Use this to validate a change to the schemas, without having to run the tests.
+
+```
+bundle exec rake build
+```
+
+### Further documentation
+
+* [How to change an existing content schema](docs/changing-an-existing-content-schema.md)
 * [How to add a new content schema](docs/adding-a-new-schema.md)
 * [Working with JSON Schema keywords](docs/working-with-json-schema-keywords.md)
-* [Adding contract tests to your app](docs/contract-testing-howto.md)
-* [Suggested workflows](docs/suggested-workflows.md)
-* [Why do contract testing?](docs/why-contract-testing.md)
+* [Contract testing against govuk-content-schemas](docs/contract-testing-against-schemas.md)
 * [Running your frontend against the examples and random content (content-store not needed)](docs/running-frontend-against-examples.md)
-* [Deployment](docs/deployment.md)
+
+## Licence
+
+[MIT Licence](LICENCE)
