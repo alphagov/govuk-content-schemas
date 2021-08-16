@@ -22,7 +22,7 @@ Publishing involves three systems and two representations:
 
 The first arrow is the "publishing representation", and the second arrow is the "frontend representation". The latter is more detailed than the former, as the `links` hash is expanded so
 that it contains full details about links, wheras the publisher representation
-only contains content ids (for full info see [frontend_schema_generator_spec.rb](../lib/schema_generator/frontend_schema_generator.rb)).
+only contains content ids (for full info see [frontend_schema_generator.rb](../lib/schema_generator/frontend_schema_generator.rb)).
 
 This comprises three things:
 
