@@ -3796,8 +3796,13 @@
               "recognised-third-party-organisation",
               "technical-assessment-body",
               "user-inspectorate",
-              "third-country-body",
-              "notified-body-ni"
+              "overseas-body",
+              "notified-body-ni",
+              "uk-body-mra-australia",
+              "uk-body-mra-new-zealand",
+              "uk-body-mra-usa",
+              "uk-body-mra-japan",
+              "uk-body-mra-canada"
             ]
           }
         },
