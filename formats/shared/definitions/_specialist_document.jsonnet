@@ -452,6 +452,9 @@
       uk_market_conformity_assessment_body_number: {
         type: "string",
       },
+      uk_market_conformity_assessment_body_notified_body_number: {
+        type: "string",
+      },
       uk_market_conformity_assessment_body_type: {
         type: "array",
         items: {
@@ -461,8 +464,13 @@
             "recognised-third-party-organisation",
             "technical-assessment-body",
             "user-inspectorate",
-            "third-country-body",
+            "overseas-body",
             "notified-body-ni",
+            "uk-body-mra-australia",
+            "uk-body-mra-new-zealand",
+            "uk-body-mra-usa",
+            "uk-body-mra-japan",
+            "uk-body-mra-canada",
           ],
         },
       },
@@ -689,6 +697,9 @@
         type: "string",
       },
       uk_market_conformity_assessment_body_phone: {
+        type: "string",
+      },
+      uk_market_conformity_assessment_body_address: {
         type: "string",
       },
       uk_market_conformity_assessment_body_legislative_area: {
