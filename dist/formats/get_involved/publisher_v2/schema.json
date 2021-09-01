@@ -157,6 +157,10 @@
         }
       ]
     },
+    "body": {
+      "description": "The main content provided as HTML rendered from govspeak",
+      "type": "string"
+    },
     "description_optional": {
       "anyOf": [
         {
@@ -176,6 +180,42 @@
       "properties": {
         "body": {
           "type": "string"
+        },
+        "take_part_pages": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "title",
+              "description",
+              "details"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "description": {
+                "type": "string"
+              },
+              "details": {
+                "type": "object",
+                "required": [
+                  "body",
+                  "image"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "body": {
+                    "$ref": "#/definitions/body"
+                  },
+                  "image": {
+                    "$ref": "#/definitions/image"
+                  }
+                }
+              },
+              "title": {
+                "type": "string"
+              }
+            }
+          }
         }
       }
     },
@@ -194,6 +234,48 @@
         "$ref": "#/definitions/guid"
       },
       "uniqueItems": true
+    },
+    "image": {
+      "type": "object",
+      "required": [
+        "url"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "alt_text": {
+          "type": "string"
+        },
+        "caption": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "credit": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "high_resolution_url": {
+          "description": "URL to a high resolution version of the image, for use by third parties such as Twitter, Facebook or Slack. Used by the machine readable metadata component. Don't use this on user-facing web pages, as it might be very large.",
+          "type": "string",
+          "format": "uri"
+        },
+        "url": {
+          "description": "URL to the image. The image should be in a suitable resolution for display on the page.",
+          "type": "string",
+          "format": "uri"
+        }
+      }
     },
     "locale": {
       "type": "string",
