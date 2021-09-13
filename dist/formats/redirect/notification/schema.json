@@ -197,11 +197,6 @@
     }
   },
   "definitions": {
-    "absolute_fullpath": {
-      "description": "A path with optional query string and/or fragment.",
-      "type": "string",
-      "pattern": "^/(([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})+(/([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)*)?(\\?([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)?(#([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)?$"
-    },
     "absolute_path": {
       "description": "A path only. Query string and/or fragment are not allowed.",
       "type": "string",
@@ -362,11 +357,6 @@
         "null"
       ]
     },
-    "govuk_subdomain_url": {
-      "description": "A URL under the gov.uk domain with optional query string and/or fragment.",
-      "type": "string",
-      "pattern": "^https://([a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[A-Za-z0-9])?\\.)*gov\\.uk(/(([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})+(/([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)*)?(\\?([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)?(#([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)?)?$"
-    },
     "guid": {
       "type": "string",
       "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-[1-5][a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$"
@@ -512,14 +502,7 @@
       "properties": {
         "destination": {
           "type": "string",
-          "anyOf": [
-            {
-              "$ref": "#/definitions/absolute_fullpath"
-            },
-            {
-              "$ref": "#/definitions/govuk_subdomain_url"
-            }
-          ]
+          "format": "uri"
         },
         "path": {
           "$ref": "#/definitions/absolute_path"
