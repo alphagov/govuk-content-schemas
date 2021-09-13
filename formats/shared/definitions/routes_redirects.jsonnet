@@ -62,17 +62,7 @@
           "exact",
         ],
       },
-      destination: {
-        type: "string",
-        anyOf: [
-          {
-            "$ref": "#/definitions/absolute_fullpath",
-          },
-          {
-            "$ref": "#/definitions/govuk_subdomain_url",
-          },
-        ],
-      },
+      destination: { type: "string", format: "uri" },
       segments_mode: {
         enum: [
           "preserve",
@@ -81,10 +71,5 @@
         description: "For prefix redirects, preserve or ignore the rest of the fullpath. For exact, preserve or ignore the querystring.",
       },
     },
-  },
-  govuk_subdomain_url: {
-    type: "string",
-    pattern: "^https://([a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[A-Za-z0-9])?\\.)*gov\\.uk(/(([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})+(/([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)*)?(\\?([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)?(#([a-zA-Z0-9._~!$&'()*+,;=:@-]|%[0-9a-fA-F]{2})*)?)?$",
-    description: "A URL under the gov.uk domain with optional query string and/or fragment.",
-  },
+  }
 }
