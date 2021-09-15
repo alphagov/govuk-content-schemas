@@ -54,6 +54,9 @@
         "$ref": "#/definitions/medical_safety_alert_metadata",
       },
       {
+        "$ref": "#/definitions/oim_project_metadata",
+      },
+      {
         "$ref": "#/definitions/protected_food_drink_name_metadata",
       },
       {
@@ -2047,6 +2050,41 @@
         },
       },
       issued_date: {
+        type: "string",
+        pattern: "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$",
+      },
+    },
+  },
+  oim_project_metadata: {
+    type: "object",
+    additionalProperties: false,
+    properties: {
+      bulk_published: {
+        type: "boolean",
+      },
+      oim_project_type: {
+        type: "string",
+        enum: [
+          "annual-report",
+          "five-yearly-report",
+          "discretionary-report",
+          "report-on-proposed-regulatory-provision",
+          "report-after-regulatory-provision-is-passed-or-made",
+          "report-on-provision-considered-to-have-detrimental-effects",
+        ],
+      },
+      oim_project_state: {
+        type: "string",
+        enum: [
+          "open",
+          "closed",
+        ],
+      },
+      oim_project_opened_date: {
+        type: "string",
+        pattern: "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$",
+      },
+      oim_project_closed_date: {
         type: "string",
         pattern: "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$",
       },
