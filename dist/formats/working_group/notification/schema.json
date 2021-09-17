@@ -710,6 +710,7 @@
       "description": "The application that published this item.",
       "type": "string",
       "enum": [
+        "account-api",
         "calculators",
         "calendars",
         "collections-publisher",
