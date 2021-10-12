@@ -1929,6 +1929,7 @@
         type: "string",
         enum: [
           "investigation-report",
+          "investigation-report-on-behalf-of-red-ensign-group",
           "safety-bulletin",
           "completed-preliminary-examination",
           "overseas-report",
