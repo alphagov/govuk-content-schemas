@@ -5,7 +5,6 @@
     details: {
       type: "object",
       additionalProperties: false,
-      required: ["body"],
       properties: {
         body: { type: "string" },
         take_part_pages: {
