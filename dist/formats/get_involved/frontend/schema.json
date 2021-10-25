@@ -298,9 +298,6 @@
     },
     "details": {
       "type": "object",
-      "required": [
-        "body"
-      ],
       "additionalProperties": false,
       "properties": {
         "body": {
