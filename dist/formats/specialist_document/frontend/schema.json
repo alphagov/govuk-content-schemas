@@ -52,6 +52,7 @@
         "marine_notice",
         "medical_safety_alert",
         "oim_project",
+        "product_safety_alert",
         "protected_food_drink_name",
         "raib_report",
         "research_for_development_output",
@@ -394,6 +395,9 @@
         },
         {
           "$ref": "#/definitions/oim_project_metadata"
+        },
+        {
+          "$ref": "#/definitions/product_safety_alert_metadata"
         },
         {
           "$ref": "#/definitions/protected_food_drink_name_metadata"
@@ -2373,6 +2377,92 @@
             "report-on-proposed-regulatory-provision",
             "report-after-regulatory-provision-is-passed-or-made",
             "report-on-provision-considered-to-have-detrimental-effects"
+          ]
+        }
+      }
+    },
+    "product_safety_alert_metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "bulk_published": {
+          "type": "boolean"
+        },
+        "product_alert_type": {
+          "type": "string",
+          "enum": [
+            "safety-alert",
+            "unsafe-product-report",
+            "recall"
+          ]
+        },
+        "product_category": {
+          "type": "string",
+          "enum": [
+            "adaptors-plugs-sockets",
+            "chemical-products",
+            "childcare-articles-childrens-equipment",
+            "clothing-textiles-fashion",
+            "communication-media-equipment",
+            "computers-and-accessories",
+            "construction-products",
+            "cosmetics",
+            "electrical-appliances-equipment",
+            "entertainment-leisure-products-indoors",
+            "entertainment-leisure-products-outdoors",
+            "explosive-atmospheres-equipment",
+            "fireworks-and-pyrotechnic-articles",
+            "food-imitating-products",
+            "furniture",
+            "gas-appliances-and-components",
+            "hand-tools",
+            "household-decorative-articles",
+            "hobby-sports-equipment",
+            "jewellery",
+            "kitchen-cooking-accessories",
+            "lifts",
+            "lighting-products",
+            "machinery",
+            "measuring-instruments",
+            "motor-vehicles",
+            "other",
+            "pressure-equipment-vessels",
+            "personal-protective-equipment-ppe",
+            "recreational-crafts",
+            "stationery",
+            "toys"
+          ]
+        },
+        "product_measure_type": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "ban-marketing-of-product-and-accompanying-measures",
+              "destruction-of-the-product",
+              "import-rejected-at-border",
+              "making-marketing-of-product-subject-to-prior-conditions",
+              "marking-product-with-appropriate-warnings-on-risks",
+              "recall-of-product-from-end-users",
+              "removal-of-listing-by-online-marketplace",
+              "temporary-ban-on-supply-offer-and-display-of-product",
+              "warning-consumers-of-risks",
+              "withdrawal-of-product-from-market",
+              "other"
+            ]
+          }
+        },
+        "product_recall_alert_date": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
+        },
+        "product_risk_level": {
+          "type": "string",
+          "enum": [
+            "serious",
+            "high",
+            "medium",
+            "low"
           ]
         }
       }

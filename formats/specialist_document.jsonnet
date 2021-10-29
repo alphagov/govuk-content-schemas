@@ -18,6 +18,7 @@
     "marine_notice",
     "medical_safety_alert",
     "oim_project",
+    "product_safety_alert",
     "protected_food_drink_name",
     "raib_report",
     "research_for_development_output",
