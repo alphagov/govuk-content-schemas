@@ -17,7 +17,7 @@
     "maib_report",
     "marine_notice",
     "medical_safety_alert",
-    "oim_project",
+    "foo_project",
     "product_safety_alert",
     "protected_food_drink_name",
     "raib_report",
