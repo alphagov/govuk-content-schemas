@@ -487,9 +487,13 @@
         enum: [
           "australia",
           "canada",
+          "france",
+          "germany",
+          "hungary",
           "israel",
           "japan",
           "new-zealand",
+          "slovakia",
           "switzerland",
           "united-kingdom",
           "united-states-of-america",
