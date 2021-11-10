@@ -112,8 +112,8 @@
                   "value": "safety-alert"
                 },
                 {
-                  "label": "Unsafe product report",
-                  "value": "unsafe-product-report"
+                  "label": "Product safety report",
+                  "value": "product-safety-report"
                 },
                 {
                   "label": "Recall",
