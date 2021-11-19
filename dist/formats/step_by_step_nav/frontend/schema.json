@@ -583,6 +583,7 @@
       "description": "The application that renders this item.",
       "type": "string",
       "enum": [
+        "account-api",
         "calculators",
         "calendars",
         "collections",
