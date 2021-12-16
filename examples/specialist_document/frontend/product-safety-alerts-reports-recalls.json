@@ -1,7 +1,7 @@
 {
   "content_id": "574585b6-bf99-4cb1-be8b-628695f358d9",
   "locale": "en",
-  "base_path": "/product-safety-alerts/foo-bar-baz",
+  "base_path": "/product-safety-alerts-reports-recalls/foo-bar-baz",
   "title": "Example document",
   "description": "Some example content",
   "details": {
@@ -88,7 +88,7 @@
       {
         "analytics_identifier": null,
         "api_path": "/api/content/product-safety-alerts",
-        "base_path": "/product-safety-alerts",
+        "base_path": "/product-safety-alerts-reports-recalls",
         "content_id": "a22b3f1f-2c91-49a1-a469-ff21d465c543",
         "description": "Find product safety alerts, unsafe products and recalls",
         "document_type": "finder",
@@ -108,16 +108,16 @@
               "filterable": true,
               "allowed_values": [
                 {
-                  "label": "Safety alert",
-                  "value": "safety-alert"
+                  "label": "Product safety alert",
+                  "value": "product-safety-alert"
                 },
                 {
                   "label": "Product safety report",
                   "value": "product-safety-report"
                 },
                 {
-                  "label": "Recall",
-                  "value": "recall"
+                  "label": "Product recall",
+                  "value": "product-recall"
                 }
               ]
             },
@@ -144,6 +144,10 @@
                 {
                   "label": "Low",
                   "value": "low"
+                },
+                {
+                  "label": "Not provided",
+                  "value": "not-provided"
                 }
               ]
             },
@@ -351,8 +355,8 @@
         },
         "links": {
         },
-        "api_url": "https://www.gov.uk/api/content/product-safety-alerts",
-        "web_url": "https://www.gov.uk/product-safety-alerts"
+        "api_url": "https://www.gov.uk/api/content/product-safety-alerts-reports-recalls",
+        "web_url": "https://www.gov.uk/product-safety-alerts-reports-recalls"
       }
     ],
     "available_translations": [
@@ -360,16 +364,16 @@
         "analytics_identifier": null,
         "content_id": "27210998-66fb-4ff7-8fa8-7115936d296a",
         "description": "Some example content",
-        "document_type": "product_safety_alert",
+        "document_type": "product_safety_alerts_reports_recalls",
         "public_updated_at": "2015-10-01T11:00:38Z",
         "schema_name": "specialist_document",
         "title": "Example document",
-        "base_path": "/product-safety-alerts/example-document",
+        "base_path": "/product-safety-alerts-reports-recalls/example-document",
         "locale": "en",
-        "api_path": "/api/content/product-safety-alerts/example-document",
+        "api_path": "/api/content/product-safety-alerts-reports-recalls/example-document",
         "withdrawn": false,
-        "api_url": "https://www.gov.uk/api/content/product-safety-alerts/example-document",
-        "web_url": "https://www.gov.uk/product-safety-alerts/example-document",
+        "api_url": "https://www.gov.uk/api/content/product-safety-alerts-reports-recalls/example-document",
+        "web_url": "https://www.gov.uk/product-safety-alerts-reports-recalls/example-document",
         "links": {
         }
       }
