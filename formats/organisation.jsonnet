@@ -295,6 +295,7 @@
             "non_ministerial_department",
             "other",
             "public_corporation",
+            "special_health_authority",
             "sub_organisation",
             "tribunal",
           ],

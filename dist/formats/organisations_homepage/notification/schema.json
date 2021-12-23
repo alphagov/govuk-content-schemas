@@ -985,6 +985,9 @@
               "public_corporation": {
                 "$ref": "#/definitions/list_of_sub_organisations"
               },
+              "special_health_authority": {
+                "$ref": "#/definitions/list_of_sub_organisations"
+              },
               "sub_organisation": {
                 "$ref": "#/definitions/list_of_sub_organisations"
               },
