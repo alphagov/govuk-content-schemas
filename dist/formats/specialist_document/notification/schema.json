@@ -386,7 +386,7 @@
               "commercial-rotorcraft",
               "general-aviation-fixed-wing",
               "general-aviation-rotorcraft",
-              "space",
+              "spaceflight",
               "sport-aviation-and-balloons",
               "unmanned-aircraft-systems"
             ]
@@ -417,7 +417,7 @@
             "pre-1997-monthly-report",
             "foreign-report",
             "formal-report",
-            "space",
+            "spaceflight",
             "special-bulletin",
             "safety-study"
           ]
