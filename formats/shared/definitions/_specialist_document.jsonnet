@@ -57,7 +57,7 @@
         "$ref": "#/definitions/oim_project_metadata",
       },
       {
-        "$ref": "#/definitions/product_safety_alert_metadata",
+        "$ref": "#/definitions/product_safety_alert_report_recall_metadata",
       },
       {
         "$ref": "#/definitions/protected_food_drink_name_metadata",
@@ -2100,7 +2100,7 @@
       },
     },
   },
-  product_safety_alert_metadata: {
+  product_safety_alert_report_recall_metadata: {
     type: "object",
     additionalProperties: false,
     properties: {
@@ -2110,9 +2110,9 @@
       product_alert_type: {
         type: "string",
         enum: [
-          "safety-alert",
-          "unsafe-product-report",
-          "recall",
+          "product-safety-alert",
+          "product-safety-report",
+          "product-recall",
         ],
       },
       product_risk_level: {
@@ -2122,6 +2122,7 @@
           "high",
           "medium",
           "low",
+          "not provided",
         ],
       },
       product_category: {
