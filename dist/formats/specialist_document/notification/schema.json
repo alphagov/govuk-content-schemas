@@ -65,6 +65,7 @@
         "uk_market_conformity_assessment_body",
         "countryside_stewardship_grant",
         "dfid_research_output",
+        "drcf_digital_markets_research",
         "drug_safety_update",
         "employment_appeal_tribunal_decision",
         "employment_tribunal_decision",
@@ -463,6 +464,9 @@
         },
         {
           "$ref": "#/definitions/dfid_research_output_metadata"
+        },
+        {
+          "$ref": "#/definitions/drcf_digital_markets_research_metadata"
         },
         {
           "$ref": "#/definitions/drug_safety_update_metadata"
@@ -1235,6 +1239,98 @@
         "first_published_at": {
           "type": "string",
           "pattern": "^[1-9][0-9]{3}[-/](0[1-9]|1[0-2])[-/](0[1-9]|[12][0-9]|3[0-1])$"
+        }
+      }
+    },
+    "drcf_digital_markets_research_metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "bulk_published": {
+          "type": "boolean"
+        },
+        "category": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "ongoing-research",
+              "ad-hoc-research"
+            ]
+          }
+        },
+        "publisher": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "ofcom",
+              "financial-conduct-authority",
+              "competition-and-markets-authority",
+              "information-commissioner's-office",
+              "financial-conduct-authority-insight",
+              "intellectual-property-office",
+              "gambling-commission",
+              "bank-of-england",
+              "advertising-standards-authority"
+            ]
+          }
+        },
+        "research_area": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "future-connectivity-and-internet",
+              "advertising-and-marketing",
+              "financial-services",
+              "media-and-entertainment",
+              "retail-and-digital-commerce",
+              "technology"
+            ]
+          }
+        },
+        "research_topic": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "adtech",
+              "advertising-spend",
+              "data-privacy-access-and-control",
+              "measuring-advertising-effectiveness",
+              "digital-currencies",
+              "blockchain",
+              "fintech",
+              "regtech",
+              "open-banking",
+              "tv-video-and-on-demand",
+              "audio-and-radio",
+              "music-streaming",
+              "gambling",
+              "gaming",
+              "social-media-and-instant-messaging",
+              "news-and-publishing",
+              "online-retail",
+              "general-and-vertical-search",
+              "internet-of-things",
+              "artificial-intelligence",
+              "data-and-ai",
+              "distributed-ledger-technology",
+              "quantum-computing",
+              "privacy-enhancing-technology",
+              "digital-transformation",
+              "cloud-computing",
+              "edge-computing",
+              "application-programming-interface",
+              "personalisation-algorithm",
+              "future-connectivity",
+              "internet-usage-and-attitudes",
+              "safety-and-harms",
+              "intellectual-property",
+              "digital-economy"
+            ]
+          }
         }
       }
     },
