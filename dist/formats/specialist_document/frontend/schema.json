@@ -1148,7 +1148,21 @@
         "bulk_published": {
           "type": "boolean"
         },
-        "category": {
+        "digital_market_research_area": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "future-connectivity-and-internet",
+              "advertising-and-marketing",
+              "financial-services",
+              "media-and-entertainment",
+              "retail-and-digital-commerce",
+              "technology"
+            ]
+          }
+        },
+        "digital_market_research_category": {
           "type": "array",
           "items": {
             "type": "string",
@@ -1158,7 +1172,7 @@
             ]
           }
         },
-        "publisher": {
+        "digital_market_research_publisher": {
           "type": "array",
           "items": {
             "type": "string",
@@ -1175,21 +1189,7 @@
             ]
           }
         },
-        "research_area": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "enum": [
-              "future-connectivity-and-internet",
-              "advertising-and-marketing",
-              "financial-services",
-              "media-and-entertainment",
-              "retail-and-digital-commerce",
-              "technology"
-            ]
-          }
-        },
-        "research_topic": {
+        "digital_market_research_topic": {
           "type": "array",
           "items": {
             "type": "string",

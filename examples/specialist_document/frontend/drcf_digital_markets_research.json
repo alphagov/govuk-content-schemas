@@ -7,16 +7,16 @@
   "details": {
     "body": "",
     "metadata": {
-      "category": [
+      "digital_market_research_category": [
         "ongoing-research"
       ],
-      "publisher": [
+      "digital_market_research_publisher": [
         "ofcom"
       ],
-      "research_area": [
+      "digital_market_research_area": [
         "technology"
       ],
-      "research_topic": [
+      "digital_market_research_topic": [
         "regtech"
       ]
     }

@@ -1110,7 +1110,7 @@
       bulk_published: {
         type: "boolean",
       },
-      category: {
+      digital_market_research_category: {
         type: "array",
         items: {
           type: "string",
@@ -1120,7 +1120,7 @@
           ],
         },
       },
-      publisher: {
+      digital_market_research_publisher: {
         type: "array",
         items: {
           type: "string",
@@ -1137,7 +1137,7 @@
           ],
         },
       },
-      research_area: {
+      digital_market_research_area: {
         type: "array",
         items: {
           type: "string",
@@ -1151,7 +1151,7 @@
           ],
         },
       },
-      research_topic: {
+      digital_market_research_topic: {
         type: "array",
         items: {
           type: "string",
