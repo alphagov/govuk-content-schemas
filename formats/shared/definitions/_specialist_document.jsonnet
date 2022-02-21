@@ -2122,7 +2122,7 @@
           "high",
           "medium",
           "low",
-          "not provided",
+          "not-provided",
         ],
       },
       product_category: {
