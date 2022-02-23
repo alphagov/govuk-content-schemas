@@ -1254,9 +1254,9 @@
           "items": {
             "type": "string",
             "enum": [
-              "future-connectivity-and-internet",
               "advertising-and-marketing",
               "financial-services",
+              "future-connectivity-and-internet",
               "media-and-entertainment",
               "retail-and-digital-commerce",
               "technology"
@@ -1264,29 +1264,30 @@
           }
         },
         "digital_market_research_category": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "enum": [
-              "ongoing-research",
-              "ad-hoc-research"
-            ]
-          }
+          "type": "string",
+          "enum": [
+            "ad-hoc-research",
+            "ongoing-research"
+          ]
+        },
+        "digital_market_research_publish_date": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$"
         },
         "digital_market_research_publisher": {
           "type": "array",
           "items": {
             "type": "string",
             "enum": [
-              "ofcom",
-              "financial-conduct-authority",
-              "competition-and-markets-authority",
-              "information-commissioner's-office",
-              "financial-conduct-authority-insight",
-              "intellectual-property-office",
-              "gambling-commission",
+              "advertising-standards-authority",
               "bank-of-england",
-              "advertising-standards-authority"
+              "competition-and-markets-authority",
+              "financial-conduct-authority",
+              "financial-conduct-authority-insight",
+              "gambling-commission",
+              "information-commissioner's-office",
+              "intellectual-property-office",
+              "ofcom"
             ]
           }
         },
@@ -1297,38 +1298,38 @@
             "enum": [
               "adtech",
               "advertising-spend",
-              "data-privacy-access-and-control",
-              "measuring-advertising-effectiveness",
-              "digital-currencies",
-              "blockchain",
-              "fintech",
-              "regtech",
-              "open-banking",
-              "tv-video-and-on-demand",
+              "application-programming-interface",
+              "artificial-intelligence",
               "audio-and-radio",
-              "music-streaming",
+              "blockchain",
+              "cloud-computing",
+              "data-and-ai",
+              "data-privacy-access-and-control",
+              "digital-currencies",
+              "digital-economy",
+              "digital-transformation",
+              "distributed-ledger-technology",
+              "edge-computing",
+              "fintech",
+              "future-connectivity",
               "gambling",
               "gaming",
-              "social-media-and-instant-messaging",
+              "general-and-vertical-search",
+              "intellectual-property",
+              "internet-of-things",
+              "internet-usage-and-attitudes",
+              "measuring-advertising-effectiveness",
+              "music-streaming",
               "news-and-publishing",
               "online-retail",
-              "general-and-vertical-search",
-              "internet-of-things",
-              "artificial-intelligence",
-              "data-and-ai",
-              "distributed-ledger-technology",
-              "quantum-computing",
-              "privacy-enhancing-technology",
-              "digital-transformation",
-              "cloud-computing",
-              "edge-computing",
-              "application-programming-interface",
+              "open-banking",
               "personalisation-algorithm",
-              "future-connectivity",
-              "internet-usage-and-attitudes",
+              "privacy-enhancing-technology",
+              "quantum-computing",
+              "regtech",
               "safety-and-harms",
-              "intellectual-property",
-              "digital-economy"
+              "social-media-and-instant-messaging",
+              "tv-video-and-on-demand"
             ]
           }
         }
