@@ -1111,14 +1111,11 @@
         type: "boolean",
       },
       digital_market_research_category: {
-        type: "array",
-        items: {
-          type: "string",
-          enum: [
-            "ad-hoc-research",
-            "ongoing-research",
-          ],
-        },
+        type: "string",
+        enum: [
+          "ad-hoc-research",
+          "ongoing-research",
+        ],
       },
       digital_market_research_publisher: {
         type: "array",
