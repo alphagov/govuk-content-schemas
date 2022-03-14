@@ -308,6 +308,9 @@
         },
         "internal_name": {
           "$ref": "#/definitions/taxonomy_internal_name"
+        },
+        "mainstream_browse_type": {
+          "type": "boolean"
         }
       }
     },

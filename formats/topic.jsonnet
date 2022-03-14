@@ -11,6 +11,9 @@
         groups: {
           "$ref": "#/definitions/topic_groups",
         },
+        mainstream_browse_type: {
+          "type": "boolean"
+        }
       },
     },
   },
