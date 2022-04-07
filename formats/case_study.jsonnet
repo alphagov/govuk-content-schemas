@@ -1,6 +1,16 @@
 (import "shared/default_format.jsonnet") + {
   document_type: "case_study",
   definitions: (import "shared/definitions/_whitehall.jsonnet") + {
+    auth_bypass_ids: {
+      type: "object",
+      additionalProperties: false,
+      properties: {
+      auth_bypass_ids: {
+        "$ref": "#/definitions/guid_list",
+        description: "Deprecated: auth_bypass_ids should be sent as a separate field",
+        },
+        },
+      },
     details: {
       type: "object",
       additionalProperties: false,
