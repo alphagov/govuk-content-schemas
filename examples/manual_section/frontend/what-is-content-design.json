@@ -52,14 +52,17 @@
       {
         "content_id": "1326d2a4-849f-44d6-b84a-f81728e62483",
         "title": "Content design: planning, writing and managing content",
-        "locale": "en", "api_path": "/api/content/guidance/content-design",
+        "locale": "en",
+        "api_path": "/api/content/guidance/content-design",
         "base_path": "/guidance/content-design",
         "document_type": "manual",
         "public_updated_at": "2022-02-18T10:49:44Z",
         "schema_name": "manual",
-        "withdrawn":false,
-        "links": {},
-        "api_url": "https://www.gov.uk/api/content/guidance/content-design", "web_url": "https://www.gov.uk/guidance/content-design"
+        "withdrawn": false,
+        "links": {
+        },
+        "api_url": "https://www.gov.uk/api/content/guidance/content-design",
+        "web_url": "https://www.gov.uk/guidance/content-design"
       }
     ]
   },
