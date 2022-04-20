@@ -6,6 +6,7 @@
   "locale": "en",
   "updated_at": "2015-03-05T15:16:29.904Z",
   "public_updated_at": "2015-02-11T13:45:00.000+00:00",
+  "first_published_at": "2015-02-11T13:45:00.000+00:00",
   "details": {
     "child_section_groups": [
       {
@@ -104,7 +105,7 @@
         "change_note": "Updated content",
         "section_id": "VATGPB5350",
         "title": "Police authorities: summary of activities: liabilities I to M",
-        "published_at": "2015-03-05T15:11:32+00:00",
+        "published_at": "2014-03-05T15:11:32+00:00",
         "base_path": "/hmrc-internal-manuals/vat-government-and-public-bodies/vatgpb5350"
       }
     ],
