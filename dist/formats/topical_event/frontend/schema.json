@@ -513,6 +513,45 @@
             }
           }
         },
+        "social_media_links": {
+          "description": "A set of links to social media profiles for the topical event.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "service_type",
+              "title",
+              "href"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "href": {
+                "type": "string",
+                "format": "uri"
+              },
+              "service_type": {
+                "type": "string",
+                "enum": [
+                  "blog",
+                  "email",
+                  "facebook",
+                  "flickr",
+                  "foursquare",
+                  "google-plus",
+                  "instagram",
+                  "linkedin",
+                  "other",
+                  "pinterest",
+                  "twitter",
+                  "youtube"
+                ]
+              },
+              "title": {
+                "type": "string"
+              }
+            }
+          }
+        },
         "start_date": {
           "type": "string",
           "format": "date-time"
