@@ -40,6 +40,45 @@
           },
           description: "A set of featured documents to display for the Topical Event.",
         },
+        social_media_links: {
+          type: "array",
+          items: {
+            type: "object",
+            additionalProperties: false,
+            required: [
+              "service_type",
+              "title",
+              "href",
+            ],
+            properties: {
+              service_type: {
+                type: "string",
+                enum: [
+                  "blog",
+                  "email",
+                  "facebook",
+                  "flickr",
+                  "foursquare",
+                  "google-plus",
+                  "instagram",
+                  "linkedin",
+                  "other",
+                  "pinterest",
+                  "twitter",
+                  "youtube",
+                ],
+              },
+              title: {
+                type: "string",
+              },
+              href: {
+                type: "string",
+                format: "uri",
+              },
+            },
+          },
+          description: "A set of links to social media profiles for the topical event.",
+        },
       },
     },
   },
