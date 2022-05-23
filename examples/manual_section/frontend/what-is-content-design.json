@@ -64,6 +64,66 @@
         "api_url": "https://www.gov.uk/api/content/guidance/content-design",
         "web_url": "https://www.gov.uk/guidance/content-design"
       }
+    ],
+    "organisations": [
+      {
+        "content_id": "af07d5a5-df63-4ddc-9383-6a666845ebe9",
+        "title": "Government Digital Service",
+        "locale": "en",
+        "analytics_identifier": "OT1056",
+        "api_path": "/api/content/government/organisations/government-digital-service",
+        "base_path": "/government/organisations/government-digital-service",
+        "document_type": "organisation",
+        "schema_name": "organisation",
+        "withdrawn": false,
+        "details": {
+          "logo": {
+            "crest": "single-identity",
+            "formatted_title": "Government Digital Service"
+          },
+          "brand": "cabinet-office",
+          "default_news_image": null,
+          "organisation_govuk_status": {
+            "url": null,
+            "status": "live",
+            "updated_at": null
+          }
+        },
+        "links": {
+        },
+        "api_url": "https://www.gov.uk/api/content/government/organisations/government-digital-service",
+        "web_url": "https://www.gov.uk/government/organisations/government-digital-service"
+      }
+    ],
+    "primary_publishing_organisation": [
+      {
+        "content_id": "af07d5a5-df63-4ddc-9383-6a666845ebe9",
+        "title": "Government Digital Service",
+        "locale": "en",
+        "analytics_identifier": "OT1056",
+        "api_path": "/api/content/government/organisations/government-digital-service",
+        "base_path": "/government/organisations/government-digital-service",
+        "document_type": "organisation",
+        "schema_name": "organisation",
+        "withdrawn": false,
+        "details": {
+          "logo": {
+            "crest": "single-identity",
+            "formatted_title": "Government Digital Service"
+          },
+          "brand": "cabinet-office",
+          "default_news_image": null,
+          "organisation_govuk_status": {
+            "url": null,
+            "status": "live",
+            "updated_at": null
+          }
+        },
+        "links": {
+        },
+        "api_url": "https://www.gov.uk/api/content/government/organisations/government-digital-service",
+        "web_url": "https://www.gov.uk/government/organisations/government-digital-service"
+      }
     ]
   },
   "schema_name": "manual_section",
