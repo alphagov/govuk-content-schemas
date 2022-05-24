@@ -281,25 +281,5 @@
     description: "DEPRECATED. The date the content was first published. Used in details. Deprecated in favour of top level `first_published_at`.",
     type: "string",
     format: "date-time",
-  },
-  brexit_no_deal_notice: {
-    type: "array",
-    items: {
-      type: "object",
-      additionalProperties: false,
-      required: [
-        "title",
-        "href",
-      ],
-      properties: {
-        title: {
-          type: "string",
-        },
-        href: {
-          type: "string",
-        },
-      },
-    },
-    description: "A list of URLs and titles for a brexit no deal notice.",
   }
 }
