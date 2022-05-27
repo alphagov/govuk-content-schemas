@@ -8,6 +8,7 @@
         "body",
         "public_timestamp",
         "first_published_version",
+        "political",
       ],
       properties: {
         body: {
@@ -30,11 +31,24 @@
         },
         brexit_no_deal_notice: {
           "$ref": "#/definitions/brexit_no_deal_notice",
+        },
+        political: {
+          "$ref": "#/definitions/political",
         }
       },
     },
   },
+  links: (import "shared/base_links.jsonnet") + {
+    government: {
+      description: "The government associated with this document",
+      maxItems: 1,
+    },
+  },
   edition_links: (import "shared/base_edition_links.jsonnet") + {
+    government: {
+      description: "The government associated with this document",
+      maxItems: 1,
+    },
     organisations: "",
     parent: "",
     primary_publishing_organisation: {
