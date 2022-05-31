@@ -4,6 +4,10 @@
       type: "object",
       additionalProperties: false,
       properties: {
+        body: {
+          description: "The main content provided as HTML rendered from govspeak",
+          type: "string"
+        },
         start_date: {
           type: "string",
           format: "date-time",
