@@ -59,6 +59,11 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "government": {
+          "description": "The government associated with this document",
+          "$ref": "#/definitions/guid_list",
+          "maxItems": 1
+        },
         "organisations": {
           "$ref": "#/definitions/guid_list"
         },
@@ -211,7 +216,8 @@
       "required": [
         "body",
         "public_timestamp",
-        "first_published_version"
+        "first_published_version",
+        "political"
       ],
       "additionalProperties": false,
       "properties": {
@@ -231,6 +237,9 @@
         "isbn": {
           "description": "Identifies the Print ISBN to be displayed when printing an HTML Publication",
           "type": "string"
+        },
+        "political": {
+          "$ref": "#/definitions/political"
         },
         "public_timestamp": {
           "type": "string",
@@ -324,6 +333,10 @@
         "zh-hk",
         "zh-tw"
       ]
+    },
+    "political": {
+      "description": "If the content is considered political in nature, reflecting views of the government it was published under.",
+      "type": "boolean"
     },
     "public_updated_at": {
       "description": "When the content was last significantly changed (a major update). Shown to users.  Automatically determined by the publishing-api, unless overridden by the publishing application.",
