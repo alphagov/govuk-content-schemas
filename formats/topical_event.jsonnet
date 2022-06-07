@@ -8,6 +8,9 @@
           description: "The main content provided as HTML rendered from govspeak",
           type: "string"
         },
+        about_page_link_text: {
+          type: "string",
+        },
         start_date: {
           type: "string",
           format: "date-time",

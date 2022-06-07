@@ -578,6 +578,9 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "about_page_link_text": {
+          "type": "string"
+        },
         "body": {
           "description": "The main content provided as HTML rendered from govspeak",
           "type": "string"
