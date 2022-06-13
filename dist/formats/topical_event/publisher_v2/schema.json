@@ -364,6 +364,17 @@
           "type": "string",
           "format": "date-time"
         },
+        "image": {
+          "properties": {
+            "alt_text": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string",
+              "format": "uri"
+            }
+          }
+        },
         "ordered_featured_documents": {
           "description": "A set of featured documents to display for the Topical Event.",
           "type": "array",
