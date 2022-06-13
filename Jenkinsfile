@@ -21,7 +21,6 @@ def dependentApplications = [
   'hmrc-manuals-api',
   'info-frontend',
   'licencefinder',
-  'manuals-frontend',
   'manuals-publisher',
   'publisher',
   'publishing-api',
