@@ -11,6 +11,17 @@
         about_page_link_text: {
           type: "string",
         },
+        image: {
+          properties: {
+           url: {
+             type: "string",
+             format: "uri",
+           },
+           alt_text: {
+             type: "string",
+           },
+          },
+        },
         start_date: {
           type: "string",
           format: "date-time",
