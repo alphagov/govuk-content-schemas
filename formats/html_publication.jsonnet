@@ -34,7 +34,10 @@
         },
         political: {
           "$ref": "#/definitions/political",
-        }
+        },
+        national_applicability: {
+          "$ref": "#/definitions/national_applicability",
+        },
       },
     },
   },
