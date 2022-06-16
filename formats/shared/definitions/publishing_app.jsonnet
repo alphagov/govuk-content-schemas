@@ -19,7 +19,6 @@
       "info-frontend",
       "licencefinder",
       "local-links-manager",
-      "manuals-frontend",
       "manuals-publisher",
       "maslow",
       "performanceplatform-big-screen-view",
