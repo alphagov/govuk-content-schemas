@@ -30,6 +30,9 @@
           type: "string",
           format: "date-time",
         },
+        emphasised_organisations: {
+          "$ref": "#/definitions/emphasised_organisations",
+        },
         ordered_featured_documents: {
           type: "array",
           items: {

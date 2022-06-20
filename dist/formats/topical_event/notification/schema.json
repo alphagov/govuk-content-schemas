@@ -588,6 +588,9 @@
         "change_history": {
           "$ref": "#/definitions/change_history"
         },
+        "emphasised_organisations": {
+          "$ref": "#/definitions/emphasised_organisations"
+        },
         "end_date": {
           "type": "string",
           "format": "date-time"
@@ -674,6 +677,13 @@
           "type": "string",
           "format": "date-time"
         }
+      }
+    },
+    "emphasised_organisations": {
+      "description": "The content ids of the organisations that should be displayed first in the list of organisations related to the item, these content ids must be present in the item organisation links hash.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/guid"
       }
     },
     "first_published_at": {
