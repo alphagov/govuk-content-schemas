@@ -19,7 +19,7 @@
           "$ref": "#/definitions/body",
         },
         manual: {
-          "$ref": "#/definitions/manual_section_parent",
+          "$ref": "#/definitions/hmrc_manual_section_parent",
         },
         organisations: {
           "$ref": "#/definitions/manual_organisations",
