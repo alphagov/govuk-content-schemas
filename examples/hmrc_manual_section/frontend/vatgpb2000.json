@@ -55,7 +55,8 @@
       }
     ],
     "manual": {
-      "base_path": "/hmrc-internal-manuals/vat-government-and-public-bodies"
+      "base_path": "/hmrc-internal-manuals/vat-government-and-public-bodies",
+      "title": "VAT Government and Public Bodies"
     },
     "organisations": [
       {
