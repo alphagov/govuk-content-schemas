@@ -100,7 +100,8 @@
     type: "object",
     additionalProperties: false,
     required: [
-      "base_path"
+      "base_path",
+      "title",
     ],
     properties: {
       base_path: {
