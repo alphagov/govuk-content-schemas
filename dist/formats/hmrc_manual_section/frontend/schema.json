@@ -536,8 +536,7 @@
       "description": "The parent manual for a manual section",
       "type": "object",
       "required": [
-        "base_path",
-        "title"
+        "base_path"
       ],
       "additionalProperties": false,
       "properties": {
