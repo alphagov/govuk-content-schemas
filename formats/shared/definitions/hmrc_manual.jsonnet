@@ -95,20 +95,4 @@
       },
     },
   },
-  hmrc_manual_section_parent: {
-    description: "The parent manual for a manual section",
-    type: "object",
-    additionalProperties: false,
-    required: [
-      "base_path"
-    ],
-    properties: {
-      base_path: {
-        "$ref": "#/definitions/absolute_path",
-      },
-      title: {
-        type: "string",
-      }
-    },
-  },
 }

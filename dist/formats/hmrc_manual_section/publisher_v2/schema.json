@@ -189,7 +189,7 @@
           "$ref": "#/definitions/hmrc_manual_child_section_groups"
         },
         "manual": {
-          "$ref": "#/definitions/hmrc_manual_section_parent"
+          "$ref": "#/definitions/manual_section_parent"
         },
         "organisations": {
           "$ref": "#/definitions/manual_organisations"
@@ -275,22 +275,6 @@
           "title": {
             "type": "string"
           }
-        }
-      }
-    },
-    "hmrc_manual_section_parent": {
-      "description": "The parent manual for a manual section",
-      "type": "object",
-      "required": [
-        "base_path"
-      ],
-      "additionalProperties": false,
-      "properties": {
-        "base_path": {
-          "$ref": "#/definitions/absolute_path"
-        },
-        "title": {
-          "type": "string"
         }
       }
     },
@@ -386,6 +370,19 @@
           "web_url": {
             "type": "string"
           }
+        }
+      }
+    },
+    "manual_section_parent": {
+      "description": "The parent manual for a manual section",
+      "type": "object",
+      "required": [
+        "base_path"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "base_path": {
+          "$ref": "#/definitions/absolute_path"
         }
       }
     },
