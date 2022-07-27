@@ -477,12 +477,16 @@
     "details": {
       "type": "object",
       "required": [
-        "ordered_featured_links"
+        "ordered_featured_links",
+        "mission_statement"
       ],
       "additionalProperties": false,
       "properties": {
         "change_history": {
           "$ref": "#/definitions/change_history"
+        },
+        "mission_statement": {
+          "type": "string"
         },
         "ordered_featured_links": {
           "$ref": "#/definitions/ordered_featured_links"

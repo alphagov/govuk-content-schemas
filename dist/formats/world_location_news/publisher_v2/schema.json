@@ -352,10 +352,14 @@
     "details": {
       "type": "object",
       "required": [
-        "ordered_featured_links"
+        "ordered_featured_links",
+        "mission_statement"
       ],
       "additionalProperties": false,
       "properties": {
+        "mission_statement": {
+          "type": "string"
+        },
         "ordered_featured_links": {
           "$ref": "#/definitions/ordered_featured_links"
         }
