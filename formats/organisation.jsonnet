@@ -96,24 +96,7 @@
           description: "A string containing sentences and links to corporate information pages that are not included in ordered_corporate_information_pages.",
         },
         ordered_featured_links: {
-          type: "array",
-          items: {
-            type: "object",
-            additionalProperties: false,
-            required: [
-              "title",
-              "href",
-            ],
-            properties: {
-              title: {
-                type: "string",
-              },
-              href: {
-                type: "string",
-              },
-            },
-          },
-          description: "A set of featured links to display for the organisation.",
+           "$ref": "#/definitions/ordered_featured_links",
         },
         ordered_featured_documents: {
           type: "array",

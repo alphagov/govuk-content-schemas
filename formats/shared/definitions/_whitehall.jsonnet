@@ -301,5 +301,25 @@
       },
     },
     description: "A list of URLs and titles for a brexit no deal notice.",
-  }
+  },
+  ordered_featured_links: {
+    type: "array",
+    items: {
+      type: "object",
+      additionalProperties: false,
+      required: [
+        "title",
+        "href",
+      ],
+      properties: {
+        title: {
+          type: "string",
+        },
+        href: {
+          type: "string",
+        },
+      },
+    },
+    description: "A set of featured links to display.",
+  },
 }

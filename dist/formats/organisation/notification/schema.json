@@ -661,24 +661,7 @@
           }
         },
         "ordered_featured_links": {
-          "description": "A set of featured links to display for the organisation.",
-          "type": "array",
-          "items": {
-            "type": "object",
-            "required": [
-              "title",
-              "href"
-            ],
-            "additionalProperties": false,
-            "properties": {
-              "href": {
-                "type": "string"
-              },
-              "title": {
-                "type": "string"
-              }
-            }
-          }
+          "$ref": "#/definitions/ordered_featured_links"
         },
         "ordered_promotional_features": {
           "description": "A set of promotional features to display for the organisation. Turn into proper links once organisations are fully migrated.",
@@ -1159,6 +1142,26 @@
         "zh-hk",
         "zh-tw"
       ]
+    },
+    "ordered_featured_links": {
+      "description": "A set of featured links to display.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "title",
+          "href"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "href": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          }
+        }
+      }
     },
     "payload_version": {
       "description": "Counter to indicate when the payload was generated",

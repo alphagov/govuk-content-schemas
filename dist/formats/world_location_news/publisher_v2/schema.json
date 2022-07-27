@@ -351,8 +351,14 @@
     },
     "details": {
       "type": "object",
+      "required": [
+        "ordered_featured_links"
+      ],
       "additionalProperties": false,
       "properties": {
+        "ordered_featured_links": {
+          "$ref": "#/definitions/ordered_featured_links"
+        }
       }
     },
     "first_published_at": {
@@ -441,6 +447,26 @@
         "zh-hk",
         "zh-tw"
       ]
+    },
+    "ordered_featured_links": {
+      "description": "A set of featured links to display.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "title",
+          "href"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "href": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          }
+        }
+      }
     },
     "public_updated_at": {
       "description": "When the content was last significantly changed (a major update). Shown to users.  Automatically determined by the publishing-api, unless overridden by the publishing application.",

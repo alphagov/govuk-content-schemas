@@ -576,10 +576,16 @@
     },
     "details": {
       "type": "object",
+      "required": [
+        "ordered_featured_links"
+      ],
       "additionalProperties": false,
       "properties": {
         "change_history": {
           "$ref": "#/definitions/change_history"
+        },
+        "ordered_featured_links": {
+          "$ref": "#/definitions/ordered_featured_links"
         }
       }
     },
@@ -808,6 +814,26 @@
         "zh-hk",
         "zh-tw"
       ]
+    },
+    "ordered_featured_links": {
+      "description": "A set of featured links to display.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "title",
+          "href"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "href": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          }
+        }
+      }
     },
     "payload_version": {
       "description": "Counter to indicate when the payload was generated",
