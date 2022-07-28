@@ -463,46 +463,7 @@
           }
         },
         "ordered_featured_documents": {
-          "description": "A set of featured documents to display for the organisation. Turn into proper links once organisations are fully migrated.",
-          "type": "array",
-          "items": {
-            "type": "object",
-            "required": [
-              "title",
-              "href",
-              "image",
-              "summary",
-              "public_updated_at",
-              "document_type"
-            ],
-            "additionalProperties": false,
-            "properties": {
-              "document_type": {
-                "type": [
-                  "string",
-                  "null"
-                ]
-              },
-              "href": {
-                "type": "string"
-              },
-              "image": {
-                "$ref": "#/definitions/image"
-              },
-              "public_updated_at": {
-                "type": [
-                  "string",
-                  "null"
-                ]
-              },
-              "summary": {
-                "type": "string"
-              },
-              "title": {
-                "type": "string"
-              }
-            }
-          }
+          "$ref": "#/definitions/ordered_featured_documents"
         },
         "ordered_featured_links": {
           "$ref": "#/definitions/ordered_featured_links"
@@ -973,6 +934,48 @@
         "zh-hk",
         "zh-tw"
       ]
+    },
+    "ordered_featured_documents": {
+      "description": "A set of featured documents to display.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "title",
+          "href",
+          "image",
+          "summary",
+          "public_updated_at",
+          "document_type"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "document_type": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "href": {
+            "type": "string"
+          },
+          "image": {
+            "$ref": "#/definitions/image"
+          },
+          "public_updated_at": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "summary": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          }
+        }
+      }
     },
     "ordered_featured_links": {
       "description": "A set of featured links to display.",
