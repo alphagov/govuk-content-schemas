@@ -15,34 +15,6 @@
   "withdrawn_notice": {
   },
   "links": {
-    "facet_groups": [
-      {
-        "content_id": "52435175-82ed-4a04-adef-74c0199d0f46",
-        "title": "Find EU Exit guidance business",
-        "schema_name": "facet_group",
-        "locale": "en",
-        "details": {
-          "name": "Find EU Exit guidance business",
-          "description": "Facets for use with content relating to EU Exit business guidance."
-        },
-        "links": {
-        }
-      }
-    ],
-    "facet_values": [
-      {
-        "content_id": "ec2c2efd-4cf1-4a5a-94fb-c905d2f3924b",
-        "title": "Tourism",
-        "schema_name": "facet_value",
-        "locale": "en",
-        "details": {
-          "label": "Tourism",
-          "value": "tourism"
-        },
-        "links": {
-        }
-      }
-    ],
     "finder": [
       {
         "api_path": "/api/content/eu-withdrawal-act-2018-statutory-instruments",

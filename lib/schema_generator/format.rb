@@ -272,8 +272,6 @@ module SchemaGenerator
       ALLOWED_KEYS = %w[description required minItems maxItems].freeze
       LINKS_WITHOUT_BASE_PATHS = %w[
         facets
-        facet_groups
-        facet_values
         ordered_board_members
         ordered_chief_professional_officers
         ordered_contacts
