@@ -249,14 +249,6 @@
           "description": "Link type automatically added by Publishing API",
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
-        "facet_groups": {
-          "description": "Prototype-stage metadata tagging tree roots for this content item. A content item my belong to many facet groups without having any specific facet_values links.",
-          "$ref": "#/definitions/frontend_links"
-        },
-        "facet_values": {
-          "description": "Prototype-stage metadata tagging values for this content item, a content item can be linked to many facet values from varying facet groups.",
-          "$ref": "#/definitions/frontend_links"
-        },
         "finder": {
           "description": "Powers links from content back to finders the content is surfaced on",
           "$ref": "#/definitions/frontend_links_with_base_path"
