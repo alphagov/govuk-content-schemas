@@ -69,7 +69,7 @@
         },
         "facet_values": {
           "description": "Possible facet_values to show for non-dynamic select facets. All values are shown regardless of the search.",
-          "$ref": "#/definitions/frontend_links"
+          "$ref": "#/definitions/frontend_links_with_base_path"
         },
         "level_one_taxons": {
           "description": "Link type automatically added by Publishing API",
