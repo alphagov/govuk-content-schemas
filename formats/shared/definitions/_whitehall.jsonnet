@@ -301,5 +301,67 @@
       },
     },
     description: "A list of URLs and titles for a brexit no deal notice.",
+  },
+  ordered_featured_links: {
+    type: "array",
+    items: {
+      type: "object",
+      additionalProperties: false,
+      required: [
+        "title",
+        "href",
+      ],
+      properties: {
+        title: {
+          type: "string",
+        },
+        href: {
+          type: "string",
+        },
+      },
+    },
+    description: "A set of featured links to display.",
+  },
+  ordered_featured_documents: {
+    type: "array",
+    items: {
+      type: "object",
+      additionalProperties: false,
+      required: [
+        "title",
+        "href",
+        "image",
+        "summary",
+        "public_updated_at",
+        "document_type",
+      ],
+      properties: {
+        title: {
+          type: "string",
+        },
+        href: {
+          type: "string",
+        },
+        image: {
+          "$ref": "#/definitions/image",
+        },
+        summary: {
+          type: "string",
+        },
+        public_updated_at: {
+          type: [
+            "string",
+            "null",
+          ],
+        },
+        document_type: {
+          type: [
+            "string",
+            "null",
+          ],
+        },
+      },
+    },
+    description: "A set of featured documents to display.",
   }
 }

@@ -96,66 +96,10 @@
           description: "A string containing sentences and links to corporate information pages that are not included in ordered_corporate_information_pages.",
         },
         ordered_featured_links: {
-          type: "array",
-          items: {
-            type: "object",
-            additionalProperties: false,
-            required: [
-              "title",
-              "href",
-            ],
-            properties: {
-              title: {
-                type: "string",
-              },
-              href: {
-                type: "string",
-              },
-            },
-          },
-          description: "A set of featured links to display for the organisation.",
+           "$ref": "#/definitions/ordered_featured_links",
         },
         ordered_featured_documents: {
-          type: "array",
-          items: {
-            type: "object",
-            additionalProperties: false,
-            required: [
-              "title",
-              "href",
-              "image",
-              "summary",
-              "public_updated_at",
-              "document_type",
-            ],
-            properties: {
-              title: {
-                type: "string",
-              },
-              href: {
-                type: "string",
-              },
-              image: {
-                "$ref": "#/definitions/image",
-              },
-              summary: {
-                type: "string",
-              },
-              public_updated_at: {
-                type: [
-                  "string",
-                  "null",
-                ],
-              },
-              document_type: {
-                type: [
-                  "string",
-                  "null",
-                ],
-              },
-            },
-          },
-          description: "A set of featured documents to display for the organisation. Turn into proper links once organisations are fully migrated.",
+          "$ref": "#/definitions/ordered_featured_documents",
         },
         ordered_promotional_features: {
           type: "array",
