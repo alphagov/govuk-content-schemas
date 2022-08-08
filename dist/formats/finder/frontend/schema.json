@@ -70,11 +70,6 @@
         "email_alert_signup": {
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
-        "facet_group": {
-          "description": "The facet_group this finder uses to define available filters.",
-          "$ref": "#/definitions/frontend_links_with_base_path",
-          "maxItems": 1
-        },
         "finder": {
           "description": "Powers links from content back to finders the content is surfaced on",
           "$ref": "#/definitions/frontend_links_with_base_path"
@@ -537,12 +532,6 @@
           "type": "string"
         },
         "email_document_supertype": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "facet_groups": {
           "type": "array",
           "items": {
             "type": "string"
