@@ -48,12 +48,6 @@
           type: "string",
         },
       },
-      facet_groups: {
-          type: "array",
-          items: {
-              type: "string",
-          },
-      },
       content_purpose_subgroup: {
         type: "array",
         items: {
