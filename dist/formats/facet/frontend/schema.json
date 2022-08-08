@@ -67,20 +67,48 @@
           "description": "Link type automatically added by Publishing API",
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
-        "facet_values": {
-          "description": "Possible facet_values to show for non-dynamic select facets. All values are shown regardless of the search.",
+        "finder": {
+          "description": "Powers links from content back to finders the content is surfaced on",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
+        "lead_organisations": {
+          "description": "DEPRECATED: A subset of organisations that should be emphasised in relation to this content item. All organisations specified here should also be part of the organisations array.",
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
         "level_one_taxons": {
           "description": "Link type automatically added by Publishing API",
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
+        "mainstream_browse_pages": {
+          "description": "Powers the /browse section of the site. These are known as sections in some legacy apps.",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
+        "meets_user_needs": {
+          "description": "The user needs this piece of content meets.",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
         "ministers": {
           "description": "Link type automatically added by Publishing API",
           "$ref": "#/definitions/frontend_links"
         },
+        "ordered_related_items": {
+          "description": "Related items, can be any page on GOV.UK. Mostly used for mainstream content to power the sidebar. Ordering of the links is determined by the editor in Content Tagger.",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
+        "ordered_related_items_overrides": {
+          "description": "Related items, can be any page on GOV.UK. Overrides 'more like this' automatically generated links in the beta navigation.",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
+        "organisations": {
+          "description": "All organisations linked to this content item. This should include lead organisations.",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
+        "original_primary_publishing_organisation": {
+          "description": "The organisation that published the original version of the page. Corresponds to the first of the 'Lead organisations' in Whitehall for the first edition, and is empty for all other publishing applications.",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
         "parent": {
-          "description": "The facet_group this facet belongs to.",
+          "description": "The parent content item.",
           "$ref": "#/definitions/frontend_links_with_base_path",
           "maxItems": 1
         },
@@ -96,6 +124,11 @@
           "description": "A largely deprecated tag currently only used to power email alerts.",
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
+        "primary_publishing_organisation": {
+          "description": "The organisation that published the page. Corresponds to the first of the 'Lead organisations' in Whitehall, and is empty for all other publishing applications.",
+          "$ref": "#/definitions/frontend_links_with_base_path",
+          "maxItems": 1
+        },
         "related_to_step_navs": {
           "description": "Link type automatically added by Publishing API",
           "$ref": "#/definitions/frontend_links_with_base_path"
@@ -108,8 +141,20 @@
           "description": "Link type automatically added by Publishing API",
           "$ref": "#/definitions/frontend_links_with_base_path"
         },
+        "suggested_ordered_related_items": {
+          "description": "New A/B test suggestions for related items. Used for displaying related content on most pages, except for step-by-step and fatality notices. Links and their ordering are determined by the machine learning algorithms included in this A/B test.",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
+        "taxons": {
+          "description": "Prototype-stage taxonomy label for this content item",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
         "topic_taxonomy_taxons": {
           "description": "Link type automatically added by Publishing API",
+          "$ref": "#/definitions/frontend_links_with_base_path"
+        },
+        "topics": {
+          "description": "Powers the /topic section of the site. These are known as specialist sectors in some legacy apps.",
           "$ref": "#/definitions/frontend_links_with_base_path"
         }
       }

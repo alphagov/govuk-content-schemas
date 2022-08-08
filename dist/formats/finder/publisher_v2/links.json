@@ -16,11 +16,6 @@
         "email_alert_signup": {
           "$ref": "#/definitions/guid_list"
         },
-        "facet_group": {
-          "description": "The facet_group this finder uses to define available filters.",
-          "$ref": "#/definitions/guid_list",
-          "maxItems": 1
-        },
         "finder": {
           "description": "Powers links from content back to finders the content is surfaced on",
           "$ref": "#/definitions/guid_list"

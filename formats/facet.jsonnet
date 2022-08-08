@@ -84,13 +84,4 @@
       },
     },
   },
-  links: {
-    facet_values: {
-      description: "Possible facet_values to show for non-dynamic select facets. All values are shown regardless of the search.",
-    },
-    parent: {
-      description: "The facet_group this facet belongs to.",
-      maxItems: 1,
-    },
-  },
 }

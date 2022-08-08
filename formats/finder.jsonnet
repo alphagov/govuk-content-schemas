@@ -77,9 +77,5 @@
     related: "",
     email_alert_signup: "",
     available_translations: "",
-    facet_group: {
-      description: "The facet_group this finder uses to define available filters.",
-      maxItems: 1,
-    },
   },
 }

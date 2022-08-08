@@ -412,12 +412,6 @@
             "type": "string"
           }
         },
-        "facet_groups": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
         "format": {
           "type": "string"
         },
