@@ -8,6 +8,7 @@
       "calendars",
       "collections-publisher",
       "contacts",
+      "contentful-listener",
       "content-publisher",
       "content-tagger",
       "email-alert-frontend",
