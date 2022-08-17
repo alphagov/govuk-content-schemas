@@ -18,6 +18,13 @@
         ordered_featured_documents: {
           "$ref": "#/definitions/ordered_featured_documents",
         },
+        "world_location_news_type": {
+          "type": "string",
+          "enum": [
+            "international_delegation",
+            "world_location"
+          ]
+        },
       },
     },
   },

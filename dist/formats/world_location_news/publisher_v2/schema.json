@@ -364,6 +364,13 @@
         },
         "ordered_featured_links": {
           "$ref": "#/definitions/ordered_featured_links"
+        },
+        "world_location_news_type": {
+          "type": "string",
+          "enum": [
+            "international_delegation",
+            "world_location"
+          ]
         }
       }
     },
