@@ -2309,7 +2309,8 @@
           "registered",
           "applied-for",
           "in-consultation",
-          "rejected"
+          "rejected",
+          "cancelled",
         ]
       },
       class_category: {

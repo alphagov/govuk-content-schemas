@@ -2607,7 +2607,8 @@
             "registered",
             "applied-for",
             "in-consultation",
-            "rejected"
+            "rejected",
+            "cancelled"
           ]
         },
         "time_registration": {
