@@ -6,6 +6,9 @@
         "$ref": "#/definitions/aaib_report_metadata",
       },
       {
+        "$ref": "#/definitions/animal_disease_case_metadata",
+      },
+      {
         "$ref": "#/definitions/asylum_support_decision_metadata",
       },
       {
@@ -166,6 +169,76 @@
       },
       registration: {
         type: "string",
+      },
+    },
+  },
+  animal_disease_case_metadata: {
+    type: "object",
+    additionalProperties: false,
+    properties: {
+      bulk_published: {
+        type: "boolean",
+      },
+      disease_type: {
+        type: "array",
+        items: {
+          type: "string",
+          enum: [
+            "african-horse-sickness",
+            "african-swine-fever",
+            "bird-flu",
+            "bluetongue",
+            "classical-swine-fever",
+            "foot-and-mouth-disease",
+            "newcastle-disease",
+            "swine-vesicular-disease",
+          ]
+        }
+      },
+      zone_restriction: {
+        type: "string",
+        enum: [
+          "in-force",
+          "no-longer-in-force",
+        ]
+      },
+      zone_type: {
+        type: "array",
+        items: {
+          type: "string",
+          enum: [
+            "protection",
+            "surveillance",
+            "restricted",
+            "temporary-control",
+            "captive-bird",
+            "wild-bird-control",
+            "wild-bird-monitoring"
+          ]
+        }
+      },
+      virus_strain: {
+        type: "string",
+        enum: [
+          "h5nx",
+          "h5n1",
+          "h5n2",
+          "h5n3",
+          "h5n5",
+          "h5n6",
+          "h5n8",
+          "h7nx",
+          "h7n7",
+          "undetermined",
+        ]
+      },
+      disease_case_opened_date: {
+        type: "string",
+        pattern: "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$",
+      },
+      disease_case_closed_date: {
+        type: "string",
+        pattern: "^[1-9][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$",
       },
     },
   },
