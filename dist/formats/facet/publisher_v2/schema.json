@@ -32,6 +32,12 @@
         "string"
       ]
     },
+    "cms_entity_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
     "description": {
       "$ref": "#/definitions/description_optional"
     },
@@ -354,6 +360,7 @@
         "calendars",
         "collections-publisher",
         "contacts",
+        "contentful-listener",
         "content-publisher",
         "content-tagger",
         "email-alert-frontend",
