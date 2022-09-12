@@ -40,11 +40,6 @@
             "string",
             "null",
           ],
-          enum: [
-            "Unpaid",
-            "Paid as a Parliamentary Secretary",
-            null,
-          ],
         },
         supports_historical_accounts: {
           type: "boolean",

@@ -449,11 +449,6 @@
           "type": [
             "string",
             "null"
-          ],
-          "enum": [
-            "Unpaid",
-            "Paid as a Parliamentary Secretary",
-            null
           ]
         },
         "seniority": {
