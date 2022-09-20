@@ -1089,8 +1089,10 @@
             "type": "string",
             "enum": [
               "advertising-standards-authority",
+              "bank-for-international-settlements",
               "bank-of-england",
               "competition-and-markets-authority",
+              "digital-regulation-cooperation-forum",
               "financial-conduct-authority",
               "financial-conduct-authority-insight",
               "gambling-commission",
@@ -1128,6 +1130,7 @@
               "internet-of-things",
               "internet-usage-and-attitudes",
               "measuring-advertising-effectiveness",
+              "mobile-devices",
               "music-streaming",
               "news-and-publishing",
               "online-retail",
@@ -1138,6 +1141,7 @@
               "regtech",
               "safety-and-harms",
               "social-media-and-instant-messaging",
+              "standards",
               "tv-video-and-on-demand"
             ]
           }
