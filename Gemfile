@@ -2,8 +2,8 @@ source "https://rubygems.org"
 
 ruby File.read(".ruby-version").chomp
 
-gem "json-schema"
 gem "jsonnet"
+gem "json-schema"
 gem "rake"
 gem "rspec"
 

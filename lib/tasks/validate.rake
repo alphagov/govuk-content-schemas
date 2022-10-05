@@ -11,7 +11,7 @@ def validate_schemas(schema_file_list)
   rescue JSON::Schema::ValidationError => e
     validation_errors << "#{schema}: #{e.message}"
   end
-  abort "\nThe following schemas aren't valid:\n" + validation_errors.join("\n") if validation_errors.any?
+  abort "\nThe following schemas aren't valid:\n#{validation_errors.join("\n")}" if validation_errors.any?
 end
 
 desc "Validate that generated schemas are valid schemas"
@@ -50,7 +50,7 @@ task :format_examples do
     print "."
     example = JSON.parse(File.read(example_path))
     pretty_json = JSON.pretty_generate(example)
-    File.write(example_path, pretty_json + "\n")
+    File.write(example_path, "#{pretty_json}\n")
   end
 
   puts "✔︎"

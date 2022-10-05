@@ -37,7 +37,7 @@ module SchemaGenerator
     end
 
     def self.write(full_filename, schema_hash)
-      schema_json = JSON.pretty_generate(ordered_schema(schema_hash)) + "\n"
+      schema_json = "#{JSON.pretty_generate(ordered_schema(schema_hash))}\n"
       FileUtils.mkdir_p(File.dirname(full_filename))
       File.write(full_filename, schema_json)
     end
