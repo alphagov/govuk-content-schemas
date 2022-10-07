@@ -18,7 +18,7 @@ get "/" do
     }
   end
 
-  erb :index, locals: { schema_examples: schema_examples }
+  erb :index, locals: { schema_examples: }
 end
 
 get "/api/content/examples/:schema_name/random" do |schema_name|
@@ -33,7 +33,7 @@ get "/api/content/examples/:schema_name/:example_name" do |schema_name, example_
   content_type :json
 
   begin
-    content_item = GovukSchemas::Example.find(schema_name, example_name: example_name)
+    content_item = GovukSchemas::Example.find(schema_name, example_name:)
     content_item["base_path"] = "/examples/#{schema_name}/#{example_name}"
     content_item.to_json
   rescue Errno::ENOENT

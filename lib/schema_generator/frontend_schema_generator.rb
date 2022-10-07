@@ -81,13 +81,14 @@ module SchemaGenerator
     end
 
     def replace_multiple_content_types(object)
-      if object == { "$ref" => "#/definitions/multiple_content_types" }
+      case object
+      when { "$ref" => "#/definitions/multiple_content_types" }
         { "type" => "string" }
-      elsif object.is_a?(Hash)
+      when Hash
         object.each.with_object({}) do |(key, value), hash|
           hash.merge!(key => replace_multiple_content_types(value))
         end
-      elsif object.is_a?(Array)
+      when Array
         object.map { |element| replace_multiple_content_types(element) }
       else
         object
