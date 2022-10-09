@@ -1,9 +1,13 @@
 (import "shared/default_format.jsonnet") + {
   document_type: [
+    "call_for_evidence_outcome",
+    "closed_call_for_evidence",
     "closed_consultation",
-    "open_consultation",
-    "consultation",
     "consultation_outcome",
+    "open_call_for_evidence",
+    "open_consultation",
+    "upcoming_call_for_evidence",
+    "upcoming_consultation"
   ],
   definitions: (import "shared/definitions/_whitehall.jsonnet") + {
     details: {

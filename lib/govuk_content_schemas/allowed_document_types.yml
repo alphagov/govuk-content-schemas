@@ -1,8 +1,8 @@
 - aaib_report
 - about
 - about_our_services
-- accessible_documents_policy
 - access_and_opening
+- accessible_documents_policy
 - ambassador_role
 - animal_disease_case
 - answer
@@ -12,16 +12,17 @@
 - business_finance_support_scheme
 - calculator
 - calendar
+- call_for_evidence_outcome
 - case_study
 - chief_professional_officer_role
-- chief_scientific_officer_role
 - chief_scientific_advisor_role
+- chief_scientific_officer_role
+- closed_call_for_evidence
 - closed_consultation
 - cma_case
 - coming_soon
 - complaints_procedure
 - completed_transaction
-- consultation
 - consultation_outcome
 - contact
 - coronavirus_landing_page
@@ -98,6 +99,7 @@
 - official_statistics
 - official_statistics_announcement
 - oim_project
+- open_call_for_evidence
 - open_consultation
 - oral_statement
 - organisation
@@ -165,8 +167,10 @@
 - transparency
 - travel_advice
 - travel_advice_index
-- unpublishing
 - uk_market_conformity_assessment_body
+- unpublishing
+- upcoming_call_for_evidence
+- upcoming_consultation
 - utaac_decision
 - vanish # Not in the content store
 - welsh_language_scheme
