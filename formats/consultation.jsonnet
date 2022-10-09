@@ -1,9 +1,6 @@
 (import "shared/default_format.jsonnet") + {
   document_type: [
-    "closed_consultation",
-    "open_consultation",
-    "consultation",
-    "consultation_outcome",
+    "consultation"
   ],
   definitions: (import "shared/definitions/_whitehall.jsonnet") + {
     details: {
@@ -11,6 +8,7 @@
       additionalProperties: false,
       required: [
         "body",
+        "consultation_status",
         "political",
       ],
       properties: {
@@ -20,6 +18,11 @@
           items: {
             "$ref": "#/definitions/publication_attachment_asset",
           },
+        },
+        consultation_status: {
+          description: "Whether this item is in a upcoming, open, closed or outcome status",
+          type: "string",
+          enum: ["upcoming", "open", "closed", "outcome"]
         },
         featured_attachments: {
           description: "An ordered list of attachments to feature below the document",

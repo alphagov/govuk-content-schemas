@@ -2,7 +2,7 @@
   "analytics_identifier": null,
   "base_path": "/government/consultations/setting-the-grade-standards-of-new-gcses-in-england-2017-2018",
   "content_id": "67e7930a-9e13-4a70-a5be-fc18aa8fa6f5",
-  "document_type": "consultation_outcome",
+  "document_type": "consultation",
   "first_published_at": "2016-04-20T10:44:19.000+00:00",
   "locale": "en",
   "phase": "live",
@@ -484,6 +484,7 @@
   "description": "Proposals on grade standards for GCSEs being awarded from 2018, and grades 8 and 9 in maths, English language and English literature from 2017.",
   "details": {
     "body": "<div class=\"govspeak\"><p>We are seeking views on our proposals for setting grade standards for new GCSEs. This consultation follows on from our earlier consultation on <a rel=\"external\" href=\"http://webarchive.nationalarchives.gov.uk/20141110161323/http:/comment.ofqual.gov.uk/setting-the-grade-standards-of-new-gcses-april-2014/\" class=\"govuk-link\">‘Setting the grade standards of new GCSEs in England’</a>.</p>\n\n<p>In September 2014 we announced our decisions about the awarding of new GCSEs in English language, English literature and mathematics which will be first awarded in summer 2017.</p>\n\n<p>We are now consulting on the approach to be taken in all other subjects. We are also consulting on a change to our previous decisions for English language, English literature and mathematics, about how grades 8 and 9 are set.</p>\n\n<p>Our proposals are designed to protect students taking the new qualifications, particularly in the first year when teachers will be less familiar with the new content and how it is assessed. We want to minimise unexpected or unfair outcomes for students in the transition to the new GCSEs.</p>\n</div>",
+    "consultation_status": "outcome",
     "closing_date": "2016-06-17T23:45:00.000+01:00",
     "emphasised_organisations": [
       "83f6e93f-bb2c-46ab-9b02-394f972b7030"

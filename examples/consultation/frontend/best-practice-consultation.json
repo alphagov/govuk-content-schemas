@@ -2,7 +2,7 @@
   "analytics_identifier": null,
   "base_path": "/government/consultations/furniture-fire-safety-regulations-proposed-amendments",
   "content_id": "5fe29115-7631-11e4-a3cb-005056011aef",
-  "document_type": "consultation_outcome",
+  "document_type": "consultation",
   "first_published_at": "2014-08-07T09:30:00.000+00:00",
   "locale": "en",
   "phase": "live",
@@ -142,6 +142,7 @@
   "description": "Proposed changes to the UK's furniture flammability laws to improve safety, make UK furniture greener and bring savings to industry.",
   "details": {
     "body": "<div class=\"govspeak\"><p>The <a rel=\"external\" href=\"http://www.legislation.gov.uk/uksi/1988/1324/contents/made\">Furniture and Furnishings (Fire) (Safety) Regulations 1988</a> set levels of fire resistance for domestic upholstered furniture, furnishings and other products containing upholstery.</p>\n\n<p>This consultation sets out the government’s intention to change the specification for the match test and the requirements for the cigarette test (both for covering fabrics) in the regulations.</p>\n</div>",
+    "consultation_status": "outcome",
     "closing_date": "2014-10-07T17:00:00.000+01:00",
     "emphasised_organisations": [
       "569a9ee5-c195-4b7f-b9dc-edc17a09113f"

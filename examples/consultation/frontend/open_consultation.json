@@ -7,10 +7,11 @@
   "updated_at": "2016-11-07T17:37:00Z",
   "first_published_at": "2016-11-04T10:00:00+01:00",
   "schema_name": "consultation",
-  "document_type": "open_consultation",
+  "document_type": "consultation",
   "locale": "en",
   "details": {
     "body": "<div class=\"govspeak\"><p>We are seeking external views on a postgraduate doctoral loan.</p>\n\n<p>This will offer eligible applicants up to £25,000 towards the cost of their studies. The loan will be repaid on an income-contingent basis, and we aim to launch it in the 2018 to 2019 academic year.</p>\n\n<p>We are very interested in hearing what you think about the proposed loan.</p>\n\n<p>We will consider all responses and use these to inform the design of the doctoral loan.</p>\n\n<p>Income-contingent loans are loans where the repayments will be based on how much you earn.</p>\n</div>",
+    "consultation_status": "open",
     "first_public_at": "2016-11-04T10:00:00+01:00",
     "opening_date": "2016-11-04T10:00:00+01:00",
     "closing_date": "2216-12-16T16:00:00+01:00",
