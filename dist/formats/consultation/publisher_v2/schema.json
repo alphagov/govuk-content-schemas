@@ -44,10 +44,14 @@
     "document_type": {
       "type": "string",
       "enum": [
+        "call_for_evidence_outcome",
+        "closed_call_for_evidence",
         "closed_consultation",
+        "consultation_outcome",
+        "open_call_for_evidence",
         "open_consultation",
-        "consultation",
-        "consultation_outcome"
+        "upcoming_call_for_evidence",
+        "upcoming_consultation"
       ]
     },
     "first_published_at": {
