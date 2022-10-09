@@ -34,10 +34,7 @@
     "document_type": {
       "type": "string",
       "enum": [
-        "closed_consultation",
-        "open_consultation",
-        "consultation",
-        "consultation_outcome"
+        "consultation"
       ]
     },
     "first_published_at": {
@@ -318,6 +315,7 @@
       "type": "object",
       "required": [
         "body",
+        "consultation_status",
         "political"
       ],
       "additionalProperties": false,
@@ -338,6 +336,16 @@
         "closing_date": {
           "type": "string",
           "format": "date-time"
+        },
+        "consultation_status": {
+          "description": "Whether this item is in a upcoming, open, closed or outcome status",
+          "type": "string",
+          "enum": [
+            "upcoming",
+            "open",
+            "closed",
+            "outcome"
+          ]
         },
         "documents": {
           "$ref": "#/definitions/attachments_with_thumbnails"
