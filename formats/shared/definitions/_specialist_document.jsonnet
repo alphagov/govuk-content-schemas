@@ -218,19 +218,7 @@
         }
       },
       virus_strain: {
-        type: "string",
-        enum: [
-          "h5nx",
-          "h5n1",
-          "h5n2",
-          "h5n3",
-          "h5n5",
-          "h5n6",
-          "h5n8",
-          "h7nx",
-          "h7n7",
-          "undetermined",
-        ]
+        type: "string"
       },
       disease_case_opened_date: {
         type: "string",
