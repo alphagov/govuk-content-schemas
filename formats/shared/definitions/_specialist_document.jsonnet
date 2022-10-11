@@ -212,6 +212,12 @@
             "restricted",
             "temporary-control",
             "captive-bird",
+            "avian-influenza-prevention",
+            "temporary-movement-restriction",
+            "low-pathogenic-avian-influenza-restricted",
+            "infection",
+            "vaccination",
+            "supplementary-movement-control",
             "wild-bird-control",
             "wild-bird-monitoring"
           ]
