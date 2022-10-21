@@ -288,28 +288,6 @@
         }
       }
     },
-    "country": {
-      "type": "object",
-      "required": [
-        "slug",
-        "name"
-      ],
-      "additionalProperties": false,
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "slug": {
-          "type": "string"
-        },
-        "synonyms": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        }
-      }
-    },
     "description_optional": {
       "anyOf": [
         {
@@ -324,7 +302,6 @@
       "type": "object",
       "required": [
         "summary",
-        "country",
         "updated_at",
         "reviewed_at",
         "change_description",
@@ -345,9 +322,6 @@
         },
         "change_history": {
           "$ref": "#/definitions/change_history"
-        },
-        "country": {
-          "$ref": "#/definitions/country"
         },
         "document": {
           "$ref": "#/definitions/file_attachment_asset"
