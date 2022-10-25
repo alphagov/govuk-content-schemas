@@ -1120,6 +1120,7 @@
           enum: [
             "air-quality",
             "arable-land",
+            "biodiversity",
             "boundaries",
             "coast",
             "educational-access",
