@@ -9,6 +9,7 @@ gem "rspec"
 
 # Preview app for examples
 gem "govuk_schemas"
+gem "puma"
 gem "rack-test"
 gem "sinatra"
 
