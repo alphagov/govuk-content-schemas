@@ -84,7 +84,7 @@ node {
         govuk.pushTag(REPOSITORY, env.BRANCH_NAME, 'release_' + env.BUILD_NUMBER, 'main')
       }
 
-      govuk.deployIntegration(REPOSITORY, env.BRANCH_NAME, 'release_' + env.BUILD_NUMBER, 'deploy')
+      govuk.deployToIntegration(REPOSITORY, 'release_' + env.BUILD_NUMBER, 'deploy')
     }
   } catch (e) {
     currentBuild.result = "FAILED"
