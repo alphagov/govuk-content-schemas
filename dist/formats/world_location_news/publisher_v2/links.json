@@ -26,6 +26,10 @@
           "description": "The user needs this piece of content meets.",
           "$ref": "#/definitions/guid_list"
         },
+        "ordered_contacts": {
+          "description": "Contact details for this World Location (only used for International Delegations)",
+          "$ref": "#/definitions/guid_list"
+        },
         "ordered_related_items": {
           "description": "Related items, can be any page on GOV.UK. Mostly used for mainstream content to power the sidebar. Ordering of the links is determined by the editor in Content Tagger.",
           "$ref": "#/definitions/guid_list"
@@ -66,6 +70,10 @@
         },
         "topics": {
           "description": "Powers the /topic section of the site. These are known as specialist sectors in some legacy apps.",
+          "$ref": "#/definitions/guid_list"
+        },
+        "worldwide_organisations": {
+          "description": "Linked Worldwide Organisations (only used for International Delegations)",
           "$ref": "#/definitions/guid_list"
         }
       }

@@ -28,4 +28,8 @@
       },
     },
   },
+  links: (import "shared/base_links.jsonnet") + {
+    ordered_contacts: "Contact details for this World Location (only used for International Delegations)",
+    worldwide_organisations: "Linked Worldwide Organisations (only used for International Delegations)",
+  },
 }
