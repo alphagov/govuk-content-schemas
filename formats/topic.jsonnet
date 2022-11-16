@@ -10,10 +10,6 @@
         },
         groups: {
           "$ref": "#/definitions/topic_groups",
-        },
-        mainstream_browse_origin: {
-          type: "string",
-          description: "Content id of Mainstream browse page the topic originated from as a part of unified topic system work"
         }
       },
     },
