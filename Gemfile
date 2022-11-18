@@ -7,12 +7,6 @@ gem "json-schema"
 gem "rake"
 gem "rspec"
 
-# Preview app for examples
-gem "govuk_schemas"
-gem "puma"
-gem "rack-test"
-gem "sinatra"
-
 group :test do
   gem "pry-byebug"
   gem "simplecov"
