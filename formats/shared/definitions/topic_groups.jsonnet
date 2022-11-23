@@ -1,6 +1,6 @@
 {
   topic_groups: {
-    description: "Lists of items with titles & paths in named groups, used for showing curated links on browse pages and topics",
+    description: "Lists of items with titles & content ids in named groups, used for showing curated links on mainstream browse pages and specialist topics",
     type: "array",
     items: {
       type: "object",
@@ -8,6 +8,7 @@
       required: [
         "name",
         "contents",
+        "content_ids",
       ],
       properties: {
         name: {
@@ -24,8 +25,10 @@
           },
         },
         content_ids: {
-          description: "DEPRECATED",
-          "$ref": "#/definitions/guid_list",
+          type: "array",
+          items: {
+            "$ref": "#/definitions/guid_list",
+          },
         },
       },
     },
