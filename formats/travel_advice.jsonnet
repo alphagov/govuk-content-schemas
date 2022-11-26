@@ -6,7 +6,6 @@
       additionalProperties: false,
       required: [
         "summary",
-        "country",
         "updated_at",
         "reviewed_at",
         "change_description",
@@ -17,9 +16,6 @@
       properties: {
         summary: {
           "$ref": "#/definitions/multiple_content_types",
-        },
-        country: {
-          "$ref": "#/definitions/country",
         },
         updated_at: {
           type: "string",
@@ -55,28 +51,6 @@
         },
         publishing_request_id: {
           "$ref": "#/definitions/publishing_request_id",
-        },
-      },
-    },
-    country: {
-      type: "object",
-      additionalProperties: false,
-      required: [
-        "slug",
-        "name",
-      ],
-      properties: {
-        name: {
-          type: "string",
-        },
-        slug: {
-          type: "string",
-        },
-        synonyms: {
-          type: "array",
-          items: {
-            type: "string",
-          },
         },
       },
     },

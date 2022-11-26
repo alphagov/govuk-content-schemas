@@ -4,10 +4,6 @@
   "description": "Latest travel advice for Antarctica including safety and security, entry requirements, travel warnings and health",
   "details": {
     "summary": "<p>It's very cold.</p>",
-    "country": {
-      "name": "Antarctica",
-      "slug": "antarctica"
-    },
     "updated_at": "2015-10-15T11:00:20+01:00",
     "reviewed_at": "2015-08-28T17:11:23+01:00",
     "change_description": "Latest update: Info about the cold.",
